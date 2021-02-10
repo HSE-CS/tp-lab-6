@@ -3,8 +3,19 @@
 #ifndef TP_LAB_6_SRC_EMPLOYEE_H_
 #define TP_LAB_6_SRC_EMPLOYEE_H_
 
-class Employee {
+#include <string>
 
+class Employee {
+ private:
+  int id;
+  std::string name;
+  std::string position;
+  int worktime;
+  int payment;
+ public:
+  void setWorkTime(int worktime);
+  void calc();
+  void printinfo();
 };
 
 #endif //TP_LAB_6_SRC_EMPLOYEE_H_
