@@ -1,0 +1,6 @@
+// Copyright 2020 Stanislav Stoianov
+
+#ifndef TP_LAB_6_INCLUDE_INTERFACES_H_
+#define TP_LAB_6_INCLUDE_INTERFACES_H_
+
+#endif //TP_LAB_6_INCLUDE_INTERFACES_H_
