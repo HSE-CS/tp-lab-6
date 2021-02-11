@@ -13,6 +13,7 @@ class Project {
   int id;
   int budget;
  public:
+  Project(int id, int budget) : id(id), budget(budget) {}
   int GetId() const {
     return id;
   }
@@ -27,18 +28,20 @@ class Project {
   }
 };
 
-class ProjectManager : private Employee, IHeading {
+class ProjectManager : public Employee, IHeading {
  private:
   Project *project;
  public:
-  int calcHeads();
-  int calc();
+  ProjectManager(Project *project) : project(project) {}
+  int calcHeads() override;
 };
 
 class SeniorManager : public ProjectManager {
  private:
   std::vector<Project *> projects;
  public:
+  SeniorManager(Project *project, const std::vector<Project *> &projects)
+      : ProjectManager(project), projects(projects) {}
   int calc();
 };
 

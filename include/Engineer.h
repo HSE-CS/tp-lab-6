@@ -5,29 +5,39 @@
 
 #include "Factory.h"
 #include "Personal.h"
+#include "Manager.h"
 
-class Engineer : private Personal, IProjectBudget {
+class Engineer : public Personal, IProjectBudget {
  private:
   Project *project;
  public:
-  int calcBudgetPart();
-  int calc();
+  Engineer(int salary, Project *project) : Personal(salary), project(project) {}
+  int calcBudgetPart(float part, int budget) override;
+  int calcProAdditions() override;
+  int calcBase(int salary, int wtime) override;
+  int calcBonus() override;
 };
 
-class Programmer : private Engineer {
+class Programmer : public Engineer {
  public:
+  Programmer(int salary, Project *project);
   int calsProAdditions();
 };
 
-class Tester : private Engineer {
+class Tester : public Engineer {
  public:
+  Tester(int salary, Project *project);
   int calsProAdditions();
 };
 
-class TeamLeader : private Programmer, IHeading {
+class TeamLeader : public Programmer, IHeading {
  public:
-  int calcHeads();
-  int calc();
+  TeamLeader(int salary, Project *project);
+  int calcBudgetPart(float part, int budget) override;
+  int calcProAdditions() override;
+  int calcBase(int salary, int wtime) override;
+  int calcBonus() override;
+  int calcHeads() override;
 };
 
 #endif //TP_LAB_6_SRC_ENGINEER_H_

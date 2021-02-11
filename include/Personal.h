@@ -7,20 +7,25 @@
 #include "Interfaces.h"
 #include "Factory.h"
 
-class Personal : private Employee, IWorkBaseTime {
+class Personal : public Employee, IWorkBaseTime {
  private:
   int salary;
  public:
-  int calcBase();
+  Personal(int salary);
+  int calcBase(int salary, int wtime) override;
+  int calcBonus() override;
 };
 
-class Driver : private Personal {
+class Driver : public Personal {
  public:
+  Driver(int salary);
   int calcBase();
   int calc();
 };
 
-class Cleaner : private Personal {
+class Cleaner : public Personal {
+ public:
+  Cleaner(int salary);
   int calc();
 };
 

@@ -4,10 +4,12 @@
 #define TP_LAB_6_SRC_FACTORY_H_
 
 #include <string>
+#include <vector>
+#include "Employee.h"
 
 class Factory {
  public:
-  static void makeStaff(std::string pathToFile);
+  static std::vector<Employee *> makeStaff(char * filepath);
 };
 
 #endif //TP_LAB_6_SRC_FACTORY_H_
