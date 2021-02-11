@@ -3,21 +3,35 @@
 #ifndef TP_LAB_6_INCLUDE_INTERFACES_H_
 #define TP_LAB_6_INCLUDE_INTERFACES_H_
 
+/*
+ * @description расчет оплаты исходя из руководства (количество подчиненных)
+ */
 class IHeading {
  public:
   virtual int calcHeads() = 0;
 };
 
+/*
+ * @description расчет оплаты исходя из участия в проекте
+ * (бюджет проекта делится пропорционально персональному вкладу)
+ */
 class IProjectBudget {
  public:
-  int calcBudgetPart(float part, int budget) = 0;
-  int calcProAdditions() = 0;
+  // расчет выплат из бюджета проекта
+  virtual int calcBudgetPart(float part, int budget) = 0;
+  // расчет бонусных выплат
+  virtual int calcProAdditions() = 0;
 };
 
+/*
+ * @description расчет оплаты исходя из отработанного времени
+ */
 class IWorkBaseTime {
  public:
-  int calcBase(int salary, int wtime) = 0;
-  int calcBonus() = 0;
+  // метод расчета зарплаты исходя из оклада (за час) и отработанных часов
+  virtual int calcBase(int salary, int wtime) = 0;
+  // дополнительные выплаты
+  virtual int calcBonus() = 0;
 };
 
 #endif //TP_LAB_6_INCLUDE_INTERFACES_H_

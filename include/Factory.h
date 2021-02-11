@@ -3,23 +3,11 @@
 #ifndef TP_LAB_6_SRC_FACTORY_H_
 #define TP_LAB_6_SRC_FACTORY_H_
 
-class Project {
- private:
-  int id;
-  int budget;
+#include <string>
+
+class Factory {
  public:
-  int GetId() const {
-    return id;
-  }
-  void SetId(int id) {
-    Project::id = id;
-  }
-  int GetBudget() const {
-    return budget;
-  }
-  void SetBudget(int budget) {
-    Project::budget = budget;
-  }
+  static void makeStaff(std::string pathToFile);
 };
 
 #endif //TP_LAB_6_SRC_FACTORY_H_
