@@ -3,6 +3,7 @@
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 #include "Factory.h"
@@ -10,6 +11,7 @@
 class Personal : public Employee, IWorkBaseTime {
  private:
   int salary = 0;
+
  public:
   Personal(int id,
            const std::string &name,
@@ -40,7 +42,6 @@ class Personal : public Employee, IWorkBaseTime {
   }
 
   void printInfo() override {
-
   }
 
   int calcBonus() override {
@@ -50,7 +51,6 @@ class Personal : public Employee, IWorkBaseTime {
 
 class Driver : public Personal {
  public:
-
   int calcBase(int p, int w) override {
     return Personal::calcBase(p, w);
   }
@@ -87,4 +87,4 @@ class Cleaner : public Personal {
   }
 };
 
-#endif // INCLUDE_PERSONAL_H_
+#endif  // INCLUDE_PERSONAL_H_

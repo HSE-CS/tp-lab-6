@@ -37,7 +37,6 @@ class ProjectManager : public Employee, IHeading {
         project(project) {}
 
   void printInfo() override {
-
   }
 
   int calcHeads() override {
@@ -47,7 +46,6 @@ class ProjectManager : public Employee, IHeading {
   int calc() override {
     return 0;
   }
-
 };
 
 class SeniorManager : public ProjectManager {
@@ -78,4 +76,4 @@ class SeniorManager : public ProjectManager {
   }
 };
 
-#endif //  INCLUDE_MANAGER_H_
+#endif  // INCLUDE_MANAGER_H_

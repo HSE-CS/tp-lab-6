@@ -54,8 +54,7 @@ class Factory {
     }
     file.close();
     return std::vector<Employee *>();
-
   }
 };
 
-#endif // INCLUDE_FACTORY_H_
+#endif  // INCLUDE_FACTORY_H_

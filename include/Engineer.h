@@ -51,7 +51,6 @@ class Engineer : public Personal, IProjectBudget {
 };
 
 class Programmer : public Engineer {
-
  public:
   int calcBudgetPart(float part, int budget) override {
     return Engineer::calcBudgetPart(part, budget);
@@ -114,7 +113,6 @@ class Tester : public Engineer {
 };
 
 class TeamLeader : public Programmer, IHeading {
-
  public:
   int calc() override {
     return Programmer::calc();
@@ -145,4 +143,4 @@ class TeamLeader : public Programmer, IHeading {
   }
 };
 
-#endif //  INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_
