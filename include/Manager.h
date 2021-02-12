@@ -55,8 +55,8 @@ class SeniorManager : public ProjectManager {
   SeniorManager(int id,
                 const std::string &name,
                 const std::string &position,
-                Project *project,
                 int payment,
+                Project *project,
                 std::vector<Project *> projects)
       : ProjectManager(id, name, position, payment, project),
         projects(std::move(projects)) {}
@@ -71,6 +71,10 @@ class SeniorManager : public ProjectManager {
 
   int calc() override {
     return 0;
+  }
+
+  std::vector<Project *> &getProjects() {
+    return projects;
   }
 };
 

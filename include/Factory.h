@@ -29,7 +29,7 @@ class Factory {
 
       Employee *employee;
 
-//      if (position == "Pesonal")
+//      if (position == "Personal")
 //        employee = new Personal(id, name, position, payment);
 //      else if (position == "Engineer")
 //        employee = new Engineer(id, name, position, payment);

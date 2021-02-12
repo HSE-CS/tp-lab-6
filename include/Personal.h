@@ -49,6 +49,15 @@ class Personal : public Employee, IWorkBaseTime {
 
 class Driver : public Personal {
  public:
+  Driver(int id,
+         const std::string &name,
+         const std::string &position,
+         int payment)
+      : Personal(id,
+                 name,
+                 position,
+                 payment) {}
+
   int calcBase(int p, int w) override {
     return Personal::calcBase(p, w);
   }
@@ -68,6 +77,15 @@ class Driver : public Personal {
 
 class Cleaner : public Personal {
  public:
+  Cleaner(int id,
+          const std::string &name,
+          const std::string &position,
+          int payment)
+      : Personal(id,
+                 name,
+                 position,
+                 payment) {}
+
   int calcBase(int p, int w) override {
     return Personal::calcBase(p, w);
   }
