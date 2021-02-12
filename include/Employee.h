@@ -15,7 +15,7 @@ class Employee {
  public:
   void setWorkTime(int worktime);
   void calc();
-  void printinfo();
+  void printInfo();
 };
 
 #endif //TP_LAB_6_SRC_EMPLOYEE_H_
