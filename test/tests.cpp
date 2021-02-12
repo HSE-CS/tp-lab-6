@@ -3,6 +3,7 @@
 #include <gtest/gtest.h>
 #include <string>
 #include "../include/Personal.h"
+#include "../include/Engineer.h"
 
 TEST(Employee, Constructor) {
   auto *employee = new Personal(1, "Ivan", "SEO of Feminism", 2);
@@ -22,13 +23,41 @@ TEST(Cleaner, Constructor) {
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
-TEST(Employee, ProjectManager) {
+TEST(Engineer, Constructor) {
+  Project *project = new Project(1, 200);
+  auto *employee = new Engineer(1, "Ivan", "SEO of Feminism", 2, project);
+  EXPECT_EQ(employee->getPayment(), 2);
+  EXPECT_EQ(employee->getSalary(), 0);
+}
+
+TEST(Programmer, Constructor) {
+  Project *project = new Project(1, 200);
+  auto *employee = new Programmer(1, "Ivan", "SEO of Feminism", 2, project);
+  EXPECT_EQ(employee->getPayment(), 2);
+  EXPECT_EQ(employee->getSalary(), 0);
+}
+
+TEST(Tester, Constructor) {
+  Project *project = new Project(1, 200);
+  auto *employee = new Tester(1, "Ivan", "SEO of Feminism", 2, project);
+  EXPECT_EQ(employee->getPayment(), 2);
+  EXPECT_EQ(employee->getSalary(), 0);
+}
+
+TEST(TeamLeader, Constructor) {
+  Project *project = new Project(1, 200);
+  auto *employee = new TeamLeader(1, "Ivan", "SEO of Feminism", 2, project);
+  EXPECT_EQ(employee->getPayment(), 2);
+  EXPECT_EQ(employee->getSalary(), 0);
+}
+
+TEST(ProjectManager, Constructor) {
   Project *project = new Project(1, 200);
   auto *employee = new ProjectManager(1, "Ivan", "SEO of Feminism", 2, project);
   EXPECT_EQ(employee->getPayment(), 2);
 }
 
-TEST(Employee, SeniorManager) {
+TEST(SeniorManager, Constructor) {
   Project *project = new Project(1, 400);
   Project *project2 = new Project(2, 400);
   std::vector<Project *> projects;

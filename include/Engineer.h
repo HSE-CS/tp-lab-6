@@ -50,6 +50,16 @@ class Engineer : public Personal, IProjectBudget {
 
 class Programmer : public Engineer {
  public:
+  Programmer(int id,
+             const std::string &name,
+             const std::string &position,
+             int payment,
+             Project *project)
+      : Engineer(id,
+                 name,
+                 position,
+                 payment,
+                 project) {}
   int calcBudgetPart(float part, int budget) override {
     return Engineer::calcBudgetPart(part, budget);
   }
@@ -81,6 +91,17 @@ class Programmer : public Engineer {
 
 class Tester : public Engineer {
  public:
+  Tester(int id,
+         const std::string &name,
+         const std::string &position,
+         int payment,
+         Project *project)
+      : Engineer(id,
+                 name,
+                 position,
+                 payment,
+                 project) {}
+
   int calcBudgetPart(float part, int budget) override {
     return Engineer::calcBudgetPart(part, budget);
   }
@@ -112,6 +133,17 @@ class Tester : public Engineer {
 
 class TeamLeader : public Programmer, IHeading {
  public:
+  TeamLeader(int id,
+             const std::string &name,
+             const std::string &position,
+             int payment,
+             Project *project)
+      : Programmer(id,
+                   name,
+                   position,
+                   payment,
+                   project) {}
+
   int calc() override {
     return Programmer::calc();
   }
