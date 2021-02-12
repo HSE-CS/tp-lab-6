@@ -5,6 +5,7 @@
 
 #include <utility>
 #include <vector>
+#include <string>
 #include "Factory.h"
 #include "Interfaces.h"
 #include "Employee.h"
@@ -13,16 +14,18 @@ class Project {
  private:
   int id;
   int budget;
+
  public:
   Project(int id,
           int budget)
       : id(id),
-        budget(budget) {};
+        budget(budget) {}
 };
 
 class ProjectManager : public Employee, IHeading {
  private:
   Project *project;
+
  public:
   ProjectManager(int id,
                  const std::string &name,
@@ -50,6 +53,7 @@ class ProjectManager : public Employee, IHeading {
 class SeniorManager : public ProjectManager {
  private:
   std::vector<Project *> projects;
+
  public:
   SeniorManager(int id,
                 const std::string &name,
@@ -74,4 +78,4 @@ class SeniorManager : public ProjectManager {
   }
 };
 
-#endif // INCLUDE_MANAGER_H_
+#endif //  INCLUDE_MANAGER_H_

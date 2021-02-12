@@ -20,9 +20,9 @@ class Personal : public Employee, IWorkBaseTime {
                  name,
                  position,
                  worktime,
-                 payment) {};
+                 payment) {}
 
-  int setSalary() {
+  int getSalary() {
     return salary;
   }
 

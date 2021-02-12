@@ -13,6 +13,7 @@ class Employee {
   std::string position;
   int worktime;
   int payment;
+
  public:
   Employee(int id,
            std::string name,
@@ -23,7 +24,7 @@ class Employee {
         name(std::move(name)),
         position(std::move(position)),
         worktime(worktime),
-        payment(payment) {};
+        payment(payment) {}
 
   void setWorktime(int w) {
     Employee::worktime = w;

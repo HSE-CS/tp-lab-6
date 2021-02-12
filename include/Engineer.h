@@ -3,6 +3,7 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include <string>
 #include "Factory.h"
 #include "Personal.h"
 #include "Manager.h"
@@ -10,6 +11,7 @@
 class Engineer : public Personal, IProjectBudget {
  private:
   Project *project;
+
  public:
   Engineer(int id,
            const std::string &name,
@@ -21,7 +23,7 @@ class Engineer : public Personal, IProjectBudget {
                  name,
                  position,
                  worktime,
-                 payment), project(project) {};
+                 payment), project(project) {}
 
   int calcBudgetPart(float part, int budget) override {
     return 0;
@@ -49,6 +51,7 @@ class Engineer : public Personal, IProjectBudget {
 };
 
 class Programmer : public Engineer {
+
  public:
   int calcBudgetPart(float part, int budget) override {
     return Engineer::calcBudgetPart(part, budget);
@@ -75,7 +78,7 @@ class Programmer : public Engineer {
   }
 
   int calsProAdditions() {
-
+    return 0;
   }
 };
 
@@ -111,6 +114,7 @@ class Tester : public Engineer {
 };
 
 class TeamLeader : public Programmer, IHeading {
+
  public:
   int calc() override {
     return Programmer::calc();
@@ -141,4 +145,4 @@ class TeamLeader : public Programmer, IHeading {
   }
 };
 
-#endif // INCLUDE_ENGINEER_H_
+#endif //  INCLUDE_ENGINEER_H_
