@@ -9,4 +9,3 @@ TEST(Employee, Constructor) {
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
-
