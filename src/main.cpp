@@ -4,7 +4,8 @@
 
 int main() {
   // создание штата сотрудников на основе файла
-  std::string string = "/home/stanislav/CLionProjects/tp-lab-6/test/data/employees.csv";
+  std::string string =
+      "/home/stanislav/CLionProjects/tp-lab-6/test/data/employees.csv";
   std::vector<Employee *> staff = Factory::makeStaff(&string[0]);
 
   // присвоение отработанного времени и расчет зарплаты, вывод данных о зарплате
