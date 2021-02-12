@@ -11,33 +11,134 @@ class Engineer : public Personal, IProjectBudget {
  private:
   Project *project;
  public:
-  Engineer(int salary, Project *project) : Personal(salary), project(project) {}
-  int calcBudgetPart(float part, int budget) override;
-  int calcProAdditions() override;
-  int calcBase(int salary, int wtime) override;
-  int calcBonus() override;
+  Engineer(int id,
+           const std::string &name,
+           const std::string &position,
+           int worktime,
+           int payment,
+           Project *project)
+      : Personal(id,
+                 name,
+                 position,
+                 worktime,
+                 payment), project(project) {};
+
+  int calcBudgetPart(float part, int budget) override {
+    return 0;
+  }
+
+  int calcProAdditions() override {
+    return 0;
+  }
+
+  int calcBase(int salary, int wtime) override {
+    return 0;
+  }
+
+  int calcBonus() override {
+    return 0;
+  }
+
+  int calc() override {
+    return Personal::calc();
+  }
+
+  void printInfo() override {
+    Personal::printInfo();
+  }
 };
 
 class Programmer : public Engineer {
  public:
-  Programmer(int salary, Project *project);
-  int calsProAdditions();
+  int calcBudgetPart(float part, int budget) override {
+    return Engineer::calcBudgetPart(part, budget);
+  }
+
+  int calcProAdditions() override {
+    return Engineer::calcProAdditions();
+  }
+
+  int calcBase(int salary, int wtime) override {
+    return Engineer::calcBase(salary, wtime);
+  }
+
+  int calcBonus() override {
+    return Engineer::calcBonus();
+  }
+
+  int calc() override {
+    return Engineer::calc();
+  }
+
+  void printInfo() override {
+    Engineer::printInfo();
+  }
+
+  int calsProAdditions() {
+
+  }
 };
 
 class Tester : public Engineer {
  public:
-  Tester(int salary, Project *project);
-  int calsProAdditions();
+  int calcBudgetPart(float part, int budget) override {
+    return Engineer::calcBudgetPart(part, budget);
+  }
+
+  int calcProAdditions() override {
+    return Engineer::calcProAdditions();
+  }
+
+  int calcBase(int salary, int wtime) override {
+    return Engineer::calcBase(salary, wtime);
+  }
+
+  int calcBonus() override {
+    return Engineer::calcBonus();
+  }
+
+  int calc() override {
+    return Engineer::calc();
+  }
+
+  void printInfo() override {
+    Engineer::printInfo();
+  }
+
+  int calsProAdditions() {
+    return 0;
+  }
 };
 
 class TeamLeader : public Programmer, IHeading {
  public:
-  TeamLeader(int salary, Project *project);
-  int calcBudgetPart(float part, int budget) override;
-  int calcProAdditions() override;
-  int calcBase(int salary, int wtime) override;
-  int calcBonus() override;
-  int calcHeads() override;
+  int calc() override {
+    return Programmer::calc();
+  }
+
+  void printInfo() override {
+    Programmer::printInfo();
+  }
+
+  int calcBudgetPart(float part, int budget) override {
+    return 0;
+  }
+
+  int calcProAdditions() override {
+    return 0;
+  }
+
+  int calcBase(int salary, int wtime) override {
+    return 0;
+  }
+
+  int calcBonus() override {
+    return 0;
+  }
+
+  int calcHeads() override {
+    return 0;
+  }
 };
 
 #endif // INCLUDE_ENGINEER_H_

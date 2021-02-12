@@ -1,6 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
 #include <Factory.h>
+#include <Personal.h>
 
 int main() {
   // создание штата сотрудников на основе файла
@@ -8,7 +9,7 @@ int main() {
 
   // присвоение отработанного времени и расчет зарплаты, вывод данных о зарплате
   for (Employee *employee: staff) {
-    employee->setWorkTime(0);
+    employee->setWorktime(0);
     employee->calc();
     employee->printInfo();
   }
