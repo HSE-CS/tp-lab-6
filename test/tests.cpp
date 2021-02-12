@@ -34,7 +34,8 @@ TEST(Employee, SeniorManager) {
   std::vector<Project *> projects;
   projects.push_back(project);
   projects.push_back(project2);
-  auto *employee = new SeniorManager(1, "Ivan", "SEO of Feminism", 2, project, projects);
+  auto *employee = new SeniorManager(
+      1, "Ivan", "SEO of Feminism", 2, project, projects);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getProjects().size(), 2);
 }
