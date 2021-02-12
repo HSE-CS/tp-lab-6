@@ -30,10 +30,9 @@ class ProjectManager : public Employee, IHeading {
   ProjectManager(int id,
                  const std::string &name,
                  const std::string &position,
-                 int worktime,
                  int payment,
                  Project *project)
-      : Employee(id, name, position, worktime, payment),
+      : Employee(id, name, position, payment),
         project(project) {}
 
   void printInfo() override {
@@ -56,11 +55,10 @@ class SeniorManager : public ProjectManager {
   SeniorManager(int id,
                 const std::string &name,
                 const std::string &position,
-                int worktime,
-                int payment,
                 Project *project,
+                int payment,
                 std::vector<Project *> projects)
-      : ProjectManager(id, name, position, worktime, payment, project),
+      : ProjectManager(id, name, position, payment, project),
         projects(std::move(projects)) {}
 
   void printInfo() override {

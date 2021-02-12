@@ -16,13 +16,11 @@ class Engineer : public Personal, IProjectBudget {
   Engineer(int id,
            const std::string &name,
            const std::string &position,
-           int worktime,
            int payment,
            Project *project)
       : Personal(id,
                  name,
                  position,
-                 worktime,
                  payment), project(project) {}
 
   int calcBudgetPart(float part, int budget) override {

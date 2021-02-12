@@ -1,7 +1,6 @@
 // Copyright 2020 Stanislav Stoianov
 
-#include <Factory.h>
-#include <Personal.h>
+#include "../include/Factory.h"
 
 int main() {
   // создание штата сотрудников на основе файла

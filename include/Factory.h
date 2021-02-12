@@ -29,26 +29,24 @@ class Factory {
 
       Employee *employee;
 
-      if (position == "Pesonal")
-        employee = new Personal(id, name, position, worktime, payment);
-      else if (position == "Engineer")
-        employee = new Engineer(payment, project);
-      else if (position == "Cleaner")
-        employee = new Cleaner(payment);
-      else if (position == "Driver")
-        employee = new Driver(payment);
-      else if (position == "Programmer")
-        employee = new Programmer(payment, project);
-      else if (position == "Tester")
-        employee = new Tester(payment, project);
-      else if (position == "Team Lead")
-        employee = new TeamLeader(payment, project);
-      else if (position == "Project Manager")
-        employee = new ProjectManager(project);
-      else if (position == "Senior Manager")
-        employee = new SeniorManager(project, projects);
-      else
-        employee = new Employee();
+//      if (position == "Pesonal")
+//        employee = new Personal(id, name, position, payment);
+//      else if (position == "Engineer")
+//        employee = new Engineer(id, name, position, payment);
+//      else if (position == "Cleaner")
+//        employee = new Cleaner(id, name, position, payment);
+//      else if (position == "Driver")
+//        employee = new Driver(id, name, position, payment);
+//      else if (position == "Programmer")
+//        employee = new Programmer(id, name, position, payment);
+//      else if (position == "Tester")
+//        employee = new Tester(id, name, position, payment);
+//      else if (position == "Team Lead")
+//        employee = new TeamLeader(id, name, position, payment);
+//      else if (position == "Project Manager")
+//        employee = new ProjectManager(id, name, position, payment);
+//      else if (position == "Senior Manager")
+//        employee = new SeniorManager(id, name, position, payment);
 
       employees.push_back(employee);
     }

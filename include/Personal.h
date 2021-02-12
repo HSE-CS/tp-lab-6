@@ -16,12 +16,10 @@ class Personal : public Employee, IWorkBaseTime {
   Personal(int id,
            const std::string &name,
            const std::string &position,
-           int worktime,
            int payment)
       : Employee(id,
                  name,
                  position,
-                 worktime,
                  payment) {}
 
   int getSalary() {

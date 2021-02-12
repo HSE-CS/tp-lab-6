@@ -18,12 +18,10 @@ class Employee {
   Employee(int id,
            std::string name,
            std::string position,
-           int worktime,
            int payment)
       : id(id),
         name(std::move(name)),
         position(std::move(position)),
-        worktime(worktime),
         payment(payment) {}
 
   void setWorktime(int w) {
