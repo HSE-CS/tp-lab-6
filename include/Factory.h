@@ -1,7 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
-#ifndef TP_LAB_6_SRC_FACTORY_H_
-#define TP_LAB_6_SRC_FACTORY_H_
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <string>
 #include <vector>
@@ -12,4 +12,4 @@ class Factory {
   static std::vector<Employee *> makeStaff(char * filepath);
 };
 
-#endif //TP_LAB_6_SRC_FACTORY_H_
+#endif // INCLUDE_FACTORY_H_

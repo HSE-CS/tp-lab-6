@@ -1,7 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
-#ifndef TP_LAB_6_SRC_ENGINEER_H_
-#define TP_LAB_6_SRC_ENGINEER_H_
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include "Factory.h"
 #include "Personal.h"
@@ -40,4 +40,4 @@ class TeamLeader : public Programmer, IHeading {
   int calcHeads() override;
 };
 
-#endif //TP_LAB_6_SRC_ENGINEER_H_
+#endif // INCLUDE_ENGINEER_H_

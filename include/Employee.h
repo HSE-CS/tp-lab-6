@@ -1,7 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
-#ifndef TP_LAB_6_SRC_EMPLOYEE_H_
-#define TP_LAB_6_SRC_EMPLOYEE_H_
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 
@@ -18,4 +18,4 @@ class Employee {
   void printInfo();
 };
 
-#endif //TP_LAB_6_SRC_EMPLOYEE_H_
+#endif  // INCLUDE_EMPLOYEE_H_

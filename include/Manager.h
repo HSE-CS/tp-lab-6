@@ -1,7 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
-#ifndef TP_LAB_6_SRC_MANAGER_H_
-#define TP_LAB_6_SRC_MANAGER_H_
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 
 #include <vector>
 #include "Factory.h"
@@ -45,4 +45,4 @@ class SeniorManager : public ProjectManager {
   int calc();
 };
 
-#endif //TP_LAB_6_SRC_MANAGER_H_
+#endif // INCLUDE_MANAGER_H_

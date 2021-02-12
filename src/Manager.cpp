@@ -1,5 +1,3 @@
-//
-// Created by stanislav on 10/02/2021.
-//
+// Copyright 2020 Stanislav Stoianov
 
 #include "../include/Manager.h"

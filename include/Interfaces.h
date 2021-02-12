@@ -1,7 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
-#ifndef TP_LAB_6_INCLUDE_INTERFACES_H_
-#define TP_LAB_6_INCLUDE_INTERFACES_H_
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 /*
  * @description расчет оплаты исходя из руководства (количество подчиненных)
@@ -34,4 +34,4 @@ class IWorkBaseTime {
   virtual int calcBonus() = 0;
 };
 
-#endif //TP_LAB_6_INCLUDE_INTERFACES_H_
+#endif // INCLUDE_INTERFACES_H_
