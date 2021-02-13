@@ -11,7 +11,8 @@
 
 class Factory {
  public:
-  static std::vector<Employee *> makeStaff(char *staffpath, char * projectspath);
+  static std::vector<Employee *> makeStaff(char *staffpath,
+                                           char *projectspath);
 };
 
 #endif  // INCLUDE_FACTORY_H_

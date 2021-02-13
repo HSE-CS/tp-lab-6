@@ -1,7 +1,7 @@
 // Copyright 2020 Stanislav Stoianov
 
-#include "../include/Factory.h"
 #include <random>
+#include "../include/Factory.h"
 
 static std::mt19937_64 rng;
 

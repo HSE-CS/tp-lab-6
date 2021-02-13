@@ -1,11 +1,12 @@
 // Copyright 2020 Stanislav Stoianov
 
 #include "../include/Factory.h"
+#include <sstream>
 #include "../include/Personal.h"
 #include "../include/Engineer.h"
-#include <sstream>
 
-std::vector<Employee *> Factory::makeStaff(char *staffpath, char *projectspath) {
+std::vector<Employee *> Factory::makeStaff(char *staffpath,
+                                           char *projectspath) {
   setlocale(LC_ALL, "rus");
   std::ifstream staff(staffpath), projects(projectspath);
   std::string string;
@@ -39,7 +40,6 @@ std::vector<Employee *> Factory::makeStaff(char *staffpath, char *projectspath) 
    * получаем персонал
    */
   while (getline(staff, string)) {
-
     int i = 0;
     std::string temp, arr[5];
     std::stringstream stringstream(string);
@@ -65,7 +65,8 @@ std::vector<Employee *> Factory::makeStaff(char *staffpath, char *projectspath) 
     else if (position == "Project Manager")
       employee = new ProjectManager(id, name, position, payment, localProject);
     else if (position == "Senior Manager")
-      employee = new SeniorManager(id, name, position, payment, localProject, blueprints);
+      employee = new SeniorManager(
+          id, name, position, payment, localProject, blueprints);
 
     employees.push_back(employee);
   }
