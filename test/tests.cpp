@@ -6,54 +6,62 @@
 #include "../include/Engineer.h"
 
 TEST(Employee, Constructor) {
-  auto *employee = new Personal(1, "Ivan", "SEO of Feminism", 2);
+  auto *employee =
+      new Personal(1, "Ivan", "SEO of Feminism", 2);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
 TEST(Driver, Constructor) {
-  auto *employee = new Driver(1, "Ivan", "SEO of Feminism", 2);
+  auto *employee =
+      new Driver(1, "Ivan", "SEO of Feminism", 2);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
 TEST(Cleaner, Constructor) {
-  auto *employee = new Cleaner(1, "Ivan", "SEO of Feminism", 2);
+  auto *employee =
+      new Cleaner(1, "Ivan", "SEO of Feminism", 2);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
 TEST(Engineer, Constructor) {
   auto *project = new Project(1, 200);
-  auto *employee = new Engineer(1, "Ivan", "SEO of Feminism", 2, project);
+  auto *employee =
+      new Engineer(1, "Ivan", "SEO of Feminism", 2, project);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
 TEST(Programmer, Constructor) {
   auto *project = new Project(1, 200);
-  auto *employee = new Programmer(1, "Ivan", "SEO of Feminism", 2, project);
+  auto *employee =
+      new Programmer(1, "Ivan", "SEO of Feminism", 2, project);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
 TEST(Tester, Constructor) {
   auto *project = new Project(1, 200);
-  auto *employee = new Tester(1, "Ivan", "SEO of Feminism", 2, project);
+  auto *employee =
+      new Tester(1, "Ivan", "SEO of Feminism", 2, project);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
 TEST(TeamLeader, Constructor) {
   auto *project = new Project(1, 200);
-  auto *employee = new TeamLeader(1, "Ivan", "SEO of Feminism", 2, project);
+  auto *employee =
+      new TeamLeader(1, "Ivan", "SEO of Feminism", 2, project);
   EXPECT_EQ(employee->getPayment(), 2);
   EXPECT_EQ(employee->getSalary(), 0);
 }
 
 TEST(ProjectManager, Constructor) {
   auto *project = new Project(1, 200);
-  auto *employee = new ProjectManager(1, "Ivan", "SEO of Feminism", 2, project);
+  auto *employee =
+      new ProjectManager(1, "Ivan", "SEO of Feminism", 2, project);
   EXPECT_EQ(employee->getPayment(), 2);
 }
 
