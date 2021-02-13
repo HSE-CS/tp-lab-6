@@ -40,6 +40,18 @@ class Employee {
     return payment;
   }
 
+  int getId() {
+    return id;
+  }
+
+  std::string &getName() {
+    return name;
+  }
+
+  std::string &getPosition() {
+    return position;
+  }
+
   virtual int calc() = 0;
 
   virtual void printInfo() = 0;
