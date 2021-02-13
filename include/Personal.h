@@ -30,21 +30,27 @@ class Personal : public Employee, IWorkBaseTime {
     Personal::salary = s;
   }
 
+  int calc() override {
+    return 0;
+  }
+
   int calcBase(int p, int w) override {
     this->setSalary(p * w);
     return this->getSalary();
   }
 
-  int calc() override {
+  int calcBonus() override {
     return 0;
   }
 
   void printInfo() override {
+    std::cout << "Personal{id=" + std::to_string(getId()) +
+        ", name=" + getName() +
+        ", position=" + getPosition() +
+        ", payment=" + std::to_string(getPayment()) +
+        ", salary" + std::to_string(getSalary()) + "}" << std::endl;
   }
 
-  int calcBonus() override {
-    return 0;
-  }
 };
 
 class Driver : public Personal {
@@ -58,21 +64,28 @@ class Driver : public Personal {
                  position,
                  payment) {}
 
-  int calcBase(int p, int w) override {
-    return Personal::calcBase(p, w);
-  }
-
-  void printInfo() override {
-    Personal::printInfo();
-  }
-
   int calc() override {
     return getPayment() * getWorktime();
   }
 
-  int calcBonus() override {
-    return 500;
+  int calcBase(int p, int w) override {
+    return Personal::calcBase(p, w);
   }
+
+  int calcBonus() override {
+    return getWorktime() > 40
+           ? (getWorktime() - 40) * (int) (getPayment() * 1.5)
+           : 0;
+  }
+
+  void printInfo() override {
+    std::cout << "Driver{id=" + std::to_string(getId()) +
+        ", name=" + getName() +
+        ", position=" + getPosition() +
+        ", payment=" + std::to_string(getPayment()) +
+        ", salary" + std::to_string(getSalary()) + "}" << std::endl;
+  }
+
 };
 
 class Cleaner : public Personal {
@@ -86,20 +99,24 @@ class Cleaner : public Personal {
                  position,
                  payment) {}
 
-  int calcBase(int p, int w) override {
-    return Personal::calcBase(p, w);
+  int calc() override {
+    return getPayment() * getWorktime();
   }
 
-  void printInfo() override {
-    Personal::printInfo();
+  int calcBase(int p, int w) override {
+    return Personal::calcBase(p, w);
   }
 
   int calcBonus() override {
     return Personal::calcBonus();
   }
 
-  int calc() override {
-    return getPayment() * getWorktime();
+  void printInfo() override {
+    std::cout << "Cleaner{id=" + std::to_string(getId()) +
+        ", name=" + getName() +
+        ", position=" + getPosition() +
+        ", payment=" + std::to_string(getPayment()) +
+        ", salary" + std::to_string(getSalary()) + "}" << std::endl;
   }
 };
 

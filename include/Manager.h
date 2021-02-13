@@ -20,6 +20,14 @@ class Project {
           int budget)
       : id(id),
         budget(budget) {}
+
+  int getId() const {
+    return id;
+  }
+
+  int getBudget() const {
+    return budget;
+  }
 };
 
 class ProjectManager : public Employee, IHeading {
@@ -35,15 +43,26 @@ class ProjectManager : public Employee, IHeading {
       : Employee(id, name, position, payment),
         project(project) {}
 
-  void printInfo() override {
-  }
-
-  int calcHeads() override {
-    return 0;
+  Project *getProject() {
+    return project;
   }
 
   int calc() override {
-    return 0;
+    return getWorktime() * getPayment();
+  }
+
+  int calcHeads() override {
+    return (int) getProject()->getBudget() * 0.01;
+  }
+
+  void printInfo() override {
+    std::cout << "Project Manager{id=" + std::to_string(getId()) +
+        ", name=" + getName() +
+        ", position=" + getPosition() +
+        ", payment=" + std::to_string(getPayment()) +
+        ", project{id=" + std::to_string(project->getId())
+        + ", budget=" + std::to_string(project->getBudget())
+        + "} }" << std::endl;
   }
 };
 
@@ -61,21 +80,34 @@ class SeniorManager : public ProjectManager {
       : ProjectManager(id, name, position, payment, project),
         projects(std::move(projects)) {}
 
-  void printInfo() override {
-    ProjectManager::printInfo();
-  }
-
-  int calcHeads() override {
-    return ProjectManager::calcHeads();
-  }
-
-  int calc() override {
-    return 0;
-  }
-
   std::vector<Project *> &getProjects() {
     return projects;
   }
+
+  std::string getProjectsAsString() {
+    std::string string;
+    for (Project *project : projects) {
+      string += "id=" + std::to_string(project->getId()) + ", budget=" + std::to_string(project->getBudget()) + " ";
+    }
+    return string;
+  }
+
+  int calc() override {
+    return ProjectManager::calc();
+  }
+
+  int calcHeads() override {
+    return (int) ProjectManager::calcHeads() * 2;
+  }
+
+  void printInfo() override {
+    std::cout << "Senior Manager{id=" + std::to_string(getId()) +
+        ", name=" + getName() +
+        ", position=" + getPosition() +
+        ", payment=" + std::to_string(getPayment()) +
+        ", project{" + getProjectsAsString() + "} }" << std::endl;
+  }
+
 };
 
 #endif  // INCLUDE_MANAGER_H_
