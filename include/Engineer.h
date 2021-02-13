@@ -28,6 +28,10 @@ class Engineer : public Personal, IProjectBudget {
     return project;
   }
 
+  int getSalary() override {
+    return calcBase(getPayment(), getWorktime()) + calcBonus();
+  }
+
   int calc() override {
     return Personal::calc();
   }
@@ -51,13 +55,14 @@ class Engineer : public Personal, IProjectBudget {
   }
 
   void printInfo() override {
-    std::cout << "Engineer{id=" + std::to_string(getId()) +
-        ", name=" + getName() +
-        ", position=" + getPosition() +
-        ", payment=" + std::to_string(getPayment()) +
-        ", project{id=" + std::to_string(project->getId())
-        + ", budget=" + std::to_string(project->getBudget())
-        + "} }" << std::endl;
+    std::cout << "{id=" + std::to_string(getId())
+        + ", name=" + getName()
+        + ", position=" + getPosition()
+        + ", payment=" + std::to_string(getPayment())
+        + ", salary=" + std::to_string(getSalary())
+        + ", project{id=" + std::to_string(getProject()->getId())
+        + ", budget=" + std::to_string(getProject()->getBudget())
+        + "}}" << std::endl;
   }
 };
 
@@ -74,6 +79,13 @@ class Programmer : public Engineer {
                  payment,
                  project) {}
 
+  int getSalary() override {
+    return calcBase(getPayment(), getWorktime())
+        + calcBonus()
+        + calcProAdditions()
+        + calcBudgetPart(0.001, getProject()->getBudget());
+  }
+
   int calc() override {
     return Engineer::calc();
   }
@@ -95,13 +107,14 @@ class Programmer : public Engineer {
   }
 
   void printInfo() override {
-    std::cout << "Programmer{id=" + std::to_string(getId()) +
-        ", name=" + getName() +
-        ", position=" + getPosition() +
-        ", payment=" + std::to_string(getPayment()) +
-        ", project{id=" + std::to_string(getProject()->getId())
+    std::cout << "{id=" + std::to_string(getId())
+        + ", name=" + getName()
+        + ", position=" + getPosition()
+        + ", payment=" + std::to_string(getPayment())
+        + ", salary=" + std::to_string(getSalary())
+        + ", project{id=" + std::to_string(getProject()->getId())
         + ", budget=" + std::to_string(getProject()->getBudget())
-        + "} }" << std::endl;
+        + "}}" << std::endl;
   }
 };
 
@@ -118,6 +131,13 @@ class Tester : public Engineer {
                  payment,
                  project) {}
 
+  int getSalary() override {
+    return calcBase(getPayment(), getWorktime())
+        + calcBonus()
+        + calcProAdditions()
+        + calcBudgetPart(0.001, getProject()->getBudget());
+  }
+
   int calc() override {
     return Engineer::calc();
   }
@@ -139,13 +159,14 @@ class Tester : public Engineer {
   }
 
   void printInfo() override {
-    std::cout << "Tester{id=" + std::to_string(getId()) +
-        ", name=" + getName() +
-        ", position=" + getPosition() +
-        ", payment=" + std::to_string(getPayment()) +
-        ", project{id=" + std::to_string(getProject()->getId())
+    std::cout << "{id=" + std::to_string(getId())
+        + ", name=" + getName()
+        + ", position=" + getPosition()
+        + ", payment=" + std::to_string(getPayment())
+        + ", salary=" + std::to_string(getSalary())
+        + ", project{id=" + std::to_string(getProject()->getId())
         + ", budget=" + std::to_string(getProject()->getBudget())
-        + "} }" << std::endl;
+        + "}}" << std::endl;
   }
 };
 
@@ -161,6 +182,14 @@ class TeamLeader : public Programmer, IHeading {
                    position,
                    payment,
                    project) {}
+
+  int getSalary() override {
+    return calcBase(getPayment(), getWorktime())
+        + calcBonus()
+        + calcBudgetPart(0.002, getProject()->getBudget())
+        + calcHeads()
+        + calcProAdditions();
+  }
 
   int calc() override {
     return Programmer::calc();
@@ -187,13 +216,14 @@ class TeamLeader : public Programmer, IHeading {
   }
 
   void printInfo() override {
-    std::cout << "Team Leader{id=" + std::to_string(getId()) +
-        ", name=" + getName() +
-        ", position=" + getPosition() +
-        ", payment=" + std::to_string(getPayment()) +
-        ", project{id=" + std::to_string(getProject()->getId())
+    std::cout << "{id=" + std::to_string(getId())
+        + ", name=" + getName()
+        + ", position=" + getPosition()
+        + ", payment=" + std::to_string(getPayment())
+        + ", salary=" + std::to_string(getSalary())
+        + ", project{id=" + std::to_string(getProject()->getId())
         + ", budget=" + std::to_string(getProject()->getBudget())
-        + "} }" << std::endl;
+        + "}}" << std::endl;
   }
 };
 

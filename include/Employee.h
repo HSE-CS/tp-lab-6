@@ -52,6 +52,8 @@ class Employee {
     return position;
   }
 
+  virtual int getSalary() = 0;
+
   virtual int calc() = 0;
 
   virtual void printInfo() = 0;

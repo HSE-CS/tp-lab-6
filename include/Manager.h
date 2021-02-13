@@ -44,6 +44,10 @@ class ProjectManager : public Employee, IHeading {
       : Employee(id, name, position, payment),
         project(project) {}
 
+  int getSalary() override {
+    return calc() + calcHeads();
+  }
+
   Project *getProject() {
     return project;
   }
@@ -57,13 +61,14 @@ class ProjectManager : public Employee, IHeading {
   }
 
   void printInfo() override {
-    std::cout << "Project Manager{id=" + std::to_string(getId()) +
-        ", name=" + getName() +
-        ", position=" + getPosition() +
-        ", payment=" + std::to_string(getPayment()) +
-        ", project{id=" + std::to_string(project->getId())
-        + ", budget=" + std::to_string(project->getBudget())
-        + "} }" << std::endl;
+    std::cout << "{id=" + std::to_string(getId())
+        + ", name=" + getName()
+        + ", position=" + getPosition()
+        + ", payment=" + std::to_string(getPayment())
+        + ", salary=" + std::to_string(getSalary())
+        + ", project{id=" + std::to_string(getProject()->getId())
+        + ", budget=" + std::to_string(getProject()->getBudget())
+        + "}}" << std::endl;
   }
 };
 
@@ -81,6 +86,10 @@ class SeniorManager : public ProjectManager {
       : ProjectManager(id, name, position, payment, project),
         projects(std::move(projects)) {}
 
+  int getSalary() override {
+    return calc() + calcHeads();
+  }
+
   std::vector<Project *> &getProjects() {
     return projects;
   }
@@ -89,7 +98,7 @@ class SeniorManager : public ProjectManager {
     std::string string;
     for (Project *project : projects) {
       string += "id=" + std::to_string(project->getId())
-          + ", budget=" + std::to_string(project->getBudget()) + " ";
+          + ", budget=" + std::to_string(project->getBudget());
     }
     return string;
   }
@@ -103,11 +112,13 @@ class SeniorManager : public ProjectManager {
   }
 
   void printInfo() override {
-    std::cout << "Senior Manager{id=" + std::to_string(getId()) +
-        ", name=" + getName() +
-        ", position=" + getPosition() +
-        ", payment=" + std::to_string(getPayment()) +
-        ", project{" + getProjectsAsString() + "} }" << std::endl;
+    std::cout << "{id="
+        + std::to_string(getId())
+        + ", name=" + getName()
+        + ", position=" + getPosition()
+        + ", payment=" + std::to_string(getPayment())
+        + ", salary=" + std::to_string(getSalary())
+        + ", project{" + getProjectsAsString() + "}}" << std::endl;
   }
 };
 

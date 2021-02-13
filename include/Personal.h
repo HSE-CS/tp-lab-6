@@ -23,12 +23,8 @@ class Personal : public Employee, IWorkBaseTime {
                  position,
                  payment) {}
 
-  int getSalary() {
-    return salary;
-  }
-
-  void setSalary(int s) {
-    Personal::salary = s;
+  int getSalary() override {
+    return calc() + calcBase(getPayment(), getWorktime());
   }
 
   int calc() override {
@@ -36,8 +32,7 @@ class Personal : public Employee, IWorkBaseTime {
   }
 
   int calcBase(int p, int w) override {
-    this->setSalary(p * w);
-    return this->getSalary();
+    return p * w;
   }
 
   int calcBonus() override {
@@ -45,7 +40,7 @@ class Personal : public Employee, IWorkBaseTime {
   }
 
   void printInfo() override {
-    std::cout << "Personal{id=" + std::to_string(getId()) +
+    std::cout << "{id=" + std::to_string(getId()) +
         ", name=" + getName() +
         ", position=" + getPosition() +
         ", payment=" + std::to_string(getPayment()) +
@@ -64,6 +59,10 @@ class Driver : public Personal {
                  position,
                  payment) {}
 
+  int getSalary() override {
+    return calc() + calcBonus();
+  }
+
   int calc() override {
     return getPayment() * getWorktime();
   }
@@ -79,11 +78,11 @@ class Driver : public Personal {
   }
 
   void printInfo() override {
-    std::cout << "Driver{id=" + std::to_string(getId()) +
+    std::cout << "{id=" + std::to_string(getId()) +
         ", name=" + getName() +
         ", position=" + getPosition() +
         ", payment=" + std::to_string(getPayment()) +
-        ", salary" + std::to_string(getSalary()) + "}" << std::endl;
+        ", salary=" + std::to_string(getSalary()) + "}" << std::endl;
   }
 };
 
@@ -98,6 +97,10 @@ class Cleaner : public Personal {
                  position,
                  payment) {}
 
+  int getSalary() override {
+    return calc() + calcBonus();
+  }
+
   int calc() override {
     return getPayment() * getWorktime();
   }
@@ -111,11 +114,11 @@ class Cleaner : public Personal {
   }
 
   void printInfo() override {
-    std::cout << "Cleaner{id=" + std::to_string(getId()) +
+    std::cout << "{id=" + std::to_string(getId()) +
         ", name=" + getName() +
         ", position=" + getPosition() +
         ", payment=" + std::to_string(getPayment()) +
-        ", salary" + std::to_string(getSalary()) + "}" << std::endl;
+        ", salary=" + std::to_string(getSalary()) + "}" << std::endl;
   }
 };
 
