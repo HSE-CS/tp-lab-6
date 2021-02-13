@@ -3,46 +3,73 @@
 #include "../include/Factory.h"
 #include "../include/Personal.h"
 #include "../include/Engineer.h"
+#include <sstream>
 
-std::vector<Employee *> Factory::makeStaff(char *filepath, char *projectspath) {
+std::vector<Employee *> Factory::makeStaff(char *staffpath, char *projectspath) {
   setlocale(LC_ALL, "rus");
-  std::ifstream file(filepath);
+  std::ifstream staff(staffpath), projects(projectspath);
   std::string string;
-  getline(file, string);
+  getline(staff, string);
+  getline(projects, string);
+
   std::vector<Employee *> employees;
+  std::vector<Project *> blueprints;
+  Project *project;
+  Project *project2;
 
-  while (getline(file, string)) {
-    int id = 0, payment = 0;
-    std::string name, position;
+  /**
+   * получаем проект
+   */
+  while (getline(projects, string)) {
+    int i = 0;
+    std::string temp, arr[3];
+    std::stringstream stringstream(string);
+    while (std::getline(stringstream, temp, ',')) arr[i++] = temp;
+    if (std::stoi(arr[0]) == 1) {
+      project = new Project(std::stoi(arr[0]), std::stoi(arr[2]));
+    } else {
+      project2 = new Project(std::stoi(arr[0]), std::stoi(arr[2]));
+    }
+  }
 
-    auto *project = new Project(1, 120000);
-    auto *project2 = new Project(2, 300000);
-    std::vector<Project *> projects;
-    projects.push_back(project);
-    projects.push_back(project2);
+  blueprints.push_back(project);
+  blueprints.push_back(project2);
+
+  /**
+   * получаем персонал
+   */
+  while (getline(staff, string)) {
+
+    int i = 0;
+    std::string temp, arr[5];
+    std::stringstream stringstream(string);
+    while (std::getline(stringstream, temp, ',')) arr[i++] = temp;
+    int id = std::stoi(arr[0]), payment = std::stoi(arr[3]);
+    std::string name = arr[1], position = arr[2], projectName = arr[4];
 
     Employee *employee;
+    Project *localProject = projectName == "ВТБ" ? project : project2;
 
     if (position == "Engineer")
-      employee = new Engineer(id, name, position, payment, project);
+      employee = new Engineer(id, name, position, payment, localProject);
     else if (position == "Cleaner")
       employee = new Cleaner(id, name, position, payment);
     else if (position == "Driver")
       employee = new Driver(id, name, position, payment);
     else if (position == "Programmer")
-      employee = new Programmer(id, name, position, payment, project);
+      employee = new Programmer(id, name, position, payment, localProject);
     else if (position == "Tester")
-      employee = new Tester(id, name, position, payment, project);
+      employee = new Tester(id, name, position, payment, localProject);
     else if (position == "Team Lead")
-      employee = new TeamLeader(id, name, position, payment, project);
+      employee = new TeamLeader(id, name, position, payment, localProject);
     else if (position == "Project Manager")
-      employee = new ProjectManager(id, name, position, payment, project);
+      employee = new ProjectManager(id, name, position, payment, localProject);
     else if (position == "Senior Manager")
-      employee = new SeniorManager(id, name, position, payment, project, projects);
+      employee = new SeniorManager(id, name, position, payment, localProject, blueprints);
 
     employees.push_back(employee);
   }
-  file.close();
+  staff.close();
   return employees;
 }
 
