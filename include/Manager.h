@@ -52,7 +52,7 @@ class ProjectManager : public Employee, IHeading {
   }
 
   int calcHeads() override {
-    return (int) getProject()->getBudget() * 0.01;
+    return static_cast<int>(getProject()->getBudget() * 0.01);
   }
 
   void printInfo() override {
@@ -87,7 +87,8 @@ class SeniorManager : public ProjectManager {
   std::string getProjectsAsString() {
     std::string string;
     for (Project *project : projects) {
-      string += "id=" + std::to_string(project->getId()) + ", budget=" + std::to_string(project->getBudget()) + " ";
+      string += "id=" + std::to_string(project->getId())
+          + ", budget=" + std::to_string(project->getBudget()) + " ";
     }
     return string;
   }
@@ -97,7 +98,7 @@ class SeniorManager : public ProjectManager {
   }
 
   int calcHeads() override {
-    return (int) ProjectManager::calcHeads() * 2;
+    return static_cast<int>(ProjectManager::calcHeads() * 2);
   }
 
   void printInfo() override {
@@ -107,7 +108,6 @@ class SeniorManager : public ProjectManager {
         ", payment=" + std::to_string(getPayment()) +
         ", project{" + getProjectsAsString() + "} }" << std::endl;
   }
-
 };
 
 #endif  // INCLUDE_MANAGER_H_

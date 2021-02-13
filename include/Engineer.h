@@ -37,7 +37,7 @@ class Engineer : public Personal, IProjectBudget {
 
   int calcBonus() override {
     return getWorktime() > 40
-           ? (getWorktime() - 40) * (int) (getPayment() * 1.5)
+           ? (getWorktime() - 40) * static_cast<int>(getPayment() * 1.5)
            : 0;
   }
 
@@ -46,7 +46,7 @@ class Engineer : public Personal, IProjectBudget {
   }
 
   int calcBudgetPart(float part, int budget) override {
-    return (int) (part * budget);
+    return static_cast<int>(part * budget);
   }
 
   void printInfo() override {
@@ -58,7 +58,6 @@ class Engineer : public Personal, IProjectBudget {
         + ", budget=" + std::to_string(project->getBudget())
         + "} }" << std::endl;
   }
-
 };
 
 class Programmer : public Engineer {
@@ -103,7 +102,6 @@ class Programmer : public Engineer {
         + ", budget=" + std::to_string(getProject()->getBudget())
         + "} }" << std::endl;
   }
-
 };
 
 class Tester : public Engineer {
@@ -148,7 +146,6 @@ class Tester : public Engineer {
         + ", budget=" + std::to_string(getProject()->getBudget())
         + "} }" << std::endl;
   }
-
 };
 
 class TeamLeader : public Programmer, IHeading {
@@ -185,7 +182,7 @@ class TeamLeader : public Programmer, IHeading {
   }
 
   int calcHeads() override {
-    return (int) getProject()->getBudget() * 0.01;
+    return static_cast<int>(getProject()->getBudget() * 0.01);
   }
 
   void printInfo() override {
@@ -197,7 +194,6 @@ class TeamLeader : public Programmer, IHeading {
         + ", budget=" + std::to_string(getProject()->getBudget())
         + "} }" << std::endl;
   }
-
 };
 
 #endif  // INCLUDE_ENGINEER_H_

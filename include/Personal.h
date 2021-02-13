@@ -50,7 +50,6 @@ class Personal : public Employee, IWorkBaseTime {
         ", payment=" + std::to_string(getPayment()) +
         ", salary" + std::to_string(getSalary()) + "}" << std::endl;
   }
-
 };
 
 class Driver : public Personal {
@@ -74,7 +73,7 @@ class Driver : public Personal {
 
   int calcBonus() override {
     return getWorktime() > 40
-           ? (getWorktime() - 40) * (int) (getPayment() * 1.5)
+           ? (getWorktime() - 40) * static_cast<int>(getPayment() * 1.5)
            : 0;
   }
 
@@ -85,7 +84,6 @@ class Driver : public Personal {
         ", payment=" + std::to_string(getPayment()) +
         ", salary" + std::to_string(getSalary()) + "}" << std::endl;
   }
-
 };
 
 class Cleaner : public Personal {
