@@ -7,25 +7,21 @@ void Employee::setId(size_t id) {
     this->id = id;
 }
 
-void Employee::setWorkTime(size_t time) {
-    this->worktime = time;
+void Employee::setName(std::string& name) {
+    this->name = name;
 }
 
+void Employee::setWorkTime(size_t worktime) {
+    this->worktime = worktime;
+}
 
 void Employee::setPosition(size_t position) {
     this->position = position;
 }
 
-void setName(std::string);
-void setWorkTime(size_t);
-void setPosition(size_t);
-void setPayment(size_t);
-
-
-
-//void Employee::setPayment(int p) {
-//    Employee::payment = p;
-//}
+void Employee::setPayment(size_t payment) {
+    this->payment = payment;
+}
 
 size_t Employee::getWorktime() {
     return worktime;
@@ -50,4 +46,10 @@ size_t Employee::getPositionID() {
 std::string Employee::getPosition() {
     if (this->getPositionID() == 1)
         return std::string("DRIVER");
+    else if (this->getPositionID() == 2)
+        return std::string("CLEANER");
+    else if (this->getPositionID() == 3)
+        return std::string("SECURITY");
+    else
+        return std::string("I don't know, sorry!");
 }

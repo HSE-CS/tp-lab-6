@@ -6,15 +6,21 @@ int main() {
 	int a;
 	if (work == "DRIVER")
 		a = DRIVER;
+	else if (work == "SECURITY")
+		a = SECURITY;
 
 
 	if (a == DRIVER) {
 		Driver valera(12, std::string("Valera"), 120, 1, 1200);
-		std::cout << valera.getSalary() << std::endl;
-		std::cout << valera.getName() << std::endl;
-		std::cout << valera.getPayment() << '\n';
-		std::cout << valera.getPosition();
+		valera.printInfo();
 	}
+
+	if (a == SECURITY) {
+		Security valera(12, std::string("Valera"), 120, 3, 1500, 10);
+		valera.printInfo();
+	}
+
+	Project Myprod(1, 100, std::string("My Project!"));
 
 	return 0;
 }

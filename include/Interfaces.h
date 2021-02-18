@@ -4,8 +4,9 @@
 
 #include "Employee.h"
 #include "Personal.h"
+#include "Factory.h"
 
-enum Position { DRIVER = 1, CLEANER };
+enum Position { DRIVER = 1, CLEANER, SECURITY };
 
 class WorkBaseTime {
 public:

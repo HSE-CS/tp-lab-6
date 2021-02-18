@@ -17,7 +17,7 @@ private:
 
 public:
     void setId(size_t);
-    void setName(std::string);
+    void setName(std::string&);
     void setWorkTime(size_t);
     void setPosition(size_t);
     void setPayment(size_t);
@@ -29,7 +29,7 @@ public:
     size_t getPositionID();
     std::string getPosition();
     size_t virtual calc() = 0;
-    //virtual void printInfo() = 0;
+    void virtual printInfo() = 0;
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_
