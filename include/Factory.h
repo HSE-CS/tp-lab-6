@@ -10,17 +10,17 @@ private:
 	size_t budget;
 	std::string name;
 	std::vector<Employee*>* employees;
-	double part;
+	size_t part;
 
 public:
 	Project(size_t id, size_t budget, std::string name);
-	void hireWorker();
+	void hireWorker(Employee*);
 	size_t getId();
 	size_t getBudget();
 	std::string getName();
 	size_t getNumWorker();
 	void setPart();
-	double getPart();
+	size_t getPart();
 };
 
 #endif  // INCLUDE_FACTORY_H_

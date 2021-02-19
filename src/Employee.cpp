@@ -50,6 +50,12 @@ std::string Employee::getPosition() {
         return std::string("CLEANER");
     else if (this->getPositionID() == 3)
         return std::string("SECURITY");
+    else if (this->getPositionID() == 4)
+        return std::string("PROGRAMMER");
+    else if (this->getPositionID() == 5)
+        return std::string("TESTER");
+    else if (this->getPositionID() == 6)
+        return std::string("TEAMLEADER");
     else
         return std::string("I don't know, sorry!");
 }
