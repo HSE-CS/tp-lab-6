@@ -8,10 +8,11 @@
 
 
 class Engineer : public Employee {
-private:
+ private:
     Project* project{};
     size_t salary;
-public:
+
+ public:
     Engineer();
     Engineer(size_t id, std::string name, size_t worktime,
         size_t position, Project* proj, size_t salary);
@@ -27,7 +28,7 @@ public:
 };
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer();
     Programmer(size_t id, std::string name, size_t worktime,
         size_t position, Project* proj, size_t salary);
@@ -37,7 +38,7 @@ public:
 };
 
 class Tester : public Engineer {
-public:
+ public:
     Tester(size_t id, std::string name, size_t worktime,
         size_t position, Project* proj, size_t salary);
     size_t calcProAdittions();
@@ -46,7 +47,7 @@ public:
 };
 
 class TeamLeader : public Programmer {
-public:
+ public:
     TeamLeader(size_t id, std::string name, size_t worktime,
         size_t position, Project* proj, size_t salary);
     size_t calc();

@@ -2,7 +2,6 @@
 #include "Interfaces.h"
 
 
-
 void Employee::setId(size_t id) {
     this->id = id;
 }
@@ -51,13 +50,17 @@ std::string Employee::getPosition() {
     else if (this->getPositionID() == 3)
         return std::string("SECURITY");
     else if (this->getPositionID() == 4)
-        return std::string("PROGRAMMER");
-    else if (this->getPositionID() == 5)
-        return std::string("TESTER");
-    else if (this->getPositionID() == 6)
-        return std::string("TEAMLEADER");
-    else if (this->getPositionID() == 7)
         return std::string("ENGINEER");
+    else if (this->getPositionID() == 5)
+        return std::string("PROGRAMMER");
+    else if (this->getPositionID() == 6)
+        return std::string("TESTER");
+    else if (this->getPositionID() == 7)
+        return std::string("TEAMLEADER");
+    else if (this->getPositionID() == 8)
+        return std::string("MANAGER");
+    else if (this->getPositionID() == 9)
+        return std::string("SENIORMANAGER");
     else
         return std::string("I don't know, sorry!");
 }

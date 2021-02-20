@@ -21,7 +21,6 @@ class Employee {
      void setWorkTime(size_t);
      void setPosition(size_t);
      void setPayment(size_t);
-     
      size_t getWorktime();
      size_t getPayment();
      size_t getId();

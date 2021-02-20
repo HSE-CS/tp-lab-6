@@ -93,7 +93,7 @@
     "Name": "Beasley Richard Matthew",
     "WorkTime": "174",
     "Position": "ENGINEER",
-    "Salary": "550",
+    "Salary": "520",
     "Project": "3"
   },
   {
@@ -101,15 +101,170 @@
     "Name": "Roberts Roderick Richard",
     "WorkTime": "176",
     "Position": "ENGINEER",
-    "Salary": "550",
+    "Salary": "520",
     "Project": "3"
   },
   {
     "Id": "15",
     "Name": "Hensley Peregrine Tyler",
-    "WorkTime": "102",
+    "WorkTime": "140",
     "Position": "PROGRAMMER",
-    "Salary": "250",
+    "Salary": "689",
     "Project": "1"
+  },
+  {
+    "Id": "16",
+    "Name": "Stevens Paul Randall",
+    "WorkTime": "150",
+    "Position": "PROGRAMMER",
+    "Salary": "689",
+    "Project": "1"
+  },
+  {
+    "Id": "17",
+    "Name": "Knight Peter William",
+    "WorkTime": "194",
+    "Position": "PROGRAMMER",
+    "Salary": "689",
+    "Project": "1"
+  },
+  {
+    "Id": "18",
+    "Name": "Gregory Noel Steven",
+    "WorkTime": "170",
+    "Position": "PROGRAMMER",
+    "Salary": "689",
+    "Project": "1"
+  },
+  {
+    "Id": "19",
+    "Name": "Jacobs John Oliver",
+    "WorkTime": "174",
+    "Position": "PROGRAMMER",
+    "Salary": "689",
+    "Project": "1"
+  },
+  {
+    "Id": "20",
+    "Name": "Poole Henry Noah",
+    "WorkTime": "136",
+    "Position": "PROGRAMMER",
+    "Salary": "689",
+    "Project": "1"
+  },
+  {
+    "Id": "21",
+    "Name": "Stafford Clinton Richard",
+    "WorkTime": "190",
+    "Position": "PROGRAMMER",
+    "Salary": "632",
+    "Project": "3"
+  },
+  {
+    "Id": "22",
+    "Name": "Farmer Robert John",
+    "WorkTime": "181",
+    "Position": "PROGRAMMER",
+    "Salary": "632",
+    "Project": "3"
+  },
+  {
+    "Id": "23",
+    "Name": "Harris Jason Joseph",
+    "WorkTime": "176",
+    "Position": "PROGRAMMER",
+    "Salary": "632",
+    "Project": "3"
+  },
+  {
+    "Id": "24",
+    "Name": "Melton William Gordon",
+    "WorkTime": "100",
+    "Position": "PROGRAMMER",
+    "Salary": "632",
+    "Project": "3"
+  },
+  {
+    "Id": "25",
+    "Name": "Lucas Asher Mark",
+    "WorkTime": "179",
+    "Position": "PROGRAMMER",
+    "Salary": "632",
+    "Project": "3"
+  },
+  {
+    "Id": "26",
+    "Name": "Watson John Laurence",
+    "WorkTime": "170",
+    "Position": "TESTER",
+    "Salary": "480",
+    "Project": "1"
+  },
+  {
+    "Id": "27",
+    "Name": "Warren Matthew Martin",
+    "WorkTime": "174",
+    "Position": "TESTER",
+    "Salary": "480",
+    "Project": "1"
+  },
+  {
+    "Id": "28",
+    "Name": "Cox Donald Sherman",
+    "WorkTime": "220",
+    "Position": "TESTER",
+    "Salary": "430",
+    "Project": "3"
+  },
+  {
+    "Id": "29",
+    "Name": "Lawson Joseph Anthony",
+    "WorkTime": "140",
+    "Position": "TEAMLEADER",
+    "Salary": "1400",
+    "Project": "1"
+  },
+  {
+    "Id": "30",
+    "Name": "Sobolev Danil",
+    "WorkTime": "200",
+    "Position": "TEAMLEADER",
+    "Salary": "0",
+    "Project": "2"
+  },
+  {
+    "Id": "31",
+    "Name": "Bishop Lee Harold",
+    "WorkTime": "155",
+    "Position": "TEAMLEADER",
+    "Salary": "1100",
+    "Project": "3"
+  },
+  {
+    "Id": "32",
+    "Name": "Chambers Robert Camron",
+    "WorkTime": "140",
+    "Position": "MANAGER",
+    "Project": "1"
+  },
+  {
+    "Id": "33",
+    "Name": "Snow Martin Rudolph",
+    "WorkTime": "140",
+    "Position": "MANAGER",
+    "Project": "1"
+  },
+  {
+    "Id": "34",
+    "Name": "Wood Peter Darcy",
+    "WorkTime": "192",
+    "Position": "MANAGER",
+    "Project": "3"
+  },
+  {
+    "Id": "35",
+    "Name": "Snow Timofey Algoritmovich",
+    "WorkTime": "174",
+    "Position": "SENIORMANAGER"
   }
 ]

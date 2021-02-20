@@ -8,9 +8,10 @@
 
 
 class Personal : public Employee {
-private:
+ private:
     size_t salary;
-public:
+
+ public:
     void setSalary(size_t salary);
     size_t calcBase();
     size_t getSalary();
@@ -34,10 +35,10 @@ class Cleaner : public Personal {
 };
 
 class Security: public Personal {
-private:
+ private:
     size_t killed_enemies;
 
-public:
+ public:
     Security(size_t id, std::string name, size_t worktime,
         size_t position, size_t salary, size_t killed_enemies);
     size_t calc();
@@ -45,4 +46,5 @@ public:
     size_t getKilled();
     void printInfo();
 };
+
 #endif  // INCLUDE_PERSONAL_H_

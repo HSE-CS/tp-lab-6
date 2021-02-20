@@ -6,9 +6,11 @@
 #include "Personal.h"
 #include "Factory.h"
 #include "Engineer.h"
+#include "Manager.h"
 #include "Company.h"
 
-enum Position { DRIVER = 1, CLEANER, SECURITY, ENGINEER, PROGRAMMER, TESTER, TEAMLEADER, MANAGER, SENIORMANAGER };
+enum Position { DRIVER = 1, CLEANER, SECURITY, ENGINEER, PROGRAMMER,
+    TESTER, TEAMLEADER, MANAGER, SENIORMANAGER };
 
 class WorkBaseTime {
  public:

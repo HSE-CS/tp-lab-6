@@ -6,11 +6,11 @@
 #include <string>
 #include "Interfaces.h"
 
-
 class ProjectManager : public Employee {
-private:
+ private:
     std::vector<Project*>* projects;
-public:
+
+ public:
     ProjectManager();
     ProjectManager(size_t id, std::string name, size_t worktime,
         size_t position, Project* proj);
@@ -27,12 +27,11 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-public:
+ public:
     SeniorManager(size_t id, std::string name, size_t worktime,
         size_t position, std::vector<Project*>* proje);
     size_t calc();
     void printInfo();
 };
-
 
 #endif  // INCLUDE_MANAGER_H_
