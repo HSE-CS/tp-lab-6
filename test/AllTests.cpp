@@ -1,4 +1,4 @@
-// Copyright 2020 GHA Test Team
+// Copyright 2021 Arina Simonova
 
 #include <gtest/gtest.h>
 
