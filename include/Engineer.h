@@ -12,13 +12,18 @@ private:
     Project* project{};
     size_t salary;
 public:
+    Engineer();
+    Engineer(size_t id, std::string name, size_t worktime,
+        size_t position, Project* proj, size_t salary);
     void setSalary(size_t salary);
     size_t calcBase();
+    size_t calc();
     size_t getSalary();
     void setProject(Project*);
     size_t calcBugetPart();
     std::string getProjectName();
     Project* getProj();
+    void printInfo();
 };
 
 class Programmer : public Engineer {

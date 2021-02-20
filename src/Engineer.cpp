@@ -5,8 +5,34 @@
 #include "Engineer.h"
 #include <iostream>
 
+Engineer::Engineer() {
 
+	std::string name = "";
+	this->setId(0);
+	this->setName(name);
+	this->setWorkTime(0);
+	this->setPosition(0);
+	this->setSalary(0);
+	this->setProject(nullptr);
+	this->setPayment(0);
+}
 
+Engineer::Engineer(size_t id, std::string name, size_t worktime,
+	size_t position, Project* proj, size_t salary) {
+
+	this->setId(id);
+	this->setName(name);
+	this->setWorkTime(worktime);
+	this->setPosition(position);
+	this->setSalary(salary);
+	this->setProject(proj);
+	proj->hireWorker(this);
+	this->setPayment(this->calc());
+}
+
+size_t Engineer::calc() {
+	return (this->calcBase() + this->calcBugetPart());
+}
 void Engineer::setProject(Project* proj) {
 	this->project = proj;
 }
@@ -34,6 +60,15 @@ std::string Engineer::getProjectName() {
 Project* Engineer::getProj() {
 	return (this->project);
 }
+
+void Engineer::printInfo() {
+	std::cout << std::endl << this->getId() << ". " << this->getName() << " - "
+		<< this->getPosition() << "\nSalary = " << this->getSalary()
+		<< "; Worktime = " << this->getWorktime() << "; Project and part = "
+		<< this->getProjectName() << " - " << this->calcBugetPart()
+		<< "; Final payment = " << this->getPayment() << std::endl;
+}
+
 Programmer::Programmer() {
 
 	std::string name = "";
@@ -73,7 +108,7 @@ void Programmer::printInfo() {
 		<< this->getPosition() << "\nSalary = " << this->getSalary()
 		<< "; Worktime = " << this->getWorktime() << "; Project and part = "
 		<< this->getProjectName() << " - " << this->calcBugetPart()
-		<< "; Final payment = " << this->getPayment() << std::endl;
+		<<"; Final payment = " << this->getPayment() << std::endl;
 }
 
 Tester::Tester(size_t id, std::string name, size_t worktime,
@@ -105,13 +140,6 @@ void Tester::printInfo() {
 		<< this->getProjectName() << " - " << this->calcBugetPart()
 		<< "; Final payment = " << this->getPayment() << std::endl;
 }
-//
-//class TeamLeader : public Programmer {
-//public:
-//	size_t calc();
-//	size_t calcHeads();
-//	void printInfo();
-//};
 
 TeamLeader::TeamLeader(size_t id, std::string name, size_t worktime,
 	size_t position, Project* proj, size_t salary) {

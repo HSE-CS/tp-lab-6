@@ -17,23 +17,23 @@ public:
 };
 
 class Driver : public Personal {
-public:
-    Driver(size_t id, std::string name, size_t worktime,
-        size_t position, size_t salary);
-    size_t calcBonus();
-    size_t calc();
-    void printInfo();
+ public:
+     Driver(size_t id, std::string name, size_t worktime,
+         size_t position, size_t salary);
+     size_t calcBonus();
+     size_t calc();
+     void printInfo();
 };
 
 class Cleaner : public Personal {
-public:
-    Cleaner(size_t id, std::string name, size_t worktime,
-        size_t position, size_t salary);
-    size_t calc();
-    void printInfo();
+ public:
+     Cleaner(size_t id, std::string name, size_t worktime,
+         size_t position, size_t salary);
+     size_t calc();
+     void printInfo();
 };
 
-class Security : public Personal {
+class Security: public Personal {
 private:
     size_t killed_enemies;
 

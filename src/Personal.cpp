@@ -30,7 +30,7 @@ Driver::Driver(size_t id, std::string name, size_t worktime,
 }
 
 size_t Driver::calc() {
-	return (this->calcBonus() + this->calcBase());
+	return (this->calcBonus() + this->calcBase());	
 }
 
 size_t Driver::calcBonus() {
@@ -39,10 +39,10 @@ size_t Driver::calcBonus() {
 
 
 void Driver::printInfo() {
-	std::cout << std::endl << this->getId() << ". " << this->getName() << " - "
+	std::cout << std::endl <<this->getId() << ". " << this->getName() << " - "
 		<< this->getPosition() << "\nSalary = " << this->getSalary()
-		<< " Worktime = " << this->getWorktime() << "; Final payment = "
-		<< this->getPayment() << std::endl;
+		<< " Worktime = " << this->getWorktime()<<"; Final payment = "
+		<< this->getPayment()<< std::endl;
 }
 
 Cleaner::Cleaner(size_t id, std::string name, size_t worktime,
@@ -85,7 +85,7 @@ size_t Security::getKilled() {
 }
 
 size_t Security::calcBonus() {
-	return this->getKilled() * 100000;
+	return this->getKilled() * 25000;
 }
 
 size_t Security::calc() {
@@ -93,7 +93,7 @@ size_t Security::calc() {
 }
 
 void Security::printInfo() {
-	std::cout << std::endl << this->getId() << ". " << this->getName()
+	std::cout << std::endl << this->getId() << ". " << this->getName() 
 		<< " - " << this->getPosition() << "\nSalary = " << this->getSalary()
 		<< " Worktime = " << this->getWorktime() << " Killed = "
 		<< this->getKilled() << "; Final payment = "

@@ -3,6 +3,14 @@
 
 #include "Factory.h"
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <ctime>
+#include <cstdlib>
+#include "json.hpp"
+
+
 
 Project::Project(size_t id, size_t budget, std::string name) {
 	this->id = id;
@@ -38,5 +46,6 @@ void Project::setPart() {
 }
 
 size_t Project::getPart() {
+	this->setPart();
 	return part;
 }

@@ -6,13 +6,14 @@
 #include "Personal.h"
 #include "Factory.h"
 #include "Engineer.h"
+#include "Company.h"
 
-enum Position { DRIVER = 1, CLEANER, SECURITY, PROGRAMMER, TESTER, TEAMLEADER };
+enum Position { DRIVER = 1, CLEANER, SECURITY, ENGINEER, PROGRAMMER, TESTER, TEAMLEADER, MANAGER, SENIORMANAGER };
 
 class WorkBaseTime {
-public:
-    size_t virtual calcBase() = 0;
-    size_t virtual calcBonus() = 0;
+ public:
+     size_t virtual calcBase() = 0;
+     size_t virtual calcBonus() = 0;
 };
 
 class Heading {
