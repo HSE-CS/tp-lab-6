@@ -160,7 +160,7 @@ TeamLeader::TeamLeader(size_t id, std::string name, size_t worktime,
 }
 
 size_t TeamLeader::calcHeads() {
-    return (this->getProj()->getNumWorker() * 1500);
+    return (this->getProj()->getNumWorker() * 5000);
 }
 
 size_t TeamLeader::calcProAdittions() {
