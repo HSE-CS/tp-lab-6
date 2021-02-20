@@ -5,11 +5,18 @@
 #ifndef TP_LAB_6_ENGINEER_H
 #define TP_LAB_6_ENGINEER_H
 
+#include <vector>
 #include "Personal.h"
 #include "Interfaces.h"
 
+class Project;
+
 class Engineer : public Personal, public IProjectBudget {
+protected:
+    std::vector<Project*> projects;
+    float part;
 public:
+    Engineer(int salary, std::vector<Project *> projects, float part);
     int calcBudgetPart(float part, int budget) override;
 };
 

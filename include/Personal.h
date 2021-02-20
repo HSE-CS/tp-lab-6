@@ -12,6 +12,7 @@ class Personal : public Employee, public IWorkBaseTime {
 protected:
     int salary;
 public:
+    Personal(int id, const std::string &name, Position position, int salary);
     int calcBase(int salary, int wtime) override;
     int calcBonus() override;
 };

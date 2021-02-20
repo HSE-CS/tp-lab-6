@@ -3,3 +3,7 @@
 //
 
 #include "../include/Factory.h"
+
+std::vector<Employee *> StaffFactory::makeStaff() {
+    return std::vector<Employee *>();
+}

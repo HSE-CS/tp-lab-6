@@ -25,6 +25,7 @@ protected:
     int workTime;
     int payment;
 public:
+    Employee(int id, std::string name, Position position);
     void setWorkTime(int workTime);
     virtual void calc()=0;
     virtual void printInfo()=0;

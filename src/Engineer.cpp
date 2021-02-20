@@ -4,9 +4,14 @@
 
 #include "../include/Engineer.h"
 
+#include <utility>
+
 int Engineer::calcBudgetPart(float part, int budget) {
     return 0;
 }
+
+Engineer::Engineer(int salary, std::vector<Project *> projects, float part) :
+Personal(salary), projects(std::move(projects)), part(part) {}
 
 int Tester::calcProAdditions() {
     return 0;

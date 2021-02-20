@@ -12,6 +12,9 @@ int Personal::calcBonus() {
     return 0;
 }
 
+Personal::Personal(int id, const std::string &name, Position position,
+                   int salary) : Employee(id, name, position), salary(salary) {}
+
 void Cleaner::calc() {
     payment =  calcBase(salary, workTime) + calcBonus();
 }
