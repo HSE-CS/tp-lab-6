@@ -14,18 +14,6 @@ TEST(Cleaner, make_cleaner) {
   EXPECT_EQ(employee->getName(), rez);
 }
 
-//TEST(Cleaner, cleaner_getId) {
-//Employee *employee = new Cleaner(0,
-//                                 "Katerina Tyulin",
-//                                 "cleaner",
-//                                 150);
-//int rez = 0;
-//EXPECT_EQ(employee->getId(), rez);
-//
-////  EXPECT_EQ(employee->getPayment(), 2);
-////  EXPECT_EQ(employee->getSalary(), 0);
-//}
-
 TEST(Cleaner, cleaner_getSal) {
   Employee *employee = new Cleaner(0,
                                    "Katerina Tyulin",
