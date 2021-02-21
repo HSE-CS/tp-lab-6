@@ -10,9 +10,9 @@ int main() {
     std::vector<Employee*> staff = StaffFactory::makeStaff();
 
     std::minstd_rand simple_rand;
-    simple_rand.seed(
-    std::chrono::system_clock::now().time_since_epoch().count());
-//    simple_rand.seed(42);
+//    simple_rand.seed(
+//    std::chrono::system_clock::now().time_since_epoch().count());
+    simple_rand.seed(55);
 
     // присвоение отработанного времени
     for(auto emp: staff) {
@@ -28,4 +28,5 @@ int main() {
     for(auto emp: staff) {
         emp->printInfo();
     }
+    return 0;
 }

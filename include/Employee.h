@@ -29,6 +29,8 @@ class Employee {
     virtual void calc()=0;
     virtual void printInfo() = 0;
     std::string getPosition() const;
+
+    int getPayment() const;
 };
 
 

@@ -22,3 +22,7 @@ std::string Employee::getPosition() const {
     else result = "senior_manager";
     return result;
 }
+
+int Employee::getPayment() const {
+    return payment;
+}
