@@ -19,6 +19,9 @@ void Cleaner::calc() {
     payment =  calcBase(salary, workTime) + calcBonus();
 }
 
+Cleaner::Cleaner(int id, const std::string &name, Position position, int salary)
+        : Personal(id, name, position, salary) {}
+
 void Driver::calc() {
 
 }
@@ -26,3 +29,6 @@ void Driver::calc() {
 int Driver::calcBonus() {
     return Personal::calcBonus();
 }
+
+Driver::Driver(int id, const std::string &name, Position position, int salary)
+        : Personal(id, name, position, salary) {}

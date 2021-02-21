@@ -10,7 +10,6 @@
 #include "Interfaces.h"
 #include "Factory.h"
 
-class Project;
 
 class ProjectManager : public Employee, public IProjectBudget, public IHeading {
 protected:
@@ -20,15 +19,19 @@ protected:
 public:
     ProjectManager(int id, const std::string &name, Position position,
                    const std::vector<Project *> &projects, float part);
-
+    int calcBudgetPart(float part, int budget) override;
+    int calcProAdditions() override;
     int calcHeads() override;
     void calc() override;
 };
 
 class SeniorManager : public ProjectManager {
 protected:
-    int num_of_projects = StaffFactory::projects.size();
+    int num_of_projects = 3;
 public:
+    SeniorManager(int id, const std::string &name, Position position,
+                  const std::vector<Project *> &projects, float part);
+    int calcProAdditions() override;
     void calc() override;
 };
 

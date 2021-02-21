@@ -13,27 +13,38 @@ class Project;
 
 class Engineer : public Personal, public IProjectBudget {
 protected:
-    std::vector<Project*> projects;
+    Project* project;
     float part;
 public:
-    Engineer(int salary, std::vector<Project *> projects, float part);
+    Engineer(int id, const std::string &name, Position position, int salary,
+             Project *project, float part);
+
     int calcBudgetPart(float part, int budget) override;
 };
 
 class Tester : public Engineer {
 public:
+    Tester(int id, const std::string &name, Position position, int salary,
+           Project *project, float part);
+protected:
     int calcProAdditions() override;
     void calc() override;
 };
 
 class Programmer : public Engineer {
 public:
+    Programmer(int id, const std::string &name, Position position, int salary,
+               Project *project, float part);
+protected:
     int calcProAdditions() override;
     void calc() override;
 };
 
 class TeamLeader : public Programmer, public IHeading {
 public:
+    TeamLeader(int id, const std::string &name, Position position, int salary,
+               Project *project, float part);
+protected:
     int calcHeads() override;
     void calc() override;
 };

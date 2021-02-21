@@ -5,6 +5,7 @@
 #ifndef TP_LAB_6_FACTORY_H
 #define TP_LAB_6_FACTORY_H
 
+#include <utility>
 #include <vector>
 #include "Employee.h"
 
@@ -13,11 +14,12 @@ public:
     int is;
     std::string name;
     int budget;
+    Project(int is, std::string name, int budget) :
+    is(is), name(std::move(name)), budget(budget) {}
 };
 
 class StaffFactory {
 public:
-    static std::vector<Project*> projects;
     static std::vector<Employee*> makeStaff();
 };
 

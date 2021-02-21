@@ -19,11 +19,13 @@ public:
 
 class Cleaner : public Personal {
 public:
+    Cleaner(int id, const std::string &name, Position position, int salary);
     void calc() override;
 };
 
 class Driver : public Personal {
 public:
+    Driver(int id, const std::string &name, Position position, int salary);
     int calcBonus() override;
     void calc() override;
 };

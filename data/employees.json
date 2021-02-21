@@ -1,3 +1,289 @@
 {
+  "employees": [
+    {
+      "name": "Селиванова Анна Ивановна",
+      "position": "cleaner",
+      "salary": 300
+    },
 
+    {
+      "name": "Фокина Алия Данииловна",
+      "position": "cleaner",
+      "salary": 300
+    },
+
+    {
+      "name": "Макаров Алексей Владиславович",
+      "position": "driver",
+      "salary": 350
+    },
+
+    {
+      "name": "Кириллов Александр Семёнович",
+      "position": "driver",
+      "salary": 350
+    },
+
+    {
+      "name": "Гущин Илья Степанович",
+      "position": "driver",
+      "salary": 350
+    },
+
+    {
+      "name": "Гущин Илья Степанович",
+      "position": "programmer",
+      "salary": 400,
+      "project": 0,
+      "part": 10
+    },
+
+    {
+      "name": "Ситников Максим Максимович",
+      "position": "programmer",
+      "salary": 400,
+      "project": 0,
+      "part": 10
+    },
+
+    {
+      "name": "Яковлев Виталий Александрович",
+      "position": "programmer",
+      "salary": 420,
+      "project": 0,
+      "part": 10
+    },
+
+    {
+      "name": "Ильина Татьяна Глебовна",
+      "position": "programmer",
+      "salary": 420,
+      "project": 0,
+      "part": 10
+    },
+
+    {
+      "name": "Куликов Александр Никитич",
+      "position": "team_leader",
+      "salary": 500,
+      "project": 0,
+      "part": 10
+    },
+
+    {
+      "name": "Наумов Эмин Матвеевич",
+      "position": "tester",
+      "salary": 370,
+      "project": 0,
+      "part": 10
+    },
+
+    {
+      "name": "Фадеева Ника Денисовна",
+      "position": "tester",
+      "salary": 350,
+      "project": 0,
+      "part": 10
+    },
+
+    {
+      "name": "Захарова Алиса Ярославовна",
+      "position": "project_manager",
+      "salary": 400,
+      "project": [0],
+      "part": 10
+    },
+
+    {
+      "name": "Макаров Макар Романович",
+      "position": "senior_manager",
+      "salary": 650,
+      "project": [0, 1, 2],
+      "part": 10
+    },
+
+    {
+      "name": "Захарова Алиса Ярославовна",
+      "position": "senior_manager",
+      "salary": 650,
+      "project": [0, 1, 2],
+      "part": 10
+    },
+
+    {
+      "name": "Добрынина Светлана Алексеевна",
+      "position": "project_manager",
+      "salary": 400,
+      "project": [1],
+      "part": 10
+    },
+
+    {
+      "name": "Прохорова Екатерина Владиславовна",
+      "position": "project_manager",
+      "salary": 380,
+      "project": [1],
+      "part": 10
+    },
+
+    {
+      "name": "Горелова София Васильевна",
+      "position": "team_leader",
+      "salary": 550,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Гришин Артём Григорьевич",
+      "position": "programmer",
+      "salary": 380,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Симонов Андрей Романович",
+      "position": "programmer",
+      "salary": 400,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Овсянникова Виктория Никитична",
+      "position": "programmer",
+      "salary": 400,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Давыдова Ева Давидовна",
+      "position": "programmer",
+      "salary": 420,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Зайцева Дарья Сергеевна",
+      "position": "programmer",
+      "salary": 460,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Богданов Арсений Львович",
+      "position": "tester",
+      "salary": 370,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Максимова Валерия Никитична",
+      "position": "tester",
+      "salary": 370,
+      "project": 1,
+      "part": 10
+    },
+
+    {
+      "name": "Богданов Андрей Денисович",
+      "position": "project_manager",
+      "salary": 450,
+      "project": [2],
+      "part": 10
+    },
+
+    {
+      "name": "Максимов Данила Егорович",
+      "position": "project_manager",
+      "salary": 420,
+      "project": [2],
+      "part": 10
+    },
+
+    {
+      "name": "Кошелев Яков Владимирович",
+      "position": "team_leader",
+      "salary": 700,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Аксенов Даниил Николаевич",
+      "position": "programmer",
+      "salary": 410,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Шишкина Алиса Тимуровна",
+      "position": "programmer",
+      "salary": 430,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Евдокимов Алексей Дамирович",
+      "position": "programmer",
+      "salary": 430,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Ерофеев Макар Львович",
+      "position": "programmer",
+      "salary": 440,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Исакова Валерия Александровна",
+      "position": "programmer",
+      "salary": 500,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Кузнецова Елизавета Артёмовна",
+      "position": "programmer",
+      "salary": 500,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Титов Тимур Кириллович",
+      "position": "tester",
+      "salary": 450,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Киселев Марк Владиславович",
+      "position": "tester",
+      "salary": 430,
+      "project": 2,
+      "part": 10
+    },
+
+    {
+      "name": "Соловьева Сафия Артемьевна",
+      "position": "tester",
+      "salary": 430,
+      "project": 2,
+      "part": 10
+    }
+  ]
 }

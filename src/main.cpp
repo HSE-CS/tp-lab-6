@@ -6,5 +6,5 @@
 #include "Factory.h"
 
 int main() {
-    std::vector<Employee*> staff = StaffFactory::makeStaff(...);
+    std::vector<Employee*> staff = StaffFactory::makeStaff();
 }
