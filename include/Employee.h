@@ -1,9 +1,7 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
-#ifndef TP_LAB_6_EMPLOYEE_H
-#define TP_LAB_6_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 
 #include <string>
@@ -18,19 +16,20 @@ enum Position {
     CLEANER
 };
 
-class Employee{
-protected:
+class Employee {
+ protected:
     int id;
     std::string name;
     Position position;
     int workTime;
     int payment;
-public:
+ public:
     Employee(int id, std::string name, Position position);
     void setWorkTime(int workTime);
     virtual void calc()=0;
-    void printInfo();
+    virtual void printInfo() = 0;
+    std::string getPosition() const;
 };
 
 
-#endif //TP_LAB_6_EMPLOYEE_H
+#endif  // INCLUDE_EMPLOYEE_H_

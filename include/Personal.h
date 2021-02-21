@@ -1,33 +1,31 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
-#ifndef TP_LAB_6_PERSONAL_H
-#define TP_LAB_6_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 #include "Employee.h"
 #include "Interfaces.h"
 
 class Personal : public Employee, public IWorkBaseTime {
-protected:
+ protected:
     int salary;
-public:
+ public:
     Personal(int id, const std::string &name, Position position, int salary);
+    void printInfo() override;
     int calcBase(int salary, int wtime) override;
     int calcBonus() override;
+    void calc() override;
 };
 
 class Cleaner : public Personal {
-public:
+ public:
     Cleaner(int id, const std::string &name, Position position, int salary);
-    void calc() override;
 };
 
 class Driver : public Personal {
-public:
+ public:
     Driver(int id, const std::string &name, Position position, int salary);
     int calcBonus() override;
-    void calc() override;
 };
 
-#endif //TP_LAB_6_PERSONAL_H
+#endif  // INCLUDE_PERSONAL_H_

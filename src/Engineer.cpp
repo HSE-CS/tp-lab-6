@@ -1,26 +1,37 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
 #include "../include/Engineer.h"
 
 #include <utility>
+#include <sstream>
+#include <iostream>
+#include <Factory.h>
 
 int Engineer::calcBudgetPart(float part, int budget) {
-    return 0;
+    return project->budget / int(part);
 }
 
 Engineer::
 Engineer(int id, const std::string &name, Position position, int salary,
-         Project *project, float part) : Personal(id, name, position, salary),
-         project(project), part(part) {}
+         Project *_project, float part) : Personal(id, name, position, salary),
+         project(_project), part(part) {}
+
+void Engineer::printInfo() {
+    std::stringbuf str;
+    std::ostream stream(&str);
+    stream << "Id: " << id << "\nName: " << name << "\nPosition: " <<
+    getPosition() << "\nProject: " << project->name << "\nWork time: "
+    << workTime << "\nSalary: " << salary << "\nPayment: " << payment << "\n";
+    std::cout << str.str() << std::endl;
+}
 
 int Tester::calcProAdditions() {
-    return 0;
+    return calcBase(salary, workTime) / 10;
 }
 
 void Tester::calc() {
-
+    payment = calcBase(salary, workTime) +
+              calcBudgetPart(part, project->budget) + calcProAdditions();
 }
 
 Tester::
@@ -29,11 +40,12 @@ Tester(int id, const std::string &name, Position position, int salary,
        Engineer(id, name, position, salary, project, part) {}
 
 int Programmer::calcProAdditions() {
-    return 0;
+    return calcBase(salary, workTime) / 10;
 }
 
 void Programmer::calc() {
-
+    payment = calcBase(salary, workTime) +
+            calcBudgetPart(part, project->budget) + calcProAdditions();
 }
 
 Programmer::
@@ -42,11 +54,12 @@ Programmer(int id, const std::string &name, Position position, int salary,
                                                     project, part) {}
 
 int TeamLeader::calcHeads() {
-    return 0;
+    return 150;
 }
 
 void TeamLeader::calc() {
-    Programmer::calc();
+    payment = calcBase(salary, workTime) + calcHeads() +
+              calcBudgetPart(part, project->budget) + calcProAdditions();
 }
 
 TeamLeader::

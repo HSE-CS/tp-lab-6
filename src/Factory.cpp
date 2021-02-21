@@ -1,6 +1,4 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
 #include <fstream>
 #include <nlohmann/json.hpp>
@@ -36,17 +34,18 @@ std::vector<Employee *> StaffFactory::makeStaff() {
         if (position == "project_manager" ||
             position == "senior_manager") {
             auto project = v["project"].get<std::vector<int>>();
-            std::vector<Project*> prj(project.size());
-            for (int i: project) prj.push_back(projects[i]);
             auto part = v["part"].get<float>() / 100;
             if (position == "project_manager") {
                 pos = Position(PROJECT_MANAGER);
+                std::vector<Project*> prj;
+                prj.push_back(projects[project[0]]);
                 staff.push_back(new ProjectManager{
-                        id++, name, pos, prj, part});
+                        id++, name, pos, 1, prj, part});
             } else {
                 pos = Position(SENIOR_MANAGER);
                 staff.push_back(new SeniorManager{
-                        id++, name, pos, prj, part});
+                        id++, name, pos, static_cast<int>(projects.size()),
+                        projects, part});
             }
         } else if (position == "cleaner" || position == "driver") {
             auto salary = v["salary"].get<int>();

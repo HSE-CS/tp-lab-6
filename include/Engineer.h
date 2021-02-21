@@ -1,9 +1,7 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
-#ifndef TP_LAB_6_ENGINEER_H
-#define TP_LAB_6_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include <vector>
 #include "Personal.h"
@@ -12,42 +10,42 @@
 class Project;
 
 class Engineer : public Personal, public IProjectBudget {
-protected:
+ protected:
     Project* project;
     float part;
-public:
+ public:
     Engineer(int id, const std::string &name, Position position, int salary,
              Project *project, float part);
-
+    void printInfo() override;
     int calcBudgetPart(float part, int budget) override;
 };
 
 class Tester : public Engineer {
-public:
+ public:
     Tester(int id, const std::string &name, Position position, int salary,
            Project *project, float part);
-protected:
+ protected:
     int calcProAdditions() override;
     void calc() override;
 };
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer(int id, const std::string &name, Position position, int salary,
                Project *project, float part);
-protected:
+ protected:
     int calcProAdditions() override;
     void calc() override;
 };
 
 class TeamLeader : public Programmer, public IHeading {
-public:
+ public:
     TeamLeader(int id, const std::string &name, Position position, int salary,
                Project *project, float part);
-protected:
+ protected:
     int calcHeads() override;
     void calc() override;
 };
 
 
-#endif //TP_LAB_6_ENGINEER_H
+#endif  // INCLUDE_ENGINEER_H_

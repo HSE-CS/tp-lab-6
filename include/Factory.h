@@ -1,16 +1,14 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
-#ifndef TP_LAB_6_FACTORY_H
-#define TP_LAB_6_FACTORY_H
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <utility>
 #include <vector>
 #include "Employee.h"
 
 class Project {
-public:
+ public:
     int is;
     std::string name;
     int budget;
@@ -19,9 +17,9 @@ public:
 };
 
 class StaffFactory {
-public:
+ public:
     static std::vector<Employee*> makeStaff();
 };
 
 
-#endif //TP_LAB_6_FACTORY_H
+#endif  // INCLUDE_FACTORY_H_

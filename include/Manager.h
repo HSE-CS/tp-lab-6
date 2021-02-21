@@ -1,9 +1,7 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
-#ifndef TP_LAB_6_MANAGER_H
-#define TP_LAB_6_MANAGER_H
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 
 #include <vector>
 #include "Employee.h"
@@ -12,13 +10,14 @@
 
 
 class ProjectManager : public Employee, public IProjectBudget, public IHeading {
-protected:
-    int num_of_projects = 1;
+ protected:
     std::vector<Project*> projects;
     float part;
-public:
+ public:
     ProjectManager(int id, const std::string &name, Position position,
-                   const std::vector<Project *> &projects, float part);
+                   int num_of_projects, const std::vector<Project *> &projects,
+                   float part);
+    void printInfo() override;
     int calcBudgetPart(float part, int budget) override;
     int calcProAdditions() override;
     int calcHeads() override;
@@ -26,14 +25,11 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-protected:
-    int num_of_projects = 3;
-public:
+ public:
     SeniorManager(int id, const std::string &name, Position position,
-                  const std::vector<Project *> &projects, float part);
-    int calcProAdditions() override;
-    void calc() override;
+                  int num_of_projects, const std::vector<Project *> &projects,
+                  float part);
 };
 
 
-#endif //TP_LAB_6_MANAGER_H
+#endif  // INCLUDE_MANAGER_H_

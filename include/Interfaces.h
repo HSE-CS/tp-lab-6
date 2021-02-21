@@ -1,22 +1,20 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
-#ifndef TP_LAB_6_INTERFACES_H
-#define TP_LAB_6_INTERFACES_H
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
-class IWorkBaseTime{
+class IWorkBaseTime {
     virtual int calcBase(int salary, int wtime)=0;
     virtual int calcBonus()=0;
 };
 
-class IProjectBudget{
+class IProjectBudget {
     virtual int calcBudgetPart(float part, int budget)=0;
     virtual int calcProAdditions()=0;
 };
 
-class IHeading{
+class IHeading {
     virtual int calcHeads()=0;
 };
 
-#endif //TP_LAB_6_INTERFACES_H
+#endif  // INCLUDE_INTERFACES_H_

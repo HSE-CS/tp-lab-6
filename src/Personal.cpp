@@ -1,7 +1,7 @@
-//
-// Created by Valera on 20.02.2021.
-//
+// Copyright 2021 valvarl
 
+#include <sstream>
+#include <iostream>
 #include "../include/Personal.h"
 
 int Personal::calcBase(int _salary, int _wtime) {
@@ -15,19 +15,24 @@ int Personal::calcBonus() {
 Personal::Personal(int id, const std::string &name, Position position,
                    int salary) : Employee(id, name, position), salary(salary) {}
 
-void Cleaner::calc() {
+void Personal::printInfo() {
+    std::stringbuf str;
+    std::ostream stream(&str);
+    stream << "Id: " << id << "\nName: " << name << "\nPosition: " <<
+    getPosition() << "\nWork time: " << workTime << "\nSalary: " << salary
+    << "\nPayment: " << payment << "\n";
+    std::cout << str.str() << std::endl;
+}
+
+void Personal::calc() {
     payment =  calcBase(salary, workTime) + calcBonus();
 }
 
 Cleaner::Cleaner(int id, const std::string &name, Position position, int salary)
         : Personal(id, name, position, salary) {}
 
-void Driver::calc() {
-
-}
-
 int Driver::calcBonus() {
-    return Personal::calcBonus();
+    return calcBase(salary, workTime) / 10;
 }
 
 Driver::Driver(int id, const std::string &name, Position position, int salary)

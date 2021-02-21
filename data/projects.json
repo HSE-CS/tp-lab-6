@@ -9,13 +9,13 @@
     {
       "id": 1,
       "name": "Project 2",
-      "budget": 10000
+      "budget": 20000
     },
 
     {
       "id": 2,
       "name": "Project 3",
-      "budget": 10000
+      "budget": 30000
     }
   ]
 }
