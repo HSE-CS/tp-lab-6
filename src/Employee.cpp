@@ -6,14 +6,17 @@ Project::Project(std::string id, int budget) {
   this->budget = budget;
 }
 
-Employee::Employee(int id, std::string name, std::string position, int payment) {
+Employee::Employee(int id, std::string name,
+                   std::string position,
+                   int payment) {
   this->id = id;
   this->name = std::move(name);
   this->position = std::move(position);
   this->payment = payment;
 }
 
-Employee::Employee(int id, const std::string& name, const std::string& position) {
+Employee::Employee(int id, const std::string& name,
+                   const std::string& position) {
   this->id = id;
   this->name = name;
   this->position = position;
@@ -38,7 +41,7 @@ void Employee::setWorkTime(int workTime) {
   this->worktime = workTime;
 }
 
-void Employee::setSalary(int sal){
+void Employee::setSalary(int sal) {
   this->salary = sal;
 }
 

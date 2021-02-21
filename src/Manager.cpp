@@ -17,7 +17,7 @@ int ProjManager::calcBudgetPart(double part, int budget) {
 int ProjManager::calcProAdditions() {
   int wt = getWorkTime();
   int salHeads = calcHeads();
-  if (wt > 40) { // если работал больше 8 часов в день
+  if (wt > 40) {  // если работал больше 8 часов в день
     return salHeads * 30 / 100;  // + 30% от heads
   } else {
     return 0;
@@ -55,7 +55,7 @@ void ProjManager::printInfo() {
 int SeniorManager::calc() {
   int additionalBonus = calcProAdditions();
   int budgPart = 0;
-  for (auto &pr:projects) {
+  for (auto &pr : projects) {
     budgPart += calcBudgetPart(0.3, pr->budget);
   }
   int salHead = calcHeads();
@@ -71,7 +71,7 @@ int SeniorManager::calcBudgetPart(double part, int budget) {
 int SeniorManager::calcProAdditions() {
   int wt = getWorkTime();
   int salHeads = calcHeads();
-  if (wt > 40) { // если работал больше 8 часов в день
+  if (wt > 40) {  // если работал больше 8 часов в день
     return salHeads * 35 / 100;  // + 35% от heads
   } else {
     return 0;
@@ -81,11 +81,10 @@ int SeniorManager::calcProAdditions() {
 int SeniorManager::calcHeads() {
   double headAddings = 0.1;
   int budgHeads = 0;
-  for (auto &pr:projects) {
+  for (auto &pr : projects) {
     budgHeads += floor(pr->budget * headAddings);
   }
   return budgHeads;
-
 }
 
 std::string SeniorManager::getStrProjs() {

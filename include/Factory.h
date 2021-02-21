@@ -14,4 +14,4 @@ class Factory {
   static std::vector<Employee *> makeStaff(const json &file);
 };
 
-#endif //  INCLUDE_FACTORY_H_
+#endif  //  INCLUDE_FACTORY_H_

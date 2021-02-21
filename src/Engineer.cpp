@@ -16,7 +16,7 @@ int Engineer::calcBonus() {
   int wt = getWorkTime();
   int pmnt = getPayment();
   int initialSalary = calcBase(pmnt, wt);
-  if (wt > 40) { //  если работал больше 8 часов в день
+  if (wt > 40) {  //  если работал больше 8 часов в день
     return initialSalary * 30 / 100;  //  + 30% от зп
   } else {
     return 0;
@@ -76,7 +76,7 @@ int Tester::calcBonus() {
   int wt = getWorkTime();
   int pmnt = getPayment();
   int initialSalary = calcBase(pmnt, wt);
-  if (this->mistakes >= 25){
+  if (this->mistakes >= 25) {
     return initialSalary * 15 / 100;  // + 15% от зп
   } else {
     return 0;
@@ -182,7 +182,7 @@ int TeamLeader::calcBonus() {
   int wt = getWorkTime();
   int pmnt = getPayment();
   int initialSalary = calcBase(pmnt, wt);
-  if (wt > 40) { //  если работал больше 8 часов в день
+  if (wt > 40) {  //  если работал больше 8 часов в день
     return initialSalary * 35 / 100;  //  + 35% от зп
   } else {
     return 0;

@@ -15,7 +15,7 @@ class Engineer : public Personal, ProjectBudget {
                     int payment,
                     Project *project)
       : Personal(id, name, position, payment),
-        project(project) {};
+        project(project) {}
   /* Salary calculations */
   int calc() override;
   int calcBonus() override;
@@ -94,4 +94,4 @@ class TeamLeader : public Programmer, Heading {
   void printInfo() override;
 };
 
-#endif //  INCLUDE_ENGINEER_H_
+#endif  //  INCLUDE_ENGINEER_H_

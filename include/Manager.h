@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <utility>
 #include "Factory.h"
 #include "Interfaces.h"
 #include "Employee.h"
@@ -18,7 +19,7 @@ class ProjManager : public Employee, Heading, ProjectBudget {
 
   ProjManager(int id, const std::string &name,
               const std::string &position)
-      : Employee(id, name, position){}
+      : Employee(id, name, position) {}
   /* Salary calculations */
   int calc() override;
   int calcBudgetPart(double part, int budget) override;
@@ -55,4 +56,4 @@ class SeniorManager : public ProjManager {
   std::vector<Project *> projects;
 };
 
-#endif //  INCLUDE_MANAGER_H_
+#endif  //  INCLUDE_MANAGER_H_

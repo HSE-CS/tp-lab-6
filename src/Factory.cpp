@@ -1,8 +1,10 @@
 //// Copyright 2021 Ozhiganova Polina
 #include "Factory.h"
 
-Project *getProj(const std::string &projName, const std::vector<Project *> &projects) {
-  for (auto &proj:projects) {
+Project *getProj(const std::string &projName,
+                 const std::vector<Project *>
+                 &projects) {
+  for (auto &proj : projects) {
     if (proj->id == projName) {
       return proj;
     }
@@ -15,14 +17,14 @@ std::vector<Employee *> Factory::makeStaff(const json &file) {
   std::vector<Employee *> employees;
   for (auto &[key, value] : file.items()) {
     if (key == "PROJECTS") {
-      for (auto &proj: value) {
+      for (auto &proj : value) {
         std::string id = proj["id"];
         int budget = proj["budget"];
         Project *project = new Project(id, budget);
         projects.push_back(project);
       }
     } else if (key == "STUFF") {
-      for (auto &stuff:value) {
+      for (auto &stuff : value) {
         Employee *employee;
         Project *proj;
         int id = stuff["id"];

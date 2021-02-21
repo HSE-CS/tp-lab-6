@@ -45,7 +45,7 @@ int Driver::calcBonus() {
   int wt = getWorkTime();
   int pmnt = getPayment();
   int initialSalary = calcBase(pmnt, wt);
-  if (wt > 40) { //  если работал больше 8 часов в день
+  if (wt > 40) {  //  если работал больше 8 часов в день
     return initialSalary * 25 / 100;  //  + 25% от зп
   } else {
     return 0;
@@ -83,7 +83,7 @@ int Cleaner::calcBonus() {
   int wt = getWorkTime();
   int pmnt = getPayment();
   int initialSalary = calcBase(pmnt, wt);
-  if (wt > 25) { //  если работал больше 5 часов в день
+  if (wt > 25) {  //  если работал больше 5 часов в день
     return initialSalary * 10 / 100;  //  + 10% от зп
   } else {
     return 0;

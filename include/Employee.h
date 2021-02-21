@@ -13,7 +13,8 @@ class Project {
 class Employee {
  public:
   explicit Employee(int id, std::string name, std::string position, int payment);
-  Employee(int id, const std::string& name, const std::string& position);
+  Employee(int id, const std::string& name,
+           const std::string& position);
   ~Employee();
   Employee(const Employee& newE);
   /* Setters */
@@ -39,4 +40,4 @@ class Employee {
   int salary = 0;
 };
 
-#endif //  INCLUDE_EMPLOYEE_H_
+#endif  //  INCLUDE_EMPLOYEE_H_
