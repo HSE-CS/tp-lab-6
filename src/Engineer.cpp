@@ -101,7 +101,7 @@ size_t Programmer::calc() {
 }
 
 size_t Programmer::calcProAdittions() {
-    return rand() % 30000;
+    return rand_r() % 30000;
 }
 
 void Programmer::printInfo() {
@@ -133,7 +133,7 @@ size_t Tester::calc() {
 }
 
 size_t Tester::calcProAdittions() {
-    return rand() % 25000;
+    return rand_r() % 25000;
 }
 
 void Tester::printInfo() {
@@ -164,7 +164,7 @@ size_t TeamLeader::calcHeads() {
 }
 
 size_t TeamLeader::calcProAdittions() {
-    return rand() % 50000;
+    return rand_r() % 50000;
 }
 
 size_t TeamLeader::calc() {

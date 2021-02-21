@@ -34,7 +34,7 @@ size_t Driver::calc() {
 }
 
 size_t Driver::calcBonus() {
-    return rand() % 10000;
+    return rand_r() % 10000;
 }
 
 
