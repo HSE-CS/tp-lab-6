@@ -12,7 +12,8 @@ class Project {
 
 class Employee {
  public:
-  explicit Employee(int id, std::string name, std::string position, int payment);
+  explicit Employee(int id, std::string name,
+                    std::string position, int payment);
   Employee(int id, const std::string& name,
            const std::string& position);
   ~Employee();
