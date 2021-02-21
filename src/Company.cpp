@@ -31,10 +31,8 @@ void Company::create_all_projects() {
         auto Id = index["Id"].get<std::string>();
         auto Name = index["Name"].get<std::string>();
         auto Budget = index["Budget"].get<std::string>();
-        
         auto project = new Project(atoi(Id.c_str()),
             atoi(Budget.c_str()), Name);
-
         this->all_projects->push_back(project);
     }
 }
@@ -46,7 +44,6 @@ void Company::create_all_employee() {
     i.close();
     auto employee_json = json_employee.get<std::vector<json>>();
     for (const auto& index : employee_json) {
-
         auto Id = index["Id"].get<std::string>();
         auto Name = index["Name"].get<std::string>();
         auto WorkTime = index["WorkTime"].get<std::string>();
@@ -57,7 +54,6 @@ void Company::create_all_employee() {
             size_t pos = DRIVER;
             auto* driver = new Driver(atoi((Id.c_str())), Name,
                 atoi((WorkTime.c_str())), pos, atoi((Salary.c_str())));
-
             this->all_employee->push_back(driver);
 
         } else if (Position == "CLEANER") {
@@ -129,20 +125,14 @@ void Company::create_all_employee() {
                 this->getProject((size_t)(atoi((ProjectId.c_str()))));
             auto* manager = new ProjectManager(atoi((Id.c_str())), Name,
                 atoi((WorkTime.c_str())), pos, proj);
-
             this->all_employee->push_back(manager);
-
         } else if (Position == "SENIORMANAGER") {
             size_t pos = SENIORMANAGER;
             auto* senior = new SeniorManager(atoi((Id.c_str())), Name,
                 atoi((WorkTime.c_str())), pos, this->all_projects);
-
             this->all_employee->push_back(senior);
-
-        } else {
+        } else
             throw(1);
-        }
-        
     }
 }
 

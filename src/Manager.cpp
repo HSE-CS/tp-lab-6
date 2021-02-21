@@ -117,5 +117,5 @@ void SeniorManager::printInfo() {
         << this->getWorktime() << "; Projects: "
         << "\"" << this->getProjectName() << "\""
         << "; Final payment = " << this->getPayment() << " from " <<
-        this->NumOfProjects() << " project;"<<std::endl;
+        this->NumOfProjects() << " project;" << std::endl;
 }

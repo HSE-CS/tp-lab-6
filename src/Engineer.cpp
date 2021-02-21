@@ -4,6 +4,8 @@
 #include "Employee.h"
 #include "Engineer.h"
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 Engineer::Engineer() {
     std::string name = "";
@@ -101,7 +103,8 @@ size_t Programmer::calc() {
 }
 
 size_t Programmer::calcProAdittions() {
-    return rand_r() % 30000;
+    unsigned int seed = time(NULL);
+    return rand_r(&seed) % 30000;
 }
 
 void Programmer::printInfo() {
@@ -133,7 +136,8 @@ size_t Tester::calc() {
 }
 
 size_t Tester::calcProAdittions() {
-    return rand_r() % 25000;
+    unsigned int seed = time(NULL);
+    return rand_r(&seed) % 25000;
 }
 
 void Tester::printInfo() {
@@ -164,7 +168,8 @@ size_t TeamLeader::calcHeads() {
 }
 
 size_t TeamLeader::calcProAdittions() {
-    return rand_r() % 50000;
+    unsigned int seed = time(NULL);
+    return rand_r(&seed) % 50000;
 }
 
 size_t TeamLeader::calc() {

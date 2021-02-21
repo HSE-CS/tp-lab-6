@@ -3,6 +3,7 @@
 #define INCLUDE_COMPANY_H_
 
 #include "Interfaces.h"
+#include <vector>
 
 class Company {
  private:

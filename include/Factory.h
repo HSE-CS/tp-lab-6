@@ -3,6 +3,8 @@
 #define INCLUDE_FACTORY_H_
 
 #include "Interfaces.h"
+#include <vector>
+#include <string>
 
 class Project {
  private:

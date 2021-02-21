@@ -1,3 +1,4 @@
+// Copyright 2021 soda
 #include "Interfaces.h"
 
 int main() {

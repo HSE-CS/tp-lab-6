@@ -4,6 +4,8 @@
 #include "Employee.h"
 #include "Personal.h"
 #include <iostream>
+#include <ctime>
+#include <cstdlib>
 
 
 void Personal::setSalary(size_t salary) {
@@ -30,11 +32,12 @@ Driver::Driver(size_t id, std::string name, size_t worktime,
 }
 
 size_t Driver::calc() {
-    return (this->calcBonus() + this->calcBase());	
+    return (this->calcBonus() + this->calcBase());
 }
 
 size_t Driver::calcBonus() {
-    return rand_r() % 10000;
+    unsigned int seed = time(NULL);
+    return rand_r(&seed) % 10000;
 }
 
 
@@ -42,7 +45,7 @@ void Driver::printInfo() {
     std::cout << std::endl <<this->getId() << ". " << this->getName()
         << " - "
         << this->getPosition() << "\nSalary = " << this->getSalary()
-        << " Worktime = " << this->getWorktime()<<"; Final payment = "
+        << " Worktime = " << this->getWorktime() << "; Final payment = "
         << this->getPayment()<< std::endl;
 }
 
@@ -95,7 +98,7 @@ size_t Security::calc() {
 }
 
 void Security::printInfo() {
-    std::cout << std::endl << this->getId() << ". " << this->getName() 
+    std::cout << std::endl << this->getId() << ". " << this->getName()
         << " - " << this->getPosition() << "\nSalary = " << this->getSalary()
         << " Worktime = " << this->getWorktime() << " Killed = "
         << this->getKilled() << "; Final payment = "

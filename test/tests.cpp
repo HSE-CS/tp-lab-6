@@ -7,7 +7,7 @@
 
 TEST(PesonalTest, test1) {
     std::string name = "Name";
-    Cleaner test(1, name, 2, 2,50);
+    Cleaner test(1, name, 2, 2, 50);
     EXPECT_EQ(1, test.getId());
 }
 
