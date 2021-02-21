@@ -151,7 +151,7 @@ TEST(TeamLeader, TeamLeader_getSalary) {
   employee->setWorkTime(10);
   int sal = employee->getPayment() * employee->getWorkTime();
   employee->setSalary(sal);
-  int rez = 100000;
+  int rez = 10000;
   EXPECT_EQ(employee->getSalary(), rez);
 }
 
