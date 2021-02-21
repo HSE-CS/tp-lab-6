@@ -8,7 +8,7 @@
 #include <Factory.h>
 
 int Engineer::calcBudgetPart(float part, int budget) {
-    return project->budget / int(part);
+    return project->budget / static_cast<int>(part);
 }
 
 Engineer::

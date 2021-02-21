@@ -1,7 +1,7 @@
 // Copyright 2021 valvarl
 
 #include <random>
-#include <chrono>
+// #include <chrono>
 #include "Employee.h"
 #include "Factory.h"
 
@@ -15,17 +15,17 @@ int main() {
     simple_rand.seed(55);
 
     // присвоение отработанного времени
-    for(auto emp: staff) {
+    for (auto emp : staff) {
         emp->setWorkTime(simple_rand() % 40);
     }
 
     // расчет зарплаты
-    for(auto emp: staff) {
+    for (auto emp : staff) {
         emp->calc();
     }
 
     // вывод данных о зарплате
-    for(auto emp: staff) {
+    for (auto emp : staff) {
         emp->printInfo();
     }
     return 0;

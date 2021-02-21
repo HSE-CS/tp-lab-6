@@ -46,7 +46,7 @@ void ProjectManager::printInfo() {
     std::ostream stream(&str);
     stream << "Id: " << id << "\nName: " << name << "\nPosition: " <<
     getPosition() << "\nProjects: [";
-    for (auto p: projects) {
+    for (auto p : projects) {
         stream << p->name << ", ";
     }
     stream << "]\nWork time: " << workTime << "\nPayment: " << payment << "\n";

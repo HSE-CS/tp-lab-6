@@ -7,6 +7,7 @@
 #include "Employee.h"
 #include "Interfaces.h"
 #include "Factory.h"
+#include <string>
 
 
 class ProjectManager : public Employee, public IProjectBudget, public IHeading {

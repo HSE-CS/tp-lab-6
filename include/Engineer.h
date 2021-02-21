@@ -6,6 +6,7 @@
 #include <vector>
 #include "Personal.h"
 #include "Interfaces.h"
+#include <string>
 
 class Project;
 

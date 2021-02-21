@@ -19,7 +19,8 @@ std::string Employee::getPosition() const {
     else if (position == TESTER) result = "tester";
     else if (position == TEAM_LEADER) result = "team_leader";
     else if (position == PROJECT_MANAGER) result = "project_manager";
-    else result = "senior_manager";
+    else
+        result = "senior_manager";
     return result;
 }
 

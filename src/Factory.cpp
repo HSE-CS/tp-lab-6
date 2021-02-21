@@ -67,17 +67,17 @@ std::vector<Employee *> StaffFactory::makeStaff() {
                 pos = Position(PROGRAMMER);
                 staff.push_back(new Programmer{
                         id++, name, pos, salary,
-                        projects[project], (float)part});
+                        projects[project], static_cast<float>(part)});
             } else if (position == "tester") {
                 pos = Position(TESTER);
                 staff.push_back(new Tester{
                         id++, name, pos, salary,
-                        projects[project],(float) part});
+                        projects[project], static_cast<float>(part)});
             } else {
                 pos = Position(TEAM_LEADER);
                 staff.push_back(new TeamLeader{
                         id++, name, pos, salary,
-                        projects[project],(float) part});
+                        projects[project], static_cast<float>(part)});
             }
         }
     }
