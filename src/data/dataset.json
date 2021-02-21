@@ -1,0 +1,165 @@
+{
+  "PROJECTS": [
+    {
+      "id": "DA",
+      "budget": 500000
+    },
+    {
+      "id": "ML",
+      "budget": 1000000
+    },
+    {
+      "id": "GameDev",
+      "budget": 350000
+    }
+  ],
+  "STUFF": [
+    {
+      "id": 1,
+      "name_surname": "Gen Levin",
+      "position": "cleaner",
+      "payment": 250
+    },
+    {
+      "id": 2,
+      "name_surname": "Isabella Scott",
+      "position": "cleaner",
+      "payment": 155
+    },
+    {
+      "id": 3,
+      "name_surname": "Chloe Woods",
+      "position": "driver",
+      "payment": 300
+    },
+    {
+      "id": 4,
+      "name_surname": "Ivan Richardson",
+      "position": "driver",
+      "payment": 360
+    },
+    {
+      "id": 5,
+      "name_surname": "Ivan Dorn",
+      "position": "programmer",
+      "payment": 1000,
+      "project": "DA"
+    },
+    {
+      "id": 6,
+      "name_surname": "Ella Brown",
+      "position": "programmer",
+      "payment": 1500,
+      "project": "DA"
+    },
+    {
+      "id": 7,
+      "name_surname": "Elizabeth Scott",
+      "position": "tester",
+      "payment": 800,
+      "project": "DA",
+      "mistakes": 50
+    },
+    {
+      "id": 8,
+      "name_surname": "Peter Johnson",
+      "position": "project manager",
+      "project": "DA"
+    },
+    {
+      "id": 9,
+      "name_surname": "Randy Martin",
+      "position": "team leader",
+      "payment": 2000,
+      "project": "DA"
+    },
+    {
+      "id": 10,
+      "name_surname": "Michael Phillips",
+      "position": "programmer",
+      "payment": 1500,
+      "project": "ML"
+    },
+    {
+      "id": 11,
+      "name_surname": "Ed Garretti",
+      "position": "tester",
+      "payment": 500,
+      "project": "ML",
+      "mistakes": 15
+    },
+    {
+      "id": 12,
+      "name_surname": "Luis Richardson",
+      "position": "programmer",
+      "payment": 950,
+      "project": "ML"
+    },
+    {
+      "id": 13,
+      "name_surname": "Ed Johnson",
+      "position": "team leader",
+      "payment": 2000,
+      "project": "ML"
+    },
+    {
+      "id": 14,
+      "name_surname": "Gavin Garcia",
+      "position": "project manager",
+      "project": "ML"
+    },
+    {
+      "id": 15,
+      "name_surname": "Taylor Howard",
+      "position": "programmer",
+      "payment": 1600,
+      "project": "GameDev"
+    },
+    {
+      "id": 16,
+      "name_surname": "Orlando Mareo",
+      "position": "tester",
+      "payment": 1000,
+      "project": "GameDev",
+      "mistakes": 25
+    },
+    {
+      "id": 17,
+      "name_surname": "Chloe Taylor",
+      "position": "team leader",
+      "payment": 2100,
+      "project": "GameDev"
+    },
+    {
+      "id": 18,
+      "name_surname": "Jacob Hill",
+      "position": "programmer",
+      "payment": 910,
+      "project": "GameDev"
+    },
+    {
+      "id": 19,
+      "name_surname": "Paula Gazz",
+      "position": "project manager",
+      "project": "GameDev"
+    },
+    {
+      "id": 20,
+      "name_surname": "Lily Miller",
+      "position": "driver",
+      "payment": 230
+    },
+    {
+      "id": 21,
+      "name_surname": "Katerina Tyulina",
+      "position": "cleaner",
+      "payment": 170
+    },
+    {
+      "id": 22,
+      "name_surname": "Alexander Kondratiev",
+      "position": "senior manager",
+      "projects": "DA-ML-GameDev"
+    }
+  ]
+}
