@@ -131,8 +131,9 @@ void Company::create_all_employee() {
             auto* senior = new SeniorManager(atoi((Id.c_str())), Name,
                 atoi((WorkTime.c_str())), pos, this->all_projects);
             this->all_employee->push_back(senior);
-        } else
+        } else {
             throw(1);
+        }
     }
 }
 
