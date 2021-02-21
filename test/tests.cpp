@@ -18,6 +18,9 @@ simple_rand.seed(42);
 for (auto emp : staff) {
     emp->setWorkTime(simple_rand() % 40);
 }
+for (auto emp : staff) {
+emp->calc();
+}
 EXPECT_EQ(6600, staff.at(0)->getPayment());
 }
 
@@ -28,6 +31,9 @@ simple_rand.seed(42);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
 }
+for (auto emp : staff) {
+emp->calc();
+}
 EXPECT_EQ(2100, staff.at(1)->getPayment());
 }
 
@@ -37,6 +43,9 @@ std::minstd_rand simple_rand;
 simple_rand.seed(55);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
+}
+for (auto emp : staff) {
+emp->calc();
 }
 EXPECT_EQ(600, staff.at(1)->getPayment());
 }
@@ -53,6 +62,9 @@ simple_rand.seed(55);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
 }
+for (auto emp : staff) {
+emp->calc();
+}
 EXPECT_EQ(7315, staff.at(2)->getPayment());
 }
 
@@ -62,6 +74,9 @@ std::minstd_rand simple_rand;
 simple_rand.seed(55);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
+}
+for (auto emp : staff) {
+emp->calc();
 }
 EXPECT_EQ(4620, staff.at(3)->getPayment());
 }
@@ -78,6 +93,9 @@ simple_rand.seed(55);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
 }
+for (auto emp : staff) {
+emp->calc();
+}
 EXPECT_EQ(7600, staff.at(5)->getPayment());
 }
 
@@ -87,6 +105,9 @@ std::minstd_rand simple_rand;
 simple_rand.seed(55);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
+}
+for (auto emp : staff) {
+emp->calc();
 }
 EXPECT_EQ(9360, staff.at(6)->getPayment());
 }
@@ -103,6 +124,9 @@ simple_rand.seed(55);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
 }
+for (auto emp : staff) {
+emp->calc();
+}
 EXPECT_EQ(14900, staff.at(9)->getPayment());
 }
 
@@ -118,6 +142,9 @@ simple_rand.seed(60);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
 }
+for (auto emp : staff) {
+emp->calc();
+}
 EXPECT_EQ(3225, staff.at(25)->getPayment());
 }
 
@@ -128,6 +155,9 @@ std::minstd_rand simple_rand;
 simple_rand.seed(60);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
+}
+for (auto emp : staff) {
+emp->calc();
 }
 EXPECT_EQ(3225, staff.at(26)->getPayment());
 }
@@ -144,6 +174,9 @@ simple_rand.seed(60);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
 }
+for (auto emp : staff) {
+emp->calc();
+}
 EXPECT_EQ(6525, staff.at(13)->getPayment());
 }
 
@@ -153,6 +186,9 @@ std::minstd_rand simple_rand;
 simple_rand.seed(60);
 for (auto emp : staff) {
 emp->setWorkTime(simple_rand() % 40);
+}
+for (auto emp : staff) {
+emp->calc();
 }
 EXPECT_EQ(6525, staff.at(14)->getPayment());
 }

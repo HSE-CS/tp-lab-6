@@ -12,7 +12,7 @@ int main() {
     std::minstd_rand simple_rand;
 //    simple_rand.seed(
 //    std::chrono::system_clock::now().time_since_epoch().count());
-    simple_rand.seed(55);
+    simple_rand.seed(42);
 
     // присвоение отработанного времени
     for (auto emp : staff) {
