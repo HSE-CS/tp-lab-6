@@ -14,7 +14,8 @@ public:
     Personal(int id, std::string name,
         std::string position, double payment) :
         Employee(id, name, position, payment) {}
-    double getSalary();
+    void setSalary(double salary) override;
+    double getSalary() override;
     double calc() override;
     double calcBase(double payment, int time) override;
     double calcBonus() override;
@@ -26,7 +27,21 @@ public:
     Driver(int id, std::string name,
         std::string position, double payment) :
         Personal(id, name, position, payment) {}
-    double getSalary();
+    void setSalary(double salary) override;
+    double getSalary() override;
+    double calc() override;
+    double calcBase(double payment, int time) override;
+    double calcBonus() override;
+    void printInfo() override;
+};
+
+class Cleaner : public Personal {
+public:
+    Cleaner(int id, std::string name,
+        std::string position, double payment) :
+        Personal(id, name, position, payment) {}
+    void setSalary(double salary) override;
+    double getSalary() override;
     double calc() override;
     double calcBase(double payment, int time) override;
     double calcBonus() override;

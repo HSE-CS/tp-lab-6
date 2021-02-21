@@ -4,6 +4,8 @@
 
 class IWorkBaseTime {
 public:
+    virtual void setSalary(double salary) = 0;
+    virtual double getSalary() = 0;
     virtual double calcBase(double payment, int time) = 0;
     virtual double calcBonus() = 0;
 };

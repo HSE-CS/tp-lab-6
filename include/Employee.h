@@ -1,7 +1,6 @@
 // Copyright 2021 Khoroshavina Ekaterina
 #ifndef INCLUDE_EMPLOYEE_H_
 #define INCLUDE_EMPLOYEE_H_
-
 #include <string>
 
 class Employee {

@@ -4,18 +4,18 @@
 
 Employee::Employee(int id, std::string name,
     std::string position, double payment) {
-    Employee::id = id;
-    Employee::name = std::move(name);
-    Employee::position = std::move(position);
-    Employee::payment = payment;
+    this->id = id;
+    this->name = std::move(name);
+    this->position = std::move(position);
+    this->payment = payment;
 }
 
 void Employee::setWorktime(int worktime) {
-    Employee::worktime = worktime;
+    this->worktime = worktime;
 }
 
 void Employee::setPayment(double payment) {
-    Employee::payment = payment;
+    this->payment = payment;
 }
 
 int Employee::getWorktime() {
