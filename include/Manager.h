@@ -11,7 +11,6 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <string>
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:
@@ -41,4 +40,4 @@ class SeniorManager : public ProjectManager {
                        projects, part) {}
 };
 
-#endif  // INCLUDE_MANAGER_H
+#endif  // INCLUDE_MANAGER_H_

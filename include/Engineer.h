@@ -12,7 +12,6 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <string>
 
 class Project;
 

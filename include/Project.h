@@ -1,8 +1,8 @@
 // Copyright 2021 LongaBonga
 
 
-#ifndef INCLUDE_PROJECT_H
-#define INCLUDE_PROJECT_H
+#ifndef INCLUDE_PROJECT_H_
+#define INCLUDE_PROJECT_H_
 
 #include <cstring>
 #include <fstream>
@@ -10,7 +10,6 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <string>
 
 class Project {
  private:
@@ -22,4 +21,4 @@ class Project {
   std::string name;
 };
 
-#endif // INCLUDE_PROJECT_H
+#endif // INCLUDE_PROJECT_H_

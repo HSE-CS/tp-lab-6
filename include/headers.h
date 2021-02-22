@@ -7,6 +7,5 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include <string>
 
 #endif  // INCLUDE_HEADERS_H_

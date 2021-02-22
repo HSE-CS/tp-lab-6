@@ -36,4 +36,5 @@ class Cleaner : public Personal {
           int payment, int worktime)
       : Personal(id, name, position, payment, worktime) {}
 };
-#endif  // INCLUDE_PERSONAL_H
+
+#endif  // INCLUDE_PERSONAL_H_
