@@ -3,6 +3,7 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include <string>
 #include "Interfaces.h"
 #include "Personal.h"
 class Engineer : public ProjectBudget, public Personal {
@@ -13,7 +14,6 @@ class Engineer : public ProjectBudget, public Personal {
   int calcBudgetPart(float part, int budget) override;
   int calcBonus() override;
   void calc() override;
-
 };
 
 class Programmer : public Engineer {
@@ -47,4 +47,4 @@ class TeamLeader : public Programmer, public Heading {
   void calc() override;
 };
 
-#endif // INCLUDE_ENGINEER_H_
+#endif //  INCLUDE_ENGINEER_H_

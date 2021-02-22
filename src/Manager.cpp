@@ -8,7 +8,7 @@ int ProjectManager::calcHeads() {
 }
 
 int ProjectManager::calcBudgetPart(float part, int budget) {
-  return (int) (part * budget);
+  return static_cast<int>(part * budget);
 }
 
 int ProjectManager::calcProAdditions() {
@@ -16,8 +16,9 @@ int ProjectManager::calcProAdditions() {
 }
 
 void ProjectManager::calc() {
-  this->payment = ProjectManager::calcBudgetPart(0.2f,
-                                                 this->projects[0]->GetBudget());
+  this->payment = ProjectManager
+  ::calcBudgetPart(0.2f,
+                   this->projects[0]->GetBudget());
 }
 
 ProjectManager::ProjectManager(std::string id,
@@ -30,7 +31,6 @@ ProjectManager::ProjectManager(std::string id,
   this->projects = projects;
 }
 void ProjectManager::printInfo() {
-
 }
 const std::vector<Project *> &ProjectManager::GetProjects() const {
   return projects;
@@ -42,11 +42,11 @@ void ProjectManager::SetProjects(const std::vector<Project *> &projects) {
 void SeniorManager::calc() {
   this->payment = 0;
   for (int i = 0; i < this->projects.size(); ++i) {
-    this->payment += ProjectManager::calcBudgetPart(0.2f,
-                                                    this->projects[i]->GetBudget());
+    this->payment +=
+        ProjectManager::calcBudgetPart(0.2f,
+                                       this->projects[i]->GetBudget());
     ProjectManager::calcHeads();
   }
-
 }
 
 SeniorManager::SeniorManager(std::string id,
@@ -54,5 +54,4 @@ SeniorManager::SeniorManager(std::string id,
                              POSITION position,
                              std::vector<Project *> projects)
     : ProjectManager(id, name, position, projects) {
-
 }

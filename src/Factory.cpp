@@ -36,7 +36,6 @@ std::vector<Employee *> Factory::generateEmployees() {
         i++;
       }
 
-
       if (position == "Driver") {
         i++;
         i++;  //  space skip
@@ -97,10 +96,10 @@ std::vector<Employee *> Factory::generateEmployees() {
 
         employees.reserve(employees.size() + 1);
         employees.push_back(new Tester(id,
-                                           name,
-                                           TESTER,
-                                           std::stoi(salary),
-                                           new Project(projectId, 100000)));
+                                       name,
+                                       TESTER,
+                                       std::stoi(salary),
+                                       new Project(projectId, 100000)));
       } else if (position == "TeamLeader") {
         i++;
         i++;  //  space skip
@@ -118,10 +117,10 @@ std::vector<Employee *> Factory::generateEmployees() {
 
         employees.reserve(employees.size() + 1);
         employees.push_back(new TeamLeader(id,
-                                       name,
-                                       TEAMLEADER,
-                                       std::stoi(salary),
-                                       new Project(projectId, 100000)));
+                                           name,
+                                           TEAMLEADER,
+                                           std::stoi(salary),
+                                           new Project(projectId, 100000)));
       } else if (position == "ProjectManager") {
         std::string projectId;
         i++;
@@ -135,13 +134,13 @@ std::vector<Employee *> Factory::generateEmployees() {
 
         employees.reserve(employees.size() + 1);
         employees.push_back(new ProjectManager(id,
-                                           name,
-                                           TEAMLEADER,
-                                           projects));
+                                               name,
+                                               TEAMLEADER,
+                                               projects));
       } else if (position == "SeniorManager") {
         std::vector<Project *> projects;
 
-        while (line[i + 1] != '\n' && line[i + 1] != '\0'){
+        while (line[i + 1] != '\n' && line[i + 1] != '\0') {
           std::string projectId;
           i++;
           i++;  //  space skip
@@ -152,14 +151,12 @@ std::vector<Employee *> Factory::generateEmployees() {
           projects.push_back(new Project(projectId, 100000));
         }
 
-
         employees.reserve(employees.size() + 1);
         employees.push_back(new SeniorManager(id,
-                                               name,
-                                               SENIORMANAGER,
-                                               projects));
+                                              name,
+                                              SENIORMANAGER,
+                                              projects));
       }
-
     }
   } else {
     std::cout << "Open file error";

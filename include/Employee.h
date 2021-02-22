@@ -35,7 +35,6 @@ class Employee {
   void SetWorkTime(int work_time);
   int GetPayment() const;
   void SetPayment(int payment);
-
 };
 
-#endif // INCLUDE_EMPLOYEE_H_
+#endif //  INCLUDE_EMPLOYEE_H_

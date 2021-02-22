@@ -4,6 +4,7 @@
 #define INCLUDE_MANAGER_H_
 
 #include <vector>
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 class ProjectManager :
@@ -35,4 +36,4 @@ class SeniorManager : public ProjectManager {
   void calc() override;
 };
 
-#endif // INCLUDE_MANAGER_H_
+#endif //  INCLUDE_MANAGER_H_

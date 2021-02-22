@@ -17,12 +17,14 @@ void Personal::SetSalary(int salary) {
 }
 
 void Personal::printInfo() {
-
 }
 
 // Driver -----------------
 
-Driver::Driver(std::string id, std::string name, POSITION position, int salary) {
+Driver::Driver(std::string id,
+               std::string name,
+               POSITION position,
+               int salary) {
   this->id = std::move(id);
   this->name = std::move(name);
   this->position = position;
@@ -44,7 +46,10 @@ void Driver::calc() {
 
 // Cleaner -----------------
 
-Cleaner::Cleaner(std::string id, std::string name, POSITION position, int salary) {
+Cleaner::Cleaner(std::string id,
+                 std::string name,
+                 POSITION position,
+                 int salary) {
   this->id = std::move(id);
   this->name = std::move(name);
   this->position = position;

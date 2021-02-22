@@ -7,7 +7,7 @@
 #include <utility>
 
 int Engineer::calcBudgetPart(float part, int budget) {
-  return (int) (part * budget);
+  return static_cast<int>(part * budget);
 }
 
 void Engineer::calc() {
@@ -62,7 +62,11 @@ void TeamLeader::calc() {
   this->payment += calcHeads();
 }
 
-TeamLeader::TeamLeader(std::string id, std::string name, POSITION position, int salary, Project *project) : Programmer(
+TeamLeader::TeamLeader(std::string id,
+                       std::string name,
+                       POSITION position,
+                       int salary,
+                       Project *project) : Programmer(
     id,
     name,
     position,
