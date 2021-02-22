@@ -47,4 +47,4 @@ class TeamLeader : public Programmer, public Heading {
   void calc() override;
 };
 
-#endif //  INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_

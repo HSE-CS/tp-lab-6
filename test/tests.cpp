@@ -44,7 +44,6 @@ TEST(function, test6) {
 }
 
 TEST(function, test7) {
-
   auto *cleaner = new Cleaner("2", "Alf Reed", CLEANER, 90);
   cleaner->SetWorkTime(40);
   cleaner->calc();
@@ -52,7 +51,6 @@ TEST(function, test7) {
 }
 
 TEST(function, test8) {
-
   auto *programmer = new Programmer("3",
                                     "Zoe Welch",
                                     PROGRAMMER,
@@ -152,6 +150,5 @@ TEST(function, test16) {
                                           SENIORMANAGER,
                                           projects);
   seniorManager->calc();
-
   EXPECT_EQ(100000, seniorManager->GetPayment());
 }

@@ -33,4 +33,4 @@ class Cleaner : public Personal {
   void calc() override;
 };
 
-#endif //  INCLUDE_PERSONAL_H_
+#endif  // INCLUDE_PERSONAL_H_

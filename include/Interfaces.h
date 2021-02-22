@@ -43,4 +43,4 @@ class Project {
   }
 };
 
-#endif //  INCLUDE_INTERFACES_H_
+#endif  // INCLUDE_INTERFACES_H_

@@ -36,4 +36,4 @@ class SeniorManager : public ProjectManager {
   void calc() override;
 };
 
-#endif //  INCLUDE_MANAGER_H_
+#endif  // INCLUDE_MANAGER_H_

@@ -37,4 +37,4 @@ class Employee {
   void SetPayment(int payment);
 };
 
-#endif //  INCLUDE_EMPLOYEE_H_
+#endif  // INCLUDE_EMPLOYEE_H_
