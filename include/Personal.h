@@ -4,6 +4,7 @@
 
 #include "Employee.h"
 #include "Interfaces.h"
+#include <string>
 
 class Personal : public Employee, public WorkBaseTime {
  private:

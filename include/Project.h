@@ -21,4 +21,4 @@ class Project {
   std::string name;
 };
 
-#endif // INCLUDE_PROJECT_H_
+#endif  // INCLUDE_PROJECT_H_

@@ -1,7 +1,11 @@
 // Copyright 2021 LongaBonga
 #include "Engineer.h"
-
-#include "headers.h"
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <utility>
 
 int Engineer::calcBudgetPart(float part, int budget) {
   return project->budget / static_cast<int>(part);
