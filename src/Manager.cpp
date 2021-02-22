@@ -37,7 +37,8 @@ void ProjectManager::printInfo() {
     std::cout << "Name: " << getName() << std::endl;
     std::cout << "Position: " << getPosition() << std::endl;
     std::cout << "Payment: " << getPayment() << std::endl;
-    std::cout << "Project: " << getProject() << std::endl;
+    std::cout << "Project - Id: " << project->getId() <<
+        "Budget: " << project->getBudget() << std::endl;
     std::cout << "==============" << std::endl;
 }
 
