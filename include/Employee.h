@@ -13,7 +13,7 @@ class Employee {
   size_t worktime;
   size_t payment;
 
- protected:
+ public:
   void setId(size_t);
   void setName(std::string);
   void setPosition(std::string);
@@ -26,9 +26,8 @@ class Employee {
   [[nodiscard]] size_t getWorktime() const;
   [[nodiscard]] size_t getPayment() const;
 
- public:
-  size_t virtual calc(size_t) = 0;
-  void virtual prntInfo() = 0;
+  size_t calc(size_t);
+  void prntInfo();
 };
 
 #endif // INCLUDE_EMPLOYEE_H
