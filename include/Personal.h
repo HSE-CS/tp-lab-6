@@ -38,4 +38,4 @@ class Cleaner : public Personal {
       : Personal(id, name, position, payment, worktime) {}
 };
 
-#endif  // INCLUDE_PERSONAL_H_
+#endif  // INCLUDE_PERSONAL_H_ 
