@@ -16,17 +16,4 @@ class Personal : public Employee {
   void printInfo();
 };
 
-class Cleaner : public Personal {
- public:
-  explicit Cleaner(size_t, std::string, size_t, size_t, size_t);
-  [[nodiscard]] size_t calc() const;
-};
-
-class Driver : public Personal {
- public:
-  explicit Driver(size_t, std::string, size_t, size_t, size_t);
-  [[nodiscard]] size_t calc() const;
-  [[nodiscard]] size_t calcBonus() const;
-};
-
 #endif // INCLUDE_PERSONAL_H
