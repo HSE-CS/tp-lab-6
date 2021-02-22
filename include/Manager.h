@@ -4,8 +4,8 @@
 #include "Interfaces.h"
 #include "headers.h"
 
-#ifndef MANAGER_H
-#define MANAGER_H
+#ifndef INCLUDE_MANAGER_H
+#define INCLUDE_MANAGER_H
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:
@@ -35,4 +35,4 @@ class SeniorManager : public ProjectManager {
                        projects, part) {}
 };
 
-#endif
+#endif  // INCLUDE_MANAGER_H

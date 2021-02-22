@@ -4,8 +4,8 @@
 #include "Project.h"
 #include "headers.h"
 
-#ifndef ENGINEER_H
-#define ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 class Project;
 
@@ -58,4 +58,4 @@ class TeamLeader : public Programmer, public Heading {
   int calc() override;
 };
 
-#endif
+#endif  // INCLUDE_ENGINEER_H_

@@ -1,8 +1,8 @@
 // Copyright 2021 LongaBonga
 #include "headers.h"
 
-#ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 class Employee {
  protected:
   std::string name;
@@ -29,4 +29,4 @@ class Employee {
   std::string getPosition();
 };
 
-#endif
+#endif  // INCLUDE_EMPLOYEE_H_

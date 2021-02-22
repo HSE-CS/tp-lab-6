@@ -1,8 +1,8 @@
 // Copyright 2021 LongaBonga
 #include "headers.h"
 
-#ifndef FACTORY_H
-#define FACTORY_H
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 class Project {
  public:
   int is;
@@ -12,4 +12,4 @@ class Project {
       : is(is), name(std::move(name)), budget(budget) {}
 };
 
-#endif
+#endif  // INCLUDE_FACTORY_H_

@@ -4,8 +4,8 @@
 #include "Employee.h"
 #include "Interfaces.h"
 
-#ifndef PERSONAL_H
-#define PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H
+#define INCLUDE_PERSONAL_H
 
 class Personal : public Employee, public WorkBaseTime {
  private:
@@ -38,4 +38,4 @@ class Cleaner : public Personal {
           int payment, int worktime)
       : Personal(id, name, position, payment, worktime) {}
 };
-#endif
+#endif  // INCLUDE_PERSONAL_H

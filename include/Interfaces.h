@@ -1,8 +1,8 @@
 // Copyright 2021 LongaBonga
 #include "headers.h"
 
-#ifndef INTERFACES_H
-#define INTERFACES_H
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 class WorkBaseTime {
  public:
   virtual int calcBase(int salary, int wtime) = 0;
@@ -19,4 +19,4 @@ class Heading {
   virtual int calcHeads() = 0;
 };
 
-#endif
+#endif  // INCLUDE_INTERFACES_H_
