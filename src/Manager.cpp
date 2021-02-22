@@ -1,3 +1,4 @@
+// Copyright 2021 LongaBonga
 #include "Manager.h"
 
 int ProjectManager::calcHeads() {

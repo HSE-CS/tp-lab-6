@@ -1,3 +1,4 @@
+// Copyright 2021 LongaBonga
 #include "Personal.h"
 
 int Personal::calcBase(int payment, int wtime) { return payment * wtime; }

@@ -1,7 +1,11 @@
+// Copyright 2021 LongaBonga
 #include "Interfaces.h"
 #include "Personal.h"
 #include "Project.h"
 #include "headers.h"
+
+#ifndef ENGINEER_H
+#define ENGINEER_H
 
 class Project;
 
@@ -53,3 +57,5 @@ class TeamLeader : public Programmer, public Heading {
   int calcHeads() override;
   int calc() override;
 };
+
+#endif

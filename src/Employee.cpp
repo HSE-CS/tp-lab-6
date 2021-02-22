@@ -1,3 +1,4 @@
+// Copyright 2021 LongaBonga
 #include "Employee.h"
 
 // Employee::Employee(int _id, std::string _name, std::string _position, int

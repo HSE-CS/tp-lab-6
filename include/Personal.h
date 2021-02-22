@@ -1,7 +1,11 @@
+// Copyright 2021 LongaBonga
 #include <string>
 
 #include "Employee.h"
 #include "Interfaces.h"
+
+#ifndef PERSONAL_H
+#define PERSONAL_H
 
 class Personal : public Employee, public WorkBaseTime {
  private:
@@ -34,3 +38,4 @@ class Cleaner : public Personal {
           int payment, int worktime)
       : Personal(id, name, position, payment, worktime) {}
 };
+#endif

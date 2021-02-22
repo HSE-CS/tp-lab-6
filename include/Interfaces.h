@@ -1,3 +1,4 @@
+// Copyright 2021 LongaBonga
 #include "headers.h"
 
 #ifndef INTERFACES_H

@@ -1,7 +1,11 @@
+// Copyright 2021 LongaBonga
 #include "Employee.h"
 #include "Factory.h"
 #include "Interfaces.h"
 #include "headers.h"
+
+#ifndef MANAGER_H
+#define MANAGER_H
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:
@@ -30,3 +34,5 @@ class SeniorManager : public ProjectManager {
       : ProjectManager(id, name, position, num_of_projects, payment, worktime,
                        projects, part) {}
 };
+
+#endif
