@@ -8,86 +8,78 @@
 #include "Manager.h"
 
 TEST(function, test1) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  EXPECT_EQ("1", employees[0]->GetId());
+  Driver driver("1", "Edie Hancock", DRIVER, 100);
+  EXPECT_EQ("1", driver.GetId());
 }
 
 TEST(function, test2) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  EXPECT_EQ("Edie Hancock", employees[0]->GetName());
+  Driver driver("1", "Edie Hancock", DRIVER, 100);
+  EXPECT_EQ("Edie Hancock", driver.GetName());
 }
 
 TEST(function, test3) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  EXPECT_EQ(CLEANER, employees[1]->GetPosition());
+  Cleaner cleaner("2", "Alf Reed", CLEANER, 90);
+  EXPECT_EQ(CLEANER, cleaner.GetPosition());
 }
 
 TEST(function, test4) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  EXPECT_EQ(PROGRAMMER, employees[2]->GetPosition());
+  Programmer programmer("3",
+                        "Zoe Welch",
+                        PROGRAMMER,
+                        120,
+                        new Project("EA23PO", 100000));
+  EXPECT_EQ(PROGRAMMER, programmer.GetPosition());
 }
 
 TEST(function, test5) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *driver = (Driver *)(employees[0]);
+  auto *driver = new Driver("1", "Edie Hancock", DRIVER, 100);
   EXPECT_EQ(DRIVER, driver->GetPosition());
 }
 
 TEST(function, test6) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *driver = (Driver *)(employees[0]);
+  auto *driver = new Driver("1", "Edie Hancock", DRIVER, 100);
   driver->SetWorkTime(50);
   driver->calc();
   EXPECT_EQ(6000, driver->GetPayment());
 }
 
 TEST(function, test7) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *cleaner = (Cleaner *)(employees[1]);
+
+  auto *cleaner = new Cleaner("2", "Alf Reed", CLEANER, 90);
   cleaner->SetWorkTime(40);
   cleaner->calc();
   EXPECT_EQ(3600, cleaner->GetPayment());
 }
 
 TEST(function, test8) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *programmer = (Programmer *)(employees[2]);
+
+  auto *programmer = new Programmer("3",
+                                    "Zoe Welch",
+                                    PROGRAMMER,
+                                    120,
+                                    new Project("EA23PO", 100000));
   programmer->SetWorkTime(40);
   programmer->calc();
   EXPECT_EQ(14800, programmer->GetPayment());
 }
 
 TEST(function, test9) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *tester = (Programmer *)(employees[3]);
+  auto *tester = new Tester("4",
+                            "Phil Spenser",
+                            PROGRAMMER,
+                            115,
+                            new Project("EA23PO", 100000));
   tester->SetWorkTime(40);
   tester->calc();
   EXPECT_EQ(14600, tester->GetPayment());
 }
 
 TEST(function, test10) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *programmer = (Programmer *)(employees[2]);
+  auto *programmer = new Programmer("3",
+                                    "Zoe Welch",
+                                    PROGRAMMER,
+                                    120,
+                                    new Project("EA23PO", 100000));
   programmer->SetWorkTime(40);
   programmer->calc();
   programmer->calcProAdditions();
@@ -95,10 +87,11 @@ TEST(function, test10) {
 }
 
 TEST(function, test11) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *tester = (Programmer *)(employees[3]);
+  auto *tester = new Tester("4",
+                            "Phil Spenser",
+                            PROGRAMMER,
+                            115,
+                            new Project("EA23PO", 100000));
   tester->SetWorkTime(40);
   tester->calc();
   tester->calcProAdditions();
@@ -106,49 +99,59 @@ TEST(function, test11) {
 }
 
 TEST(function, test12) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *tl = (TeamLeader *)(employees[4]);
+  auto *tl = new TeamLeader("5",
+                            "Herb Sharp",
+                            TEAMLEADER,
+                            120,
+                            new Project("EA23PO", 100000));
   tl->SetWorkTime(40);
-  tl->calcHeads();
-  EXPECT_EQ(10000, tl->GetPayment());
+  tl->calc();
+  EXPECT_EQ(34800, tl->GetPayment());
 }
 
 TEST(function, test13) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *projectManager = (ProjectManager *)(employees[5]);
+  std::vector<Project *> projects;
+  projects.push_back(new Project("R012", 100000));
+  auto *projectManager = new ProjectManager("6",
+                                            "Winston Robson",
+                                            PROJECTMANAGER,
+                                            projects);
 
   EXPECT_EQ("R012", projectManager->GetProjects()[0]->GetId());
 }
 
 TEST(function, test14) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *seniorManager = (SeniorManager *)(employees[6]);
+  std::vector<Project *> projects;
+  projects.push_back(new Project("R012", 100000));
+  projects.push_back(new Project("R014", 100000));
+  auto *seniorManager = new SeniorManager("7",
+                                           "Benjamin Button",
+                                           SENIORMANAGER,
+                                           projects);
 
   EXPECT_EQ("R014", seniorManager->GetProjects()[1]->GetId());
 }
 
 TEST(function, test15) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *projectManager = (ProjectManager *)(employees[5]);
+  std::vector<Project *> projects;
+  projects.push_back(new Project("R012", 100000));
+  auto *projectManager = new ProjectManager("6",
+                                            "Winston Robson",
+                                            PROJECTMANAGER,
+                                            projects);
   projectManager->calc();
-
   EXPECT_EQ(20000, projectManager->GetPayment());
 }
 
 TEST(function, test16) {
-  Factory factory;
-  std::vector<Employee *> employees;
-  employees = factory.generateEmployees();
-  auto *seniorManager = (SeniorManager *)(employees[6]);
+  std::vector<Project *> projects;
+  projects.push_back(new Project("R012", 100000));
+  projects.push_back(new Project("R014", 100000));
+  auto *seniorManager = new SeniorManager("7",
+                                          "Benjamin Button",
+                                          SENIORMANAGER,
+                                          projects);
   seniorManager->calc();
 
-  EXPECT_EQ( 100000, seniorManager->GetPayment());
+  EXPECT_EQ(100000, seniorManager->GetPayment());
 }
