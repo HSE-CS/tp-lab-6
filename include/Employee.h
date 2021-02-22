@@ -1,8 +1,9 @@
 // Copyright 2021 LongaBonga
-#include "headers.h"
-
 #ifndef INCLUDE_EMPLOYEE_H_
 #define INCLUDE_EMPLOYEE_H_
+
+#include "headers.h"
+
 class Employee {
  protected:
   std::string name;

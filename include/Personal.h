@@ -1,11 +1,9 @@
 // Copyright 2021 LongaBonga
-#include <string>
+#ifndef INCLUDE_PERSONAL_H
+#define INCLUDE_PERSONAL_H
 
 #include "Employee.h"
 #include "Interfaces.h"
-
-#ifndef INCLUDE_PERSONAL_H
-#define INCLUDE_PERSONAL_H
 
 class Personal : public Employee, public WorkBaseTime {
  private:

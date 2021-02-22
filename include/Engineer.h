@@ -1,11 +1,12 @@
 // Copyright 2021 LongaBonga
+
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
+
 #include "Interfaces.h"
 #include "Personal.h"
 #include "Project.h"
 #include "headers.h"
-
-#ifndef INCLUDE_ENGINEER_H_
-#define INCLUDE_ENGINEER_H_
 
 class Project;
 

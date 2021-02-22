@@ -1,11 +1,11 @@
 // Copyright 2021 LongaBonga
+#ifndef INCLUDE_MANAGER_H
+#define INCLUDE_MANAGER_H
+
 #include "Employee.h"
 #include "Factory.h"
 #include "Interfaces.h"
 #include "headers.h"
-
-#ifndef INCLUDE_MANAGER_H
-#define INCLUDE_MANAGER_H
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:

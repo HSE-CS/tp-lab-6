@@ -1,8 +1,9 @@
 // Copyright 2021 LongaBonga
-#include "headers.h"
-
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
+
+#include "headers.h"
+
 class Project {
  public:
   int is;

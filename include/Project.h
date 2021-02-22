@@ -1,8 +1,10 @@
 // Copyright 2021 LongaBonga
-#include "headers.h"
 
-#ifndef PROJECT_H
-#define PROJECT_H
+
+#ifndef INCLUDE_PROJECT_H
+#define INCLUDE_PROJECT_H
+
+#include "headers.h"
 
 class Project {
  private:
@@ -14,4 +16,4 @@ class Project {
   std::string name;
 };
 
-#endif
+#endif // INCLUDE_PROJECT_H
