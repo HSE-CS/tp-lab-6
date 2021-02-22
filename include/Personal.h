@@ -1,6 +1,6 @@
 // Copyright 2021 LongaBonga
-#ifndef INCLUDE_PERSONAL_H
-#define INCLUDE_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 #include "Employee.h"
 #include "Interfaces.h"
