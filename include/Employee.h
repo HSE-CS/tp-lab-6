@@ -2,7 +2,13 @@
 #ifndef INCLUDE_EMPLOYEE_H_
 #define INCLUDE_EMPLOYEE_H_
 
-#include "headers.h"
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <utility>
+#include <string>
 
 class Employee {
  protected:

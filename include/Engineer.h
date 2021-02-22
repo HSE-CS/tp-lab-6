@@ -6,7 +6,13 @@
 #include "Interfaces.h"
 #include "Personal.h"
 #include "Project.h"
-#include "headers.h"
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <utility>
+#include <string>
 
 class Project;
 

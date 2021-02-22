@@ -5,7 +5,13 @@
 #include "Employee.h"
 #include "Factory.h"
 #include "Interfaces.h"
-#include "headers.h"
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <utility>
+#include <string>
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:

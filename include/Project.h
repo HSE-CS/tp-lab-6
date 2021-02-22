@@ -4,7 +4,13 @@
 #ifndef INCLUDE_PROJECT_H
 #define INCLUDE_PROJECT_H
 
-#include "headers.h"
+#include <cstring>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+#include <utility>
+#include <string>
 
 class Project {
  private:
