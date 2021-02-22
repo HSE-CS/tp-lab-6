@@ -1,4 +1,6 @@
 // Copyright 2021 LongaBonga
+#ifndef INCLUDE_HEADERS_H_
+#define INCLUDE_HEADERS_H_
 #include <cstring>
 #include <fstream>
 #include <iostream>
@@ -6,3 +8,5 @@
 #include <vector>
 #include <utility>
 #include <string>
+
+#endif  // INCLUDE_HEADERS_H_
