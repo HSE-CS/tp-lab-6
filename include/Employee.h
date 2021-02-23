@@ -6,14 +6,15 @@
 #include "string"
 
 class Employee{
-protected:
+ protected:
     int id;
     int worktime = 0;
     double payment = 0;
     double salary = 0;
     std::string name;
     std::string position;
-public:
+
+ public:
     Employee();
     Employee(int id, std::string name, std::string position);
     Employee(int id, int worktime, double payment, double salary,

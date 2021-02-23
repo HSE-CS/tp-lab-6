@@ -3,18 +3,18 @@
 #define INCLUDE_INTERFACES_H_
 
 class Heading {
-public:
+ public:
     virtual int calcHeads() = 0;
 };
 
 class ProjectBudget {
-public:
+ public:
     virtual int calcBudgetPart(double part, int budget) = 0;
     virtual int calcProAdditions() = 0;
 };
 
 class WorkBaseTime {
-public:
+ public:
     virtual int calcBase(int salary, int worktime) = 0;
     virtual int calcBonus() = 0;
 };

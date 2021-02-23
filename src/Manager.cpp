@@ -4,7 +4,8 @@
 
 int ProjectManager::calc() {
     int salary = calcProAdditions() +
-    calcBudgetPart(0.2, (int) getProject()->getBudget()) +
+    calcBudgetPart(0.2, static_cast<int>(
+            getProject()->getBudget())) +
     calcHeads();
     this->setSalary(salary);
     return salary;
@@ -16,7 +17,7 @@ int ProjectManager::calcBudgetPart(double p, int budget) {
 
 int ProjectManager::calcProAdditions() {
     if (this->getWorktime() > 50) {
-        return (int) (this->calcHeads() * 0.3);
+        return static_cast<int>((this->calcHeads() * 0.3));
     } else {
         return 0;
     }
@@ -53,7 +54,7 @@ int SeniorManager::calc() {
     int budgetPart = 0;
     for (auto &project : projects) {
         budgetPart += calcBudgetPart(
-                0.2, (int) project->getBudget());
+                0.2, static_cast<int>(project->getBudget()));
     }
     int salary = this->calcProAdditions()
             + budgetPart + calcHeads();
@@ -69,7 +70,7 @@ int SeniorManager::calcProAdditions() {
     int wt = this->getWorktime();
     int salHeads = calcHeads();
     if (wt > 50) {
-        return (int) (salHeads * 0.35);
+        return static_cast<int>((salHeads * 0.35));
     } else {
         return 0;
     }

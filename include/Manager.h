@@ -12,7 +12,7 @@
 #include "Employee.h"
 
 class ProjectManager : public Employee, Heading, ProjectBudget {
-public:
+ public:
     explicit ProjectManager(int id, const std::string &name,
                          const std::string &position,
                          Project *project)
@@ -30,25 +30,25 @@ public:
     Project *getProject();
     void printInfo() override;
 
-private:
+ private:
     Project *project = nullptr;
 };
 
 class SeniorManager : public ProjectManager {
-public:
+ public:
     explicit SeniorManager(int id, const std::string &name,
                            const std::string &position,
                            std::vector<Project *> projects)
 
                            : ProjectManager(id, name, position),
-                            projects(std::move(projects)) {};
+                            projects(std::move(projects)) {}
     std::vector<Project *> getProjects();
     int calc() override;
     int calcBudgetPart(double p, int budget) override;
     int calcProAdditions() override;
     int calcHeads() override;
     void printInfo() override;
-private:
+ private:
     std::vector<Project *> projects;
 };
 

@@ -56,7 +56,7 @@ TEST(PERSONAL, test6) {
 
 TEST(PERSONAL, test7) {
     Employee *employee = new Cleaner(
-            1,"Kate", "cleaner",
+            1, "Kate", "cleaner",
             1000, 50);
     EXPECT_EQ(strcmp(employee->getPosition().c_str(),
                      "cleaner"), 0);
@@ -85,7 +85,7 @@ TEST(PERSONAL, test10) {
 TEST(MANAGERS, test11) {
     Project *project = new Project(1, 500000);
     Employee *employee = new ProjectManager(
-            0,"KekLol",
+            0, "KekLol",
             "project manager", project);
     EXPECT_EQ(strcmp(employee->getName().c_str(),
                      "KekLol"), 0);
@@ -94,7 +94,7 @@ TEST(MANAGERS, test11) {
 TEST(MANAGERS, test12) {
     Project *project = new Project(1, 500000);
     ProjectManager *employee = new ProjectManager(
-            0,"KekLol",
+            0, "KekLol",
             "project manager", project);
     EXPECT_EQ(employee->getProject()->getId(), 1);
 }

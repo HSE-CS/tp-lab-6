@@ -8,7 +8,7 @@
 Project::Project(int id, double budget) {
     this->id = id;
     this->budget = budget;
-};
+}
 Project::~Project() = default;;
 
 void Project::setId(int id) { this->id = id; }
@@ -18,12 +18,15 @@ int Project::getId() { return this->id; }
 double Project::getBudget() { return this->budget; }
 
 std::vector<Employee*> readData(std::string file_name) {
+    /*
     std::string path = std::filesystem::current_path().string();
     path = path.substr(0, path.rfind('/')).
             substr(0, path.rfind('/'));
     path = path.substr(0, path.rfind('/'))
             + "/data/" + file_name;
     std::ifstream file(path);
+     */
+    std::ifstream file(file_name);
     if (file.is_open()) {
         std::cout << "File was opened\n";
         std::vector<Employee*> employee;
@@ -47,8 +50,7 @@ std::vector<Employee*> readData(std::string file_name) {
                                        stoi(salary),
                                        stoi(worktime),
                                        project, 0.2));
-            }
-            else if (position == "tester") {
+            } else if (position == "tester") {
                 Project *project = new Project(counter++, 0);
                 employee.push_back(
                         new Tester(stoi(id), name, position,
@@ -64,7 +66,7 @@ std::vector<Employee*> readData(std::string file_name) {
             } else if (position == "cleaner") {
                 employee.push_back(
                         new Cleaner(stoi(id), name,
-                                    position, 
+                                    position,
                                     std::stoi(salary) / 4,
                                     stoi(worktime)));
             } else if (position == "driver") {

@@ -2,7 +2,7 @@
 
 #include "Employee.h"
 
-Employee::Employee(){}
+Employee::Employee() {}
 
 Employee::Employee(int id, std::string name, std::string position) {
     this->id = id;
@@ -35,7 +35,7 @@ void Employee::setPayment(double payment) {
     this->payment = payment;
 }
 
-void Employee::setWorktime(int worktime){
+void Employee::setWorktime(int worktime) {
     this->worktime = worktime;
 }
 
@@ -47,17 +47,17 @@ void Employee::setPosition(std::string position) {
     this->position = position;
 }
 
-std::string Employee::getName() const{
+std::string Employee::getName() const {
     return this->name;
 }
 
-int Employee::getId() const{
+int Employee::getId() const {
     return this->id;
 }
-int Employee::getWorktime() const{
+int Employee::getWorktime() const {
     return this->worktime;
 }
-double Employee::getPayment() const{
+double Employee::getPayment() const {
     return this->payment;
 }
 

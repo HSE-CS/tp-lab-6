@@ -1,6 +1,6 @@
 //// Copyright 2021 Dmitry Vargin
 #ifndef INCLUDE_ENGINEER_H
-#define INCLUDE_6_ENGINEER_H
+#define INCLUDE_ENGINEER_H
 
 #include <iostream>
 #include <string>
@@ -12,11 +12,11 @@
 #include "Interfaces.h"
 
 class Engineer : public Personal, public ProjectBudget {
-protected:
+ protected:
     Project *project;
     float part;
 
-public:
+ public:
     Engineer(int id, const std::string name, std::string position,
              int salary, int worktime, Project *project, float part);
     int calc() override;
@@ -27,10 +27,10 @@ public:
 };
 
 class Tester : public Engineer {
-protected:
+ protected:
     int calcProAdditions() override;
 
-public:
+ public:
     Tester(int id, const std::string name, std::string position,
            int salary, int worktime, Project *project, float part)
 
@@ -39,10 +39,10 @@ public:
 };
 
 class Programmer : public Engineer {
-protected:
+ protected:
     int calcProAdditions() override;
 
-public:
+ public:
     Programmer(int id, const std::string name, std::string position,
                int salary, int worktime, Project *project, float part)
 
@@ -51,9 +51,10 @@ public:
 };
 
 class TeamLeader : public Programmer, public Heading {
-protected:
+ protected:
     int calcHeads() override;
-public:
+
+ public:
     TeamLeader(int id, const std::string name,
                std::string position, int salary,
                int worktime, Project * project,
