@@ -24,7 +24,7 @@ TEST(test_cleaner, test3) {
   Employee* employee = new Cleaner(0,
     "alina wal", 8, 7000, 1);
   employee->calc();
-  EXPECT_EQ(employee->getPay(), 5600);
+  EXPECT_EQ(employee->getPay(), 56000);
 }
 TEST(test_driver, test4) {
   Employee* employee = new Driver(0,
@@ -61,7 +61,7 @@ TEST(test_tester, test8) {
     "rita", 8, 10000, 1, pr);
   std::string name = employee->getName();
   employee->calc();
-  EXPECT_EQ(employee->getPay(), 150400);
+  EXPECT_EQ(employee->getPay(), 150250);
 }
 TEST(test_tester, test9) {
   Employee* employee = new Tester(0,
