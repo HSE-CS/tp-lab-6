@@ -1,6 +1,6 @@
 //// Copyright 2021 Dmitry Vargin
-#ifndef INCLUDE_ENGINEER_H
-#define INCLUDE_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include <iostream>
 #include <string>
@@ -63,4 +63,4 @@ class TeamLeader : public Programmer, public Heading {
                          worktime, project, part) {}
 };
 
-#endif  //  INCLUDE_ENGINEER_H
+#endif  // INCLUDE_ENGINEER_H_
