@@ -31,6 +31,7 @@ TEST(all, test4) {
 TEST(all, test5) {
     Programmer programmist = Programmer
         ("99", "Piter Porker", PROG, 1500, new Project("10", 150000));
+    programmist.setWorkTime(35);
     EXPECT_EQ(52500, programmist.calcBase(programmist.getSalary(),
               programmist.getWorkTime()));
 }
@@ -70,6 +71,7 @@ TEST(all, test10) {
 TEST(all, test11) {
     Programmer programmist = Programmer
         ("99", "Piter Porker", PROG, 1500, new Project("10", 150000));
+    programmist.setWorkTime(35);
     programmist.calc();
     EXPECT_EQ(60000, programmist.getPayment());
 }

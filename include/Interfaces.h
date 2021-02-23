@@ -29,6 +29,7 @@ class Project {
  protected:
     std::string id;
     int budget;
+    
  public:
     Project(std::string id, int budget) {
         this->id = std::move(id);

@@ -5,7 +5,9 @@
 #include <utility>
 #include <iostream>
 
-ProjectManager::ProjectManager(std::string id, std::string name, Position position, std::vector<Project *> projects) {
+ProjectManager::ProjectManager(std::string id, std::string name,
+                               Position position,
+                               std::vector<Project *> projects) {
     this->id = std::move(id);
     this->name = std::move(name);
     this->position = position;
