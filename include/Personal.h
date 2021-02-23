@@ -10,7 +10,10 @@ class Personal : public Employee, public WorkBaseTime {
 public:
     Personal(int id, std::string name, std::string position,
              int payment, int worktime)
-            : Employee(id, name, position) {}
+            : Employee(id, name, position) {
+        this->payment = payment;
+        this->worktime = worktime;
+    }
 
     int calc() override;
     int calcBase(int payment, int wtime) override;
@@ -32,6 +35,7 @@ public:
     Cleaner(int id, const std::string name,
             const std::string position, int payment, int worktime)
             : Personal(id, name, position, payment, worktime) {}
+    int calcBonus() override;
 };
 
 #endif  // INCLUDE_PERSONAL_H_

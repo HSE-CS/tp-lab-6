@@ -7,18 +7,25 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include <utility>
+#include <filesystem>
+
+#include "Employee.h"
 
 class Project {
-public:
+protected:
     int id;
-    std::string name;
-    int budget;
-    Project(int id, std::string name, int budget) {
-        this->id = id;
-        this->name = name;
-        this->budget = budget;
-    }
+    double budget;
+public:
+    Project(int id, double budget);
+    ~Project();
+
+    void setId(int id);
+    void setBudget(double budget);
+
+    int getId();
+    double getBudget();
 };
+
+std::vector<Employee*> readData(std::string file_name);
 
 #endif  // INCLUDE_FACTORY_H_

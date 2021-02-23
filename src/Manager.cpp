@@ -2,7 +2,7 @@
 
 #include "Manager.h"
 
-int ProjManager::calc() {
+int ProjectManager::calc() {
     int salary = calcProAdditions() +
     calcBudgetPart(0.2, (int) getProject()->getBudget()) +
     calcHeads();
@@ -10,11 +10,11 @@ int ProjManager::calc() {
     return salary;
 }
 
-int ProjManager::calcBudgetPart(double p, int budget) {
+int ProjectManager::calcBudgetPart(double p, int budget) {
     return floor(p * budget);
 }
 
-int ProjManager::calcProAdditions() {
+int ProjectManager::calcProAdditions() {
     if (this->getWorktime() > 50) {
         return (int) (this->calcHeads() * 0.3);
     } else {
@@ -22,15 +22,15 @@ int ProjManager::calcProAdditions() {
     }
 }
 
-int ProjManager::calcHeads() {
+int ProjectManager::calcHeads() {
     return floor(getProject()->getBudget() * 0.1);
 }
 
-Project *ProjManager::getProject() {
+Project *ProjectManager::getProject() {
     return project;
 }
 
-void ProjManager::printInfo() {
+void ProjectManager::printInfo() {
     std::cout << "ID: " << std::to_string(getId()) << std::endl;
     std::cout << "NAME: " << getName() << std::endl;
     std::cout << "POSITION: " << getPosition() << std::endl;
@@ -39,11 +39,15 @@ void ProjManager::printInfo() {
     std::cout << "SALARY: " +
     std::to_string(getSalary()) << std::endl;
 
-    std::cout << "PROJECT:  ID: " +
-    std::to_string(getProject()->getId()) << std::endl;
+    std::cout << "PROJECT:\n ID: " +
+    std::to_string(getProject()->getId()) << "\n\n";
 }
 
 ///////////////////////////
+
+std::vector<Project *> SeniorManager::getProjects() {
+    return this->projects;
+}
 
 int SeniorManager::calc() {
     int budgetPart = 0;
@@ -91,9 +95,8 @@ void SeniorManager::printInfo() {
     std::to_string(this->getSalary()) << std::endl;
 
     std::cout << "PROJECTS:" << std::endl;
-    std::string s;
     for (auto &project : projects) {
-        s += " id: " + std::to_string(project->getId()) + "\n";
+        std::cout << " ID: " + std::to_string(project->getId()) + "\n";
     }
     std::cout << "\n";
 }

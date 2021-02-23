@@ -7,21 +7,20 @@
 #include <vector>
 #include <utility>
 #include <cmath>
+#include "Factory.h"
 #include "Interfaces.h"
 #include "Employee.h"
 
-class Project;
-
-class ProjManager : public Employee, Heading, ProjectBudget {
+class ProjectManager : public Employee, Heading, ProjectBudget {
 public:
-    explicit ProjManager(int id, const std::string &name,
+    explicit ProjectManager(int id, const std::string &name,
                          const std::string &position,
                          Project *project)
 
                          : Employee(id, name, position),
                          project(project) {}
 
-    ProjManager(int id, const std::string &name,
+    ProjectManager(int id, const std::string &name,
                 const std::string &position)
             : Employee(id, name, position) {}
     int calc() override;
@@ -35,14 +34,15 @@ private:
     Project *project = nullptr;
 };
 
-class SeniorManager : public ProjManager {
+class SeniorManager : public ProjectManager {
 public:
     explicit SeniorManager(int id, const std::string &name,
                            const std::string &position,
                            std::vector<Project *> projects)
 
-                           : ProjManager(id, name, position),
-                            projects(std::move(projects)) {}
+                           : ProjectManager(id, name, position),
+                            projects(std::move(projects)) {};
+    std::vector<Project *> getProjects();
     int calc() override;
     int calcBudgetPart(double p, int budget) override;
     int calcProAdditions() override;

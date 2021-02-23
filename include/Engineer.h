@@ -1,16 +1,15 @@
 //// Copyright 2021 Dmitry Vargin
-#ifndef TP_LAB_6_ENGINEER_H
-#define TP_LAB_6_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H
+#define INCLUDE_6_ENGINEER_H
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <utility>
 #include <cmath>
+#include "Factory.h"
 #include "Personal.h"
 #include "Interfaces.h"
-
-class Project;
 
 class Engineer : public Personal, public ProjectBudget {
 protected:
@@ -19,16 +18,12 @@ protected:
 
 public:
     Engineer(int id, const std::string name, std::string position,
-             int salary, int worktime, Project *_project, float part)
-
-             : Personal(id, name, position, salary, worktime),
-              project(_project),
-              part(part) {};
+             int salary, int worktime, Project *project, float part);
     int calc() override;
     void setProject(Project *p);
     Project *getProject();
     void printInfo() override;
-    int calcBudgetPart(float part, int budget);
+    int calcBudgetPart(double part, int budget) override;
 };
 
 class Tester : public Engineer {
@@ -59,10 +54,12 @@ class TeamLeader : public Programmer, public Heading {
 protected:
     int calcHeads() override;
 public:
-    TeamLeader(int id, const std::string name, std::string position,
-               int salary, int worktime, Project *project, float part)
+    TeamLeader(int id, const std::string name,
+               std::string position, int salary,
+               int worktime, Project * project,
+               float part)
             : Programmer(id, name, position, salary,
                          worktime, project, part) {}
 };
 
-#endif //TP_LAB_6_ENGINEER_H
+#endif  //  INCLUDE_ENGINEER_H

@@ -12,10 +12,10 @@ int Personal::calcBonus() {
 
 int Personal::calc() {
     this->salary = calcBase(
-            (int) this->payment,
+            this->payment,
             this->worktime)
                     + calcBonus();
-    return (int) this->salary;
+    return this->salary;
 }
 void Personal::printInfo() {
     std::cout << "ID: " << std::to_string(getId()) << std::endl;
@@ -24,12 +24,19 @@ void Personal::printInfo() {
     std::cout << "WORK TIME: " << this->getWorktime() << std::endl;
 
     std::cout << "SALARY: " +
-                 std::to_string(getSalary()) << std::endl;
+                 std::to_string(getSalary()) << "\n\n";
+}
+
+int Cleaner::calcBonus() {
+    if (getWorktime() > 50)
+        return payment * 0.1;
+    else
+        return 0;
 }
 
 int Driver::calcBonus() {
     if (getWorktime() > 50)
-        return payment * 1.1;
+        return payment * 0.2;
     else
         return 0;
 }
