@@ -11,16 +11,23 @@ struct Project {
 
 class Engineer : public ProjectBudget, public Personal {
  private:
-  Project& project;
+  Project* project;
 
  public:
-  Project& getProject();
+  Engineer(int id, std::string name, int salary, Project* project)
+    : Personal(id, name, salary) {
+    this->project = project;
+  };
+  Project* getProject();
   virtual int calcBudgetPart(float part, int budget);
   virtual void calc();
+  virtual void printInfo();
 };
 
 class Programmer : public Engineer {
 public:
+  Programmer(int id, std::string name, int salary, Project* project)
+    : Engineer(id, name, salary, project) {};
   virtual int calcProAdditions();
 };
 
@@ -28,6 +35,8 @@ class Tester : public Engineer {
  private:
   int errorsFound = 0;
  public:
+  Tester(int id, std::string name, int salary, Project* project)
+    : Engineer(id, name, salary, project) {};
   void incErrorsFound();
   int getErrorsFound();
   virtual int calcProAdditions();
@@ -37,6 +46,10 @@ class TeamLeader : public Programmer, public Heading {
  private:
   int subordinates = 0;
  public:
+  TeamLeader(int id, std::string name, int salary, Project* project, int sub)
+    : Programmer(id, name, salary, project) {
+    this->subordinates = sub;
+  };
   int getSubbordinates();
   virtual int calcHeads();
   virtual void calc();

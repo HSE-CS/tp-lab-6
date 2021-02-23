@@ -25,3 +25,12 @@ void Driver::calc() {
   setPayment(calcBase(getSalary(), getWorkTime()) 
     + calcBonus());
 }
+
+void Personal::printInfo() {
+  std::cout << getName() +" " + std::to_string(getId())
+    + " " + std::to_string(getPayment());
+}
+
+int Personal::calcBonus() {
+  return 0;
+}

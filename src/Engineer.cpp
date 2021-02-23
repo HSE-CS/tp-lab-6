@@ -1,7 +1,7 @@
 // Copyright 2021 Smirnov Grigory
 #include "../include/Engineer.h"
 
-Project& Engineer::getProject() {
+Project* Engineer::getProject() {
 	return project;
 }
 
@@ -11,7 +11,7 @@ int Engineer::calcBudgetPart(float part, int budget) {
 
 void Engineer::calc() {
 	setPayment(calcBase(getSalary(), getWorkTime())
-		+ calcBudgetPart(0.01, getProject().budget)
+		+ calcBudgetPart(0.01, getProject()->budget)
 		+ calcProAdditions());
 }
 
@@ -19,7 +19,7 @@ int Programmer::calcProAdditions() {
 	int result = 0;
 	if (getWorkTime() > 100)
 		result += 15000;
-	if (getProject().budget > 200000)
+	if (getProject()->budget > 200000)
 		result += 3000;
 	return result;
 }
@@ -48,4 +48,9 @@ void TeamLeader::calc() {
 	setPayment(calcBase(getSalary(), getWorkTime())
 		+ calcProAdditions()
 		+ calcHeads());
+}
+
+void Engineer::printInfo() {
+	std::cout << getName() + " " + std::to_string(getId())
+		+std::to_string(getProject()->id) + " " + std::to_string(getPayment());
 }

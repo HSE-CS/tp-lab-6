@@ -10,17 +10,24 @@ class Personal : public Employee, public WorkBaseTime {
   int salary;
 
  public:
+   Personal(int id, std::string name, int salary) : Employee(id, name) {
+     this->salary = salary;
+   }
   int getSalary();
   virtual int calcBase(int salary, int wtime);
+  virtual int calcBonus();
+  virtual void printInfo();
 };
 
 class Cleaner : public Personal {
- private:
+ public:
+  Cleaner(int id, std::string name, int salary) : Personal(id, name, salary) {};
   virtual void calc();
 };
 
 class Driver : public Personal {
- private:
+ public:
+  Driver(int id, std::string name, int salary) : Personal(id, name, salary) {};
   virtual int calcBonus();
   virtual void calc();
 };

@@ -16,3 +16,8 @@ void ProjectManager::calc() {
 void SeniorManager::calc() {
 	setPayment(90000 + calcHeads());
 }
+
+void ProjectManager::printInfo() {
+	std::cout << getName() + " " + std::to_string(getId())
+		 + " " + std::to_string(getPayment());
+}
