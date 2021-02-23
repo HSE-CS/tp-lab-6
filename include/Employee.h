@@ -1,5 +1,9 @@
 // Copyright 2021 Smirnov Grigory
+#ifndef EMPLOYEE_H
+#define EMPLOYEE_H
+
 #include <string>
+#include <iostream>
 
 enum position {
   Cleaner,
@@ -26,3 +30,5 @@ class Employee {
   virtual void calc() = 0;
   virtual void printInfo() = 0;
 };
+
+#endif 

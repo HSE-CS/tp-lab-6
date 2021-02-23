@@ -1,4 +1,7 @@
 // Copyright 2021 Smirnov Grigory
+#ifndef ENGINEER_H
+#define ENGINEER_H
+
 #include "Personal.h"
 
 struct Project {
@@ -32,9 +35,11 @@ class Tester : public Engineer {
 
 class TeamLeader : public Programmer, public Heading {
  private:
-   int subordinates = 0;
+  int subordinates = 0;
  public:
   int getSubbordinates();
   virtual int calcHeads();
   virtual void calc();
 };
+
+#endif

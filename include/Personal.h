@@ -1,4 +1,7 @@
 // Copyright 2021 Smirnov Grigory
+#ifndef PERSONAL_H
+#define PERSONAL_H
+
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -21,3 +24,5 @@ class Driver : public Personal {
   virtual int calcBonus();
   virtual void calc();
 };
+
+#endif
