@@ -31,8 +31,8 @@ TEST(all, test4) {
 TEST(all, test5) {
     Programmer programmist = Programmer
         ("99", "Piter Porker", PROG, 1500, new Project("10", 150000));
-    EXPECT_EQ(52500, programmist.calcBase(programmist.getSalary(), programmist.getWorkTime()) );
-
+    EXPECT_EQ(52500, programmist.calcBase(programmist.getSalary(),
+              programmist.getWorkTime()));
 }
 
 TEST(all, test6) {
@@ -51,7 +51,8 @@ TEST(all, test7) {
 TEST(all, test8) {
     Programmer programmist = Programmer
         ("99", "Piter Porker", PROG, 1500, new Project("10", 150000));
-    EXPECT_EQ(7500, programmist.calcBudgetPart((float) 0.05, programmist.getProject()->getBudget()));
+    EXPECT_EQ(7500, programmist.calcBudgetPart(static_cast<float>(0.05),
+              programmist.getProject()->getBudget()));
 }
 
 TEST(all, test9) {

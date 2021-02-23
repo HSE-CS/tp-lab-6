@@ -28,6 +28,7 @@ Cleaner::Cleaner(std::string id, std::string name, Position position,
     this->name = std::move(name);
     this->position = position;
     this->salary = salary;
+    this->payment = 0;
 }
 
 void Cleaner::calc() {
@@ -45,6 +46,7 @@ Driver::Driver(std::string id, std::string name, Position position,
     this->position = position;
     this->workTime = workTime;
     this->salary = salary;
+    this->payment = 0;
 }
 
 void Driver::calc() {

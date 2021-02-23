@@ -4,23 +4,30 @@
 
 void Engineer::calc() {
     this->payment = this->workTime * this->salary +
-                    this->calcBudgetPart((float)0.05, project->getBudget());
+                    this->calcBudgetPart(static_cast<float>(0.05),
+                                       project->getBudget());
 }
 
 int Engineer::calcBudgetPart(float part, int budget) {
-    return (int) (part * (float) budget);
+    return static_cast<int>(part * static_cast<float>(budget));
 }
 
 int Engineer::calcBonus() {
     return 0;
 }
 
-Tester::Tester(std::string id, std::string name, Position position, int salary, Project *project) {
+Project *Engineer::getProject() {
+    return this->project;
+}
+
+Tester::Tester(std::string id, std::string name,
+               Position position, int salary, Project *project) {
     this->id = std::move(id);
     this->name = std::move(name);
     this->position = position;
     this->salary = salary;
     this->project = project;
+    this->payment = 0;
 }
 
 int Tester::calcProAdditions() {
@@ -28,12 +35,14 @@ int Tester::calcProAdditions() {
     return 2000;
 }
 
-Programmer::Programmer(std::string id, std::string name, Position position, int salary, Project *project) {
+Programmer::Programmer(std::string id, std::string name,
+                       Position position, int salary, Project *project) {
     this->id = std::move(id);
     this->name = std::move(name);
     this->position = position;
     this->salary = salary;
     this->project = project;
+    this->payment = 0;
 }
 
 int Programmer::calcProAdditions() {
@@ -41,13 +50,15 @@ int Programmer::calcProAdditions() {
     return 2500;
 }
 
-TeamLeader::TeamLeader(std::string id, std::string name, Position position, int salary, Project *project) : Programmer(
-        id, name, position, salary, project) {
+TeamLeader::TeamLeader(std::string id, std::string name, Position position,
+                       int salary, Project *project) :
+                       Programmer(id, name, position, salary, project) {
     this->id = std::move(id);
     this->name = std::move(name);
     this->position = position;
     this->salary = salary;
     this->project = project;
+    this->payment = 0;
 }
 
 void TeamLeader::calc() {

@@ -17,13 +17,14 @@ enum Position {
 };
 
 class Employee {
-protected:
+ protected:
     std::string id;
     std::string name;
     Position position;
     int workTime;
     int payment;
-public:
+
+ public:
     void setId(std::string id);
 
     void setName(std::string name);
@@ -49,4 +50,4 @@ public:
     virtual void printInfo() = 0;
 };
 
-#endif //INCLUDE_EMPLOYEE_H_
+#endif  // INCLUDE_EMPLOYEE_H_

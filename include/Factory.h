@@ -11,9 +11,9 @@
 #include "fstream"
 
 class Factory {
-public:
+ public:
     std::vector<Employee*> makeStaff();
 };
 
 
-#endif //INCLUDE_FACTORY_H_
+#endif  // INCLUDE_FACTORY_H_

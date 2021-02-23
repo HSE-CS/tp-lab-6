@@ -5,13 +5,14 @@
 #include "Factory.h"
 
 int main() {
-    srand(time(0));
+    unsigned int rrr = 1;
     Factory factory = Factory();
     auto staff = factory.makeStaff();
-    for (auto worker: staff) {
-        worker->setWorkTime(rand() % 50);
+    for (auto worker : staff) {
+        worker->setWorkTime(rand_r(&rrr) % 50);
         worker->calc();
         worker->printInfo();
     }
+
     return 0;
 }

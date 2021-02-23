@@ -7,50 +7,50 @@
 #include <utility>
 
 class WorkBaseTime {
-public:
+ public:
     virtual int calcBase(int salary, int wtime) = 0;
 
     virtual int calcBonus() = 0;
 };
 
 class Heading {
-public:
+ public:
     virtual int calcHeads() = 0;
 };
 
 class ProjectBudget {
-public:
+ public:
     virtual int calcBudgetPart(float part, int budget) = 0;
 
     virtual int calcProAdditions() = 0;
 };
 
 class Project {
-protected:
+ protected:
     std::string id;
     int budget;
-public:
+ public:
     Project(std::string id, int budget) {
         this->id = std::move(id);
         this->budget = budget;
-    };
+    }
 
     void setId(std::string id) {
         this->id = std::move(id);
-    };
+    }
 
     void setBudget(int budget) {
         this->budget = budget;
-    };
+    }
 
     std::string getId() {
         return this->id;
-    };
+    }
 
     int getBudget() {
         return this->budget;
-    };
+    }
 };
 
 
-#endif //INCLUDE_INTERFACES_H_
+#endif  // INCLUDE_INTERFACES_H_

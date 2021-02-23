@@ -8,20 +8,22 @@
 #include "Interfaces.h"
 
 class Engineer : public Personal, public ProjectBudget {
-protected:
+ protected:
     Project *project;
 
-public:
+ public:
     int calcBudgetPart(float part, int budget) override;
 
     void calc() override;
 
     int calcBonus() override;
+
+    Project *getProject();
 };
 
 
 class Tester : public Engineer {
-public:
+ public:
     Tester(std::string id, std::string name, Position position,
            int salary, Project *project);
 
@@ -30,7 +32,7 @@ public:
 
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer(std::string id, std::string name, Position position,
                int salary, Project *project);
 
@@ -39,7 +41,7 @@ public:
 
 
 class TeamLeader : public Programmer, public Heading {
-public:
+ public:
     TeamLeader(std::string id, std::string name, Position position,
                int salary, Project *project);
 
@@ -49,4 +51,4 @@ public:
 };
 
 
-#endif //INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_

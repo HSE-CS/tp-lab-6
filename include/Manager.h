@@ -9,9 +9,9 @@
 #include "Employee.h"
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
-protected:
+ protected:
     std::vector<Project *> projects;
-public:
+ public:
     ProjectManager(std::string id, std::string name, Position position,
                    std::vector<Project *> projects);
 
@@ -31,11 +31,11 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-public:
+ public:
     SeniorManager(std::string id, std::string name, Position position,
                   std::vector<Project *> projects);
 
     void calc() override;
 };
 
-#endif //INCLUDE_MANAGER_H_
+#endif  // INCLUDE_MANAGER_H_

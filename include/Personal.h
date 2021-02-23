@@ -8,9 +8,9 @@
 #include "Employee.h"
 
 class Personal : public Employee, public WorkBaseTime {
-protected:
+ protected:
     int salary{};
-public:
+ public:
     int calcBase(int salary, int wTime) override;
 
     void setSalary(int salary);
@@ -21,7 +21,7 @@ public:
 };
 
 class Cleaner : public Personal {
-public:
+ public:
     Cleaner(std::string id, std::string name, Position position, int salary);
 
     void calc() override;
@@ -30,7 +30,7 @@ public:
 };
 
 class Driver : public Personal {
-public:
+ public:
     Driver(std::string id, std::string name, Position position, int salary);
 
     void calc() override;
@@ -38,4 +38,4 @@ public:
     int calcBonus() override;
 };
 
-#endif //INCLUDE_PERSONAL_H_
+#endif  // INCLUDE_PERSONAL_H_

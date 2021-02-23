@@ -29,12 +29,12 @@ int ProjectManager::calcHeads() {
 void ProjectManager::calc() {
     this->calcHeads();
     this->payment += this->calcBudgetPart
-            ((float) 0.15,
+            (static_cast<float>(0.15),
              this->projects[0]->getBudget());
 }
 
 int ProjectManager::calcBudgetPart(float part, int budget) {
-    return (int) (part * (float) budget);
+    return static_cast<int>(part * static_cast<float>(budget));
 }
 
 int ProjectManager::calcProAdditions() {
@@ -46,7 +46,9 @@ void ProjectManager::printInfo() {
               this->position << "). Payment: " << this->payment << std::endl;
 }
 
-SeniorManager::SeniorManager(std::string id, std::string name, Position position, std::vector<Project *> projects)
+SeniorManager::SeniorManager(std::string id, std::string name,
+                             Position position,
+                             std::vector<Project *> projects)
         : ProjectManager(id, name, position, projects) {
 }
 
@@ -54,7 +56,7 @@ void SeniorManager::calc() {
     this->payment = 0;
     for (int i = 0; i < projects.size(); ++i) {
         this->calcHeads();
-        this->payment += this->calcBudgetPart((float) 0.25,
+        this->payment += this->calcBudgetPart(static_cast<float>(0.25),
                                               this->projects[i]->getBudget());
     }
 }
