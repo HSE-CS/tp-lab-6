@@ -22,7 +22,7 @@ std::vector<Employee*> read_data(std::string input) {
       buf.clear();
       std::string id, fio, worktime, position, salary;
       getline(file, id, ';');
-      getline(file, fio, ';'); 
+      getline(file, fio, ';');
       getline(file, worktime, ';');
       getline(file, position, ';');
       getline(file, salary, '\n');
@@ -49,7 +49,7 @@ std::vector<Employee*> read_data(std::string input) {
       } else if (position == "senior manager") {
         std::vector <Project*> projects;
         employee.push_back(new SeniorManager(stoi(id), fio,
-          stoi(worktime), stoi(salary), SENIORMANAGER,projects));
+          stoi(worktime), stoi(salary), SENIORMANAGER, projects));
       }
     }
     return employee;

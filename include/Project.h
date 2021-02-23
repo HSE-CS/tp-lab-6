@@ -9,6 +9,7 @@ class Project {
   double budget;
   int numOfWorkers;
   bool success;
+
  public:
   Project(int id, std::string title, double budget, int numOfWorkers) {
     this->id = id;
@@ -20,7 +21,7 @@ class Project {
   double getBudget() const {
     return this->budget;
   }
-  int getWorkers()const{
+  int getWorkers()const {
     return this->numOfWorkers;
   }
   std::string getTitle()const {

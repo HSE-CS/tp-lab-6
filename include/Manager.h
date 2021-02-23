@@ -1,6 +1,7 @@
 // Copyright 2020 Konina Tatiana
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
+#include <string>
 #include <vector>
 #include "Employee.h"
 #include "Project.h"

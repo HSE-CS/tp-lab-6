@@ -18,7 +18,7 @@ TEST(test_cleaner, test2) {
   Employee* employee = new Cleaner(0,
     "alina wal", 8, 7000, 1);
   int worktime = employee->getWorktime();
-  EXPECT_EQ(worktimw, 8);
+  EXPECT_EQ(worktime, 8);
 }
 TEST(test_cleaner, test3) {
   Employee* employee = new Cleaner(0,
@@ -40,7 +40,7 @@ TEST(test_driver, test5) {
 }
 TEST(test_programmer, test6) {
   Employee* employee = new Programmer(0,
-    "anna", 8, 10000, 1, pr);
+    "anna", 8, 10000, 1, nullptr);
   std::string name = employee->getName();
   EXPECT_EQ("anna", name);
 }
@@ -99,7 +99,7 @@ TEST(test_driver, test12) {
   Employee* employee = new Driver(0,
     "alina wal", 9, 7000, 1);
   int worktime = employee->getWorktime();
-  EXPECT_EQ(worktimw, 9);
+  EXPECT_EQ(worktime, 9);
 }
 TEST(test_programmer, test13) {
   Employee* employee = new Programmer(0,

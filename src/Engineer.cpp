@@ -4,14 +4,14 @@
 int programmer_bonus = 6;
 int tester_bonus = 7;
 
-Engineer::Engineer( unsigned int id, std::string name,
+Engineer::Engineer(unsigned int id, std::string name,
   int worktime, double salary, int position, Project*pr)
-  :Personal(id,name,worktime,salary,position) {
+  :Personal(id, name, worktime, salary, position) {
   this->project = pr;
 }
 int Engineer::calcBudgetPart() {
   if (project) {
-    float part = float(1) / project->getWorkers();
+    float part = 1.0 / project->getWorkers();
     return  part * (*project).getBudget();
   } else {
     return 0;
@@ -65,12 +65,12 @@ void Tester::calc() {
 
 TeamLeader::TeamLeader(unsigned int id, std::string name,
   int worktime, double salary, int position, Project* pr)
-  : Programmer(id, name, worktime, salary, position, pr){}
+  : Programmer(id, name, worktime, salary, position, pr) {}
 
 int TeamLeader::calcHeads() {
   if (project) {
     return project->getWorkers();
-  } else{
+  } else {
     return 0;
   }
 }

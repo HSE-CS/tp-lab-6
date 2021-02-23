@@ -2,6 +2,7 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include <string>
 #include "Personal.h"
 #include "Project.h"
 #include "Interfaces.h"

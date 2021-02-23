@@ -3,7 +3,7 @@
 #include "Manager.h"
 
 ProjectManager::ProjectManager(unsigned int id, std::string name,
-  int worktime, int position,double salary, std::vector <Project *> pr)
+  int worktime, int position, double salary, std::vector <Project *> pr)
   : Employee(id, name, worktime, position) {
   this->salary = salary;
   this->projects = pr;
@@ -44,7 +44,7 @@ void ProjectManager::printInfo() {
 
 int ProjectManager::calcBudgetPart() {
   if (projects.size() >= 1) {
-    float part = float(1) / projects[0]->getWorkers();
+    float part = 1.0 / projects[0]->getWorkers();
     return  part * (*projects[0]).getBudget();
   } else {
     return 0;
@@ -57,14 +57,14 @@ int ProjectManager::calcProAdditions(int bonus) {
 void SeniorManager::calc() {
   int total_sum = 0;
   for (auto pr : projects) {
-    float part = float(1) / pr->getWorkers();
+    float part = 1.0 / pr->getWorkers();
     total_sum += pr->getBudget() * part;
   }
   this->payment = total_sum;
 }
-SeniorManager::SeniorManager (unsigned int id, std::string name,
+SeniorManager::SeniorManager(unsigned int id, std::string name,
   int worktime, int position, double salary, std::vector <Project*> pr)
-  : ProjectManager(id, name, worktime, position,salary, pr) {}
+  : ProjectManager(id, name, worktime, position, salary, pr) {}
 
 
 

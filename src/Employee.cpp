@@ -24,3 +24,5 @@ double Employee::getPay() const {
 int Employee::getWorktime() const {
   return this->worktime;
 }
+
+

@@ -2,9 +2,9 @@
 #include <string>
 #include "Personal.h"
 int driver_bonus = 5;
-Personal::Personal (unsigned int id, std::string name,
-                    int worktime, double salary, int position) 
-                    : Employee (id, name, worktime, position){
+Personal::Personal(unsigned int id, std::string name,
+                    int worktime, double salary, int position)
+                    : Employee(id, name, worktime, position) {
   this->salary = salary;
 }
 

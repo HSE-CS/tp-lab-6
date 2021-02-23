@@ -16,13 +16,13 @@ enum Positions {
   SENIORMANAGER
 };
 class Employee {
-protected:
+ protected:
   unsigned int id;
   std::string name;
   double payment;
   int worktime;
   int position;
-public:
+ public:
   Employee(unsigned int id, std::string name,
            int worktime, int position);
   void setWorkTime(int worktime);
