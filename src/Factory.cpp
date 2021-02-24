@@ -4,6 +4,7 @@
 #include "Personal.h"
 #include "Manager.h"
 #include <fstream>
+#include <algorithm>
 #include <string>
 #include <cmath>
 
