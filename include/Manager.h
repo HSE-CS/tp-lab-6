@@ -12,12 +12,12 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
   int subordinates = 0;
 
  public:
-   ProjectManager(int id, std::string name, Project* project, int sub)
+  ProjectManager(int id, std::string name, Project* project, int sub)
      : Employee(id, name) {
      this->project = project;
      this->subordinates = sub;
      pos = PROJECTMANAGER;
-   }
+  }
   int getSubbordinates();
   virtual int calcHeads();
   virtual void calc();
@@ -29,10 +29,10 @@ class SeniorManager : public ProjectManager {
   std::vector<Project*> projects;
 
  public:
-   SeniorManager(int id, std::string name, Project* project, int sub)
+  SeniorManager(int id, std::string name, Project* project, int sub)
      : ProjectManager(id, name, project, sub) {
      pos = SENIORMANAGER;
-   }
+  }
   virtual void calc();
 };
 

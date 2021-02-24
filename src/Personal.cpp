@@ -22,7 +22,7 @@ int Driver::calcBonus() {
 }
 
 void Driver::calc() {
-  setPayment(calcBase(getSalary(), getWorkTime()) 
+  setPayment(calcBase(getSalary(), getWorkTime())
     + calcBonus());
 }
 
