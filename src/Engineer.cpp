@@ -1,5 +1,5 @@
 // Copyright 2021 Smirnov Grigory
-#include "../include/Engineer.h"
+#include "Engineer.h"
 
 Project* Engineer::getProject() {
 	return project;

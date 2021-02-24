@@ -1,6 +1,6 @@
 // Copyright 2021 Smirnov Grigory
-#include "../include/Employee.h"
-#include "../include/Personal.h"
+#include "Employee.h"
+#include "Personal.h"
 
 int Personal::getSalary() {
   return salary;

@@ -1,5 +1,5 @@
 // Copyright 2021 Smirnov Grigory
-#include "../include/Employee.h"
+#include "Employee.h"
 
 Employee::Employee(int id, std::string name) {
 	this->id = id;

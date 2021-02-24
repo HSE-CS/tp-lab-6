@@ -1,5 +1,5 @@
 // Copyright 2021 Smirnov Grigory
-#include "../include/Manager.h"
+#include "Manager.h"
 
 int ProjectManager::getSubbordinates() {
 	return subordinates;

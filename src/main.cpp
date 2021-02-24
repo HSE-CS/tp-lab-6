@@ -1,5 +1,5 @@
 // Copyright 2021 Smirnov Grigory
-#include "../include/Factory.h"
+#include "Factory.h"
 int main() {
   std::string n = "Glasha";
   Cleaner c(156, n, 130);
