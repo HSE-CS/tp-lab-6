@@ -60,7 +60,7 @@ TEST(TestStaff, Test_10_calcBase) {
   Project pr = {100, "lab # 6", 100000};
   Tester* emp = new Tester(10, "Pupkin", "Tester", 1000, 9, &pr, 5);
   emp->setSalary(1000);
-  int sum = emp->calcBase(emp->getPayment(), emp->getWorktime());
+  int sum = emp->calcBase(emp->getSalary(), emp->getWorktime());
   EXPECT_EQ(9000, sum);
 }
 
