@@ -26,4 +26,6 @@ int main() {
       228, "Ivan Dobryaev", "Project Manager", 2, 80000, 8, projects, 3);
 
   manager->printInfo();
+
+  std:: cout << lab.name << '\n';
 }

@@ -43,17 +43,17 @@ TEST(TestStaff, Test_6_payment) {
 
 TEST(TestStaff, Test_7_project_name) {
   Project project = {6, "tp-lab # 6", 1707};
-  EXPECT_EQ("tp-lab # 6", project->name);
+  EXPECT_EQ("tp-lab # 6", project.name);
 }
 
 TEST(TestStaff, Test_8_project_id) {
   Project project = {6, "tp-lab # 6", 1707};
-  EXPECT_EQ(6, project->id);
+  EXPECT_EQ(6, project.id);
 }
 
 TEST(TestStaff, Test_9_project_budget) {
   Project project = {6, "tp-lab # 6", 1707};
-  EXPECT_EQ(1707, project->budget);
+  EXPECT_EQ(1707, project.budget);
 }
 
 TEST(TestStaff, Test_10_calcBase) {
@@ -68,7 +68,7 @@ TEST(TestStaff, Test_11_calcBudgetPart) {
   Project pr = {100, "lab # 6", 100000};
   Tester* emp = new Tester(10, "Pupkin", "Tester", 1000, 9, &pr, 10);
   emp->setSalary(1000);
-  int sum = emp->calcBudgetPart();
+  int sum = emp->calcBudgetPart(emp->part, pr.budget);
   EXPECT_EQ(100000 / 10, sum);
 }
 
