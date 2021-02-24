@@ -13,12 +13,13 @@
 
 class ProjectManager : public Employee, Heading, ProjectBudget {
  public:
-    explicit ProjectManager(int id, const std::string &name,
-                         const std::string &position,
-                         Project *project)
-
-                         : Employee(id, name, position),
-                         project(project) {}
+    explicit ProjectManager(
+            int id, int worktime, int payment, int salary,
+            const std::string name, std::string position,
+            Project *project)
+             : Employee(id, worktime, payment, salary,
+                        name, position),
+             project(project) {};
 
     ProjectManager(int id, const std::string &name,
                 const std::string &position)
@@ -36,12 +37,14 @@ class ProjectManager : public Employee, Heading, ProjectBudget {
 
 class SeniorManager : public ProjectManager {
  public:
-    explicit SeniorManager(int id, const std::string &name,
-                           const std::string &position,
-                           std::vector<Project *> projects)
-
-                           : ProjectManager(id, name, position),
-                            projects(std::move(projects)) {}
+    explicit SeniorManager(
+            int id, int worktime, int payment, int salary,
+            const std::string name, std::string position,
+            std::vector<Project *> projects)
+            : ProjectManager(id, worktime, payment,
+                             salary, name, position,
+                             nullptr),
+            projects(std::move(projects)) {}
     std::vector<Project *> getProjects();
     int calc() override;
     int calcBudgetPart(double p, int budget) override;

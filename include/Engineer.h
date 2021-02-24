@@ -17,8 +17,13 @@ class Engineer : public Personal, public ProjectBudget {
     float part;
 
  public:
-    Engineer(int id, const std::string name, std::string position,
-             int salary, int worktime, Project *project, float part);
+    Engineer(int id, int worktime, int payment, int salary,
+             const std::string name, std::string position,
+             Project *project, float part) : Personal(
+                     id, worktime, payment, salary, name,
+                     position),
+                     project(project),
+                     part(part) {};
     int calc() override;
     void setProject(Project *p);
     Project *getProject();
@@ -31,11 +36,12 @@ class Tester : public Engineer {
     int calcProAdditions() override;
 
  public:
-    Tester(int id, const std::string name, std::string position,
-           int salary, int worktime, Project *project, float part)
+    Tester(int id, int worktime, int payment, int salary,
+           const std::string name, std::string position,
+           Project *project, float part)
 
-           : Engineer(id, name, position, salary,
-                      worktime, project, part) {}
+           : Engineer(id, worktime, payment,salary, name,
+                      position, project, part) {};
 };
 
 class Programmer : public Engineer {
@@ -43,11 +49,12 @@ class Programmer : public Engineer {
     int calcProAdditions() override;
 
  public:
-    Programmer(int id, const std::string name, std::string position,
-               int salary, int worktime, Project *project, float part)
+    Programmer(int id, int worktime, int payment, int salary,
+               const std::string name, std::string position,
+               Project *project, float part)
 
-               : Engineer(id, name, position, salary,
-                       worktime, project, part) {}
+            : Engineer(id, worktime, payment, salary, name,
+                       position, project, part) {};
 };
 
 class TeamLeader : public Programmer, public Heading {
@@ -55,12 +62,11 @@ class TeamLeader : public Programmer, public Heading {
     int calcHeads() override;
 
  public:
-    TeamLeader(int id, const std::string name,
-               std::string position, int salary,
-               int worktime, Project * project,
-               float part)
-            : Programmer(id, name, position, salary,
-                         worktime, project, part) {}
+    TeamLeader(int id, int worktime, int payment, int salary,
+               const std::string name, std::string position,
+               Project *project, float part)
+            : Programmer(id, worktime, payment, salary,
+                         name, position, project, part) {};
 };
 
 #endif  // INCLUDE_ENGINEER_H_

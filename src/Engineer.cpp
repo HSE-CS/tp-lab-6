@@ -2,12 +2,6 @@
 
 #include "Engineer.h"
 
-Engineer::Engineer(int id, const std::string name, std::string position,
-         int salary, int worktime, Project *project, float part) :
-         Personal(id, name, position, salary, worktime),
-         project(project), part(part) {
-}
-
 void Engineer::setProject(Project *p) {
     this->project = p;
 }

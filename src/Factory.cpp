@@ -25,7 +25,7 @@ std::vector<Employee*> readData(std::string file_name) {
     path = path.substr(0, path.rfind('/'))
             + "/data/" + file_name;
     std::ifstream file(path);
-     */
+    */
     std::ifstream file(file_name);
     if (file.is_open()) {
         std::cout << "File was opened\n";
@@ -46,45 +46,82 @@ std::vector<Employee*> readData(std::string file_name) {
             if (position == "programmer") {
                 Project *project = new Project(counter++, 0);
                 employee.push_back(
-                        new Programmer(stoi(id), name, position,
-                                       stoi(salary),
-                                       stoi(worktime),
-                                       project, 0.2));
+                        new Programmer(
+                                std::stoi(id),
+                                std::stoi(worktime),
+
+                                std::stoi(salary) /
+                                std::stoi(worktime),
+
+                                std::stoi(salary),
+                                name, position,
+                                project, 0.2));
             } else if (position == "tester") {
                 Project *project = new Project(counter++, 0);
                 employee.push_back(
-                        new Tester(stoi(id), name, position,
-                                   stoi(salary),
-                                   stoi(worktime),
-                                   project, 0.2));
+                        new Tester(
+                                std::stoi(id),
+                                std::stoi(worktime),
+
+                                std::stoi(salary) /
+                                std::stoi(worktime),
+
+                                std::stoi(salary),
+                                name, position,
+                                project, 0.2));
             } else if (position == "teamLeader") {
                 Project *project = new Project(counter++, 0);
-                employee.push_back(new TeamLeader(stoi(id), name, position,
-                                                  stoi(salary),
-                                                  stoi(worktime),
-                                                  project, 0.2));
+                employee.push_back(
+                        new TeamLeader(
+                                std::stoi(id),
+                                std::stoi(worktime),
+
+                                std::stoi(salary) /
+                                std::stoi(worktime),
+
+                                std::stoi(salary),
+                                name, position,
+                                project, 0.2));
             } else if (position == "cleaner") {
                 employee.push_back(
-                        new Cleaner(stoi(id), name,
-                                    position,
-                                    std::stoi(salary) / 4,
-                                    stoi(worktime)));
+                        new Cleaner(std::stoi(id),
+                                    std::stoi(worktime),
+                                    std::stoi(salary) /
+                                    std::stoi(worktime),
+
+                                    std::stoi(salary),
+                                    name, position));
             } else if (position == "driver") {
-                employee.push_back(new Driver(stoi(id), name,
-                                              position,
-                                              std::stoi(salary) / 4,
-                                              stoi(worktime)));
+                employee.push_back(
+                        new Driver(std::stoi(id),
+                                   std::stoi(worktime),
+                                   std::stoi(salary) /
+                                   std::stoi(worktime),
+
+                                   std::stoi(salary),
+                                   name, position));
             } else if (position == "projectManager") {
                 Project *project = new Project(counter++, 0);
                 employee.push_back(
-                        new ProjectManager(stoi(id), name,
-                                           position,
+                        new ProjectManager(std::stoi(id),
+                                           std::stoi(worktime),
+                                           std::stoi(salary) /
+                                           std::stoi(worktime),
+
+                                           std::stoi(salary),
+                                           name, position,
                                            project));
             } else if (position == "seniorManager") {
                 std::vector <Project*> projects;
                 employee.push_back(
-                        new SeniorManager(stoi(id), name,
-                                          position, projects));
+                        new SeniorManager(std::stoi(id),
+                                          std::stoi(worktime),
+                                          std::stoi(salary) /
+                                          std::stoi(worktime),
+
+                                          std::stoi(salary),
+                                          name, position,
+                                          projects));
             }
         }
         return employee;

@@ -8,11 +8,13 @@
 
 class Personal : public Employee, public WorkBaseTime {
  public:
-    Personal(int id, std::string name, std::string position,
-             int payment, int worktime)
-            : Employee(id, name, position) {
-        this->payment = payment;
-        this->worktime = worktime;
+    Personal(int id, int worktime,
+             int payment, int salary,
+             std::string name,
+             std::string position) : Employee(
+                    id, worktime, payment,
+                    payment * worktime,
+                       name, position) {
     }
 
     int calc() override;
@@ -23,18 +25,28 @@ class Personal : public Employee, public WorkBaseTime {
 
 class Driver : public Personal {
  public:
-    Driver(int id, std::string name, std::string position,
-           int payment, int worktime)
-            : Personal(id, name, position, payment, worktime) {}
+    Driver(int id, int worktime,
+           int payment, int salary,
+           std::string name,
+           std::string position)
+            : Personal(
+            id, worktime, payment,
+            payment * worktime,
+            name, position) {}
 
     int calcBonus() override;
 };
 
 class Cleaner : public Personal {
  public:
-    Cleaner(int id, const std::string name,
-            const std::string position, int payment, int worktime)
-            : Personal(id, name, position, payment, worktime) {}
+    Cleaner(int id, int worktime,
+            int payment, int salary,
+            std::string name,
+            std::string position)
+            : Personal(
+            id, worktime, payment,
+            payment * worktime,
+            name, position) {}
     int calcBonus() override;
 };
 
