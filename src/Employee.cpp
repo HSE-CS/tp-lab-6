@@ -3,7 +3,6 @@
 
 Employee::Employee(int id, std::string name) {
 	this->id = id;
-	//this->pos = pos;
 	this->name = std::move(name);
 }
 

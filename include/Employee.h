@@ -18,7 +18,7 @@ enum position {
 class Employee {
  private:
   int id;
-  int worktime=0;
+  int worktime = 0;
   int payment = 0;
   std::string name;
 
