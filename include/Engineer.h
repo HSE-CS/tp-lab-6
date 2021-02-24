@@ -15,7 +15,8 @@ class Engineer: public Personal, public ProjectBudget{
     Project project;
 
  public:
-    Engineer(int id, std::string name, std::string pos, int worktime, int payment, Project project_) 
+    Engineer(int id, std::string name, std::string pos,
+         int worktime, int payment, Project project_)
         :Personal(id, name, pos, worktime, payment), project{project_} {};
     Project getProject();
     int calcBudgetPart(float part, int budget) override;
@@ -25,7 +26,8 @@ class Engineer: public Personal, public ProjectBudget{
 
 class Tester: public Engineer {
  public:
-    Tester(int id, std::string name, std::string pos, int worktime, int payment, Project project_)
+    Tester(int id, std::string name, std::string pos,
+         int worktime, int payment, Project project_)
         :Engineer(id, name, pos, worktime, payment, project_) {};
     int calcAdditions();
     int calcBonus() override;
@@ -36,8 +38,9 @@ class Tester: public Engineer {
 
 class Programmer: public Engineer {
  public:
-    Programmer(int id, std::string name, std::string pos, int worktime, int payment, Project project_) 
-        :Engineer(id, name, pos,worktime, payment, project_) {};
+    Programmer(int id, std::string name,
+         std::string pos, int worktime, int payment, Project project_)
+        :Engineer(id, name, pos, worktime, payment, project_) {}
     int calcProAdditions() override;
     int calcBonus() override;
     int calc() override;
@@ -46,8 +49,9 @@ class Programmer: public Engineer {
 
 class TeamLeader : public Programmer, public Heading {
  public:
-    TeamLeader(int id, std::string name, std::string pos, int worktime, int payment, Project project_)
-        :Programmer(id, name, pos, worktime, payment, project_) {};
+    TeamLeader(int id, std::string name, std::string pos, int worktime,
+         int payment, Project project_)
+        :Programmer(id, name, pos, worktime, payment, project_) {}
     int calcHeads();
     int calc() override;
     int calcBonus() override;

@@ -4,7 +4,8 @@
 #include <string>
 #include <cmath>
 
-Employee::Employee(int id_, std::string name_, std::string pos_, int worktime_, int payment_) {
+Employee::Employee(int id_, std::string name_, std::string pos_,
+        int worktime_, int payment_) {
     id = id_;
     name = name_;
     pos = pos_;

@@ -13,8 +13,9 @@ class ProjectManager: public ProjectBudget, public Heading, public Employee {
     std::vector<Project> project;
 
  public:
-    ProjectManager(int id, std::string name, std::string pos, int worktime, int payment, std::vector<Project> project_)
-        :Employee(id, name, pos, worktime, payment), project(project_) {};
+    ProjectManager(int id, std::string name, std::string pos,
+         int worktime, int payment, std::vector<Project> project_)
+        :Employee(id, name, pos, worktime, payment), project(project_) {}
     int calcHeads() override;
     int calc() override;
     void printInfo() override;
@@ -27,8 +28,9 @@ class SeniorManager : public ProjectManager {
     std::vector<Project> project;
 
  public:
-    SeniorManager(int id, std::string name, std::string pos, int worktime, int payment, std::vector<Project> project_)
-        :ProjectManager(id, name, pos, worktime, payment, project_) {};
+    SeniorManager(int id, std::string name, std::string pos,
+         int worktime, int payment, std::vector<Project> project_)
+        :ProjectManager(id, name, pos, worktime, payment, project_) {}
     int calc() override;
     void printInfo() override;
 };

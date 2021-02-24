@@ -14,7 +14,8 @@ class Employee {
     int payment;
 
  public:
-    Employee(int id, std::string name, std::string pos, int worktime, int payment);
+    Employee(int id, std::string name, 
+        std::string pos, int worktime, int payment);
     std::string getPosition();
     int getId();
     std::string getName();

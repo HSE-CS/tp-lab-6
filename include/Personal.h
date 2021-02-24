@@ -12,8 +12,9 @@ class Personal: public Employee, public WorkBaseTime {
     int salary;
 
  public:
-    Personal(int id, std::string name, std::string pos, int worktime, int payment)
-        :Employee(id, name, pos, worktime, payment) {};
+    Personal(int id, std::string name, std::string pos,
+         int worktime, int payment)
+        :Employee(id, name, pos, worktime, payment) {}
     int getSalary();
     int calcBase(int salary, int wtime) override;
     int calcBonus() override;
@@ -24,7 +25,7 @@ class Personal: public Employee, public WorkBaseTime {
 class Clener: public Personal {
  public:
     Clener(int id, std::string name, std::string pos, int worktime, int payment)
-        :Personal(id, name, pos, worktime, payment) {};
+        :Personal(id, name, pos, worktime, payment) {}
     int calc() override;
     int calcBonus() override;
     void printInfo() override;
@@ -33,7 +34,7 @@ class Clener: public Personal {
 class Driver : public Personal {
  public:
     Driver(int id, std::string name, std::string pos, int worktime, int payment)
-        :Personal(id, name, pos, worktime, payment) {};
+        :Personal(id, name, pos, worktime, payment) {}
     int calc() override;
     int calcBonus() override;
     void printInfo() override;

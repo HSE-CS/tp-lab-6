@@ -22,8 +22,10 @@ int Personal::calc() {
 }
 void Personal::printInfo() {
     std::string res;
-    res = "id " + std::to_string(getId()) + "\nname " + getName() + "\nposition " + getPosition()
-       + "\npayment " + std::to_string(getPayment()) + "\nsalary " + std::to_string(getSalary());
+    res = "id " + std::to_string(getId())
+       + "\nname " + getName() + "\nposition " + getPosition()
+       + "\npayment " + std::to_string(getPayment())
+       + "\nsalary " + std::to_string(getSalary());
     std::cout << res << std::endl;
 }
 
@@ -32,8 +34,10 @@ int Clener::calc() {
 }
 void Clener::printInfo() {
     std::string res;
-    res = "id " + std::to_string(getId()) + "\nname " + getName() + "\nposition " + getPosition()
-        + "\npayment " + std::to_string(getPayment()) + "\nsalary " + std::to_string(getSalary());
+    res = "id " + std::to_string(getId())
+        + "\nname " + getName() + "\nposition " + getPosition()
+        + "\npayment " + std::to_string(getPayment())
+        + "\nsalary " + std::to_string(getSalary());
     std::cout << res << std::endl;
 }
 
@@ -50,8 +54,10 @@ int Driver::calcBase(int salary, int wtime) {
 
 void Driver::printInfo() {
     std::string res;
-    res = "id " + std::to_string(getId()) + "\nname " + getName() + "\nposition " + getPosition()
-        + "\npayment " + std::to_string(getPayment()) + "\nsalary " + std::to_string(getSalary());
+    res = "id " + std::to_string(getId())
+        + "\nname " + getName() + "\nposition " + getPosition()
+        + "\npayment " + std::to_string(getPayment())
+        + "\nsalary " + std::to_string(getSalary());
     std::cout << res << std::endl;
 }
 

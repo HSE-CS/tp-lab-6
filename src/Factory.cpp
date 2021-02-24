@@ -24,7 +24,8 @@ std::vector<Project> Factory::read_projects() {
     std::ifstream fin(projects_file);
     while (getline(fin, line)) {
         int ind = line.find(" ");
-        Project pr = { std::stoi(line.substr(0, ind)), std::stoi(line.substr(ind + 1, line.size() - ind - 1)) };
+        Project pr = { std::stoi(line.substr(0, ind)),
+            std::stoi(line.substr(ind + 1, line.size() - ind - 1)) };
         buff.push_back(pr);
     }
     fin.close();
@@ -88,22 +89,27 @@ std::vector<Employee*> Factory::makeStaff() {
             std::string name_ = getfio(data[i]);
             int payment_ = getPay(data[i]);
             int worktime_ = getWhours(data[i]);
-            int ind_proj = rand() % projects.size();
+            int ind_proj = rand_r() % projects.size();
             std::cout << id_ << name_ << worktime_ << pos_ << std::endl;
             if (pos_ == "Driver")
                 emp = new Driver(id_, name_, pos_, worktime_, payment_);
             else if (pos_ == "Clener")
                 emp = new Clener(id_, name_, pos_, worktime_, payment_);
             else if (pos_ == "Tester")
-                emp = new Tester(id_, name_, pos_, worktime_, payment_, projects[ind_proj]);
+                emp = new Tester(id_, name_, pos_, worktime_, payment_,
+                    projects[ind_proj]);
             else if (pos_ == "Programmer")
-                emp = new Programmer(id_, name_, pos_, worktime_, payment_, projects[ind_proj]);
+                emp = new Programmer(id_, name_, pos_, worktime_,
+                    payment_, projects[ind_proj]);
             else if (pos_ == "Team Leader")
-                emp = new TeamLeader(id_, name_, pos_, worktime_, payment_, projects[ind_proj]);
+                emp = new TeamLeader(id_, name_, pos_, worktime_,
+                    payment_, projects[ind_proj]);
             else if (pos_ == "Project Manager")
-                emp = new ProjectManager(id_, name_, pos_, worktime_, payment_, projects);
+                emp = new ProjectManager(id_, name_, pos_, worktime_,
+                    payment_, projects);
             else if (pos_ == "Senior Manager")
-                emp = new SeniorManager(id_, name_, pos_, worktime_, payment_, projects);
+                emp = new SeniorManager(id_, name_, pos_, worktime_,
+                    payment_, projects);
             res.push_back(emp);
         }
     }

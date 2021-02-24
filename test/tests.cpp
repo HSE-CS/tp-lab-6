@@ -30,7 +30,8 @@ TEST(TestStaff, Test4) {
     Project project = { 10, 40000 };
     std::vector<Project> projects;
     projects.push_back(project);
-    ProjectManager* emp = new ProjectManager(11, "Ivanov Ilya", "ProjectManager", 5, 440, projects);
+    ProjectManager* emp = new ProjectManager(11,
+        "Ivanov Ilya", "ProjectManager", 5, 440, projects);
     EXPECT_EQ(emp->getWorktime(), 5);
 }
 
@@ -38,7 +39,8 @@ TEST(TestStaff, Test5) {
     Project project = { 10, 40000 };
     std::vector<Project> projects;
     projects.push_back(project);
-    ProjectManager* emp = new ProjectManager(10, "Ivanov Petr", "ProjectManager", 5, 700, projects);
+    ProjectManager* emp = new ProjectManager(10,
+         "Ivanov Petr", "ProjectManager", 5, 700, projects);
     EXPECT_EQ(emp->getPayment(), 700);
 }
 
@@ -63,7 +65,8 @@ TEST(TestStaff, Test8) {
 
 TEST(TestStaff, Test9) {
     Project pr = { 100, 23490 };
-    TeamLeader* emp = new TeamLeader(10, "Petrov Ivan", "TeamLeader", 4, 550, pr);
+    TeamLeader* emp = new TeamLeader(10,
+        "Petrov Ivan", "TeamLeader", 4, 550, pr);
     EXPECT_EQ(23490, emp->getProject().budget);
 }
 
