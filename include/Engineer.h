@@ -28,6 +28,7 @@ class Engineer : public Personal, public ProjectBudget {
         part(part) {}
 
   void printInfo() override;
+  float getPart();
   int calcBudgetPart(float part, int budget) override;
 };
 

@@ -68,7 +68,7 @@ TEST(TestStaff, Test_11_calcBudgetPart) {
   Project pr = {100, "lab # 6", 100000};
   Tester* emp = new Tester(10, "Pupkin", "Tester", 1000, 9, &pr, 10);
   emp->setSalary(1000);
-  int sum = emp->calcBudgetPart(emp->part, pr.budget);
+  int sum = emp->calcBudgetPart(emp->getPart(), pr.budget);
   EXPECT_EQ(100000 / 10, sum);
 }
 

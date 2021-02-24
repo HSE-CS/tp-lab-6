@@ -12,6 +12,8 @@ int Engineer::calcBudgetPart(float part, int budget) {
   return project->budget / static_cast<int>(part);
 }
 
+float Engineer::getPart() { return part; }
+
 void Engineer::printInfo() {
   std::cout << "Employee fields: \n";
   std::cout << "\t"
