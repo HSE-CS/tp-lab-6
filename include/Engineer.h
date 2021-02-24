@@ -25,7 +25,7 @@ class Engineer : public ProjectBudget, public Personal {
 };
 
 class Programmer : public Engineer {
-public:
+ public:
   Programmer(int id, std::string name, int salary, Project* project)
     : Engineer(id, name, salary, project) {
     pos = PROGRAMMER;
