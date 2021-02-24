@@ -19,7 +19,7 @@ class ProjectManager : public Employee, Heading, ProjectBudget {
             Project *project)
              : Employee(id, worktime, payment, salary,
                         name, position),
-             project(project) {};
+             project(project) {}
 
     ProjectManager(int id, const std::string &name,
                 const std::string &position)

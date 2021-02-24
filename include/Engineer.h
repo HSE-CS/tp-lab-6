@@ -23,7 +23,7 @@ class Engineer : public Personal, public ProjectBudget {
                      id, worktime, payment, salary, name,
                      position),
                      project(project),
-                     part(part) {};
+                     part(part) {}
     int calc() override;
     void setProject(Project *p);
     Project *getProject();
@@ -40,8 +40,8 @@ class Tester : public Engineer {
            const std::string name, std::string position,
            Project *project, float part)
 
-           : Engineer(id, worktime, payment,salary, name,
-                      position, project, part) {};
+           : Engineer(id, worktime, payment, salary, name,
+                      position, project, part) {}
 };
 
 class Programmer : public Engineer {
@@ -54,7 +54,7 @@ class Programmer : public Engineer {
                Project *project, float part)
 
             : Engineer(id, worktime, payment, salary, name,
-                       position, project, part) {};
+                       position, project, part) {}
 };
 
 class TeamLeader : public Programmer, public Heading {
@@ -66,7 +66,7 @@ class TeamLeader : public Programmer, public Heading {
                const std::string name, std::string position,
                Project *project, float part)
             : Programmer(id, worktime, payment, salary,
-                         name, position, project, part) {};
+                         name, position, project, part) {}
 };
 
 #endif  // INCLUDE_ENGINEER_H_

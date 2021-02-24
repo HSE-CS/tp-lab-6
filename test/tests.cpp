@@ -33,7 +33,7 @@ TEST(ENGINEERS, test3) {
             new Programmer(1, 20, 50,
                            1000, "DIMA",
                            "PythonDeveloper", project, 0.02);
-    EXPECT_EQ(engineer->calc(), 41999);
+    EXPECT_EQ(engineer->calc(), 23999);
 }
 
 TEST(ENGINEERS, test4) {
@@ -74,7 +74,7 @@ TEST(PERSONAL, test8) {
     Employee *employee = new Driver(
             50, 80, 40, 3200,
             "Lol", "driver");
-    EXPECT_EQ(strcmp(employee->getName().c_str(), "lol"), 0);
+    EXPECT_EQ(strcmp(employee->getName().c_str(), "Lol"), 0);
 }
 
 TEST(PERSONAL, test9) {
@@ -108,7 +108,7 @@ TEST(MANAGERS, test12) {
             new ProjectManager(
                     0, 40, 80, 3200,
                     "KekLol", "project manager", project);
-    EXPECT_EQ(employee->getProject()->getId(), 0);
+    EXPECT_EQ(employee->getProject()->getId(), 1);
 }
 
 TEST(MANAGERS, test13) {
