@@ -1,7 +1,7 @@
 // Copyright 2021 Smirnov Grigory
-#ifndef MANAGER_H
-#define MANAGER_H
-
+#ifndef INCLUDE_MANAGER_H
+#define INCLUDE_MANAGER_H
+#include <string>
 #include <vector>
 #include "Engineer.h"
 #include "Interfaces.h"
@@ -17,7 +17,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
      this->project = project;
      this->subordinates = sub;
      pos = PROJECTMANAGER;
-   };
+   }
   int getSubbordinates();
   virtual int calcHeads();
   virtual void calc();
@@ -32,8 +32,8 @@ class SeniorManager : public ProjectManager {
    SeniorManager(int id, std::string name, Project* project, int sub)
      : ProjectManager(id, name, project, sub) {
      pos = SENIORMANAGER;
-   };
+   }
   virtual void calc();
 };
 
-#endif
+#endif  // INCLUDE_MANAGER_H_

@@ -2,34 +2,34 @@
 #include "Employee.h"
 
 Employee::Employee(int id, std::string name) {
-	this->id = id;
-	this->name = std::move(name);
+  this->id = id;
+  this->name = std::move(name);
 }
 
 void Employee::setWorkTime(int numbOfHours) {
-	worktime = numbOfHours;
+  worktime = numbOfHours;
 }
 
 void Employee::setPayment(int money) {
-	payment = money;
+  payment = money;
 }
 
 int Employee::getWorkTime() {
-	return worktime;
+  return worktime;
 }
 
 std::string Employee::getName() {
-	return name;
+  return name;
 }
 
 int Employee::getId() {
-	return id;
+  return id;
 }
 
 int Employee::getPayment() {
-	return payment;
+  return payment;
 }
 
 position Employee::getPos() {
-	return pos;
+  return pos;
 }

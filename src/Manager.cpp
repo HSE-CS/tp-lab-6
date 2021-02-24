@@ -2,22 +2,22 @@
 #include "Manager.h"
 
 int ProjectManager::getSubbordinates() {
-	return subordinates;
+  return subordinates;
 }
 
 int ProjectManager::calcHeads() {
-	return getSubbordinates() * 1000;
+  return getSubbordinates() * 1000;
 }
 
 void ProjectManager::calc() {
-	setPayment(50000 + calcHeads());
+  setPayment(50000 + calcHeads());
 }
 
 void SeniorManager::calc() {
-	setPayment(90000 + calcHeads());
+  setPayment(90000 + calcHeads());
 }
 
 void ProjectManager::printInfo() {
-	std::cout << getName() + " " + std::to_string(getId())
-		 + " " + std::to_string(getPayment());
+  std::cout << getName() + " " + std::to_string(getId())
+    + " " + std::to_string(getPayment());
 }

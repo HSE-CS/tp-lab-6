@@ -1,6 +1,6 @@
 // Copyright 2021 Smirnov Grigory
-#ifndef INTERFACES_H
-#define INTERFACES_H
+#ifndef INCLUDE_INTERFACES_H
+#define INCLUDE_INTERFACES_H
 
 class WorkBaseTime {
  public:
@@ -19,4 +19,4 @@ class ProjectBudget {
   virtual int calcProAdditions() = 0;
 };
 
-#endif
+#endif  // INCLUDE_INTERFACES_H_

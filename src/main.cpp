@@ -8,6 +8,6 @@ int main() {
   c.calc();
   std::cout << " " << c.getPos() << " " << c.getPayment();
   Employee* e = new Driver(146, n, 30);
-  //std::cout << dynamic_cast<Cleaner*>(e)->getPos();
-  //std::cout << e->getPos();
+  // std::cout << dynamic_cast<Cleaner*>(e)->getPos();
+  // std::cout << e->getPos();
 }

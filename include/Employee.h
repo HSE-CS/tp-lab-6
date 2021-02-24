@@ -1,6 +1,6 @@
 // Copyright 2021 Smirnov Grigory
-#ifndef EMPLOYEE_H
-#define EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H
+#define INCLUDE_EMPLOYEE_H
 
 #include <string>
 #include <iostream>
@@ -38,4 +38,4 @@ class Employee {
   virtual void printInfo() = 0;
 };
 
-#endif 
+#endif  // INCLUDE_EMPLOYEE_H_
