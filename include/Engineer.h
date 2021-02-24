@@ -28,7 +28,7 @@ class Tester: public Engineer {
  public:
     Tester(int id, std::string name, std::string pos,
          int worktime, int payment, Project project_)
-        :Engineer(id, name, pos, worktime, payment, project_) {};
+        :Engineer(id, name, pos, worktime, payment, project_) {}
     int calcAdditions();
     int calcBonus() override;
     int calcProAdditions() override;

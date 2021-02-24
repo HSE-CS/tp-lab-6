@@ -4,7 +4,6 @@
 #include "Personal.h"
 #include "Manager.h"
 #include <fstream>
-#include <algorithm>
 #include <string>
 #include <cmath>
 
@@ -89,7 +88,7 @@ std::vector<Employee*> Factory::makeStaff() {
             std::string name_ = getfio(data[i]);
             int payment_ = getPay(data[i]);
             int worktime_ = getWhours(data[i]);
-            int ind_proj = rand_r() % projects.size();
+            int ind_proj = std::rand() % projects.size();
             std::cout << id_ << name_ << worktime_ << pos_ << std::endl;
             if (pos_ == "Driver")
                 emp = new Driver(id_, name_, pos_, worktime_, payment_);

@@ -62,9 +62,12 @@ int Programmer::calc() {
 
 void Programmer::printInfo() {
     std::string res;
-    res = "id " + std::to_string(getId()) + "\nname " + getName() + "\nposition " + getPosition()
-        + "\npayment " + std::to_string(getPayment()) + "\nsalary " + std::to_string(getSalary())
-        + "\nProject id " + std::to_string(getProject().id) + "\nProject budget " + std::to_string(getProject().budget);
+    res = "id " + std::to_string(getId())
+        + "\nname " + getName() + "\nposition " + getPosition()
+        + "\npayment " + std::to_string(getPayment())
+        + "\nsalary " + std::to_string(getSalary())
+        + "\nProject id " + std::to_string(getProject().id)
+        + "\nProject budget " + std::to_string(getProject().budget);
     std::cout << res << std::endl;
 }
 
