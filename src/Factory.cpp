@@ -67,7 +67,7 @@ void Factory::write_data(std::string data) {
 
 std::vector<Employee*> Factory::makeStaff() {
     std::vector<Employee*> res;
-    std::vector<std::string> names = { "Driver
+    std::vector<std::string> names = { "Driver"
                                        "Clener",
                                        "Senior Manager",
                                        "Project Manager",
