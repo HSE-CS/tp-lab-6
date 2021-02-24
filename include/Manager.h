@@ -16,6 +16,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
      : Employee(id, name) {
      this->project = project;
      this->subordinates = sub;
+     pos = PROJECTMANAGER;
    };
   int getSubbordinates();
   virtual int calcHeads();
@@ -30,9 +31,8 @@ class SeniorManager : public ProjectManager {
  public:
    SeniorManager(int id, std::string name, Project* project, int sub)
      : ProjectManager(id, name, project, sub) {
-
+     pos = SENIORMANAGER;
    };
-     
   virtual void calc();
 };
 

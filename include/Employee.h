@@ -5,14 +5,14 @@
 #include <string>
 #include <iostream>
 
-enum class position {
-  Cleaner,
-  Driver,
-  Tester,
-  Programmer,
-  TeamLeader,
-  ProjectManager,
-  SeniorManager
+enum position {
+  CLEANER,
+  DRIVER,
+  TESTER,
+  PROGRAMMER,
+  TEAMLEADER,
+  PROJECTMANAGER,
+  SENIORMANAGER
 };
 
 class Employee {
@@ -20,8 +20,10 @@ class Employee {
   int id;
   int worktime=0;
   int payment = 0;
-  position pos;
   std::string name;
+
+ protected:
+  position pos;
 
  public:
   Employee(int id, std::string name);
@@ -31,6 +33,7 @@ class Employee {
   std::string getName();
   int getId();
   int getPayment();
+  position getPos();
   virtual void calc() = 0;
   virtual void printInfo() = 0;
 };

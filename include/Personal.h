@@ -21,13 +21,17 @@ class Personal : public Employee, public WorkBaseTime {
 
 class Cleaner : public Personal {
  public:
-  Cleaner(int id, std::string name, int salary) : Personal(id, name, salary) {};
+  Cleaner(int id, std::string name, int salary) : Personal(id, name, salary) {
+    pos = CLEANER;
+  };
   virtual void calc();
 };
 
 class Driver : public Personal {
  public:
-  Driver(int id, std::string name, int salary) : Personal(id, name, salary) {};
+  Driver(int id, std::string name, int salary) : Personal(id, name, salary) {
+    pos = DRIVER;
+  };
   virtual int calcBonus();
   virtual void calc();
 };

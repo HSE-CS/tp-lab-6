@@ -27,7 +27,9 @@ class Engineer : public ProjectBudget, public Personal {
 class Programmer : public Engineer {
 public:
   Programmer(int id, std::string name, int salary, Project* project)
-    : Engineer(id, name, salary, project) {};
+    : Engineer(id, name, salary, project) {
+    pos = PROGRAMMER;
+  };
   virtual int calcProAdditions();
 };
 
@@ -36,7 +38,9 @@ class Tester : public Engineer {
   int errorsFound = 0;
  public:
   Tester(int id, std::string name, int salary, Project* project)
-    : Engineer(id, name, salary, project) {};
+    : Engineer(id, name, salary, project) {
+    pos = TESTER;
+  };
   void incErrorsFound();
   int getErrorsFound();
   virtual int calcProAdditions();
@@ -48,6 +52,7 @@ class TeamLeader : public Programmer, public Heading {
  public:
   TeamLeader(int id, std::string name, int salary, Project* project, int sub)
     : Programmer(id, name, salary, project) {
+    pos = TEAMLEADER;
     this->subordinates = sub;
   };
   int getSubbordinates();

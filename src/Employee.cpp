@@ -30,3 +30,7 @@ int Employee::getId() {
 int Employee::getPayment() {
 	return payment;
 }
+
+position Employee::getPos() {
+	return pos;
+}
