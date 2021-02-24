@@ -97,7 +97,7 @@ TEST(TestStaff, Test_14_ProjectManager_calcHeads) {
   ProjectManager* manager = new ProjectManager(
       228, "Ivan Dobryaev", "Project Manager", 2, 80000, 8, projects, 3);
 
-  EXPECT_EQ(100000, manager.calcHeads());
+  EXPECT_EQ(100000, manager->calcHeads());
 }
 
 TEST(TestStaff, Test_15_ProjectManager_calcProAdditions) {
@@ -109,5 +109,5 @@ TEST(TestStaff, Test_15_ProjectManager_calcProAdditions) {
   ProjectManager* manager = new ProjectManager(
       228, "Ivan Dobryaev", "Project Manager", 2, 80000, 8, projects, 3);
 
-  EXPECT_EQ(1707 * 0.05 + 200000 * 0.05, manager.calcProAdditions());
+  EXPECT_EQ(1707 * 0.05 + 200000 * 0.05, manager->calcProAdditions());
 }
