@@ -42,17 +42,17 @@ TEST(TestStaff, Test_6_payment) {
 }
 
 TEST(TestStaff, Test_7_project_name) {
-  Project pr = {6, "tp-lab # 6", 1707};
+  Project project = {6, "tp-lab # 6", 1707};
   EXPECT_EQ("tp-lab # 6", project->name);
 }
 
 TEST(TestStaff, Test_8_project_id) {
-  Project pr = {6, "tp-lab # 6", 1707};
+  Project project = {6, "tp-lab # 6", 1707};
   EXPECT_EQ(6, project->id);
 }
 
 TEST(TestStaff, Test_9_project_budget) {
-  Project pr = {6, "tp-lab # 6", 1707};
+  Project project = {6, "tp-lab # 6", 1707};
   EXPECT_EQ(1707, project->budget);
 }
 
@@ -60,7 +60,7 @@ TEST(TestStaff, Test_10_calcBase) {
   Project pr = {100, "lab # 6", 100000};
   Tester* emp = new Tester(10, "Pupkin", "Tester", 1000, 9, &pr, 5);
   emp->setSalary(1000);
-  int sum = emp->calcBase();
+  int sum = emp->calcBase(emp->getPayment(), emp->getWorktime());
   EXPECT_EQ(9000, sum);
 }
 
