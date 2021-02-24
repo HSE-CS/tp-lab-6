@@ -1,13 +1,13 @@
 // Copyright 2021 LongaBonga
 #include "Personal.h"
 
-int Personal::calcBase(int payment, int wtime) { return payment * wtime; }
+int Personal::calcBase(int salary, int wtime) { return salary * wtime; }
 
 int Personal::calcBonus() { return 0; }
 
 int Personal::getSalary() { return salary; }
 
-int Personal::calc() { return calcBase(payment, worktime) + calcBonus(); }
+int Personal::calc() { return calcBase(salary, worktime) + calcBonus(); }
 
 void Personal::setSalary(int value) { this->salary = value; }
 void Personal::printInfo() {
