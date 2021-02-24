@@ -40,7 +40,8 @@ TEST(ENGINEERS, test4) {
     Engineer *engineer2 = new TeamLeader(
             2, "Kek", "King",
             1337, 20, project, 0.2);
-    EXPECT_EQ(strcmp(engineer1->getPosition(), "TeamLead"), 0);
+    EXPECT_EQ(strcmp(engineer1->getPosition().c_str(),
+                     "TeamLead"), 0);
 }
 
 TEST(ENGINEERS, test5) {
