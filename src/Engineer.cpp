@@ -1,11 +1,12 @@
 // Copyright 2021 LongaBonga
 #include "Engineer.h"
+
 #include <cstring>
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <vector>
 #include <utility>
+#include <vector>
 
 int Engineer::calcBudgetPart(float part, int budget) {
   return project->budget / static_cast<int>(part);
@@ -24,11 +25,13 @@ void Engineer::printInfo() {
   std::cout << "\t"
             << "Salary: " << getSalary() << '\n';
   std::cout << "\t"
+            << "Payment: " << getPayment() << '\n';
+  std::cout << "\t"
             << "Project: " << project->name << '\n';
 }
 
 int Tester::calcProAdditions() {
-  return calcBase(getSalary(), getWorktime()) / 10;
+  return calcBase(getSalary(), getWorktime()) / 15;
 }
 
 int Tester::calc() {
@@ -47,7 +50,7 @@ int Programmer::calc() {
   return payment;
 }
 
-int TeamLeader::calcHeads() { return 150; }
+int TeamLeader::calcHeads() { return 15000; }
 
 int TeamLeader::calc() {
   payment = calcBase(getSalary(), getWorktime()) + calcHeads() +

@@ -4,7 +4,7 @@
 int ProjectManager::calcHeads() {
   int sum = 0;
   for (auto p : projects) {
-    sum += 69;
+    sum += 5000;
   }
   return sum;
 }
@@ -23,7 +23,7 @@ int ProjectManager::calcBudgetPart(float part, int budget) {
 int ProjectManager::calcProAdditions() {
   int sum = 0;
   for (auto p : projects) sum += p->budget;
-  return calcBudgetPart(part, sum) / 25;
+  return calcBudgetPart(part, sum) / 20;
 }
 
 void ProjectManager::printInfo() {

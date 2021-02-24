@@ -7,10 +7,9 @@ int Personal::calcBonus() { return 0; }
 
 int Personal::getSalary() { return salary; }
 
-int Personal::calc() {
-  salary = calcBase(payment, worktime) + calcBonus();
-  return salary;
-}
+int Personal::calc() { return calcBase(payment, worktime) + calcBonus(); }
+
+void Personal::setSalary(int value) { this->salary = value; }
 void Personal::printInfo() {
   std::cout << "Employee fields: \n";
   std::cout << "\t"

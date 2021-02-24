@@ -5,7 +5,7 @@
 
 #include "Interfaces.h"
 #include "Personal.h"
-#include "Project.h"
+#include "Factory.h"
 #include <cstring>
 #include <fstream>
 #include <iostream>
@@ -36,8 +36,6 @@ class Tester : public Engineer {
   Tester(int id, const std::string name, std::string position, int salary,
          int worktime, Project *project, float part)
       : Engineer(id, name, position, salary, worktime, project, part) {}
-
- protected:
   int calcProAdditions() override;
   int calc() override;
 };
@@ -47,8 +45,6 @@ class Programmer : public Engineer {
   Programmer(int id, const std::string name, std::string position, int salary,
              int worktime, Project *project, float part)
       : Engineer(id, name, position, salary, worktime, project, part) {}
-
- protected:
   int calcProAdditions() override;
   int calc() override;
 };
@@ -58,8 +54,6 @@ class TeamLeader : public Programmer, public Heading {
   TeamLeader(int id, const std::string name, std::string position, int salary,
              int worktime, Project *project, float part)
       : Programmer(id, name, position, salary, worktime, project, part) {}
-
- protected:
   int calcHeads() override;
   int calc() override;
 };

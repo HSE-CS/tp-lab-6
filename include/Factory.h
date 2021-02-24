@@ -11,11 +11,11 @@
 
 class Project {
  public:
-  int is;
+  int id;
   std::string name;
   int budget;
-  Project(int is, std::string name, int budget)
-      : is(is), name(std::move(name)), budget(budget) {}
+  Project(int id, std::string name, int budget)
+      : id(id), name(std::move(name)), budget(budget) {}
 };
 
 #endif  // INCLUDE_FACTORY_H_

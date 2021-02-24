@@ -20,6 +20,7 @@ class Personal : public Employee, public WorkBaseTime {
   int calcBonus() override;
   void printInfo() override;
   int getSalary();
+  void setSalary(int value);
 };
 
 class Driver : public Personal {
