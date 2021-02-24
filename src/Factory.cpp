@@ -157,7 +157,7 @@ std::vector<Employee*> StaffFactory::makeStaff() {
   fin.close();
   if (is_senior) {
     int index = 0;
-    Project* all_projects = new Project[projects.size()]{0};
+    Project* all_projects = new Project[projects.size()];
     for (auto project = projects.begin(); project != projects.end();
       ++project) {
       all_projects[index++] = *project;
