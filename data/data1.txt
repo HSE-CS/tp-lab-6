@@ -1,0 +1,8 @@
+7
+1 qwe 20 programmer 5000
+2 wer 30 programmer 3000
+3 zxc 40 tester 2000
+4 xcv 50 teamLeader 10000
+5 sdf 40 cleaner 1000
+6 gfd 40 projectManager 1500
+7 bgf 60 seniorManager 4000
