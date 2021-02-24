@@ -10,8 +10,7 @@ int main() {
   Driver* emp = new Driver(10, "Vasya", "Driver", 500, 8);
   int sum = emp->calc();
   emp->printInfo();
-  std::cout << sum << "\n"; 
-
+  std:: cout << sum << "\n";
   // Project pr = { 100, "lab # 6", 23490 };
   // Tester* emp = new Tester(10, "Pupkin", "Tester", 1000, 9, &pr, 5);
   // emp->setSalary(1000);
