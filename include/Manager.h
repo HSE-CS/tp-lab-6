@@ -1,6 +1,6 @@
 // Copyright 2021 Smirnov Grigory
-#ifndef INCLUDE_MANAGER_H
-#define INCLUDE_MANAGER_H
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 #include <string>
 #include <vector>
 #include "Engineer.h"

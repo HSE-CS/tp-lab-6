@@ -1,6 +1,6 @@
 // Copyright 2021 Smirnov Grigory
-#ifndef INCLUDE_EMPLOYEE_H
-#define INCLUDE_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 #include <iostream>
