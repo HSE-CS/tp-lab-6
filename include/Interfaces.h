@@ -1,6 +1,6 @@
 // Copyright NikDemoShow 2021
-#ifndef INERFACES_H_
-#define INERFACES_H_
+#ifndef INCLUDE_INERFACES_H_
+#define INCLUDE_INERFACES_H_
 class WorkBaseTime {
  public:
   virtual unsigned int calcBase() = 0;
@@ -17,4 +17,4 @@ class Heading {
   virtual unsigned int calcHeads() = 0;
 };
 
-#endif // INERFACES_H_
+#endif  // INCLUDE_INERFACES_H_

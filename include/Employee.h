@@ -1,6 +1,6 @@
 // Copyright NikDemoShow 2021
-#ifndef EMPLOYEE_H_
-#define EMPLOYEE_H_
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 #include<string>
 #include<iostream>
 #include<iomanip>
@@ -21,10 +21,9 @@ class Employee {
   Position position;
   unsigned int worktime;
   unsigned int payment;
-  
  public:
   Employee(const unsigned int nId, const std::string nName, const Position nPos)
-      : id(nId), name(nName), position(nPos), worktime(0), payment(0){};
+      : id(nId), name(nName), position(nPos), worktime(0), payment(0){}
   void setWorkTime();
   virtual void calc() = 0;
   virtual void printInfo();
@@ -39,13 +38,12 @@ class Project {
  private:
   unsigned int id;
   unsigned int budget;
-
  public:
-  Project() : id(0), budget(0){};
+  Project() : id(0), budget(0){}
   Project(const unsigned int nId, const unsigned int nBudget)
-      : id(nId), budget(nBudget){};
+      : id(nId), budget(nBudget){}
   unsigned int getId() const;
   unsigned int getBudget() const;
 };
 
-#endif // EMPLOYEE_H_
+#endif  // INCLUDE_EMPLOYEE_H_

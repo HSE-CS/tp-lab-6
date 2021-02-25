@@ -5,7 +5,7 @@
 
 int main() {
   Factory F;
-  std::vector<Employee*> staff = F.makeStaff("ProgTech/Lab6/Personals.txt");
+  std::vector<Employee*> staff = F.makeStaff("src/Personals.txt");
   for (Employee* emp : staff) {
     emp->setWorkTime();
   }

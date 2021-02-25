@@ -1,6 +1,6 @@
 // Copyright NikDemoShow 2021
-#ifndef FACTORY_H_
-#define FACTORY_H_
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 #include<fstream>
 #include<sstream>
 #include"Engineer.h"
@@ -11,4 +11,4 @@ class Factory {
  public:
   std::vector<Employee*> makeStaff(const std::string dir);
 };
-#endif // FACTORY_H_
+#endif  // INCLUDE_FACTORY_H_
