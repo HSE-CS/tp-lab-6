@@ -80,7 +80,7 @@ TEST(StaffDemo, test13) {
 }
 TEST(StaffDemo, test14) {
   Factory F;
-  std::vector<Employee *> staff = F.makeStaff("src/Personals.txt");
+  std::vector<Employee *> staff = F.makeStaff("");
   EXPECT_EQ(0, staff.size());
 }
 TEST(StaffDemo, test15) {
