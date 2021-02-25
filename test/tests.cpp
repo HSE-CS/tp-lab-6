@@ -108,6 +108,6 @@ TEST(test_enginer, test14) {
 TEST(test_enginer, test15) {
     Engineer employee(1, "Denis", Position::ENGINEER, "name of project", 800);
     employee.setWorkTime(10);
-    int position =  int(employee.getPosition());
+    int position =  static_cast<int>(employee.getPosition());
     EXPECT_EQ(position, 4);
 }
