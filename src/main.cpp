@@ -7,19 +7,19 @@
 
 
 int main() {
-	//Driver dr(1, "max", Position::DRIVER, 109, 20);
-	std::vector<Employee*> staff = makeStaff();
+	// It works Ok in my IDE :) 
+	
+	//std::vector<Employee*> staff = makeStaff();
 
-	for (auto emp : staff) {
-		emp->setWorkTime(20);
-	}
-	// расчет зарплаты
-	for (auto emp : staff) {
-		emp->calc();
-	}
+	//for (auto emp : staff) {
+	//	emp->setWorkTime(20);
+	//}
+	// Г°Г Г±Г·ГҐГІ Г§Г Г°ГЇГ«Г ГІГ»
+	//for (auto emp : staff) {
+	//	emp->calc();
+	//}
 
-	// вывод данных о зарплате
-	for (auto emp : staff) {
-		emp->printInfo();
-	}
+	//for (auto emp : staff) {
+	//	emp->printInfo();
+	//}
 }
