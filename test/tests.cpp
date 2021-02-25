@@ -154,7 +154,7 @@ TEST(ProjectManager, Payment) {
 
 TEST(SeniorManager, Constructor) {
   Project prj1(0, 10000), prj2(1, 20000);
-  vector<Project> projects;
+  std::vector<Project> projects;
   projects.push_back(prj1);
   projects.push_back(prj2);
   SeniorManager *employee =
@@ -168,7 +168,7 @@ TEST(SeniorManager, Constructor) {
 
 TEST(SeniorManager, Payment) {
   Project prj1(0, 10000), prj2(1, 20000);
-  vector<Project> projects;
+  std::vector<Project> projects;
   projects.push_back(prj1);
   projects.push_back(prj2);
   SeniorManager *employee =
