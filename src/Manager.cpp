@@ -1,3 +1,4 @@
+// Copyright 2021 by Fatin Maxim
 #include "Manager.h"
 #include <string>
 
@@ -15,14 +16,14 @@ int ProjectManager::calcProAdditions() {
     return 5000;
 }
 
-std::string PositionStriing[] = {
-    "Project Manager", "Senior Manager"
-};
-
 void ProjectManager::printInfo() {
+    std::string PositionStriing[] = {
+        "Project Manager", "Senior Manager"
+    };
     std::cout << "id " << this->Employee::id << std::endl;
     std::cout << "name " << this->name << std::endl;
-    std::cout << "position " << PositionStriing[int(this->position) - 2] << std::endl;
+    std::cout << "position " << PositionStriing
+        [static_cast<int>(this->position) - 2] << std::endl;
     std::cout << "work time " << this->worktime << std::endl;
     std::cout << "payment " << this->payment << std::endl;
     std::cout << "project " << this->project.id << std::endl;
@@ -30,7 +31,7 @@ void ProjectManager::printInfo() {
 }
 
 int ProjectManager::calcBudgetPart(double part, int budget) {
-    return int(part * budget);
+    return static_cast<int>(part * budget);
 }
 
 void ProjectManager::calc() {
@@ -38,7 +39,8 @@ void ProjectManager::calc() {
         calcBudgetPart(0.2, this->project.budget);
 }
 
-SeniorManager::SeniorManager(int id, std::string name, Position position, std::string project) :
+SeniorManager::SeniorManager(int id,
+    std::string name, Position position, std::string project) :
     ProjectManager(id, name, position, project) {
     this->project.id = project;
     this->project.budget = 200000;
@@ -50,5 +52,5 @@ void SeniorManager::calc() {
 }
 
 int SeniorManager::calcBudgetPart(double part, int budget) {
-    return int(part * budget);
+    return static_cast<int>(part * budget);
 }
