@@ -1,27 +1,27 @@
 #include "Employee.h"
+#include <string>
 
-Employee::Employee(unsigned int id, std::string name, Position position) {
-	this->id = id;
-	this->name = name;
-	this->position = position;
+Employee::Employee(int id, std::string name, Position position) {
+    this->id = id;
+    this->name = name;
+    this->position = position;
 }
 
-void Employee::setWorkTime(unsigned int wtime) {
-	this->worktime = wtime;
+void Employee::setWorkTime(int wtime) {
+    this->worktime = wtime;
 }
-
 
 std::string Employee::getName() {
-	return this->name;
+    return this->name;
 }
 
 Position Employee::getPosition() {
-	return this->position;
+    return this->position;
 }
 
-unsigned int Employee::getWorktime() {
-	return this->worktime;
+int Employee::getWorktime() {
+    return this->worktime;
 }
-unsigned int Employee::getPayment() {
-	return this->payment;
+int Employee::getPayment() {
+    return this->payment;
 }
