@@ -10,40 +10,40 @@ class Engineer : public ProjectBudget, public Project, public Personal{
  protected:
     Project project;
  public:
-    Engineer(unsigned int id, std::string name, Position position,
-        std::string project, unsigned int salary);
-    unsigned int calcBudgetPart(double part, unsigned int budget);
+    Engineer(int id, std::string name, Position position,
+        std::string project, int salary);
+    int calcBudgetPart(double part, int budget);
     void calc();
     void printInfo();
-    unsigned int calcProAdditions();
+    int calcProAdditions();
 };
 
 class Tester : public Engineer {
  public:
-    Tester(unsigned int id, std::string name, Position position,
-        std::string project, unsigned int salary);
+    Tester(int id, std::string name, Position position,
+        std::string project, int salary);
     void calc();
     void printInfo();
-    unsigned int calcProAdditions();
+    int calcProAdditions();
 };
 
 class Programmer : public Engineer {
  public:
-    Programmer(unsigned int id, std::string name, Position position,
-        std::string project, unsigned int salary);
-    unsigned int calcProAdditions();
+    Programmer(int id, std::string name, Position position,
+        std::string project, int salary);
+    int calcProAdditions();
     void calc();
     void printInfo();
 };
 
 class TeamLead : public Programmer {
  public:
-    TeamLead(unsigned int id, std::string name, Position position,
-        std::string project, unsigned int salary);
-    unsigned int calcProAdditions();
+    TeamLead(int id, std::string name, Position position,
+        std::string project, int salary);
+    int calcProAdditions();
     void calc();
     void printInfo();
-    unsigned int  calcHeads();
+    int  calcHeads();
 };
 
 #endif  // INCLUDE_ENGINEER_H_
