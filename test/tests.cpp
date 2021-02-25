@@ -111,30 +111,3 @@ TEST(test_enginer, test15) {
     int position =  int(employee->getPosition());
     EXPECT_EQ(position, 4);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
