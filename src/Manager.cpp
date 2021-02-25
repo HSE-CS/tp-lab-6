@@ -13,7 +13,10 @@ void ProjectManager::printInfo() {
   }
   std::cout << "+-------------------------+" << std::endl;
 }
-unsigned int ProjectManager::calcBudgetPart(const double part, const unsigned int budget) { return part*budget; }
+unsigned int ProjectManager::calcBudgetPart(const double part,
+                                            const unsigned int budget) {
+  return part * budget;
+}
 unsigned int ProjectManager::calcHeads() { return this->subord * headsToMoney; }
 unsigned int ProjectManager::calcProAdditions() { return 0; }
 void ProjectManager::calc() {

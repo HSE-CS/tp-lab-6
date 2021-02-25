@@ -19,4 +19,4 @@ class Heading {
   virtual unsigned int calcHeads() = 0;
 };
 
-#endif  // INCLUDE_INTEFACES_H_
+#endif  // INCLUDE_INTERFACES_H_
