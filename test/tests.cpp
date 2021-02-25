@@ -56,13 +56,13 @@ TEST(StaffDemo, test8) {
             3 * 2500 + 1000 * 25 + 0.35 * 2100000 + 3700 * TL.getWorkTime());
 }
 TEST(StaffDemo, test9) {
-  Cleare c(13, "OlgaPrivolina", Position::Cleaner, 200);
+  Cleaner c(13, "OlgaPrivolina", Position::Cleaner, 200);
   c.calc();
   EXPECT_EQ(c.getPayment(), 200 * c.getWorkTime());
 }
 TEST(StaffDemo, test10) {
   Project p(777, 100);
-  EXPECT_EQ(100, p.getBudget);
+  EXPECT_EQ(100, p.getBudget());
 }
 TEST(StaffDemo, test11) {
   Project p(777, 100);
@@ -74,7 +74,7 @@ TEST(StaffDemo, test12) {
   EXPECT_EQ(d.getName(), "StepanFomin");
 }
 TEST(StaffDemo, test13) {
-  Cleare c(13, "OlgaPrivolina", Position::Cleaner, 200);
+  Cleaner c(13, "OlgaPrivolina", Position::Cleaner, 200);
   c.calc();
   EXPECT_EQ(c.getPos(), Position::Cleaner);
 }
