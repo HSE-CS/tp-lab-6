@@ -31,27 +31,73 @@
 для всех разновидностей работников.
 */
 
+class Employee {
+private:
+  id // идентификационный номер.
+  name // ФИО.
+  worktime // отработанное время.
+  payment // заработная плата.
+
+
+public:
+  void setWorkTime(/* arguments */) {
+    /* code */
+  };
+
+  virtual void calc(/* arguments */) = 0;
+
+  virtual void printInfo(/* arguments */) = 0;
+}
+
 /*
 - **Pesonal** - работник по найму
 с оплатой за фактически отработанное время.
 Имеет ставку за час.
 */
 
+class Personal {
+private:
+  salary
+public:
+  calcBase();
+}
+
 /*
 - **Engineer** - инженер.
 Имеет ставку и оплату за час + бонусы от выполняемого проекта.
 */
+
+class Engineer {
+private:
+  project
+public:
+  calcBudgetPart();
+  calc();
+}
 
 /*
 - **Cleaner** - уборщица.
 Получает зарплату на основе отработанного времени.
 */
 
+class Cleaner {
+private:
+public:
+  calc();
+}
+
 /*
 - **Driver** - водитель.
 Получает зарплату на основе
 отработанного времени + надбавку за ночные часы.
 */
+
+class Driver {
+private:
+public:
+  calcBonus();
+  calc();
+}
 
 /*
 - **Programmer** - инженер-программист.
@@ -60,11 +106,23 @@
 за досрочно написанный код.
 */
 
+class Programmer {
+private:
+public:
+  calcProAdditions();
+}
+
 /*
 - **Tester** - инженер-тестировщик.
 Получает зарплату за отработанное время,
 за участие в проекте и за количество найденных ошибок.
 */
+
+class Tester {
+private:
+public:
+  calcProAdditions();
+}
 
 /*
 - **TeamLeader** - ведущий программист.
@@ -72,13 +130,35 @@
 часть бюджета проекта и за руководство программистами.
 */
 
+class TeamLeader {
+private:
+public:
+  calcHeads();
+  calc();
+}
+
 /*
 - **ProjectManager** - проектный менеджер.
 Получает зарплату из бюджета проекта
 и за руководство участниками проекта.
 */
 
+class ProjectManager {
+private:
+  project[1];
+public:
+  calcHeads();
+  calc();
+}
+
 /*
 - **SeniorManager** - руководитель направления.
 Получает из бюджетов всех проектов и за руководство всеми участниками.
 */
+
+class SeniorManager {
+private:
+  project[N];
+public:
+  calc();
+}

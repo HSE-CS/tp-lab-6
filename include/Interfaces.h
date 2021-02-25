@@ -8,6 +8,11 @@
 
   //- **calcBonus** - дополнительные выплаты
 
+class WorkBaseTime {
+  virtual int calcBase(int salary. int wtime) = 0;
+  virtual int calcBonus() = 0;
+}
+
 //- **ProjectBudget** - расчет оплаты
 //исходя из участия в проекте
 //(бюджет проекта делится
@@ -18,5 +23,16 @@
 
   //- **calcProAdditions** - расчет *бонусных* выплат
 
+class ProjectBudget {
+public:
+  virtual int calcBudgetPart(float part. int budget) = 0;
+  virtual int calcProAdditions() = 0;
+}
+
 //- **Heading** - расчет оплаты
 //исходя из руководства (количество подчиненных).
+
+class Heading {
+public:
+  virtual int calcHeads() = 0;
+}
