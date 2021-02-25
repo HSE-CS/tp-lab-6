@@ -35,7 +35,7 @@ int ProjectManager::calcBudgetPart(double part, int budget) {
 }
 
 void ProjectManager::calc() {
-    this->payment = this->worktime * calcHeads() + calcProAdditions() + 
+    this->payment = this->worktime * calcHeads() + calcProAdditions() +
         calcBudgetPart(0.2, this->project.budget);
 }
 
