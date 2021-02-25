@@ -66,7 +66,7 @@ TEST(test_manager, test8) {
 TEST(test_lead, test9) {
     TeamLead employee(1, "Max", Position::TEAM_LEAD, "name of project", 1200);
     employee.setWorkTime(10);
-    int position =  int(employee.getPosition());
+    int position =  static_cast<int>(employee.getPosition());
     EXPECT_EQ(position, 7);
 }
 
