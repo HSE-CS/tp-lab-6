@@ -1,6 +1,5 @@
 #include "Engineer.h"
 
-
 int Engineer::calcBudgetPart(double part, int budget) {
     return int(part * budget);
 }
@@ -25,6 +24,7 @@ void Engineer::printInfo() {
     std::cout << "project " << this->project.id << std::endl;
     std::cout << std::endl;
 }
+
 int Engineer::calcProAdditions() {
     return 10000;
 }
@@ -50,6 +50,7 @@ void Tester::printInfo() {
     std::cout << "project " << this->project.id << std::endl;
     std::cout << std::endl;
 }
+
 int Tester::calcProAdditions() {
     return 10000;
 }
