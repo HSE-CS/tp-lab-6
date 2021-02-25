@@ -7,19 +7,17 @@
 
 
 int main() {
-	// It works Ok in my IDE :) 
-	
-	//std::vector<Employee*> staff = makeStaff();
+	std::vector<Employee*> staff = makeStaff();
 
-	//for (auto emp : staff) {
-	//	emp->setWorkTime(20);
-	//}
+	for (auto emp : staff) {
+	    emp->setWorkTime(20);
+	}
 
-	//for (auto emp : staff) {
-	//	emp->calc();
-	//}
+	for (auto emp : staff) {
+            emp->calc();
+	}
 
-	//for (auto emp : staff) {
-	//	emp->printInfo();
-	//}
+	for (auto emp : staff) {
+	    emp->printInfo();
+	}
 }
