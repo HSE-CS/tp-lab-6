@@ -8,7 +8,7 @@ std::vector<Employee *> makeStaff(char *staffList, char *projectsList) {
   std::string read, elem, arr[5];
   int i;
   setlocale(LC_ALL, "rus");
-  ifstream staff(staffList), projects(projectsList);
+  std::ifstream staff(staffList), projects(projectsList);
   while (getline(projects, read)) {
     i = 0;
     std::stringstream strStream(read);
