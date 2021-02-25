@@ -12,7 +12,7 @@ class ProjectManager : public Employee, public ProjectBudget,
  protected:
     Project project;
  public:
-    ProjectManager(unsigned int id, std::string name,
+    ProjectManager(int id, std::string name,
         Position position, std::string project);
     int calcHeads();
     void calc();
@@ -25,7 +25,8 @@ class SeniorManager : public ProjectManager{
  protected:
     Project project;
  public:
-    SeniorManager(unsigned int id, std::string name, Position position, std::string project);
+    SeniorManager(int id, std::string name, Position position,
+        std::string project);
     void calc();
     int calcBudgetPart(double part, int budget);
 };
