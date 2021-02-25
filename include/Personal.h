@@ -3,21 +3,22 @@
 #define INCLUDE_PERSONAL_H_
 #include"Employee.h"
 #include"Interfaces.h"
-class Personal : public Employee {
+class Personal : public Employee, public WorkBaseTime {
  protected:
   unsigned int salary;
  public:
   Personal(const unsigned int nId, const std::string nName, const Position nPos,
            const unsigned int nSalary)
-      : Employee(nId, nName, nPos), salary(nSalary){}
-  unsigned int calcBase();
+  :Employee(nId, nName, nPos), salary(nSalary) {}
+  unsigned int calcBase() override;
+  unsigned int calcBonus() override;
 };
 
 class Cleaner : public Personal {
  public:
   Cleaner(const unsigned int nId, const std::string nName, const Position nPos,
           const unsigned int nSalary)
-      : Personal(nId, nName, nPos, nSalary){}
+  :Personal(nId, nName, nPos, nSalary) {}
   void calc() override;
   void printInfo() override;
 };
@@ -30,9 +31,9 @@ class Driver : public Personal {
   Driver(const unsigned int nId, const std::string nName, const Position nPos,
          const unsigned int nSalary,
          const unsigned int nBonus)
-      : Personal(nId, nName, nPos, nSalary), bonus(nBonus){}
-  virtual void calc();
-  virtual unsigned int calcBonus();
+  :Personal(nId, nName, nPos, nSalary), bonus(nBonus) {}
+  void calc() override;
+  unsigned int calcBonus() override;
   void printInfo() override;
 };
 

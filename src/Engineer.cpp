@@ -1,10 +1,11 @@
+// Copyright NikDemoShow 2021
 #include"Engineer.h"
 unsigned Engineer::calcBudgetPart(const double part,
   const unsigned int budget) {
   return this->part * this->project->getBudget();
 }
-void Engineer::printInfo() { 
-  Employee::printInfo(); 
+void Engineer::printInfo() {
+  Employee::printInfo();
   unsigned int setw1{10}, setw2{15};
   std::cout << "|" << std::setw(setw1 + setw2) << "Projects:"
             << "|" << std::endl;
@@ -15,8 +16,12 @@ void Engineer::printInfo() {
             << std::endl;
   std::cout << "+-------------------------+" << std::endl;
 }
-unsigned int Programmer::calcProAdditions() { return this->proAdd * this->proAddToMoney; }
-unsigned int Tester::calcProAdditions() { return this->findError * this->findErrorToMoney; }
+unsigned int Programmer::calcProAdditions() {
+  return this->proAdd * this->proAddToMoney;
+}
+unsigned int Tester::calcProAdditions() {
+  return this->findError * this->findErrorToMoney;
+}
 void Engineer::calc() {
   this->payment = this->calcProAdditions() + this->calcBase() +
                   this->calcBudgetPart(this->part, this->project->getBudget());

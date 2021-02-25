@@ -1,3 +1,4 @@
+// Copyright NikDemoShow 2021
 #include"Factory.h"
 
 Position getPos(const std::string str) {

@@ -3,6 +3,8 @@
 #define INCLUDE_FACTORY_H_
 #include<fstream>
 #include<sstream>
+#include<string>
+#include<vector>
 #include"Engineer.h"
 #include"Manager.h"
 class Factory {
