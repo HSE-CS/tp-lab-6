@@ -1,3 +1,4 @@
+// Copyright 2021 by Fatin Maxim
 #include "Employee.h"
 #include <string>
 
