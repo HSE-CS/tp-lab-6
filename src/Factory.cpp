@@ -1,5 +1,6 @@
 // Copyright 2021 by Fatin Maxim
 #include "Factory.h"
+#include <iostream>
 
 std::vector<Employee*> makeStaff() {
     std::ifstream data_file("data.csv");
