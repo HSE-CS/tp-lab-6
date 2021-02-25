@@ -1,7 +1,8 @@
+// Copyright 2021 by Fatin Maxim
 #include "Engineer.h"
 
 int Engineer::calcBudgetPart(double part, int budget) {
-    return int(part * budget);
+    return static_cast<int>(part * budget);
 }
 
 Engineer::Engineer(int id, std::string name,
