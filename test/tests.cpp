@@ -63,35 +63,54 @@ TEST(test_manager, test8) {
   EXPECT_EQ(position, 2);
 }
 
-TEST(test_manager, test9) {
+TEST(test_lead, test9) {
   Employee* employee = new TeamLead(1, "Max", Position::TEAM_LEAD,"name of project", 1200);
   employee.setWorkTime(10);
   int position =  int(employee->getPosition());
   EXPECT_EQ(position, 7);
 }
 
-TEST(test_manager, test10) {
+TEST(test_lead, test10) {
   Employee* employee = new TeamLead(1, "Max", Position::TEAM_LEAD,"name of project", 1200);
   employee.setWorkTime(10);
   std::string name =  employee->getName();
   EXPECT_EQ(name, "Max");
 }
 
-TEST(test_manager, test11) {
+TEST(test_lead, test11) {
   Employee* employee = new TeamLead(1, "Max", Position::TEAM_LEAD,"name of project", 1200);
   employee.setWorkTime(10);
   int time =  employee->getWorktime();
   EXPECT_EQ(time, 10);
 }
 
-TEST(test_manager, test12) {
+TEST(test_lead, test12) {
   Employee* employee = new TeamLead(1, "Max", Position::TEAM_LEAD,"name of project", 1200);
   employee.setWorkTime(10);
   int payment =  employee->getPayment();
   EXPECT_EQ(payment, 137000);
 }
 
+TEST(test_enginer, test13) {
+  Employee* employee = new Engineer(1, "Denis", Position::ENGINEER,"name of project", 800);
+  employee.setWorkTime(10);
+  int payment =  employee->getPayment();
+  EXPECT_EQ(payment, 18000);
+}
 
+TEST(test_enginer, test14) {
+  Employee* employee = new Engineer(1, "Denis", Position::ENGINEER,"name of project", 800);
+  employee.setWorkTime(10);
+  int time =  employee->getWorktime();
+  EXPECT_EQ(time, 10);
+}
+
+TEST(test_enginer, test15) {
+  Employee* employee = new Engineer(1, "Denis", Position::ENGINEER,"name of project", 800);
+  employee.setWorkTime(10);
+  int position =  int(employee->getPosition());
+  EXPECT_EQ(position, 4);
+}
 
 
 
