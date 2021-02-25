@@ -10,7 +10,7 @@ int main() {
   std::string myStaff = "MyStaff.txt";
   std::vector<Employee *> staff = makeStaff(&myStaff[0], &proj[0]);
   for (int i = 0; i < 50; ++i) {
-    staff[i]->SetWorkTime(20 + rand_r(time(NULL)) % 35);
+    staff[i]->SetWorkTime(20 + rand_r(3)) % 35);
     staff[i]->Calc();
     staff[i]->PrintInfo();
   }
