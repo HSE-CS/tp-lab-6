@@ -24,7 +24,7 @@ class Employee {
  public:
   Employee(const unsigned int nId, const std::string nName, const Position nPos)
       : id(nId), name(nName), position(nPos), worktime(0), payment(0) {}
-  virtual void setWorkTime();
+  void setWorkTime();
   virtual void calc() = 0;
   virtual void printInfo();
   unsigned int getWorkTime() const;

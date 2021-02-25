@@ -6,7 +6,6 @@
 #include<utility>
 #include"Employee.h"
 #include"Interfaces.h"
-
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  private:
   std::vector<Project*> projects;

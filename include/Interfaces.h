@@ -1,6 +1,6 @@
 // Copyright NikDemoShow 2021
 #ifndef INCLUDE_INTERFACES_H_
-#define SRC_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 class WorkBaseTime {
  public:
   virtual unsigned int calcBase() = 0;
