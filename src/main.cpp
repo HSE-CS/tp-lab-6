@@ -6,8 +6,8 @@
 #include <cstdlib>
 
 int main() {
-  std::string proj = "src/projects.txt";
-  std::string myStaff = "src\\MyStaff.txt";
+  std::string proj = "projects.txt";
+  std::string myStaff = "MyStaff.txt";
   srand(time(NULL));
   std::vector<Employee *> staff = makeStaff(&myStaff[0], &proj[0]);
   for (int i = 0; i < 50; ++i) {

@@ -25,11 +25,11 @@ int Personal::GetSalary() {
 }
 
 void Personal::PrintInfo() {
-  std::cout << "id=" + to_std::string(GetId()) + ", name=" + GetName() +
+  std::cout << "id=" + std::to_string(GetId()) + ", name=" + GetName() +
     ", position=" + GetPosition() +
-    ", work time=" + to_std::string(GetWorkTime()) +
-    ", payment=" + to_std::string(GetPayment()) +
-    ", salary=" + to_std::string(salary) << std::endl;
+    ", work time=" + std::to_string(GetWorkTime()) +
+    ", payment=" + std::to_string(GetPayment()) +
+    ", salary=" + std::to_string(salary) << std::endl;
 }
 
 int Personal::Calc() {
