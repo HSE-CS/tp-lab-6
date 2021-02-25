@@ -36,28 +36,28 @@ TEST(test_cleaner, test4) {
 }
 
 TEST(test_manager, test5) {
-    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, 30);
+    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, "name of project");
     employee.setWorkTime(20);
     int payment =  employee.getPayment();
     EXPECT_EQ(payment, 69000);
 }
 
 TEST(test_manager, test6) {
-    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, 30);
+    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, "name of project");
     employee.setWorkTime(20);
     std::string name  =  employee.getName();
     EXPECT_EQ(name, "Ivan");
 }
 
 TEST(test_manager, test7) {
-    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, 30);
+    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, "name of project");
     employee.setWorkTime(20);
     int time =  employee.getWorktime();
     EXPECT_EQ(time, 20);
 }
 
 TEST(test_manager, test8) {
-    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, 30);
+    ProjectManager employee(1, "Ivan", Position::PROJECT_MANAGER, "name of project");
     employee.setWorkTime(20);
     int position =  static_cast<int>(employee.getPosition());
     EXPECT_EQ(position, 2);
