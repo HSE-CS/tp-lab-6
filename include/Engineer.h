@@ -4,6 +4,7 @@
 
 #include "Interfaces.h"
 #include"Personal.h"
+#include <string>
 
 class Engineer : public ProjectBudget, public Project, public Personal{
  protected:
@@ -45,4 +46,4 @@ class TeamLead : public Programmer {
     unsigned int  calcHeads();
 };
 
-#endif // INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_
