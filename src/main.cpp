@@ -6,8 +6,7 @@
 #include "Factory.h"
 
 int main() {
-  std::vector<Employee*> staff = FactoryWork::makeStaff();
-  
+  std::vector<Employee*> staff = FactoryWork::makeStaff();  
   int worktime[30];
   for (int i = 0; i < 30; i++) {
     worktime[i] = std::rand() % 15 + 36;

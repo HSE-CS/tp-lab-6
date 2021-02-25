@@ -6,7 +6,7 @@ Employee::Employee(int id, std::string name, std::string pos)
       name {std::move(name)}, pos{std::move(pos)} {}
 
 void Employee::setId(int id) { this->id = id; }
- 
+
 void Employee::setWorkTime(int worktime) { this->worktime = worktime; }
 
 void Employee::setPayment(int payment) { this->payment = payment; }

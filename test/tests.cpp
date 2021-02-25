@@ -8,7 +8,7 @@
 TEST(laba, test1) {
   Programmer proger(10, 100, "asd", "Programmer", new Project(10000, "test"),
                     0.6);
-  EXPECT_EQ("10", proger.getId());
+  EXPECT_EQ(10, proger.getId());
 }
 
 TEST(laba, test2) {
