@@ -1,6 +1,6 @@
 // Copyright 2021 by Fatin Maxim
-#ifndef INCLUDE_INTERFACE_H_
-#define INCLUDE_INTERFACE_H_
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 #include <string>
 
@@ -27,4 +27,4 @@ class Heading {
     virtual int calcHeads() = 0;
 };
 
-#endif  // INCLUDE_INTERFACE_H_
+#endif  // INCLUDE_INTERFACES_H_
