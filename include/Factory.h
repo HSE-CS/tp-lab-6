@@ -1,3 +1,4 @@
+// Copyright 2021 by Fatin Maxim
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
 
