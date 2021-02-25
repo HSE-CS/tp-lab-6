@@ -1,33 +1,32 @@
-#ifndef PERSONAL_H
-#define PERSONAL_H
+// Copyright 2021 by Fatin Maxim
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 #include <iostream>
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 
 class Personal : public Employee, public WorkBaseTime {
-protected:
-	unsigned int salary;
-public:
-	Personal(unsigned int id, std::string name, Position position, unsigned int salary);
-
-	unsigned int calcBase(unsigned int salary, unsigned int wtime);
-
-	unsigned int calcBonus();
-
-	void printInfo();
+ protected:
+    int salary;
+ public:
+    Personal(int id, std::string name, Position position, int salary);
+    int calcBase(int salary, int wtime);
+    int calcBonus();
+    void printInfo();
 };
 
 class Driver : public Personal {
-public:
-	Driver(unsigned int id, std::string name, Position position, unsigned int salary);
-	void calc();
+ public:
+    Driver(int id, std::string name, Position position, int salary);
+    void calc();
 };
 
 class Cleaner : public Personal {
-public:
-	Cleaner(unsigned int id, std::string name, Position position, unsigned int salary);
-	void calc();
+ public:
+    Cleaner(int id, std::string name, Position position, int salary);
+    void calc();
 };
 
-#endif
+#endif  // INCLUDE_PERSONAL_H_
