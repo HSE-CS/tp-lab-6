@@ -5,8 +5,9 @@
 #include <string>
 
 enum class Position {
-    DRIVER, CLEANER, PROJECT_MANAGER, SENIOR_MANAGER,
-    ENGINEER, TESTER, PROGRAMMER, TEAM_LEAD
+    DRIVER = 0, CLEANER = 1, PROJECT_MANAGER = 2,
+    SENIOR_MANAGER = 3,
+    ENGINEER = 4, TESTER = 5, PROGRAMMER = 6, TEAM_LEAD = 7
 };
 
 class Employee {
