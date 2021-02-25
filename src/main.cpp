@@ -14,7 +14,7 @@ int main() {
 	//for (auto emp : staff) {
 	//	emp->setWorkTime(20);
 	//}
-	// ðàñ÷åò çàðïëàòû
+
 	//for (auto emp : staff) {
 	//	emp->calc();
 	//}
