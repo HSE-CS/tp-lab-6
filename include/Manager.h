@@ -8,7 +8,7 @@
 #include <string>
 
 class ProjectManager : public Employee, public ProjectBudget,
-	public Project, public Heading{
+    public Project, public Heading{
  protected:
     Project project;
  public:
