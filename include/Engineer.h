@@ -12,10 +12,9 @@ class Engineer : public Personal, public ProjectBudget {
  public:
   Engineer(const unsigned int nId, const std::string nName, const Position nPos,
            const unsigned int nSalary, const double nPart, Project* pr)
-      : Personal(nId, nName, nPos, nSalary), part(nPart), project(pr) {};
+      : Personal(nId, nName, nPos, nSalary), part(nPart), project(pr) {}
   unsigned int calcBudgetPart(const double part,
                                       const unsigned int budget) override;
-  //unsigned int calcProAdditions() override = 0;
   void calc() override;
   void printInfo() override;
 };

@@ -1,5 +1,5 @@
 // Copyright NikDemoShow 2021
-#ifndef SRC_INTERFACES_H_
+#ifndef INCLUDE_INTERFACES_H_
 #define SRC_INTERFACES_H_
 class WorkBaseTime {
  public:
@@ -19,4 +19,4 @@ class Heading {
   virtual unsigned int calcHeads() = 0;
 };
 
-#endif  // SRC_INTEFACES_H_
+#endif  // INCLUDE_INTEFACES_H_

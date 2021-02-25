@@ -31,4 +31,6 @@ void TeamLeader::calc() {
                   this->calcBudgetPart(this->part, this->project->getBudget()) +
                   this->calcHeads();
 }
-unsigned int TeamLeader::calcHeads() { return this->subord * this->headsToMoney; }
+unsigned int TeamLeader::calcHeads() {
+  return this->subord * this->headsToMoney;
+}

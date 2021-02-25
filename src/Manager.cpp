@@ -1,6 +1,7 @@
+// Copyright NikDemoShow 2021
 #include"Manager.h"
-void ProjectManager::printInfo() { 
-  Employee::printInfo(); 
+void ProjectManager::printInfo() {
+  Employee::printInfo();
   unsigned int setw1{10}, setw2{15};
   std::cout << "|" << std::setw(setw1 + setw2) << "Projects:"
             << "|" << std::endl;
