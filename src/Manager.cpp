@@ -1,8 +1,8 @@
 #include "Manager.h"
 #include <string>
 
-ProjectManager::ProjectManager(unsigned int id, std::string name, Position position, std::string project) :
-    Employee(id, name, position) {
+ProjectManager::ProjectManager(int id, std::string name, Position position,
+    std::string project) : Employee(id, name, position) {
     this->project.id = project;
     this->project.budget = 300000;
 }
@@ -11,7 +11,7 @@ int ProjectManager::calcHeads() {
     return 200;
 }
 
-unsigned int ProjectManager::calcProAdditions() {
+int ProjectManager::calcProAdditions() {
     return 5000;
 }
 
@@ -29,7 +29,7 @@ void ProjectManager::printInfo() {
     std::cout << std::endl;
 }
 
-int ProjectManager::calcBudgetPart(double part, unsigned int budget) {
+int ProjectManager::calcBudgetPart(double part, int budget) {
     return int(part * budget);
 }
 
@@ -38,7 +38,7 @@ void ProjectManager::calc() {
         calcBudgetPart(0.2, this->project.budget);
 }
 
-SeniorManager::SeniorManager(unsigned int id, std::string name, Position position, std::string project) :
+SeniorManager::SeniorManager(int id, std::string name, Position position, std::string project) :
     ProjectManager(id, name, position, project) {
     this->project.id = project;
     this->project.budget = 200000;
@@ -49,6 +49,6 @@ void SeniorManager::calc() {
     this->payment = t + calcProAdditions();
 }
 
-unsigned int SeniorManager::calcBudgetPart(double part, unsigned int budget) {
-    return unsigned int(part * budget);
+int SeniorManager::calcBudgetPart(double part, int budget) {
+    return int(part * budget);
 }
