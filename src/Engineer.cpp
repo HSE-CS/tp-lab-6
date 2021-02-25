@@ -2,7 +2,7 @@
 
 
 unsigned int Engineer::calcBudgetPart(double part, unsigned int budget) {
-	return unsigned int(part * budget);
+	return int(part * budget);
 }
 
 Engineer::Engineer(unsigned int id, std::string name, Position position, std::string project,
