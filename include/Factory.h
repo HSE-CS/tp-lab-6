@@ -1,5 +1,5 @@
-#ifndef FACTORY_H
-#define FACTORY_H
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <vector>
 #include "Personal.h"
@@ -7,6 +7,6 @@
 #include "Engineer.h"
 #include <fstream>
 
-
 std::vector<Employee*> makeStaff();
-#endif
+
+#endif  // INCLUDE_FACTORY_H_
