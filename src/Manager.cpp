@@ -28,14 +28,14 @@ int Project::GetBudget() {
   return budget;
 }
 
-ProjectManager::ProjectManager(int _id, string _name, string _pos,
+ProjectManager::ProjectManager(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary, Project _myProject)
   : Employee(_id, _name, _pos, _workTime, _payment) {
   myProject.setID(_myProject.GetId());
   myProject.setBudget(_myProject.GetBudget());
 }
 
-ProjectManager::ProjectManager(int _id, string _name, string _pos,
+ProjectManager::ProjectManager(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary)
   : Employee(_id, _name, _pos, _workTime, _payment) {}
 
@@ -61,17 +61,17 @@ int ProjectManager::Calc() {
 }
 
 void ProjectManager::PrintInfo() {
-  cout << "id=" + to_string(GetId()) + ", name=" + GetName() +
+  std::cout << "id=" + std::to_string(GetId()) + ", name=" + GetName() +
     ", position=" + GetPosition() +
-    ", work time=" + to_string(GetWorkTime()) +
-    ", payment=" + to_string(GetPayment()) +
-    ", salary=" + to_string(GetSalary()) +
-    ", project id=" + to_string(myProject.GetId()) +
-    ", budget=" + to_string(myProject.GetBudget()) << endl;
+    ", work time=" + std::to_string(GetWorkTime()) +
+    ", payment=" + std::to_string(GetPayment()) +
+    ", salary=" + std::to_string(GetSalary()) +
+    ", project id=" + std::to_string(myProject.GetId()) +
+    ", budget=" + std::to_string(myProject.GetBudget()) << std::endl;
 }
 
-SeniorManager::SeniorManager(int _id, string _name, string _pos,
-  int _workTime, int _payment, int _salary, vector<Project> _Projects)
+SeniorManager::SeniorManager(int _id, std::string _name, std::string _pos,
+  int _workTime, int _payment, int _salary, std::vector<Project> _Projects)
   : ProjectManager(_id, _name, _pos, _workTime, _payment, _salary) {
   Projects = _Projects;
 }
@@ -93,13 +93,13 @@ int SeniorManager::calcProAdditions() {
 
 void SeniorManager::PrintInfo() {
   int i;
-  cout << "id=" + to_string(GetId()) + ", name=" + GetName() +
+  std::cout << "id=" + std::to_string(GetId()) + ", name=" + GetName() +
     ", position=" + GetPosition() +
-    ", work time=" + to_string(GetWorkTime()) +
-    ", payment=" + to_string(GetPayment()) +
-    ", salary=" + to_string(GetSalary()) + " projects: ";
+    ", work time=" + std::to_string(GetWorkTime()) +
+    ", payment=" + std::to_string(GetPayment()) +
+    ", salary=" + std::to_string(GetSalary()) + " projects: ";
   for (i = 0; i < Projects.size(); ++i) {
-    cout << "project id=" + to_string(Projects[i].GetId()) +
-      ", budget=" + to_string(Projects[i].GetBudget()) << endl;
+    std::cout << "project id=" + std::to_string(Projects[i].GetId()) +
+      ", budget=" + std::to_string(Projects[i].GetBudget()) << std::endl;
   }
 }

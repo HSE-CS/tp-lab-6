@@ -2,7 +2,7 @@
 
 #include "..\include\Engineer.h"
 
-Engineer::Engineer(int _id, string _name, string _pos,
+Engineer::Engineer(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary, Project _myProject)
   : Personal(_id, _name, _pos, _workTime, _payment, _salary) {
   myProject.setBudget(_myProject.GetBudget());
@@ -31,16 +31,16 @@ int Engineer::Calc() {
 }
 
 void Engineer::PrintInfo() {
-  cout << "id=" + to_string(GetId()) + ", name=" + GetName() +
+  std::cout << "id=" + std::to_string(GetId()) + ", name=" + GetName() +
     ", position=" + GetPosition() +
-    ", work time=" + to_string(GetWorkTime()) +
-    ", payment=" + to_string(GetPayment()) +
-    ", salary=" + to_string(GetSalary()) +
-    ", project id=" + to_string(myProject.GetId()) +
-    ", budget=" + to_string(myProject.GetBudget()) << endl;
+    ", work time=" + std::to_string(GetWorkTime()) +
+    ", payment=" + std::to_string(GetPayment()) +
+    ", salary=" + std::to_string(GetSalary()) +
+    ", project id=" + std::to_string(myProject.GetId()) +
+    ", budget=" + std::to_string(myProject.GetBudget()) << std::endl;
 }
 
-Programmer::Programmer(int _id, string _name, string _pos,
+Programmer::Programmer(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary, Project _myProject)
   : Engineer(_id, _name, _pos, _workTime, _payment, _salary, _myProject) {}
 
@@ -57,7 +57,7 @@ int Programmer::Calc() {
   return GetPayment();
 }
 
-Tester::Tester(int _id, string _name, string _pos,
+Tester::Tester(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary, Project _myProject)
   : Engineer(_id, _name, _pos, _workTime, _payment, _salary, _myProject) {}
 
@@ -71,7 +71,7 @@ int Tester::Calc() {
   return GetPayment();
 }
 
-TeamLead::TeamLead(int _id, string _name, string _pos,
+TeamLead::TeamLead(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary, Project _myProject)
   : Programmer(_id, _name, _pos, _workTime, _payment, _salary, _myProject) {}
 

@@ -13,6 +13,6 @@
 #include <fstream>
 #include <sstream>
 
-vector<Employee *> makeStaff(char *staffList, char *projectsList);
+std::vector<Employee *> makeStaff(char *staffList, char *projectsList);
 
 #endif  // INCLUDE_FACTORY_H_

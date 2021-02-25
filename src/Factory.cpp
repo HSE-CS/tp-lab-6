@@ -2,28 +2,28 @@
 
 #include "Factory.h"
 
-vector<Employee *> makeStaff(char *staffList, char *projectsList) {
-  vector<Employee *> res;
-  vector<Project> allProjects;
-  string read, elem, arr[5];
+std::vector<Employee *> makeStaff(char *staffList, char *projectsList) {
+  std::vector<Employee *> res;
+  std::vector<Project> allProjects;
+  std::string read, elem, arr[5];
   int i;
   setlocale(LC_ALL, "rus");
   ifstream staff(staffList), projects(projectsList);
   while (getline(projects, read)) {
     i = 0;
-    stringstream strStream(read);
+    std::stringstream strStream(read);
     while (getline(strStream, elem, ',')) arr[i++] = elem;
     allProjects.push_back(Project(stoi(arr[0]), stoi(arr[1])));
   }
   projects.close();
   while (getline(staff, read)) {
     i = 0;
-    stringstream strStream(read);
+    std::stringstream strStream(read);
     while (getline(strStream, elem, ',')) {
       arr[i++] = elem;
     }
     int id = stoi(arr[0]), salary = stoi(arr[3]), projectId = stoi(arr[4]);
-    string name = arr[1], position = arr[2];
+    std::string name = arr[1], position = arr[2];
     int projectBudget;
     for (i = 0; i < allProjects.size(); ++i) {
       if (allProjects[i].GetId() == projectId) {

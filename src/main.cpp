@@ -6,10 +6,10 @@
 #include <cstdlib>
 
 int main() {
-  string proj = "G:\\GitHubTasks\\tp-lab-6\\projects.txt";
-  string myStaff = "G:\\GitHubTasks\\tp-lab-6\\MyStaff.txt";
+  std::string proj = "src/projects.txt";
+  std::string myStaff = "src\\MyStaff.txt";
   srand(time(NULL));
-  vector<Employee *> staff = makeStaff(&myStaff[0], &proj[0]);
+  std::vector<Employee *> staff = makeStaff(&myStaff[0], &proj[0]);
   for (int i = 0; i < 50; ++i) {
     staff[i]->SetWorkTime(20 + rand_r() % 35);
     staff[i]->Calc();

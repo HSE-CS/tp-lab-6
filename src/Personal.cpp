@@ -2,7 +2,7 @@
 
 #include "Personal.h"
 
-Personal::Personal(int _id, string _name, string _pos, int _workTime,
+Personal::Personal(int _id, std::string _name, std::string _pos, int _workTime,
   int _payment, int _salary)
   : Employee(_id, _name, _pos, _workTime, _payment) {
   salary = _salary;
@@ -25,11 +25,11 @@ int Personal::GetSalary() {
 }
 
 void Personal::PrintInfo() {
-  cout << "id=" + to_string(GetId()) + ", name=" + GetName() +
+  std::cout << "id=" + to_std::string(GetId()) + ", name=" + GetName() +
     ", position=" + GetPosition() +
-    ", work time=" + to_string(GetWorkTime()) +
-    ", payment=" + to_string(GetPayment()) +
-    ", salary=" + to_string(salary) << endl;
+    ", work time=" + to_std::string(GetWorkTime()) +
+    ", payment=" + to_std::string(GetPayment()) +
+    ", salary=" + to_std::string(salary) << std::endl;
 }
 
 int Personal::Calc() {
@@ -37,7 +37,7 @@ int Personal::Calc() {
   return GetPayment();
 }
 
-Driver::Driver(int _id, string _name, string _pos, int _workTime,
+Driver::Driver(int _id, std::string _name, std::string _pos, int _workTime,
   int _payment, int _salary)
   : Personal(_id, _name, _pos, _workTime, _payment, _salary) {}
 
@@ -49,6 +49,6 @@ int Driver::calcBonus() {
   return GetWorkTime() > 40 ? 20 * (GetWorkTime() - 40) : 0;
 }
 
-Cleaner::Cleaner(int _id, string _name, string _pos,
+Cleaner::Cleaner(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary)
   : Personal(_id, _name, _pos, _workTime, _payment, _salary) {}

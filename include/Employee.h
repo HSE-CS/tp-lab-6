@@ -8,22 +8,21 @@
 #include <string>
 #include <iostream>
 
-using namespace std;
 
 class Employee {
  private:
   int id;
-  string name;
-  string position;
+  std::string name;
+  std::string position;
   int workTime;
   int payment = 0;
  public:
-  Employee(int _id, string _name, string _pos, int _workTime, int _payment);
+  Employee(int _id, std::string _name, std::string _pos, int _workTime, int _payment);
   void SetWorkTime(int _workTime);
   void SetPayment(int _payment);
   int GetId();
-  string GetName();
-  string GetPosition();
+  std::string GetName();
+  std::string GetPosition();
   int GetWorkTime();
   int GetPayment();
   virtual int GetSalary() = 0;

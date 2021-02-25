@@ -2,7 +2,7 @@
 
 #include "Employee.h"
 
-Employee::Employee(int _id, string _name, string _pos,
+Employee::Employee(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment) {
   id = _id;
   name = _name;
@@ -23,11 +23,11 @@ int Employee::GetId() {
   return id;
 }
 
-string Employee::GetName() {
+std::string Employee::GetName() {
   return name;
 }
 
-string Employee::GetPosition() {
+std::string Employee::GetPosition() {
   return position;
 }
 

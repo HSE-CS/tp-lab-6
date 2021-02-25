@@ -13,7 +13,7 @@ class Personal : public Employee, IWorkBaseTime {
  private:
   int salary;
  public:
-  Personal(int _id, string _name, string _pos, int _workTime,
+  Personal(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary);
   void SetSalary(int salary);
   int calcBase(int salary, int wtime);
@@ -25,14 +25,14 @@ class Personal : public Employee, IWorkBaseTime {
 
 class Driver : public Personal  {
  public:
-  Driver(int _id, string _name, string _pos, int _workTime,
+  Driver(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary);
   int calcBonus();
 };
 
 class Cleaner : public Personal {
  public:
-  Cleaner(int _id, string _name, string _pos, int _workTime,
+  Cleaner(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary);
 };
 

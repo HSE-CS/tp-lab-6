@@ -27,9 +27,9 @@ class ProjectManager : public Employee, IProjectBudget, IHeading {
  private:
   Project myProject;
  public:
-  ProjectManager(int _id, string _name, string _pos, int _workTime,
+  ProjectManager(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary, Project _myProject);
-  ProjectManager(int _id, string _name, string _pos, int _workTime,
+  ProjectManager(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary);
   int CalcBidgetPart(float part, int budget);
   int calcProAdditions();
@@ -41,10 +41,10 @@ class ProjectManager : public Employee, IProjectBudget, IHeading {
 
 class SeniorManager : public ProjectManager {
  private:
-  vector<Project> Projects;
+  std::vector<Project> Projects;
  public:
-  SeniorManager(int _id, string _name, string _pos, int _workTime,
-    int _payment, int _salary, vector<Project> _Projects);
+  SeniorManager(int _id, std::string _name, std::string _pos, int _workTime,
+    int _payment, int _salary, std::vector<Project> _Projects);
   int calcHeads();
   int calcProAdditions();
   void PrintInfo();

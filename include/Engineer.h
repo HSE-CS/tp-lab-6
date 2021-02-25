@@ -14,7 +14,7 @@ class Engineer : public Personal, IProjectBudget {
  private:
   Project myProject;
  public:
-  Engineer(int _id, string _name, string _pos, int _workTime,
+  Engineer(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary, Project _myProject);
   Project GetProject();
   friend void Project::setID(int _id);
@@ -26,7 +26,7 @@ class Engineer : public Personal, IProjectBudget {
 
 class Programmer : public Engineer {
  public:
-  Programmer(int _id, string _name, string _pos, int _workTime,
+  Programmer(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary, Project _myProject);
   int calcProAdditions();
   int Calc();
@@ -34,7 +34,7 @@ class Programmer : public Engineer {
 
 class Tester : public Engineer {
  public:
-  Tester(int _id, string _name, string _pos, int _workTime,
+  Tester(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary, Project _myProject);
   int calcProAdditions();
   int Calc();
@@ -42,7 +42,7 @@ class Tester : public Engineer {
 
 class TeamLead : public Programmer, IHeading {
  public:
-  TeamLead(int _id, string _name, string _pos, int _workTime,
+  TeamLead(int _id, std::string _name, std::string _pos, int _workTime,
     int _payment, int _salary, Project _myProject);
   int calcHeads();
   int Calc();
