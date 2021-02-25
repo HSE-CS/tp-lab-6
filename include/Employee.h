@@ -10,7 +10,7 @@ enum class Position {
 };
 
 class Employee {
-public:
+ public:
     void setWorkTime(unsigned int wtime);
     virtual void calc() = 0;
     virtual void printInfo() = 0;
@@ -21,7 +21,7 @@ public:
     unsigned int getWorktime();
     unsigned int getPayment();
 
-protected:
+ protected:
     unsigned int id;
     std::string name;
     Position position;
