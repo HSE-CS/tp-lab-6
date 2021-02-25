@@ -1,28 +1,30 @@
-#ifndef INTERFACE_H
-#define INTERFACE_H
+// Copyright 2021 by Fatin Maxim
+#ifndef INCLUDE_INTERFACE_H_
+#define INCLUDE_INTERFACE_H_
+
 #include <string>
 
 class Project {
-public:
-	std::string id;
-	unsigned int budget;
+ public:
+    std::string id;
+    int budget;
 };
 
 class WorkBaseTime {
-public:
-	virtual unsigned int calcBase(unsigned int salary, unsigned int wtime) = 0;
-	virtual unsigned int calcBonus() = 0;
+ public:
+    virtual int calcBase(int salary, int wtime) = 0;
+    virtual int calcBonus() = 0;
 };
 
 class ProjectBudget {
-public:
-	virtual unsigned int calcBudgetPart(double part, unsigned int budget) = 0;
-	virtual unsigned int calcProAdditions() = 0;
+ public:
+    virtual int calcBudgetPart(double part, int budget) = 0;
+    virtual int calcProAdditions() = 0;
 };
 
 class Heading {
-public:
-	virtual unsigned int calcHeads() = 0;
+ public:
+    virtual int calcHeads() = 0;
 };
 
-#endif
+#endif  // INCLUDE_INTERFACE_H_
