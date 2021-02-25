@@ -20,6 +20,14 @@ public:
 	virtual void printInfo() = 0;
 	Employee(unsigned int id, std::string name,
 		Position position);
+
+	std::string getName();
+
+	Position getPosition();
+
+	unsigned int getWorktime();
+
+	unsigned int getPayment();
 };
 
 #endif
