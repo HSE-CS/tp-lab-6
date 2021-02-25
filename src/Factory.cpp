@@ -1,3 +1,4 @@
+// Copyright 2021 by Fatin Maxim
 #include "Factory.h"
 
 std::vector<Employee*> makeStaff() {
@@ -46,7 +47,9 @@ std::vector<Employee*> makeStaff() {
                 employee.push_back(new TeamLead(stoi(id), name,
                     Position::TEAM_LEAD, project, stoi(salary)));
             }
-
+            else {
+                std::cout << "Something wrong!";
+            }
         }
     }
     data_file.close();
