@@ -11,22 +11,22 @@ enum class Position {
 
 class Employee {
  public:
-    void setWorkTime(unsigned int wtime);
+    void setWorkTime(int wtime);
     virtual void calc() = 0;
     virtual void printInfo() = 0;
-    Employee(unsigned int id, std::string name,
+    Employee(int id, std::string name,
         Position position);
     std::string getName();
     Position getPosition();
-    unsigned int getWorktime();
-    unsigned int getPayment();
+    int getWorktime();
+    int getPayment();
 
  protected:
-    unsigned int id;
+    int id;
     std::string name;
     Position position;
-    unsigned int worktime;
-    unsigned int payment;
+    int worktime;
+    int payment;
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_
