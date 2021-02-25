@@ -1,6 +1,6 @@
 // Copyright 2021 Arina Simonova
 
-#include "..\include\Engineer.h"
+#include "Engineer.h"
 
 Engineer::Engineer(int _id, std::string _name, std::string _pos,
   int _workTime, int _payment, int _salary, Project _myProject)

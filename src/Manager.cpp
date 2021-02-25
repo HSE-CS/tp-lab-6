@@ -1,6 +1,6 @@
 // Copyright 2021 Arina Simonova
 
-#include "..\include\Manager.h"
+#include "Manager.h"
 
 void Project::setID(int _id) {
   id = _id;
