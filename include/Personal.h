@@ -8,9 +8,9 @@
 #include "Factory.h"
 
 class Personal : public Employee, IWorkBaseTime {
-private:
+ private:
     double salary = 0;
-public:
+ public:
     Personal(int id, std::string name,
         std::string position, double payment) :
         Employee(id, name, position, payment) {}
@@ -23,7 +23,7 @@ public:
 };
 
 class Driver : public Personal {
-public:
+ public:
     Driver(int id, std::string name,
         std::string position, double payment) :
         Personal(id, name, position, payment) {}
@@ -36,7 +36,7 @@ public:
 };
 
 class Cleaner : public Personal {
-public:
+ public:
     Cleaner(int id, std::string name,
         std::string position, double payment) :
         Personal(id, name, position, payment) {}
