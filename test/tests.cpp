@@ -130,7 +130,7 @@ TEST(Employee, TEST12) {
         "Engineer", name, 25, 0, 1000);
     a->setWorkTime(25);
     a->calc();
-    EXPECT_EQ(15, project1.id);
+    EXPECT_EQ(15, project1->id);
 }
 
 TEST(Employee, TEST13) {
