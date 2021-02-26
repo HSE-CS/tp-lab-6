@@ -2,13 +2,13 @@
 #include <string>
 #include <iostream>
 #include <random>
-#include "Interfaces.h"
-#include "Factory.h"
-#include "Engineer.h"
-#include "Personal.h"
-#include "Manager.h"
-#include "Employee.h"
-#include "resource.h"
+#include "../include/Interfaces.h"
+#include "../include/Factory.h"
+#include "../include/Engineer.h"
+#include "../include/Personal.h"
+#include "../include/Manager.h"
+#include "../include/Employee.h"
+#include "../include/resource.h"
 
 TEST(Employee, TEST1) {
     std::string name = "Petr Ivanich";
