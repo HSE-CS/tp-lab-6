@@ -3,7 +3,7 @@
 #define INCLUDE_INTERFACES_H_
 
 class IWorkBaseTime {
-public:
+ public:
     virtual void setSalary(double salary) = 0;
     virtual double getSalary() = 0;
     virtual double calcBase(double payment, int time) = 0;
@@ -11,13 +11,13 @@ public:
 };
 
 class IProjectBudget {
-public:
+ public:
     virtual double calcBudgetPart(double part, double budget) = 0;
     virtual double calcProAdditions() = 0;
 };
 
 class IHeading {
-public:
+ public:
     virtual double calcHeads() = 0;
 };
 
