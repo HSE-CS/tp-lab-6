@@ -1,7 +1,5 @@
 #include <gtest/gtest.h>
 #include <string>
-#include <iostream>
-#include <random>
 #include "../include/Interfaces.h"
 #include "../include/Factory.h"
 #include "../include/Engineer.h"
