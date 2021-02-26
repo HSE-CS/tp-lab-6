@@ -11,24 +11,22 @@
 int id = 1;
 
 bool SettingProject(Employee* emp, std::vector<Project*> Projects, Project* proj) {
- if (emp->getPosition() == "ProjectManager") {
-  dynamic_cast<ProjectManager*>(emp)->setProject(Projects);
-  return true;
- }
- else if ((emp->getPosition() == "SeniorManager")&&(dynamic_cast<SeniorManager*>(emp)->getProject()->id == 0)) {
-  dynamic_cast<SeniorManager*>(emp)->setProject(proj);
-  return true;
- }
- else if ((emp->getPosition() == "Engineer") && (dynamic_cast<Engineer*>(emp)->getProject()->id == 0)) {
-  dynamic_cast<Engineer*>(emp)->setProject(proj);
-  return true;
- }
- return false;
+    if (emp->getPosition() == "ProjectManager") {
+        dynamic_cast<ProjectManager*>(emp)->setProject(Projects);
+        return true;
+    } else if ((emp->getPosition() == "SeniorManager") && (dynamic_cast<SeniorManager*>(emp)->getProject()->id == 0)) {
+        dynamic_cast<SeniorManager*>(emp)->setProject(proj);
+        return true;
+    } else if ((emp->getPosition() == "Engineer") && (dynamic_cast<Engineer*>(emp)->getProject()->id == 0)) {
+        dynamic_cast<Engineer*>(emp)->setProject(proj);
+        return true;
+    }
+    return false;
 }
 
 int StringToInt(std::string buf) {
- int a = atoi(buf.c_str());
- return a;
+    int a = atoi(buf.c_str());
+    return a;
 }
 
 void makeStaffForProject(Resource* a, std::vector<Project*> Projects, std::vector<Employee*> Staff) {
@@ -80,24 +78,19 @@ std::vector<Employee*> makeStaff(Resource* a) {
         if (buf == "Engineer") {
             std::getline(fin, buf);
             salaries.Engineer = StringToInt(buf);
-        }
-        else if (buf == "Programmer") {
+        } else if (buf == "Programmer") {
             std::getline(fin, buf);
             salaries.Programmer = StringToInt(buf);
-        }
-        else if (buf == "Tester") {
+        } else if (buf == "Tester") {
             std::getline(fin, buf);
             salaries.Tester = StringToInt(buf);
-        }
-        else if (buf == "TeamLeader") {
+        } else if (buf == "TeamLeader") {
             std::getline(fin, buf);
             salaries.TeamLeader = StringToInt(buf);
-        }
-        else if (buf == "Driver") {
+        } else if (buf == "Driver") {
             std::getline(fin, buf);
             salaries.Driver = StringToInt(buf);
-        }
-        else {
+        } else {
             std::getline(fin, buf);
             salaries.Cleaner = StringToInt(buf);
         }
@@ -113,26 +106,19 @@ std::vector<Employee*> makeStaff(Resource* a) {
         std::getline(fin, name);
         if (pos == "ProjectManager") {
             newEmp = new ProjectManager(emptyVectorProject, id, pos, name, 0, 0);
-        }
-        else if (pos == "SeniorManager") {
+        } else if (pos == "SeniorManager") {
             newEmp = new SeniorManager(emptyproject, emptyVectorProject, id, pos, name, 0, 0);
-        }
-        else if (pos == "Engineer") {
+        } else if (pos == "Engineer") {
             newEmp = new Engineer(emptyproject, id, pos, name, 0, 0, salaries.Engineer);
-        }
-        else if (pos == "Programmer") {
+        } else if (pos == "Programmer") {
             newEmp = new Programmer(emptyproject, id, pos, name, 0, 0, salaries.Programmer);
-        }
-        else if (pos == "Tester") {
+        } else if (pos == "Tester") {
             newEmp = new Tester(emptyproject, id, pos, name, 0, 0, salaries.Tester);
-        }
-        else if (pos == "TeamLeader") {
+        } else if (pos == "TeamLeader") {
             newEmp = new TeamLeader(emptyproject, id, pos, name, 0, 0, salaries.TeamLeader);
-        }
-        else if (pos == "Driver") {
+        } else if (pos == "Driver") {
             newEmp = new Driver(id, pos, name, 0, 0, salaries.Driver);
-        }
-        else if (pos == "Cleaner") {
+        } else if (pos == "Cleaner") {
             newEmp = new Cleaner(id, pos, name, 0, 0, salaries.Cleaner);
         }
         Staff.push_back(newEmp);

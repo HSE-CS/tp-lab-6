@@ -2,24 +2,24 @@
 #include <random>
 
 int Engineer::calcBudjetPart(float part, int budjet) {
- return part * budjet;
+    return part * budjet;
 }
 
 void Engineer::calc() {
- this->payment = calcBudjetPart(project->budjet, project->partForEngineers) +
-     calcBase(salary, worktime);
+    this->payment = calcBudjetPart(project->budjet, project->partForEngineers) +
+        calcBase(salary, worktime);
 }
 
 int Tester::calcProAdditions() {
- return rand() % 3000 + 2000;
+    return rand() % 3000 + 2000;
 }
 
 int Programmer::calcProAdditions() {
- return rand() % 3000 + 2000;
+    return rand() % 3000 + 2000;
 }
 
 int TeamLeader::calcHeads() {
- return 120000;
+    return 120000;
 }
 
 void TeamLeader::calc() {
