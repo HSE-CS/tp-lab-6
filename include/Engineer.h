@@ -28,7 +28,7 @@ class Engineer : public Personal, IProjectBudget {
 };
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer(int id, std::string name,
         std::string position, double payment,
         Project* project)
@@ -45,9 +45,9 @@ public:
 };
 
 class Tester : public Engineer {
-private:
+ private:
     int mistakes_counter = 0;
-public:
+ public:
     Tester(int id, std::string name,
         std::string position, double payment,
         Project* project)
@@ -65,7 +65,7 @@ public:
 };
 
 class TeamLeader : public Programmer, IHeading {
-public:
+ public:
     TeamLeader(int id, std::string name,
         std::string position, double payment,
         Project* project)
