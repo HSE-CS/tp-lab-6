@@ -33,6 +33,7 @@ class SeniorManager : public ProjectManager {
      : ProjectManager(id, name, project, sub) {
      pos = SENIORMANAGER;
   }
+  void addProject(Project* p);
   virtual void calc();
 };
 

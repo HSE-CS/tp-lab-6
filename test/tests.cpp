@@ -5,6 +5,7 @@
 
 #include "Factory.h"
 
+
 TEST(TestCleaner, pos) {
   std::string n = "Glasha";
   Cleaner c(156, n, 130);
@@ -85,7 +86,7 @@ TEST(TestTester, calc) {
   EXPECT_EQ(d.getPayment(), 500 * 200 + 300 * 3 + 100);
 }
 
-TEST(TeamLeader, getPos) {
+TEST(TestTeamLeader, getPos) {
   Project p;
   p.id = 3030;
   p.budget = 10000;
@@ -94,7 +95,7 @@ TEST(TeamLeader, getPos) {
   EXPECT_EQ(d.getPos(), TEAMLEADER);
 }
 
-TEST(TeamLeader, getName) {
+TEST(TestTeamLeader, getName) {
   Project p;
   p.id = 3030;
   p.budget = 10000;
@@ -103,7 +104,7 @@ TEST(TeamLeader, getName) {
   EXPECT_EQ(d.getName(), "Vasilii");
 }
 
-TEST(TeamLeader, getSubb) {
+TEST(TestTeamLeader, getSubb) {
   Project p;
   p.id = 3030;
   p.budget = 10000;
@@ -112,7 +113,7 @@ TEST(TeamLeader, getSubb) {
   EXPECT_EQ(d.getSubbordinates(), 10);
 }
 
-TEST(TeamLeader, calc) {
+TEST(TestTeamLeader, calc) {
   Project p;
   p.id = 3030;
   p.budget = 10000;
@@ -122,4 +123,3 @@ TEST(TeamLeader, calc) {
   d.calc();
   EXPECT_EQ(d.getPayment(), 800 * 200 + 15000 + 10 * 1000);
 }
-
