@@ -72,14 +72,14 @@ TEST(test, test8) {
     TeamLeader* lead = new TeamLeader(0, "alex", 8, TEAM_LEADER, 7000, project);
     lead->calc();
     int payment = lead->getPayment();
-    EXPECT_EQ(60115, heads);
+    EXPECT_EQ(60115, payment);
 }
 
 TEST(test, test9) {
     Driver* driver = new Driver(0, "mark", 8, DRIVER, 200, 0.5);
     driver->calc();
     int payment = driver->getPayment();
-    EXPECT_EQ(1700, heads);
+    EXPECT_EQ(1700, payment);
 }
 
 TEST(test, test10) {
