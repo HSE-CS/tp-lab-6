@@ -107,44 +107,66 @@ TEST(Employee, TEST10) {
 }
 
 TEST(Employee, TEST11) {
-    Resource* a = new Resource("../src/staff.txt", "output.txt");
-    std::vector<Employee*> staff;
-    staff = makeStaff(a);
-    EXPECT_EQ("Ivan", staff[0]->getName());
+    Project* project1 = new Project(12, 100000);
+    Project* project2 = new Project(15, 200000);
+    std::vector<Project*> projects;
+    projects.push_back(project1);
+    projects.push_back(project2);
+    std::string name = "Petr Ivanich";
+    Engineer* a = new Engineer(project2, 1, "Engineer", name, 25, 0, 1000);
+    a->setWorkTime(25);
+    a->calc();
+    EXPECT_EQ(project2, a->getProject());
 }
 
 TEST(Employee, TEST12) {
-    Resource* a = new Resource("../src/staff.txt", "output.txt");
-    std::vector<Employee*> staff;
-    staff = makeStaff(a);
-    EXPECT_EQ(1, staff[0]->getId());
+    Project* project1 = new Project(12, 100000);
+    Project* project2 = new Project(15, 200000);
+    std::vector<Project*> projects;
+    projects.push_back(project1);
+    projects.push_back(project2);
+    std::string name = "Petr Ivanich";
+    ProjectManager* a = new ProjectManager(project2, 1, "Engineer", name, 25, 0, 1000);
+    a->setWorkTime(25);
+    a->calc();
+    EXPECT_EQ(15, project1.id);
 }
 
 TEST(Employee, TEST13) {
-    Resource* a = new Resource("../src/staff.txt", "output.txt");
-    std::vector<Employee*> staff;
-    staff = makeStaff(a);
-    EXPECT_EQ("ProjectManager", staff[0]->getPosition());
+    Project* project1 = new Project(12, 100000);
+    Project* project2 = new Project(15, 200000);
+    std::vector<Project*> projects;
+    projects.push_back(project1);
+    projects.push_back(project2);
+    std::string name = "Petr Ivanich";
+    ProjectManager* a = new ProjectManager(project2, 1, "Engineer", name, 25, 0, 1000);
+    a->setWorkTime(25);
+    a->calc();
+    EXPECT_EQ(100000, project1->budjet);
 }
 
 TEST(Employee, TEST14) {
-    Resource* a = new Resource("../src/staff.txt", "output.txt");
-    std::vector<Employee*> staff;
-    staff = makeStaff(a);
-    EXPECT_EQ(200000, staff[0]->getPayment());
+    Project* project1 = new Project(12, 100000);
+    Project* project2 = new Project(15, 200000);
+    std::vector<Project*> projects;
+    projects.push_back(project1);
+    projects.push_back(project2);
+    std::string name = "Petr Ivanich";
+    Engineer* a = new Engineer(project2, 1, "Engineer", name, 25, 0, 1000);
+    a->setWorkTime(25);
+    a->calc();
+    EXPECT_EQ(25*1000+project2->budjet*25, a->getPayment());
 }
 
 TEST(Employee, TEST15) {
-    std::string r = "../src/staff.txt";
-    std::string w = "output.txt";
-    Resource* a = new Resource(r, w);
-    std::vector<Employee*> staff;
-    std::vector<Project*> Projects;
-    staff = makeStaff(a);
-    a->readpath = "projects.txt";
-    makeStaffForProject(a, Projects, staff);
-    for (Employee* emp : staff) {
-        emp->calc();
-    }
-    EXPECT_EQ(160000, staff[1]->getPayment());
+    Project* project1 = new Project(12, 100000);
+    Project* project2 = new Project(15, 200000);
+    std::vector<Project*> projects;
+    projects.push_back(project1);
+    projects.push_back(project2);
+    std::string name = "Petr Ivanich";
+    Tester* a = new Tester(project2, 1, "Tester", name, 25, 0, 1000);
+    a->setWorkTime(25);
+    a->calc();
+    EXPECT_EQ(project2, a->getProject())
 }
