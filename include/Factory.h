@@ -1,17 +1,18 @@
 // Copyright Baklanov 2021
-#ifndef INCLUDE_FACTORY_H
-#define INCLUDE_FACTORY_H
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <iostream>
 #include <vector>
 #include <string>
-#include "resource.h"
+#include "Resource.h"
 #include "Employee.h"
 
 class Project {
-public:
+ public:
     Project(int id, int budjet) :
-        id(id), budjet(budjet), partForEngineers(0.1), partForManagers(0.25), partForSeniors(0.15) {};
+        id(id), budjet(budjet), partForEngineers(0.1),
+        partForManagers(0.25), partForSeniors(0.15) {}
     int id;
     int budjet;
     float partForEngineers;
@@ -20,7 +21,7 @@ public:
 };
 
 class FactorySalaries {
-public:
+ public:
     int Engineer;
     int Programmer;
     int Tester;
@@ -31,6 +32,8 @@ public:
 
 std::vector<Employee*> makeStaff(Resource* a);
 
-void makeStaffForProject(Resource* a, std::vector<Project*> Projects, std::vector<Employee*> Staff);
+void makeStaffForProject(Resource* a,
+    std::vector<Project*> Projects,
+    std::vector<Employee*> Staff);
 
-#endif //INCLUDE_FACTORY_H
+#endif  // INCLUDE_FACTORY_H_

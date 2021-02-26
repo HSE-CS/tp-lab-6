@@ -1,26 +1,26 @@
-// Copyright Baklanov 2021
-#ifndef INCLUDE_EMPLOYEE_H
-#define INCLUDE_EMPLOYEE_H
+//  Copyright Baklanov 2021
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <iostream>
 #include <string>
 
 class Employee {
-protected:
+ protected:
     int id;
     std::string position;
     std::string name;
     int worktime;
     int payment;
 
-public:
+ public:
     Employee(int id_, std::string position_,
         std::string name_,
         int worktime_,
         int payment_) :
         id(id_), position(position_),
         name(name_), worktime(worktime_),
-        payment(payment_) {};
+        payment(payment_) {}
     std::string getPosition() {
         return position;
     }
@@ -38,4 +38,4 @@ public:
     virtual void printinfo() = 0;
 };
 
-#endif  //INCLUDE_EMPLOYEE_H
+#endif  // INCLUDE_EMPLOYEE_H_

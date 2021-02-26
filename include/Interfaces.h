@@ -1,6 +1,6 @@
 //  Copyright Baklanov 2021
-#ifndef SOMETH
-#define SOMETH
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 class WorkBaseTime {
     virtual int calcBase(int salary, int wtime) = 0;
@@ -16,4 +16,4 @@ class Heading {
     virtual int calcHeads() = 0;
 };
 
-#endif
+#endif  // INCLUDE_INTERFACES_H_
