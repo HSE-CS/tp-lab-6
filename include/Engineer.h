@@ -19,9 +19,9 @@ class Engineer : public ProjectBudget, public Personal {
       : Personal(id, name, salary) {
     this->project = project;
   }
-  virtual void calc();
+  void calc();
   Project* getProject();
-  virtual int calcBudgetPart(float part, int budget);
+  int calcBudgetPart(float part, int budget);
 };
 
 class Programmer : public Engineer {
@@ -30,7 +30,7 @@ class Programmer : public Engineer {
     : Engineer(id, name, salary, project) {
     setPosition(programmer);
   }
-  virtual int calcProAdditions();
+  int calcProAdditions();
 };
 
 class Tester : public Engineer {
@@ -39,7 +39,7 @@ class Tester : public Engineer {
       : Engineer(id, name, salary, project) {
     setPosition(tester);
   }
-  virtual int calcProAdditions();
+  int calcProAdditions();
 };
 
 class TeamLeader : public Programmer, public Heading {
@@ -49,8 +49,8 @@ class TeamLeader : public Programmer, public Heading {
       : Programmer(id, name, salary, project) {
     setPosition(teamleader);
   }
-  virtual int calcHeads();
-  virtual void calc();
+  int calcHeads();
+  void calc();
 };
 
 #endif  // INCLUDE_ENGINEER_H_

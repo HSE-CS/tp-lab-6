@@ -2,9 +2,9 @@
 #include "Factory.h"
 
 int main() {
-/*  std::string name = "Name";
+  std::string name = "Name";
   Employee employee();
   employee.setId(1);
-  employee.setName(name);*/
+  employee.setName(name);
   return 0;
 }

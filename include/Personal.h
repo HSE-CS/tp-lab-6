@@ -8,14 +8,13 @@
 class Personal : public Employee, public WorkBaseTime {
  private:
   int salary;
-
  public:
   Personal(int id, std::string name, int salary) : Employee(id, name) {
     this->salary = salary;
   }
   int getSalary();
   void setSalary(int salary);
-  virtual int calcBase(int salary, int worktime);;
+  int calcBase(int salary, int worktime);;
 };
 
 class Cleaner : public Personal {
@@ -24,7 +23,7 @@ class Cleaner : public Personal {
     : Personal(id, name, salary) {
     setPosition(cleaner);
   }
-  virtual void calc();
+  void calc();
 };
 
 class Driver : public Personal {
@@ -33,8 +32,8 @@ class Driver : public Personal {
     : Personal(id, name, salary) {
     setPosition(driver);
   }
-  virtual int calcBonus();
-  virtual void calc();
+  int calcBonus();
+  void calc();
 };
 
 #endif  // INCLUDE_PERSONAL_H_

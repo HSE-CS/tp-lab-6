@@ -9,27 +9,25 @@
 class ProjectManager : public Employee, public Heading, public ProjectBudget {
  private:
   Project* project;
-
  public:
   ProjectManager(int id, std::string name, Project* project, int sub)
       : Employee(id, name) {
     this->project = project;
     setPosition(projectmanager);
   }
-  virtual int calcHeads();
-  virtual void calc();
+  int calcHeads();
+  void calc();
 };
 
 class SeniorManager : public ProjectManager {
  private:
   std::vector<Project*> projects;
-
  public:
   SeniorManager(int id, std::string name, Project* project, int sub)
       : ProjectManager(id, name, project, sub) {
     setPosition(seniormanager);
   }
-  virtual void calc();
+  void calc();
 };
 
 #endif  // INCLUDE_MANAGER_H_
