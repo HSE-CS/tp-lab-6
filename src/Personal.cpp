@@ -1,3 +1,4 @@
+//  Copyright Baklanov 2021
 #include "Personal.h"
 
 int Personal::calcBase(int salary, int worktime) {
@@ -36,4 +37,3 @@ void Driver::printinfo() {
 int Cleaner::calcBonus() {
     return 0;
 }
-
