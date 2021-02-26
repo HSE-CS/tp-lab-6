@@ -47,12 +47,12 @@ std::vector<Employee*> makeStaff(std::string input) {
                     position, stoi(payment)));
             } else if (position == "driver") {
                 employee.push_back(new Driver(stoi(id), fio,
-                    position, (stoi(payment)));
+                    position, stoi(payment)));
             } else if (position == "project manager") {
                 Project* project = new Project(stoi(project_id),
                                       stoi(project_budget));
                 employee.push_back(new ProjectManager(stoi(id), fio,
-                    position, (stoi(payment), project));
+                    position, stoi(payment), project));
             } else if (position == "senior manager") {
                 std::vector <Project*> projects;
                 employee.push_back(new SeniorManager(stoi(id), fio,
