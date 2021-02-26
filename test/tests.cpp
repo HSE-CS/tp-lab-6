@@ -126,7 +126,8 @@ TEST(Employee, TEST12) {
     projects.push_back(project1);
     projects.push_back(project2);
     std::string name = "Petr Ivanich";
-    ProjectManager* a = new ProjectManager(project2, 1, "Engineer", name, 25, 0, 1000);
+    Engineer* a = new Engineer(project2, 1,
+        "Engineer", name, 25, 0, 1000);
     a->setWorkTime(25);
     a->calc();
     EXPECT_EQ(15, project1.id);
@@ -139,7 +140,8 @@ TEST(Employee, TEST13) {
     projects.push_back(project1);
     projects.push_back(project2);
     std::string name = "Petr Ivanich";
-    ProjectManager* a = new ProjectManager(project2, 1, "Engineer", name, 25, 0, 1000);
+    Engineer* a = new Engineer(project2, 1,
+        "Engineer", name, 25, 0, 1000);
     a->setWorkTime(25);
     a->calc();
     EXPECT_EQ(100000, project1->budjet);
@@ -165,7 +167,7 @@ TEST(Employee, TEST15) {
     projects.push_back(project1);
     projects.push_back(project2);
     std::string name = "Petr Ivanich";
-    Tester* a = new Tester(project2, 1, "Tester", name, 25, 0, 1000);
+    Engineer* a = new Engineer(project2, 1, "Engineer", name, 25, 0, 1000);
     a->setWorkTime(25);
     a->calc();
     EXPECT_EQ(project2, a->getProject())
