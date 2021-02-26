@@ -10,23 +10,23 @@
 
 class Project {
 public:
- Project(int id, int budjet) :
-  id(id), budjet(budjet), partForEngineers(0.1), partForManagers(0.25), partForSeniors(0.15) {};
- int id;
- int budjet;
- float partForEngineers;
- float partForManagers;
- float partForSeniors;
+    Project(int id, int budjet) :
+        id(id), budjet(budjet), partForEngineers(0.1), partForManagers(0.25), partForSeniors(0.15) {};
+    int id;
+    int budjet;
+    float partForEngineers;
+    float partForManagers;
+    float partForSeniors;
 };
 
 class FactorySalaries {
 public:
- int Engineer;
- int Programmer;
- int Tester;
- int TeamLeader;
- int Driver;
- int Cleaner;
+    int Engineer;
+    int Programmer;
+    int Tester;
+    int TeamLeader;
+    int Driver;
+    int Cleaner;
 };
 
 std::vector<Employee*> makeStaff(Resource* a);
