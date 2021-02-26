@@ -63,8 +63,8 @@ double Programmer::getSalary() {
 }
 
 double Programmer::calc() {
-    double result = calcBase(getPayment(), getWorktime()) + calcBonus() + 
-        calcProAdditions() + 
+    double result = calcBase(getPayment(), getWorktime()) + calcBonus() +
+        calcProAdditions() +
         calcBudgetPart(0.04, getProject()->getBudget());
     setSalary(result);
     return result;
