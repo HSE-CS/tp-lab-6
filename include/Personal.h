@@ -3,6 +3,7 @@
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -10,6 +11,7 @@ class Personal: public Employee, public WorkBaseTime {
  protected:
     int salary;
     double bonus;
+
  public:
     Personal(int id,
              std::string fullName,

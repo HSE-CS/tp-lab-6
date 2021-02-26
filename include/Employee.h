@@ -24,6 +24,7 @@ class Employee {
     int workTime;
     double payment;
     Position position;
+
  public:
     Employee(int id,
              std::string fullName,
@@ -48,6 +49,7 @@ class Project {
     int workers;
     int heads;
     bool isSucceeded;
+
  public:
     Project(const int id,
             const std::string title,

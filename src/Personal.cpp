@@ -21,7 +21,8 @@ void Personal::calc() {
 
 void Personal::printInfo() {
     calc();
-    std::cout << this->getFullName() << "\t" << this->getPosition() << std::endl;
+    std::cout << this->getFullName() << "\t" <<
+    this->getPosition() << std::endl;
     std::cout << "Payment:\t" << this->getPayment() << std::endl;
     std::cout << "WorkTime:\t" << this->getWorkTime() << std::endl;
 }
@@ -40,11 +41,11 @@ Driver::Driver(const int id,
                const Position position,
                const int salary,
                const double bonus) : Personal(id,
-                                        fullName,
-                                        workTime,
-                                        position,
-                                        salary, bonus) {
-
+                                              fullName,
+                                              workTime,
+                                              position,
+                                              salary,
+                                              bonus) {
 }
 
 
@@ -53,9 +54,8 @@ Cleaner::Cleaner(const int id,
                  const int workTime,
                  const Position position,
                  const int salary) : Personal(id,
-                                                 fullName,
-                                                 workTime,
-                                                 position,
-                                                 salary) {
-
+                                              fullName,
+                                              workTime,
+                                              position,
+                                              salary) {
 }

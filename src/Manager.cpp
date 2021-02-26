@@ -49,7 +49,8 @@ void ProjectManager::calc() {
 
 void ProjectManager::printInfo() {
     calc();
-    std::cout << this->getFullName() << "\t" << this->getPosition() << std::endl;
+    std::cout << this->getFullName() << "\t" <<
+    this->getPosition() << std::endl;
     std::cout << "Payment:\t" << this->getPayment() << std::endl;
     std::cout << "WorkTime:\t" << this->getWorkTime() << std::endl;
     std::cout << "Subordinates number:\t" << calcHeads() << std::endl;
@@ -64,11 +65,12 @@ SeniorManager::SeniorManager(const int id,
                              const std::string fullName,
                              const int workTime,
                              const Position position,
-                             std::vector<Project*> projects) : ProjectManager(id,
-                                                                             fullName,
-                                                                             workTime,
-                                                                             position,
-                                                                             nullptr) {
+                             std::vector<Project*> projects) :
+                             ProjectManager(id,
+                                            fullName,
+                                            workTime,
+                                            position,
+                                            nullptr) {
     this->projects = std::move(projects);
     for (auto & project : this->projects) {
         if (project) {

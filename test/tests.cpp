@@ -6,7 +6,6 @@
 #include "Personal.h"
 #include "Engineer.h"
 #include "Manager.h"
-#include "Project.h"
 
 TEST(test, test1) {
     Employee* employee = new Programmer(0,

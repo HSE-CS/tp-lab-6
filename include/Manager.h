@@ -3,6 +3,7 @@
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 
+#include <string>
 #include <vector>
 #include "Employee.h"
 #include "Interfaces.h"
@@ -11,6 +12,7 @@ class ProjectManager : public Employee,
         public ProjectBudget, public Heading{
  protected:
     std::vector<Project*> projects;
+
  public:
     ProjectManager(int id,
                    std::string fullName,

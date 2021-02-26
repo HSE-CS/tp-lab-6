@@ -1,3 +1,5 @@
+// Copyright 2021 JGMax
+
 #include <iostream>
 #include "Engineer.h"
 #include "Factory.h"

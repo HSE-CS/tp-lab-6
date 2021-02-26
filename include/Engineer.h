@@ -3,6 +3,7 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include <string>
 #include "Personal.h"
 
 class Engineer: public Personal, public ProjectBudget {
