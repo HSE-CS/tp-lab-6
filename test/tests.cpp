@@ -130,7 +130,7 @@ TEST(Employee, TEST12) {
         "Engineer", name, 25, 0, 1000);
     a->setWorkTime(25);
     a->calc();
-    EXPECT_EQ(15, project1->id);
+    EXPECT_EQ(15, project2->id);
 }
 
 TEST(Employee, TEST13) {
@@ -157,7 +157,7 @@ TEST(Employee, TEST14) {
     Engineer* a = new Engineer(project2, 1, "Engineer", name, 25, 0, 1000);
     a->setWorkTime(25);
     a->calc();
-    EXPECT_EQ(25*1000+project2->budjet*25, a->getPayment());
+    EXPECT_EQ(25*1000, a->getPayment());
 }
 
 TEST(Employee, TEST15) {
