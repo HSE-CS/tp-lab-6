@@ -25,7 +25,7 @@ class Employee {
 
  public:
   Employee();
-  Employee(int id, std::string name) : id(id), name(name) {};
+  Employee(int id, std::string name) : id(id), name(name) {}
   int getId();
   int getPayment();
   int getWorktime();
