@@ -25,3 +25,11 @@ void ProjectManager::printInfo() {
 void SeniorManager::addProject(Project* p) {
   projects.push_back(p);
 }
+
+int calcBudgetPart(float part, int budget) {
+  return part * budget;
+}
+
+int calcProAdditions() {
+  return 500 * getSubbordinates();
+}

@@ -123,3 +123,5 @@ TEST(TestTeamLeader, calc) {
   d.calc();
   EXPECT_EQ(d.getPayment(), 800 * 200 + 15000 + 10 * 1000);
 }
+
+

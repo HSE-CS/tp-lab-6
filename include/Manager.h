@@ -21,6 +21,8 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
   int getSubbordinates();
   virtual int calcHeads();
   virtual void calc();
+  virtual int calcBudgetPart(float part, int budget);
+  virtual int calcProAdditions();
   virtual void printInfo();
 };
 
