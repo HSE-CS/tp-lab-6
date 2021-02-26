@@ -3,8 +3,6 @@
 
 int main() {
   std::string name = "Name";
-  Employee employee();
-  employee.setId(1);
-  employee.setName(name);
+  Driver driver1(1, name, 10);
   return 0;
 }
