@@ -1,12 +1,12 @@
 #include <gtest/gtest.h>
 #include <string>
-#include "../include/Interfaces.h"
-#include "../include/Factory.h"
-#include "../include/Engineer.h"
-#include "../include/Personal.h"
-#include "../include/Manager.h"
-#include "../include/Employee.h"
-#include "../include/resource.h"
+#include "Interfaces.h"
+#include "Factory.h"
+#include "Engineer.h"
+#include "Personal.h"
+#include "Manager.h"
+#include "Employee.h"
+#include "resource.h"
 
 TEST(Employee, TEST1) {
     std::string name = "Petr Ivanich";
@@ -124,7 +124,7 @@ TEST(Employee, TEST14) {
     Resource* a = new Resource("staff.txt", "output.txt");
     std::vector<Employee*> staff;
     staff = makeStaff(a);
-    EXPECT_EQ("200000", staff[0]->getPayment());
+    EXPECT_EQ(200000, staff[0]->getPayment());
 }
 
 TEST(Employee, TEST15) {
@@ -139,5 +139,5 @@ TEST(Employee, TEST15) {
     for (Employee* emp : staff) {
         emp->calc();
     }
-    EXPECT_EQ("160000", staff[1]->getPayment());
+    EXPECT_EQ(160000, staff[1]->getPayment());
 }
