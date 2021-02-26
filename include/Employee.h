@@ -24,8 +24,11 @@ class Employee {
   Position position;
 
  public:
-  Employee();
-  Employee(int id, std::string name) : id(id), name(name) {}
+  Employee(int id, std::string name) {
+    this->id = id;
+    this->name = std::move(name);
+  }
+  Employee() { }
   int getId();
   int getPayment();
   int getWorktime();
