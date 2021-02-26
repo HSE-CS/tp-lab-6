@@ -15,7 +15,7 @@ TEST(test, test2) {
     Personal* employee = new Cleaner(0,
         "Norma O'Brien", "cleaner", 800);
     employee->setWorktime(32);
-    EXPECT_EQ(36, employee->getWorktime());
+    EXPECT_EQ(32, employee->getWorktime());
 }
 TEST(test, test3) {
     Personal* employee = new Cleaner(0,
