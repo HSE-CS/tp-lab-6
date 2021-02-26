@@ -71,8 +71,7 @@ double SeniorManager::calcBudgetPart(double part, double budget) {
 double SeniorManager::calcProAdditions() {
     if (getWorktime() > 40) {
         return calcHeads() * 2;
-    }
-    else {
+    } else {
         return 0.0;
     }
 }
