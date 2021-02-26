@@ -4,13 +4,13 @@
 #include <string>
 
 class Employee {
-private:
+ private:
     int id;
     std::string name;
     std::string position;
     int worktime;
     double payment;
-public:
+ public:
     Employee(int id, std::string name,
         std::string position, double payment);
     void setWorktime(int worktime);
