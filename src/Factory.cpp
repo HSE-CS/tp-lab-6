@@ -11,7 +11,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
     std::vector<Project*> projects;
     std::vector<Employee*> employee;
     if (file.is_open()) {
-        while(file.good()) {
+        while (file.good()) {
             std::string type;
             std::string line;
             getline(file, type, ';');
@@ -21,7 +21,8 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                 getline(file, title, ';');
                 getline(file, budget, ';');
                 auto* project = new Project(stoi(id), title, stod(budget));
-                if (rand_r(12) % 2 == 0) {
+                unsigned int seed = 16;
+                if (rand_r(&seed) % 2 == 0) {
                     project->closeProject();
                 }
                 projects.push_back(project);
@@ -42,8 +43,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                                stoi(workTime),
                                PROGRAMMER,
                                stoi(salary),
-                               getProject(stoi(projectId), projects)
-                               ));
+                               getProject(stoi(projectId), projects)));
                 } else if (position == "team leader") {
                     std::string projectId;
                     getline(file, salary, ';');
@@ -55,8 +55,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                                stoi(workTime),
                                TEAM_LEADER,
                                stoi(salary),
-                               getProject(stoi(projectId), projects)
-                               ));
+                               getProject(stoi(projectId), projects)));
                 } else if (position == "engineer") {
                     std::string projectId;
                     getline(file, salary, ';');
@@ -68,8 +67,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                              stoi(workTime),
                              ENGINEER,
                              stoi(salary),
-                             getProject(stoi(projectId), projects)
-                             ));
+                             getProject(stoi(projectId), projects)));
                 } else if (position == "tester") {
                     std::string projectId;
                     getline(file, salary, ';');
@@ -81,8 +79,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                            stoi(workTime),
                            TESTER,
                            stoi(salary),
-                           getProject(stoi(projectId), projects)
-                           ));
+                           getProject(stoi(projectId), projects)));
                 } else if (position == "personal") {
                     getline(file, salary, ';');
                     employee.push_back(new
@@ -90,8 +87,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                              name,
                              stoi(workTime),
                              PERSONAL,
-                             stoi(salary)
-                             ));
+                             stoi(salary)));
                 } else if (position == "cleaner") {
                     getline(file, salary, ';');
                     employee.push_back(new
@@ -99,8 +95,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                             name,
                             stoi(workTime),
                             CLEANER,
-                            stoi(salary)
-                            ));
+                            stoi(salary)));
                 } else if (position == "driver") {
                     std::string bonus;
                     getline(file, salary, ';');
@@ -111,8 +106,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                            stoi(workTime),
                            DRIVER,
                            stoi(salary),
-                           stod(bonus)
-                           ));
+                           stod(bonus)));
                 } else if (position == "project manager") {
                     std::string projectId;
                     getline(file, projectId, ';');
@@ -122,8 +116,7 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                                    name,
                                    stoi(workTime),
                                    PROJECT_MANAGER,
-                                   getProject(stoi(projectId), projects)
-                                   ));
+                                   getProject(stoi(projectId), projects)));
                 } else if (position == "senior manager") {
                     std::string projectId;
                     std::vector<Project*> vector;
@@ -131,7 +124,8 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
                         projectId.clear();
                         getline(file, projectId, ';');
                         if (projectId != ".") {
-                            vector.push_back(getProject(stoi(projectId), projects));
+                            vector.push_back(
+                                    getProject(stoi(projectId), projects));
                         }
                     }
 
@@ -151,7 +145,8 @@ std::vector<Employee*> StaffFactory::makeStuff(const std::string fileName) {
     return employee;
 }
 
-Project *StaffFactory::getProject(int id, const std::vector<Project *> &projects) {
+Project *StaffFactory::getProject(int id,
+                                  const std::vector<Project *> &projects) {
     for (auto& project : projects) {
         if (project && project->getId() == id) {
             return project;

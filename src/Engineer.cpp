@@ -92,8 +92,8 @@ Tester::Tester(const int id,
 
 void Tester::setProAddition() {
     if (project && project->getStatus()) {
-        srand(time(nullptr));
-        Engineer::setProAddition(0.01 * (rand() % 100));
+        unsigned int seed = 16;
+        Engineer::setProAddition(0.01 * (rand_r(&seed) % 100));
     } else {
         Engineer::setProAddition(0);
     }
