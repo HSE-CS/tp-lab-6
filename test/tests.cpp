@@ -6,7 +6,7 @@
 #include "Personal.h"
 #include "Manager.h"
 #include "Employee.h"
-#include "resource.h"
+#include "Resource.h"
 
 TEST(Employee, TEST1) {
     std::string name = "Petr Ivanich";
@@ -48,7 +48,8 @@ TEST(Employee, TEST6) {
     std::vector<Project*> projects;
     projects.push_back(project);
     std::string name = "Petr Ivanich";
-    ProjectManager* a = new ProjectManager(projects, 1, "ProjectManager", name, 25, 0);
+    ProjectManager* a = new ProjectManager(projects,
+        1, "ProjectManager", name, 25, 0);
     a->setWorkTime(25);
     a->calc();
     EXPECT_EQ(200000, a->getPayment());
@@ -59,7 +60,8 @@ TEST(Employee, TEST7) {
     std::vector<Project*> projects;
     projects.push_back(project);
     std::string name = "Petr Ivanich";
-    SeniorManager* a = new SeniorManager(project, projects, 1, "SeniorManager", name, 25, 0);
+    SeniorManager* a = new SeniorManager(project,
+        projects, 1, "SeniorManager", name, 25, 0);
     a->setWorkTime(25);
     a->calc();
     EXPECT_EQ(project, a->getProject());
@@ -70,10 +72,12 @@ TEST(Employee, TEST8) {
     std::vector<Project*> projects;
     projects.push_back(project);
     std::string name = "Petr Ivanich";
-    SeniorManager* a = new SeniorManager(project, projects, 1, "SeniorManager", name, 25, 0);
+    SeniorManager* a = new SeniorManager(project,
+        projects, 1, "SeniorManager", name, 25, 0);
     a->setWorkTime(25);
     a->calc();
-    EXPECT_EQ(15000, a->calcBudjetPart(project->partForSeniors, project->budjet));
+    EXPECT_EQ(15000, a->calcBudjetPart(project->partForSeniors,
+        project->budjet));
 }
 
 
@@ -82,10 +86,12 @@ TEST(Employee, TEST9) {
     std::vector<Project*> projects;
     projects.push_back(project);
     std::string name = "Petr Ivanich";
-    SeniorManager* a = new SeniorManager(project, projects, 1, "SeniorManager", name, 25, 0);
+    SeniorManager* a = new SeniorManager(project,
+        projects, 1, "SeniorManager", name, 25, 0);
     a->setWorkTime(25);
     a->calc();
-    EXPECT_EQ(25000, a->calcBudjetPart(project->partForManagers, project->budjet));
+    EXPECT_EQ(25000, a->calcBudjetPart(project->partForManagers,
+        project->budjet));
 }
 
 TEST(Employee, TEST10) {
@@ -100,35 +106,35 @@ TEST(Employee, TEST10) {
 }
 
 TEST(Employee, TEST11) {
-    Resource* a = new Resource("staff.txt", "output.txt");
+    Resource* a = new Resource("../src/staff.txt", "output.txt");
     std::vector<Employee*> staff;
     staff = makeStaff(a);
     EXPECT_EQ("Ivan", staff[0]->getName());
 }
 
 TEST(Employee, TEST12) {
-    Resource* a = new Resource("staff.txt", "output.txt");
+    Resource* a = new Resource("../src/staff.txt", "output.txt");
     std::vector<Employee*> staff;
     staff = makeStaff(a);
     EXPECT_EQ(1, staff[0]->getId());
 }
 
 TEST(Employee, TEST13) {
-    Resource* a = new Resource("staff.txt", "output.txt");
+    Resource* a = new Resource("../src/staff.txt", "output.txt");
     std::vector<Employee*> staff;
     staff = makeStaff(a);
     EXPECT_EQ("ProjectManager", staff[0]->getPosition());
 }
 
 TEST(Employee, TEST14) {
-    Resource* a = new Resource("staff.txt", "output.txt");
+    Resource* a = new Resource("../src/staff.txt", "output.txt");
     std::vector<Employee*> staff;
     staff = makeStaff(a);
     EXPECT_EQ(200000, staff[0]->getPayment());
 }
 
 TEST(Employee, TEST15) {
-    std::string r = "staff.txt";
+    std::string r = "../src/staff.txt";
     std::string w = "output.txt";
     Resource* a = new Resource(r, w);
     std::vector<Employee*> staff;
