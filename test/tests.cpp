@@ -170,5 +170,5 @@ TEST(Employee, TEST15) {
     Engineer* a = new Engineer(project2, 1, "Engineer", name, 25, 0, 1000);
     a->setWorkTime(25);
     a->calc();
-    EXPECT_EQ(project2, a->getProject())
+    EXPECT_EQ(project2, a->getProject());
 }
