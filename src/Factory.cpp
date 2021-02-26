@@ -29,34 +29,34 @@ std::vector<Employee*> makeStaff(std::string input) {
 
             if (position == "tester") {
                 Project* project = new Project(stoi(project_id),
-                                    double(stoi(project_budget)));
+                                    stoi(project_budget));
                 employee.push_back(new Tester(stoi(id), fio,
-                    position, double(stoi(payment)), project));
+                    position, stoi(payment), project));
             } else if (position == "programmer") {
                 Project* project = new Project(stoi(project_id),
-                                    double(stoi(project_budget)));
+                                    stoi(project_budget));
                 employee.push_back(new Programmer(stoi(id), fio,
-                    position, double(stoi(payment)), project));
+                    position, stoi(payment), project));
             } else if (position == "teamleader") {
                 Project* project = new Project(stoi(project_id),
-                                     double(stoi(project_budget)));
+                                     stoi(project_budget));
                 employee.push_back(new TeamLeader(stoi(id), fio,
-                    position, double(stoi(payment)), project));
+                    position, stoi(payment), project));
             } else if (position == "cleaner") {
                 employee.push_back(new Cleaner(stoi(id), fio,
-                    position, double(stoi(payment))));
+                    position, stoi(payment)));
             } else if (position == "driver") {
                 employee.push_back(new Driver(stoi(id), fio,
-                    position, double(stoi(payment))));
+                    position, (stoi(payment)));
             } else if (position == "project manager") {
                 Project* project = new Project(stoi(project_id),
-                                      double(stoi(project_budget)));
+                                      stoi(project_budget));
                 employee.push_back(new ProjectManager(stoi(id), fio,
-                    position, double(stoi(payment)), project));
+                    position, (stoi(payment), project));
             } else if (position == "senior manager") {
                 std::vector <Project*> projects;
                 employee.push_back(new SeniorManager(stoi(id), fio,
-                    position, double(stoi(payment)), projects));
+                    position, stoi(payment), projects));
             }
         }
         return employee;
