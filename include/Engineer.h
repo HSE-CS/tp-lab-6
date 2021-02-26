@@ -8,9 +8,9 @@
 #include "Manager.h"
 
 class Engineer : public Personal, IProjectBudget {
-private:
+ private:
     Project* project;
-public:
+ public:
     explicit Engineer(int id, std::string name,
         std::string position, double payment,
         Project* project)
