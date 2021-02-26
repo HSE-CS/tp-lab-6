@@ -23,8 +23,7 @@ double Engineer::calc() {
 double Engineer::calcBonus() {
     if (getWorktime() > 40) {
         return (getWorktime() * (getPayment() * 1.5));
-    }
-    else {
+    } else {
         return 0.0;
     }
 }
@@ -124,8 +123,7 @@ double Tester::calc() {
 double Tester::calcBonus() {
     if (mistakes_counter > 10) {
         return (getWorktime() * (getPayment() * 1.3));
-    }
-    else {
+    } else {
         return 0.0;
     }
 }
@@ -176,8 +174,7 @@ double TeamLeader::calc() {
 double TeamLeader::calcBonus() {
     if (getWorktime() > 40) {
         return (getWorktime() * (getPayment() * 1.6));
-    }
-    else {
+    } else {
         return 0.0;
     }
 }
