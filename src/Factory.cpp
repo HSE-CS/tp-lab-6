@@ -60,8 +60,7 @@ std::vector<Employee*> makeStaff(std::string input) {
             }
         }
         return employee;
-    }
-    else {
+    } else {
         throw "file error";
     }
 }
