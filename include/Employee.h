@@ -17,6 +17,7 @@ public:
     void setPayment(double payment);
     int getWorktime();
     double getPayment();
+    double getSalary();
     int getId();
     std::string getName();
     std::string getPosition();

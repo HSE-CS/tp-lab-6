@@ -26,6 +26,10 @@ double Employee::getPayment() {
     return payment;
 }
 
+double Employee::getSalary() {
+    return calc();
+}
+
 int Employee::getId() {
     return id;
 }

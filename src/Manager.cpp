@@ -38,7 +38,7 @@ void ProjectManager::printInfo() {
     std::cout << "Position: " << getPosition() << std::endl;
     std::cout << "Payment: " << getPayment() << std::endl;
     std::cout << "Project - Id: " << project->getId() <<
-        "Budget: " << project->getBudget() << std::endl;
+        " Budget: " << project->getBudget() << std::endl;
     std::cout << "==============" << std::endl;
 }
 
@@ -80,7 +80,7 @@ double SeniorManager::calcProAdditions() {
 double SeniorManager::calcHeads() {
     double result = 0;
     for (Project* project : projects) {
-        result += project->getBudget() * 0.07;
+        result += project->getBudget() * 0.1;
     }
     return result;
 }

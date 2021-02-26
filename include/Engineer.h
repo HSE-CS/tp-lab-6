@@ -17,6 +17,8 @@ public:
         : Personal(id, name, position, payment),
         project(project) {}
     Project* getProject();
+    void setProject(Project* project);
+    double getSalary() override;
     double calc() override;
     double calcBonus() override;
     double calcBase(double payment, int time) override;
@@ -32,6 +34,8 @@ public:
         Project* project)
         : Engineer(id, name, position, payment,
             project) {}
+    void setProject(Project* project);
+    double getSalary() override;
     double calc() override;
     double calcBonus() override;
     double calcBase(double payment, int time) override;
@@ -49,6 +53,9 @@ public:
         Project* project)
         : Engineer(id, name, position, payment,
             project) {}
+    void setProject(Project* project);
+    void setMistakes(int num);
+    double getSalary() override;
     double calc() override;
     double calcBonus() override;
     double calcBase(double payment, int time) override;
@@ -64,6 +71,8 @@ public:
         Project* project)
         : Programmer(id, name, position, payment,
             project) {}
+    void setProject(Project* project);
+    double getSalary() override;
     double calc() override;
     double calcBonus() override;
     double calcBase(double payment, int time) override;

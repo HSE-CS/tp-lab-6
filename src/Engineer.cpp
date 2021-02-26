@@ -7,6 +7,14 @@ Project* Engineer::getProject() {
     return project;
 }
 
+void Engineer::setProject(Project* project) {
+    this->project = project;
+}
+
+double Engineer::getSalary() {
+    return calc();
+}
+
 double Engineer::calc() {
     setSalary(calcBase(getPayment(), getWorktime()) + calcBonus());
     return calcBase(getPayment(), getWorktime()) + calcBonus();
@@ -41,11 +49,19 @@ void Engineer::printInfo() {
     std::cout << "Payment: " << getPayment() << std::endl;
     std::cout << "Salary: " << getSalary() << std::endl;
     std::cout << "Project - Id: " << project->getId() <<
-        "Budget: " << project->getBudget() << std::endl;
+        " Budget: " << project->getBudget() << std::endl;
     std::cout << "==============" << std::endl;
 }
 
 // class Programmer
+
+void Programmer::setProject(Project* project) {
+    Engineer::setProject(project);
+}
+
+double Programmer::getSalary() {
+    return calc();
+}
 
 double Programmer::calc() {
     double result = calcBase(getPayment(), getWorktime()) + calcBonus() + 
@@ -79,11 +95,23 @@ void Programmer::printInfo() {
     std::cout << "Payment: " << getPayment() << std::endl;
     std::cout << "Salary: " << getSalary() << std::endl;
     std::cout << "Project - Id: " << getProject()->getId() <<
-        "Budget: " << getProject()->getBudget() << std::endl;
+        " Budget: " << getProject()->getBudget() << std::endl;
     std::cout << "==============" << std::endl;
 }
 
 // class Tester
+
+void Tester::setProject(Project* project) {
+    Engineer::setProject(project);
+}
+
+void Tester::setMistakes(int num) {
+    this->mistakes_counter = num;
+}
+
+double Tester::getSalary() {
+    return calc();
+}
 
 double Tester::calc() {
     double result = calcBase(getPayment(), getWorktime()) + calcBonus() +
@@ -123,11 +151,19 @@ void Tester::printInfo() {
     std::cout << "Salary: " << getSalary() << std::endl;
     std::cout << "Number of mictakes: " << mistakes_counter << std::endl;
     std::cout << "Project - Id: " << getProject()->getId() <<
-        "Budget: " << getProject()->getBudget() << std::endl;
+        " Budget: " << getProject()->getBudget() << std::endl;
     std::cout << "==============" << std::endl;
 }
 
 // class TeamLeader
+
+void TeamLeader::setProject(Project* project) {
+    Engineer::setProject(project);
+}
+
+double TeamLeader::getSalary() {
+    return calc();
+}
 
 double TeamLeader::calc() {
     double result = calcBase(getPayment(), getWorktime()) + calcBonus() +
@@ -171,6 +207,6 @@ void TeamLeader::printInfo() {
     std::cout << "Payment: " << getPayment() << std::endl;
     std::cout << "Salary: " << getSalary() << std::endl;
     std::cout << "Project - Id: " << getProject()->getId() <<
-        "Budget: " << getProject()->getBudget() << std::endl;
+        " Budget: " << getProject()->getBudget() << std::endl;
     std::cout << "==============" << std::endl;
 }

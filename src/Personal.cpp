@@ -54,7 +54,7 @@ double Driver::calcBase(double payment, int time) {
 
 double Driver::calcBonus() {
     if (getWorktime() > 40) {
-        return (getWorktime() * (getPayment() * 2));
+        return (getWorktime() * (getPayment() * 1.5));
     }
     else {
         return 0.0;
@@ -92,7 +92,7 @@ double Cleaner::calcBase(double payment, int time) {
 
 double Cleaner::calcBonus() {
     if (getWorktime() > 30) {
-        return (double(getWorktime()) * (getPayment() * 1,5));
+        return (double(getWorktime()) * (getPayment() * 1.2));
     }
     else {
         return 0.0;
