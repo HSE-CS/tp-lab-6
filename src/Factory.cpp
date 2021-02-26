@@ -1,3 +1,4 @@
+//  Copyright Baklanov 2021
 #include <fstream>
 #include <cmath>
 #include <string>
@@ -10,14 +11,17 @@
 
 int id = 1;
 
-bool SettingProject(Employee* emp, std::vector<Project*> Projects, Project* proj) {
+bool SettingProject(Employee* emp,
+    std::vector<Project*> Projects, Project* proj) {
     if (emp->getPosition() == "ProjectManager") {
         dynamic_cast<ProjectManager*>(emp)->setProject(Projects);
         return true;
-    } else if ((emp->getPosition() == "SeniorManager") && (dynamic_cast<SeniorManager*>(emp)->getProject()->id == 0)) {
+    } else if ((emp->getPosition() == "SeniorManager") &&
+        (dynamic_cast<SeniorManager*>(emp)->getProject()->id == 0)) {
         dynamic_cast<SeniorManager*>(emp)->setProject(proj);
         return true;
-    } else if ((emp->getPosition() == "Engineer") && (dynamic_cast<Engineer*>(emp)->getProject()->id == 0)) {
+    } else if ((emp->getPosition() == "Engineer") &&
+        (dynamic_cast<Engineer*>(emp)->getProject()->id == 0)) {
         dynamic_cast<Engineer*>(emp)->setProject(proj);
         return true;
     }
@@ -29,24 +33,32 @@ int StringToInt(std::string buf) {
     return a;
 }
 
-void makeStaffForProject(Resource* a, std::vector<Project*> Projects, std::vector<Employee*> Staff) {
+void makeStaffForProject(Resource* a,
+    std::vector<Project*> Projects,
+    std::vector<Employee*> Staff) {
     std::ifstream fin((*a).readpath);
+    if (!fin.is_open())
+        return;
     std::string buf;
     std::getline(fin, buf);
     Project projectbuf(0, 0);
     while (!fin.eof()) {
         int i = 0;
-        while ((buf[buf.length() - i - 1] >= '0') && (buf[buf.length() - i - 1] <= '9')) {
+        while ((buf[buf.length() - i - 1] >= '0') &&
+            (buf[buf.length() - i - 1] <= '9')) {
             ++i;
         }
-        projectbuf.id = StringToInt(buf.substr(buf.length() - i, buf.length() - 1));
+        projectbuf.id = StringToInt(buf.substr
+        (buf.length() - i, buf.length() - 1));
         i = 0;
         std::getline(fin, buf);
-        while ((buf[buf.length() - i - 1] >= '0') && (buf[buf.length() - i - 1] <= '9')) {
+        while ((buf[buf.length() - i - 1] >= '0') &&
+            (buf[buf.length() - i - 1] <= '9')) {
             ++i;
         }
         bool flag = 0;
-        projectbuf.budjet = StringToInt(buf.substr(buf.length() - i, buf.length() - 1));
+        projectbuf.budjet = StringToInt(buf.substr
+        (buf.length() - i, buf.length() - 1));
         Project* proj = new Project(projectbuf);
         std::getline(fin, buf);
         Projects.push_back(proj);
@@ -105,21 +117,28 @@ std::vector<Employee*> makeStaff(Resource* a) {
         std::getline(fin, pos);
         std::getline(fin, name);
         if (pos == "ProjectManager") {
-            newEmp = new ProjectManager(emptyVectorProject, id, pos, name, 0, 0);
+            newEmp = new ProjectManager(emptyVectorProject,
+                id, pos, name, 0, 0);
         } else if (pos == "SeniorManager") {
-            newEmp = new SeniorManager(emptyproject, emptyVectorProject, id, pos, name, 0, 0);
+            newEmp = new SeniorManager(emptyproject,
+                emptyVectorProject, id, pos, name, 0, 0);
         } else if (pos == "Engineer") {
-            newEmp = new Engineer(emptyproject, id, pos, name, 0, 0, salaries.Engineer);
+            newEmp = new Engineer(emptyproject,
+                id, pos, name, 0, 0, salaries.Engineer);
         } else if (pos == "Programmer") {
-            newEmp = new Programmer(emptyproject, id, pos, name, 0, 0, salaries.Programmer);
+            newEmp = new Programmer(emptyproject,
+                id, pos, name, 0, 0, salaries.Programmer);
         } else if (pos == "Tester") {
-            newEmp = new Tester(emptyproject, id, pos, name, 0, 0, salaries.Tester);
+            newEmp = new Tester(emptyproject,
+                id, pos, name, 0, 0, salaries.Tester);
         } else if (pos == "TeamLeader") {
-            newEmp = new TeamLeader(emptyproject, id, pos, name, 0, 0, salaries.TeamLeader);
+            newEmp = new TeamLeader(emptyproject,
+                id, pos, name, 0, 0, salaries.TeamLeader);
         } else if (pos == "Driver") {
             newEmp = new Driver(id, pos, name, 0, 0, salaries.Driver);
         } else if (pos == "Cleaner") {
-            newEmp = new Cleaner(id, pos, name, 0, 0, salaries.Cleaner);
+            newEmp = new Cleaner(id,
+                pos, name, 0, 0, salaries.Cleaner);
         }
         Staff.push_back(newEmp);
         ++id;

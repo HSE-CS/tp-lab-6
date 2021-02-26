@@ -1,3 +1,4 @@
+//  Copyright Baklanov 2021
 #include <iostream>
 #include <string>
 #include <random>
@@ -7,7 +8,7 @@
 #include "Personal.h"
 #include "Manager.h"
 #include "Employee.h"
-#include "resource.h"
+#include "Resource.h"
 
 int main() {
     std::string r = "staff.txt";
@@ -19,7 +20,7 @@ int main() {
     a->readpath = "projects.txt";
     makeStaffForProject(a, Projects, staff);
     for (Employee* emp : staff) {
-        emp->setWorkTime(rand() % 25 + 5);
+        emp->setWorkTime(std::rand() % 25 + 5);
     }
     for (Employee* emp : staff) {
         emp->calc();

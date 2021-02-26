@@ -1,3 +1,4 @@
+//  Copyright Baklanov 2021
 #include "Engineer.h"
 #include <random>
 
