@@ -10,19 +10,19 @@
 #include "Employee.h"
 
 class Project {
-private:
+ private:
     int id;
     double budget;
-public:
+ public:
     Project(int id, double budget);
     int getId();
     double getBudget();
 };
 
 class ProjectManager : public Employee, IHeading, IProjectBudget {
-private:
+ private:
     Project* project = nullptr;
-public:
+ public:
     ProjectManager(int id, const std::string& name,
         const std::string& position, double payment,
         Project* project)
@@ -40,9 +40,9 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-private:
+ private:
     std::vector<Project*> projects;
-public:
+ public:
     explicit SeniorManager(int id,
         const std::string& name,
         const std::string& position, double payment,
