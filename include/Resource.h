@@ -7,7 +7,7 @@
 #include <fstream>
 
 class Resource {
-public:
+ public:
     std::string readpath;
     std::string writepath;
     Resource(std::string readpath, std::string writepath) :
