@@ -6,13 +6,13 @@
 #include <iostream>
 
 enum Position {
-  cleaner,
-  driver,
-  tester,
-  programmer,
-  teamleader,
-  projectmanager,
-  seniormanager
+  cleaner = 0,
+  driver = 1,
+  tester = 2,
+  programmer = 3,
+  teamleader = 4,
+  projectmanager = 5,
+  seniormanager = 6
 };
 
 class Employee {
@@ -34,7 +34,7 @@ class Employee {
 
   void setId(int id);
   void setPayment(int payment);
-  void setWorktime(int worktime);
+  void setWorkTime(int worktime);
   void setName(std::string name);
   void setPosition(Position position);
 

@@ -29,7 +29,7 @@ void Employee::setPayment(int payment) {
   this->payment = payment;
 }
 
-void Employee::setWorktime(int worktime) {
+void Employee::setWorkTime(int worktime) {
   this->worktime = worktime;
 }
 

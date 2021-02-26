@@ -77,7 +77,7 @@ vector<Employee*> staff = StaffFactory::makeStaff(...);
 
 // присвоение отработанного времени
 for(Employee emp: staff) {
-   emp -> setWorktime(...);
+   emp -> setWorkTime(...);
 }
 
 // расчет зарплаты

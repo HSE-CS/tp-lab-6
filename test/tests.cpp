@@ -18,7 +18,7 @@ TEST(test2, test2) {
 
 TEST(test3, test3) {
   Employee employee();
-  employee.setWorktime(168);
+  employee.setWorkTime(168);
   EXPECT_EQ(168, employee.getWorktime());
 }
 
