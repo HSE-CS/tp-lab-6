@@ -50,7 +50,7 @@ TEST(TestProgrammer, calc) {
   Programmer d(156, n, 500, &p);
   d.setWorkTime(200);
   d.calc();
-  EXPECT_EQ(d.getPayment(), 500 * 200 + 15000);
+  EXPECT_EQ(d.getPayment(), 500 * 200 + 15000 + 100);
 }
 
 TEST(TestProgrammer, getProject) {
@@ -82,7 +82,7 @@ TEST(TestTester, calc) {
   d.incErrorsFound();
   d.incErrorsFound();
   d.calc();
-  EXPECT_EQ(d.getPayment(), 500 * 200 + 300 * 3);
+  EXPECT_EQ(d.getPayment(), 500 * 200 + 300 * 3 + 100);
 }
 
 TEST(TeamLeader, getPos) {
