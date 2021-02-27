@@ -8,11 +8,11 @@
 uint32_t Staff::calcBonus() { return 0; }
 
 void Staff::printInfo() {
- this->Employee::printInfo();
- std::cout << "SALARY: " << calcBase(salary, worktime) << std::endl;
+  this->Employee::printInfo();
+  std::cout << "SALARY: " << calcBase(salary, worktime) << std::endl;
 }
- uint32_t Staff::calcBase(uint32_t salary, uint32_t wtime) {
- 	return salary * wtime;
+  uint32_t Staff::calcBase(uint32_t salary, uint32_t wtime) {
+  return salary * wtime;
 }
 
 uint32_t Driver::calcBonus() { return BONUS; }

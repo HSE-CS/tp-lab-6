@@ -1,3 +1,4 @@
+// Copyright 2021 Rogov Andrey
 #include "Employee.h"
 #include <iostream>
 void Employee::printInfo() {

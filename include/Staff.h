@@ -9,7 +9,7 @@ const uint32_t BONUS = 10;
 class Staff : public Employee, public WorkBaseTime {
  protected:
   uint32_t salary;
- 
+
  public:
   uint32_t calcBase(uint32_t salary, uint32_t wtime) override;
   Staff(const uint32_t& id, const std::string& firstname,

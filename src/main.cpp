@@ -38,12 +38,14 @@ std::vector<Employee*> makeStaff() {
         }  else if (job == "Tester") {
             staff >> salary >> project_id;
             Tester* ptr =
-                new Tester(id, firstname, surname, salary, projects[project_id]);
+                new Tester(id, firstname, surname, 
+                    salary, projects[project_id]);
             output.push_back(ptr);
         } else if (job == "ProjectManager") {
             staff >> project_id;
             ProjectManager* ptr =
-                new ProjectManager(id, firstname, surname, projects[project_id]);
+                new ProjectManager(id, firstname, surname,
+                    projects[project_id]);
             output.push_back(ptr);
         }  else if (job == "SeniorManager") {
             uint32_t project_num;
@@ -59,7 +61,8 @@ std::vector<Employee*> makeStaff() {
         } else if (job == "TeamLeader") {
             staff >> salary >> project_id;
             TeamLeader* ptr =
-                new TeamLeader(id, firstname, surname, salary, projects[project_id]);
+                new TeamLeader(id, firstname, surname,
+                    salary, projects[project_id]);
             output.push_back(ptr);
         }
     }
