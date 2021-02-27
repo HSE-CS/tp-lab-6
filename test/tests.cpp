@@ -64,6 +64,7 @@ TEST(Test, Test_10) {
 }
 
 TEST(Test, Test_11) {
+  Project num1 = {50, "rabota1", 33444};
   Tester* pers3 = new Tester(3, "Kadykov", "Tester", 1200, 10, &num1, 6);
   pers3->set_salary(1000);
   EXPECT_EQ(666, pers3->calcProAdditions());
