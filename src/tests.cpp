@@ -22,15 +22,15 @@ TEST(TestCleaner, Test_2) {
 }
 
 TEST(TestProgrammer, Test_3) {
-	std::string name_ = "Ivanov Ivan";
-	Project project_1;
-	project_1.id = "project_1";
-	project_1.budget = 20000;
-	Programmer pr(10, name_, 100, &project_1);
-	pr.setWorkTime(2);
-	pr.addBonus();
-	pr.calc();
-	EXPECT_EQ(10400, pr.getPayment());
+    std::string name_ = "Ivanov Ivan";
+    Project project_1;
+    project_1.id = "project_1";
+    project_1.budget = 20000;
+    Programmer pr(10, name_, 100, &project_1);
+    pr.setWorkTime(2);
+    pr.addBonus();
+    pr.calc();
+    EXPECT_EQ(10400, pr.getPayment());
 }
 
 TEST(TestProgrammer, Test_4) {
@@ -45,13 +45,13 @@ TEST(TestProgrammer, Test_4) {
 }
 
 TEST(TestTester, Test_5) {
-	std::string name_ = "Ivanov Ivan";
-	Project project_1;
-	project_1.id = "project_1";
-	project_1.budget = 20000;
-	Tester pr(10, name_, 100, &project_1);
-	pr.setWorkTime(2);
-	pr.calc();
+    std::string name_ = "Ivanov Ivan";
+    Project project_1;
+    project_1.id = "project_1";
+    project_1.budget = 20000;
+    Tester pr(10, name_, 100, &project_1);
+    pr.setWorkTime(2);
+    pr.calc();
 	EXPECT_EQ(400, pr.getPayment());
 }
 
