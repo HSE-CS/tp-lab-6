@@ -108,8 +108,8 @@ TEST(TestFactory, TestCalc) {
 }
 
 TEST(TestFactory, TestPosition) {
-  Factory factory(std::string("projects_data.txt"),
-                  std::string("employees.txt"));
+  Factory factory(std::string("../src/projects_data.txt"),
+                  std::string("../src/employees.txt"));
 
   factory.makeProjects();
   factory.makeStaff();
