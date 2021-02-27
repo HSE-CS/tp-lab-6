@@ -1,0 +1,5 @@
+0:Luda:Cleaner:100:5:end:
+1:Egor:Driver:150:15:end:
+2:Ivan:Driver:80:15:end:
+3:Roman:Programmer:160:50:VD:100000:end:
+4:Dima:Tester:120:30:Yt2mp3:100000:end:
