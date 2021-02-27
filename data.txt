@@ -1,0 +1,37 @@
+Driver
+1 Kirill Timurovich Korolev - 150,4
+2 Roman Egorovich Savelyev - 174,4
+3 Georgy L. Sobolev - 159,4
+Clener
+4 Yana Matveyevna Golubeva - 229,5
+5 Arina Timurovna Titova - 196,5
+6 Vera Mikhailovna Savelieva - 110,5
+Senior Manager
+7 Pastukhova Zlata Dmitrievna - 439,8
+8 Uvarova Nicole Mikhailovna - 436,8
+9 Yasmina Ivanovna Krasnova - 441,8
+10 Kristina Ivanova - 474,9
+Project Manager
+11 Solovyov Gordey Georgievich - 345,8
+12 Taisiya Davydova - 446,8
+13 Berezina Elizaveta Denisovna - 295,8
+Tester
+14 Anisimova Amina Sergeyevna - 311,9
+15 Nikita Alexeyevich Bogdanov - 244,8
+16 Maria Parfenova - 217,8
+17 Loginova Eva Yurievna - 243,9
+18 Titova Karina Platonovna - 331,9
+19 Viktoria Maksimovna Lebedeva - 262,8
+Programmer
+20 Artyom Davydov - 439,9
+21 Arseny Fomin - 392,9
+22 Vasily Mironovich Zhukov - 433,9
+23 Denis Morozov - 440,9
+24 Polina Prokhorova - 431,8
+25 Arina Danilovna Kolesnikova - 337,7
+26 Ivan Kirillovich Shilov - 387,8
+27 Milana Egorovna Maksimova - 489,7
+Team Leader
+28 Antonov Arseny Adamovich - 426,7
+29 Potapova Daria Markovna - 477,6
+30 Victoria Tokareva Mikhailovna - 482,8
