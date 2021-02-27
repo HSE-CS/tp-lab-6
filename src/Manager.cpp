@@ -6,7 +6,7 @@ ProjectManager::ProjectManager() = default;
 
 ProjectManager::ProjectManager(size_t _id, std::string _name,
                                size_t _worktime, Project* _project,
-                               size_t _heads) : Project(0,0){
+                               size_t _heads) {
   this->setId(_id);
   this->setName(std::move(_name));
   this->setWorkTime(_worktime);
@@ -29,7 +29,7 @@ void ProjectManager::calcHeads(size_t _heads) {
   this->heads = _heads;
 }
 
-float ProjectManager::getPart() const{
+float ProjectManager::getPart() const {
   return this->part;
 }
 

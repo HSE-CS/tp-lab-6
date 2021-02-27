@@ -5,6 +5,7 @@
 
 #include "Personal.h"
 #include "Project.h"
+#include <string>
 
 class Engineer : public Personal, public Project {
  private:

@@ -3,9 +3,10 @@
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 
-#include <vector>
 #include "Personal.h"
 #include "Project.h"
+#include <string>
+#include <vector>
 
 class ProjectManager : public Personal, public Project {
  private:
@@ -32,4 +33,4 @@ class SeniorManager : public ProjectManager {
   size_t calc();
 };
 
-#endif // INCLUDE_MANAGER_H_
+#endif //  INCLUDE_MANAGER_H_

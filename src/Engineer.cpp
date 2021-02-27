@@ -38,7 +38,7 @@ float Engineer::calc() {
 
 Programmer::Programmer(size_t _id, std::string _name, size_t _worktime,
                        Project* _project, size_t _salary, float _part,
-                       bool _deadline){
+                       bool _deadline) {
   this->setId(_id);
   this->setName(std::move(_name));
   this->setWorkTime(_worktime);
@@ -63,7 +63,7 @@ void Programmer::setProject(Project* _project) {
 }
 
 float Programmer::calc() {
-  return ((float)this->calcProAdittions() + this->calcBase()
+  return (static_cast<float>(this->calcProAdittions()) + this->calcBase()
       + this->calcBudgetPart(this->getPart()));
 }
 
@@ -83,7 +83,7 @@ bool Programmer::getDeadline() const {
 
 Tester::Tester(size_t _id, std::string _name, size_t _worktime,
                Project* _project, size_t _salary, float _part,
-               size_t _bugs){
+               size_t _bugs) {
   this->setId(_id);
   this->setName(std::move(_name));
   this->setWorkTime(_worktime);
@@ -116,7 +116,7 @@ size_t Tester::getBugs() const {
 }
 
 float Tester::calc() {
-  return ((float)this->calcProAdittions() + this->calcBase()
+  return (static_cast<float>(this->calcProAdittions()) + this->calcBase()
       + this->calcBudgetPart(this->getPart()));
 }
 
@@ -144,7 +144,7 @@ void TeamLeader::setPart(float _part) {
 }
 
 float TeamLeader::calc() {
-  return ((float)this->calcProAdittions() + this->calcBase() +
+  return (static_cast<float>(this->calcProAdittions()) + this->calcBase() +
       this->calcBudgetPart(getPart()) + TeamLeader::calcHeads());
 }
 
@@ -152,7 +152,7 @@ float TeamLeader::getPart() const {
   return this->part;
 }
 size_t TeamLeader::calcProAdittions() {
-  return (TeamLeader::calcHeads() + this->calcBudgetPart(getPart()) / 4) ;
+  return (TeamLeader::calcHeads() + this->calcBudgetPart(getPart()) / 4);
 }
 size_t TeamLeader::calcHeads() {
   return 15;
