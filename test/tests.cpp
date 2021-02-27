@@ -70,12 +70,24 @@ TEST(Test, Test_11) {
 }
 
 TEST(Test, Test_12) {
+  Project num1 = {50, "rabota1", 33444};
+  Project num2 = {50, "rabota2", 93930};
+  Project num3 = {50, "raabota3", 3334556};
+  std::vector<Project*> projects;
+  projects.push_back(&num2);
+  projects.push_back(&num3);
   ProjectManager* manager = new ProjectManager(
       4, "Rokin Maks", "Project Manager", 2, 100000, 10, projects);
   EXPECT_EQ(1000, manager->calcHeads());
 }
 
 TEST(Test, Test_13) {
+  Project num1 = {50, "rabota1", 33444};
+  Project num2 = {50, "rabota2", 93930};
+  Project num3 = {50, "raabota3", 3334556};
+  std::vector<Project*> projects;
+  projects.push_back(&num2);
+  projects.push_back(&num3);
   ProjectManager* manager = new ProjectManager(
       4, "Rokin Maks", "Project Manager", 2, 100000, 10, projects);
   EXPECT_EQ(1000, manager->calcProAdditions());
@@ -83,6 +95,12 @@ TEST(Test, Test_13) {
 
 
 TEST(Test, Test_14) {
+  Project num1 = {50, "rabota1", 33444};
+  Project num2 = {50, "rabota2", 93930};
+  Project num3 = {50, "raabota3", 3334556};
+  std::vector<Project*> projects;
+  projects.push_back(&num2);
+  projects.push_back(&num3);
   ProjectManager* manager = new ProjectManager(
       4, "Rokin Maks", "Project Manager", 2, 100000, 10, projects);
   EXPECT_EQ(1002000, manager->calc());
@@ -90,6 +108,12 @@ TEST(Test, Test_14) {
 
 
 TEST(Test, Test_15) {
+  Project num1 = {50, "rabota1", 33444};
+  Project num2 = {50, "rabota2", 93930};
+  Project num3 = {50, "raabota3", 3334556};
+  std::vector<Project*> projects;
+  projects.push_back(&num2);
+  projects.push_back(&num3);
   ProjectManager* manager = new ProjectManager(
       4, "Rokin Maks", "Project Manager", 2, 100000, 10, projects);
   EXPECT_EQ(100000, manager->get_payment());
