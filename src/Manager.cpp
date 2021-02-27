@@ -2,33 +2,37 @@
 
 #include <iostream>
 
-#define PER_HEAD 10
-#define PRO_ADDITIONS 15
-
 void ProjectManager::printInfo() {
-  this->Employee::printInfo();
-  std::cout << "PRO_ADDITIONS: " << calcProAdditions() << std::endl;
+  Employee::printInfo();
+  std::cout << "PRO_ADDITIONS: " << calcProAdditions() << std::endl
+            << "PROJECT_NUM: " << projects.size() << std::endl;
+  for (const auto& project : projects) {
+    std::cout << "  PROJECT_ID: " << project.id << std::endl
+              << "  PROJECT_BUDGET: " << project.budget << std::endl
+              << "  PROJECT_STAFF: " << project.staff_num << std::endl;
+  }
 }
-uint32_t ProjectManager::calcHeads() { return projects->staff * PER_HEAD; }
+uint32_t ProjectManager::calcHeads() {
+  return projects.front().staff_num * MANAGER_PER_HEAD;
+}
 
 uint32_t ProjectManager::calcBudgetPart(float part, uint32_t budget) {
   return (uint32_t)(part * (float)budget);
 }
 
-uint32_t ProjectManager::calcProAdditions() { return PRO_ADDITIONS; }
+uint32_t ProjectManager::calcProAdditions() { return MANAGER_PRO_ADDITIONS; }
 
 void ProjectManager::calc() {
   payment = calcHeads() +
-            calcBudgetPart(1.0 / (float)projects->staff, projects->budget) +
+            calcBudgetPart(1.0 / (float)projects.front().staff_num,
+                           projects.front().budget) +
             calcProAdditions();
 }
 
 void SeniorManager::calc() {
   uint32_t sum = 0;
-  for (int i = 0; i < num_projects; ++i) {
-    Project* current_project = projects + i;
-    sum += calcBudgetPart(1.0 / (float)current_project->staff,
-                          current_project->budget);
+  for (const auto& p : projects) {
+    sum += calcBudgetPart(1.0 / (float)p.staff_num, p.budget);
   }
   payment = calcHeads() + sum + calcProAdditions();
 }

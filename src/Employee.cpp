@@ -1,8 +1,8 @@
+#include "Employee.h"
+
 #include <iostream>
 
-#include "Staff.h"
-
-void Staff::printInfo() {
+void Employee::printInfo() {
   std::cout << "NAME: " << name << std::endl
             << "WORKTIME: " << worktime << std::endl
             << "PAYMENT: " << payment << std::endl;

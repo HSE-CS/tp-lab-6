@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 // This is the worst of the worst of OOP
 class WorkBaseTime {
@@ -20,5 +21,5 @@ class Project {
  public:
   size_t id;
   uint32_t budget;
-  uint32_t staff;
+  uint32_t staff_num;
 };
