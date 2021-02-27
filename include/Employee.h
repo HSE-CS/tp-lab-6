@@ -1,7 +1,7 @@
 // Copyright 2021 alexgiving
 
-#ifndef INCLUDE_EMPLOYEE_H
-#define INCLUDE_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 
@@ -25,9 +25,6 @@ class Employee {
   [[nodiscard]] std::string getPosition() const;
   [[nodiscard]] size_t getWorktime() const;
   [[nodiscard]] size_t getPayment() const;
-
-  size_t calc(size_t);
-  void prntInfo();
 };
 
-#endif // INCLUDE_EMPLOYEE_H
+#endif // INCLUDE_EMPLOYEE_H_

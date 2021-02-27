@@ -1,7 +1,7 @@
 // Copyright 2021 alexgiving
 
-#ifndef INCLUDE_PERSONAL_H
-#define INCLUDE_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 #include "Employee.h"
 
@@ -16,4 +16,4 @@ class Personal : public Employee {
   void printInfo();
 };
 
-#endif // INCLUDE_PERSONAL_H
+#endif //  INCLUDE_PERSONAL_H_
