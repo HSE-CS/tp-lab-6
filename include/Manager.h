@@ -33,4 +33,4 @@ class SeniorManager : public ProjectManager {
   size_t calc();
 };
 
-#endif //  INCLUDE_MANAGER_H_
+#endif  // INCLUDE_MANAGER_H_
