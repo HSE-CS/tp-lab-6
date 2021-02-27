@@ -11,11 +11,12 @@ struct Project {
 };
 
 class Engineer : public ProjectBudget, public Personal {
-private:
+ private:
     Project* project;
 
-public:
-    explicit Engineer(int id_, std::string name_, int salary_, Project* project_)
+ public:
+    explicit Engineer(int id_, std::string name_,
+        int salary_, Project* project_)
         : Personal(id_, name_, salary_) {
         project = project_;
     }
@@ -26,10 +27,11 @@ public:
 };
 
 class Programmer : public Engineer {
-private:
+ private:
     bool bonus = 0;
-public:
-    explicit Programmer(int id_, std::string name_, int salary_, Project* project_)
+ public:
+    explicit Programmer(int id_, std::string name_,
+        int salary_, Project* project_)
         : Engineer(id_, name_, salary_, project_) {
         spec = PROGRAMMER;
     }
@@ -38,10 +40,12 @@ public:
 };
 
 class Tester : public Engineer {
-private:
+ private:
     int errors = 0;
-public:
-    explicit Tester(int id_, std::string name_, int salary_, Project* project_)
+
+ public:
+    explicit Tester(int id_, std::string name_,
+        int salary_, Project* project_)
         : Engineer(id_, name_, salary_, project_) {
         spec = TESTER;
     }
@@ -53,10 +57,12 @@ public:
 };
 
 class TeamLeader : public Programmer, public Heading {
-private:
+ private:
     int subordinates = 0;
-public:
-    explicit TeamLeader(int id_, std::string name_, int salary_, Project* project_)
+
+ public:
+    explicit TeamLeader(int id_, std::string name_,
+        int salary_, Project* project_)
         : Programmer(id_, name_, salary_, project_) {
         spec = TEAMLEADER;
     }
