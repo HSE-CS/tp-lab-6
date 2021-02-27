@@ -7,10 +7,10 @@
 #include <fstream>
 #include <sstream>
 
-#include <Factory.h>
-#include <Personal.h>
-#include <Engineer.h>
-#include <Manager.h>
+#include "Factory.h"
+#include "Personal.h"
+#include "Engineer.h"
+#include "Manager.h"
 
 std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
   std::vector<Employee*> res;
@@ -48,7 +48,7 @@ std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
         ss >> sal;
         ss >> project;
         res.push_back(new Tester(id, name, sal,
-                                 Project{project, (int) rand() % 200000}));
+                         Project{project, static_cast<int>(rand() % 200000)}));
 
       } else if (position == "Programmer") {
         unsigned int sal;
@@ -56,7 +56,7 @@ std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
         ss >> sal;
         ss >> project;
         res.push_back(new Programmer(id, name, sal,
-                                 Project{project, (int) rand() % 200000}));
+                         Project{project, static_cast<int>(rand() % 200000)}));
 
       } else if (position == "TeamLeader") {
         unsigned int sal;
@@ -64,20 +64,21 @@ std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
         ss >> sal;
         ss >> project;
         res.push_back(new TeamLeader(id, name, sal,
-                                     Project{project, (int) rand() % 200000}));
+                         Project{project, static_cast<int>(rand() % 200000)}));
 
       } else if (position == "PM") {
         std::string project;
         ss >> project;
         res.push_back(new ProjectManager(id, name,
-                                  Project{project, (int) rand() % 200000}));
+                         Project{project, static_cast<int>(rand() % 200000)}));
 
       } else if (position == "SM") {
         std::vector<Project> projects;
         std::string project;
         while (!ss.eof()) {
           ss >> project;
-          projects.emplace_back(Project{project, (int) rand() % 200000});
+          projects.emplace_back(Project{project,
+                                        static_cast<int>(rand() % 200000)});
         }
         res.push_back(new SeniorManager(id, name, projects));
       }
