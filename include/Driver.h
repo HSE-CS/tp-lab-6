@@ -14,4 +14,4 @@ class Driver : public Personal {
   [[nodiscard]] size_t calcBonus() const;
 };
 
-#endif //  INCLUDE_DRIVER_H_
+#endif  // INCLUDE_DRIVER_H_

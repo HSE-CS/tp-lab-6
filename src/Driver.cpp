@@ -17,5 +17,5 @@ size_t Driver::calc() const {
 }
 
 size_t Driver::calcBonus() const {
-  return (this->calcBase() / 10); //  Bonus is 10% from base payment
+  return (this->calcBase() / 10);  // Bonus is 10% from base payment
 }

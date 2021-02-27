@@ -12,4 +12,4 @@ class Cleaner : public Personal {
   [[nodiscard]] size_t calc() const;
 };
 
-#endif //  INCLUDE_CLEANER_H_
+#endif  // INCLUDE_CLEANER_H_
