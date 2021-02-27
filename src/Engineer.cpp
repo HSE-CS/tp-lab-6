@@ -9,13 +9,14 @@ void Engineer::printInfo() {
             << "PROJECT_STAFF: " << project.staff_num << std::endl;
 }
 uint32_t Engineer::calcBudgetPart(float part, uint32_t budget) {
-  return (uint32_t)(part * (float)budget);
+  return (uint32_t)(part * static_cast<float>(budget));
 }
 
 uint32_t Engineer::calcProAdditions() { return 0; }
 
 void Engineer::calc() {
-  payment = calcBudgetPart(1.0 / (float)project.staff_num, project.budget) +
+  payment = calcBudgetPart(1.0 / static_cast<float>(project.staff_num),
+                           project.budget) +
             calcProAdditions() + calcBase(salary, worktime);
 }
 
@@ -28,6 +29,7 @@ uint32_t TeamLeader::calcHeads() {
 }
 
 void TeamLeader::calc() {
-  payment = calcBudgetPart(1.0 / (float)project.staff_num, project.budget) +
+  payment = calcBudgetPart(1.0 / static_cast<float>(project.staff_num),
+                           project.budget) +
             calcProAdditions() + calcBase(salary, worktime) + calcHeads();
 }

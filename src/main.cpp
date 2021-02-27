@@ -8,8 +8,8 @@
 #include "Staff.h"
 
 // Format:
-//<id> <job> <first_name> <surname> [<salary>] [<number_of_projects>]
-//[<project_id>]
+// <id> <job> <first_name> <surname> [<salary>] [<number_of_projects>]
+// [<project_id>]
 
 std::vector<Employee*> makeStaff() {
   std::fstream staff("staff.txt");

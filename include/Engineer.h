@@ -1,5 +1,7 @@
 #pragma once
 
+#include <string>
+
 #include "Interfaces.h"
 #include "Staff.h"
 

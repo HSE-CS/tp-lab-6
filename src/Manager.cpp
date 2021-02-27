@@ -17,7 +17,7 @@ uint32_t ProjectManager::calcHeads() {
 }
 
 uint32_t ProjectManager::calcBudgetPart(float part, uint32_t budget) {
-  return (uint32_t)(part * (float)budget);
+  return static_cast<uint32_t>(part * static_cast<float>(budget));
 }
 
 uint32_t ProjectManager::calcProAdditions() { return MANAGER_PRO_ADDITIONS; }
@@ -32,7 +32,7 @@ void ProjectManager::calc() {
 void SeniorManager::calc() {
   uint32_t sum = 0;
   for (const auto& p : projects) {
-    sum += calcBudgetPart(1.0 / (float)p.staff_num, p.budget);
+    sum += calcBudgetPart(1.0 / static_cast<float>(p.staff_num), p.budget);
   }
   payment = calcHeads() + sum + calcProAdditions();
 }

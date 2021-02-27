@@ -11,7 +11,7 @@ class Employee {
   uint32_t payment;
 
  public:
-  void setWorkTime(size_t time) { worktime = time; };
+  void setWorkTime(size_t time) { worktime = time; }
   virtual void calc() = 0;
   virtual void printInfo();
   Employee(const uint32_t& id, const std::string& firstname,
