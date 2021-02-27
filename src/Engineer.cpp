@@ -1,3 +1,5 @@
+// Copyright [2021] <Roman Balayan>
+
 #include "Engineer.h"
 
 Engineer::Engineer(unsigned int id,
@@ -5,7 +7,7 @@ Engineer::Engineer(unsigned int id,
                    Position position,
                    unsigned int worktime,
                    unsigned int payment,
-                    unsigned int salary,
+                   unsigned int salary,
                    std::shared_ptr<Project> project)
     : Personal(id, name, position, worktime, payment, salary)
     , project(project) {

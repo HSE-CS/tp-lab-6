@@ -1,3 +1,5 @@
+// Copyright [2021] <Roman Balayan>
+
 #include "Employee.h"
 
 Employee::Employee(unsigned int id,

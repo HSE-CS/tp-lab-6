@@ -1,3 +1,5 @@
+// Copyright [2021] <Roman Balayan>
+
 #pragma once
 
 #include <string>
@@ -5,7 +7,7 @@
 #include "Interfaces.h"
 
 class Employee {
-public:
+ public:
     Employee(unsigned int id,
             std::string name,
             Position position,
@@ -15,7 +17,7 @@ public:
     void setPayment(unsigned int payment);
     virtual void calc() = 0;
     virtual void printInfo() = 0;
-protected:
+ protected:
     unsigned int id;
     std::string name;
     Position position;

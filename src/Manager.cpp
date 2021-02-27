@@ -1,3 +1,5 @@
+// Copyright [2021] <Roman Balayan>
+
 #include "Manager.h"
 
 ProjectManager::ProjectManager(unsigned int id,
@@ -5,7 +7,7 @@ ProjectManager::ProjectManager(unsigned int id,
                                Position position,
                                unsigned int worktime,
                                unsigned int payment,
-                               std::vector<std::shared_ptr<Project>>& projects)
+                         const std::vector<std::shared_ptr<Project>>& projects)
     : Employee(id, name, position, worktime, payment)
     , projects(projects) {
 
@@ -29,7 +31,7 @@ SeniorManager::SeniorManager(unsigned int id,
     std::string name,
     unsigned int worktime,
     unsigned int payment,
-    std::vector<std::shared_ptr<Project>>& projects)
+    const std::vector<std::shared_ptr<Project>>& projects)
     : ProjectManager(id,
                     name,
                     Position::SeniorManager,

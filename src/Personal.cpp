@@ -1,7 +1,8 @@
+// Copyright [2021] <Roman Balayan>
+
 #include "Personal.h"
 
-int Personal::calcBase(int salary, int wtime)
-{
+int Personal::calcBase(int salary, int wtime) {
     return salary * wtime;
 }
 
@@ -25,8 +26,7 @@ Driver::Driver(unsigned int id,
 
 }
 
-int Driver::calcBonus()
-{
+int Driver::calcBonus() {
     if (this->worktime > 6 * 20)
         return 10 * (this->worktime - 6 * 20);
     return 0;

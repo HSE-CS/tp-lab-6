@@ -1,3 +1,5 @@
+// Copyright [2021] <Roman Balayan>
+
 #include <iostream>
 #include "Employee.h"
 
