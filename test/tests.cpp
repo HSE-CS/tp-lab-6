@@ -55,7 +55,7 @@ TEST(Programmer, calc_bonus) {
   uint32_t id(1), salary(1), worktime(10);
   std::string firstname("A"), surname("B");
   Programmer p(id, firstname, surname, salary, project);
-  ASSERT_EQ(p.calcBonus(), BONUS);
+  ASSERT_EQ(p.calcBonus(), 0);
 }
 
 TEST(Programmer, calc_pro_additions) {
@@ -86,7 +86,7 @@ TEST(Tester, calc_bonus) {
   uint32_t id(1), salary(1), worktime(10);
   std::string firstname("A"), surname("B");
   Tester p(id, firstname, surname, salary, project);
-  ASSERT_EQ(p.calcBonus(), BONUS);
+  ASSERT_EQ(p.calcBonus(), 0);
 }
 
 TEST(Tester, calc_pro_additons) {
@@ -109,7 +109,7 @@ TEST(TeamLeader, calc_bonus) {
   uint32_t id(1), salary(1), worktime(10);
   std::string firstname("A"), surname("B");
   TeamLeader p(id, firstname, surname, salary, project);
-  ASSERT_EQ(p.calcBonus(), BONUS);
+  ASSERT_EQ(p.calcBonus(), 0);
 }
 
 TEST(TeamLeader, calc_pro_additons) {

@@ -13,7 +13,11 @@ void ProjectManager::printInfo() {
   }
 }
 uint32_t ProjectManager::calcHeads() {
-  return projects.front().staff_num * MANAGER_PER_HEAD;
+  uint32_t heading_sum = 0;
+  for (const auto& p : projects) {
+    heading_sum += p.staff_num * MANAGER_PER_HEAD;
+  }
+  return heading_sum;
 }
 
 uint32_t ProjectManager::calcBudgetPart(float part, uint32_t budget) {
@@ -24,7 +28,7 @@ uint32_t ProjectManager::calcProAdditions() { return MANAGER_PRO_ADDITIONS; }
 
 void ProjectManager::calc() {
   payment = calcHeads() +
-            calcBudgetPart(1.0 / (float)projects.front().staff_num,
+            calcBudgetPart(1.0 / static_cast<float>(projects.front().staff_num),
                            projects.front().budget) +
             calcProAdditions();
 }
