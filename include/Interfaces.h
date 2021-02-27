@@ -22,7 +22,6 @@ class Project {
         : id(id)
         , budget(budget)
         , title(title) {
-
     }
     unsigned int id;
     unsigned int budget;

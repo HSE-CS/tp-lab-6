@@ -10,7 +10,7 @@
 
 class Factory {
  public:
-    Factory(std::string filename);
+    explicit Factory(std::string filename);
     std::vector<std::unique_ptr<Employee> > getEmployees();
  private:
     std::string filename;

@@ -11,7 +11,6 @@ Engineer::Engineer(unsigned int id,
                    std::shared_ptr<Project> project)
     : Personal(id, name, position, worktime, payment, salary)
     , project(project) {
-
 }
 
 int Engineer::calcBudgetPart(float part, int budget) {
@@ -37,7 +36,6 @@ Programmer::Programmer(unsigned int id,
                 payment,
                 salary,
                 project) {
-
 }
 
 int Programmer::calcProAdditions() {
@@ -62,7 +60,6 @@ Tester::Tester(unsigned int id,
                 payment,
                 salary,
                 project) {
-
 }
 
 int Tester::calcProAdditions() {
@@ -74,7 +71,7 @@ void Tester::printInfo() {
 }
 
 int TeamLeader::calcHeads() {
-    return 1000;  // No instructions so just 1000 
+    return 1000;  // No instructions so just 1000
 }
 
 void TeamLeader::calc() {

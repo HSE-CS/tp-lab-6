@@ -12,7 +12,6 @@ Employee::Employee(unsigned int id,
     , position(position)
     , worktime(worktime)
     , payment(payment) {
-
 }
 
 void Employee::setWorkTime(unsigned int worktime) {

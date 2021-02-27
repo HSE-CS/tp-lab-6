@@ -10,7 +10,6 @@ ProjectManager::ProjectManager(unsigned int id,
                          const std::vector<std::shared_ptr<Project>>& projects)
     : Employee(id, name, position, worktime, payment)
     , projects(projects) {
-
 }
 
 int ProjectManager::calcHeads() {
@@ -38,7 +37,6 @@ SeniorManager::SeniorManager(unsigned int id,
                     worktime,
                     payment,
                     projects) {
-
 }
 
 void SeniorManager::calc() {

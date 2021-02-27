@@ -14,7 +14,6 @@ Personal::Personal(unsigned int id,
                     unsigned int salary)
     : Employee(id, name, position, worktime, payment)
     , salary(salary) {
-
 }
 
 Driver::Driver(unsigned int id,
@@ -23,7 +22,6 @@ Driver::Driver(unsigned int id,
     unsigned int payment,
     unsigned int salary)
     : Personal(id, name, Position::Driver, worktime, payment, salary) {
-
 }
 
 int Driver::calcBonus() {
@@ -46,7 +44,6 @@ Cleaner::Cleaner(unsigned int id,
     unsigned int payment,
     unsigned int salary)
     : Personal(id, name, Position::Cleaner, worktime, payment, salary) {
-
 }
 
 void Cleaner::calc() {

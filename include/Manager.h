@@ -20,9 +20,9 @@ class ProjectManager :  public Employee,
         unsigned int worktime,
         unsigned int payment,
         const std::vector<std::shared_ptr<Project> >& projects);
-    virtual int calcHeads() override;
-    virtual void calc() override;
-    virtual void printInfo() override;
+    int calcHeads() override;
+    void calc() override;
+    void printInfo() override;
  private:
     std::vector<std::shared_ptr<Project> > projects;
 };
@@ -34,8 +34,8 @@ class SeniorManager :  public ProjectManager {
         unsigned int worktime,
         unsigned int payment,
         const std::vector<std::shared_ptr<Project> >& projects);
-    virtual void calc() override;
-    virtual void printInfo() override;
+    void calc() override;
+    void printInfo() override;
  private:
     std::vector<std::shared_ptr<Project> > projects;
 };
