@@ -7,20 +7,20 @@
 #include <iostream>
 
 enum Position {
-  cleaner = 0,
-  driver = 1,
-  tester = 2,
-  programmer = 3,
-  teamleader = 4,
-  projectmanager = 5,
-  seniormanager = 6
+  cleaner,
+  driver,
+  tester,
+  programmer,
+  teamleader,
+  projectmanager,
+  seniormanager
 };
 
 class Employee {
  private:
   int id;
-  int payment;
-  int worktime;
+  int payment = 0;
+  int worktime = 0;
   std::string name;
   Position position;
 
@@ -29,7 +29,6 @@ class Employee {
     this->id = id;
     this->name = std::move(name);
   }
-  Employee() { }
   int getId();
   int getPayment();
   int getWorktime();
