@@ -78,8 +78,8 @@ TEST(TestEngineer, TestProject2) {
 }
 
 TEST(TestFactory, TestId) {
-  Factory factory(std::string("projects_data.txt"),
-                  std::string("employees.txt"));
+  Factory factory(std::string("../src/projects_data.txt"),
+                  std::string("../src/employees.txt"));
 
   factory.makeProjects();
   factory.makeStaff();
@@ -88,8 +88,8 @@ TEST(TestFactory, TestId) {
 }
 
 TEST(TestFactory, TestName) {
-  Factory factory(std::string("projects_data.txt"),
-                  std::string("employees.txt"));
+  Factory factory(std::string("../src/projects_data.txt"),
+                  std::string("../src/employees.txt"));
 
   factory.makeProjects();
   factory.makeStaff();
@@ -98,8 +98,8 @@ TEST(TestFactory, TestName) {
 }
 
 TEST(TestFactory, TestCalc) {
-  Factory factory(std::string("projects_data.txt"),
-                  std::string("employees.txt"));
+  Factory factory(std::string("../src/projects_data.txt"),
+                  std::string("../src/employees.txt"));
 
   factory.makeProjects();
   factory.makeStaff();
