@@ -9,7 +9,7 @@ std::vector<Employee* > Factory::getEmployees() {
     std::vector<Employee* > employees;
     std::ifstream in(this->filename);
     auto rows = this->getNextLineAndSplitIntoTokens(in);
-    int projectsID = 0; // it could be done better but idc
+    int projectsID = 0;  // it could be done better but idc
     for (auto row : rows) {
         auto id = std::atoi(row[0].c_str());
         auto name = row[1];
@@ -28,23 +28,34 @@ std::vector<Employee* > Factory::getEmployees() {
             auto projTitle = row[5];
             int projID = projectsID++;
             auto projBudget = std::atoi(row[6].c_str());
-            std::shared_ptr<Project> proj = std::make_shared<Project>(projID, projBudget, projTitle);
-            Employee* emp = new Programmer(id, name, Position::Programmer, worktime, 0, salary, proj);
+            std::shared_ptr<Project> proj = std::make_shared<Project>
+                                    (projID, projBudget, projTitle);
+            Employee* emp = new Programmer(id,
+                                            name,
+                                            Position::Programmer,
+                                            worktime,
+                                            0,
+                                            salary,
+                                            proj);
             employees.push_back(emp);
         } else if (position == "Tester") {
             auto salary = std::atoi(row[4].c_str());
             auto projTitle = row[5];
             int projID = projectsID++;
             auto projBudget = std::atoi(row[6].c_str());
-            std::shared_ptr<Project> proj = std::make_shared<Project>(projID, projBudget, projTitle);
-            Employee* emp = new Tester(id, name, Position::Tester, worktime, 0, salary, proj);
+            std::shared_ptr<Project> proj = std::make_shared<Project>
+                                        (projID, projBudget, projTitle);
+            Employee* emp = new Tester(id,
+                                        name,
+                                        Position::Tester,
+                                        worktime,
+                                        0,
+                                        salary,
+                                        proj);
             employees.push_back(emp);
         } else if (position == "ProjectManager") {
-
         } else if (position == "SeniorManager") {
-
         } else if (position == "TeamLeader") {
-
         }
 
         for (auto cell : row)
@@ -55,15 +66,13 @@ std::vector<Employee* > Factory::getEmployees() {
     return employees;
 }
 
-std::vector<std::vector<std::string> > Factory::getNextLineAndSplitIntoTokens(std::istream& str)
-{
+std::vector<std::vector<std::string> > Factory::getNextLineAndSplitIntoTokens(std::istream& str) {
     std::vector<std::vector<std::string> > result;
     std::string line;
 
     std::string cell;
     std::vector<std::string > row;
-    while (std::getline(str, cell, ':'))
-    {
+    while (std::getline(str, cell, ':')) {
         if (cell == "end") {
             result.push_back(row);
             row.clear();

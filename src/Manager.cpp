@@ -23,7 +23,9 @@ void ProjectManager::calc() {
 }
 
 void ProjectManager::printInfo() {
-    std::cout << this->name << " [ProjectManager] payment: " << this->payment << "\n";
+    std::cout << this->name
+              << " [ProjectManager] payment: "
+              << this->payment << "\n";
 }
 
 SeniorManager::SeniorManager(unsigned int id,
@@ -47,5 +49,7 @@ void SeniorManager::calc() {
 }
 
 void SeniorManager::printInfo() {
-    std::cout << this->name << " [SeniorManager] payment: " << this->payment << "\n";
+    std::cout << this->name
+              << " [SeniorManager] payment: "
+              << this->payment << "\n";
 }

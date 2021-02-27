@@ -43,7 +43,9 @@ int Programmer::calcProAdditions() {
 }
 
 void Programmer::printInfo() {
-    std::cout << this->name << " [Programmer] payment: " << this->payment << "\n";
+    std::cout << this->name
+              << " [Programmer] payment: "
+              << this->payment << "\n";
 }
 
 Tester::Tester(unsigned int id,

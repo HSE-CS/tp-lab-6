@@ -17,7 +17,8 @@ class Factory {
  public:
     explicit Factory(std::string filename);
     std::vector<Employee* > getEmployees();
-    std::vector<std::vector<std::string> > getNextLineAndSplitIntoTokens(std::istream& str);
+    std::vector<std::vector<std::string> > getNextLineAndSplitIntoTokens
+                                                    (std::istream& str);
  private:
     std::string filename;
 };
