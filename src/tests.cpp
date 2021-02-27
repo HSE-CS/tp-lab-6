@@ -1,4 +1,5 @@
-// Copyright 2021 GN
+// Copyright 2020 GHA Test Team
+
 #include <gtest/gtest.h>
 #include <string>
 #include "Factory.h"
