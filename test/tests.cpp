@@ -16,7 +16,7 @@ TEST(TestProgrammer, Test_1) {
 }
 
 TEST(TestCleaner, Test_2) {
-	name_ = "Peter Ivanov";
+	std::string name_ = "Peter Ivanov";
 	Cleaner c(156, name_, 10000);
 	EXPECT_EQ(5, c.getPos());
 }
@@ -117,7 +117,7 @@ TEST(TestSeniorManager, Test_10) {
 }
 
 TEST(TestCleaner, Test_11) {
-	name_ = "Ivan Ivanov";
+	std::string name_ = "Ivan Ivanov";
 	Cleaner c(156, name_, 50);
 	c.setWorkTime(2);
 	c.calc();
@@ -125,7 +125,7 @@ TEST(TestCleaner, Test_11) {
 }
 
 TEST(TestDriver, Test_12) {
-	name_ = "Ivan Ivanov";
+	std::string name_ = "Ivan Ivanov";
 	Driver d(156, name_, 60);
 	d.setWorkTime(2);
 	d.addBonus();
