@@ -8,7 +8,7 @@
 #include <utility>
 #include <vector>
 
-size_t Engineer::calcBudgetPart(float part, int budget) {
+int Engineer::calcBudgetPart(float part, int budget) {
   return project->budget / static_cast<int>(part);
 }
 
@@ -22,7 +22,7 @@ void Engineer::printInfo() {
             << "\nFinal payment = " << this->calc() << std::endl;
 }
 
-size_t Tester::calcProAdditions() {
+int Tester::calcProAdditions() {
   return calcBase(get_salary(), get_worktime()) / 15;
 }
 
@@ -32,7 +32,7 @@ int Tester::calc() {
   return payment;
 }
 
-size_t Programmer::calcProAdditions() {
+int Programmer::calcProAdditions() {
   return calcBase(get_salary(), get_worktime()) / 10;
 }
 
@@ -42,7 +42,7 @@ int Programmer::calc() {
   return payment;
 }
 
-size_t TeamLeader::calcHeads() { return 15000; }
+int TeamLeader::calcHeads() { return 15000; }
 
 int TeamLeader::calc() {
   payment = calcBase(get_salary(), get_worktime()) + calcHeads() +

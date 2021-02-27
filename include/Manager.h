@@ -20,10 +20,10 @@ class ProjectManager : public Heading, public Employee, public ProjectBudget {
       : Employee(id, name, position, payment, worktime) {
     for (int i = 0; i < num_of_projects; i++) project.push_back(_projects[i]);
   }
-  size_t calcBudgetPart(float part, int budget);
-  size_t calcHeads();
+  int calcBudgetPart(float part, int budget);
+  int calcHeads();
   int calc();
-  size_t calcProAdditions();
+  int calcProAdditions();
   void printInfo();
 };
 

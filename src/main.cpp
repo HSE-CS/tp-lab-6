@@ -17,7 +17,7 @@ int main() {
    Tester* pers3 = new Tester(3, "Kadykov", "Tester", 1200, 10, &num1, 6);
    pers3->set_salary(1000);
    size_t sum = pers3->calcProAdditions();
-   std::cout <<sum<< '\n';
+   std::cout << "sum = "<<sum<< '\n';
    pers3->printInfo();
    std::vector<Project*> projects;
    Project num2 = {50, "rabota2", 93930};
@@ -28,9 +28,20 @@ int main() {
        4, "Rokin Maks", "Project Manager", 2, 100000, 10, projects);
   
    manager->printInfo();
+
+   std::cout << '\n';
+   std::cout << '\n';
+   std::cout << manager->calcHeads() << '\n';
+   std::cout << manager->calcProAdditions() << '\n';
+   std::cout << manager->calc() << '\n';
+   std::cout << manager->get_payment() << '\n';
+   std::cout << manager->get_position()<< '\n';
+   std::cout << '\n';
    std::cout << '\n';
    std:: cout << num2.name << '\n';
    std:: cout << num3.name << '\n';
+   std:: cout << num3.id << '\n';
+   std:: cout << num3.budget << '\n';
    std::cout << '\n';
 
      Driver* pers4 = new Driver(2, "Danil", "Driver", 500, 6);

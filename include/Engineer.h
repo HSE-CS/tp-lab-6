@@ -29,7 +29,7 @@ class Engineer : public Personal, public ProjectBudget {
 
   void printInfo();
   float getPart();
-  size_t calcBudgetPart(float part, int budget);
+  int calcBudgetPart(float part, int budget);
 };
 
 class Tester : public Engineer {
@@ -37,7 +37,7 @@ class Tester : public Engineer {
   Tester(int id, const std::string name, std::string position, int salary,
          int worktime, Project* project, float part)
       : Engineer(id, name, position, salary, worktime, project, part) {}
-  size_t calcProAdditions();
+  int calcProAdditions();
   int calc();
 };
 
@@ -46,7 +46,7 @@ class Programmer : public Engineer {
   Programmer(int id, const std::string name, std::string position, int salary,
              int worktime, Project* project, float part)
       : Engineer(id, name, position, salary, worktime, project, part) {}
-  size_t calcProAdditions();
+  int calcProAdditions();
   int calc();
 };
 
@@ -55,7 +55,7 @@ class TeamLeader : public Programmer, public Heading {
   TeamLeader(int id, const std::string name, std::string position, int salary,
              int worktime, Project* project, float part)
       : Programmer(id, name, position, salary, worktime, project, part) {}
-  size_t calcHeads();
+  int calcHeads();
   int calc();
 };
 

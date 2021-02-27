@@ -7,13 +7,13 @@
 
 #include "Engineer.h"
 
-size_t ProjectManager::calcHeads() { return 1000; }
-size_t ProjectManager::calcProAdditions() { return calcHeads(); }
+int ProjectManager::calcHeads() { return 1000; }
+int ProjectManager::calcProAdditions() { return calcHeads(); }
 int ProjectManager::calc() {
   return get_payment() * get_worktime() + calcProAdditions() + calcHeads();
 }
 
-size_t ProjectManager::calcBudgetPart(float part, int budget) {
+int ProjectManager::calcBudgetPart(float part, int budget) {
   return budget * part;
 }
 void ProjectManager::printInfo() {
