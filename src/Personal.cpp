@@ -18,7 +18,7 @@ int Personal::get_salary() {
 }
 
 int Driver::calcBonus() {
-    return (this->get_worktime() * this->get_salary()*0,2);
+    return (this->get_worktime() * this->get_salary()*0, 2);
 }
 int Driver::calc() {
   return (this->calcBase(get_worktime(), get_salary()) + this->calcBonus());

@@ -3,13 +3,13 @@
 #include "Employee.h"
 
 void Employee::set_id(int id) {
-	this->id = id;
+    this->id = id;
 }
 void Employee::set_name(std::string& name) {
-	this->name = name;
+    this->name = name;
 }
 void Employee::set_worktime(int worktime) {
-	this->worktime = worktime;
+    this->worktime = worktime;
 }
 void Employee::set_position(std::string& position) {
   if ((position != "Engineer") && (position != "Cleaner") &&

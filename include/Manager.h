@@ -33,8 +33,8 @@ class SeniorManager : public ProjectManager {
 
  public:
   SeniorManager(int id, std::string name, std::string position,
-                int num_of_projects, 
-                int worktime, int payment, std::vector<Project*> &project)
+                int num_of_projects, int worktime, int payment,
+                std::vector<Project *> &project)
       : ProjectManager(id, name, position, num_of_projects, payment, worktime,
                        project) {}
   int calc();

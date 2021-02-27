@@ -1,6 +1,6 @@
 // Copyright 2021 Elise
-#ifndef INCLUDE_ENGINEER_H
-#define INCLUDE_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include <cstring>
 #include <fstream>
@@ -59,4 +59,4 @@ class TeamLeader : public Programmer, public Heading {
   int calc();
 };
 
-#endif  // INCLUDE_ENGINEER_H
+#endif  // INCLUDE_ENGINEER_H_

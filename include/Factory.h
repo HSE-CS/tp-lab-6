@@ -1,6 +1,6 @@
 // Copyright 2021 Elise
-#ifndef INCLUDE_FACTORYH
-#define INCLUDE_FACTORYH
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <string>
 #include <utility>
@@ -17,4 +17,4 @@ class Project {
       : id(id), name(std::move(name)), budget(budget) {}
 };
 
-#endif  // INCLUDE_FACTORYH
+#endif  // INCLUDE_FACTORY_H_
