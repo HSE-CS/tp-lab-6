@@ -1,0 +1,156 @@
+1
+Twilight Sparkle Pony
+PROJECT_MANAGER
+100
+2
+10
+2
+Flutter Shy Pony
+PROJECT_MANAGER
+100
+2
+10
+3
+Flutter Shy Second
+SENIOR_MANAGER
+150
+4
+10
+4
+Ra Rity Pony
+TEAM_LEADER
+150
+1
+10
+5
+Pinkie Pie Pony
+TEAM_LEADER
+150
+2
+10
+6
+Rainbow Dash Second
+TEAM_LEADER
+150
+3
+10
+7
+S Pike Pony
+TEAM_LEADER
+150
+4
+10
+8
+Bulba Saur Poke
+PROGRAMMER
+150
+1
+10
+9
+Venu Saur Poke
+PROGRAMMER
+150
+1
+10
+10
+Venu Saur Second
+PROGRAMMER
+150
+1
+10
+11
+Char Mander Poke
+PROGRAMMER
+150
+1
+10
+12
+Char Mander Second
+PROGRAMMER
+150
+2
+10
+13
+Chari Zard Poke
+PROGRAMMER
+150
+2
+10
+14
+S Quirtle Second
+PROGRAMMER
+150
+2
+10
+15
+War Tortle Poke
+PROGRAMMER
+150
+2
+10
+16
+Bumble Bee Tr
+PROGRAMMER
+150
+3
+10
+17
+Wheel Jack Tr
+PROGRAMMER
+150
+3
+10
+18
+Prowl Empty Tr
+PROGRAMMER
+150
+3
+10
+19
+Iron Hide Tr
+PROGRAMMER
+150
+3
+10
+20
+Spring Er Tr
+PROGRAMMER
+150
+4
+10
+21
+Spring Er Second
+PROGRAMMER
+150
+4
+10
+22
+Rainbow Dash Pony
+PROGRAMMER
+150
+4
+10
+23
+Blur R Tr
+PROGRAMMER
+150
+4
+10
+24
+Will Blag Rove
+TESTER
+50
+0
+0
+25
+Wone Blag Rove
+CLEANER
+50
+0
+0
+26
+God Bless You
+DRIVER
+50
+0
+0
