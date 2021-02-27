@@ -15,7 +15,7 @@ int main() {
   Tester* pers3 = new Tester(3, "Kadykov", "Tester", 1200, 10, &num1, 6);
   pers3->set_salary(1000);
   size_t sum = pers3->calcProAdditions();
-  std::cout << "sum = "<<sum<< '\n';
+  std::cout << "sum = "<< sum<< '\n';
   pers3->printInfo();
   std::vector<Project*> projects;
   Project num2 = {50, "rabota2", 93930};
