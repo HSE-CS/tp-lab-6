@@ -6,10 +6,17 @@
 
 #include "gtest/gtest.h"
 
-TEST(TestPersonal, TestCalc) {
+TEST(TestPersonal, TestCalc1) {
   Personal person(1, std::string("Andrey Bakurskii"), std::string("Developer"),
                   30, 10);
   EXPECT_EQ(300, person.calc());
+}
+
+TEST(TestPersonal, TestCalc2) {
+  Personal person(1, std::string("Andrey Bakurskii"), std::string("Developer"),
+                  30, 10);
+  person.setWorktime(50);
+  EXPECT_EQ(650, person.calc());
 }
 
 TEST(TestPersonal, TestId) {
@@ -49,10 +56,17 @@ TEST(TestPersonal, TestWorktime2) {
   EXPECT_EQ(40, person.getWorktime());
 }
 
-TEST(TestPersonal, TestCalcBase) {
+TEST(TestPersonal, TestCalcBase1) {
   Personal person(1, std::string("Andrey Bakurskii"), std::string("Developer"),
                   30, 10);
   EXPECT_EQ(300, person.calcBase(person.getPayment(), person.getWorktime()));
+}
+
+TEST(TestPersonal, TestCalcBase2) {
+  Personal person(1, std::string("Andrey Bakurskii"), std::string("Developer"),
+                  30, 10);
+  person.setWorktime(50);
+  EXPECT_EQ(500, person.calcBase(person.getPayment(), person.getWorktime()));
 }
 
 TEST(TestPersonal, TestCalcBonus1) {
@@ -77,42 +91,18 @@ TEST(TestEngineer, TestProject2) {
   EXPECT_EQ(500000, pr.budget);
 }
 
-TEST(TestFactory, TestId) {
-  Factory factory(std::string("../src/projects_data.txt"),
-                  std::string("../src/employees.txt"));
-
+TEST(TestFactory, TestSizeEmployees) {
+  Factory factory(std::string(""), std::string(""));
   factory.makeProjects();
   factory.makeStaff();
 
-  EXPECT_EQ(1, factory.employees[0]->getId());
+  EXPECT_EQ(0, factory.employees.size());
 }
 
-TEST(TestFactory, TestName) {
-  Factory factory(std::string("../src/projects_data.txt"),
-                  std::string("../src/employees.txt"));
-
+TEST(TestFactory, TestSizeProjects) {
+  Factory factory(std::string(""), std::string(""));
   factory.makeProjects();
   factory.makeStaff();
 
-  EXPECT_EQ(std::string("AndreyBakurskii"), factory.employees[0]->getName());
-}
-
-TEST(TestFactory, TestCalc) {
-  Factory factory(std::string("../src/projects_data.txt"),
-                  std::string("../src/employees.txt"));
-
-  factory.makeProjects();
-  factory.makeStaff();
-
-  EXPECT_EQ(15500, factory.employees[0]->calc());
-}
-
-TEST(TestFactory, TestPosition) {
-  Factory factory(std::string("../src/projects_data.txt"),
-                  std::string("../src/employees.txt"));
-
-  factory.makeProjects();
-  factory.makeStaff();
-
-  EXPECT_EQ(std::string("TeamLeader"), factory.employees[0]->getPosition());
+  EXPECT_EQ(0, factory.projects.size());
 }
