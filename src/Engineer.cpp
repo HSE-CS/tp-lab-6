@@ -1,3 +1,4 @@
+// Copyright 2021 Rogov Andrey
 #include "Engineer.h"
 #include <iostream>
 void Engineer::printInfo() {

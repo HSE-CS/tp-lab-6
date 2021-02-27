@@ -1,3 +1,4 @@
+// Copyright 2021 Rogov Andrey
 #include <fstream>
 #include <iostream>
 #include <map>
@@ -14,7 +15,7 @@ std::vector<Employee*> makeStaff() {
     while (!projects_file.eof()) {
         uint32_t id, budget, staff_num;
         projects_file >> id >> budget >> staff_num;
-        Project p = Project{ .id = id, .budget = budget, .staff_num = staff_num };
+        Project p=Project{.id=id,.budget=budget,.staff_num=staff_num};
         projects[id] = p;
     }
     while (!staff.eof()) {
@@ -25,31 +26,26 @@ std::vector<Employee*> makeStaff() {
             staff >> salary;
             Janitor* ptr = new Janitor(id, firstname, surname, salary);
             output.push_back(ptr);
-        }
-        else if (job == "Driver") {
+        } else if (job == "Driver") {
             staff >> salary;
             Driver* ptr = new Driver(id, firstname, surname, salary);
             output.push_back(ptr);
-        }
-        else if (job == "Programmer") {
+        } else if (job == "Programmer") {
             staff >> salary >> project_id;
             Programmer* ptr =
                 new Programmer(id, firstname, surname, salary, projects[project_id]);
             output.push_back(ptr);
-        }
-        else if (job == "Tester") {
+        }  else if (job == "Tester") {
             staff >> salary >> project_id;
             Tester* ptr =
                 new Tester(id, firstname, surname, salary, projects[project_id]);
             output.push_back(ptr);
-        }
-        else if (job == "ProjectManager") {
+        }else if (job == "ProjectManager") {
             staff >> project_id;
             ProjectManager* ptr =
                 new ProjectManager(id, firstname, surname, projects[project_id]);
             output.push_back(ptr);
-        }
-        else if (job == "SeniorManager") {
+        }  else if (job == "SeniorManager") {
             uint32_t project_num;
             staff >> project_num;
             std::vector<Project> senior_projects;
@@ -60,8 +56,7 @@ std::vector<Employee*> makeStaff() {
             SeniorManager* ptr =
                 new SeniorManager(id, firstname, surname, senior_projects);
             output.push_back(ptr);
-        }
-        else if (job == "TeamLeader") {
+        } else if (job == "TeamLeader") {
             staff >> salary >> project_id;
             TeamLeader* ptr =
                 new TeamLeader(id, firstname, surname, salary, projects[project_id]);

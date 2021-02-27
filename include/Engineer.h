@@ -9,16 +9,16 @@ const uint32_t TESTER_PRO_ADDITIONS = 15;
 const uint32_t PROGRAMMER_PRO_ADDITIONS = 25;
 const uint32_t TEAMLEADER_PER_HEAD = 5;
 class Engineer : public Staff, public ProjectBudget {
-protected:
-    Project project;
-public:
-    void calc() override;
-    uint32_t calcBudgetPart(float part, uint32_t budget) override;
-    uint32_t calcProAdditions() override;
-    Engineer(const uint32_t& id, const std::string& firstname,
-        const std::string& surname, uint32_t salary, Project project)
-        : Staff(id, firstname, surname, salary), project(project) {}
-    void printInfo();
+ protected:
+     Project project;
+ public:
+     void calc() override;
+     uint32_t calcBudgetPart(float part, uint32_t budget) override;
+     uint32_t calcProAdditions() override;
+     Engineer(const uint32_t& id, const std::string& firstname,
+         const std::string& surname, uint32_t salary, Project project)
+         : Staff(id, firstname, surname, salary), project(project) {}
+     void printInfo();
 };
 class Tester : public Engineer {
 public:

@@ -1,3 +1,4 @@
+// Copyright 2021 Rogov Andrey
 #include "Manager.h"
 #include <iostream>
 void ProjectManager::printInfo() {
