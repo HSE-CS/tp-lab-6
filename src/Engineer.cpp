@@ -43,7 +43,7 @@ int Programmer::calcProAdditions() {
 }
 
 void Programmer::printInfo() {
-    std::cout << "Programmer info:\n";
+    std::cout << this->name << " [Programmer] payment: " << this->payment << "\n";
 }
 
 Tester::Tester(unsigned int id,
@@ -67,7 +67,7 @@ int Tester::calcProAdditions() {
 }
 
 void Tester::printInfo() {
-    std::cout << "Tester info:\n";
+    std::cout << this->name << " [Tester] payment: " << this->payment << "\n";
 }
 
 int TeamLeader::calcHeads() {

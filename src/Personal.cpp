@@ -6,6 +6,10 @@ int Personal::calcBase(int salary, int wtime) {
     return salary * wtime;
 }
 
+int Personal::calcBonus() {
+    return 0;
+}
+
 Personal::Personal(unsigned int id,
                     std::string name,
                     Position position,
@@ -35,7 +39,7 @@ void Driver::calc() {
 }
 
 void Driver::printInfo() {
-    std::cout << "Driver info:\n";
+    std::cout << this->name << " [Driver] payment: " << this->payment << "\n";
 }
 
 Cleaner::Cleaner(unsigned int id,
@@ -51,5 +55,5 @@ void Cleaner::calc() {
 }
 
 void Cleaner::printInfo() {
-    std::cout << "Cleaner info:\n";
+    std::cout << this->name << " [Cleaner] payment: " << this->payment << "\n";
 }
