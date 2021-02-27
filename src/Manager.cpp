@@ -12,7 +12,7 @@ int ProjectManager::calc() {
     return getPayment() * getWorktime() + calcProAdditions();
 }
 int ProjectManager::calcBudgetPart(float part, int budget) {
-    return part * budget;
+    return static_cast<int>(part * budget);
 }
 int ProjectManager::calcProAdditions() {
     return ProjectManager::calcBudgetPart(0.2, project[0].budget);
