@@ -7,7 +7,7 @@
 #include <iostream>
 
 // class Personal
-Personal::Personal(id_t id, const std::string& name, unsigned int salary) :
+Personal::Personal(id_type id, const std::string& name, unsigned int salary) :
     Employee(id, name),
     _salary(salary)
   {}
@@ -20,7 +20,7 @@ int Personal::calc_base(int salary, int wt) {
 
 
 // class Cleaner
-Cleaner::Cleaner(id_t id, const std::string& name, unsigned int salary) :
+Cleaner::Cleaner(id_type id, const std::string& name, unsigned int salary) :
     Personal(id, name, salary)
     { _position = Position::Cleaner; }
 
@@ -43,7 +43,7 @@ void Cleaner::print_info() {
 
 
 // class Driver
-Driver::Driver(id_t id, const std::string& name, unsigned int salary) :
+Driver::Driver(id_type id, const std::string& name, unsigned int salary) :
     Personal(id, name, salary)
     { _position = Position::Driver; }
 

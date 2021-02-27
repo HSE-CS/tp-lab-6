@@ -7,7 +7,7 @@
 #include <iostream>
 
 // class ProjectManager
-ProjectManager::ProjectManager(id_t id, const std::string& name,
+ProjectManager::ProjectManager(id_type id, const std::string& name,
                                const Project& p)  : Employee(id, name),
                                                     _project(p)
   { _position = Position::ProjectManager; }
@@ -31,7 +31,7 @@ void ProjectManager::print_info() {
 
 
 // class SeniorManager
-SeniorManager::SeniorManager(id_t id, const std::string& name,
+SeniorManager::SeniorManager(id_type id, const std::string& name,
                              std::vector<Project> ps) :
                              ProjectManager(id, name, ps[0]),
                              _projects(ps)

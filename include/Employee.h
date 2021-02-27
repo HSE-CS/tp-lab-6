@@ -8,7 +8,7 @@
 
 #include <string>
 
-typedef uint64_t id_t;
+typedef uint64_t id_type;
 
 enum class Position {
   Driver,
@@ -29,7 +29,7 @@ struct Project {
 
 class Employee {
  public:
-  Employee(id_t id, const std::string& name);
+  Employee(id_type id, const std::string& name);
   virtual ~Employee() = default;
 
   void set_worktime(unsigned int wt);
@@ -40,7 +40,7 @@ class Employee {
   friend class StaffFactory;
 
  protected:
-  id_t _id;
+  id_type _id;
   std::string _name;
   Position _position;
   unsigned int _payment;

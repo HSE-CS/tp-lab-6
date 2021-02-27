@@ -7,7 +7,7 @@
 #include <iostream>
 
 // class Engineer
-Engineer::Engineer(id_t id, const std::string& name,
+Engineer::Engineer(id_type id, const std::string& name,
                    unsigned int salary,
                    const Project& p) :
 
@@ -27,7 +27,7 @@ void Engineer::calc() {
 
 
 // class Tester
-Tester::Tester(id_t id,
+Tester::Tester(id_type id,
                const std::string& name,
                unsigned int salary,
                const Project& p) : Engineer(id, name, salary, p)
@@ -52,7 +52,7 @@ void Tester::print_info() {
 
 
 // class Programmer
-Programmer::Programmer(id_t id,
+Programmer::Programmer(id_type id,
                        const std::string& name,
                        unsigned int salary,
                        const Project& p) : Engineer(id, name, salary, p)
@@ -77,7 +77,7 @@ void Programmer::print_info() {
 
 
 // class TeamLeader
-TeamLeader::TeamLeader(id_t id,
+TeamLeader::TeamLeader(id_type id,
                        const std::string& name,
                        unsigned int salary,
                        const Project& p) : Programmer(id, name, salary, p)

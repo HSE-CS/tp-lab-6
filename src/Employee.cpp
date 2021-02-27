@@ -4,7 +4,7 @@
 //
 #include "Employee.h"
 
-Employee::Employee(id_t id, const std::string& name) :
+Employee::Employee(id_type id, const std::string& name) :
     _id(id),
     _name(name),
     _payment(0),

@@ -13,7 +13,7 @@
 
 class Engineer : public Personal, public ProjectBudget {
  public:
-  Engineer(id_t id, const std::string& name,
+  Engineer(id_type id, const std::string& name,
            unsigned int salary,
            const Project& p);
   ~Engineer() override = default;
@@ -27,7 +27,7 @@ class Engineer : public Personal, public ProjectBudget {
 
 class Tester final : public Engineer {
  public:
-  Tester(id_t id, const std::string& name,
+  Tester(id_type id, const std::string& name,
          unsigned int salary,
          const Project& p);
 
@@ -38,7 +38,7 @@ class Tester final : public Engineer {
 
 class Programmer : public Engineer {
  public:
-  Programmer(id_t id, const std::string& name,
+  Programmer(id_type id, const std::string& name,
              unsigned int salary,
              const Project& p);
 
@@ -49,7 +49,7 @@ class Programmer : public Engineer {
 
 class TeamLeader final : public Programmer, public Heading {
  public:
-  TeamLeader(id_t id, const std::string& name,
+  TeamLeader(id_type id, const std::string& name,
              unsigned int salary,
              const Project& p);
 

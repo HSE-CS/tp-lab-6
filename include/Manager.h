@@ -13,7 +13,7 @@
 
 class ProjectManager : public Employee, public Heading {
  public:
-  ProjectManager(id_t id, const std::string& name, const Project& p);
+  ProjectManager(id_type id, const std::string& name, const Project& p);
   ~ProjectManager() override = default;
 
   void calc() override;
@@ -27,7 +27,7 @@ class ProjectManager : public Employee, public Heading {
 
 class SeniorManager final : public ProjectManager {
  public:
-  SeniorManager(id_t id, const std::string& name, std::vector<Project> ps);
+  SeniorManager(id_type id, const std::string& name, std::vector<Project> ps);
 
   void calc() override;
   void print_info() override;

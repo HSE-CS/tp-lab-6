@@ -12,7 +12,7 @@
 
 class Personal : public Employee, public WorkBaseTime {
  public:
-  Personal(id_t id, const std::string& name, unsigned int salary);
+  Personal(id_type id, const std::string& name, unsigned int salary);
   ~Personal() override = default;
   int calc_base(int salary, int wt) override;
 
@@ -22,7 +22,7 @@ class Personal : public Employee, public WorkBaseTime {
 
 class Cleaner final : public Personal {
  public:
-  Cleaner(id_t id, const std::string& name, unsigned int salary);
+  Cleaner(id_type id, const std::string& name, unsigned int salary);
 
   void calc() override;
   void print_info() override;
@@ -31,7 +31,7 @@ class Cleaner final : public Personal {
 
 class Driver final : public Personal {
  public:
-  Driver(id_t id, const std::string& name, unsigned int salary);
+  Driver(id_type id, const std::string& name, unsigned int salary);
 
   void calc() override;
   void print_info() override;
