@@ -4,45 +4,45 @@
 #include <string>
 #include "Interfaces.h"
 
-TEST(Test, test_1) {
-  Cleaner test(0, "Ivan", 8, 500);
-  EXPECT_EQ(0, test.getId());
-}
+// TEST(Test, test_1) {
+//   Cleaner test(0, "Ivan", 8, 500);
+//   EXPECT_EQ(0, test.getId());
+// }
 
-TEST(Test, test_2) {
-  Cleaner test(10, "Ivan", 8, 500);
-  EXPECT_EQ(10, test.getId());
-}
+// TEST(Test, test_2) {
+//   Cleaner test(10, "Ivan", 8, 500);
+//   EXPECT_EQ(10, test.getId());
+// }
 
-TEST(Test, test_3) {
-  Cleaner test(225, "Ivan", 8, 500);
-  EXPECT_EQ(225, test.getId());
-}
+// TEST(Test, test_3) {
+//   Cleaner test(225, "Ivan", 8, 500);
+//   EXPECT_EQ(225, test.getId());
+// }
 
-TEST(Test, test_4) {
-  Cleaner test(0, "Ivan", 8, 500);
-  EXPECT_EQ("Ivan", test.getName());
-}
+// TEST(Test, test_4) {
+//   Cleaner test(0, "Ivan", 8, 500);
+//   EXPECT_EQ("Ivan", test.getName());
+// }
 
-TEST(Test, test_5) {
-  Cleaner test(0, "Ivan", 8, 500);
-  EXPECT_EQ(8, test.getWorktime());
-}
+// TEST(Test, test_5) {
+//   Cleaner test(0, "Ivan", 8, 500);
+//   EXPECT_EQ(8, test.getWorktime());
+// }
 
-TEST(Test, test_6) {
-  Cleaner test(0, "Ivan", 8, 500);
-  EXPECT_EQ(500, test.getPayment());
-}
+// TEST(Test, test_6) {
+//   Cleaner test(0, "Ivan", 8, 500);
+//   EXPECT_EQ(500, test.getPayment());
+// }
 
-TEST(Test, test_7) {
-  Cleaner test(0, "Ivan", 8, 500);
-  EXPECT_EQ("CLEANER", test.getPosition());
-}
+// TEST(Test, test_7) {
+//   Cleaner test(0, "Ivan", 8, 500);
+//   EXPECT_EQ("CLEANER", test.getPosition());
+// }
 
-TEST(Test, test_8) {
-  Driver test(0, "Ivan", 8, 500);
-  EXPECT_EQ("DRIVER", test.getPosition());
-}
+// TEST(Test, test_8) {
+//   Driver test(0, "Ivan", 8, 500);
+//   EXPECT_EQ("DRIVER", test.getPosition());
+// }
 
 // TEST(ProjectTest, test_9) {
 //   Project test(15, 1000000);
