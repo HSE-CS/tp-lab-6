@@ -9,7 +9,8 @@ int Engineer::calcBudgetPart(float part_, int budget_) {
     return static_cast<int>(part_ * budget_);
 }
 void Engineer::calc() {
-    setPayment(calcBase(getSalary(), getWorkTime()) + calcBudgetPart(0.01, getProject()->budget) + calcProAdditions());
+    setPayment(calcBase(getSalary(), getWorkTime())
+        + calcBudgetPart(0.01, getProject()->budget) + calcProAdditions());
 }
 int Programmer::calcProAdditions() {
     if (bonus == 1) { return 10000; }
@@ -25,11 +26,13 @@ int TeamLeader::getSubordinates() {
     return subordinates;
 }
 void TeamLeader::calc() {
-    setPayment(calcBase(getSalary(), getWorkTime()) + calcBudgetPart(0.02, getProject()->budget) + calcHeads());
+    setPayment(calcBase(getSalary(), getWorkTime()) +
+        calcBudgetPart(0.02, getProject()->budget) + calcHeads());
 }
 int TeamLeader::calcHeads() {
     return getSubordinates() * 1000;
 }
 void Engineer::printInfo() {
-    std::cout << getName() + " " + std::to_string(getID()) + " " + getProject()->id;
+    std::cout << getName() + " " + std::to_string(getID())
+        + " " + getProject()->id;
 }

@@ -12,14 +12,15 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
     int subordinates = 0;
 
  public:
-    explicit ProjectManager(int id_, std::string name_, Project* project_) : Employee(id_, name_) {
+    explicit ProjectManager(int id_, std::string name_,
+        Project* project_) : Employee(id_, name_) {
         project = project_;
         spec = PROJECTMANAGER;
     }
     virtual int calcHeads();
     virtual void calc();
     virtual int calcBudgetPart(float part_, int budget_);
-    virtual int calcProAdditions() { return 0; };
+    virtual int calcProAdditions() { return 0; }
     virtual void printInfo();
     int getSubordinates();
     void addSubordinates() {
@@ -33,7 +34,8 @@ class SeniorManager : public ProjectManager {
     int subordinates = 0;
 
  public:
-    explicit SeniorManager(int id_, std::string name_, Project* project_) : ProjectManager(id_, name_, project_) {
+    explicit SeniorManager(int id_, std::string name_,
+        Project* project_) : ProjectManager(id_, name_, project_) {
         spec = SENIORMANAGER;
     }
     void addSubordinates() {

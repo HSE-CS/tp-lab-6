@@ -3,7 +3,6 @@
 #include <iostream>
 #include <sstream>
 #include <string>
-#include <iostream>
 #include <fstream>
 
 void Factory::createStaff() {
@@ -29,7 +28,8 @@ void Factory::createStaff() {
             pr.id = project;
             pr.budget = 100000;
             projects.push_back(&pr);
-            Programmer* tmp = new Programmer(std::stoi(id), name, std::stoi(salary), &pr);
+            Programmer* tmp = new Programmer(std::stoi(id),
+                name, std::stoi(salary), &pr);
             employees.push_back(tmp);
         }
 
@@ -39,7 +39,8 @@ void Factory::createStaff() {
             pr.id = project;
             pr.budget = 100000;
             projects.push_back(&pr);
-            Tester* tmp = new Tester(std::stoi(id), name, std::stoi(salary), &pr);
+            Tester* tmp = new Tester(std::stoi(id),
+                name, std::stoi(salary), &pr);
             employees.push_back(tmp);
         }
 
@@ -49,7 +50,8 @@ void Factory::createStaff() {
             pr.id = project;
             pr.budget = 100000;
             projects.push_back(&pr);
-            TeamLeader* tmp = new TeamLeader(std::stoi(id), name, std::stoi(salary), &pr);
+            TeamLeader* tmp = new TeamLeader(std::stoi(id),
+                name, std::stoi(salary), &pr);
             employees.push_back(tmp);
         }
 

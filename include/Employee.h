@@ -15,16 +15,16 @@ enum position {
 };
 
 class Employee {
-private:
+ private:
     int id;
     std::string name;
     int worktime = 0;
     int payment = 0;
 
-protected:
+ protected:
     position spec;
 
-public:
+ public:
     explicit Employee(int id_, std::string name_) {
         id = id_;
         name = name_;

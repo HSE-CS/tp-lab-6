@@ -69,7 +69,7 @@ class TeamLeader : public Programmer, public Heading {
     int getSubordinates();
     virtual int calcHeads();
     virtual void calc();
-    virtual int calcProAdditions() { return 0; };
+    virtual int calcProAdditions() { return 0; }
     void addSubordinate() {
         subordinates++;
     }

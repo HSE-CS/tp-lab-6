@@ -9,10 +9,10 @@
 
 class Factory {
  private:
-	 std::vector<Employee*>factory_employees;
+     std::vector<Employee*>factory_employees;
 
  public:
-	 void createStaff();
+     void createStaff();
 };
 
 #endif  // INCLUDE_FACTORY_H_

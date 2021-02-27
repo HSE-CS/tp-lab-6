@@ -8,17 +8,17 @@
 
 TEST(TestProgrammer, Test_1) {
     std::string name_ = "Ivanov Ivan";
-	Project project_1;
-	project_1.id = "project_1";
-	project_1.budget = 20000;
-	Programmer pr(10, name_, 70000, &project_1);
-	EXPECT_EQ(1, pr.getPos());
+    Project project_1;
+    project_1.id = "project_1";
+    project_1.budget = 20000;
+    Programmer pr(10, name_, 70000, &project_1);
+    EXPECT_EQ(1, pr.getPos());
 }
 
 TEST(TestCleaner, Test_2) {
-	std::string name_ = "Peter Ivanov";
-	Cleaner c(156, name_, 10000);
-	EXPECT_EQ(5, c.getPos());
+    std::string name_ = "Peter Ivanov";
+    Cleaner c(156, name_, 10000);
+    EXPECT_EQ(5, c.getPos());
 }
 
 TEST(TestProgrammer, Test_3) {
@@ -34,14 +34,14 @@ TEST(TestProgrammer, Test_3) {
 }
 
 TEST(TestProgrammer, Test_4) {
-	std::string name_ = "Ivanov Ivan";
-	Project project_1;
-	project_1.id = "project_1";
-	project_1.budget = 20000;
-	Programmer pr(10, name_, 100, &project_1);
-	pr.setWorkTime(2);
-	pr.calc();
-	EXPECT_EQ(400, pr.getPayment());
+    std::string name_ = "Ivanov Ivan";
+    Project project_1;
+    project_1.id = "project_1";
+    project_1.budget = 20000;
+    Programmer pr(10, name_, 100, &project_1);
+    pr.setWorkTime(2);
+    pr.calc();
+    EXPECT_EQ(400, pr.getPayment());
 }
 
 TEST(TestTester, Test_5) {
@@ -104,16 +104,16 @@ TEST(TestProjectManager, Test_9) {
 }
 
 TEST(TestSeniorManager, Test_10) {
-	std::string name_ = "Ivanov Ivan";
-	Project project_1;
-	project_1.id = "project_1";
-	project_1.budget = 2000000;
-	SeniorManager pr(10, name_, &project_1);
-	pr.setWorkTime(2);
-	pr.addSubordinates();
-	pr.addSubordinates();
-	pr.calc();
-	EXPECT_EQ(2100, pr.getPayment());
+    std::string name_ = "Ivanov Ivan";
+    Project project_1;
+    project_1.id = "project_1";
+    project_1.budget = 2000000;
+    SeniorManager pr(10, name_, &project_1);
+    pr.setWorkTime(2);
+    pr.addSubordinates();
+    pr.addSubordinates();
+    pr.calc();
+    EXPECT_EQ(2100, pr.getPayment());
 }
 
 TEST(TestCleaner, Test_11) {
@@ -125,11 +125,10 @@ TEST(TestCleaner, Test_11) {
 }
 
 TEST(TestDriver, Test_12) {
-	std::string name_ = "Ivan Ivanov";
-	Driver d(156, name_, 60);
-	d.setWorkTime(2);
-	d.addBonus();
-	d.calc();
-	EXPECT_EQ(220, d.getPayment());
+    std::string name_ = "Ivan Ivanov";
+    Driver d(156, name_, 60);
+    d.setWorkTime(2);
+    d.addBonus();
+    d.calc();
+    EXPECT_EQ(220, d.getPayment());
 }
-
