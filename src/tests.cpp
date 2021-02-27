@@ -1,5 +1,4 @@
 // Copyright 2021 GN
-
 #include <gtest/gtest.h>
 #include <string>
 #include "Factory.h"
