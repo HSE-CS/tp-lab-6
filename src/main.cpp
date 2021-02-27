@@ -15,7 +15,7 @@ std::vector<Employee*> makeStaff() {
     while (!projects_file.eof()) {
         uint32_t id, budget, staff_num;
         projects_file >> id >> budget >> staff_num;
-        Project p=Project{.id=id,.budget=budget,.staff_num=staff_num};
+        Project p = Project{.id = id, .budget = budget, .staff_num = staff_num};
         projects[id] = p;
     }
     while (!staff.eof()) {
@@ -40,7 +40,7 @@ std::vector<Employee*> makeStaff() {
             Tester* ptr =
                 new Tester(id, firstname, surname, salary, projects[project_id]);
             output.push_back(ptr);
-        }else if (job == "ProjectManager") {
+        } else if (job == "ProjectManager") {
             staff >> project_id;
             ProjectManager* ptr =
                 new ProjectManager(id, firstname, surname, projects[project_id]);

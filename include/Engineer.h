@@ -1,3 +1,4 @@
+// Copyright 2021 Rogov Andrey
 #pragma once
 
 #include <string>
@@ -21,21 +22,21 @@ class Engineer : public Staff, public ProjectBudget {
      void printInfo();
 };
 class Tester : public Engineer {
-public:
+ public:
     uint32_t calcProAdditions() override;
     Tester(const uint32_t& id, const std::string& firstname,
         const std::string& surname, uint32_t salary, Project project)
         : Engineer(id, firstname, surname, salary, project) {}
 };
 class Programmer : public Engineer {
-public:
+ public:
     uint32_t calcProAdditions() override;
     Programmer(const uint32_t& id, const std::string& firstname,
         const std::string& surname, uint32_t salary, Project project)
         : Engineer(id, firstname, surname, salary, project) {}
 };
 class TeamLeader : public Programmer, public Heading {
-public:
+ public:
     uint32_t calcHeads() override;
     TeamLeader(const uint32_t& id, const std::string& firstname,
         const std::string& surname, uint32_t salary, Project project)
