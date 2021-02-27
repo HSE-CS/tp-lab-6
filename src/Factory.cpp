@@ -66,7 +66,8 @@ std::vector<Employee* > Factory::getEmployees() {
     return employees;
 }
 
-std::vector<std::vector<std::string> > Factory::getNextLineAndSplitIntoTokens(std::istream& str) {
+std::vector<std::vector<std::string> > Factory::getNextLineAndSplitIntoTokens
+                                                        (std::istream& str) {
     std::vector<std::vector<std::string> > result;
     std::string line;
 
