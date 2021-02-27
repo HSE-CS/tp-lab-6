@@ -15,7 +15,7 @@ TEST(StaffDemoTest, test1) {
 TEST(StaffDemoTest, test2) {
   Cleaner c(123123, "John Doe", 1000);
 
-  EXPECT_EQ(c.calc_base(24, 2000), 48000);
+  EXPECT_EQ(c.calc_base(24, 2000), 2000);
 }
 
 TEST(StaffDemoTest, test3) {
@@ -28,13 +28,13 @@ TEST(StaffDemoTest, test3) {
 TEST(StaffDemoTest, test4) {
   Driver d(123123, "John Doe", 1000);
 
-  EXPECT_EQ(d.calc_base(1000, 12), 12000);
+  EXPECT_EQ(d.calc_base(1000, 12), 600);
 }
 
 TEST(StaffDemoTest, test5) {
   Tester t(21312321, "John Doe", 44000, {"13213", 200000});
 
-  EXPECT_EQ(t.calc_base(1000, 12), 12000);
+  EXPECT_EQ(t.calc_base(1000, 12), 600);
 }
 
 TEST(StaffDemoTest, test6) {
