@@ -16,22 +16,14 @@ void Engineer::printInfo() {
             << std::endl;
 }
 
-unsigned int Programmer::calcProAdditions() {
-  std::random_device rd;
-  std::mt19937 mersenne(rd());
-  return mersenne() % 5001;
-}
+unsigned int Programmer::calcProAdditions() { return 5000; }
 
 void Programmer::calc() {
   payment =
       calcBase() + calcBudgetPart(part, project->budget) + calcProAdditions();
 }
 
-unsigned int Tester::calcProAdditions() {
-  std::random_device rd;
-  std::mt19937 mersenne(rd());
-  return mersenne() % 10001;
-}
+unsigned int Tester::calcProAdditions() { return 10000; }
 
 void Tester::calc() {
   payment =
