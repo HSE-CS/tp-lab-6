@@ -27,8 +27,8 @@ class Engineer : public Personal, public ProjectBudget {
   unsigned int calcBonus();
   unsigned int calcProAdditions() override;
   unsigned int calcBudgetPart(double part, unsigned int budget) override;
-  void calc() override;
-  void printInfo() override;
+  void calc();
+  void printInfo();
 };
 
 class Programmer : public Engineer {
@@ -37,7 +37,7 @@ class Programmer : public Engineer {
   Programmer(int _id, std::string _name, int _salary, Project *_project,
              double _part);
   unsigned int calcProAdditions() override;
-  void calc() override;
+  void calc();
 };
 
 class Tester : public Engineer {
@@ -45,7 +45,7 @@ class Tester : public Engineer {
   Tester(int _id, std::string _name, int _salary, Project *_project,
          double _part);
   unsigned int calcProAdditions() override;
-  void calc() override;
+  void calc();
 };
 
 class TeamLeader : public Programmer, public Heading {
@@ -53,7 +53,7 @@ class TeamLeader : public Programmer, public Heading {
   TeamLeader(int _id, std::string _name, int _salary, Project *_project,
              double _part);
   unsigned int calcHeads() override;
-  void calc() override;
+  void calc();
 };
 
 #endif  // INCLUDE_ENGINEER_H_
