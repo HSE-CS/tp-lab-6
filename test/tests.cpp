@@ -54,7 +54,7 @@ TEST(Programmer, test6) {
                    Position(1), 190, &pr);
   pr.addWorker(&Vasya);
   Vasya.setWorkTime(150);
-  int expected = 132750;
+  int expected = 118500;
   int result = Vasya.getPayment();
   EXPECT_EQ(expected, result);
 }
@@ -65,7 +65,7 @@ TEST(Tester, test7) {
                Position(2), 100, &pr);
   pr.addWorker(&Vasya);
   Vasya.setWorkTime(200);
-  int expected = 70000;
+  int expected = 60000;
   int result = Vasya.getPayment();
   EXPECT_EQ(expected, result);
 }
