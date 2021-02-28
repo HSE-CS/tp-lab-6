@@ -166,7 +166,7 @@ TEST(Test, test13) {
     proj.setProjectName("Google 2");
     Programmer p1("Lazy zoomer", 3, &proj, PROGRAMMER, 100);
     p1.calc(8);
-    EXPECT_EQ(p1.getPayment(), 8000);
+    EXPECT_EQ(p1.getPayment(), 800);
 }
 
 TEST(Test, test14) {
