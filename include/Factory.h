@@ -27,7 +27,7 @@ class Project {
   std::vector<Engineer*> testers;
 
  public:
-  Project(unsigned _id, int _budget) : id(_id), budget(_budget){}
+  Project(unsigned _id, int _budget) : id(_id), budget(_budget) {}
   unsigned getProjectID();
   int getTesters();
   int getWorkers();

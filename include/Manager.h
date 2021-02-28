@@ -18,7 +18,7 @@ class ProjectManager : public Employee, public ProjectBudget, public Heading {
  public:
   ProjectManager(unsigned _id, std::string _name, Position _position,
                  Project* _proj)
-      : Employee(_id, _name, _position), proj(_proj){}
+      : Employee(_id, _name, _position), proj(_proj) {}
   int calcHeads() override;
   int calcProAdditions() override;
   int calcBudgetPart(float part, int budget) override;
@@ -32,7 +32,7 @@ class SeniorManager : public ProjectManager {
 
  public:
   SeniorManager(unsigned _id, std::string _name, Position _position)
-      : ProjectManager(_id, _name, _position, nullptr){}
+      : ProjectManager(_id, _name, _position, nullptr) {}
   ~SeniorManager() { progectList.clear(); }
   void addProject(Project* _proj);
   void calc();

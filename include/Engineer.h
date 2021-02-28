@@ -50,7 +50,7 @@ class TeamLeader : public Programmer, public Heading {
  public:
   TeamLeader(unsigned _id, std::string _name, Position _position, int _salary,
          Project* _project)
-      : Programmer(_id, _name, _position, _salary, _project){}
+      : Programmer(_id, _name, _position, _salary, _project) {}
   int calcHeads() override;
   void calc() override;
   void printInfo() override;
