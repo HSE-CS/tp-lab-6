@@ -13,7 +13,11 @@ TeamLeader::TeamLeader(unsigned int id, const std::string& name) : Programmer(id
 }
 
 unsigned TeamLeader::calcHeads() {
-    return ((this->linkToProject)->getNumberOfMembers() * 1759 / 2);
+    if (this->linkToProject) {
+        return ((this->linkToProject)->getNumberOfMembers() * 1759 / 2);
+    } else {
+        return 0;
+    }
 }
 void TeamLeader::calc() {
     this->payment = calcBase(this->salaryPerHour, this->worktime) + calcHeads() + calcProAdditions() + calcBudgetPart();

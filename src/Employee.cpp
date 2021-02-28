@@ -33,6 +33,10 @@ std::string Employee::convertPositionToString() {
     return "Unemployed";
 }
 
+unsigned int Employee::getPosition() {
+    return (this->position);
+}
+
 void Employee::setPosition(int numOfPosition) {
     this->position = static_cast<Position>(numOfPosition);
 }

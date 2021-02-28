@@ -35,6 +35,7 @@ class Employee {
     Employee(unsigned, const std::string&);
     void setWorkTime(unsigned);
     void setPosition(int);
+    unsigned getPosition();
     virtual void calc() = 0;
     virtual void printInfo() = 0;
 };

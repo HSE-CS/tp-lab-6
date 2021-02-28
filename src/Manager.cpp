@@ -15,7 +15,11 @@ void ProjectManager::setProject(Project* link) {
     this->linkToProject->addMember();
 }
 unsigned ProjectManager::calcHeads() {
-    return ((this->linkToProject)->getNumberOfMembers() * 1759 / 4);
+    if (this->linkToProject) {
+        return ((this->linkToProject)->getNumberOfMembers() * 1759 / 4);
+    } else {
+        return 0;
+    }
 }
 
 unsigned ProjectManager::calcBudgetPart() {
@@ -67,8 +71,10 @@ void SeniorManager::setProject(Project* link) {
 
 unsigned SeniorManager::calcHeads() {
     unsigned headsSalary = 0;
-    for (size_t i = 0; i < this->projects.size(); ++i) {
-        headsSalary += this->projects[i]->getNumberOfMembers() * 1759;
+    if (!(this->projects.empty())) {
+        for (size_t i = 0; i < this->projects.size(); ++i) {
+            headsSalary += this->projects[i]->getNumberOfMembers() * 1759;
+        }
     }
     return headsSalary;
 }

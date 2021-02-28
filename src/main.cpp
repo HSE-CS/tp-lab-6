@@ -6,13 +6,14 @@
 #include "Tester.h"
 #include "TeamLeader.h"
 #include "Project.h"
+#include "Factory.h"
 
 void delimiter() {
     std::cout << "==============================================" << std::endl;
 }
 
 int main () {
-    unsigned num = 0;
+    /*unsigned num = 0;
     ProjectManager managerObj(num, "Name1");
     managerObj.printInfo();
     ++num;
@@ -98,6 +99,34 @@ int main () {
     teamleadObj.setWorkTime(100);
     teamleadObj.setSalaryPerHour(220);
     teamleadObj.calc();
-    teamleadObj.printInfo();
+    teamleadObj.printInfo();*/
+    std::string pathFile;
+    std::cout << "Enter path to file" << std::endl;
+    std::cin >> pathFile;
+    std::vector<Employee*> company;
+    company = makeStaffVector(pathFile);
+    for (auto emp : company) {
+        (*emp).printInfo();
+        delimiter();
+    }
+    for (auto emp : company) {
+        emp->setWorkTime(std::rand()%121);
+    }
+    std::vector<Project*> projectVector;
+    for (size_t i = 0; i < 10; ++i) {
+        projectVector.push_back(new Project(i, 100000+(std::rand()%3000 - 1500)));
+    }
+    for (size_t i = 0; i < projectVector.size(); ++i){
+        projectVector[i]->printInfo();
+        delimiter();
+    }
+    for (auto emp : company) {
+        emp->calc();
+    }
+    /*for (auto emp : company) {
+        emp->printInfo();
+        delimiter();
+    }*/
+
     return 0;
 }

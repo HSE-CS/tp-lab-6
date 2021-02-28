@@ -15,6 +15,7 @@ class Engineer: public Personal, public ProjectBudget {
     unsigned additionalHours;
  public:
     Engineer(unsigned id, const std::string& name);
+    Project* getProjectLink();
     void setProject(Project* link);
     unsigned calcBudgetPart() override;
     unsigned calcBonus() final;
