@@ -7,7 +7,7 @@
 #include <string>
 
 class Engineer : public Personal, public IProjectBudget {
-public:
+ public:
   Project *myProject;
   float part;
 
@@ -21,7 +21,7 @@ public:
 };
 
 class Programmer : public Engineer {
-public:
+ public:
   Programmer(int id, std::string name, Position position, int salary,
              Project *myProject, float part)
       : Engineer(id, name, position, salary, myProject, part) {}
@@ -31,7 +31,7 @@ public:
 };
 
 class TeamLeader : public Programmer, public IHeading {
-public:
+ public:
   TeamLeader(int id, std::string name, Position position, int salary,
              Project *myProject, float part)
       : Programmer(id, name, position, salary, myProject, part) {}
@@ -41,7 +41,7 @@ public:
 };
 
 class Tester : public Programmer {
-public:
+ public:
   Tester(int id, std::string name, Position position, int salary,
          Project *myProject, float part)
       : Programmer(id, name, position, salary, myProject, part) {}
@@ -51,4 +51,4 @@ public:
   void calc() override;
 };
 
-#endif // INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_
