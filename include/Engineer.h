@@ -17,46 +17,46 @@ class Project;
 
 class Engineer : public Personal, public ProjectBudget {
 protected:
-	Project* project;
-	float part;
+    Project* project;
+    float part;
 
 public:
-	Engineer(int id, const std::string name, std::string position, int salary,
-		int worktime, Project* _project, float part)
-		: Personal(id, name, position, salary, worktime),
-		project(_project),
-		part(part) {}
+    Engineer(int id, const std::string name, std::string position, int salary,
+        int worktime, Project* _project, float part)
+        : Personal(id, name, position, salary, worktime),
+        project(_project),
+        part(part) {}
 
-	void printInfo();
-	float getPart();
-	int calcBudgetPart(float part, int budget);
+    void printInfo();
+    float getPart();
+    int calcBudgetPart(float part, int budget);
 };
 
 class Tester : public Engineer {
 public:
-	Tester(int id, const std::string name, std::string position, int salary,
-		int worktime, Project* project, float part)
-		: Engineer(id, name, position, salary, worktime, project, part) {}
-	int calcProAdditions();
-	int calc();
+    Tester(int id, const std::string name, std::string position, int salary,
+        int worktime, Project* project, float part)
+        : Engineer(id, name, position, salary, worktime, project, part) {}
+    int calcProAdditions();
+    int calc();
 };
 
 class Programmer : public Engineer {
 public:
-	Programmer(int id, const std::string name, std::string position, int salary,
-		int worktime, Project* project, float part)
-		: Engineer(id, name, position, salary, worktime, project, part) {}
-	int calcProAdditions();
-	int calc();
+    Programmer(int id, const std::string name, std::string position, int salary,
+        int worktime, Project* project, float part)
+        : Engineer(id, name, position, salary, worktime, project, part) {}
+    int calcProAdditions();
+    int calc();
 };
 
 class TeamLeader : public Programmer, public Heading {
 public:
-	TeamLeader(int id, const std::string name, std::string position, int salary,
-		int worktime, Project* project, float part)
-		: Programmer(id, name, position, salary, worktime, project, part) {}
-	int calcHeads();
-	int calc();
+    TeamLeader(int id, const std::string name, std::string position, int salary,
+        int worktime, Project* project, float part)
+        : Programmer(id, name, position, salary, worktime, project, part) {}
+    int calcHeads();
+    int calc();
 };
 
 #endif  // INCLUDE_ENGINEER_H_
