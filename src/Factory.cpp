@@ -20,13 +20,16 @@ Employee *make_employee(int id, const std::string &name, int work_time,
         return new Senior_Manager(id, name, work_time, pos, projects);
     } else if (pos_value == "team_leader") {
         auto pos = Positions(team_leader);
-        return new TeamLeader(id, name, work_time, salary, pos, projects[project]);
+        return new TeamLeader(id, name, work_time, salary, pos,
+                              projects[project]);
     } else if (pos_value == "programmer") {
         auto pos = Positions(programmer);
-        return new Programmer(id, name, work_time, salary, pos, projects[project]);
+        return new Programmer(id, name, work_time, salary, pos,
+                              projects[project]);
     } else if (pos_value == "tester") {
         auto pos = Positions(tester);
-        return new Tester(id, name, work_time, salary, pos, projects[project]);
+        return new Tester(id, name, work_time, salary, pos,
+                          projects[project]);
     } else if (pos_value == "cleaner") {
         auto pos = Positions(cleaner);
         return new Cleaner(id, name, work_time, salary, pos);
@@ -65,7 +68,8 @@ std::vector<Employee *> Factory_Staff::make_staff() {
             budget = atoi(templ.c_str());
             getline(data_Projects, templ);
             number_of_employees = atoi(templ.c_str());
-            projects.push_back(new Project(project_Id, budget, number_of_employees));
+            projects.push_back(new Project(project_Id, budget,
+                                           number_of_employees));
         }
     }
 
@@ -84,7 +88,8 @@ std::vector<Employee *> Factory_Staff::make_staff() {
             getline(data_Staff, templ);
             project_Id = atoi(templ.c_str());
             staff.push_back(
-                    make_employee(id, name, work_time, salary, posVal, project_Id, projects));
+                    make_employee(id, name, work_time, salary, posVal,
+                                  project_Id, projects));
         }
     }
     return staff;

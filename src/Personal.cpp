@@ -28,7 +28,8 @@ Driver::Driver(int id, std::string name,
 }
 
 int Driver::calc_salary() {
-    return this->payment = calc_base_salary(salary, work_time) + calc_bonus_salary();
+    return this->payment = calc_base_salary(salary, work_time) +
+            calc_bonus_salary();
 }
 int Driver::calc_bonus_salary(int bonus) {
     return bonus * salary;

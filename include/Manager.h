@@ -16,7 +16,6 @@ class Project_Manager : public Employee, public Heading, public Project_Budget {
     int calc_salary() override;
  protected:
     Project *project = nullptr;
-
 };
 class Senior_Manager : public Project_Manager {
  private:

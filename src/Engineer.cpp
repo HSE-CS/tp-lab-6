@@ -16,7 +16,8 @@ int Engineer::calc_budget_part() {
     }
 }
 int Engineer::calc_salary() {
-    return this->payment = calc_budget_part() + calc_base_salary(salary, work_time);
+    return this->payment = calc_budget_part() +
+            calc_base_salary(salary, work_time);
 }
 void Engineer::print_info() {
     std::cout << enum_print[this->position] << std::endl;
@@ -25,17 +26,13 @@ void Engineer::print_info() {
     std::cout << "Payment = " << this->payment << std::endl;
 }
 
-
-
-
-
-
 Programmer::Programmer(int id, std::string name,
                        int work_time, int salary, Positions position, Project *p)
         : Engineer(id, std::move(name), work_time, salary, position, p) {
 }
 int Programmer::calc_salary() {
-    return this->payment = calc_base_salary(salary, work_time) + calc_budget_part() +
+    return this->payment = calc_base_salary(salary, work_time) +
+            calc_budget_part() +
             calc_pro_additions();
 }
 int Programmer::calc_pro_additions(int bonus) {

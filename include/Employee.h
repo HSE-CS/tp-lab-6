@@ -45,7 +45,6 @@ class Employee {
                                            "cleaner",
                                            "driver",
                                            "tester"};
-
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_
