@@ -7,7 +7,7 @@
 
 Cleaner::Cleaner(int id, std::string name, std::string position,
                  int salary, int square)
-                : Personal(id, name, position, salary) {
+    : Personal(id, name, position, salary) {
   c_square = square;
 }
 int Cleaner::calcBonus() {

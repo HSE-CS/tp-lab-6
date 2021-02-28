@@ -11,7 +11,7 @@ class Tester : public Engineer {
  public:
   bool t_deadline;
   Tester(int id, std::string name, std::string position,
-         int salary, Project* project, 
+         int salary, Project* project,
          float part, bool Deadline);
   void calc() override;
   void printinfo() override;

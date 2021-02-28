@@ -37,7 +37,7 @@ void StaffFactory::readStaffFile() {
   sin.close();
 }
 Employee* StaffFactory::parseStaff(std::map<std::string,
-                                   std::string> inf_staff) {
+                                            std::string> inf_staff) {
   if (inf_staff["position"] == "Cleaner") {
     std::random_device rd;
     std::mt19937 randomSquare(rd());
@@ -88,7 +88,7 @@ Employee* StaffFactory::parseStaff(std::map<std::string,
     float t_part = std::stof(inf_staff["part"]);
     std::random_device rd;
     std::mt19937 CompleteTaskInDeadline(rd());  // 0 - нет, 1 - да
-    bool Deadline;static_cast<bool>(CompleteTaskInDeadline() % 2);
+    bool Deadline = static_cast<bool>(CompleteTaskInDeadline() % 2);
     Project* t_project = MakeProjects[project_id];
     temp_employee = new Tester(t_id, inf_staff["FIO"],
                                inf_staff["position"], t_salary,
@@ -99,10 +99,16 @@ Employee* StaffFactory::parseStaff(std::map<std::string,
     int project_id = std::stoi(inf_staff["project_id"]);
     int t_salary = std::stoi(inf_staff["salary"]);
     float t_part = std::stof(inf_staff["part"]);
+    std::random_device rd;
+    std::mt19937 CompleteTaskInDeadline(rd());  // 0 - нет, 1 - да
+    bool Deadline = static_cast<bool>(CompleteTaskInDeadline() % 2);
+    std::random_device rd_1;
+    std::mt19937 amountPeople(rd_1());  // 0 - нет, 1 - да
+    bool people = static_cast<bool>(amountPeople() % 2);
     Project* t_project = MakeProjects[project_id];
-    temp_employee = new Tester(t_id, inf_staff["FIO"],
+    temp_employee = new TeamLeader(t_id, inf_staff["FIO"],
                                inf_staff["position"], t_salary,
-                               t_project, t_part);
+                               t_project, t_part, Deadline, people);
     return temp_employee;
   } else if (inf_staff["position"] == "ProjectManager") {
     int t_id = std::stoi(inf_staff["id"]);

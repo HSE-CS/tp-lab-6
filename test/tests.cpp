@@ -1,6 +1,5 @@
 //  Copyright 2021 GHA created by Klykov Anton
 
-#include <gtest/gtest.h>
 #include "Driver.h"
 #include "Cleaner.h"
 #include "Engineer.h"
@@ -9,10 +8,12 @@
 #include "TeamLeader.h"
 #include "Manager.h"
 #include "Factory.h"
+#include <gtest/gtest.h>
 #include <vector>
+#include <string>
 
 TEST(DriverTest, TestPayment) {
-  Driver driver(0, "Иванов Иван Иванович", "Driver", 1500);
+  Driver driver(0, "Иванов Иван Иванович", "Driver", 1500, 5);
   driver.setWorkTime();
   int amountWorkTime = driver.getWorkTime();
   driver.calc();
@@ -23,7 +24,7 @@ TEST(DriverTest, TestPayment) {
 
 TEST(CleanerTest, TestPayment) {
   Cleaner cleaner(1, "Тарантулова Татомара Татомаровна",
-                  "Cleaner", 1000);
+                  "Cleaner", 1000, 2);
   cleaner.setWorkTime();
   int amountWorkTime = cleaner.getWorkTime();
   int payment = 1000 * amountWorkTime;
@@ -45,7 +46,7 @@ TEST(EngineerTest, TestPayment) {
 TEST(ProgrammerTest, TestPayment) {
   Project project(1, 40000);
   Programmer programmer(3, "Чумачей Атаман Татаранович",
-                        "Programmer", 2500, &project, 0.25);
+                        "Programmer", 2500, &project, 0.25, true);
   programmer.setWorkTime();
   int amountWorkTime = programmer.getWorkTime();
   programmer.calc();
@@ -54,12 +55,12 @@ TEST(ProgrammerTest, TestPayment) {
                         static_cast<int>(0.25 * project.p_budget) +
                         AdditionalPayment;
   // Реальный заработок vs Возможный заработок
-  EXPECT_LE(programmer.getPayment(), PossiblePayment);
+  EXPECT_LE(programmer.getPayment(), PossiblePayment); 
 }
 TEST(TesterTest, TestPyment) {
   Project project(2, 30000);
   Tester tester(4, "Чуйка Атаман Чайконович",
-                "Tester", 2100, &project, 0.15);
+                "Tester", 2100, &project, 0.15, false);
   tester.setWorkTime();
   int amountWorkTime = tester.getWorkTime();
   tester.calc();
@@ -74,19 +75,19 @@ TEST(TesterTest, TestPyment) {
 TEST(TeamLeaderTest, TestPayment) {
   Project project(3, 50000);
   TeamLeader team_leader(5, "Чуйка Жук Жукович", "TeamLeader",
-                         3000, &project, 0.35);
+                         3000, &project, 0.35, true, 3);
   team_leader.setWorkTime();
   int amountWorkTime = team_leader.getWorkTime();
   team_leader.calc();
-  int HeadingPayment = 8000;
-  int PossiblePayment = 3000 * amountWorkTime +
+  int HeadingPayment = team_leader.calcHeads();
+  int PossiblePayment = 3000 * amountWorkTime + 
                         static_cast<int>(0.35 * project.p_budget) +
                         HeadingPayment;
   EXPECT_EQ(team_leader.getPayment(), PossiblePayment);
 }
 TEST(ProjectManagerTest, PaymentTest) {
   Project project(4, 100000);
-  ProjectManager project_manager(6, "Жукавинск Петр Алексеевич",
+  ProjectManager project_manager(6, "Жукавинск Петр Алексеевич", 
                                  "ProjectManager", &project, 0.5);
   project_manager.calc();
   int payment = project_manager.calcBudgetPart(0.5,
@@ -102,7 +103,7 @@ TEST(SenoirManagerTest, PaymentTest) {
     projects.push_back(temp);
     temp = nullptr;
   }
-  SeniorManager senior_manager(5, "Жувочка Евгения Фавевна",
+  SeniorManager senior_manager(5, "Жувочка Евгения Фавевна", 
                                "SeniorManager", projects[1],
                                 0.3, projects);
   senior_manager.calc();

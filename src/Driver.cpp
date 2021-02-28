@@ -7,7 +7,7 @@
 
 Driver::Driver(int id, std::string name, std::string position,
                int salary, int km)
-              : Personal(id, name, position, salary) {
+    : Personal(id, name, position, salary) {
   kilometers = km;
 }
 int Driver::calcBonus() {

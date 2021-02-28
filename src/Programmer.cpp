@@ -5,11 +5,12 @@
 #include <iomanip>
 
 Programmer::Programmer(int id, std::string name, std::string position,
-                       int salary, Project *project, float part, int Deadline)
+                       int salary,Project *project, float part, int Deadline)
+    : Engineer(id, name, position, salary, project, part) {
   p_deadline = Deadline;
 }
 int Programmer::calcProAdditions() {
-  if (Deadline) {
+  if (p_deadline) {
     int award = 7500;
     return award;
   } else {

@@ -6,11 +6,11 @@
 
 Tester::Tester(int id, std::string name, std::string position,
                int salary, Project *project, float part, bool Deadline)
-              : Engineer(id, name, position, salary, project, part) {
+    : Engineer(id, name, position, salary, project, part) {
   t_deadline = Deadline;
 }
 int Tester::calcProAdditions() {
-  if (Deadline) {
+  if (t_deadline) {
     int award = 5500;
     return award;
   } else {
