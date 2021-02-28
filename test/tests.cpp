@@ -94,7 +94,7 @@ TEST(Test, test12) {
 TEST(Test, test13) {
   ProjectManager * prog = new ProjectManager;
   prog->setPercent(0);
-  prog->serNum(5);
+  prog->setNum(5);
   EXPECT_EQ(prog->calcHeads(), 0);
 }
 
@@ -104,7 +104,7 @@ TEST(Test, test14) {
   tm->setPercent(100);
   tm->setSalary(1000);
   tm->setWorkTime(40);
-  EXPECT_EQ(prog->getPayment(), 40500);
+  EXPECT_EQ(tm->getPayment(), 40500);
 }
 
 TEST(Test, test15) {
