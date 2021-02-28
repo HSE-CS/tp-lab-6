@@ -5,7 +5,7 @@
 #include "Manager.h"
 #include "Factory.h"
 
-static const char* file="EmployeeList.txt";
+static const char* file = "EmployeeList.txt";
 
 
 signed main() {
