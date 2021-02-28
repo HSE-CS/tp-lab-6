@@ -16,7 +16,7 @@ class Personal : public Employee, public WorkBaseTime {
       : Employee(id, name, position, worktime, payment), salary(salaryIn) {}
   int calcBase(int hour_salary, int work_time) override;
   int calc() override;
-  int calcBonus() override;
+  float calcBonus() override;
   int getSalary();
   void setSalary(int salary);
   void printInfo() override;
@@ -28,7 +28,7 @@ class Driver : public Personal {
          int worktime, int payment)
       : Personal(id, name, position, salary, worktime, payment) {}
   int calc() override;
-  int calcBonus() override;
+  float calcBonus() override;
 };
 
 class Cleaner : public Personal {
