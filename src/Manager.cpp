@@ -26,6 +26,10 @@ void ProjectManager::printInfo() {
   std::cout << "\t" << "Payment: " << getPayment() << '\n';
 }
 
+float ProjectManager::calcBudgetPart(float part, int budget) {
+  return part * budget;
+}
+
 void SeniorManager::calc() {
     for (auto p : projects) {
         payment = part * p.budget;
