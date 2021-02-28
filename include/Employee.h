@@ -19,9 +19,8 @@ Driver,
 };
 
 
-class Project {
- protected:
-std::string _id;
+struct Project {
+static std::string _id;
 int _budget;
 };
 
