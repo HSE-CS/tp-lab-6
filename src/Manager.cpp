@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-int ProjectManager::calcBudgetPart(float contrib, int budget) {
+float ProjectManager::calcBudgetPart(float contrib, int budget) {
   return floor(contrib * budget);
 }
 
