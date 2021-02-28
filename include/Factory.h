@@ -8,7 +8,7 @@
 #include "Personal.h"
 
 class Factory_Staff {
-public:
+ public:
     static std::vector<Employee *> make_staff();
 };
 

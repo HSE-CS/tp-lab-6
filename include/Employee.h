@@ -15,25 +15,25 @@ enum Positions {
     tester,
 };
 class Project {
-public:
+ public:
     Project(int id, int budget, int number_of_employees);
     int get_num_of_employees() const;
     int get_budget() const;
-private:
+ private:
     int id;
     int budget;
     int number_of_employees;
 };
 class Employee {
-public:
+ public:
     Employee(int id, std::string name,
              int work_time, Positions position);
 
     virtual int calc_salary() = 0;
     virtual void print_info() = 0;
-private:
+ private:
     int id;
-protected:
+ protected:
     Positions position;
     int payment;
     int work_time;
