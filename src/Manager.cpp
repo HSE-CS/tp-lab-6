@@ -2,6 +2,7 @@
 #include "Manager.h"
 #include <iostream>
 #include <string>
+#include <math.h>
 
 float ProjectManager::calcBudgetPart(float contrib, int budget) {
   return floor(contrib * budget);
