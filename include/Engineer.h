@@ -1,10 +1,11 @@
 // Copyright 2021 Kris
 
 #ifndef INCLUDE_ENGINEER_H_
-#define INCLUDE_ENGINER_H_
+#define INCLUDE_ENGINEER_H_
 #include "Employee.h"
 #include "Personal.h"
 #include "Interfaces.h"
+#include <string>
 
 class Engineer: public Personal {
  private:
@@ -40,4 +41,4 @@ class TeamLeader: public Programmer {
      int calc();
 };
 
-#endif  // !INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_

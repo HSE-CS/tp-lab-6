@@ -20,4 +20,4 @@ class Heading {
     virtual int calcHeads() = 0;
 };
 
-#endif  // !INCLUDE_INTERFACES_H_
+#endif  // INCLUDE_INTERFACES_H_

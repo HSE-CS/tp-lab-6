@@ -41,7 +41,7 @@ std::vector<Employee*> makeStaff(std::string staffList,
         else if (position == "Cleaner")
             newEmployee = new Cleaner(id, name, position, payment);
         else if (position == "Engineer")
-            newEmployee = new Engineer(id, name, position, payment, 
+            newEmployee = new Engineer(id, name, position, payment,
                 currentProject);
         else if (position == "Programmer")
             newEmployee = new Programmer(id, name, position, payment,

@@ -1,7 +1,7 @@
 // Copyright 2021 Kris
 
-#ifndef INCLUDE_EMPLOEE_H_
-#define INCLUDE_EMPLOEE_H_
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 #include <vector>
@@ -29,4 +29,4 @@ class Employee {
 };
 
 
-#endif   // !INCLUDE_EMPLOEE_H_
+#endif   // INCLUDE_EMPLOYEE_H_

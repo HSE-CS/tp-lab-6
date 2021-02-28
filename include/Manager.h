@@ -43,4 +43,4 @@ class SeniorManager : public ProjectManager {
 
 
 
-#endif  // !INCLUDE_MANAGER_H_
+#endif  // INCLUDE_MANAGER_H_

@@ -56,4 +56,4 @@ class Project {
     int getBudget();
 };
 
-#endif  // !INCLUDE_PERSONAL_H_
+#endif  // INCLUDE_PERSONAL_H_

@@ -21,7 +21,7 @@ Tester::Tester(int _id, std::string _name, std::string _pos,
     Engineer(_id, _name, _pos, _payment, currentProject) {}
 
 int Engineer::calcBudgetPart(double part, int budget) {
-    return int(part * budget);
+    return static_cast<int>(part * budget);
 }
 
 Project Engineer::getProject() {

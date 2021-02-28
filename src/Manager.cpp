@@ -25,7 +25,7 @@ void ProjectManager::setProgect(int id_, int budget_) {
 }
 
 int ProjectManager::calcBudgetPart(double part, int budget) {
-    return int(part * budget);
+    return static_cast<int>(part * budget);
 }
 
 int ProjectManager::calcProAdditions() {
