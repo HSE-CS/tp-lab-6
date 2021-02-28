@@ -5,20 +5,14 @@
 #include <iostream>
 #include <utility>
 #include "Manager.h"
-const char *enum_print3[] = {"cleaner",
-                             "driver",
-                             "tester",
-                             "programmer",
-                             "team_leader",
-                             "project_manager",
-                             "senior_manager"};
 ProjectManager::ProjectManager(int id, std::string name,
-                               int workTime, Positions position, Project *project)
+                               int workTime, Positions position,
+                               Project *project)
     : Employee(id, std::move(name), workTime, position) {
   this->project = project;
 }
 void ProjectManager::printInfo() {
-  std::cout << enum_print3[this->position] << std::endl;
+  std::cout << enum_print[this->position] << std::endl;
   std::cout << this->name << std::endl;
   std::cout << "Work time = " << this->workTime << std::endl;
   std::cout << "Payment = " << this->payment << std::endl;
@@ -26,8 +20,7 @@ void ProjectManager::printInfo() {
 
 int ProjectManager::calcBudgetPart() {
   if (project) {
-    return (int) (1.0 / project->getAmountOfWorkers())
-        * (*project).getBudget();
+    return (*project).getBudget() / project->getAmountOfWorkers();
   } else {
     return 0;
   }
@@ -46,18 +39,14 @@ int ProjectManager::calcProAdditions(int bonus) {
 
 int SeniorManager::calc() {
   int sum = 0;
-  std::cout<<"d";
   for (auto project_ : projects) {
-    std::cout<<"ququ"<<std::endl;
-    sum += (int) (1.0 / project_->getAmountOfWorkers()) * project_->getBudget();
+    sum += (1.0 / project_->getAmountOfWorkers()) *
+        project_->getBudget();
   }
-  std::cout<<sum;
   return this->payment = sum;
 }
 SeniorManager::SeniorManager(int id, const std::string &name,
-                             int workTime, Positions position, std::vector<Project *> p)
-    : ProjectManager(id, name, workTime, position, p[0]) {}
-
-
-
-
+                             int workTime, Positions position,
+                             std::vector<Project *> p)
+    : ProjectManager(id, name, workTime, position, p[0]) {
+}

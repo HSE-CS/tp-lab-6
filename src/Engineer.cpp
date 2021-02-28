@@ -13,8 +13,7 @@ Engineer::Engineer(int id, std::string name,
 }
 int Engineer::calcBudgetPart() {
   if (project) {
-    return (int) (1.0 / project->getAmountOfWorkers())
-        * (*project).getBudget();
+    return (*project).getBudget() / project->getAmountOfWorkers();
   } else {
     return 0;
   }
@@ -30,15 +29,8 @@ int Tester::calcProAdditions(int bonus) {
 int Engineer::calc() {
   return this->payment = calcBudgetPart() + calcBase(salary, workTime);
 }
-const char *enum_print2[] = {"cleaner",
-                             "driver",
-                             "tester",
-                             "programmer",
-                             "team_leader",
-                             "project_manager",
-                             "senior_manager"};
 void Engineer::printInfo() {
-  std::cout << enum_print2[this->position] << std::endl;
+  std::cout << enum_print[this->position] << std::endl;
   std::cout << this->name << std::endl;
   std::cout << "Work time = " << this->workTime << std::endl;
   std::cout << "Payment = " << this->payment << std::endl;

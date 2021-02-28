@@ -6,6 +6,7 @@
 #define INCLUDE_EMPLOYEE_H_
 
 #include <string>
+#include <vector>
 class Project {
  private:
   int id;
@@ -33,6 +34,13 @@ class Employee {
   int payment;
   int workTime;
   std::string name;
+  std::vector<std::string>enum_print={"cleaner",
+                                      "driver",
+                                      "tester",
+                                      "programmer",
+                                      "team_leader",
+                                      "project_manager",
+                                      "senior_manager"};
  public:
   Employee(int id, std::string name,
            int workTime, Positions position);

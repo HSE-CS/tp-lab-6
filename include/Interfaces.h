@@ -4,7 +4,6 @@
 //
 #ifndef INCLUDE_INTERFACES_H_
 #define INCLUDE_INTERFACES_H_
-
 class Heading {
  public:
   virtual ~Heading() = default;

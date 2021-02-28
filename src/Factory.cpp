@@ -11,7 +11,8 @@
 #include "Factory.h"
 #include "Manager.h"
 
-Employee *MakeWorker(int id, const std::string &name, int workTime, int salary, std::string posVal,
+Employee *MakeWorker(int id, const std::string &name, int workTime,
+                     int salary, std::string posVal,
                      int project, std::vector<Project *> projects) {
   if (posVal == "project_manager") {
     auto pos = Positions(project_manager);
@@ -41,7 +42,7 @@ Employee *MakeWorker(int id, const std::string &name, int workTime, int salary, 
 
 std::vector<Employee *> StaffFactory::makeStaff() {
   std::ifstream dataP("projects.txt");
-  std::vector < Project * > projects;
+  std::vector<Project *> projects;
   int projectId = 0;
   int amountOfWorkers = 0;
   int budget = 0;
@@ -71,7 +72,7 @@ std::vector<Employee *> StaffFactory::makeStaff() {
     }
   }
 
-  std::vector < Employee * > staff;
+  std::vector<Employee *> staff;
   std::cout << std::endl;
   while (!dataS.eof()) {
     getline(dataS, templ);

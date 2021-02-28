@@ -4,13 +4,6 @@
 //
 #include <utility>
 #include "Personal.h"
-const char *enum_print[] = {"cleaner",
-                            "driver",
-                            "tester",
-                            "programmer",
-                            "team_leader",
-                            "project_manager",
-                            "senior_manager"};
 Personal::Personal(int id, std::string name,
                    int workTime, int salary, Positions position)
     : Employee(id, std::move(name), workTime, position) {
