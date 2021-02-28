@@ -26,13 +26,13 @@ std::vector<Employee*> Factory::generateEmployees() {
                 i++;
             }
             i++;
-            i++; 
+            i++;
             while (line[i] != ',') {
                 name.push_back(line[i]);
                 i++;
             }
             i++;
-            i++;  
+            i++;
             while (line[i] != ',') {
                 position.push_back(line[i]);
                 i++;
@@ -40,7 +40,7 @@ std::vector<Employee*> Factory::generateEmployees() {
 
             if (position == "Driver") {
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     salary.push_back(line[i]);
                     i++;
@@ -49,10 +49,9 @@ std::vector<Employee*> Factory::generateEmployees() {
                 employees.push_back(new Driver(id, name,
                     DRIVER,
                     std::stoi(salary)));
-            }
-            else if (position == "Cleaner") {
+            } else if (position == "Cleaner") {
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     salary.push_back(line[i]);
                     i++;
@@ -61,17 +60,16 @@ std::vector<Employee*> Factory::generateEmployees() {
                 employees.push_back(new Cleaner(id, name,
                     CLEANER,
                     std::stoi(salary)));
-            }
-            else if (position == "Programmer") {
+            } else if (position == "Programmer") {
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     salary.push_back(line[i]);
                     i++;
                 }
                 std::string projectId;
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     projectId.push_back(line[i]);
                     i++;
@@ -83,17 +81,16 @@ std::vector<Employee*> Factory::generateEmployees() {
                     PROGRAMMER,
                     std::stoi(salary),
                     new Project(projectId, 100000)));
-            }
-            else if (position == "Tester") {
+            } else if (position == "Tester") {
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     salary.push_back(line[i]);
                     i++;
                 }
                 std::string projectId;
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     projectId.push_back(line[i]);
                     i++;
@@ -105,17 +102,16 @@ std::vector<Employee*> Factory::generateEmployees() {
                     TESTER,
                     std::stoi(salary),
                     new Project(projectId, 100000)));
-            }
-            else if (position == "TeamLeader") {
+            } else if (position == "TeamLeader") {
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     salary.push_back(line[i]);
                     i++;
                 }
                 std::string projectId;
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     projectId.push_back(line[i]);
                     i++;
@@ -127,11 +123,10 @@ std::vector<Employee*> Factory::generateEmployees() {
                     TEAMLEADER,
                     std::stoi(salary),
                     new Project(projectId, 100000)));
-            }
-            else if (position == "ProjectManager") {
+            } else if (position == "ProjectManager") {
                 std::string projectId;
                 i++;
-                i++;  
+                i++;
                 while (line[i] != ',') {
                     projectId.push_back(line[i]);
                     i++;
@@ -144,14 +139,13 @@ std::vector<Employee*> Factory::generateEmployees() {
                     name,
                     TEAMLEADER,
                     projects));
-            }
-            else if (position == "SeniorManager") {
+            } else if (position == "SeniorManager") {
                 std::vector<Project*> projects;
 
                 while (line[i + 1] != '\n' && line[i + 1] != '\0') {
                     std::string projectId;
                     i++;
-                    i++;  
+                    i++;
                     while (line[i] != ',') {
                         projectId.push_back(line[i]);
                         i++;
@@ -166,8 +160,7 @@ std::vector<Employee*> Factory::generateEmployees() {
                     projects));
             }
         }
-    }
-    else {
+    } else {
         std::cout << "Open file error";
     }
     in.close();

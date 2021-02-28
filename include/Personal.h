@@ -10,31 +10,31 @@
 
 
 class Personal : public Employee, public WorkBaseTime {
-protected:
-	int salary;
+ protected:
+  int salary;
 
-public:
-	int calcBase(int salary, int workTime) override;
-	void printInfo() override;
-	int GetSalary() const;
-	void SetSalary(int salary);
+ public:
+  int calcBase(int salary, int workTime) override;
+  void printInfo() override;
+  int GetSalary() const;
+  void SetSalary(int salary);
 };
 
 
 class Driver : public Personal {
-public:
-	Driver(std::string id, std::string name, POSITION position, int salary);
+ public:
+  Driver(std::string id, std::string name, POSITION position, int salary);
 
-	int calcBonus() override;
-	void calc() override;
+  int calcBonus() override;
+  void calc() override;
 };
 
 
 class Cleaner : public Personal {
-public:
-	Cleaner(std::string id, std::string name, POSITION position, int salary);
-	int calcBonus() override;
-	void calc() override;
+ public:
+  Cleaner(std::string id, std::string name, POSITION position, int salary);
+  int calcBonus() override;
+  void calc() override;
 };
 
 

@@ -35,10 +35,9 @@ Driver::Driver(std::string id,
 int Driver::calcBonus() {
     if (this->workTime > 40) {
         return (this->workTime - 40) * this->salary;
-    }
-    else {
+    } else {
         return 0;
-    }
+           }
 }
 
 void Driver::calc() {

@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Artyom Lavrov
+﻿  // Copyright 2021 Artyom Lavrov
 
 
 #include <iostream>
@@ -6,8 +6,8 @@
 
 
 int main() {
-	Factory factory = Factory();
-	std::vector<Employee*> employees;
-	employees = factory.generateEmployees();
-	employees[0]->calc();
+  Factory factory = Factory();
+  std::vector<Employee*> employees;
+  employees = factory.generateEmployees();
+  employees[0]->calc();
 }

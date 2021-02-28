@@ -13,9 +13,9 @@ class ProjectManager :
     public Employee,
     public ProjectBudget,
     public Heading {
-protected:
+ protected:
     std::vector<Project*> projects;
-public:
+ public:
     ProjectManager(std::string id,
         std::string name,
         POSITION position,
@@ -31,7 +31,7 @@ public:
 
 
 class SeniorManager : public ProjectManager {
-public:
+ public:
     SeniorManager(std::string id,
         std::string name,
         POSITION position,

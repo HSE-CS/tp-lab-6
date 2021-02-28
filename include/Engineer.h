@@ -10,10 +10,10 @@
 
 
 class Engineer : public ProjectBudget, public Personal {
-protected:
+ protected:
     Project* project;
 
-public:
+ public:
     int calcBudgetPart(float part, int budget) override;
     int calcBonus() override;
     void calc() override;
@@ -21,7 +21,7 @@ public:
 
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer(std::string id,
         std::string name,
         POSITION position,
@@ -32,7 +32,7 @@ public:
 
 
 class Tester : public Engineer {
-public:
+ public:
     Tester(std::string id,
         std::string name,
         POSITION position,
@@ -43,7 +43,7 @@ public:
 
 
 class TeamLeader : public Programmer, public Heading {
-public:
+ public:
     TeamLeader(std::string id,
         std::string name,
         POSITION position,

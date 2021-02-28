@@ -9,8 +9,8 @@
 
 
 class Factory {
-public:
-	std::vector<Employee*> generateEmployees();
+ public:
+  std::vector<Employee*> generateEmployees();
 };
 
 
