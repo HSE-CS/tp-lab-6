@@ -35,14 +35,18 @@ void ProjectManager::calc() {
 void ProjectManager::printInfo() {
   Employee::printId();
   if (this->position == position_t::PROJECTMANAGER)
-    std::cout << std::setw(16) << "Project manager";
+    std::cout << std::setw(20) << "Project manager";
   else
-    std::cout << std::setw(16) << "Senior manager";
+    std::cout << std::setw(20) << "Senior manager";
   std::cout << " |";
-  std::cout << std::setw(8) << " |";
+  std::cout << std::setw(10) << " |";
   Employee::printInfo();
   for (auto project : this->projects) std::cout << " " << project->name;
   std::cout << std::endl;
+}
+
+std::vector<project_t*>& ProjectManager::getProjects() {
+  return this->projects;
 }
 
 //===================================================================================
@@ -59,6 +63,6 @@ SeniorManager::SeniorManager(uint32_t id, std::string& name,
 void SeniorManager::calc() {
   uint32_t projectsBudget = 0;
   for (auto project : this->projects)
-    projectsBudget += calcBudgetPart(0.1, project->budget);
+    projectsBudget += calcBudgetPart(0.25, project->budget);
   this->payment = projectsBudget + calcHeads();
 }

@@ -21,6 +21,7 @@ class ProjectManager : public Employee, public ProjectBudget, public Heading {
                  std::vector<project_t*>& projects);
   void calc();
   void printInfo();
+  std::vector<project_t*>& getProjects();
 };
 
 //=============================================

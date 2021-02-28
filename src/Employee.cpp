@@ -13,12 +13,14 @@ Employee::Employee(uint32_t id, std::string& name) {
 
 void Employee::setWorkTime(uint32_t time) { this->worktime = time; }
 
+uint32_t Employee::getPayment() { return this->payment; }
+
 void Employee::printId() {
   std::cout << std::setw(3) << std::to_string(this->id) << " |";
-  std::cout << std::setw(20) << this->name << " |";
+  std::cout << std::setw(35) << this->name << " |";
 }
 
 void Employee::printInfo() {
   std::cout << std::setw(4) << std::to_string(this->worktime) << " |";
-  std::cout << std::setw(7) << std::to_string(this->payment) << " |";
+  std::cout << std::setw(8) << std::to_string(this->payment) << " |";
 }

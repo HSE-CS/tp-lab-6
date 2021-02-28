@@ -27,6 +27,8 @@ class Employee {
 
  public:
   void setWorkTime(uint32_t time);
+  uint32_t getPayment();
+
   virtual void printInfo();
   virtual void calc() = 0;
 };

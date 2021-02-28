@@ -1,5 +1,6 @@
 // Copyright 2021 Egor Trukhin
 #include <clocale>
+#include <iomanip>
 #include <iostream>
 #include <random>
 
@@ -10,7 +11,9 @@ int main() {
   srand(time(0));
 
   try {
-    std::vector<Employee*> staff = Factory::makeStaff("src/data.txt");
+    Factory* f =
+        new Factory("../../src/employees.txt", "../../src/projects.txt");
+    std::vector<Employee*> staff = f->getStaff();
 
     // Присвоение отработанного времени
     for (auto worker : staff) worker->setWorkTime(rand() % 70);
@@ -18,7 +21,19 @@ int main() {
     // Расчет зарплаты
     for (auto worker : staff) worker->calc();
 
-    // Вывод данных о зарплате
+    // Заголовок таблицы
+    std::cout << std::endl;
+    std::cout << " id | " << std::setw(37) << "Name | " << std::setw(22)
+              << "Position | "
+              << " Salary | "
+              << " WT |"
+              << " Payment |"
+              << " Projects" << std::endl;
+    std::cout << "-------------------------------------------------------------"
+                 "---------------------------------------------"
+              << std::endl;
+
+    // Вывод данных о зарплате в виде таблицы
     for (auto worker : staff) worker->printInfo();
 
   } catch (std::exception& error) {

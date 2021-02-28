@@ -23,7 +23,7 @@ uint32_t Engineer::calcBudgetPart(double part, uint32_t budget) {
 }
 
 void Engineer::calc() {
-  double contribution = 1.0 - (1.0 / log10(this->worktime));
+  double contribution = static_cast<double>(this->worktime) / 70.0;
   uint32_t partOfBudget = calcBudgetPart(contribution, this->project->budget);
   this->project->budget -= partOfBudget;
   this->payment = calcBase(this->salary, this->worktime) + partOfBudget +
@@ -33,13 +33,13 @@ void Engineer::calc() {
 void Engineer::printInfo() {
   Employee::printId();
   if (this->position == position_t::PROGRAMMER)
-    std::cout << std::setw(16) << "Programmer";
+    std::cout << std::setw(20) << "Programmer";
   else if (this->position == position_t::TESTER)
-    std::cout << std::setw(16) << "Tester";
+    std::cout << std::setw(20) << "Tester";
   else
-    std::cout << std::setw(12) << "Team leader";
+    std::cout << std::setw(20) << "Team leader";
   std::cout << " |";
-  std::cout << std::setw(5) << std::to_string(this->salary) << " |";
+  std::cout << std::setw(8) << std::to_string(this->salary) << " |";
   Employee::printInfo();
   std::cout << " " << this->project->name << std::endl;
 }
@@ -54,8 +54,7 @@ Programmer::Programmer(uint32_t id, std::string& name, uint32_t salary,
 }
 
 uint32_t Programmer::calcProAdditions() {
-  bool codeIsBest = (rand() % 2 == 0) ? true : false;
-  if (codeIsBest && this->worktime < 25) return sqrt(this->salary);
+  if (this->worktime < 25) return static_cast<double>(this->salary) * 0.25;
   return 0;
 }
 

@@ -20,11 +20,11 @@ uint32_t Personal::calcBase(uint32_t salary, uint32_t worktime) {
 void Personal::printInfo() {
   Employee::printId();
   if (this->position == position_t::DRIVER)
-    std::cout << std::setw(16) << "Driver";
+    std::cout << std::setw(20) << "Driver";
   else
-    std::cout << std::setw(16) << "Cleaner";
+    std::cout << std::setw(20) << "Cleaner";
   std::cout << " |";
-  std::cout << std::setw(5) << std::to_string(this->salary) << " |";
+  std::cout << std::setw(8) << std::to_string(this->salary) << " |";
   Employee::printInfo();
   std::cout << std::endl;
 }
@@ -52,5 +52,5 @@ void Driver::calc() {
 }
 
 uint32_t Driver::calcBonus() {
-  return static_cast<uint32_t>(sqrt(this->worktime) * this->salary);
+  return static_cast<uint32_t>(this->worktime * 500);
 }
