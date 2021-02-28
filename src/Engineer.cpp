@@ -30,13 +30,13 @@ int Tester::calcProAdditions(int bonus) {
 int Engineer::calc() {
   return this->payment = calcBudgetPart() + calcBase(salary, workTime);
 }
-const char* enum_print2[] = { "cleaner",
+const char *enum_print2[] = {"cleaner",
                              "driver",
                              "tester",
                              "programmer",
                              "team_leader",
                              "project_manager",
-                             "senior_manager"} ;
+                             "senior_manager"};
 void Engineer::printInfo() {
   std::cout << enum_print2[this->position] << std::endl;
   std::cout << this->name << std::endl;

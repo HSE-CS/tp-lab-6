@@ -4,13 +4,13 @@
 //
 #include <utility>
 #include "Personal.h"
-const char* enum_print[] = { "cleaner",
-                             "driver",
-                             "tester",
-                             "programmer",
-                             "team_leader",
-                             "project_manager",
-                             "senior_manager"} ;
+const char *enum_print[] = {"cleaner",
+                            "driver",
+                            "tester",
+                            "programmer",
+                            "team_leader",
+                            "project_manager",
+                            "senior_manager"};
 Personal::Personal(int id, std::string name,
                    int workTime, int salary, Positions position)
     : Employee(id, std::move(name), workTime, position) {
@@ -32,8 +32,8 @@ void Personal::printInfo() {
 }
 
 Driver::Driver(int id, std::string name,
-               int workTime, int salary,Positions position) :
-    Personal(id, std::move(name), workTime, salary,position) {
+               int workTime, int salary, Positions position) :
+    Personal(id, std::move(name), workTime, salary, position) {
 }
 
 int Driver::calc() {

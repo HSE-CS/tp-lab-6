@@ -5,13 +5,13 @@
 #include <iostream>
 #include <utility>
 #include "Manager.h"
-const char* enum_print3[] = { "cleaner",
+const char *enum_print3[] = {"cleaner",
                              "driver",
                              "tester",
                              "programmer",
                              "team_leader",
                              "project_manager",
-                             "senior_manager"} ;
+                             "senior_manager"};
 ProjectManager::ProjectManager(int id, std::string name,
                                int workTime, Positions position, Project *project)
     : Employee(id, std::move(name), workTime, position) {
@@ -46,9 +46,12 @@ int ProjectManager::calcProAdditions(int bonus) {
 
 int SeniorManager::calc() {
   int sum = 0;
+  std::cout<<"d";
   for (auto project_ : projects) {
+    std::cout<<"ququ"<<std::endl;
     sum += (int) (1.0 / project_->getAmountOfWorkers()) * project_->getBudget();
   }
+  std::cout<<sum;
   return this->payment = sum;
 }
 SeniorManager::SeniorManager(int id, const std::string &name,

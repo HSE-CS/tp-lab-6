@@ -2,10 +2,9 @@
 //
 // Created by sharg on 27.02.2021.
 //
-#include "Manager.h"
 #include "Factory.h"
 int main() {
-  std::vector<Employee *> staff = StaffFactory::makeStaff();
+  std::vector < Employee * > staff = StaffFactory::makeStaff();
   for (auto emp : staff) {
     emp->calc();
   }

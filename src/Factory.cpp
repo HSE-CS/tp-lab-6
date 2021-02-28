@@ -11,8 +11,8 @@
 #include "Factory.h"
 #include "Manager.h"
 
-Employee *MakeWorker(int id, const std::string &name, int workTime,int salary,std::string posVal,
-                      int project, std::vector<Project *> projects) {
+Employee *MakeWorker(int id, const std::string &name, int workTime, int salary, std::string posVal,
+                     int project, std::vector<Project *> projects) {
   if (posVal == "project_manager") {
     auto pos = Positions(project_manager);
     Project *my = projects[project];
@@ -31,17 +31,17 @@ Employee *MakeWorker(int id, const std::string &name, int workTime,int salary,st
     return new SeniorManager(id, name, workTime, pos, projects);
   } else if (posVal == "driver") {
     auto pos = Positions(driver);
-    return new Driver(id, name,workTime,salary, pos);
+    return new Driver(id, name, workTime, salary, pos);
   } else if (posVal == "cleaner") {
     auto pos = Positions(cleaner);
-    return new Cleaner(id, name,workTime, salary,pos);
+    return new Cleaner(id, name, workTime, salary, pos);
   }
   return nullptr;
 }
 
 std::vector<Employee *> StaffFactory::makeStaff() {
   std::ifstream dataP("projects.txt");
-  std::vector<Project *> projects;
+  std::vector < Project * > projects;
   int projectId = 0;
   int amountOfWorkers = 0;
   int budget = 0;
@@ -49,7 +49,7 @@ std::vector<Employee *> StaffFactory::makeStaff() {
   std::ifstream dataS("staff.txt");
   std::string name;
   int id = 0;
-  int workTime=0;
+  int workTime = 0;
   int salary = 0;
   std::string posVal;
   if (!dataP.is_open()) {
@@ -71,8 +71,8 @@ std::vector<Employee *> StaffFactory::makeStaff() {
     }
   }
 
-  std::vector<Employee *> staff;
-  std::cout<<std::endl;
+  std::vector < Employee * > staff;
+  std::cout << std::endl;
   while (!dataS.eof()) {
     getline(dataS, templ);
     if (!templ.empty()) {
@@ -86,7 +86,7 @@ std::vector<Employee *> StaffFactory::makeStaff() {
       getline(dataS, templ);
       projectId = atoi(templ.c_str());
       staff.push_back(
-          MakeWorker(id, name, workTime, salary, posVal,projectId, projects));
+          MakeWorker(id, name, workTime, salary, posVal, projectId, projects));
     }
   }
   return staff;
