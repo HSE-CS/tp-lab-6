@@ -1,0 +1,252 @@
+{
+"employees": [
+      
+      {
+      "name": "Lory Ellington",
+      "position": "driver",
+      "salary": 400
+      },
+    
+      
+      {
+      "name": "Andrew Brickman",
+      "position": "driver",
+      "salary": 400
+      },
+      
+      {
+      "name": "Tess Addington",
+      "position": "driver",
+      "salary": 300
+      },
+      
+      {
+      "name": "Daniel Gardner",
+      "position": "cleaner",
+      "salary": 100
+      },
+      
+      {
+      "name": "Evan Edwards",
+      "position": "cleaner",
+      "salary": 100
+      },
+              
+      {
+      "name": "William Gilmore",
+      "position": "programmer",
+      "salary": 500,
+      "project": 0,
+      "part": 10
+      },
+      
+      {
+      "name": "Adrian Flannagan",
+      "position": "programmer",
+      "salary": 400,
+      "project": 0,
+      "part": 10
+      },
+      
+      {
+      "name": "Clover Gustman",
+      "position": "programmer",
+      "salary": 500,
+      "project": 0,
+      "part": 20
+      },
+      
+      {
+      "name": "Stephen Bishop",
+      "position": "programmer",
+      "salary": 450,
+      "project": 0,
+      "part": 15
+      },
+              
+      {
+      "name": "Kiel Black",
+      "position": "programmer",
+      "salary": 500,
+      "project": 1,
+      "part": 10
+      },
+      
+      {
+      "name": "Francis Archibald",
+      "position": "programmer",
+      "salary": 400,
+      "project": 1,
+      "part": 10
+      },
+      
+      {
+      "name": "Derek Goldman",
+      "position": "programmer",
+      "salary": 400,
+      "project": 1,
+      "part": 20
+      },
+      
+      {
+      "name": "Julia Elmers",
+      "position": "programmer",
+      "salary": 420,
+      "project": 1,
+      "part": 20
+      },
+      
+      {
+      "name": "Lloyd Ellington",
+      "position": "programmer",
+      "salary": 460,
+      "project": 1,
+      "part": 10
+      },
+              
+      {
+      "name": "Zhanatan Farmer",
+      "position": "programmer",
+      "salary": 400,
+      "project": 2,
+      "part": 10
+      },
+      
+      {
+      "name": "Agata Hall",
+      "position": "programmer",
+      "salary": 450,
+      "project": 2,
+      "part": 10
+      },
+      
+      {
+      "name": "Trevor Berrington",
+      "position": "programmer",
+      "salary": 430,
+      "project": 2,
+      "part": 10
+      },
+      
+      {
+      "name": "Sebastian Turner",
+      "position": "programmer",
+      "salary": 500,
+      "project": 2,
+      "part": 10
+      },
+              
+      {
+      "name": "Dorothy Hamphrey",
+      "position": "tester",
+      "salary": 370,
+      "project": 0,
+      "part": 10
+      },
+      
+      {
+      "name": "Jose Bargeman",
+      "position": "tester",
+      "salary": 350,
+      "project": 0,
+      "part": 10
+      },
+              
+      {
+      "name": "Delia Gilson",
+      "position": "tester",
+      "salary": 370,
+      "project": 1,
+      "part": 10
+      },
+      
+      {
+      "name": "William Austin",
+      "position": "tester",
+      "salary": 370,
+      "project": 1,
+      "part": 10
+      },
+      
+      {
+      "name": "Kiel Fitzgerald",
+      "position": "project_manager",
+      "salary": 400,
+      "project": [0],
+      "part": 10
+      },
+              
+      {
+      "name": "Colin Phillips",
+      "position": "project_manager",
+      "salary": 400,
+      "project": [1],
+      "part": 10
+      },
+      
+      {
+      "name": "Linda Brown",
+      "position": "project_manager",
+      "salary": 380,
+      "project": [1],
+      "part": 10
+      },
+              
+      {
+      "name": "Colin Gonzalez",
+      "position": "project_manager",
+      "salary": 450,
+      "project": [2],
+      "part": 10
+      },
+      
+      {
+      "name": "Gemma Baker",
+      "position": "project_manager",
+      "salary": 420,
+      "project": [2],
+      "part": 10
+      },
+      
+      {
+      "name": "Andrew Mitchell",
+      "position": "senior_manager",
+      "salary": 650,
+      "project": [0, 1, 2],
+      "part": 10
+      },
+      
+      {
+      "name": "Jordan Conors",
+      "position": "senior_manager",
+      "salary": 650,
+      "project": [0, 1, 2],
+      "part": 10
+      },
+    
+      {
+      "name": "Johanna Martinez",
+      "position": "team_leader",
+      "salary": 550,
+      "project": 1,
+      "part": 10
+      },
+      
+      {
+      "name": "Donna Austin",
+      "position": "team_leader",
+      "salary": 700,
+      "project": 2,
+      "part": 10
+      },
+              
+      {
+      "name": "Mary Allford",
+      "position": "team_leader",
+      "salary": 900,
+      "project": 0,
+      "part": 10
+      }
+      
+    ]
+}
