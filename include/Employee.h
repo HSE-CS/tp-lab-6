@@ -20,8 +20,8 @@ Driver,
 
 
 struct Project {
-std::string _id;
-int _budget;
+ std::string _id;
+ int _budget;
 };
 
 
