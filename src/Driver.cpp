@@ -7,6 +7,9 @@
 
 Driver::Driver(int id, std::string name, std::string position, int salary)
               : Personal(id, name, position, salary) {
+  std::random_device rd;
+  std::mt19937 randomKilometers(rd());
+  int kilometers = static_cast<int>((randomKilometers() % 10) + 1); 
 }
 int Driver::calcBonus() {
   std::random_device rd;

@@ -1,0 +1,8 @@
+{
+    "project1": {"id": 0, "budget": 500000},
+    "project2": {"id": 1, "budget": 100000},
+    "project3": {"id": 2, "budget": 1000000},
+    "project4": {"id": 3, "budget": 400000},
+    "project5": {"id": 4, "budget": 700000}
+}
+

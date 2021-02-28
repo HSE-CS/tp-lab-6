@@ -8,12 +8,12 @@
 Programmer::Programmer(int id, std::string name, std::string position,
                        int salary, Project *project, float part)
     : Engineer(id, name, position, salary, project, part) {
-}
-int Programmer::calcProAdditions() {
   std::random_device rd;
   std::mt19937 CompleteTaskInDeadline(rd());  // 0 - нет, 1 - да
-  bool DoAwardPayment = static_cast<bool>(CompleteTaskInDeadline() % 2);
-  if (DoAwardPayment) {
+  Deadline = static_cast<bool>(CompleteTaskInDeadline() % 2);
+}
+int Programmer::calcProAdditions() {
+  if (Deadline) {
     int award = 7500;
     return award;
   } else {

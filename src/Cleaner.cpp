@@ -2,10 +2,14 @@
 
 #include "Cleaner.h"
 #include <iomanip>
+#include <random>
 #include <iostream>
 
 Cleaner::Cleaner(int id, std::string name, std::string position, int salary)
                 : Personal(id, name, position, salary) {
+  std::random_device rd;
+  std::mt19937 randomSquare(rd());
+  c_square = static_cast<int>((randomSquare() % 6) + 1); 
 }
 int Cleaner::calcBonus() {
   return 0;

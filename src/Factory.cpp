@@ -10,7 +10,7 @@ Project* StaffFactory::parseProjects(std::map<std::string, int> inf_project) {
   return temp_proj;
 }
 void StaffFactory::readProjectFile() {
-  std::ifstream fin("projects.json");
+  std::ifstream fin("img/projects.json");
   int amountProjects{5};
   std::string cont;
   json j = json::parse(fin);
@@ -23,7 +23,7 @@ void StaffFactory::readProjectFile() {
   fin.close();
 }
 void StaffFactory::readStaffFile() {
-  std::ifstream sin("staff.json");
+  std::ifstream sin("img/staff.json");
   int amountStaff{64};
   std::string cont;
   json j = json::parse(sin);

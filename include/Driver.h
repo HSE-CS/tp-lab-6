@@ -9,6 +9,7 @@
 
 class Driver : public Personal {
  public:
+  int kilometers{0};
   Driver(int id, std::string name, std::string position, int salary);
   int calcBonus() override;
   void calc() override;

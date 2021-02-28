@@ -9,6 +9,7 @@
 
 class Programmer : public Engineer {
  public:
+  bool Deadline;
   Programmer(int id, std::string name, std::string position,
              int salary, Project* project, float part);
   void calc() override;
