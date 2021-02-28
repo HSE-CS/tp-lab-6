@@ -85,7 +85,7 @@ int TeamLeader::calc_heads() {
     return _salary * 5;
 }
 
-void TeamLeader::calculate() {
+void TeamLeader::calc() {
     _payment = calc_heads()
         + calc_budget_part(0.3, _project._budget)
         + calc_base(_salary, _timeofwork);

@@ -15,7 +15,7 @@ int main() {
     }
 
     for (auto e : staff) {
-        e->calculate();
+        e->calc();
     }
 
     for (auto e : staff) {
