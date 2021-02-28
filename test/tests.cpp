@@ -29,7 +29,7 @@ TEST(TestDriver, test4) {
 
 TEST(TestCleaner, test5) {
   Cleaner cleaner1(1, "name", 100);
-  EXPECT_EQ(100, cleaner1.calcBonus());
+  EXPECT_EQ(10, cleaner1.calcBonus());
 }
 
 TEST(TestCleaner, test6) {
@@ -47,5 +47,33 @@ TEST(TestCleaner, test8) {
   Cleaner cleaner4(156, "name", 130);
   cleaner4.setWorkTime(200);
   cleaner4.calc();
-  EXPECT_EQ(26100, cleaner4.getPayment());
+  EXPECT_EQ(26000, cleaner4.getPayment());
 }
+
+TEST(TestProgrammer, test9) {
+  Project project;
+  project.id = 1;
+  project.budget = 120;
+  Programmer programmer1(1, "name", 1500, &project);
+  EXPECT_EQ(programmer1.getPosition(), programmer);
+}
+
+TEST(TestProgrammer, test10) {
+  Project project1;
+  project1.id = 1;
+  project1.budget = 120;
+  Programmer programmer2(1, "name", 1500, &project1);
+  EXPECT_EQ(programmer2.getProject(), &project1);
+}
+
+TEST(TestProgrammer, test11) {
+  Project project2;
+  project2.id = 1;
+  project2.budget = 120;
+  Programmer programmer3(1, "name", 1500, &project2);
+  programmer3.setWorkTime(168);
+  programmer3.calc();
+  EXPECT_EQ(programmer3.getPayment(), 1500 * 168 + 15000 + 100);
+}
+
+
