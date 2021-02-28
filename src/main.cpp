@@ -1,17 +1,20 @@
 // Copyright 2020 S. BOR
 
 #include "Engineer.h"
-#include "Personal.h"
 #include "Manager.h"
+#include "Factory.h"
 
 int main() {
-  Tester* emp = new Tester;
-  emp->setWorkTime(30);
-  emp->setSalary(100);
-  std::cout << emp->calcBase() << emp->calcProAdditions();
-  Programmer* prg = new Programmer;
-  Cleaner* cln = new Cleaner;
-  Driver* drv = new Driver;
-  ProjectManager* mng = new ProjectManager;
+  Factory a;
+  std::vector <Employee *> staff = a.fileRead("input.txt");
+  for(Employee * emp : staff) {
+    emp->setWorkTime(40);
+  }
+  for (Employee * emp : staff) {
+    emp->calc();
+  }
+  for (Employee * emp : staff) {
+    emp->printInfo();
+  }
   return 0;
 }
