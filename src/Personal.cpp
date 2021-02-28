@@ -1,9 +1,9 @@
 // Copyright 2021 Bogomazov
 
 #include <iostream>
-#include "../include/Interfaces.h"
-#include "../include/Employee.h"
-#include "../include/Personal.h"
+#include "Interfaces.h"
+#include "Employee.h"
+#include "Personal.h"
 
 
 

@@ -4,12 +4,12 @@
 #include <sstream>
 #include <string>
 #include <vector>
-#include "../include/Factory.h"
-#include "../include/Employee.h"
-#include "../include/Engineer.h"
-#include "../include/Interfaces.h"
-#include "../include/Manager.h"
-#include "../include/Personal.h"
+#include "Factory.h"
+#include "Employee.h"
+#include "Engineer.h"
+#include "Interfaces.h"
+#include "Manager.h"
+#include "Personal.h"
 
 
 Position getPosinitiontoread(const std::string str) {

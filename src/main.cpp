@@ -1,10 +1,10 @@
 // Copyright 2021 Bogomazov
 #include <iostream>
-#include "../include/Employee.h"
-#include "../include/Engineer.h"
-#include "../include/Factory.h"
-#include "../include/Manager.h"
-#include "../include/Personal.h"
+#include "Employee.h"
+#include "Engineer.h"
+#include "Factory.h"
+#include "Manager.h"
+#include "Personal.h"
 
 
 int main() {

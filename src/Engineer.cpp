@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
 
-#include "../include/Engineer.h"
+#include "Engineer.h"
 
 #include <cstring>
 #include <fstream>

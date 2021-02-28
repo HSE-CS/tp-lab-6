@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
 
-#include "../include/Employee.h"
+#include "Employee.h"
 #include <fstream>
 #include <string>
 #include <cmath>

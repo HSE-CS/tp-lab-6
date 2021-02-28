@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
 
-#include "../include/Manager.h"
+#include "Manager.h"
 
 
 int ProjectManager::calcHeads() {
