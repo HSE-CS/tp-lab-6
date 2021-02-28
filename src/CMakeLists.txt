@@ -1,6 +1,9 @@
 set(header_path "${${PROJECT_NAME}_SOURCE_DIR}/include")
-set(header ${header_path}/Interfaces.h ${header_path}/Employee.h ${header_path}/Manager.h ${header_path}/Personal.h ${header_path}/Engineer.h ${header_path}/Factory.h)
-set(src Employee.cpp Personal.cpp Engineer.cpp Manager.cpp Factory.cpp)
+set(header ${header_path}/Interfaces.h ${header_path}/Employee.h ${header_path}/Manager.h ${header_path}/Personal.h ${header_path}/Engineer.h ${header_path}/Factory.h ${header_path}/Cleaner.h ${header_path}/Driver.h ${header_path}/Project.h
+${header_path}/ProjectManager.h ${header_path}/SeniorManager.h ${header_path}/Programmer.h ${header_path}/Tester.h
+${header_path}/TeamLeader.h ${header_path}/Heading.h ${header_path}/ProjectBudget.h ${header_path}/WorkBaseTime.h)
+set(src Employee.cpp Personal.cpp Engineer.cpp Manager.cpp Factory.cpp Cleaner.cpp Driver.cpp Project.cpp
+ProjectManager.cpp SeniorManager.cpp Programmer.cpp Tester.cpp TeamLeader.cpp)
 
 
 add_library(${PROJECT_NAME} SHARED

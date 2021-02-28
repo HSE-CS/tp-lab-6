@@ -1,0 +1,12 @@
+1,Mary Simon,project manager,,VTB
+2,Mary White,project manager,,Yandex
+3,Ronald Allison,project manager,,SberBank
+4,Michael Shaw,senior manager
+5,Sharon Goodwin,programmer,100,VTB
+6,auline Vaughn,programmer,200,Yandex
+7,Nancy Swanson,programmer,300,SberBank
+8,Terry Campbell,tester,100,SberBank
+9,Jessica Lynch,tester,200,Yandex
+10,Jeanette Campbell,tester,300,VTB
+11,Joyce Morales,driver,50
+12,Neil Bryant,cleaner,50
