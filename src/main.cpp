@@ -20,7 +20,7 @@ signed main() {
     p1.printInfo();
     p2.printInfo();
 
-    Factory::getEmployees("EmployeeList.txt");
+    Factory::getEmployees("EmployeeList.txt", &proj);
 
     return 0;
 }
