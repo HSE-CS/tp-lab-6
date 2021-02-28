@@ -73,8 +73,8 @@ TEST(Tester, test8) {
   Tester Vasya(1, static_cast<std::string>("Garfield U. Upadhyaya"),
                Position(2), 100, &pr);
   Vasya.setWorkTime(150);
-  unsigned expected = 2;
-  unsigned result = Vasya.getPosition();
+  std::string expected = "tester";
+  std::string result = Vasya.getPosition();
   EXPECT_EQ(expected, result);
 }
 
@@ -92,7 +92,7 @@ TEST(Project, test10) {
   Project pr(1, 300000);
   TeamLeader Vasya(1, static_cast<std::string>("Garfield U. Upadhyaya"),
                    Position(3), 200, &pr);
-  pr.addWorker(Vasya);
+  pr.addWorker(&Vasya);
   Vasya.setWorkTime(150);
   int expected = 1;
   int result = pr.getWorkers();
