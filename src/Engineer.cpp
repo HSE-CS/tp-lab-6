@@ -14,8 +14,16 @@ void Engineer::setPro(int pro) {
   this->pro = pro;
 }
 
+void Engineer::setPercent(int percent) {
+  this->percent = percent;  
+}
+
 void Engineer::printInfo() {
-  std::cout << name << " " << id << " " << position;
+  std::cout << "\t" << "Id: " << id << '\n';
+  std::cout << "\t" << "Name: " << name << '\n';
+  std::cout << "\t" << "Position: " << position << '\n';
+  std::cout << "\t" << "Work time: " << worktime << '\n';
+  std::cout << "\t" << "Payment: " << getPayment() << '\n';
 }
 
 unsigned int Tester::calcProAdditions() {
@@ -23,7 +31,8 @@ unsigned int Tester::calcProAdditions() {
 }
 
 void Tester::calc() {
-  payment = calcBase() + calcBudgetPart(part, project.budget) + calcProAdditions();
+  payment = calcBase() + calcBudgetPart(part, project.budget) +
+  calcProAdditions();
 }
 
 unsigned int Programmer::calcProAdditions() {
@@ -31,7 +40,8 @@ unsigned int Programmer::calcProAdditions() {
 }
 
 void Programmer::calc() {
-  payment = calcBase() + calcBudgetPart(part, project.budget) + calcProAdditions();
+  payment = calcBase() + calcBudgetPart(part, project.budget) +
+  calcProAdditions();
 }
 
 // int Programmer::getPayment() {

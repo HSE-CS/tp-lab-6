@@ -6,7 +6,7 @@ unsigned int Personal::calcBase() {
     return salary * worktime;
 }
 
-void Personal::setSalary(unsigned int salary){
+void Personal::setSalary(unsigned int salary) {
   this->salary = salary;
 }
 
@@ -18,10 +18,10 @@ unsigned int Driver::calcBonus(unsigned nighttime, unsigned oversalary) {
     return nighttime * oversalary;
 }
 
-void Driver::calc(){
+void Driver::calc() {
     payment = calcBase() + calcBonus(nighttime, oversalary);
 }
 
-void Cleaner::calc(){
+void Cleaner::calc() {
     payment = calcBase();
 }

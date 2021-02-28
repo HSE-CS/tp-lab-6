@@ -18,7 +18,7 @@ class Driver : public Personal{
  private:
   unsigned nighttime;
   unsigned oversalary;
- public: 
+ public:
   unsigned int calcBonus(unsigned nighttime, unsigned oversalary);
   void calc();
 };

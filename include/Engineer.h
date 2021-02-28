@@ -11,10 +11,13 @@ class Engineer: public ProjectBudget, public Personal {
   Project project;
   float part;
   int pro;
+  int percent;
+  std::vector<Programmer> programmers;
  public:
   float calcBudgetPart(float part, int budget);
   void calc();
   void setPro(int pro);
+  void setPercent(int percent);
   void printInfo();
 };
 
@@ -31,9 +34,6 @@ class Programmer: public Engineer {
 };
 
 class TeamLeader: public Programmer, public Heading {
- private:
-  std::vector<Programmer> programmers;
-  int percent;
  public:
   unsigned int calcHeads();
   void calc();
