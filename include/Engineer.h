@@ -13,6 +13,7 @@ class Project;
 class ProjectBudget;
 class Heading;
 class WorkBaseTime;
+class Personal;
 
 class Engineer : public Personal, public ProjectBudget {
  protected:
@@ -23,10 +24,8 @@ class Engineer : public Personal, public ProjectBudget {
   Engineer();
   Engineer(int _id, std::string _name, int _salary, Project *_project,
            double _part);
-  virtual unsigned int calcBonus() = 0;
-  virtual unsigned int calcProAdditions() = 0;
   unsigned int calcBudgetPart(double part, unsigned int budget) override;
-  void calc() override;
+  void calc();
   void printInfo();
 };
 
