@@ -25,6 +25,15 @@ int Programmer::calc() {
   return payment;
 }
 
+void Programmer::printInfo() {
+  std::cout << "Info:" << std::endl;
+  std::cout << "Id:\t" << getId() << std::endl;
+  std::cout << "Name:\t" << getName() << std::endl;
+  std::cout << "Position:\t" << getPosition() << std::endl;
+  std::cout << "Work time:\t" << getWorktime() << std::endl;
+  std::cout << "Payment:\t" << getPayment() << std::endl;
+}
+
 int Tester::calcProAdditions() { return calcBonus(); }
 
 int Tester::calc() {
