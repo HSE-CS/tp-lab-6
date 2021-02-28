@@ -13,7 +13,7 @@ unsigned int Driver::calcBonus() {
   if (worktime > 40) {
     return 5000;
   }
-};
+}
 
 void Driver::calc() { payment = calcBase() + calcBonus(); }
 

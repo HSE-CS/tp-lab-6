@@ -3,6 +3,7 @@
 #define INCLUDE_MANAGER_H_
 
 #include <iostream>
+#include <string>
 #include <vector>
 
 #include "Employee.h"
@@ -33,7 +34,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
 class SeniorManager : public ProjectManager {
  public:
   SeniorManager(int _id, std::string _name, int _sub_num,
-                std::vector<Project *> &_projects, double _part);
+                const std::vector<Project *> &_projects, double _part);
   void calc() override;
 };
 

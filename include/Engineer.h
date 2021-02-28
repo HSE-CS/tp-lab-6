@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <random>
+#include <string>
 
 #include "Employee.h"
 #include "Interfaces.h"
@@ -13,6 +14,7 @@ class Personal;
 class Project;
 class ProjectBudget;
 class Heading;
+class WorkBaseTime;
 
 class Engineer : public Personal, public ProjectBudget {
  protected:

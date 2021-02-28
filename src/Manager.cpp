@@ -32,7 +32,8 @@ ProjectManager::ProjectManager(int _id, std::string _name, int _sub_num,
 }
 
 SeniorManager::SeniorManager(int _id, std::string _name, int _sub_num,
-                             std::vector<Project*>& _projects, double _part) {
+                             const std::vector<Project*>& _projects,
+                             double _part) {
   id = _id;
   name = _name;
   part = _part;

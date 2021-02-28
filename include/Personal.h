@@ -3,6 +3,7 @@
 #define INCLUDE_PERSONAL_H_
 
 #include <iostream>
+#include <string>
 
 #include "Employee.h"
 #include "Factory.h"
