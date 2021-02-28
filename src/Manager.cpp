@@ -41,7 +41,7 @@ Senior_Manager::Senior_Manager(int id, const std::string &name,
                                std::vector<Project *> p)
         : Project_Manager(id, name, work_time, position, p[0]) {
 }
-int Senior_Manager::calc_salary(){
+int Senior_Manager::calc_salary() {
     int summa = 0;
     for (auto project_ : projects) {
         summa += (1.0 / project_->get_num_of_employees()) *
