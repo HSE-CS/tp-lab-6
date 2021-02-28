@@ -139,7 +139,7 @@ TEST(StaffTest, smBudget) {
     project2->budget = 20000;
     projects.insert(project2);
 
-    SeniorManager emp(1, "aaa", projects);
+    SeniorManager emp(1, "aaa", std::move(projects));
     const auto budget = emp.calcBudget(0.05);
     ASSERT_EQ(budget, 1500);
 
@@ -157,7 +157,7 @@ TEST(StaffTest, smHeads) {
     project2->budget = 20000;
     projects.insert(project2);
 
-    SeniorManager emp(1, "aaa", projects);
+    SeniorManager emp(1, "aaa", std::move(projects));
     const auto budget = emp.calcHeads();
     ASSERT_EQ(budget, 3600);
 
