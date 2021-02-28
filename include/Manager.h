@@ -8,12 +8,14 @@
 #include "Interfaces.h"
 
 class ProjectManager : public Employee{
-private:
+ private:
     Project myProject;
     int salary;
-public:
-    ProjectManager(int _id, std::string _name, std::string _pos, int _payment, Project currentProject);
-    ProjectManager(int _id, std::string _name, std::string _pos, int _payment);
+ public:
+    ProjectManager(int _id, std::string _name, 
+        std::string _pos, int _payment, Project currentProject);
+    ProjectManager(int _id, std::string _name, 
+        std::string _pos, int _payment);
     void setProgect(int id_, int budget_);
     int calcBudgetPart(double part, int budget);
     int calcProAdditions();
@@ -25,9 +27,9 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-private:
+ private:
     std::vector<Project> Projects;
-public:
+ public:
     SeniorManager(int _id, std::string _name, std::string _pos,
         int _payment, std::vector<Project> _Projects);
     void addProject(Project pr);

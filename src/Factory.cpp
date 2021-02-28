@@ -4,7 +4,8 @@
 
 #include "Factory.h"
 
-std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList) {
+std::vector<Employee*> makeStaff(std::string staffList, 
+    std::string projectsList) {
     std::vector<Employee*> res;
     std::vector<Project> allProjects;
     std::string read, elem, arr[5];
@@ -25,7 +26,8 @@ std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList
         while (getline(strStream, elem, ' ')) {
             arr[i++] = elem;
         }
-        int id = std::stoi(arr[0]), payment = std::stoi(arr[3]), projectId = std::stoi(arr[4]);
+        int id = std::stoi(arr[0]), payment = std::stoi(arr[3]), 
+            projectId = std::stoi(arr[4]);
         std::string name = arr[1], position = arr[2];
         //std::cout << id;
         int projectBudget = 0;
@@ -45,17 +47,23 @@ std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList
         else if (position == "Cleaner")
             newEmployee = new Cleaner(id, name, position, payment);
         else if (position == "Engineer")
-            newEmployee = new Engineer(id, name, position, payment, currentProject);
+            newEmployee = new Engineer(id, name, position, payment, 
+                currentProject);
         else if (position == "Programmer")
-            newEmployee = new Programmer(id, name, position, payment, currentProject);
+            newEmployee = new Programmer(id, name, position, payment, 
+                currentProject);
         else if (position == "Tester")
-            newEmployee = new Tester(id, name, position, payment, currentProject);
+            newEmployee = new Tester(id, name, position, payment, 
+                currentProject);
         else if (position == "TeamLeader")
-            newEmployee = new TeamLeader(id, name, position, payment, currentProject);
+            newEmployee = new TeamLeader(id, name, position, payment, 
+                currentProject);
         else if (position == "ProjectManager")
-            newEmployee = new ProjectManager(id, name, position, payment, currentProject);
+            newEmployee = new ProjectManager(id, name, position, payment, 
+                currentProject);
         else if (position == "SeniorManager")
-            newEmployee = new SeniorManager(id, name, position,payment, allProjects);
+            newEmployee = new SeniorManager(id, name, position,payment, 
+                allProjects);
         res.push_back(newEmployee);
     }
     staff.close();

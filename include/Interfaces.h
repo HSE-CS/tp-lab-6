@@ -7,7 +7,7 @@
 
 
 class WorkBaseTime {
-public:
+ public:
     virtual int calcBase(int salary, int wtime) = 0;
     virtual int calcBonus() = 0;
 };

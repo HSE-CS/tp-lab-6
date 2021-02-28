@@ -9,13 +9,13 @@
 #include <iomanip>
 
 class Employee {
-private:
+ private:
     int id;
     std::string name;
     std::string position;
     int worktime;
     int payment;
-public:
+ public:
     Employee();
     Employee(int id_, std::string name_, std::string position_, int pay);
     void setWorkTime(int wt);

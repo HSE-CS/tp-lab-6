@@ -52,7 +52,7 @@ TEST(StaffDemo, test8) {
   Cleaner c(13, "OlgaPrivolina", "Cleaner", 200);
   c.setWorkTime(20);
   c.calc();
-  EXPECT_EQ(c.getworktime, 20);
+  EXPECT_EQ(c.getworktime(), 20);
 }
 TEST(StaffDemo, test9) {
   Cleaner c(13, "OlgaPrivolina", "Cleaner", 200);

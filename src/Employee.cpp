@@ -41,5 +41,9 @@ int Employee::calc() {
 }
 
 void Employee::printInfo() {
-    std::cout << std::setw(8) << getid() << std::setw(16) << getname() << std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5) << getpayment() << std::endl;
+    std::cout << std::setw(8) << getid() <<
+        std::setw(16) << getname() <<
+        std::setw(16) << getposition() <<
+        std::setw(4) << getworktime() << std::setw(5) <<
+        getpayment() << std::endl;
 }

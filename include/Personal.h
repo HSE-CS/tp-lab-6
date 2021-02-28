@@ -7,9 +7,9 @@
 #include "Interfaces.h"
 
 class Personal: public Employee {
-private:
+ private:
     int salary;
-public:
+ public:
     Personal(int id_, std::string name_, std::string position_, int pay);
     Personal();
     void setsalary(int a) {
@@ -22,10 +22,10 @@ public:
 };
 
 class Driver: public Personal {
-private:
+ private:
     int nighttime = 0;
     int nightpayment =0;
-public:
+ public:
     Driver(int _id, std::string _name, std::string _pos, int _payment);
     void setnight(int nightti, int nightpay) {
         nighttime = nightti;
@@ -37,15 +37,16 @@ public:
 
 class Cleaner: public Personal {
  public:
-    Cleaner(int _id, std::string _name, std::string _pos, int _payment);
+    Cleaner(int _id, std::string _name, 
+        std::string _pos, int _payment);
     int calc();
 };
 
 class Project {
-private:
+ private:
     int id;
     int budget;
-public:
+ public:
     Project() {
         id = 0;
         budget = 0;

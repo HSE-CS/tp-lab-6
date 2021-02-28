@@ -7,11 +7,15 @@ void ProjectManager::setsalary(int a) {
     salary = a;
 }
 
-ProjectManager::ProjectManager(int _id, std::string _name, std::string _pos, int _payment) : Employee(_id, _name, _pos, _payment) {
+ProjectManager::ProjectManager(int _id, std::string _name,
+    std::string _pos, int _payment) : 
+    Employee(_id, _name, _pos, _payment) {
     salary = 0;
 }
 
-ProjectManager::ProjectManager(int _id, std::string _name, std::string _pos, int _payment, Project currentProject): Employee(_id, _name, _pos, _payment) {
+ProjectManager::ProjectManager(int _id, std::string _name,
+    std::string _pos, int _payment, Project currentProject): 
+    Employee(_id, _name, _pos, _payment) {
     myProject = currentProject;
     salary = 0;
 }
@@ -37,7 +41,9 @@ int ProjectManager::calcHeads() {
     return calcBudgetPart(0.05, myProject.getBudget());
 }
 
-SeniorManager::SeniorManager(int _id, std::string _name, std::string _pos, int _payment, std::vector<Project> _Projects): ProjectManager(_id, _name, _pos, _payment) {
+SeniorManager::SeniorManager(int _id, std::string _name, 
+    std::string _pos, int _payment, std::vector<Project> _Projects): 
+    ProjectManager(_id, _name, _pos, _payment) {
     Projects = _Projects;
 }
 
@@ -70,9 +76,15 @@ int ProjectManager::getsalary() {
 }
 
 void ProjectManager::printInfo() {
-    std::cout << std::setw(8) << getid() << std::setw(16) << getname() << std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5) << getpayment() << std::setw(8) << getsalary() << std::endl;
+    std::cout << std::setw(8) << getid() << std::setw(16) <<
+        getname() << std::setw(16) << getposition() <<
+        std::setw(4) << getworktime() << std::setw(5) <<
+        getpayment() << std::setw(8) << getsalary() << std::endl;
 }
 
 void SeniorManager::printInfo() {
-    std::cout << std::setw(8) << getid() << std::setw(16) << getname() << std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5) << getpayment() << std::setw(8) << getsalary() << std::endl;
+    std::cout << std::setw(8) << getid() << std::setw(16) <<
+        getname() << std::setw(16) << getposition() <<
+        std::setw(4) << getworktime() << std::setw(5) <<
+        getpayment() << std::setw(8) << getsalary() << std::endl;
 }
