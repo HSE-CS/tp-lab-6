@@ -3,18 +3,31 @@
 #define INCLUDE_EMPLOYEE_H_
 #include <string>
 
-class Employee{  // basic(parent) class for all workers
+enum Position {
+  cleaner, driver, tester, programmer, engineer, team_Leader, senior_Manager, project_Manager
+};
+
+class Employee {  // basic(parent) class for all workers
  protected:
   std::string id;
   std::string name;
-  std::string position;
-  double work_time;
-  double payment;
+  Position position;
+  int work_time;  // time worked hours
+  int payment;  // sum salary (with bonus)
 
  public:
-  void setWorkTime();
-  void calc()=0;
-  void printInfo()=0;
+  // constructor
+  Employee(std::string id, std::string name, Position position, int work_time, int payment);
+  // getters
+  std::string getId() const;
+  std::string getName() const;
+  Position getPosition() const;
+  int getWorkTime() const;
+  int getPayment() const;
+  // setters
+  void setWorkTime(int time);
+  virtual void calc() = 0;
+  virtual void printInfo() = 0;
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_

@@ -5,29 +5,46 @@
 #include "Personal.h"
 #include "Factory.h"
 
-class Engineer : public ProjectBudget, public Personal{
+class Engineer : public ProjectBudget, public Personal {
  protected:
-  Project f;
+  Project *current_project;
+  float part;
 
  public:
-  void calcBudgetPart();
-  void calc;
+  Engineer(std::string id, std::string name, Position position, int salary,
+           Project *current_project, float part)
+      : Personal(id, name, position, salary, payment), current_project(current_project), part(part) {
+  }
+  int calcBudgetPart(float current_part, int budget) override;
+  void calc() override;
 };
 
-class Tester : public Engineer{
+class Programmer : public Engineer {
  public:
-  void calcProAdditions();
+  Programmer(std::string id, std::string name, Position position, int salary,
+             Project *current_project, float part)
+      : Engineer(id, name, position, salary, current_project, part) {}
+  int calcProAdditions() override;
+  int calcBonus() override;
 };
 
-class Programmer : public Engineer{
+class Tester : public Engineer {
  public:
-  void calcProAdditions();
+  Tester(std::string id, std::string name, Position position, int salary,
+         Project *current_project, float part)
+      : Engineer(id, name, position, salary, current_project, part) {}
+  int calcProAdditions() override;
+  int calcBonus() override;
+  void calc() override;
 };
 
-class TeamLeader : public Programmer, public Heading{
+class TeamLeader : public Programmer, public Heading {
  public:
-  void calcHeads();
-  void calc();
+  TeamLeader(std::string id, std::string name, Position position, int salary,
+             Project *current_project, float part)
+      : Programmer(id, name, position, salary, current_project, part) {}
+  int calcHeads() override;
+  int calcBonus() override;
 };
 
 #endif  // INCLUDE_ENGINEER_H_

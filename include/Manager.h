@@ -4,22 +4,33 @@
 #include "Employee.h"
 #include "Interfaces.h"
 #include "Factory.h"
+#include "vector"
 
-class ProjectManager : public Employee, public ProjectBudget, public Heading{
+class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:
-  Project f;
+  std::vector<Project> projects;
 
  public:
-  void calcHeads();
-  void calc();
+  // constructor
+  ProjectManager(std::string id, std::string name, Position position,
+                 int work_time, int payment, std::vector<Project> projects)
+      : Employee(id, name, position, work_time, payment), projects(projects) {}
+  int calcHeads() override;
+  int calcBudgetPart(float part, int budget) override;
+  int calcProAdditions() override;
+  void calc() override;
+  void printInfo() override;
 };
 
-class SeniorManager : public ProjectManager{
+class SeniorManager : public ProjectManager {
  protected:
-  Project[2] h;
+  std::vector<Project> projects;
+  float part;
 
  public:
-  void calc();
+  SeniorManager(std::string id, std::string name, Position position,
+                int work_time, int payment, std::vector<Project> projects)
+      : ProjectManager(id, name, position, work_time, payment, projects) {}
 };
 
 #endif  // INCLUDE_MANAGER_H_
