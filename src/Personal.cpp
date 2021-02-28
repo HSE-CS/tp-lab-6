@@ -8,7 +8,7 @@
 //===================================================================================
 // Personal
 
-Personal::Personal(uint32_t id, std::string& name, uint32_t salary)
+Personal::Personal(uint32_t id, const std::string& name, uint32_t salary)
     : Employee(id, name) {
   this->salary = salary;
 }
@@ -32,17 +32,19 @@ void Personal::printInfo() {
 //===================================================================================
 // Cleaner
 
-Cleaner::Cleaner(uint32_t id, std::string& name, uint32_t salary)
+Cleaner::Cleaner(uint32_t id, const std::string& name, uint32_t salary)
     : Personal(id, name, salary) {
   this->position = position_t::CLEANER;
 }
+
+uint32_t Cleaner::calcBonus() { return 0; }
 
 void Cleaner::calc() { this->payment = calcBase(this->salary, this->worktime); }
 
 //===================================================================================
 // Driver
 
-Driver::Driver(uint32_t id, std::string& name, uint32_t salary)
+Driver::Driver(uint32_t id, const std::string& name, uint32_t salary)
     : Personal(id, name, salary) {
   this->position = position_t::DRIVER;
 }

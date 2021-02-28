@@ -2,6 +2,7 @@
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 
+#include <string>
 #include <vector>
 
 #include "Employee.h"
@@ -13,12 +14,12 @@ class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:
   std::vector<project_t*> projects;
   uint32_t calcHeads();
-  uint32_t calcProAdditions() { return 0; };
+  uint32_t calcProAdditions();
   uint32_t calcBudgetPart(double part, uint32_t budget);
 
  public:
-  ProjectManager(uint32_t id, std::string& name,
-                 std::vector<project_t*>& projects);
+  ProjectManager(uint32_t id, const std::string& name,
+                 const std::vector<project_t*>& projects);
   void calc();
   void printInfo();
   std::vector<project_t*>& getProjects();
@@ -28,8 +29,8 @@ class ProjectManager : public Employee, public ProjectBudget, public Heading {
 
 class SeniorManager : public ProjectManager {
  public:
-  SeniorManager(uint32_t id, std::string& name,
-                std::vector<project_t*>& projects);
+  SeniorManager(uint32_t id, const std::string& name,
+                const std::vector<project_t*>& projects);
   void calc();
 };
 

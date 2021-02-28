@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <iostream>
 
-Employee::Employee(uint32_t id, std::string& name) {
+Employee::Employee(uint32_t id, const std::string& name) {
   this->id = id;
   this->name = name;
   this->worktime = 0;

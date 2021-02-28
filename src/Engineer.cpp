@@ -10,11 +10,13 @@
 //===================================================================================
 // Engineer
 
-Engineer::Engineer(uint32_t id, std::string& name, uint32_t salary,
+Engineer::Engineer(uint32_t id, const std::string& name, uint32_t salary,
                    project_t* project)
     : Personal(id, name, salary) {
   this->project = project;
 }
+
+uint32_t Engineer::calcBonus() { return 0; }
 
 uint32_t Engineer::calcBudgetPart(double part, uint32_t budget) {
   if (part < 0.0 || part > 1.0)
@@ -47,7 +49,7 @@ void Engineer::printInfo() {
 //===================================================================================
 // Programmer
 
-Programmer::Programmer(uint32_t id, std::string& name, uint32_t salary,
+Programmer::Programmer(uint32_t id, const std::string& name, uint32_t salary,
                        project_t* project)
     : Engineer(id, name, salary, project) {
   this->position = position_t::PROGRAMMER;
@@ -61,21 +63,23 @@ uint32_t Programmer::calcProAdditions() {
 //===================================================================================
 // Tester
 
-Tester::Tester(uint32_t id, std::string& name, uint32_t salary,
+Tester::Tester(uint32_t id, const std::string& name, uint32_t salary,
                project_t* project)
     : Engineer(id, name, salary, project) {
   this->position = position_t::TESTER;
 }
 
 uint32_t Tester::calcProAdditions() {
-  bool errorsFound = rand() % 100;
+  std::random_device rd;
+  std::mt19937 gen(rd());
+  bool errorsFound = gen() % 100;
   return errorsFound * 10;
 }
 
 //===================================================================================
 // TeamLeader
 
-TeamLeader::TeamLeader(uint32_t id, std::string& name, uint32_t salary,
+TeamLeader::TeamLeader(uint32_t id, const std::string& name, uint32_t salary,
                        project_t* project)
     : Programmer(id, name, salary, project) {
   this->position = position_t::TEAMLEADER;

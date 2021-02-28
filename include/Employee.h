@@ -22,7 +22,7 @@ class Employee {
   position_t position;
   uint32_t worktime, payment;
 
-  Employee(uint32_t id, std::string& name);
+  Employee(uint32_t id, const std::string& name);
   void printId();
 
  public:

@@ -8,7 +8,8 @@
 
 int main() {
   setlocale(LC_ALL, "Russian");
-  srand(time(0));
+  std::random_device rd;
+  std::mt19937 gen(rd());
 
   try {
     Factory* f =
@@ -16,7 +17,7 @@ int main() {
     std::vector<Employee*> staff = f->getStaff();
 
     // Присвоение отработанного времени
-    for (auto worker : staff) worker->setWorkTime(rand() % 70);
+    for (auto worker : staff) worker->setWorkTime(gen() % 70);
 
     // Расчет зарплаты
     for (auto worker : staff) worker->calc();
@@ -35,7 +36,6 @@ int main() {
 
     // Вывод данных о зарплате в виде таблицы
     for (auto worker : staff) worker->printInfo();
-
   } catch (std::exception& error) {
     std::cerr << error.what() << std::endl;
   }

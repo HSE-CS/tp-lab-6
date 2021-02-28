@@ -8,13 +8,15 @@
 //===================================================================================
 // ProjectManager
 
-ProjectManager::ProjectManager(uint32_t id, std::string& name,
-                               std::vector<project_t*>& projects)
+ProjectManager::ProjectManager(uint32_t id, const std::string& name,
+                               const std::vector<project_t*>& projects)
     : Employee(id, name) {
   this->projects.clear();
   this->projects.push_back(projects[0]);
   this->position = position_t::PROJECTMANAGER;
 }
+
+uint32_t ProjectManager::calcProAdditions() { return 0; }
 
 uint32_t ProjectManager::calcBudgetPart(double part, uint32_t budget) {
   if (part < 0.0 || part > 1.0)
@@ -52,8 +54,8 @@ std::vector<project_t*>& ProjectManager::getProjects() {
 //===================================================================================
 // SeniorManager
 
-SeniorManager::SeniorManager(uint32_t id, std::string& name,
-                             std::vector<project_t*>& projects)
+SeniorManager::SeniorManager(uint32_t id, const std::string& name,
+                             const std::vector<project_t*>& projects)
     : ProjectManager(id, name, projects) {
   for (size_t i = 1; i < projects.size(); i++)
     this->projects.push_back(projects[i]);
