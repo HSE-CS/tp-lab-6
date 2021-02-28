@@ -2,7 +2,8 @@
 #include "Factory.h"
 #include <fstream>
 
-void intoProject(std::vector <Project> projects, int idproject, Engineer * employee) {
+void intoProject(std::vector <Project> projects, int idproject,
+Engineer * employee) {
   int flag = 0;
   for (auto p : projects) {
     if (p.id == idproject) {
@@ -19,7 +20,8 @@ void intoProject(std::vector <Project> projects, int idproject, Engineer * emplo
   }
 }
 
-std::vector <Project> intoProjects(std::vector <Project> projects, int * id, ProjectManager * employee) {
+std::vector <Project> intoProjects(std::vector <Project> projects, int * id,
+ProjectManager * employee) {
   std::vector <Project> mypro;
   int flag = 0;
   for (size_t i = 0; i < 3; i++) {
@@ -42,7 +44,7 @@ std::vector <Project> intoProjects(std::vector <Project> projects, int * id, Pro
 
 std::vector<Employee*> StaffFactory::makeStaff(std::string filename) {
   std::vector <Project> projects;
-  std::ifstream f(filename);          
+  std::ifstream f(filename);
   if (!f.is_open()) {
     std::cout << "File cannot open\n";
     throw -1;
