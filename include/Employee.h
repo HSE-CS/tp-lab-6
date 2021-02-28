@@ -71,9 +71,9 @@ public:
 
   void setWorkTime(int wtime);
 
-  virtual void calc(/* arguments */);
+  virtual void calc();
 
-  virtual void printInfo(/* arguments */);
+  virtual void printInfo();
 }
 
 #endif  // INCLUDE_EMPLOYEE_H_
