@@ -3,6 +3,7 @@
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
 
+#include <vector>
 #include <sstream>
 #include "Engineer.h"
 
