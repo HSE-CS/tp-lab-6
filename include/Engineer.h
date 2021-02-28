@@ -10,6 +10,12 @@
 
 class Engineer : public Personal, public ProjectBudget {
  public:
+    Engineer(int id,
+        const std::string& name,
+        int salary,
+        Position position,
+        Project* project,
+        float part);
     virtual ~Engineer() = default;
 
     int calcBonus() const override;
@@ -19,13 +25,6 @@ class Engineer : public Personal, public ProjectBudget {
     void printInfo() const override;
 
  protected:
-    Engineer(int id,
-        const std::string& name,
-        int salary,
-        Position position,
-        Project* project,
-        float part);
-
     Project* project;
     float part;
 };

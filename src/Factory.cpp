@@ -53,7 +53,7 @@ std::vector<Employee*> StaffFactory::makeStaff(
         case Position::Engineer:
         {
             auto emp = new Engineer(id, name + " " + lastName, salary,
-                projects[projectId], projectPart);
+                Position::Engineer, projects[projectId], projectPart);
             staff.push_back(emp);
             break;
         }
