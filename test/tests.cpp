@@ -52,7 +52,7 @@ EXPECT_EQ(4010, payment);
 }
 
 TEST(test_programmer3, test8) {
-Project* project1 = new Project(0,1000,3)
+Project* project1 = new Project(0, 1000, 3);
 Programmer* programmer1 = new Programmer(0,
                                          "ivan", 2000, 2, programmer, project1);
 int payment = programmer1->calc();

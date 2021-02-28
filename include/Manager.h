@@ -19,9 +19,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
   int calcProAdditions(int bonus = 100) override;
   int calcHeads() override;
   int calc() override;
-
 };
-
 class SeniorManager : public ProjectManager {
  private:
   std::vector<Project *> projects;

@@ -55,7 +55,8 @@ int Tester::calc() {
 }
 
 TeamLeader::TeamLeader(int id, std::string name,
-                       int workTime, int salary, Positions position, Project *pr)
+                       int workTime, int salary,
+                       Positions position, Project *pr)
     : Programmer(id, std::move(name), workTime, salary, position, pr) {}
 
 int TeamLeader::calcHeads() {
