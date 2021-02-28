@@ -64,7 +64,7 @@ TEST(StaffTest, teamleadBudget) {
     auto project = new Project;
     project->budget = 10000;
     TeamLeader emp(1, "aaa", 100, project, 0.15);
-    const auto budget = emp.calcBudget(0.1);
+    const auto budget = emp.calcBudget(0.15);
     ASSERT_EQ(budget, 1500);
 
     delete project;
@@ -84,8 +84,8 @@ TEST(StaffTest, teamleadBonus) {
 TEST(StaffTest, testerBudget) {
     auto project = new Project;
     project->budget = 10000;
-    TeamLeader emp(1, "aaa", 100, project, 0.05);
-    const auto budget = emp.calcBudget(0.1);
+    Tester emp(1, "aaa", 100, project, 0.05);
+    const auto budget = emp.calcBudget(0.05);
     ASSERT_EQ(budget, 500);
 
     delete project;
@@ -94,7 +94,7 @@ TEST(StaffTest, testerBudget) {
 TEST(StaffTest, testerBonus) {
     auto project = new Project;
     project->budget = 10000;
-    TeamLeader emp(1, "aaa", 100, project, 0.1);
+    Tester emp(1, "aaa", 100, project, 0.1);
     const auto bonus = emp.calcBonus();
     ASSERT_EQ(bonus, 300);
 
