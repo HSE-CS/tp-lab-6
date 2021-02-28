@@ -29,7 +29,7 @@ int ProjectManager::calcHeads() {
 }
 
 int ProjectManager::calcBudgetPart(float part, int budget) {
-    return floor(part * budget);
+    return static_cast<float>(part * budget);
 }
 
 int ProjectManager::calcProAdditions() {
