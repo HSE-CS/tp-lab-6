@@ -65,6 +65,7 @@ TEST(StaffDemoTest, test6) {
     unsigned int salary = 25;
     Driver employee(id, name, position, salary);
     employee.setWorkTime(10);
-    EXPECT_EQ(350, employee.getWorktime());
+    employee.calc();
+    EXPECT_EQ(350, employee.getPayment());
 }
 
