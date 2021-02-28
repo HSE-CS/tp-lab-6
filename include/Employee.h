@@ -13,35 +13,29 @@
 #include <cstring>
 #include <vector>
 #include <random>
-#include <fstream> /*
-#include "Interfaces.h"
-#include "Engineer.h"
-#include "Factory.h"
-#include "Manager.h"
-#include "Personal.h" */
+#include <fstream> 
 #include "Interfaces.h"
 
 class Employee {
  private:
     int ID;
     std::string name;
+
+ protected:
+    std::string position;
     int worktime = 0;
     int payment = 0;
 
  public:
-    std::string position;
     Employee(int ID, std::string name) {
         this->ID = ID;
         this->name = name;
     }
-    void setWorkTime(int time) {
+    void addWorkTime(int time) {
         worktime += time;
     }
-    void calc() {
-        
-    }
-    void calc(int bonuses) {
-        
+    void setToZero() {
+        worktime = 0;
     }
     void printInfo() {
         std::cout << "ID: " << ID << "\nName: " << name <<

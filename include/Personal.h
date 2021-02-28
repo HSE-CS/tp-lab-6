@@ -6,7 +6,7 @@
 #include "Employee.h"
 
 class Personal: public Employee, public WorkBaseTime {
- private:
+ protected:
     int salary;
 
  public:

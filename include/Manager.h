@@ -6,14 +6,21 @@
 #include "Employee.h"
 
 class Project {
- private:
+ protected:
     int ID;
     int budget = 0;
+    int time = 0;
 
  public:
     Project(int ID, int budget) {
         this->ID = ID;
         this->budget = budget;
+    }
+    int returnBudget() {
+        return budget;
+    }
+    int returnTime() {
+        return time;
     }
 };
 

@@ -5,6 +5,7 @@
 
 #include "Employee.h"
 #include "Personal.h"
+#include "Manager.h"
 
 class Project;
 
@@ -16,7 +17,9 @@ class Engineer: public ProjectBudget, public Personal {
     Engineer(int ID, std::string name, int salary, Project* project) : Personal(ID, name, salary) {
         currentproject = project;
     }
-    void calc() {}
+    void calc() {
+        payment = salary * worktime + calcBudgetPart(worktime/(currentproject->returnTime()), currentproject->returnBudget());
+    }
     virtual int calcBudgetPart(float part, int budget);
 };
 
