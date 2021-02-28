@@ -1,6 +1,6 @@
 // Copyright 2021 dmitrycvetkov2000
-#ifndef INCLUDE_PERSONAL_H
-#define INCLUDE_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 #include "Interfaces.h"
 #include "Employee.h"
@@ -41,4 +41,4 @@ class Cleaner : public Personal {
 };
 
 
-#endif  // INCLUDE_PERSONAL_H
+#endif  // INCLUDE_PERSONAL_H_

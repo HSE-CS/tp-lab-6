@@ -6,10 +6,11 @@
 #include "Employee.h"
 #include "Project.h"
 
+#include <string>
 #include <unordered_set>
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
-public:
+ public:
     ProjectManager(int id,
         const std::string& name);
     ProjectManager(int id,
@@ -24,13 +25,13 @@ public:
 
     void printInfo() const override;
 
-protected:
+ protected:
     std::unordered_set<Project*> projects;
     float part;
 };
 
 class SeniorManager : public ProjectManager {
-public:
+ public:
     SeniorManager(int id,
         const std::string& name,
         std::unordered_set<Project*> &&projects);
