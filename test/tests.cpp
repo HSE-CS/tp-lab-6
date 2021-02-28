@@ -30,6 +30,7 @@ EXPECT_EQ(driver->getId(), 1);
 
 TEST(CalcTest, Test5) {
 Employee* driver = new Driver(1, 50, "DRIVER", "Islam");
+driver->setWorkTime(50);
 driver->calc();
 EXPECT_EQ(driver->getPayment(), 3000);
 }
