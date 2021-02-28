@@ -42,7 +42,7 @@ TEST(Factory, test6) {
 TEST(Factory, test7) {
     Driver driver(10, "Alex", DRIVER, 40, 200);
     driver.calc();
-    EXPECT_EQ(8000, driver.getPayment());
+    EXPECT_EQ(8040, driver.getPayment());
 }
 
 TEST(Factory, test8) {
