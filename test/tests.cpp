@@ -53,20 +53,20 @@ TEST(Factory, test8) {
 
 TEST(Factory, test9) {
     Cleaner cleaner(20, "Nikolay", CLEANER, 40, 200);
-    cleaner.calc()
+    cleaner.calc();
     EXPECT_EQ(8000, cleaner.getPayment());
 }
 
 TEST(Factory, test10) {
     Cleaner cleaner(20, "Nikolay", CLEANER, 50, 200);
-    cleaner.calc()
+    cleaner.calc();
     EXPECT_EQ(10000, cleaner.getPayment());
 }
 
 TEST(Factory, test11) {
     Programmer programmer(15, "Pavel", PROGRAMMER, 40, 1000,
         new Project(1, 100000));
-    programmer.calc()
+    programmer.calc();
     EXPECT_EQ(41040, programmer.getPayment());
 }
 
