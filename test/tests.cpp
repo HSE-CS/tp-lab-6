@@ -62,6 +62,7 @@ TEST(Test, test8) {
 TEST(Test, test9) {
   TeamLeader* tm = new TeamLeader;
   std::vector <Programmer> programmers(10);
+  tm->setProgrammers(programmers);
   tm->setPercent(100);
   EXPECT_EQ(tm->calcHeads(), 1000);
 }
@@ -69,6 +70,7 @@ TEST(Test, test9) {
 TEST(Test, test10) {
   TeamLeader* tm = new TeamLeader;
   std::vector <Programmer> programmers(0);
+  tm->setProgrammers(programmers);
   tm->setPercent(100);
   EXPECT_EQ(tm->calcHeads(), 0);
 }
@@ -104,6 +106,7 @@ TEST(Test, test14) {
   tm->setPercent(100);
   tm->setSalary(1000);
   tm->setWorkTime(40);
+  tm->setProgrammers(programmers);
   EXPECT_EQ(tm->getPayment(), 40500);
 }
 

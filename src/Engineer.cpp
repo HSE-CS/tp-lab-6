@@ -47,6 +47,9 @@ void Programmer::calc() {
 // int Programmer::getPayment() {
 //   return this->payment;
 // }
+void TeamLeader::setProgrammers(std::vector<Programmer> programmers) {
+  this-> programmers = programmers;
+}
 
 unsigned int TeamLeader::calcHeads() {
   return programmers.size() * percent;

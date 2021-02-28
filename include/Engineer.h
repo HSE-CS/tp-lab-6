@@ -37,6 +37,7 @@ class TeamLeader: public Programmer, public Heading {
   std::vector<Programmer> programmers;
  public:
   unsigned int calcHeads();
+  void setProgrammers(std::vector<Programmer> programmers);
   void calc();
 };
 
