@@ -21,7 +21,7 @@ class Engineer : public Personal, public ProjectBudget {
         project(projectIn),
         contrib(contribIn) {}
 
-  int calcBudgetPart(float contrib, int budget) override;
+  float calcBudgetPart(float contrib, int budget) override;
   void printInfo();
 };
 
