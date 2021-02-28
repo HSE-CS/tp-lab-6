@@ -1,0 +1,12 @@
+&fio,pos,salary,project
+&id не используется, потому что генерится автоматически
+Mark Wolf,0
+Steve Rambo,1
+Optimus Prime,
+Bumblebee
+Lockdown
+Megatron
+John Snow
+Barack Obama
+John Connor
+Steven Seagal

@@ -14,22 +14,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e635f60-0383-4d59-a831-ebc6c774f282" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/tp-lab-6.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Employee.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Engineer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Factory.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Interfaces.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Manager.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/Personal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Employee.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Engineer.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Factory.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Personal.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/EmployeeList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Employee.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Employee.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Engineer.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Engineer.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Factory.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Factory.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Manager.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Manager.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Personal.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/Personal.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/CMakeFiles/tp-lab-6.info.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/libtp-lab-6.dll" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/libtp-lab-6.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/libtp-lab-6.dll.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/libtp-lab-6.dll.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/src/tp-lab-6.info.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/src/tp-lab-6.info.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Employee.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Employee.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Engineer.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Engineer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Factory.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Factory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Interfaces.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Interfaces.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Manager.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Manager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/Personal.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/Personal.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Employee.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Employee.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Engineer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Engineer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Factory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Manager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Manager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Personal.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personal.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +59,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-tp-lab-6" />
   </component>
   <component name="ProjectId" id="1p71047balEVc2HCaiV8VPIY3kT" />
   <component name="PropertiesComponent">
@@ -100,7 +120,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1614519087331</updated>
-      <workItem from="1614519088901" duration="536000" />
+      <workItem from="1614519088901" duration="16089000" />
     </task>
     <servers />
   </component>

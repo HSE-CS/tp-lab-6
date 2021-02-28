@@ -6,33 +6,15 @@
 
 #IncludeRegexTransform: 
 
-G:/Projects/tp-lab-6/include/Employee.h
-
-G:/Projects/tp-lab-6/include/Engineer.h
-
 G:/Projects/tp-lab-6/include/Factory.h
-
-G:/Projects/tp-lab-6/include/Manager.h
-
-G:/Projects/tp-lab-6/include/Personal.h
-
-G:/Projects/tp-lab-6/src/Employee.cpp
-../include/Employee.h
-G:/Projects/tp-lab-6/include/Employee.h
-
-G:/Projects/tp-lab-6/src/Engineer.cpp
-../include/Engineer.h
-G:/Projects/tp-lab-6/include/Engineer.h
+vector
+-
+string
+-
+iostream
+-
 
 G:/Projects/tp-lab-6/src/Factory.cpp
 ../include/Factory.h
 G:/Projects/tp-lab-6/include/Factory.h
-
-G:/Projects/tp-lab-6/src/Manager.cpp
-../include/Manager.h
-G:/Projects/tp-lab-6/include/Manager.h
-
-G:/Projects/tp-lab-6/src/Personal.cpp
-../include/Personal.h
-G:/Projects/tp-lab-6/include/Personal.h
 

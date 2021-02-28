@@ -3,16 +3,26 @@
 
 src/CMakeFiles/tp-lab-6.dir/Employee.cpp.obj
  G:/Projects/tp-lab-6/include/Employee.h
+ G:/Projects/tp-lab-6/include/Interfaces.h
  G:/Projects/tp-lab-6/src/Employee.cpp
 src/CMakeFiles/tp-lab-6.dir/Engineer.cpp.obj
+ G:/Projects/tp-lab-6/include/Employee.h
  G:/Projects/tp-lab-6/include/Engineer.h
+ G:/Projects/tp-lab-6/include/Interfaces.h
+ G:/Projects/tp-lab-6/include/Personal.h
  G:/Projects/tp-lab-6/src/Engineer.cpp
 src/CMakeFiles/tp-lab-6.dir/Factory.cpp.obj
  G:/Projects/tp-lab-6/include/Factory.h
  G:/Projects/tp-lab-6/src/Factory.cpp
 src/CMakeFiles/tp-lab-6.dir/Manager.cpp.obj
+ G:/Projects/tp-lab-6/include/Employee.h
+ G:/Projects/tp-lab-6/include/Engineer.h
+ G:/Projects/tp-lab-6/include/Interfaces.h
  G:/Projects/tp-lab-6/include/Manager.h
+ G:/Projects/tp-lab-6/include/Personal.h
  G:/Projects/tp-lab-6/src/Manager.cpp
 src/CMakeFiles/tp-lab-6.dir/Personal.cpp.obj
+ G:/Projects/tp-lab-6/include/Employee.h
+ G:/Projects/tp-lab-6/include/Interfaces.h
  G:/Projects/tp-lab-6/include/Personal.h
  G:/Projects/tp-lab-6/src/Personal.cpp
