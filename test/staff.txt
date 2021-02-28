@@ -1,7 +1,0 @@
-1,Rodionov Yaroslav Arturovich,DRIVER,400, ,
-2,Zhdanova Alexandra Artemovna,CLEANER,250, ,
-3,Tikhonov Emil Dmitrievich,PROJECT_MANAGER, ,PROJECT1 50000 10,
-4,Zelenin Roman Pavlovich,SENIOR_MANAGER, ,PROJECT2 25000 5,PROJECT3 35000 7,PROJECT4 50000 12,
-5,Sharov Artem Platonovich,TESTER,750,PROJECT1 50000 10,
-6,Skvortsova Maria Nikitichna,PROGRAMMER,1000,PROJECT2 25000 5,
-7,Rusanov Makar Artemyevich,TEAM_LEADER,2000,PROJECT3 35000 7,

@@ -14,7 +14,7 @@
 
 
 TEST(FactoryTest, TestInitData) {
-  StaffFactory* staff_factory = new StaffFactory("../src/staff.txt");
+  StaffFactory* staff_factory = new StaffFactory("staff.txt");
   std::vector<Employee*> staff = staff_factory->makeStaff();
   EXPECT_EQ(staff.size(), 7);
 }
