@@ -2,8 +2,8 @@
 
 #include "Personal.h"
 
-Personal::Personal(int id, std::string name, 
-                   std::string position, int salary) 
+Personal::Personal(int id, std::string name,
+                   std::string position, int salary)
                     : Employee(id, name, position) {
   m_salary = salary;
 }

@@ -5,10 +5,12 @@
 
 #include "Programmer.h"
 #include "Interfaces.h"
+#include <string>
+#include <cstring>
 
- class TeamLeader : public Programmer, public Heading {
-public:
-  TeamLeader(int id, std::string name, std::string position, 
+class TeamLeader : public Programmer, public Heading {
+ public:
+  TeamLeader(int id, std::string name, std::string position,
              int salary, Project* project, float part);
   void calc() override;
   void printinfo() override;

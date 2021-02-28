@@ -30,10 +30,9 @@ void ProjectManager::calc() {
 }
 // ProjectsManager
 void ProjectManager::printinfo() {
-  std::cout << std::setw(30) << m_name << std::setw(15) 
+  std::cout << std::setw(30) << m_name << std::setw(15)
             << m_position << std::setw(10) << m_payment << std::endl;
 }
-
 SeniorManager::SeniorManager(int id,
                              std::string name,
                              std::string position,
@@ -64,7 +63,7 @@ void SeniorManager::calc() {
   m_payment = HeadPayment + ProjectPayment;
 }
 void SeniorManager::printinfo() {
-  std::cout << std::setw(30) << m_name << std::setw(15) 
+  std::cout << std::setw(30) << m_name << std::setw(15)
             << m_position << std::setw(10) << m_payment << std::endl;
 }
 

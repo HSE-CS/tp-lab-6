@@ -5,10 +5,9 @@
 #include <iostream>
 #include <iomanip>
 
-Tester::Tester(int id, std::string name, std::string position, 
+Tester::Tester(int id, std::string name, std::string position,
                int salary, Project *project, float part)
               : Engineer(id, name, position, salary, project, part) {
-
 }
 int Tester::calcProAdditions() {
   std::random_device rd;
@@ -29,7 +28,7 @@ void Tester::calc() {
   m_payment = BasePayment + BudgetPartPayment + AdditionalPayment;
 }
 void Tester::printinfo() {
-  std::cout << std::setw(30) << m_name << std::setw(15) 
+  std::cout << std::setw(30) << m_name << std::setw(15)
             << m_position << std::setw(10) << m_payment << std::endl;
 }
 

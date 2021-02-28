@@ -4,6 +4,8 @@
 #define INCLUDE_CLEANER_H_
 
 #include "Personal.h"
+#include <string>
+#include <cstring>
 
 class Cleaner : public Personal {
  public:

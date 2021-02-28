@@ -16,8 +16,8 @@ class Employee {
 
  public:
   Employee(int id, std::string name, std::string position);
-  int getWorkTime () const;
-  int getPayment () const;
+  int getWorkTime() const;
+  int getPayment() const;
   void setWorkTime();
   std::string getPosition();
   virtual void calc() = 0;

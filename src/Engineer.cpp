@@ -4,7 +4,7 @@
 #include <iostream>
 #include "iomanip"
 
-Engineer::Engineer(int id, std::string name, std::string position, 
+Engineer::Engineer(int id, std::string name, std::string position,
                    int salary, Project* project, float part)
                   : Personal(id, name, position, salary) {
   m_project = project;
@@ -26,7 +26,7 @@ void Engineer::calc() {
   m_payment = BasePayment + BudgetPartPayment;
 }
 void Engineer::printinfo() {
-  std::cout << std::setw(30) << m_name << std::setw(15) 
+  std::cout << std::setw(30) << m_name << std::setw(15)
             << m_position << std::setw(10) << m_payment << std::endl;
 }
 

@@ -6,6 +6,8 @@
 #include "Project.h"
 #include "Personal.h"
 #include "Interfaces.h"
+#include <string>
+#include <cstring>
 
 class Engineer : public Personal, public ProjectBudget  {
  protected:
@@ -13,7 +15,7 @@ class Engineer : public Personal, public ProjectBudget  {
   float m_part;
 
  public:
-  Engineer(int id, std::string name, std::string position, 
+  Engineer(int id, std::string name, std::string position,
            int salary, Project* project, float part);
   int calcBonus() override;  // return 0
   void calc() override;

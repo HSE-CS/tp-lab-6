@@ -4,6 +4,8 @@
 #define INCLUDE_TESTER_H_
 
 #include "Engineer.h"
+#include <string>
+#include <cstring>
 
 class Tester : public Engineer {
  public:

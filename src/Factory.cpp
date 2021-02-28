@@ -35,17 +35,18 @@ void StaffFactory::readStaffFile() {
   }
   sin.close();
 }
-Employee* StaffFactory::parseStaff(std::map<std::string, std::string> inf_staff) {
+Employee* StaffFactory::parseStaff(std::map<std::string, 
+                                   std::string> inf_staff) {
   if (inf_staff["position"] == "Cleaner") {
     int t_id = std::stoi(inf_staff["id"]);
     int t_salary = std::stoi(inf_staff["salary"]);
-    temp_employee = new Cleaner(t_id, inf_staff["FIO"], 
+    temp_employee = new Cleaner(t_id, inf_staff["FIO"],
                                 inf_staff["position"], t_salary);
     return temp_employee;
-  } else if (inf_staff["position"] == "Driver"){
+  } else if (inf_staff["position"] == "Driver") {
     int t_id = std::stoi(inf_staff["id"]);
     int t_salary = std::stoi(inf_staff["salary"]);
-    temp_employee = new Driver(t_id, inf_staff["FIO"], 
+    temp_employee = new Driver(t_id, inf_staff["FIO"],
                                inf_staff["position"], t_salary);
     return temp_employee;
   } else if (inf_staff["position"] == "Engineer") {
@@ -54,8 +55,9 @@ Employee* StaffFactory::parseStaff(std::map<std::string, std::string> inf_staff)
     int t_salary = std::stoi(inf_staff["salary"]);
     float t_part = std::stof(inf_staff["part"]);
     Project* t_project = MakeProjects[project_id];
-    temp_employee = new Engineer(t_id, inf_staff["FIO"], 
-                                 inf_staff["position"], t_salary, t_project, t_part);
+    temp_employee = new Engineer(t_id, inf_staff["FIO"],
+                                 inf_staff["position"], t_salary,
+                                 t_project, t_part);
     return temp_employee;
   } else if (inf_staff["position"] == "Programmer") {
     int t_id = std::stoi(inf_staff["id"]);
@@ -63,8 +65,9 @@ Employee* StaffFactory::parseStaff(std::map<std::string, std::string> inf_staff)
     int t_salary = std::stoi(inf_staff["salary"]);
     float t_part = std::stof(inf_staff["part"]);
     Project* t_project = MakeProjects[project_id];
-    temp_employee = new Programmer(t_id, inf_staff["FIO"], 
-                                   inf_staff["position"], t_salary, t_project, t_part);
+    temp_employee = new Programmer(t_id, inf_staff["FIO"],
+                                   inf_staff["position"], t_salary,
+                                   t_project, t_part);
     return temp_employee;
   } else if (inf_staff["position"] == "Tester") {
     int t_id = std::stoi(inf_staff["id"]);
@@ -72,8 +75,9 @@ Employee* StaffFactory::parseStaff(std::map<std::string, std::string> inf_staff)
     int t_salary = std::stoi(inf_staff["salary"]);
     float t_part = std::stof(inf_staff["part"]);
     Project* t_project = MakeProjects[project_id];
-    temp_employee = new Tester(t_id, inf_staff["FIO"], 
-                               inf_staff["position"], t_salary, t_project, t_part);
+    temp_employee = new Tester(t_id, inf_staff["FIO"],
+                               inf_staff["position"], t_salary,
+                               t_project, t_part);
     return temp_employee;
   } else if (inf_staff["position"] == "TeamLeader") {
     int t_id = std::stoi(inf_staff["id"]);
@@ -81,24 +85,27 @@ Employee* StaffFactory::parseStaff(std::map<std::string, std::string> inf_staff)
     int t_salary = std::stoi(inf_staff["salary"]);
     float t_part = std::stof(inf_staff["part"]);
     Project* t_project = MakeProjects[project_id];
-    temp_employee = new Tester(t_id, inf_staff["FIO"], 
-                               inf_staff["position"], t_salary, t_project, t_part);
+    temp_employee = new Tester(t_id, inf_staff["FIO"],
+                               inf_staff["position"], t_salary,
+                               t_project, t_part);
     return temp_employee;
   } else if (inf_staff["position"] == "ProjectManager") {
     int t_id = std::stoi(inf_staff["id"]);
     int project_id = std::stoi(inf_staff["project_id"]);
     float t_part = std::stof(inf_staff["part"]);
     Project* t_project = MakeProjects[project_id];
-    temp_employee = new ProjectManager(t_id, inf_staff["FIO"], 
-                                       inf_staff["position"], t_project, t_part);
+    temp_employee = new ProjectManager(t_id, inf_staff["FIO"],
+                                       inf_staff["position"],
+                                       t_project, t_part);
     return temp_employee;
   } else if (inf_staff["position"] == "SeniorManager") {
     int t_id = std::stoi(inf_staff["id"]);
     int project_id = std::stoi(inf_staff["project_id"]);
     float t_part = std::stof(inf_staff["part"]);
     Project* t_project = MakeProjects[project_id];
-    temp_employee = new SeniorManager(t_id, inf_staff["FIO"], 
-                                      inf_staff["position"], t_project, t_part, MakeProjects);
+    temp_employee = new SeniorManager(t_id, inf_staff["FIO"],
+                                      inf_staff["position"], t_project,
+                                      t_part, MakeProjects);
     return temp_employee;
   }
   return nullptr;

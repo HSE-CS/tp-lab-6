@@ -7,7 +7,6 @@
 
 Driver::Driver(int id, std::string name, std::string position, int salary)
               : Personal(id, name, position, salary) {
-
 }
 int Driver::calcBonus() {
   std::random_device rd;
@@ -24,4 +23,3 @@ void Driver::printinfo() {
   std::cout << std::setw(30) << m_name << std::setw(15)
             << m_position << std::setw(10) << m_payment << std::endl;
 }
-

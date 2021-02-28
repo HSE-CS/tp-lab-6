@@ -7,15 +7,17 @@
 #include "Interfaces.h"
 #include "Project.h"
 #include <vector>
+#include <string>
+#include <cstring>
 
-class ProjectManager : public Heading, public ProjectBudget, 
+class ProjectManager : public Heading, public ProjectBudget,
                        public Employee {
  protected:
   float pm_part;
   Project* pm_project;
 
  public:
-  explicit ProjectManager(int id, std::string name, 
+  explicit ProjectManager(int id, std::string name,
                           std::string position, Project* project, float part);
   int calcHeads() override;
   int calcBudgetPart(float path, int budget) override;
@@ -28,8 +30,9 @@ class SeniorManager : public ProjectManager {
   std::vector<Project*> sm_projects;
 
  public:
-  explicit SeniorManager(int id, std::string name, std::string position, 
-                         Project* project, float part, std::vector<Project*> projects);
+  explicit SeniorManager(int id, std::string name, std::string position,
+                         Project* project, float part, 
+                         std::vector<Project*> projects);
   int calcHeads() override;
   int calcBudgetPart(float part, int budget) override;
   void calc() override;

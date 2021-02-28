@@ -4,6 +4,8 @@
 #define INCLUDE_DRIVER_H_
 
 #include "Personal.h"
+#include <string>
+#include <cstring>
 
 class Driver : public Personal {
  public:

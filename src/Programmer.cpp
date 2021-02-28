@@ -5,10 +5,9 @@
 #include <iostream>
 #include <iomanip>
 
-Programmer::Programmer(int id, std::string name, std::string position, 
+Programmer::Programmer(int id, std::string name, std::string position,
                        int salary, Project *project, float part)
     : Engineer(id, name, position, salary, project, part) {
-
 }
 int Programmer::calcProAdditions() {
   std::random_device rd;

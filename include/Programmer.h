@@ -4,10 +4,12 @@
 #define INCLUDE_PROGRAMMER_H_
 
 #include "Engineer.h"
+#include <string>
+#include <cstring>
 
 class Programmer : public Engineer {
  public:
-  Programmer(int id, std::string name, std::string position, 
+  Programmer(int id, std::string name, std::string position,
              int salary, Project* project, float part);
   void calc() override;
   void printinfo() override;

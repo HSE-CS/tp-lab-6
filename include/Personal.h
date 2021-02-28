@@ -5,6 +5,8 @@
 
 #include "Employee.h"
 #include "Interfaces.h"
+#include <string>
+#include <cstring>
 
 class Personal : public Employee, public WorkBaseTime {
  protected:
