@@ -6,7 +6,6 @@
 #include <random>
 #include <string>
 
-#include "Employee.h"
 #include "Interfaces.h"
 #include "Personal.h"
 
@@ -25,7 +24,7 @@ class Engineer : public Personal, public ProjectBudget {
   Engineer();
   Engineer(int _id, std::string _name, int _salary, Project *_project,
            double _part);
-  unsigned int calcBonus() override;
+  unsigned int calcBonus();
   unsigned int calcProAdditions() override;
   unsigned int calcBudgetPart(double part, unsigned int budget) override;
   void calc() override;
