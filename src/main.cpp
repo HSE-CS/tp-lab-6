@@ -7,7 +7,7 @@
 int main() {
   Factory a;
   std::vector <Employee *> staff = a.fileRead("input.txt");
-  for(Employee * emp : staff) {
+  for (Employee * emp : staff) {
     emp->setWorkTime(40);
   }
   for (Employee * emp : staff) {

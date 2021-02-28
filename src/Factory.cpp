@@ -4,6 +4,7 @@
 #include <vector>
 #include <sstream>
 #include <fstream>
+#include <string>
 
 std::vector<Employee *> Factory::fileRead(std::string fileName) {
   std::fstream file(fileName);
