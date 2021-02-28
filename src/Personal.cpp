@@ -3,7 +3,7 @@
 
 Personal::Personal(int id, int salary,
                    std::string position,
-                   std::string name) : Employee(id, name, position, salary) {
+                   std::string name) : Employee(id, name, position) {
     setSalary(salary);
 }
 

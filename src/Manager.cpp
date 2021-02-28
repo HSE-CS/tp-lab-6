@@ -9,7 +9,7 @@ ProjectManager::ProjectManager(int id,
                                int employees,
                                Project *pr,
                                int salary) : Employee(id, name,
-                               pos, salary) {
+                               pos) {
     this->employees = employees;
     this->project = pr;
     setPosition(pos);

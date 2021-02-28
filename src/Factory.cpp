@@ -33,7 +33,7 @@ std::vector<Employee*> Factory::create_staff(std::string name) {
             std::getline(f, position, ',');
             std::getline(f, worktime, ',');
             std::getline(f, salary, '\n');
-            (position == "DRIVER") {
+            if (position == "DRIVER") {
                 Driver* dr = new Driver(std::stoi(id), std::stoi(salary),
                                        position, name);
                 dr->setWorkTime(std::stoi(worktime));
