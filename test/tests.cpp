@@ -11,13 +11,13 @@ TEST(test_driver, test1) {
 Driver* driver1 = new Driver(0,
                              "Sergo", 500, 2, driver);
 int payment = driver1->calc_salary();
-EXPECT_EQ(1004, payment);
+EXPECT_EQ(1008, payment);
 }
 TEST(test_driver2, test2) {
 Driver* driver1 = new Driver(0,
                              "Sergo", 1000, 2, driver);
 int payment = driver1->calc_salary();
-EXPECT_EQ(2004, payment);
+EXPECT_EQ(2008, payment);
 }
 TEST(test_cleaner, test3) {
 Cleaner* cleaner1 = new Cleaner(0,
@@ -55,14 +55,14 @@ TEST(test_programmer, test8) {
 Programmer* programmer1 = new Programmer(0,
                                          "Sergo", 1000, 2, programmer, nullptr);
 int payment = programmer1->calc_salary();
-EXPECT_EQ(2010, payment);
+EXPECT_EQ(2008, payment);
 }
 
 TEST(test_programmer2, test9) {
 Programmer* programmer1 = new Programmer(0,
                                          "Sergo", 2000, 2, programmer, nullptr);
 int payment = programmer1->calc_salary();
-EXPECT_EQ(4010, payment);
+EXPECT_EQ(4008, payment);
 }
 
 TEST(test_programmer3, test10) {
@@ -71,7 +71,7 @@ Programmer* programmer1 = new Programmer(0,
                                          "Sergo", 2000, 2,
                                          programmer, project1);
 int payment = programmer1->calc_salary();
-EXPECT_EQ(4343, payment);
+EXPECT_EQ(4341, payment);
 }
 
 TEST(test_programmer4, test11) {
@@ -80,7 +80,7 @@ Programmer* programmer1 = new Programmer(0,
                                          "Sergo", 2000, 3,
                                          programmer, project1);
 int payment = programmer1->calc_salary();
-EXPECT_EQ(6415, payment);
+EXPECT_EQ(6412, payment);
 }
 
 TEST(test_programmer5, test12) {
@@ -89,7 +89,7 @@ Programmer* programmer1 = new Programmer(0,
                                          "Sergo", 2000, 3,
                                          programmer, project1);
 int payment = programmer1->calc_salary();
-EXPECT_EQ(6515, payment);
+EXPECT_EQ(6512, payment);
 }
 
 TEST(test_programmer6, test13) {
@@ -98,7 +98,7 @@ Programmer* programmer1 = new Programmer(0,
                                          "Sergo", 2000, 2,
                                          programmer, project1);
 int payment = programmer1->calc_salary();
-EXPECT_EQ(5010, payment);
+EXPECT_EQ(5008, payment);
 }
 TEST(test_team_leader, test14) {
 Project* project1 = new Project(0, 1000, 4);
@@ -116,5 +116,5 @@ Project_Manager* project_Manager1 = new Project_Manager(0,
                                                      project_manager,
                                                      project1);
 int payment = project_Manager1->calc_salary();
-EXPECT_EQ(650, payment);
+EXPECT_EQ(1050, payment);
 }
