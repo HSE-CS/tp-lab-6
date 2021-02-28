@@ -52,6 +52,7 @@ TEST(Programmer, test6) {
   Project pr(1, 300000);
   Programmer Vasya(1, static_cast<std::string>("Garfield U. Upadhyaya"),
                    Position(1), 190, &pr);
+  pr.addWorker(&Vasya);
   Vasya.setWorkTime(150);
   int expected = 132750;
   int result = Vasya.getPayment();
@@ -62,6 +63,7 @@ TEST(Tester, test7) {
   Project pr(1, 200000);
   Tester Vasya(1, static_cast<std::string>("Garfield U. Upadhyaya"),
                Position(2), 100, &pr);
+  pr.addWorker(&Vasya);
   Vasya.setWorkTime(200);
   int expected = 70000;
   int result = Vasya.getPayment();
@@ -104,7 +106,7 @@ TEST(ProjectManager, test11) {
   ProjectManager Vasya(1, static_cast<std::string>("Garfield U. Upadhyaya"),
                    Position(4), &pr);
   Vasya.setWorkTime(160);
-  int expected = 56060;
+  int expected = 56000;
   int result = Vasya.getPayment();
   EXPECT_EQ(expected, result);
 }
@@ -119,7 +121,7 @@ TEST(SeniorManager, test12) {
   Vasya.addProject(&pr1);
   Vasya.addProject(&pr2);
   Vasya.addProject(&pr3);
-  int expected = 74110;
+  int expected = 74000;
   int result = Vasya.getPayment();
   EXPECT_EQ(expected, result);
 }
