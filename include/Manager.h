@@ -19,6 +19,7 @@ class ProjectManager: public Heading, public ProjectBudget, public Employee {
   void setNum(int numOfHeads);
   void printInfo();
   float calcBudgetPart(float part, int budget);
+  unsigned int calcProAdditions();
 };
 
 class SeniorManager: public ProjectManager {

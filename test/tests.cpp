@@ -87,7 +87,7 @@ TEST(Test, test12) {
   // prog->setWorkTime(40);
   // prog->setPro(1000);
   prog->setPercent(500);
-  prog->serNum(5);
+  prog->setNum(5);
   EXPECT_EQ(prog->calcHeads(), 2500);
 }
 

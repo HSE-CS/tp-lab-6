@@ -18,6 +18,10 @@ void ProjectManager::setNum(int numOfHeads) {
   this->numOfHeads = numOfHeads;
 }
 
+unsigned int ProjectManager::calcProAdditions() {
+  return 0;
+}
+
 void ProjectManager::printInfo() {
   std::cout << "\t" << "Id: " << id << '\n';
   std::cout << "\t" << "Name: " << name << '\n';
