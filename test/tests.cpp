@@ -85,31 +85,31 @@ EXPECT_EQ(5010, payment);
 
 TEST(test_tester, test12) {
 Project* project1 = new Project(0, 1000, 2);
-Programmer* programmer1 = new Programmer(0,
-                                         "ivan", 2000, 2, tester, project1);
-int payment = programmer1->calc();
+Tester* tester1 = new Tester(0,
+                             "ivan", 2000, 2, tester, project1);
+int payment = tester1->calc();
 EXPECT_EQ(4504, payment);
 }
 
 TEST(test_tester2, test13) {
-Programmer* programmer1 = new Programmer(0,
-                                         "ivan", 2000, 2, tester, nullptr);
-int payment = programmer1->calc();
+Tester* tester2 = new Tester(0,
+                             "ivan", 2000, 2, tester, nullptr);
+int payment = tester2->calc();
 EXPECT_EQ(4004, payment);
 }
 
 TEST(test_team_leader, test14) {
 Project* project1 = new Project(0, 1000, 4);
-Programmer* programmer1 = new Programmer(0,
-                                         "ivan", 2000, 2, tester, project1);
-int payment = programmer1->calc();
+TeamLeader* teamLeader1 = new TeamLeader(0,
+                                         "ivan", 2000, 2, team_leader, project1);
+int payment = teamLeader1->calc();
 EXPECT_EQ(4258, payment);
 }
 
 TEST(test_pm, test15) {
 Project* project1 = new Project(0, 1000, 4);
-Programmer* programmer1 = new Programmer(0,
-                                         "ivan", 2000, tester, project1);
-int payment = programmer1->calc();
+ProjectManager* projectManager1 = new ProjectManager(0,
+                                         "ivan", 2000, project_manager, project1);
+int payment = projectManager1->calc();
 EXPECT_EQ(650, payment);
 }
