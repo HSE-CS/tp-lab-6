@@ -26,7 +26,7 @@ void Project::updateStaffNum() {
 
 ProjectManager::ProjectManager(int id, std::string name, std::string position,
  double payment, std::vector <Project*> newProjects) :
-  Employee (id, name, position, payment){
+  Employee(id, name, position, payment) {
   projects = newProjects;
 }
 
