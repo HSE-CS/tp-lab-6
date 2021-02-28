@@ -8,7 +8,8 @@ ProjectManager::ProjectManager(int id,
                                std::string name,
                                int employees,
                                Project *pr,
-                               int salary) : Employee(id, name,pos, salary) {
+                               int salary) : Employee(id, name,
+                               pos, salary) {
     this->employees = employees;
     this->project = pr;
     setPosition(pos);
@@ -24,7 +25,7 @@ SeniorManager::SeniorManager(int id,
                              std::vector<Project*> projects,
                              int employees,
                              int salary) : ProjectManager(id, pos, name,
-                                                          employees, nullptr, salary) {
+                                           employees, nullptr, salary) {
     setPosition(pos);
     this->projects = projects;
 }
@@ -71,7 +72,7 @@ std::vector<Project*>& SeniorManager::getProjects() {
 
 void SeniorManager::calc() {
     int sum = 0;
-    for (auto i : getProjects()){
+    for (auto i : getProjects()) {
         sum += calcBudgetPart(5, i->getBudget());
     }
     sum = sum + calcHeads();

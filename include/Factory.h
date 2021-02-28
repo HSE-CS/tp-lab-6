@@ -1,7 +1,7 @@
 // Copyright 2021 Islam Osmanov
 
-#ifndef TP_LAB_6_FACTORY_H
-#define TP_LAB_6_FACTORY_H
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <iostream>
 #include <vector>
@@ -14,4 +14,4 @@ class Factory {
     std::vector<Employee*> create_staff(std::string name);
 };
 
-#endif //TP_LAB_6_FACTORY_H
+#endif  // INCLUDE_FACTORY_H_H

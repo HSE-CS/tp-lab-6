@@ -17,7 +17,7 @@ int main() {
     std::vector<Employee*> emp = fc.create_staff("employees.csv");
     int size_project = emp.size() - 1;
     pro->addWorkers(size_project);
-    for(auto empl : emp) {
+    for (auto empl : emp) {
        empl->calc();
        empl->printInfo();
     }

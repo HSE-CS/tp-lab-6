@@ -1,7 +1,7 @@
 // Copyright 2021 Islam Osmanov
 
-#ifndef TP_LAB_6_PERSONAL_H
-#define TP_LAB_6_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 #include <string>
 #include <iostream>
 #include "Employee.h"
@@ -26,7 +26,6 @@ class Cleaner: public Personal {
                      std::string position, std::string name);
     void printInfo() override;
     void calc() override;
-
 };
 
 class Driver : public Personal {
@@ -38,4 +37,4 @@ class Driver : public Personal {
                      std::string position,
                      std::string name);
 };
-#endif //TP_LAB_6_PERSONAL_H
+#endif  // INCLUDE_PERSONAL_H_

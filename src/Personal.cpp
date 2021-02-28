@@ -23,15 +23,14 @@ int Personal::getSalary() {
 
 Driver::Driver(int id, int salary,
                std::string position, std::string name) : Personal(id, salary,
-                                                                  position, name){
+                                                         position, name) {
 }
 
 
 int Driver::calcBonus(int bonus) {
-    if(getWorkTime() > 40) {
+    if (getWorkTime() > 40) {
         return bonus;
-    }
-    else if (getWorkTime() <= 40) {
+    } else if (getWorkTime() <= 40) {
         return 0;
     }
 }
@@ -53,11 +52,11 @@ void Driver::printInfo() {
 
 Cleaner::Cleaner(int id, int salary,
                std::string position, std::string name) : Personal(id, salary,
-                                                                  position, name){
+                                                         position, name) {
 }
 
 
-int Personal::calcBonus(int bonus){
+int Personal::calcBonus(int bonus) {
     return 0;
 }
 

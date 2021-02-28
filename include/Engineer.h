@@ -1,7 +1,7 @@
 // Copyright 2021 Islam Osmanov
 
-#ifndef TP_LAB_6_ENGINEER_H
-#define TP_LAB_6_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include <iostream>
 #include <vector>
@@ -11,7 +11,7 @@
 #include "Factory.h"
 
 class Engineer : public Personal, public ProjectBudget {
-private:
+ private:
     Project* project;
  public:
     virtual void calc();
@@ -38,18 +38,18 @@ class Programmer : public Engineer {
     virtual int calcProAdditions(int bonus);
     Programmer(int id, std::string pos, std::string name,
              int payment, Project *project1);
-
 };
 
 class TeamLeader : public Heading, public Programmer {
  private:
     int programmers_num = 0;
-public:
+ public:
     int getProgrammers();
     virtual void calc();
     virtual int calcHeads();
     TeamLeader(int id, std::string pos, std::string name,
                int payment,
-               int programmers, Project *project1); // возможно необходимо менять
+               int programmers, Project *project1);
 };
-#endif //TP_LAB_6_ENGINEER_H
+
+#endif  // INCLUDE_ENGINEER_H_

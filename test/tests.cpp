@@ -98,7 +98,7 @@ ProjectManager* pj = new ProjectManager(2,
                                         "PROJECTMANAGER",
                                         "KARL",
                                         8, proj3, 900);
-EXPECT_EQ(pj->calcBudgetPart(2,proj3->getBudget()), 100000);
+EXPECT_EQ(pj->calcBudgetPart(2, proj3->getBudget()), 100000);
 }
 
 TEST(ProgectManagerAdditionsTest, Test14) {

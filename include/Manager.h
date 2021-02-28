@@ -1,7 +1,7 @@
 // Copyright 2021 Islam Osmanov
 
-#ifndef TP_LAB_6_MANAGER_H
-#define TP_LAB_6_MANAGER_H
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 
 #include <iostream>
 #include <string>
@@ -38,4 +38,4 @@ class SeniorManager : public ProjectManager {
     std::vector<Project*> &getProjects();
     void addProject(Project* project);
 };
-#endif //TP_LAB_6_MANAGER_H
+#endif  // INCLUDE_MANAGER_H_

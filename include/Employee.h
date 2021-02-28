@@ -1,7 +1,7 @@
 // Copyright 2021 Islam Osmanov
 
-#ifndef TP_LAB_6_EMPLOYEE_H
-#define TP_LAB_6_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 #include <iostream>
 #include <string>
 
@@ -28,4 +28,4 @@ class Employee {
     void setWorkTime(int time);
 };
 
-#endif // TP_LAB_6_EMPLOYEE_H
+#endif  // INCLUDE_EMPLOYEE_H_

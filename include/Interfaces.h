@@ -1,13 +1,12 @@
 // Copyright 2021 Islam Osmanov
 
-#ifndef TP_LAB_6_INTERFACES_H
-#define TP_LAB_6_INTERFACES_H
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 class ProjectBudget {
  public:
     virtual int calcBudgetPart(double piece, int budget) = 0;
     virtual int calcProAdditions(int bonus) = 0;
-
 };
 
 class WorkBaseTime {
@@ -17,20 +16,20 @@ class WorkBaseTime {
 };
 
 class Project {
-private:
+ private:
     int project_id;
     int budget;
     int workers_num;
-public:
+ public:
     Project(int proj_id, int bud) : project_id(proj_id),
                                     budget(bud){}
     int getBudget() {
         return budget;
-    };
+    }
 
-    int getId(){
+    int getId() {
         return project_id;
-    };
+    }
 
     void setId(int id) {
         this->project_id = id;
@@ -54,4 +53,4 @@ class Heading {
     virtual int calcHeads() = 0;
 };
 
-#endif //TP_LAB_6_INTERFACES_H
+#endif  // INCLUDE_INTERFACES_H_

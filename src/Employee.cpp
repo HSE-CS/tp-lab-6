@@ -2,12 +2,13 @@
 
 #include "Employee.h"
 
-Employee::Employee(int curr_id, std::string some_name, std::string pos, int sal) {
+Employee::Employee(int curr_id,
+                   std::string some_name,
+                   std::string pos,
+                   int sal) {
     this->id = curr_id;
     this->name = some_name;
     this->position = pos;
-    //this->salary = sal;
-
 }
 
 void Employee::setPosition(std::string pos) {

@@ -13,16 +13,16 @@ Engineer::Engineer(int id,
     this->project = project1;
 }
 
-Tester::Tester (int id,
+Tester::Tester(int id,
                std::string pos,
                std::string name,
                int payment,
-               Project *project1) : Engineer(id, pos, name, payment, project1){
+               Project *project1) : Engineer(id, pos, name, payment, project1) {
     setPosition(pos);
     setSalary(payment);
 }
 
-Programmer::Programmer (int id,
+Programmer::Programmer(int id,
                        std::string pos,
                        std::string name,
                        int payment,
@@ -31,12 +31,13 @@ Programmer::Programmer (int id,
     setSalary(payment);
 }
 
-TeamLeader::TeamLeader (int id,
+TeamLeader::TeamLeader(int id,
                        std::string pos,
                        std::string name,
                        int payment,
                        int programmers,
-                       Project *project1) : Programmer(id, pos, name, payment, project1) {
+                       Project *project1) : Programmer(id, pos, 
+                                            name, payment, project1) {
     this->programmers_num = programmers;
     setSalary(payment);
 }
@@ -80,10 +81,10 @@ void Tester::addErrors() {
 
 int Programmer::calcProAdditions(int bonus) {
     int sum = 0;
-    if(getWorkTime() > 40){
+    if (getWorkTime() > 40) {
         sum += 5000;
     }
-    if(getProject()->getBudget() > 10000){
+    if (getProject()->getBudget() > 10000) {
         sum += 2000;
     }
     return sum;
