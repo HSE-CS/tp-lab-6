@@ -1,6 +1,6 @@
 // Copyright 2021 Pavlova D.
 
-#include "Engineer.h"
+#include "../include/Engineer.h"
 
 int Engineer::calcBudgetPart(float _part, int budget) {
   return myProject->Budget / static_cast<int>(_part);

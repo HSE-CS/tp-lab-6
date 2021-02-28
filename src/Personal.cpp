@@ -1,6 +1,6 @@
 // Copyright 2021 Pavlova D.
 
-#include "Personal.h"
+#include "../include/Personal.h"
 
 int Personal::calcBase(int _salary, int _wtime) { return _salary * _wtime; }
 

@@ -1,6 +1,6 @@
 // Copyright 2021 Pavlova D.
 
-#include "Employee.h"
+#include "../include/Employee.h"
 
 int Employee::getId() const { return this->id; }
 

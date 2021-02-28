@@ -1,6 +1,6 @@
 // Copyright 2021 Pavlova D.
 
-#include "Factory.h"
+#include "../include/Factory.h"
 #include <vector>
 
 int main() {
