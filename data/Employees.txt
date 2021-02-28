@@ -1,0 +1,42 @@
+1:Charles Rodgers:Cleaner:15: 
+2:Johnny Edwards:Cleaner:15: 
+3:Curtis Garcia:Cleaner:15:
+4:Victor Wells:Cleaner:15:
+5:Robert Casey:Driver:25:
+6:Charles Wallace:Driver:25:
+7:Pedro Smith:Driver:25:
+8:Michael Henry:Programmer:30:1:
+9:Dean Wilson:Programmer:30:1:
+10:Nicholas Thomas:Programmer:30:1:
+11:Richard Brown:Programmer:30:1:
+12:Dale Diaz:Programmer:30:2:
+13:Daniel Young:Programmer:30:2:
+14:Carl Gomez:Programmer:30:2:
+15:Sam Mendoza:Programmer:30:2:
+16:David Mann:Programmer:30:3:
+17:Tommy Garcia:Programmer:30:3:
+18:Charles Warner:Programmer:30:3:
+19:William Greene:Programmer:30:3:
+20:James Weber:Programmer:30:4:
+21:Michael Richardson:Tester:25:1:
+22:Neil Powell:Tester:25:1:
+23:John James:Tester:25:2:
+24:Edward Rodriguez:Tester:25:2:
+25:John Cannon:Tester:25:3:
+26:Jeremy Mitchell:Tester:25:3:
+27:John Taylor:Tester:25:4:
+28:Ralph Banks:Project Manager:1:
+29:Michael Lopez:Project Manager:2:
+30:Mark Martin:Project Manager:3:
+31:Ronald Myers:Project Manager:4:
+32:Kevin Harris:Senior Manager:1:2:3:4:
+33:Joseph Morrison:Team Leader:45:1:
+34:Christopher Brooks:Team Leader:45:2:
+35:Eugene Frazier:Team Leader:50:3:
+36:Mark Pearson:Team Leader:70:4
+37:Clarence Lawrence:Team Leader:
+38:Jim Peters:Programmer:30:4:
+39:Franklin James:Programmer:30:4:
+40:Matthew Jackson:Programmer:30:4:
+41:James Adams:Tester:25:4:
+42:James Tucker:Tester:25:4:
