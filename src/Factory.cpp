@@ -29,7 +29,7 @@ void Factory::readData() {
   }
   in.close();
   std::string line2;
-  std::vector<Employee> buff2;
+  std::vector<Employee*> buff2;
   std::ifstream in2(filestaff);
   while (getline(in2, line2)) {
     std::string id;
@@ -42,27 +42,27 @@ void Factory::readData() {
     int check = std::stoi(pos);
     if (check == 0) {
       Cleaner q0(id, name, Position(cleaner), 0, 0);
-      buff2.push_back(q0);
+      buff2.push_back(&q0);
     } else if (check == 1) {
       Driver q1(id, name, Position(driver), 0, 0);
-      buff2.push_back(q1);
+      buff2.push_back(&q1);
     } else if (check == 2) {
       Tester q2(id, name, Position(tester), 0, nullptr, 0);
-      buff2.push_back(q2);
+      buff2.push_back(&q2);
     } else if (check == 3) {
       Programmer q3(id, name, Position(programmer), 0, nullptr, 0);
-      buff2.push_back(q3);
+      buff2.push_back(&q3);
     } else if (check == 4) {
       TeamLeader q4(id, name, Position(team_Leader), 0, nullptr, 0);
-      buff2.push_back(q4);
+      buff2.push_back(&q4);
     } else if (check == 5) {
       std::vector<Project>projects;
       SeniorManager q5(id, name, Position(senior_Manager), 0, 0, projects);
-      buff2.push_back(q5);
+      buff2.push_back(&q5);
     } else if (check == 6) {
       std::vector<Project>projects;
       ProjectManager q6(id, name, Position(project_Manager), 0, 0, projects);
-      buff2.push_back(q6);
+      buff2.push_back(&q6);
     }
   }
   in2.close();
