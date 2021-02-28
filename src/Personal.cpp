@@ -30,6 +30,6 @@ void Personal::printInfo() {
 }
 
 int Driver::calcBonus() {
-    return (this->getWorkTime() * this->getSalary() * 0,3);
+    return (this->getWorkTime() * this->getSalary() * 0.3);
 }
 

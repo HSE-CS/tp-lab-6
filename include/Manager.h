@@ -13,11 +13,11 @@
 #include <utility>
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
-protected:
+ protected:
     std::vector<Project*> project;
     float part;
 
-public:
+ public:
     ProjectManager(int id, const std::string name, std::string position,
         int numProjects, int payment, int worktime,
         const std::vector<Project*>& projects)
@@ -32,7 +32,7 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-public:
+ public:
     SeniorManager(int id, std::string name, std::string position,
         int numProjects, int worktime, int payment,
         const std::vector<Project*>& project)

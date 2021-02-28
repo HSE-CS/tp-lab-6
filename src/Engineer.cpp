@@ -57,8 +57,8 @@ void Programmer::printInfo() {
     std::cout << "Payment : " << getPayment() << std::endl;
 }
 
-int TeamLeader::calcHeads() { 
-    return 32354; 
+int TeamLeader::calcHeads() {
+    return 32354;
 }
 
 int TeamLeader::calc() {

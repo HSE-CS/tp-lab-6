@@ -8,9 +8,9 @@
 #include "Interfaces.h"
 
 class Personal : public Employee, public WorkBaseTime {
-private:
+ private:
     int salary = 0;
-public:
+ public:
     Personal(int id, std::string name, std::string position,
         int worktime, int payment)
         :Employee(id, name, position, worktime, payment) {}
@@ -23,15 +23,17 @@ public:
 };
 
 class Driver : public Personal {
-public:
-    Driver(int id, std::string name, std::string position, int worktime, int payment)
+ public:
+    Driver(int id, std::string name, std::string position,
+        int worktime, int payment)
         :Personal(id, name, position, worktime, payment) {}
     int calcBonus();
 };
 
 class Cleaner : public Personal {
-public:
-    Cleaner(int id, std::string name, std::string position, int worktime, int  payment)
+ public:
+    Cleaner(int id, std::string name, std::string position,
+        int worktime, int  payment)
         :Personal(id, name, position, worktime, payment) {}
 };
 #endif  // INCLUDE_PERSONAL_H_
