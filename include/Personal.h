@@ -10,31 +10,31 @@
 
 
 class Personal : public Employee, public WorkBaseTime {
-public:
-	Personal(id_type id, const std::string& name, unsigned int salary);
-	~Personal() override = default;
-	int calc_base(int salary, int wt) override;
+ public:
+Personal(id_type id, const std::string& name, unsigned int salary);
+~Personal() override = default;
+int calc_base(int salary, int wt) override;
 
-protected:
-	unsigned int _salary; 
+ protected:
+unsigned int _salary; 
 };
 
 class Cleaner final : public Personal {
-public:
-	Cleaner(id_type id, const std::string& name, unsigned int salary);
+ public:
+Cleaner(id_type id, const std::string& name, unsigned int salary);
 
-	void calc() override;
-	void print_info() override;
-	int calc_bonus() override;
+void calc() override;
+void print_info() override;
+int calc_bonus() override;
 };
 
 class Driver final : public Personal {
-public:
-	Driver(id_type id, const std::string& name, unsigned int salary);
+ public:
+Driver(id_type id, const std::string& name, unsigned int salary);
 
-	void calc() override;
-	void print_info() override;
-	int calc_bonus() override;
+void calc() override;
+void print_info() override;
+int calc_bonus() override;
 };
 
 #endif  // INCLUDE_PERSONAL_H_
