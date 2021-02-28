@@ -6,7 +6,7 @@
 
 int ProjectManager::calcHeads() {
     int result = 0;
-    for (Employee *worker: this->projectWorkers) {
+    for (Employee *worker : this->projectWorkers) {
         if (worker->getProject() == this->project) {
             result++;
         }
@@ -41,13 +41,14 @@ void ProjectManager::printInfo() {
         this->project);
 }
 
-void ProjectManager::setProjectWorkersVector(std::vector<Employee *> projectWorkers1) {
+void ProjectManager::setProjectWorkersVector(
+    std::vector<Employee *> projectWorkers1) {
     this->projectWorkers = std::move(projectWorkers1);
 }
 
 int SeniorManager::calcHeads() {
     int result = 0;
-    for (Project *p:this->projects) {
+    for (Project *p : this->projects) {
         result += p->getWorkersCount();
     }
     return result;
@@ -75,7 +76,7 @@ void SeniorManager::printInfo() {
 
 int TeamLeader::calcProgrammers() {
     int result = 0;
-    for (Employee *worker: *(this->workers)) {
+    for (Employee *worker : *(this->workers)) {
         if (worker->getPosition() == PROGRAMMER) {
             result++;
         }
