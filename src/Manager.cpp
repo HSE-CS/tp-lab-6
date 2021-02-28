@@ -1,6 +1,7 @@
 // Copyright 2021 dmitrycvetkov2000
 #include "Manager.h"
 
+#include <cmath>
 #include <iostream>
 #include <numeric>
 #include <string>
