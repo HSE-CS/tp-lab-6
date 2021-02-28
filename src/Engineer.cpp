@@ -26,7 +26,8 @@ Programmer::Programmer(int id,
                        std::string pos,
                        std::string name,
                        int payment,
-                       Project *project1) : Engineer(id, pos, name, payment, project1) {
+                       Project *project1) : Engineer(id,
+                       pos, name, payment, project1) {
     setPosition(pos);
     setSalary(payment);
 }
@@ -37,7 +38,7 @@ TeamLeader::TeamLeader(int id,
                        int payment,
                        int programmers,
                        Project *project1) : Programmer(id, pos, 
-                                            name, payment, project1) {
+                       name, payment, project1) {
     this->programmers_num = programmers;
     setSalary(payment);
 }

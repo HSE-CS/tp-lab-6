@@ -14,4 +14,4 @@ class Factory {
     std::vector<Employee*> create_staff(std::string name);
 };
 
-#endif  // INCLUDE_FACTORY_H_H
+#endif  // INCLUDE_FACTORY_H_

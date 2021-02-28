@@ -17,7 +17,7 @@ void Personal::setSalary(int sal) {
 }
 
 int Personal::getSalary() {
-   return this->salary;
+ return this->salary;
 }
 
 

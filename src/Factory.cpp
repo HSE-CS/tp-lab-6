@@ -6,12 +6,12 @@
 #include <fstream>
 #include <istream>
 #include <cstdio>
+#include <cstdlib>
 #include "Factory.h"
 #include "Interfaces.h"
 #include "Employee.h"
 #include "Manager.h"
 #include "Engineer.h"
-#include <stdlib.h>
 
 std::vector<Employee*> Factory::create_staff(std::string name) {
     std::ifstream f(name);
