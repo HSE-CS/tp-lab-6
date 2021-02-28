@@ -73,7 +73,7 @@ Programmer programmer1(0,
                        project);
 programmer1.setWorkTime(10);
 programmer1.calc();
-EXPECT_EQ(10000, programmer1.getPayment());
+EXPECT_EQ(12000, programmer1.getPayment());
 }
 
 TEST(staffTest, test11) {
@@ -129,9 +129,9 @@ EXPECT_EQ(6, numOfPositions);
 TEST(staffTest, test14) {
 std::vector<Project*> projects;
 projects.push_back(new Project(1,
-3000000));
+300000));
 projects.push_back(new Project(2,
-3000000));
+300000));
 std::vector<Project*> projects1;
 projects1.push_back(projects[0]);
 std::vector<Project*> projects2;
@@ -154,7 +154,7 @@ SeniorManager seniorManager1(4,
                              "Иванов Иван Иванович",
                              projects);
 seniorManager1.calc();
-EXPECT_EQ(2006500, seniorManager1.getPayment());
+EXPECT_EQ(207800, seniorManager1.getPayment());
 }
 
 TEST(staffTest, test15) {

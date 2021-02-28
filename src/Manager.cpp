@@ -32,7 +32,7 @@ double ProjectManager::calcHeads() {
 }
 void ProjectManager::calc() {
   this->setPayment(this->calcHeads() + this->calcBudgetPart(
-      1 / (this->projects[0]->getNumOfWorkers()),
+      (double)1 / (this->projects[0]->getNumOfWorkers()),
       this->projects[0]->getBudget()));
 }
 double ProjectManager::calcBudgetPart(double part, int budget) {
@@ -63,7 +63,7 @@ void SeniorManager::calc() {
   double budgetsParts = 0;
   for (int i = 0; i < this->getProjects().size(); ++i) {
     budgetsParts += this->calcBudgetPart(
-        1 / (this->getProjects()[i]->getNumOfWorkers()),
+        (double)1 / (this->getProjects()[i]->getNumOfWorkers()),
         this->getProjects()[i]->getBudget());
   }
   this->setPayment(this->calcHeads() + budgetsParts);
