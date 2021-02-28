@@ -14,7 +14,9 @@ class Personal : public Employee, public WorkBaseTime {
   }
   int getSalary();
   void setSalary(int salary);
-  int calcBase(int salary, int worktime);;
+  void calc() override;
+  int calcBase(int payment, int wtime) override;
+  int calcBonus() override;
 };
 
 class Cleaner : public Personal {
@@ -23,7 +25,7 @@ class Cleaner : public Personal {
     : Personal(id, name, salary) {
     setPosition(cleaner);
   }
-  void calc();
+  void calc() override;
 };
 
 class Driver : public Personal {
@@ -32,8 +34,8 @@ class Driver : public Personal {
     : Personal(id, name, salary) {
     setPosition(driver);
   }
-  int calcBonus();
-  void calc();
+  int calcBonus() override;
+  void calc() override;
 };
 
 #endif  // INCLUDE_PERSONAL_H_

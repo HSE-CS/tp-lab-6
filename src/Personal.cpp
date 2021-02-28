@@ -13,6 +13,15 @@ int Personal::calcBase(int salary, int worktime) {
   return salary * worktime;
 }
 
+int Personal::calcBonus() {
+  return 10;
+}
+
+void Personal::calc() {
+  setPayment(calcBase(getPayment(), getWorktime())
+  + calcBonus());
+}
+
 void Cleaner::calc() {
   setPayment(calcBase(getSalary(), getWorktime()));
 }
