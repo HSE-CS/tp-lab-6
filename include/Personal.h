@@ -10,13 +10,13 @@
 class Personal : public Employee, public WorkBaseTime {
  protected:
      int salary;
+ public:
+     Personal(int _id, std::string _name, std::string _position, int
+         _salary);
      int calcBase(int salary, int wtime) override;
      int calcBonus() override;
      void calc() override;
      void printInfo() override;
- public:
-     Personal(int _id, std::string _name, std::string _position, int
-         _salary);
 };
 
 class Cleaner : public Personal {

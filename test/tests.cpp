@@ -50,7 +50,7 @@ TEST(StaffDemoTest, test4) {
 TEST(StaffDemoTest, test5) {
     unsigned int id = 5;
     std::string name = "Nataly Portman";
-    POSITION position = CLEANER;
+    std::string position = "Cleaner";
     unsigned int salary = 8;
     Cleaner employee(id, name, position, salary);
     employee.setWorkTime(50);
