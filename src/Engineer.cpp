@@ -37,7 +37,7 @@ TeamLeader::TeamLeader(int id,
                        std::string name,
                        int payment,
                        int programmers,
-                       Project *project1) : Programmer(id, pos, 
+                       Project *project1) : Programmer(id, pos,
                        name, payment, project1) {
     this->programmers_num = programmers;
     setSalary(payment);

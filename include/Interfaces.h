@@ -20,7 +20,7 @@ class Project {
     int project_id;
     int budget;
     int workers_num;
-  public:
+ public:
     Project(int proj_id, int bud) : project_id(proj_id),
                                     budget(bud) {}
     int getBudget() {

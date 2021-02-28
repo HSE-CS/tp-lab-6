@@ -17,9 +17,8 @@ void Personal::setSalary(int sal) {
 }
 
 int Personal::getSalary() {
- return this->salary;
+return this->salary;
 }
-
 
 Driver::Driver(int id, int salary,
                std::string position, std::string name) : Personal(id, salary,
