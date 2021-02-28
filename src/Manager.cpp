@@ -26,7 +26,7 @@ void Project::updateStaffNum() {
 
 ProjectManager::ProjectManager(int id, std::string name, std::string position,
  double payment, std::vector <Project*> newProjects) :
- Employee (id, name, position, payment) {
+  Employee (id, name, position, payment){
   projects = newProjects;
 }
 
@@ -49,17 +49,17 @@ double ProjectManager::calc() {  // quater of project budget
 void ProjectManager::printInfo() {
   std::string info;
   info = std::to_string(getId()) + " " +
-   getName() + "\nPosition: " + getPosition() +
-   "\nPayment: " + std::to_string(getPayment()) +
-   "\nNext salary: " + std::to_string(getCurrentBudget()) +
-   " (current work time: " + std::to_string(getWorkTime()) + ")" +
-   "\nCurrent project: " + std::to_string(projects[0]->getId()) + "\n";
+    getName() + "\nPosition: " + getPosition() +
+    "\nPayment: " + std::to_string(getPayment()) +
+    "\nNext salary: " + std::to_string(getCurrentBudget()) +
+    " (current work time: " + std::to_string(getWorkTime()) + ")" +
+    "\nCurrent project: " + std::to_string(projects[0]->getId()) + "\n";
   std::cout << info << std::endl;
 }
 
 SeniorManager::SeniorManager(int id, std::string name, std::string position,
  double payment, std::vector <Project*> newProjects) :
- ProjectManager (id, name, position, payment, newProjects) {
+  ProjectManager(id, name, position, payment, newProjects) {
   numOfProjects = newProjects.size();
 }
 
@@ -73,7 +73,7 @@ void SeniorManager::addNewProject(Project* newProject) {
       return;
     }
   }
-  
+
   getProjects().push_back(newProject);
   numOfProjects++;
 }
@@ -101,11 +101,11 @@ double SeniorManager::calc() {
 void SeniorManager::printInfo() {
   std::string info;
   info = std::to_string(getId()) + " " +
-   getName() + "\nPosition: " + getPosition() +
-   "\nPayment: " + std::to_string(getPayment()) +
-   "\nNext salary: " + std::to_string(getCurrentBudget()) +
-   " (current work time: " + std::to_string(getWorkTime()) + ")" +
-   "\nCurrent projects:\n";
+    getName() + "\nPosition: " + getPosition() +
+    "\nPayment: " + std::to_string(getPayment()) +
+    "\nNext salary: " + std::to_string(getCurrentBudget()) +
+    " (current work time: " + std::to_string(getWorkTime()) + ")" +
+    "\nCurrent projects:\n";
   for (int i = 0; i < numOfProjects; i++) {
     info += " " + std::to_string(getProjects()[i]->getId()) + "\n";
   }
