@@ -68,7 +68,8 @@ EXPECT_EQ(4010, payment);
 TEST(test_programmer3, test10) {
 Project* project1 = new Project(0, 1000, 3);
 Programmer* programmer1 = new Programmer(0,
-                                         "Sergo", 2000, 2, programmer, project1);
+                                         "Sergo", 2000, 2,
+                                         programmer, project1);
 int payment = programmer1->calc_salary();
 EXPECT_EQ(4343, payment);
 }
@@ -76,7 +77,8 @@ EXPECT_EQ(4343, payment);
 TEST(test_programmer4, test11) {
 Project* project1 = new Project(0, 2000, 5);
 Programmer* programmer1 = new Programmer(0,
-                                         "Sergo", 2000, 3, programmer, project1);
+                                         "Sergo", 2000, 3,
+                                         programmer, project1);
 int payment = programmer1->calc_salary();
 EXPECT_EQ(6415, payment);
 }
@@ -84,7 +86,8 @@ EXPECT_EQ(6415, payment);
 TEST(test_programmer5, test12) {
 Project* project1 = new Project(0, 2000, 4);
 Programmer* programmer1 = new Programmer(0,
-                                         "Sergo", 2000, 3, programmer, project1);
+                                         "Sergo", 2000, 3,
+                                         programmer, project1);
 int payment = programmer1->calc_salary();
 EXPECT_EQ(6515, payment);
 }
@@ -92,7 +95,8 @@ EXPECT_EQ(6515, payment);
 TEST(test_programmer6, test13) {
 Project* project1 = new Project(0, 1000, 1);
 Programmer* programmer1 = new Programmer(0,
-                                         "Sergo", 2000, 2, programmer, project1);
+                                         "Sergo", 2000, 2,
+                                         programmer, project1);
 int payment = programmer1->calc_salary();
 EXPECT_EQ(5010, payment);
 }
@@ -109,7 +113,8 @@ TEST(test_pm, test15) {
 Project* project1 = new Project(0, 1000, 4);
 ProjectManager* projectManager1 = new ProjectManager(0,
                                                      "Sergo", 2000,
-                                                     project_manager, project1);
+                                                     project_manager,
+                                                     project1);
 int payment = projectManager1->calc_salary();
 EXPECT_EQ(650, payment);
 }
