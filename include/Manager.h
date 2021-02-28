@@ -16,6 +16,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
   ProjectManager(int id, std::string name, std::string position,
                  int payment, std::vector <Project*> projects);
   Project *getProject();
+  std::vector <Project*> getProjects();
   int calc() override;
   int calcHeads(int) override;
   void printInfo() override;

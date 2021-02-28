@@ -2,14 +2,18 @@
 
 #include "Manager.h"
 
-ProjectManager::ProjectManager(int id, std::string name, int payment,
-            std::string position, std::vector <Project*> projects)
-            : Employee(payment, name, position, id) {
+ProjectManager::ProjectManager(int id, std::string name, std::string position,
+                    int payment, std::vector <Project*> projects)
+                    : Employee(payment, name, position, id) {
   this->projects = projects;
 }
 
 Project* ProjectManager::getProject() {
   return projects[0];
+}
+
+std::vector <Project*> ProjectManager::getProjects() {
+  return projects;
 }
 
 int ProjectManager::calc() {
@@ -40,9 +44,9 @@ void ProjectManager::printInfo() {
   }
 }
 
-SeniorManager::SeniorManager(int id, std::string name, int payment,
-            std::string position, std::vector <Project*> projects)
-            : ProjectManager(id, name, payment, position, projects) {}
+SeniorManager::SeniorManager(int id, std::string name, std::string position,
+             int payment, std::vector <Project*> projects)
+            : ProjectManager(id, name, position, payment, projects) {}
 
 int SeniorManager::calc() {
   int res = 0;

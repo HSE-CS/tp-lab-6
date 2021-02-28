@@ -49,7 +49,7 @@ class Tester : public Engineer {
          std::string position, int payment, Project* project);
   int calc() override;
   int calcProAdditions() override;
-}
+};
 
 class TeamLeader : public Programmer, public Heading {
  public:
