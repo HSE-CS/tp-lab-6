@@ -14,7 +14,7 @@ class Engineer : public Project,
 public:
     int calcBudgetPart(float projectPart, int budget);
 
-    explicit Engineer(int budget1, std::string projectName1, std::string name1, int worktime1, Project *project1,
+    explicit Engineer(std::string name1, int worktime1, Project *project1,
                       int position1, int salary1);
 
 
@@ -35,6 +35,7 @@ public:
 };
 
 class Tester : public Engineer {
+public:
     explicit Tester(std::string name1, int worktime1, Project *project1, int position1, int salary1);
 
     virtual int calcProAdditions(int relativePart);
@@ -42,6 +43,7 @@ class Tester : public Engineer {
     virtual void printInfo();
 
     virtual void calc(int hours);
+
     virtual void calcBonus(int times);
 };
 

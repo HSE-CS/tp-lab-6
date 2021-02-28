@@ -40,7 +40,6 @@ protected:
     int payment;
     Project *project;
     int position;
-
 public:
 
     int getId() {
@@ -62,6 +61,10 @@ public:
     Project *getProject();
 
     int getPosition();
+
+    void setProject(Project *project1) {
+        this->project = project1;
+    }
 
     void toStringForm(std::string name1, int id1, int profession, Project *project1) {
         std::string result = "";

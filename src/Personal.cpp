@@ -33,10 +33,38 @@ void Driver::printInfo() {
     toStringForm(this->name, this->id, this->position, this->project);
 }
 
+Driver::Driver(std::string name1,
+               int worktime1,
+               Project *project1,
+               int position1,
+               int salary1) : Personal(std::move(name1),
+                                       worktime1,
+                                       project1,
+                                       position1,
+                                       salary1) {
+
+}
+
 void Cleaner::calc(int hours) {
     this->payment += calcBase(this->salary, hours);
 }
 
 void Cleaner::printInfo() {
     toStringForm(this->name, this->id, this->position, this->project);
+}
+
+void Cleaner::calcBonus(int floors) {
+    this->payment += calcBase(this->salary, floors);
+}
+
+Cleaner::Cleaner(std::string name1,
+                 int worktime1,
+                 Project *project1,
+                 int position1,
+                 int salary1) : Personal(std::move(name1),
+                                         worktime1,
+                                         project1,
+                                         position1,
+                                         salary1) {
+
 }

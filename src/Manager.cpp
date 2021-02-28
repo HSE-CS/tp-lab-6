@@ -16,7 +16,7 @@ int ProjectManager::calcHeads() {
     return result;
 }
 
-void ProjectManager::calc() {
+void ProjectManager::calc(int emp) {
     this->payment += this->employees * 1000;
 }
 
@@ -36,6 +36,10 @@ ProjectManager::ProjectManager(std::string name1,
 
 void ProjectManager::printInfo() {
     toStringForm(this->name, this->id, this->position, this->project);
+}
+
+void ProjectManager::setProjectWorkersVector(std::vector<Employee *> projectWorkers1) {
+    this->projectWorkers = projectWorkers1;
 }
 
 int SeniorManager::calcHeads() {
@@ -97,4 +101,8 @@ TeamLeader::TeamLeader(std::string name1,
 
 void TeamLeader::printInfo() {
     Programmer::printInfo();
+}
+
+void TeamLeader::setWorkersVector(std::vector<Employee *> *workers1) {
+    this->workers = workers1;
 }

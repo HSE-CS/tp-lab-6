@@ -14,10 +14,10 @@ protected:
     int salary;
 public:
     explicit Personal(std::string name1,
-        int worktime1,
-        Project *project1,
-        int position1,
-        int salary1);
+                      int worktime1,
+                      Project *project1,
+                      int position1,
+                      int salary1);
 
     virtual int calcBase(int salary_, int wtime);
 
@@ -29,7 +29,9 @@ class Driver : public Personal {
 public:
     // Driver() : Personal(std::__cxx11::string(), 0, nullptr, 0, std::__cxx11::string(), 0, nullptr, 0, 0) {}
 
-    void calcBonus(int nightHours);
+    explicit Driver(std::string name1, int worktime1, Project *project1, int position1, int salary1);
+
+    virtual void calcBonus(int nightHours);
 
     void calc(int hours);
 
@@ -39,9 +41,15 @@ public:
 class Cleaner : public Personal {
     // Cleaner() : Personal(std::__cxx11::string(), 0, nullptr, 0, std::__cxx11::string(), 0, nullptr, 0, 0) {}
 
+public:
+
     void calc(int hours);
 
     virtual void printInfo();
+
+    virtual void calcBonus(int floors);
+
+    explicit Cleaner(std::string name1, int worktime1, Project *project1, int position1, int salary1);
 };
 
 

@@ -11,6 +11,7 @@
 #include <fstream>
 
 class Employee;
+class Project;
 
 class Factory {
 public:
@@ -18,8 +19,9 @@ public:
 
     static std::string __find_info_path(std::string fileName);
 
-    static std::vector<Employee *> getEmployees(const std::string &fileName);
+    static std::vector<Employee *> getEmployees(const std::string &fileName, Project* startProject);
+
+    static std::vector<std::string> split(const std::string &s);
 };
 
-
-#endif //TP_LAB_6_FACTORY_H
+#endif //TP_&LAB_6_FACTORY_H

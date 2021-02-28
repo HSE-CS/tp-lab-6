@@ -8,7 +8,7 @@ static const std::string file("EmployeeList.txt");
 
 signed main() {
     // id генерируется автоматически, поэтому в файле не нужен
-    Factory::__debug_pwd();
+    // Factory::__debug_pwd();
 
     Project proj;
     proj.setBudget(10000);
@@ -19,6 +19,8 @@ signed main() {
     Programmer p2("Steve Rambo", 12, &proj, TESTER, 128000);
     p1.printInfo();
     p2.printInfo();
+
+    Factory::getEmployees("EmployeeList.txt");
 
     return 0;
 }

@@ -1,12 +1,17 @@
 &fio,pos,salary,project
-&id не используется, потому что генерится автоматически
-Mark Wolf,0
-Steve Rambo,1
-Optimus Prime,
-Bumblebee
-Lockdown
-Megatron
-John Snow
-Barack Obama
-John Connor
-Steven Seagal
+&id_not_used
+&
+10
+MarkWolf,0,73427
+SteveRambo,1,34000
+OptimusPrime,3,1240000
+Bumblebee,2,40000
+Lockdown,2,98000
+Megatron,3,128
+&
+&it_is_comment
+&
+JohnSnow,3,0
+BarackObama,1,42000
+JohnConnor,1,75000
+StevenSeagal,2,250000

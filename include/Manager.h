@@ -28,9 +28,11 @@ public:
 
     virtual int calcHeads();
 
-    virtual void calc();
+    virtual void calc(int emp);
 
     virtual void printInfo();
+
+    void setProjectWorkersVector(std::vector<Employee *> projectWorkers);
 };
 
 class SeniorManager : public ProjectManager {
@@ -58,7 +60,12 @@ protected:
     std::vector<Employee *> *workers;
 public:
 
-    explicit TeamLeader(std::string name1, int worktime1, Project *project1, int position1, int salary1, std::vector<Employee *> *workers);
+    explicit TeamLeader(std::string name1,
+        int worktime1,
+        Project *project1,
+        int position1,
+        int salary1,
+        std::vector<Employee *> *workers);
 
     virtual int calcHeads();
 
@@ -67,6 +74,8 @@ public:
     virtual void calc();
 
     virtual void printInfo();
+
+    void setWorkersVector(std::vector<Employee *> *workers);
 };
 
 
