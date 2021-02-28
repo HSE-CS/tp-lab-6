@@ -22,7 +22,7 @@ TEST(StaffTest, cleanerHasNoBonus) {
 TEST(StaffTest, engineerHasNoBudget) {
     auto project = new Project;
     project->budget = 10000;
-    ASSERT_EQ(Engineer(1, "aaa", 100, project, 0.1).calcBudget(), 0);
+    ASSERT_EQ(Engineer(1, "aaa", 100, Position::Engineer, project, 0.1).calcBudget(), 0);
 
     delete project;
 }
@@ -30,7 +30,7 @@ TEST(StaffTest, engineerHasNoBudget) {
 TEST(StaffTest, engineerAddition) {
     auto project = new Project;
     project->budget = 10000;
-    ASSERT_EQ(Engineer(1, "aaa", 100, project, 0.1).calcProAdditions(), 1000);
+    ASSERT_EQ(Engineer(1, "aaa", 100, Position::Engineer, project, 0.1).calcProAdditions(), 1000);
 
     delete project;
 }
@@ -40,7 +40,7 @@ TEST(StaffTest, programmerBudget) {
     project->budget = 10000;
     Programmer emp(1, "aaa", 100, project, 0.1);
     const auto budget = emp.calcBudget(0.1);
-    ASSERT_EQ(bonus, 1000);
+    ASSERT_EQ(budget, 1000);
 
     delete project;
 }
@@ -61,7 +61,7 @@ TEST(StaffTest, teamleadBudget) {
     project->budget = 10000;
     TeamLeader emp(1, "aaa", 100, project, 0.15);
     const auto budget = emp.calcBudget(0.1);
-    ASSERT_EQ(bonus, 1500);
+    ASSERT_EQ(budget, 1500);
 
     delete project;
 }
@@ -82,7 +82,7 @@ TEST(StaffTest, testerBudget) {
     project->budget = 10000;
     TeamLeader emp(1, "aaa", 100, project, 0.05);
     const auto budget = emp.calcBudget(0.1);
-    ASSERT_EQ(bonus, 500);
+    ASSERT_EQ(budget, 500);
 
     delete project;
 }
@@ -106,7 +106,7 @@ TEST(StaffTest, pmBudget) {
     project->budget = 10000;
     ProjectManager emp(1, "aaa", project, 0.05);
     const auto budget = emp.calcBudget(0.05);
-    ASSERT_EQ(bonus, 500);
+    ASSERT_EQ(budget, 500);
 
     delete project;
 }
@@ -116,7 +116,7 @@ TEST(StaffTest, pmHeads) {
     project->budget = 10000;
     ProjectManager emp(1, "aaa", project, 0.05);
     const auto budget = emp.calcHeads();
-    ASSERT_EQ(bonus, 1000);
+    ASSERT_EQ(budget, 1000);
 
     delete project;
 }
@@ -137,9 +137,10 @@ TEST(StaffTest, smBudget) {
 
     SeniorManager emp(1, "aaa", projects, 0.05);
     const auto budget = emp.calcBudget(0.05);
-    ASSERT_EQ(bonus, 1500);
+    ASSERT_EQ(budget, 1500);
 
-    delete project;
+    delete project1;
+    delete project2;
 }
 
 TEST(StaffTest, smHeads) {
@@ -154,7 +155,8 @@ TEST(StaffTest, smHeads) {
 
     SeniorManager emp(1, "aaa", projects, 0.05);
     const auto budget = emp.calcHeads();
-    ASSERT_EQ(bonus, 3600);
+    ASSERT_EQ(budget, 3600);
 
-    delete project;
+    delete project1;
+    delete project2;
 }
