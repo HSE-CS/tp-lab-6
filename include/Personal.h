@@ -6,7 +6,6 @@
 #include <string>
 
 #include "Employee.h"
-#include "Factory.h"
 #include "Interfaces.h"
 
 class Employee;

@@ -9,7 +9,6 @@
 #include "Interfaces.h"
 #include "Personal.h"
 
-class Personal;
 class Project;
 class ProjectBudget;
 class Heading;
