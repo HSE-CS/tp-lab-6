@@ -5,22 +5,13 @@
 #include "Factory.h"
 
 int main() {
-  // создание штата сотрудников на основе файла
-  vector<Employee*> staff = StaffFactory::makeStaff('data.txt');
-
-// присвоение отработанного времени
-  for (Employee emp : staff) {
-    emp -> setWorkTime(42);
-  }
-
-// расчет зарплаты
-  for (Employee emp : staff) {
-    emp -> calc();
-  }
-
-// вывод данных о зарплате
-  for (Employee emp : staff) {
-    emp -> printInfo();
-  }
+  std::vector<Project*> pr;
+  Project* p1 = new Project(0, 42);
+  pr.push_back(p1);
+  Project* p2 = new Project(2, 35);
+  pr.push_back(p2);
+  Project* p3 = new Project(5, 23);
+  pr.push_back(p3);
+  SeniorManager* s = new SeniorManager(1, "Test", "senior manager", 344, pr);
   return 0;
 }

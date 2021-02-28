@@ -3,7 +3,6 @@
 #define INCLUDE_ENGINEER_H_
 
 #include <string>
-#include <stdlib.h>
 #include "Personal.h"
 #include "Interfaces.h"
 #include "Employee.h"
@@ -30,32 +29,32 @@ class Engineer : public ProjectBudget, public Personal {
   Engineer(int id, std::string name, int payment, int salary,
            std::string position, Project* project);
   Project *getProject();
-  int calc() override;
-  int calcBudgetPart(float part, int budget) override;
-  void printInfo() override;
+  int calc();
+  int calcBudgetPart(float part, int budget);
+  void printInfo();
 };
 
 class Programmer : public Engineer {
  public:
   Programmer(int id, std::string name, int salary,
              std::string position, int payment, Project* project);
-  int calc() override;
-  int calcProAdditions() override;
+  int calc();
+  int calcProAdditions();
 };
 
 class Tester : public Engineer {
  public:
   Tester(int id, std::string name, int salary,
          std::string position, int payment, Project* project);
-  int calc() override;
-  int calcProAdditions() override;
+  int calc();
+  int calcProAdditions();
 };
 
 class TeamLeader : public Programmer, public Heading {
  public:
   TeamLeader(int id, std::string name, int salary,
              std::string position, int payment, Project* project);
-  int calc() override;
+  int calc();
   int calcHeads();
 };
 

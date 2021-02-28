@@ -66,11 +66,11 @@ TEST(testEmployee, test10) {
 TEST(testEmployee, test11) {
   std::vector<Project*> pr;
   Project* p1 = new Project(0, 42);
-  projects.push_back(p1);
+  pr.push_back(p1);
   Project* p2 = new Project(2, 35);
-  projects.push_back(p2);
+  pr.push_back(p2);
   Project* p3 = new Project(5, 23);
-  projects.push_back(p3);
+  pr.push_back(p3);
   SeniorManager* s = new SeniorManager(1, "Test", "senior manager", 344, pr);
   EXPECT_EQ(1, s->getId());
 }
@@ -78,11 +78,11 @@ TEST(testEmployee, test11) {
 TEST(testEmployee, test12) {
   std::vector<Project*> pr;
   Project* p1 = new Project(0, 42);
-  projects.push_back(p1);
+  pr.push_back(p1);
   Project* p2 = new Project(2, 35);
-  projects.push_back(p2);
+  pr.push_back(p2);
   Project* p3 = new Project(5, 23);
-  projects.push_back(p3);
+  pr.push_back(p3);
   SeniorManager* s = new SeniorManager(1, "Test", "senior manager", 344, pr);
   EXPECT_EQ("Test", s->getName());
 }
@@ -90,11 +90,11 @@ TEST(testEmployee, test12) {
 TEST(testEmployee, test13) {
   std::vector<Project*> pr;
   Project* p1 = new Project(0, 42);
-  projects.push_back(p1);
+  pr.push_back(p1);
   Project* p2 = new Project(2, 35);
-  projects.push_back(p2);
+  pr.push_back(p2);
   Project* p3 = new Project(5, 23);
-  projects.push_back(p3);
+  pr.push_back(p3);
   SeniorManager* s = new SeniorManager(1, "Test", "senior manager", 344, pr);
   EXPECT_EQ("senior manager", s->getPosition());
 }
@@ -102,11 +102,11 @@ TEST(testEmployee, test13) {
 TEST(testEmployee, test14) {
   std::vector<Project*> pr;
   Project* p1 = new Project(0, 42);
-  projects.push_back(p1);
+  pr.push_back(p1);
   Project* p2 = new Project(2, 35);
-  projects.push_back(p2);
+  pr.push_back(p2);
   Project* p3 = new Project(5, 23);
-  projects.push_back(p3);
+  pr.push_back(p3);
   SeniorManager* s = new SeniorManager(1, "Test", "senior manager", 344, pr);
   EXPECT_EQ(344, s->getPayment());
 }
@@ -114,11 +114,11 @@ TEST(testEmployee, test14) {
 TEST(testEmployee, test15) {
   std::vector<Project*> pr;
   Project* p1 = new Project(0, 42);
-  projects.push_back(p1);
+  pr.push_back(p1);
   Project* p2 = new Project(2, 35);
-  projects.push_back(p2);
+  pr.push_back(p2);
   Project* p3 = new Project(5, 23);
-  projects.push_back(p3);
+  pr.push_back(p3);
   SeniorManager* s = new SeniorManager(1, "Test", "senior manager", 344, pr);
   EXPECT_EQ(0, s->getWorktime());
 }

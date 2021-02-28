@@ -9,7 +9,7 @@
 #include "Employee.h"
 
 class ProjectManager : public Employee, public Heading, public ProjectBudget {
- private:
+ protected:
   std::vector <Project*> projects;
 
  public:
@@ -17,17 +17,17 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
                  int payment, std::vector <Project*> projects);
   Project *getProject();
   std::vector <Project*> getProjects();
-  int calc() override;
-  int calcHeads(int) override;
-  void printInfo() override;
-  int calcBudgetPart(float part, int budget) override;
+  int calc();
+  int calcHeads(int);
+  void printInfo();
+  int calcBudgetPart(float part, int budget);
 };
 
 class SeniorManager : public ProjectManager {
  public:
   SeniorManager(int id, std::string name, std::string position,
                 int payment, std::vector <Project*> project);
-  int calc() override;
+  int calc();
 };
 
 #endif  // INCLUDE_MANAGER_H_

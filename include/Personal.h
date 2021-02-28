@@ -15,8 +15,8 @@ class Personal : public Employee, public WorkBaseTime {
            std::string position, int id, int salary);
   int getSalary();
   void setSalary(int);
-  int calc() override;
-  void printInfo() override;
+  int calc();
+  void printInfo();
   int calcBase(int salary, int wtime);
 };
 
