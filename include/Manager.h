@@ -18,7 +18,7 @@ class ProjectManager : public Employee, public ProjectBudget, public Heading {
                  int worktime, int payment, std::vector<Project *> &projects,
                  float contribIn)
       : Employee(id, name, position, worktime, payment), contrib(contribIn) {}
-  int calcBudgetPart(float contrib, int budget) override;
+  float calcBudgetPart(float contrib, int budget) override;
   int calcProAdditions() override;
   int calcHeads() override;
   int calc() override;
