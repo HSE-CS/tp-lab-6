@@ -25,7 +25,9 @@ TEST(Test, test3) {
     driverObj.setWorkTime(10);
     driverObj.calc();
     unsigned expected = driverObj.getPayment();
-    EXPECT_EQ(expected, 2500);
+    int addit = 2 * driverObj.getAdditionalHours() *
+                    driverObj.getSalaryPerHour();
+    EXPECT_EQ(expected, 2500 * addit);
 }
 TEST(Test, test4) {
     Cleaner cleanerObj(0, "Name1");
