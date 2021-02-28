@@ -20,7 +20,7 @@ int TeamLeader::calcHeads() { return 4; }
 
 int TeamLeader::calcBonus() { return calcHeads() * 10; }
 
-int Tester::calcProAdditions() { return static_cast<int>(salary * 0.5); };
+int Tester::calcProAdditions() { return static_cast<int>(salary * 0.5); }
 
 int Tester::calcBonus() { return 30; }
 

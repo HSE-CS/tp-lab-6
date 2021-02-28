@@ -12,7 +12,7 @@
 #include <string>
 
 class StaffFactory {
-public:
+ public:
   static std::vector<Employee *> makeStaff();
 };
 

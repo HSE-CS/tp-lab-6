@@ -19,18 +19,18 @@ enum Position {
 };
 
 class Employee {
-private:
+ private:
   int id;
   std::string name;
   Position position;
 
-public:
+ public:
   int payment = 0;
   int salary = 0;
   int worktime = 0;
 
-  Employee(int id, std::string &name, Position position, int salary)
-      : id(id), name(name), position(position), salary(salary){};
+  Employee(int id, const std::string &name, Position position, int salary)
+      : id(id), name(name), position(position), salary(salary){}
 
   [[nodiscard]] int getId() const;
   std::string getName();

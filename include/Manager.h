@@ -8,6 +8,7 @@
 #include <iostream>
 #include <utility>
 #include <vector>
+#include <string>
 
 class Project {
  private:
@@ -17,9 +18,8 @@ class Project {
  public:
   int Budget;
   int team;
-  Project(int id, std::string &name, int budget)
-      : id(id), name(name), Budget(budget), team(0){};
-
+  Project(int id, std::string name, int budget)
+      : id(id), name(name), Budget(budget), team(0){}
 };
 
 class ProjectManager : public Employee, public IHeading, public IProjectBudget {
@@ -28,10 +28,10 @@ class ProjectManager : public Employee, public IHeading, public IProjectBudget {
   float part;
 
  public:
-  ProjectManager(int id, std::string &name, Position position,
+  ProjectManager(int id, std::string name, Position position,
                  std::vector<Project *> myProject, float part, int _salary)
       : Employee(id, name, position, _salary),
-        allProjects(std::move(myProject)), part(part){};
+        allProjects(std::move(myProject)), part(part){}
 
   int calcHeads() override;
   int calcBudgetPart(float _part, int _budget) override;
@@ -46,11 +46,11 @@ class SeniorManager : public ProjectManager {
   float part;
 
  public:
-  SeniorManager(int id, std::string &name, Position position,
+  SeniorManager(int id, std::string name, Position position,
                 std::vector<Project *> _allProjects, float part, int _salary)
       : ProjectManager(id, name, position, std::move(_allProjects), part,
                        _salary),
-        part(part){};
+        part(part){}
 };
 
 #endif  // INCLUDE_MANAGER_H_

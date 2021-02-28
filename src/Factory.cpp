@@ -17,47 +17,37 @@
  * budget
  */
 
-Employee* MakeWorker(int id, std::string &name, std::string &_pos, int salary, int project, float part, std::vector<Project*> projects) {
-  if (_pos == "PROJECT_MANAGER" ) {
+Employee *MakeWorker(int id, std::string name, std::string _pos, int salary,
+                     int project, float part, std::vector<Project *> projects) {
+  if (_pos == "PROJECT_MANAGER") {
     Position pos = Position(PROJECT_MANAGER);
-    std::vector<Project*> my;
-    my.push_back(projects[project-1]);
+    std::vector<Project *> my;
+    my.push_back(projects[project - 1]);
 
     return new ProjectManager{id, name, pos, my, part, salary};
-  }
-  else if (_pos == "SENIOR_MANAGER") {
+  } else if (_pos == "SENIOR_MANAGER") {
     Position pos = Position(SENIOR_MANAGER);
 
     return new SeniorManager{id, name, pos, projects, part, salary};
-  }
-
-  else if (_pos == "TEAM_LEADER" ) {
+  } else if (_pos == "TEAM_LEADER") {
     Position pos = Position(TEAM_LEADER);
-    projects[project-1]->team+=1;
+    projects[project - 1]->team += 1;
 
-    return new TeamLeader(id, name, pos, salary, projects[project-1], part);
-  }
-
-  else if (_pos == "PROGRAMMER" ) {
+    return new TeamLeader(id, name, pos, salary, projects[project - 1], part);
+  } else if (_pos == "PROGRAMMER") {
     Position pos = Position(PROGRAMMER);
-    projects[project-1]->team+=1;
+    projects[project - 1]->team += 1;
 
-    return new Programmer(id, name, pos, salary, projects[project-1], part);
-  }
-
-  else if (_pos == "TESTER" ) {
+    return new Programmer(id, name, pos, salary, projects[project - 1], part);
+  } else if (_pos == "TESTER") {
     Position pos = Position(TESTER);
 
-    return new Tester(id, name, pos, salary, projects[project-1], part);
-  }
-
-  else if (_pos == "CLEANER" ) {
+    return new Tester(id, name, pos, salary, projects[project - 1], part);
+  } else if (_pos == "CLEANER") {
     Position pos = Position(CLEANER);
 
     return new Cleaner(id, name, pos, salary);
-  }
-
-  else if (_pos == "DRIVER" ) {
+  } else if (_pos == "DRIVER") {
     Position pos = Position(DRIVER);
 
     return new Driver(id, name, pos, salary);
@@ -78,7 +68,7 @@ std::vector<Employee *> StaffFactory::makeStaff() {
   float part = 0;
 
   std::ifstream data2("../../include/data/projects.txt");
-  std::vector<Project*> projects;
+  std::vector<Project *> projects;
   int prid = 0;
   std::string prname;
   int budget = 0;
@@ -97,7 +87,7 @@ std::vector<Employee *> StaffFactory::makeStaff() {
     }
   }
 
-  std::vector<Employee*> staff;
+  std::vector<Employee *> staff;
 
   if (data.is_open()) {
     while (!data.eof()) {
@@ -113,7 +103,8 @@ std::vector<Employee *> StaffFactory::makeStaff() {
         getline(data, tmp);
         part = atoi(tmp.c_str());
 
-        staff.push_back(MakeWorker(id, name, tmppos, salary, projid, part, projects));
+        staff.push_back(
+            MakeWorker(id, name, tmppos, salary, projid, part, projects));
       }
     }
   }
