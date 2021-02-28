@@ -22,7 +22,9 @@ TEST(StaffTest, cleanerHasNoBonus) {
 TEST(StaffTest, engineerHasNoBudget) {
     auto project = new Project;
     project->budget = 10000;
-    ASSERT_EQ(Engineer(1, "aaa", 100, Position::Engineer, project, 0.1).calcBudget(), 0);
+    Engineer emp(1, "aaa", 100,
+        Position::Engineer, project, 0.1);
+    ASSERT_EQ(emp.calcBudget(0.1), 0);
 
     delete project;
 }
@@ -30,7 +32,9 @@ TEST(StaffTest, engineerHasNoBudget) {
 TEST(StaffTest, engineerAddition) {
     auto project = new Project;
     project->budget = 10000;
-    ASSERT_EQ(Engineer(1, "aaa", 100, Position::Engineer, project, 0.1).calcProAdditions(), 1000);
+    Engineer emp(1, "aaa", 100,
+        Position::Engineer, project, 0.1);
+    ASSERT_EQ(emp.calcProAdditions(), 1000);
 
     delete project;
 }
@@ -135,7 +139,7 @@ TEST(StaffTest, smBudget) {
     project2->budget = 20000;
     projects.insert(project2);
 
-    SeniorManager emp(1, "aaa", projects, 0.05);
+    SeniorManager emp(1, "aaa", projects);
     const auto budget = emp.calcBudget(0.05);
     ASSERT_EQ(budget, 1500);
 
@@ -153,7 +157,7 @@ TEST(StaffTest, smHeads) {
     project2->budget = 20000;
     projects.insert(project2);
 
-    SeniorManager emp(1, "aaa", projects, 0.05);
+    SeniorManager emp(1, "aaa", projects);
     const auto budget = emp.calcHeads();
     ASSERT_EQ(budget, 3600);
 
