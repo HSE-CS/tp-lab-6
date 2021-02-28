@@ -7,7 +7,7 @@
 
 int main() {
   StaffFactory sf;
-  std::vector <Employee *> staff = sf.makeStaff("input.txt");
+  std::vector <Employee *> staff = sf.makeStaff("../input.txt");
   for (Employee * emp : staff) {
     emp->setWorkTime(40);
   }
