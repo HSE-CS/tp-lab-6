@@ -4,7 +4,8 @@
 #include <string>
 
 enum Position {
-  cleaner, driver, tester, programmer, engineer, team_Leader, senior_Manager, project_Manager
+  cleaner, driver, tester, programmer, engineer,
+  team_Leader, senior_Manager, project_Manager
 };
 
 class Employee {  // basic(parent) class for all workers
@@ -17,7 +18,8 @@ class Employee {  // basic(parent) class for all workers
 
  public:
   // constructor
-  Employee(std::string id, std::string name, Position position, int work_time, int payment);
+  Employee(std::string id, std::string name,
+           Position position, int work_time, int payment);
   // getters
   std::string getId() const;
   std::string getName() const;

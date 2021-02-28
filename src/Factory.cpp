@@ -39,29 +39,28 @@ void Factory::readData() {
     name = line.substr(ind + 1, line.size() - ind + 1);
     std::string pos;
     pos = line.substr(ind + 1, line.size() - ind + 1);
-    switch (std::stoi(pos)) {
-      case 0:Cleaner q0(id, name, Position(cleaner), 0, 0);
-        buff2.push_back(q0);
-        break;
-      case 1:Driver q1(id, name, Position(driver), 0, 0);
-        buff2.push_back(q1);
-        break;
-      case 2:Tester q2(id, name, Position(tester), 0, nullptr, 0);
-        buff2.push_back(q2);
-        break;
-      case 3:Programmer q3(id, name, Position(programmer), 0, nullptr, 0);
-        buff2.push_back(q3);
-        break;
-      case 4:TeamLeader q4(id, name, Position(team_Leader), 0, nullptr, 0);
-        buff2.push_back(q4);
-        break;
-      case 5:SeniorManager q5(id, name, Position(senior_Manager), 0, 0, nullptr);
-        buff2.push_back(q5);
-        break;
-      case 6:ProjectManager q6(id, name, Position(project_Manager), 0, 0, nullptr);
-        buff2.push_back(q6);
-        break;
-      default:return;
+    int check = std::stoi(pos);
+    if (check == 0) {
+      Cleaner q0(id, name, Position(cleaner), 0, 0);
+      buff2.push_back(q0);
+    } else if (check == 1) {
+      Driver q1(id, name, Position(driver), 0, 0);
+      buff2.push_back(q1);
+    } else if (check == 2) {
+      Tester q2(id, name, Position(tester), 0, nullptr, 0);
+      buff2.push_back(q2);
+    } else if (check == 3) {
+      Programmer q3(id, name, Position(programmer), 0, nullptr, 0);
+      buff2.push_back(q3);
+    } else if (check == 4) {
+      TeamLeader q4(id, name, Position(team_Leader), 0, nullptr, 0);
+      buff2.push_back(q4);
+    } else if (check == 5) {
+      SeniorManager q5(id, name, Position(senior_Manager), 0, 0, nullptr);
+      buff2.push_back(q5);
+    } else if (check == 6) {
+      ProjectManager q6(id, name, Position(project_Manager), 0, 0, nullptr);
+      buff2.push_back(q6);
     }
   }
   in2.close();

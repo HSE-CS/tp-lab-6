@@ -28,9 +28,11 @@ class SeniorManager : public ProjectManager {
   float part;
 
  public:
-  SeniorManager(std::string id, std::string name, Position position,
-                int work_time, int payment, std::vector<Project> projects)
-      : ProjectManager(id, name, position, work_time, payment, projects) {}
+  SeniorManager(std::string id, std::string name,
+                Position position, int work_time, int payment,
+                std::vector<Project> projects)
+      : ProjectManager(id, name, position, work_time, payment,
+                       projects) {}
 };
 
 #endif  // INCLUDE_MANAGER_H_
