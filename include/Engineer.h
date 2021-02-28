@@ -25,6 +25,7 @@ class Engineer : public Personal, public ProjectBudget {
   Engineer(int _id, std::string _name, int _salary, Project *_project,
            double _part);
   unsigned int calcBudgetPart(double part, unsigned int budget) override;
+  unsigned int calcProAdditions();
   void calc();
   void printInfo();
 };
