@@ -8,7 +8,7 @@
 class Personal: public WorkBaseTime, public Employee {
  private:
   unsigned salary;
- 
+
  public:
   void printInfo();
   void setSalary(unsigned salary);

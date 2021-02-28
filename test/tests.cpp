@@ -54,7 +54,7 @@ TEST(PersonalTest, test8) {
 }
 
 TEST(PersonalTest, test9) {
-  Tester* emp = new Tester
+  Tester* emp = new Tester;
   emp->setWorkTime(30);
   emp->setSalary(100);
   EXPECT_EQ(emp->getPayment(), 3300);

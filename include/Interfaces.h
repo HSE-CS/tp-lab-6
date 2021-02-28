@@ -21,7 +21,7 @@ class Heading {
 
 struct Project {
 	unsigned id;
-	unsigned budget;	
+	unsigned budget;
 };
 
 

@@ -5,7 +5,7 @@
 #include <string>
 #include <iostream>
 
-enum Position {DRIVER, CLEANER, PROGRAMMER, TESTER, TEAMLEADER, 
+enum Position {DRIVER, CLEANER, PROGRAMMER, TESTER, TEAMLEADER,
 PROJECTMANAGER, SENIORMANAGER};
 
 class Employee {

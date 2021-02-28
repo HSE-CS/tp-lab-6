@@ -8,7 +8,7 @@
 class ProjectManager: public Employee, public ProjectBudget, public Heading {
  protected:
   Project* projects;
- 
+
  public:
   unsigned calcProAdditions();
   void printInfo();

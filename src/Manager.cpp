@@ -26,7 +26,7 @@ void ProjectManager::calc() {
 
 void SeniorManager::clac() {
   payment = 0;
-  for(int i = 0; i < numberOfProjects; i++)
+  for (int i = 0; i < numberOfProjects; i++)
     payment += calcBudgetPart(0.1, projects[i].budget);
   payment += calcHeads(numberOfProjects * 5);
 }

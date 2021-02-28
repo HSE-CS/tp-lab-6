@@ -1,3 +1,5 @@
+// Copyright 2020 S. BOR
+
 #include "Engineer.h"
 #include "Personal.h"
 #include "Manager.h"

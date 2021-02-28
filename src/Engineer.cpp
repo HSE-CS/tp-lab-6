@@ -25,7 +25,7 @@ unsigned Programmer::calcProAdditions() {
 }
 
 void Programmer::calc() {
-  payment = calcBase() + calcBudgetPart(0.1f, project.budget) + 
+  payment = calcBase() + calcBudgetPart(0.1f, project.budget) +
   calcProAdditions();
 }
 
@@ -34,7 +34,7 @@ unsigned Tester::calcProAdditions() {
 }
 
 void Tester::calc() {
-  payment = calcBase() + calcBudgetPart(0.1f, project.budget) + 
+  payment = calcBase() + calcBudgetPart(0.1f, project.budget) +
   calcProAdditions();
 }
 
@@ -43,6 +43,6 @@ unsigned TeamLeader::calcHeads(int numberOfWorkers) {
 }
 
 void TeamLeader::calc() {
-  payment = calcBase() + calcBudgetPart(0.1f, project.budget) + 
+  payment = calcBase() + calcBudgetPart(0.1f, project.budget) +
   calcProAdditions() + calcHeads(5);
 }
