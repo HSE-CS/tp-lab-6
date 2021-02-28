@@ -55,7 +55,7 @@ TEST(ProgrammerTest, TestPayment) {
                         static_cast<int>(0.25 * project.p_budget) +
                         AdditionalPayment;
   // Реальный заработок vs Возможный заработок
-  EXPECT_LE(programmer.getPayment(), PossiblePayment); 
+  EXPECT_LE(programmer.getPayment(), PossiblePayment);
 }
 TEST(TesterTest, TestPyment) {
   Project project(2, 30000);
@@ -80,14 +80,14 @@ TEST(TeamLeaderTest, TestPayment) {
   int amountWorkTime = team_leader.getWorkTime();
   team_leader.calc();
   int HeadingPayment = team_leader.calcHeads();
-  int PossiblePayment = 3000 * amountWorkTime + 
+  int PossiblePayment = 3000 * amountWorkTime +
                         static_cast<int>(0.35 * project.p_budget) +
                         HeadingPayment;
   EXPECT_EQ(team_leader.getPayment(), PossiblePayment);
 }
 TEST(ProjectManagerTest, PaymentTest) {
   Project project(4, 100000);
-  ProjectManager project_manager(6, "Жукавинск Петр Алексеевич", 
+  ProjectManager project_manager(6, "Жукавинск Петр Алексеевич",
                                  "ProjectManager", &project, 0.5);
   project_manager.calc();
   int payment = project_manager.calcBudgetPart(0.5,
@@ -103,7 +103,7 @@ TEST(SenoirManagerTest, PaymentTest) {
     projects.push_back(temp);
     temp = nullptr;
   }
-  SeniorManager senior_manager(5, "Жувочка Евгения Фавевна", 
+  SeniorManager senior_manager(5, "Жувочка Евгения Фавевна",
                                "SeniorManager", projects[1],
                                 0.3, projects);
   senior_manager.calc();

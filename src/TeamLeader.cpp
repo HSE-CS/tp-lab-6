@@ -4,8 +4,10 @@
 #include <iostream>
 #include <iomanip>
 
-TeamLeader::TeamLeader(int id, std::string name, std::string position, int salary,
-                       Project *project, float part, bool Deadline, int people)
+TeamLeader::TeamLeader(int id, std::string name,
+                       std::string position, int salary,
+                       Project *project, float part,
+                       bool Deadline, int people)
     : Programmer(id, name, position, salary, project, part, Deadline) {
   amountPeople = people;
 }
@@ -21,6 +23,7 @@ void TeamLeader::calc() {
   m_payment = BasePayment + BudgetPartPayment + HeadingPayment;
 }
 void TeamLeader::printinfo() {
-  std::cout << std::setw(30) << m_name << std::setw(15) << m_position << std::setw(10) << m_payment << std::endl;
+  std::cout << std::setw(30) << m_name << std::setw(15)
+            << m_position << std::setw(10) << m_payment << std::endl;
 }
 

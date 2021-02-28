@@ -5,7 +5,7 @@
 #include <iomanip>
 
 Programmer::Programmer(int id, std::string name, std::string position,
-                       int salary,Project *project, float part, int Deadline)
+                       int salary, Project *project, float part, int Deadline)
     : Engineer(id, name, position, salary, project, part) {
   p_deadline = Deadline;
 }
