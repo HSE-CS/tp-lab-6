@@ -12,6 +12,7 @@ class Personal: public WorkBaseTime, public Employee {
   unsigned int calcBase();
   void setSalary(unsigned int salary);
   unsigned int calcBonus(unsigned nighttime, unsigned oversalary);
+  void printInfo();
 };
 
 class Driver : public Personal{

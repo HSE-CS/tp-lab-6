@@ -15,7 +15,7 @@ void Engineer::setPro(int pro) {
 }
 
 void Engineer::setPercent(int percent) {
-  this->percent = percent;  
+  this->percent = percent;
 }
 
 void Engineer::printInfo() {

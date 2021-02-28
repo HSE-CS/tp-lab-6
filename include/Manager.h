@@ -17,6 +17,7 @@ class ProjectManager: public Heading, public ProjectBudget, public Employee {
   void calc();
   void setPercent(int percent);
   void setNum(int numOfHeads);
+  void printInfo();
 };
 
 class SeniorManager: public ProjectManager {

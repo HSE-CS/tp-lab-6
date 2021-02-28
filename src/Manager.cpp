@@ -18,6 +18,14 @@ void ProjectManager::setNum(int numOfHeads) {
   this->numOfHeads = numOfHeads;
 }
 
+void ProjectManager::printInfo() {
+  std::cout << "\t" << "Id: " << id << '\n';
+  std::cout << "\t" << "Name: " << name << '\n';
+  std::cout << "\t" << "Position: " << position << '\n';
+  std::cout << "\t" << "Work time: " << worktime << '\n';
+  std::cout << "\t" << "Payment: " << getPayment() << '\n';
+}
+
 void SeniorManager::calc() {
     for (auto p : projects) {
         payment = part * p.budget;
