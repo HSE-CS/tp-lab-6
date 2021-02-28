@@ -29,14 +29,10 @@ class Employee {
  public:
  Employee(id_type id, const std::string& name);
  virtual ~Employee() = default;
-
  void worktime(unsigned int wt);
-
  virtual void calc() = 0;
  virtual void print_info() = 0;
-
  friend class StaffFactory;
-
  protected:
   id_type _id;
   std::string _nameof;
