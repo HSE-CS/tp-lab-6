@@ -24,6 +24,7 @@ int Engineer::calcBonus() {
     if (getWorktime() > 40) {
         return calcBase(this->salary, this->getWorktime()) * 0.1;
     }
+    return 0;
 }
 
 int Engineer::calcProAdditions() {
