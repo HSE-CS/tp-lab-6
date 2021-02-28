@@ -1,0 +1,4 @@
+#ifndef TP_LAB_6_INTERFACES_H
+#define TP_LAB_6_INTERFACES_H
+
+#endif // TP_LAB_6_INTERFACES_H
