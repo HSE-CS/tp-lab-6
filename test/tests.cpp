@@ -41,7 +41,6 @@ TEST(Test, test5) {
     cleanerObj.setWorkTime(10);
     cleanerObj.calc();
     EXPECT_EQ(cleanerObj.getPayment(), 1000);
-
 }
 TEST(Test, test6) {
     Programmer programmerObj(0, "Name1");
@@ -121,7 +120,3 @@ TEST(Test, test15) {
     int exp = programmerObj.calcBudgetPart();
     EXPECT_EQ(exp, 25000);
 }
-
-
-
-

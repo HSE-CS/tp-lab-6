@@ -6,6 +6,7 @@
 #include "Personal.h"
 #include "Project.h"
 #include "Project.h"
+#include <string>
 
 class Project;
 

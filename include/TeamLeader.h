@@ -4,6 +4,7 @@
 #define INCLUDE_TEAMLEADER_H_
 
 #include "Programmer.h"
+#include <string>
 
 class TeamLeader : public Programmer, public Heading {
  public:

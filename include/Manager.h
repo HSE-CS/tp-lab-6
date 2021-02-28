@@ -6,6 +6,8 @@
 #include "Employee.h"
 #include "Project.h"
 #include "Interfaces.h"
+#include <vector>
+#include <string>
 
 class Project;
 

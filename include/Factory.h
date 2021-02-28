@@ -9,6 +9,8 @@
 #include "Manager.h"
 #include "Tester.h"
 #include "Project.h"
+#include <string>
+#include <vector>
 
 std::vector <Employee*> makeStaffVector(std::string pathFile);
 

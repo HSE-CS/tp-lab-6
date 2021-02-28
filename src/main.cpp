@@ -12,7 +12,7 @@ void delimiter() {
     std::cout << "==============================================" << std::endl;
 }
 
-int main () {
+int main() {
     /*unsigned num = 0;
     ProjectManager managerObj(num, "Name1");
     managerObj.printInfo();
@@ -117,7 +117,7 @@ int main () {
         projectVector.push_back(new Project(i,
                            100000+(std::rand()%3000 - 1500)));
     }
-    for (size_t i = 0; i < projectVector.size(); ++i){
+    for (size_t i = 0; i < projectVector.size(); ++i) {
         projectVector[i]->printInfo();
         delimiter();
     }

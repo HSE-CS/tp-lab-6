@@ -1,7 +1,8 @@
 //  Copyright 2021 Nikita Naumov
 #include "Engineer.h"
 
-Engineer::Engineer(unsigned int id, const std::string& name) : Personal(id, name){
+Engineer::Engineer(unsigned int id, const std::string& name)
+            : Personal(id, name) {
     this->id = id;
     this->name = std::move(name);
     this->worktime = 0;

@@ -3,7 +3,7 @@
 #include "Programmer.h"
 
 Programmer::Programmer(unsigned id, const std::string& name)
-            : Engineer(id, name){
+            : Engineer(id, name) {
     this->id = id;
     this->name = std::move(name);
     this->additionalHours = std::rand()%101;

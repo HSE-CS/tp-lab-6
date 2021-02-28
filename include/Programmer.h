@@ -4,6 +4,7 @@
 #define INCLUDE_PROGRAMMER_H_
 
 #include "Engineer.h"
+#include <string>
 
 class Programmer : public Engineer {
  public:

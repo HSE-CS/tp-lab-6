@@ -55,7 +55,7 @@ void ProjectManager::printInfo() {
 }
 
 SeniorManager::SeniorManager(unsigned id, std::string name)
-                : ProjectManager(id, name){
+                : ProjectManager(id, name) {
     this->id = id;
     this->name = std::move(name);
     this->projects.clear();
