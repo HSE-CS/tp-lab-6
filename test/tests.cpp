@@ -3,7 +3,6 @@
 #include <gtest/gtest.h>
 #include <string>
 #include <vector>
-#include "gtest/gtest.h"
 #include "Employee.h"
 #include "Engineer.h"
 #include "Factory.h"

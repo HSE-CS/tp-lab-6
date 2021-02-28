@@ -5,20 +5,21 @@
 
 #include "Personal.h"
 #include <vector>
+#include <string>
 
-//class Project;
+// class Project;
 
-//class Engineer;
+// class Engineer;
 
 class Project {
     friend class Engineer;
     friend class ProjectManager;
-private:
+ private:
     int id;
     int budget;
     int team_size;
 
-public:
+ public:
     Project(int _id, int _budget, int _team_size) :
         id(_id), budget(_budget), team_size(_team_size) {}
     int getTeamSize();
@@ -27,9 +28,9 @@ public:
 };
 
 class Engineer : public Personal, public ProjectBudget {
-protected:
+ protected:
     Project project;
-public:
+ public:
     Engineer(int _id, std::string _name, std::string _position, int
         _salary, Project _pr);
     float calcBudgetPart(float part, int budget) override;
@@ -45,7 +46,7 @@ class Programmer : public Engineer {
 };
 
 class Tester : public Engineer {
-public:
+ public:
     int calcProAdditions() override;
     Tester(int _id, std::string _name, std::string _position, int
         _salary, Project _pr);

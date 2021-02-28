@@ -3,10 +3,10 @@
 #include "Employee.h"
 
 Employee::Employee(int _id, std::string _name, std::string _position) {
-   id = _id;
-   name = _name;
-   position = _position;
-   worktime = 0;
+    id = _id;
+    name = _name;
+    position = _position;
+    worktime = 0;
 }
 
 void Employee::setWorkTime(int wt) {

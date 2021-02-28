@@ -7,7 +7,7 @@
 #include <iostream>
 
 class Employee {
-protected:
+ protected:
     int id;
     std::string name;
     std::string position;

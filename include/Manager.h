@@ -7,6 +7,7 @@
 #include "Interfaces.h"
 #include "Engineer.h"
 #include <vector>
+#include <string>
 
 class Project;
 
@@ -14,7 +15,8 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
  protected:
      std::vector<Project> projects;
  public:
-     ProjectManager(int _id, std::string _name, std::string _position, std::vector<Project> _projects);
+     ProjectManager(int _id, std::string _name, std::string _position,
+         std::vector<Project> _projects);
      int calcHeads() override;
      void calc() override;
      float calcBudgetPart(float part, int budget) override;
@@ -24,7 +26,8 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
 
 class SeniorManager : public ProjectManager {
  public:
-    SeniorManager(int _id, std::string _name, std::string _position, std::vector<Project> _projects);
+    SeniorManager(int _id, std::string _name, std::string _position,
+        std::vector<Project> _projects);
     int calcHeads() override;
     void calc() override;
     float calcBudgetPart(float part, int budget) override;

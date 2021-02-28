@@ -16,5 +16,4 @@ int Project::getId() {
 
 std::vector<Employee*> StaffFactory::makeStaff(std::string _projectsFile,
     std::string _employeesFile) {
-    
 }

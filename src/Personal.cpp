@@ -2,8 +2,8 @@
 
 #include "Personal.h"
 
-Personal::Personal(int _id, std::string _name, 
-    std::string _position, int _salary) 
+Personal::Personal(int _id, std::string _name,
+    std::string _position, int _salary)
     : Employee(_id, _name, _position), salary(_salary) {}
 
 int Personal::calcBase(int salary, int wtime) {
@@ -20,7 +20,8 @@ void Personal::calc() {
 
 void Personal::printInfo() {
     std::cout << id << ": " << name << ", position: " <<
-        position << ", salary: " << salary << "total payment: " << payment << std::endl;
+        position << ", salary: " << salary << "total payment: "
+        << payment << std::endl;
 }
 
 Cleaner::Cleaner(int _id, std::string _name, std::string _position, int
