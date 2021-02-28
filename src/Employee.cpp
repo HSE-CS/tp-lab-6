@@ -1,6 +1,6 @@
 // Copyright 2021 me
 
-#include "..\include\Employee.h"
+#include "../include/Employee.h"
 
 
 void Employee::setPayment(int pay) { payment = pay; }

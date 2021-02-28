@@ -1,6 +1,6 @@
 // Copyright 2021 me
 
-#include "..\include\Factory.h"
+#include "../include/Factory.h"
 
 unsigned Project::getProjectID() { return id; }
 

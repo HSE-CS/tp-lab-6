@@ -1,6 +1,6 @@
 // Copyright 2021 me
 
-#include "..\include\Manager.h"
+#include "../include/Manager.h"
 
 int ProjectManager::calcHeads() {
   return 10 * (proj->getTesters() + proj->getWorkers());

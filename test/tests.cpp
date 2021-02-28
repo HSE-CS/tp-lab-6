@@ -10,8 +10,8 @@
 #include "../include/Personal.h"
 
 TEST(Employee, test1) {
-  Programmer Vasya(1, static_cast<std::string>("Garfield U. Upadhyaya"), Position(1),
-             250, nullptr);
+  Programmer Vasya(1, static_cast<std::string>("Garfield U. Upadhyaya"),
+                   Position(1), 250, nullptr);
   unsigned expected = 1;
   unsigned result = Vasya.getId();
   EXPECT_EQ(expected, result);

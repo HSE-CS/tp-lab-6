@@ -1,6 +1,6 @@
 // Copyright 2021 me
 
-#include "..\include\Engineer.h"
+#include "../include/Engineer.h"
 
 int Engineer::calcBudgetPart(float part, int budget) { return part * budget; }
 

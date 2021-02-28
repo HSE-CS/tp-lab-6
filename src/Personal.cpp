@@ -1,6 +1,6 @@
 // Copyright 2020 me
 
-#include "..\include\Personal.h"
+#include "../include/Personal.h"
 
 
 int Personal::getSalary() { return salary; }
