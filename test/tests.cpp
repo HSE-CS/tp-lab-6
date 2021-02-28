@@ -5,7 +5,6 @@
 #include <vector>
 #include "Engineer.h"
 #include "Manager.h"
-#include "Project.h"
 
 TEST(test_cleaner, test1) {
 Cleaner* cleaner1 = new Cleaner(0,
