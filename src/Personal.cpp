@@ -15,6 +15,7 @@ unsigned int Driver::calcBonus() {
   if (worktime > 40) {
     return 5000;
   }
+  return 0;
 }
 
 void Driver::calc() { payment = calcBase() + calcBonus(); }
@@ -23,6 +24,7 @@ unsigned int Cleaner::calcBonus() {
   if (worktime > 20) {
     return 5000;
   }
+  return 0;
 }
 
 void Cleaner::calc() { payment = calcBase() + calcBonus(); }
