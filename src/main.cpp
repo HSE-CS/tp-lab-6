@@ -9,17 +9,17 @@ int main() {
   vector<Employee*> staff = StaffFactory::makeStaff('data.txt');
 
 // присвоение отработанного времени
-  for (Employee emp: staff) {
+  for (Employee emp : staff) {
     emp -> setWorkTime(42);
   }
 
 // расчет зарплаты
-  for (Employee emp: staff) {
+  for (Employee emp : staff) {
     emp -> calc();
   }
 
 // вывод данных о зарплате
-  for (Employee emp: staff) {
+  for (Employee emp : staff) {
     emp -> printInfo();
   }
   return 0;

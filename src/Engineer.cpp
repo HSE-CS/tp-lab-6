@@ -70,7 +70,7 @@ int Programmer::calc() {
 }
 
 int Programmer::calcProAdditions() {
-  int safedTime = rand() % 5;
+  int safedTime = 4;
   return safedTime * payment;
 }
 
@@ -86,7 +86,7 @@ int Tester::calc() {
 }
 
 int Tester::calcProAdditions() {
-  int errors = rand() % 100;
+  int errors = 140;
   return errors / 10 * payment;
 }
 
