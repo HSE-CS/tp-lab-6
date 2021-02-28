@@ -29,7 +29,8 @@ Factory::Factory(std::string employeesFileName,
 void Factory::readStaff() {
   std::ifstream infileE(employeesFileName);
   std::ifstream infileP(projectsFileName);
-
+  unsigned seed = 1;
+  unsigned* seedP = &seed;
   // read projects
   int newProjectId;
   unsigned newBudget, newMembersNum;
@@ -56,14 +57,14 @@ void Factory::readStaff() {
         Programmer* newProgrammer =
         new Programmer(newId, fullName, newWorktime,
                        newSalary, projects[newProjectNum]);
-        newProgrammer->setAheadCounter(rand_r(1) % 5);
+        newProgrammer->setAheadCounter(rand_r(seedP) % 5);
         employees.push_back(newProgrammer);
       } else if (newPositionNum == 1) {
         // * Tester *
         Tester* newTester =
         new Tester(newId, fullName, newWorktime,
                    newSalary, projects[newProjectNum]);
-        newTester->setBugsCounter(rand_r(1) % 10);
+        newTester->setBugsCounter(rand_r(seedP) % 10);
         employees.push_back(newTester);
       } else {
         // * TeamLeader *
@@ -107,7 +108,7 @@ void Factory::readStaff() {
       infileE >> newWorktime >> newSalary;
       Driver* newDriver =
       new Driver(newId, fullName, newWorktime, newSalary);
-      newDriver->setNightHours(rand_r(1) % 5);
+      newDriver->setNightHours(rand_r(seedP) % 5);
       employees.push_back(newDriver);
     }
   }
