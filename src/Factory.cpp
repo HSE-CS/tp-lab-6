@@ -35,7 +35,7 @@ void StaffFactory::readStaffFile() {
   }
   sin.close();
 }
-Employee* StaffFactory::parseStaff(std::map<std::string, 
+Employee* StaffFactory::parseStaff(std::map<std::string,
                                    std::string> inf_staff) {
   if (inf_staff["position"] == "Cleaner") {
     int t_id = std::stoi(inf_staff["id"]);

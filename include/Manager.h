@@ -31,7 +31,7 @@ class SeniorManager : public ProjectManager {
 
  public:
   explicit SeniorManager(int id, std::string name, std::string position,
-                         Project* project, float part, 
+                         Project* project, float part,
                          std::vector<Project*> projects);
   int calcHeads() override;
   int calcBudgetPart(float part, int budget) override;
