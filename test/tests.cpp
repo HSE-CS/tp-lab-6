@@ -106,7 +106,7 @@ int payment = programmer1->calc();
 EXPECT_EQ(4258, payment);
 }
 
-TEST(test_pm test15) {
+TEST(test_pm, test15) {
 Project* project1 = new Project(0, 1000, 4);
 Programmer* programmer1 = new Programmer(0,
                                          "ivan", 2000, tester, project1);
