@@ -1,10 +1,10 @@
-01 Thelma Campbell 0 5555
-02 Linda Rivera 2
-03 Justin Hubbard 3 2222
-04 Kimberly Lyons 3 2222
-05 Louise Mitchell 4 5555
-06 Sonia Weaver 5 2222
-07 Ida Spencer 6 7777
-08 Jack Craig 4 5555
-09 Jean Garcia 1
-10 Mark Wallace 4 5555
+01 Thelma Campbell 0 1000 5555
+02 Linda Rivera 2 1000
+03 Justin Hubbard 3 1000 2222
+04 Kimberly Lyons 3 1000 2222
+05 Louise Mitchell 4 1000 5555
+06 Sonia Weaver 5 1000 2222
+07 Ida Spencer 6 1000 7777
+08 Jack Craig 4 1000 5555
+09 Jean Garcia 1 1000
+10 Mark Wallace 4 1000 5555
