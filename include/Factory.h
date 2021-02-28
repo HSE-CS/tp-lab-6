@@ -18,5 +18,4 @@
 
 std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList);
 
-
 #endif // !FACTORY_INCLUDE_H_

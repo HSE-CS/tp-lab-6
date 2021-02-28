@@ -11,7 +11,6 @@
 #include <sstream>
 
 int main() {
-    // создание штата сотрудников на основе файла
     std::string staffList = "Staff.txt";
     std::string projectsList = "Projects.txt";
     std::vector<Employee*> staff = makeStaff(staffList, projectsList);
@@ -22,18 +21,13 @@ int main() {
         std::cin >> payments[i];
     }
     int i = 0;
-    // присвоение отработанного времени
     for (Employee* emp : staff) {
         emp->setWorkTime(payments[i]);
         i++;
     }
-
-    // расчет зарплаты
     for (Employee* emp : staff) {
         emp->calc();
     }
-
-    // вывод данных о зарплате
     for (Employee* emp : staff) {
         emp->printInfo();
     }

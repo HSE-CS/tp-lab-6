@@ -60,4 +60,3 @@ int Cleaner::calc() {
     setsalary(calcBase());
     return calcBase();
 }
-

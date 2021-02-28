@@ -27,7 +27,7 @@ private:
     int nightpayment =0;
 public:
     Driver(int _id, std::string _name, std::string _pos, int _payment);
-    Driver(int nightti, int nightpay) {
+    void setnight(int nightti, int nightpay) {
         nighttime = nightti;
         nightpayment = nightpay;
     }

@@ -25,11 +25,6 @@ std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList
         while (getline(strStream, elem, ' ')) {
             arr[i++] = elem;
         }
-        std::cout << arr[0] << std::endl;
-        std::cout << arr[3] << std::endl;
-        std::cout << arr[4] << std::endl;
-        std::cout << arr[1] << std::endl;
-        std::cout << arr[2] << std::endl;
         int id = std::stoi(arr[0]), payment = std::stoi(arr[3]), projectId = std::stoi(arr[4]);
         std::string name = arr[1], position = arr[2];
         //std::cout << id;
@@ -66,4 +61,3 @@ std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList
     staff.close();
     return res;
 }
-
