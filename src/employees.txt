@@ -1,0 +1,8 @@
+1,Din Domino Fere,driver,60
+2,Alex Corvo Don,cleaner,50
+3,Greyson Baker Peterson,programmer,200,RosAtom
+4,David Morgan Luis,teamLeader,600,RosAtom
+5,Mick Perry Jhons,projectManager,600,RosAtom
+6,Zoey Gosvald Gray,tester,300,RosAtom
+7,Richy RIch Richerson,engineer,200,RosAtom
+8,Micke Vatson Odin,seniorManager,700
