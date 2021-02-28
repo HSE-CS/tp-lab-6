@@ -15,7 +15,7 @@ class Employee {
   double payment;
 
  public:
-  Employee(int id, std::string name, 
+  Employee(int id, std::string name,
    std::string position, double payment);
   int getId();
   std::string getName();
