@@ -1,9 +1,9 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
-#ifndef TP_LAB_6_ENGINEER_H
-#define TP_LAB_6_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
+
+#include <string>
 
 #include "Interfaces.h"
 #include "Personal.h"
@@ -11,19 +11,24 @@
 class Engineer : public Project,
                  public Projectbudget,
                  public Personal {
-public:
+ public:
     int calcBudgetPart(float projectPart, int budget);
 
-    explicit Engineer(std::string name1, int worktime1, Project *project1,
-                      int position1, int salary1);
-
+    explicit Engineer(std::string name1,
+        int worktime1, Project *project1,
+        int position1,
+        int salary1);
 
     virtual void calc(int hours);
 };
 
 class Programmer : public Engineer {
-public:
-    explicit Programmer(std::string name1, int worktime1, Project *project1, int position1, int salary1);
+ public:
+    explicit Programmer(std::string name1,
+        int worktime1,
+        Project *project1,
+        int position1,
+        int salary1);
 
     virtual int calcProAdditions(int relativePart);
 
@@ -35,8 +40,12 @@ public:
 };
 
 class Tester : public Engineer {
-public:
-    explicit Tester(std::string name1, int worktime1, Project *project1, int position1, int salary1);
+ public:
+    explicit Tester(std::string name1,
+        int worktime1,
+        Project *project1,
+        int position1,
+        int salary1);
 
     virtual int calcProAdditions(int relativePart);
 
@@ -48,4 +57,4 @@ public:
 };
 
 
-#endif //TP_LAB_6_ENGINEER_H
+#endif  // INCLUDE_ENGINEER_H_

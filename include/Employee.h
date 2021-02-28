@@ -1,9 +1,7 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
-#ifndef TP_LAB_6_EMPLOYEE_H
-#define TP_LAB_6_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 #include <iostream>
@@ -20,7 +18,7 @@ enum Position {
     TEAMLEADER,  // 6
 };
 
-static const std::string positionToString[]{
+const char* positionToString[]{
     "Cleaner",
     "Driver",
     "Programmer",
@@ -33,15 +31,15 @@ static const std::string positionToString[]{
 static int id__ = -1;
 
 class Employee {
-protected:
+ protected:
     int id;
     std::string name;
     int worktime;
     int payment;
     Project *project;
     int position;
-public:
 
+ public:
     int getId() {
         ++id__;
         return id__;
@@ -66,7 +64,10 @@ public:
         this->project = project1;
     }
 
-    void toStringForm(std::string name1, int id1, int profession, Project *project1) {
+    void toStringForm(std::string name1,
+        int id1,
+        int profession,
+        Project *project1) {
         std::string result = "";
         result += std::to_string(id1) + " - " + name1 + " // prof: " +
                   positionToString[profession] + " (project: " +
@@ -75,4 +76,4 @@ public:
     }
 };
 
-#endif // TP_LAB_6_EMPLOYEE_H
+#endif  // INCLUDE_EMPLOYEE_H_

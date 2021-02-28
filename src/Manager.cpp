@@ -1,6 +1,4 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
 #include "../include/Manager.h"
 
@@ -24,9 +22,11 @@ ProjectManager::ProjectManager(std::string name1,
                                int worktime1,
                                Project *project1,
                                int position1,
-                               std::vector<Employee *> projectWorkers1) : Employee(std::move(name1),
-                                                                                   worktime1, project1,
-                                                                                   position1) {
+                               std::vector<Employee *>
+                                   projectWorkers1) : Employee(
+                                       std::move(name1),
+                                       worktime1, project1,
+                                       position1) {
     this->projectWorkers = std::move(projectWorkers1);
     this->employees = this->projectWorkers.size();
     std::vector<Project *> p;
@@ -35,11 +35,14 @@ ProjectManager::ProjectManager(std::string name1,
 }
 
 void ProjectManager::printInfo() {
-    toStringForm(this->name, this->id, this->position, this->project);
+    toStringForm(this->name,
+        this->id,
+        this->position,
+        this->project);
 }
 
 void ProjectManager::setProjectWorkersVector(std::vector<Employee *> projectWorkers1) {
-    this->projectWorkers = projectWorkers1;
+    this->projectWorkers = std::move(projectWorkers1);
 }
 
 int SeniorManager::calcHeads() {
@@ -58,9 +61,11 @@ SeniorManager::SeniorManager(std::string name1,
                              int worktime1,
                              Project *project1,
                              int position1,
-                             std::vector<Employee *> workers1) : ProjectManager(std::move(name1), worktime1,
-                                                                                project1, position1,
-                                                                                std::move(workers1)) {
+                             std::vector<Employee *> workers1) :
+                             ProjectManager(
+                                 std::move(name1), worktime1,
+                                 project1, position1,
+                                 std::move(workers1)) {
     this->workers = &workers1;
 }
 
@@ -91,11 +96,12 @@ TeamLeader::TeamLeader(std::string name1,
                        Project *project1,
                        int position1,
                        int salary1,
-                       std::vector<Employee *> *workers) : Programmer(std::move(name1),
-                                                                      worktime1,
-                                                                      project1,
-                                                                      position1,
-                                                                      salary1) {
+                       std::vector<Employee *> *workers) :
+                       Programmer(std::move(name1),
+                           worktime1,
+                           project1,
+                           position1,
+                           salary1) {
     this->workers = workers;
 }
 

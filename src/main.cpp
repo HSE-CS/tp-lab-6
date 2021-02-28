@@ -1,13 +1,14 @@
+// copyright 2021 Toliman
+
 #include <iostream>
 
 #include "Manager.h"
 #include "Factory.h"
 
-static const std::string file("EmployeeList.txt");
+static const char* file="EmployeeList.txt";
 
 
 signed main() {
-    // id генерируется автоматически, поэтому в файле не нужен
     // Factory::__debug_pwd();
 
     Project proj;
@@ -20,7 +21,7 @@ signed main() {
     p1.printInfo();
     p2.printInfo();
 
-    Factory::getEmployees("EmployeeList.txt", &proj);
+    auto employees = Factory::getEmployees(file, &proj);
 
     return 0;
 }

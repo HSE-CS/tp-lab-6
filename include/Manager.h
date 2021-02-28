@@ -1,11 +1,10 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
-#ifndef TP_LAB_6_MANAGER_H
-#define TP_LAB_6_MANAGER_H
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 
 #include <vector>
+#include <string>
 
 #include "Employee.h"
 #include "Interfaces.h"
@@ -15,11 +14,12 @@
 class ProjectManager : public Heading,
                        public Project,
                        public Employee {
-protected:
+ protected:
     std::vector<Employee *> projectWorkers;
     int employees;
     std::vector<Project *> projects;
-public:
+
+ public:
     explicit ProjectManager(std::string name1,
                             int worktime1,
                             Project *project1,
@@ -36,11 +36,10 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-protected:
-
+ protected:
     std::vector<Employee *> *workers;
-public:
 
+ public:
     explicit SeniorManager(std::string name1,
                            int worktime1,
                            Project *project1,
@@ -56,10 +55,10 @@ public:
 
 class TeamLeader : public Heading,
                    public Programmer {
-protected:
+ protected:
     std::vector<Employee *> *workers;
-public:
 
+ public:
     explicit TeamLeader(std::string name1,
         int worktime1,
         Project *project1,
@@ -79,4 +78,4 @@ public:
 };
 
 
-#endif //TP_LAB_6_MANAGER_H
+#endif  // INCLUDE_MANAGER_H_

@@ -1,18 +1,19 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
-#ifndef TP_LAB_6_PERSONAL_H
-#define TP_LAB_6_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
+
+#include <string>
 
 #include "Employee.h"
-// #include "Interfaces.h"
 
 
-class Personal : public WorkBaseTime, public Employee {
-protected:
+class Personal : public WorkBaseTime,
+                 public Employee {
+ protected:
     int salary;
-public:
+
+ public:
     explicit Personal(std::string name1,
                       int worktime1,
                       Project *project1,
@@ -26,10 +27,12 @@ public:
 
 
 class Driver : public Personal {
-public:
-    // Driver() : Personal(std::__cxx11::string(), 0, nullptr, 0, std::__cxx11::string(), 0, nullptr, 0, 0) {}
-
-    explicit Driver(std::string name1, int worktime1, Project *project1, int position1, int salary1);
+ public:
+    explicit Driver(std::string name1,
+        int worktime1,
+        Project *project1,
+        int position1,
+        int salary1);
 
     virtual void calcBonus(int nightHours);
 
@@ -39,18 +42,19 @@ public:
 };
 
 class Cleaner : public Personal {
-    // Cleaner() : Personal(std::__cxx11::string(), 0, nullptr, 0, std::__cxx11::string(), 0, nullptr, 0, 0) {}
-
-public:
-
+ public:
     void calc(int hours);
 
     virtual void printInfo();
 
     virtual void calcBonus(int floors);
 
-    explicit Cleaner(std::string name1, int worktime1, Project *project1, int position1, int salary1);
+    explicit Cleaner(std::string name1,
+        int worktime1,
+        Project *project1,
+        int position1,
+        int salary1);
 };
 
 
-#endif //TP_LAB_6_PERSONAL_H
+#endif  // INCLUDE_PERSONAL_H_

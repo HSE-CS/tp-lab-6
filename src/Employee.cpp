@@ -1,6 +1,4 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
 #include "../include/Employee.h"
 

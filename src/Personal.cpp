@@ -1,6 +1,4 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
 #include "../include/Personal.h"
 
@@ -30,7 +28,10 @@ void Driver::calc(int hours) {
 }
 
 void Driver::printInfo() {
-    toStringForm(this->name, this->id, this->position, this->project);
+    toStringForm(this->name,
+        this->id,
+        this->position,
+        this->project);
 }
 
 Driver::Driver(std::string name1,
@@ -41,16 +42,17 @@ Driver::Driver(std::string name1,
                                        worktime1,
                                        project1,
                                        position1,
-                                       salary1) {
-
-}
+                                       salary1) {}
 
 void Cleaner::calc(int hours) {
     this->payment += calcBase(this->salary, hours);
 }
 
 void Cleaner::printInfo() {
-    toStringForm(this->name, this->id, this->position, this->project);
+    toStringForm(this->name,
+        this->id,
+        this->position,
+        this->project);
 }
 
 void Cleaner::calcBonus(int floors) {
@@ -65,6 +67,4 @@ Cleaner::Cleaner(std::string name1,
                                          worktime1,
                                          project1,
                                          position1,
-                                         salary1) {
-
-}
+                                         salary1) {}

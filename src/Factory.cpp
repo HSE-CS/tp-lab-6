@@ -1,6 +1,4 @@
-//
-// Created by Данил on 28.02.2021.
-//
+// copyright 2021 Toliman
 
 #include "../include/Factory.h"
 #include "Manager.h"
@@ -33,7 +31,8 @@ std::string Factory::__find_info_path(std::string fileName) {
     return fileName;
 }
 
-std::vector<Employee *> Factory::getEmployees(const std::string &fileName, Project *startProject) {
+std::vector<Employee *> Factory::getEmployees(const std::string &fileName,
+    Project *startProject) {
     std::vector<Employee *> result;
     std::ifstream input(Factory::__find_info_path(fileName).c_str());
     std::string buffer;
@@ -53,28 +52,34 @@ std::vector<Employee *> Factory::getEmployees(const std::string &fileName, Proje
         int salary = std::atol(info[2].c_str());
 
         if (profession == CLEANER) {
-            auto newEmployee = new Cleaner(info[0], 8, startProject, profession, salary);
+            auto newEmployee = new Cleaner(info[0],
+                8, startProject, profession, salary);
             result.push_back(newEmployee);
         } else if (profession == DRIVER) {
-            auto newEmployee = new Driver(info[0], 8, startProject, profession, salary);
+            auto newEmployee = new Driver(info[0],
+                8, startProject, profession, salary);
             result.push_back(newEmployee);
         } else if (profession == PROGRAMMER) {
-            auto newEmployee = new Programmer(info[0], 8, startProject, profession, salary);
+            auto newEmployee = new Programmer(info[0],
+                8, startProject, profession, salary);
             result.push_back(newEmployee);
         } else if (profession == TESTER) {
-            auto newEmployee = new Tester(info[0], 8, startProject, profession, salary);
+            auto newEmployee = new Tester(info[0],
+                8, startProject, profession, salary);
             result.push_back(newEmployee);
         } else if (profession == PROJECTMANAGER) {
             std::vector<Employee *> e;
-            auto newEmployee = new ProjectManager(info[0], 8, startProject, profession, e);
+            auto newEmployee = new ProjectManager(info[0],
+                8, startProject, profession, e);
         } else if (profession == SENIORMANAGER) {
             std::vector<Employee *> e;
-            auto newEmployee = new SeniorManager(info[0], 8, startProject, profession, e);
+            auto newEmployee = new SeniorManager(info[0],
+                8, startProject, profession, e);
         } else if (profession == TEAMLEADER) {
             std::vector<Employee *> e;
-            auto newEmployee = new TeamLeader(info[0], 8, startProject, profession, salary, &e);
+            auto newEmployee = new TeamLeader(info[0],
+                8, startProject, profession, salary, &e);
         }
-
     }
     return result;
 }
