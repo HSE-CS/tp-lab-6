@@ -27,7 +27,8 @@ void Engineer::print_info() {
 }
 
 Programmer::Programmer(int id, std::string name,
-                       int work_time, int salary, Positions position, Project *p)
+                       int work_time, int salary, Positions position,
+                       Project *p)
         : Engineer(id, std::move(name), work_time, salary, position, p) {
 }
 int Programmer::calc_salary() {
@@ -65,5 +66,6 @@ int TeamLeader::calc_Heads() {
 }
 int TeamLeader::calc_salary() {
     return this->payment = calc_base_salary(salary, work_time)
-                           + calc_bonus_salary(calc_Heads()) + calc_budget_part();
+                           + calc_bonus_salary(calc_Heads()) +
+                           calc_budget_part();
 }
