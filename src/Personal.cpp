@@ -44,6 +44,10 @@ Driver::Driver(std::string name1,
                                        position1,
                                        salary1) {}
 
+int Driver::getPayment() {
+    return this->payment;
+}
+
 void Cleaner::calc(int hours) {
     this->payment += calcBase(this->salary, hours);
 }
@@ -68,3 +72,7 @@ Cleaner::Cleaner(std::string name1,
                                          project1,
                                          position1,
                                          salary1) {}
+
+int Cleaner::getPayment() {
+    return this->payment;
+}

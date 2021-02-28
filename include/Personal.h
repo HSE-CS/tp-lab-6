@@ -39,6 +39,8 @@ class Driver : public Personal {
     void calc(int hours);
 
     virtual void printInfo();
+
+    int getPayment();
 };
 
 class Cleaner : public Personal {
@@ -48,6 +50,8 @@ class Cleaner : public Personal {
     virtual void printInfo();
 
     virtual void calcBonus(int floors);
+
+    int getPayment();
 
     explicit Cleaner(std::string name1,
         int worktime1,

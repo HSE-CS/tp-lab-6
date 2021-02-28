@@ -52,6 +52,10 @@ void Programmer::calcBonus(int times) {
     this->payment += Personal::calcBase(this->salary, times);
 }
 
+int Programmer::getPayment() {
+    return this->payment;
+}
+
 int Tester::calcProAdditions(int foundMistakes) {
     return foundMistakes * this->salary;
 }

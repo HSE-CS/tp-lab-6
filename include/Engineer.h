@@ -37,6 +37,8 @@ class Programmer : public Engineer {
     virtual void calc(int hours);
 
     virtual void calcBonus(int times);
+
+    virtual int getPayment();
 };
 
 class Tester : public Engineer {

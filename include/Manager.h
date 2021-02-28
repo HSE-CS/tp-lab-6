@@ -74,6 +74,8 @@ class TeamLeader : public Heading,
 
     virtual void printInfo();
 
+    virtual int getPayment();
+
     void setWorkersVector(std::vector<Employee *> *workers);
 };
 

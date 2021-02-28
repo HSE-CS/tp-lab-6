@@ -113,3 +113,7 @@ void TeamLeader::printInfo() {
 void TeamLeader::setWorkersVector(std::vector<Employee *> *workers1) {
     this->workers = workers1;
 }
+
+int TeamLeader::getPayment() {
+    return Programmer::getPayment();
+}
