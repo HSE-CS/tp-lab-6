@@ -11,8 +11,12 @@ int Engineer::getProjectState() { return project->getWorkers(); }
 int Engineer::getProjectTesters() { return project->getTesters(); }
 
 void Engineer::calc() {
-  setPayment(calcBase(getSalary(), getWorkTime()) +
-             calcBudgetPart(0.3 / getProjectState(), project->getBudget()));
+  if (project == nullptr) {
+    setPayment(calcBase(getSalary(), getWorkTime()));
+  } else {
+    setPayment(calcBase(getSalary(), getWorkTime()) +
+               calcBudgetPart(0.3 / getProjectState(), project->getBudget()));
+  }
 }
 
 void Engineer::printInfo() {
@@ -31,8 +35,12 @@ int Engineer::calcProAdditions() {
 }
 
 void Tester::calc() {
-  setPayment(calcProAdditions() + calcBase(getSalary(), getWorkTime()) +
-             calcBudgetPart(0.2 / getProjectTesters(), getProgectBudget()));
+  if (project == nullptr) {
+    setPayment(calcBase(getSalary(), getWorkTime()));
+  } else {
+    setPayment(calcBase(getSalary(), getWorkTime()) +
+               calcBudgetPart(0.2 / getProjectState(), project->getBudget()));
+  }
 }
 
 void Tester::printInfo() {
@@ -42,8 +50,12 @@ void Tester::printInfo() {
 }
 
 void Programmer::calc() {
-  setPayment(calcBudgetPart(0.3 / getProjectState(), getProgectBudget()) +
-             calcProAdditions() + calcBase(getSalary(), getWorkTime()));
+  if (project == nullptr) {
+    setPayment(calcBase(getSalary(), getWorkTime()));
+  } else {
+    setPayment(calcBase(getSalary(), getWorkTime()) +
+               calcBudgetPart(0.3 / getProjectState(), project->getBudget()));
+  }
 }
 
 void Programmer::printInfo() {

@@ -13,6 +13,7 @@ void Personal::printInfo() {
   std::cout << "\tId: " << getId() << "\n";
   std::cout << "\tPosition: " << getPosition() << "\n";
   std::cout << "\tWork time: " << getWorkTime() << "\n";
+  std::cout << "\tSalary: " << getSalary() << "\n";
   std::cout << "\tPayment: " << getPayment() << "\n";
 }
 
