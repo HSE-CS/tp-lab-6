@@ -6,13 +6,12 @@
 #include "Interfaces.h"
 #include "Personal.h"
 
-class Engineer: public ProjectBudget, public Personal, public Programmer {
+class Engineer: public ProjectBudget, public Personal {
  protected:
   Project project;
   float part;
   int pro;
   int percent;
-  std::vector<Programmer> programmers;
  public:
   float calcBudgetPart(float part, int budget);
   void calc();
@@ -34,6 +33,8 @@ class Programmer: public Engineer {
 };
 
 class TeamLeader: public Programmer, public Heading {
+ private:
+  std::vector<Programmer> programmers;
  public:
   unsigned int calcHeads();
   void calc();

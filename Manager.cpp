@@ -11,7 +11,7 @@ void ProjectManager::calc() {
 }
 
 void ProjectManager::setPercent(int percent) {
-  this->percent = percent;
+  this->percent = percent;  
 }
 
 void ProjectManager::setNum(int numOfHeads) {
