@@ -1,3 +1,5 @@
+// Copyright 2021 Краюшкина Екатерина
+
 #include "Employee.h"
 
 Employee::Employee(int id_, string name_, int worktime_)

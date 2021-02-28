@@ -1,3 +1,5 @@
+// Copyright 2021 Краюшкина Екатерина
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include "MakePeople.h"

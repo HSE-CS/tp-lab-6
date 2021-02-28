@@ -1,3 +1,5 @@
+// Copyright 2021 Краюшкина Екатерина
+
 #include "Programmer.h"
 
 Programmer::Programmer(int id_, string name_, int worktime_, int base_) : Engineer(id_, name_, worktime_, base_)

@@ -1,3 +1,5 @@
+// Copyright 2021 Краюшкина Екатерина
+
 #include "Driver.h"
 #include <ctime>
 

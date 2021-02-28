@@ -1,3 +1,5 @@
+// Copyright 2021 Краюшкина Екатерина
+
 #include "SeniorManager.h"
 
 SeniorManager::SeniorManager(int id_, string name_, int worktime_) : ProjectManager(id_, name_, worktime_)

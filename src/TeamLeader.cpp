@@ -1,3 +1,5 @@
+// Copyright 2021 Краюшкина Екатерина
+
 #include "TeamLeader.h"
 
 TeamLeader::TeamLeader(int id_, string name_, int worktime_, int base_) : Programmer(id_, name_, worktime_, base_)

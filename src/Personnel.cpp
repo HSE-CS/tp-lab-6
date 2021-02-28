@@ -1,3 +1,5 @@
+// Copyright 2021 Краюшкина Екатерина
+
 #include "Personnel.h"
 
 Personnel::Personnel(int id_, string name_, int worktime_, int base_) : Employee(id_, name_, worktime_)
