@@ -56,7 +56,7 @@ std::vector<Employee*> makeStaff(std::string staffList,
             newEmployee = new ProjectManager(id, name, position, payment,
                 currentProject);
         else if (position == "SeniorManager")
-            newEmployee = new SeniorManager(id, name, position,payment,
+            newEmployee = new SeniorManager(id, name, position, payment,
                 allProjects);
         res.push_back(newEmployee);
     }
