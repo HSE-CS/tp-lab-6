@@ -56,14 +56,14 @@ void Factory::readStaff() {
         Programmer* newProgrammer =
         new Programmer(newId, fullName, newWorktime,
                        newSalary, projects[newProjectNum]);
-        newProgrammer->setAheadCounter(rand_r() % 5);
+        newProgrammer->setAheadCounter(rand_r(1) % 5);
         employees.push_back(newProgrammer);
       } else if (newPositionNum == 1) {
         // * Tester *
         Tester* newTester =
         new Tester(newId, fullName, newWorktime,
                    newSalary, projects[newProjectNum]);
-        newTester->setBugsCounter(rand_r() % 10);
+        newTester->setBugsCounter(rand_r(1) % 10);
         employees.push_back(newTester);
       } else {
         // * TeamLeader *
@@ -107,7 +107,7 @@ void Factory::readStaff() {
       infileE >> newWorktime >> newSalary;
       Driver* newDriver =
       new Driver(newId, fullName, newWorktime, newSalary);
-      newDriver->setNightHours(rand_r() % 5);
+      newDriver->setNightHours(rand_r(1) % 5);
       employees.push_back(newDriver);
     }
   }
