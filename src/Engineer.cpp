@@ -14,6 +14,10 @@ Engineer::Engineer(int id,
     part(part) {
 }
 
+int Engineer::calcBonus() const {
+    return 0;
+}
+
 int Engineer::calcBudget(float part) const {
     return 0;
 }

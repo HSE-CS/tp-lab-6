@@ -12,6 +12,7 @@ class Engineer : public Personal, public ProjectBudget {
  public:
     virtual ~Engineer() = default;
 
+    int calcBonus() const override;
     int calcBudget(float part) const override;
     int calcProAdditions() const override;
     void calc() override;
