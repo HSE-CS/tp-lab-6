@@ -4,6 +4,7 @@
 #define INCLUDE_MANAGER_H_
 
 #include <vector>
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -26,9 +27,9 @@ class ProjectManager : public Employee, public Heading {
   std::vector <Project*> projects;
 
  public:
-  ProjectManager(int id, std::string name, std::string position, 
+  ProjectManager(int id, std::string name, std::string position,
    double payment, std::vector <Project*> newProjects);
-  double getCurrentBudget();  // instead of getSalary() 
+  double getCurrentBudget();  // instead of getSalary()
   virtual double calcHeads();
   virtual double calc();
   virtual void printInfo();
@@ -42,7 +43,7 @@ class SeniorManager : public ProjectManager {
   int numOfProjects;
 
  public:
-  SeniorManager(int id, std::string name, std::string position, 
+  SeniorManager(int id, std::string name, std::string position,
    double payment, std::vector <Project*> newProjects);
   int getNumOfProjects();
   void addNewProject(Project* newProject);
