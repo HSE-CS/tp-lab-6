@@ -2,11 +2,11 @@
 #ifndef INCLUDE_INTERFACES_H_
 #define INCLUDE_INTERFACES_H_
 
-#include "../include/Employee.h"
-#include "../include/Personal.h"
-#include "../include/Factory.h"
-#include "../include/Engineer.h"
-#include "../include/Manager.h"
+#include "Employee.h"
+#include "Personal.h"
+#include "Factory.h"
+#include "Engineer.h"
+#include "Manager.h"
 
 
 enum Position { DRIVER = 1, CLEANER, SECURITY, ENGINEER, PROGRAMMER,

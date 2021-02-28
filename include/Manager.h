@@ -8,9 +8,9 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "../include/Employee.h"
-#include "../include/Factory.h"
-#include "../include/Interfaces.h"
+#include "Employee.h"
+#include "Factory.h"
+#include "Interfaces.h"
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:

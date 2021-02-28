@@ -5,8 +5,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "../include/Personal.h"
-#include "../include/Interfaces.h"
+#include "Personal.h"
+#include "Interfaces.h"
 
 class Project;
 
