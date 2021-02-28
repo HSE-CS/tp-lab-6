@@ -10,9 +10,10 @@ int ProjectManager::calcHeads() {
 }
 int ProjectManager::calc() {
     int s = 0;
-    for (auto i : project) 
+    for (auto i : project)
         s += i->budget;
-    return getPayment() * getWorkTime() + calcBudgetPart(part, s) + calcProAdditions() + calcHeads();
+    return getPayment() * getWorkTime() + calcBudgetPart(part, s) +
+        calcProAdditions() + calcHeads();
 }
 
 int ProjectManager::calcBudgetPart(float part, int budget) {

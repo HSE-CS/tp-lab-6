@@ -129,11 +129,13 @@ std::vector<Employee*> Factory::makeStaff(const std::string dir) {
                     file_position, person_worktime, person_salary);
                 break;
             case Position::PROJECTMANAGER:
-                emp = new ProjectManager(person_id, person_name, file_position, numProjects,
+                emp = new ProjectManager(person_id, person_name,
+                    file_position, numProjects,
                     person_worktime, person_salary, projects);
                 break;
             case Position::SENIORMANAGER:
-                emp = new SeniorManager(person_id, person_name, file_position, numProjects,
+                emp = new SeniorManager(person_id, person_name,
+                    file_position, numProjects,
                     person_worktime, person_salary, projects);
                 break;
             case Position::PROGRAMMER:
