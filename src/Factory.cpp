@@ -56,10 +56,12 @@ void Factory::readData() {
       TeamLeader q4(id, name, Position(team_Leader), 0, nullptr, 0);
       buff2.push_back(q4);
     } else if (check == 5) {
-      SeniorManager q5(id, name, Position(senior_Manager), 0, 0, nullptr);
+      std::vector<Project>projects;
+      SeniorManager q5(id, name, Position(senior_Manager), 0, 0, projects);
       buff2.push_back(q5);
     } else if (check == 6) {
-      ProjectManager q6(id, name, Position(project_Manager), 0, 0, nullptr);
+      std::vector<Project>projects;
+      ProjectManager q6(id, name, Position(project_Manager), 0, 0, projects);
       buff2.push_back(q6);
     }
   }

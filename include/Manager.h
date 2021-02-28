@@ -4,7 +4,8 @@
 #include "Employee.h"
 #include "Interfaces.h"
 #include "Factory.h"
-#include "vector"
+#include <vector>
+#include <string>
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:

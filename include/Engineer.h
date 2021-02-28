@@ -4,6 +4,7 @@
 #include "Interfaces.h"
 #include "Personal.h"
 #include "Factory.h"
+#include <string>
 
 class Engineer : public ProjectBudget, public Personal {
  protected:
@@ -42,7 +43,7 @@ class Tester : public Engineer {
 class TeamLeader : public Programmer, public Heading {
  public:
   TeamLeader(std::string id, std::string name, Position position,
-             int salary,Project *current_project, float part)
+             int salary, Project *current_project, float part)
       : Programmer(id, name, position, salary, current_project, part) {}
   int calcHeads() override;
   int calcBonus() override;

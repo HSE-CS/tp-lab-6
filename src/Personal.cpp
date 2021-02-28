@@ -27,9 +27,9 @@ int Driver::calcBase(int current_salary, int current_work_time) {
 }
 
 int Driver::calcBonus() {
-  return int(getPayment() * getWorkTime() * 0.5);
+  return static_cast<int>(getPayment() * getWorkTime() * 0.5);
 }
 
 int Cleaner::calcBonus() {
-  return int(calcBase(salary, work_time) * 0.5);
+  return static_cast<int>(calcBase(salary, work_time) * 0.5);
 }
