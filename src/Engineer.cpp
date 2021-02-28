@@ -36,7 +36,7 @@ void Tester::calc() {
 }
 
 void Tester::printInfo() {
-    Engineer::printInfo(); 
+    Engineer::printInfo();
     std::cout << "\tBudget part: " << 0.2 / getProjectTesters() << "\n";
     std::cout << "\tPayment: " << getPayment() << "\n";
 }

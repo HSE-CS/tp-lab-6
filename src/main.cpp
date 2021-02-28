@@ -7,12 +7,10 @@
 #include "../include/Personal.h"
 
 
-int main() { 
-
+int main() {
       std::string pathToProjects = "../tp-lab-6/src/Projects.json";
       std::vector<Project*> Projects(makeProjects(pathToProjects));
       std::string pathToEmployees = "../tp-lab-6/src/Employees.json";
-      
       std::vector<Employee*> Company(makeStaff(pathToEmployees, Projects));
       for (auto a : Company) {
         a->printInfo();
@@ -57,5 +55,5 @@ int main() {
    for (auto emp : Company) {
      emp->printInfo();
    }*/
-    return 0; 
+    return 0;
 }

@@ -3,6 +3,7 @@
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
+#include<string>
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -35,7 +36,7 @@ class Driver: public Personal {
 class Cleaner : public Personal {
  public:
   Cleaner(unsigned _id, std::string _name, Position _position, int _salary)
-      : Personal(_id, _name, _position, _salary) {};
+      : Personal(_id, _name, _position, _salary) {}
   void calc() override;
 };
 

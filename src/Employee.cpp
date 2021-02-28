@@ -14,7 +14,7 @@ int Employee::getPayment() {
   return payment;
 }
 
-std::string Employee::getPosition() { 
+std::string Employee::getPosition() {
     switch (position) {
     case static_cast<Position>(0):
         return std::string("engineer");

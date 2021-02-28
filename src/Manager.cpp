@@ -13,7 +13,8 @@ int ProjectManager::calcBudgetPart(float part, int budget) {
 }
 
 void ProjectManager::calc() {
-  setPayment(calcHeads() + calcBudgetPart(0.2, proj->getBudget()) + calcProAdditions());
+  setPayment(calcHeads() + calcBudgetPart(0.2, proj->getBudget()) +
+             calcProAdditions());
 }
 
 void ProjectManager::printInfo() {

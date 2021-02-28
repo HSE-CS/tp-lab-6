@@ -29,6 +29,6 @@ void Driver::printInfo() {
   std::cout << "\tExtra work time: " << extraWorkTime << "\n";
   std::cout << "\tBonus payment(included in payment): "
       << calcBonus() << "\n";
-};
+}
 
 void Cleaner::calc() { setPayment(calcBase(getSalary(), getWorkTime())); }

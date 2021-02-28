@@ -1,7 +1,7 @@
 // Copyright 2020 me
 
-#ifndef INCLUDE_INTERFACES_H
-#define INCLUDE_INTERFACES_H
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 class WorkBaseTime {
  public:
@@ -20,4 +20,4 @@ class ProjectBudget {
   virtual int calcProAdditions() = 0;
 };
 
-#endif  // INCLUDE_INTERFACES_H
+#endif  // INCLUDE_INTERFACES_H_

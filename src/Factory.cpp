@@ -29,7 +29,7 @@ std::vector<Project*> makeProjects(std::string path) {
   return projectsList;
 }
 
-Project* getProjectByID(std::vector<Project*> projectsList, unsigned id) { 
+Project* getProjectByID(std::vector<Project*> projectsList, unsigned id) {
     for (auto pr : projectsList) {
         if (pr->getProjectID() == id) {
            return pr;

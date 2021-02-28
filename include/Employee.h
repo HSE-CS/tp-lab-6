@@ -29,7 +29,7 @@ class Employee {
   void setPayment(int pay);
  public:
   Employee(unsigned id, std::string name, Position position):
-        id(id), name(name), position(position), payment(0), worktime(0) {};
+        id(id), name(name), position(position), payment(0), worktime(0) {}
 
   void setWorkTime(int workTime);
   int getWorkTime();
