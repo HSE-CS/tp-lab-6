@@ -1,0 +1,10 @@
+1 RonnieRamos ProjectManager 3 0 0.2
+2 MelvinAdams SeniorManager 8 0 0.4
+3 PaulWard ProjectManager 2 1 0.2
+4 DorothyFrench Driver 25000 0 0
+5 WandaHorton Cleaner 20000 0 0 
+6 JenniferMorton Engineer 0 0.1
+7 GilbertTucker Programmer 0 0.1
+8 DavidChambers Programmer 1 0.2
+9 GregoryCook TeamLeader 0 0.2
+10 CaseyBowers TeamLeader 1 0.2
