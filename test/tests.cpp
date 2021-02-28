@@ -89,7 +89,7 @@ TEST(EmployeesTest, test11) {
 
 TEST(EmployeesTest, test12) {
   Cleaner employee(111, "TestName", Position::CLEANER, 10000);
-  employee.SetWorkTime(10)
+  employee.SetWorkTime(10);
   EXPECT_EQ(10, employee.GetWorkTime());
 }
 
