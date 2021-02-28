@@ -9,8 +9,8 @@
 
 class Tester : public Engineer {
  public:
-  Tester(int id, std::string name, std::string position,
-         int salary, Project* project, float part);
+  /*Tester(int id, std::string name, std::string position,
+         int salary, Project* project, float part);*/
   void calc() override;
   void printinfo() override;
   int calcProAdditions() override;
