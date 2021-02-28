@@ -6,7 +6,7 @@
 #include "Interfaces.h"
 #include "Personal.h"
 
-class Engineer: public ProjectBudget, public Personal {
+class Engineer: public ProjectBudget, public Personal, public Programmer {
  protected:
   Project project;
   float part;
