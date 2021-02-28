@@ -4,7 +4,6 @@
 #include <string>
 #include"Factory.h"
 
-
 TEST(StaffDemo, test1) {
   Factory F;
   std::vector<Employee*> staff = F.makeStaff("src/Personals.txt");
