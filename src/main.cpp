@@ -17,7 +17,7 @@ int main() {
    newFactory.makeStaff(employeesFile, projectsFile);
 
   for (auto i : employees) {
-    i->updateWorkTime(30 + rand() % 60);
+    i->updateWorkTime(30 + rand_r(seed) % 60);
     i->calc();
     i->printInfo();
     std::cout << std::endl;
