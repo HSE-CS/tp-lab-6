@@ -3,6 +3,7 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include <string>
 #include "Interfaces.h"
 #include "Manager.h"
 #include "Personal.h"
@@ -13,16 +14,15 @@ class Engineer : public Personal, public ProjectBudget {
   virtual double calcBonus();
 
  public:
-  Engineer(int id, std::string name, std::string position, 
+  Engineer(int id, std::string name, std::string position,
    double payment, Project* newProject);
   Project* getProject();
   virtual double calcBudgetPart(double part);
-
 };
 
 class Programmer : public Engineer {
  public:
-  Programmer(int id, std::string name, std::string position, 
+  Programmer(int id, std::string name, std::string position,
    double payment, Project* newProject);
   virtual double calcProAdditions();
   virtual double calc();
@@ -31,7 +31,7 @@ class Programmer : public Engineer {
 
 class TeamLeader : public Programmer, public Heading {
  public:
-  TeamLeader(int id, std::string name, std::string position, 
+  TeamLeader(int id, std::string name, std::string position,
    double payment, Project* newProject);
   virtual double calcHeads();
   virtual double calc();
@@ -40,7 +40,7 @@ class TeamLeader : public Programmer, public Heading {
 
 class Tester : public Engineer {
  public:
-  Tester(int id, std::string name, std::string position, 
+  Tester(int id, std::string name, std::string position,
    double payment, Project* newProject);
   virtual double calcProAdditions();
   virtual double calc();
