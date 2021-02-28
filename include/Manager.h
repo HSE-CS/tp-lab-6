@@ -1,5 +1,4 @@
 // Copyright 2021 Bogomazov
-// Copyright 2021 Bogomazov
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 #include <cstring>

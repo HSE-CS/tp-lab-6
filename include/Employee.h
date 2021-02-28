@@ -29,4 +29,4 @@ class Employee {
     virtual void printInfo() = 0;
 };
 
-#endif   //  INCLUDE_COMPANY_H_
+#endif  // INCLUDE_EMPLOYEE_H_
