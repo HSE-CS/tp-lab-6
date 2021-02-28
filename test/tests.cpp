@@ -66,15 +66,14 @@ EXPECT_EQ(0, project->getNumOfWorkers());
 
 TEST(staffTest, test10) {
 Project* project = new Project(1,
-                               3000000);
+                               10000);
 Programmer programmer1(0,
                        "Алексеев Ярослав Сергеевич",
                        200,
                        project);
 programmer1.setWorkTime(10);
-programmer1.calcProAdditions();
 programmer1.calc();
-EXPECT_EQ(3025555, programmer1.getPayment());
+EXPECT_EQ(10000, programmer1.getPayment());
 }
 
 TEST(staffTest, test11) {
@@ -123,7 +122,7 @@ SeniorManager seniorManager1(4,
                              "Иванов Иван Иванович",
                              projects);
 int numOfPositions = projects[0]->getNumOfWorkers()
-    + projects[2]->getNumOfWorkers();
+    + projects[1]->getNumOfWorkers();
 EXPECT_EQ(6, numOfPositions);
 }
 
