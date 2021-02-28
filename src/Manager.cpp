@@ -4,10 +4,10 @@
 #include <iostream>
 
 int ProjectManager::calcHeads() {
-  return (int) (this->projects[0].budget * 0.01);
+  return static_cast<int> (this->projects[0].budget * 0.01);
 }
 int ProjectManager::calcBudgetPart(float part, int budget) {
-  return (int) (part * budget);
+  return static_cast<int> (part * budget);
 }
 int ProjectManager::calcProAdditions() {
   return 1000;

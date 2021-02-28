@@ -3,7 +3,8 @@
 #include <iostream>
 #include "Employee.h"
 
-Employee::Employee(std::string id, std::string name, Position position, int work_time, int payment) {
+Employee::Employee(std::string id, std::string name, Position position,
+                   int work_time, int payment) {
   this->id = id;
   this->name = name;
   this->position = position;
