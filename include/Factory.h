@@ -8,8 +8,8 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "Employee.h"
 
+class Employee;
 
 class Project {
  public:

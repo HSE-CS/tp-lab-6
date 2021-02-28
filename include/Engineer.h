@@ -9,6 +9,7 @@
 
 class Project;
 class Personal;
+class ProjectBudget;
 
 class Engineer : public Personal, public ProjectBudget {
  private:
