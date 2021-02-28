@@ -7,9 +7,10 @@
 #include <string>
 #include <vector>
 #include <utility>
-#include "Employee.h"
 #include "Factory.h"
 #include "Interfaces.h"
+
+class Employee;
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:

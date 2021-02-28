@@ -6,8 +6,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Employee.h"
 #include "Interfaces.h"
+
+class Employee;
+
 
 class Personal : public Employee, public WorkBaseTime {
  private:

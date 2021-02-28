@@ -5,10 +5,10 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Personal.h"
 #include "Interfaces.h"
 
 class Project;
+class Personal;
 
 class Engineer : public Personal, public ProjectBudget {
  private:
