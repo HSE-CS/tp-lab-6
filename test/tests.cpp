@@ -21,7 +21,7 @@ TEST(StaffDemo, test3) {
   std::vector<Project> P{ p, p2 };
   SeniorManager SM(1, "KiraPriti", "SeniorManager", 400, P);
   SM.calc();
-  EXPECT_EQ(SM.getsalary()), 1085000);
+  EXPECT_EQ(SM.getsalary(), 1085000);
 }
 TEST(StaffDemo, test4) {
   Driver d(11, "StepanFomin", "Driver", 250);
