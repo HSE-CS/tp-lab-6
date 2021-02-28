@@ -1,5 +1,6 @@
-//  Copyright 2021 Nikita Naumov
 
+//  Copyright 2021 Nikita Naumov
+/*
 #include "Personal.h"
 #include "Programmer.h"
 #include "Manager.h"
@@ -13,7 +14,8 @@ void delimiter() {
 }
 
 int main() {
-    /*unsigned num = 0;
+    */
+/*unsigned num = 0;
     ProjectManager managerObj(num, "Name1");
     managerObj.printInfo();
     ++num;
@@ -99,7 +101,8 @@ int main() {
     teamleadObj.setWorkTime(100);
     teamleadObj.setSalaryPerHour(220);
     teamleadObj.calc();
-    teamleadObj.printInfo();*/
+    teamleadObj.printInfo();*//*
+
     std::string pathFile;
     std::cout << "Enter path to file" << std::endl;
     std::cin >> pathFile;
@@ -124,10 +127,13 @@ int main() {
     for (auto emp : company) {
         emp->calc();
     }
-    /*for (auto emp : company) {
+    */
+/*for (auto emp : company) {
         emp->printInfo();
         delimiter();
-    }*/
+    }*//*
+
 
     return 0;
 }
+*/
