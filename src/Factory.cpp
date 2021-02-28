@@ -53,7 +53,7 @@ void Factory::makeStaff(std::string filename) {
         } else if (temp[2] == "cleaner") {
             staff.push_back(new Cleaner(id, temp[1], temp[2], salary));
         } else if (temp[2] == "team leader") {
-            staff.push_back(new TeamLeader(id, temp[1], temp[2], 
+            staff.push_back(new TeamLeader(id, temp[1], temp[2],
                 salary, project));
             project->AddMember();
         }

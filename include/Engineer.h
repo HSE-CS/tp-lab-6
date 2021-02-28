@@ -14,7 +14,7 @@ class Engineer : public Personal, ProjectBudget {
         std::string position, double salary, Project * project)
         :Personal(id, name, position, salary) {
         this->project = project;
-    };
+    }
     double calcBudgetPart(double part, double budget) override;
     void printInfo() override;
 };

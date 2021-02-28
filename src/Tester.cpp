@@ -7,7 +7,7 @@ double Tester::calcProAdditions() {
 }
 
 void Tester::calc() {
-    payment = Engineer::calcBudgetPart(0.2, project->getBudget()) + 
+    payment = Engineer::calcBudgetPart(0.2, project->getBudget()) +
         Personal::calcBase(worktime) + calcProAdditions();
 }
 

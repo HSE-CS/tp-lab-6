@@ -13,7 +13,7 @@ class SeniorManager : public ProjectManager {
          std::string position, std::vector<Project*> projects)
          : ProjectManager(id, name, position) {
          this->projects = projects;
-     };
+     }
     void calc() override;
     void printInfo() override;
 };
