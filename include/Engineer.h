@@ -16,7 +16,7 @@ public:
         const Project& p);
     ~Engineer() override = default;
 
-    void calculate() override;
+    void calc() override;
     int calc_budget_part(float part, int budget) override;
 
 protected:
@@ -51,7 +51,7 @@ public:
         unsigned int salary,
         const Project& p);
 
-    void calculate() override;
+    void calc() override;
     int calc_heads() override;
     void print_info() override;
 };

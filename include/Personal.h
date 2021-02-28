@@ -23,7 +23,7 @@ class Cleaner final : public Personal {
 public:
 	Cleaner(id_type id, const std::string& name, unsigned int salary);
 
-	void calculate() override;
+	void calc() override;
 	void print_info() override;
 	int calc_bonus() override;
 };
@@ -32,7 +32,7 @@ class Driver final : public Personal {
 public:
 	Driver(id_type id, const std::string& name, unsigned int salary);
 
-	void calculate() override;
+	void calc() override;
 	void print_info() override;
 	int calc_bonus() override;
 };
