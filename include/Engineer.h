@@ -23,10 +23,10 @@ class Engineer : public Personal, public ProjectBudget {
   Engineer();
   Engineer(int _id, std::string _name, int _salary, Project *_project,
            double _part);
-  unsigned int calcBonus();
-  unsigned int calcProAdditions() override;
+  virtual unsigned int calcBonus() = 0;
+  virtual unsigned int calcProAdditions() = 0;
   unsigned int calcBudgetPart(double part, unsigned int budget) override;
-  void calc();
+  void calc() override;
   void printInfo();
 };
 
