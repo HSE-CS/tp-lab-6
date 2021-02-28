@@ -5,6 +5,7 @@
 #include <iostream>
 #include <iomanip>
 
+class Engineer;
 Programmer::Programmer(int id, std::string name, std::string position,
                        int salary, Project *project, float part)
     : Engineer(id, name, position, salary, project, part) {

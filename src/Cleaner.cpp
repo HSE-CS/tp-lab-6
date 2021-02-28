@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <iostream>
 
+class Personal;
 Cleaner::Cleaner(int id, std::string name, std::string position, int salary)
                 : Personal(id, name, position, salary) {
 }
