@@ -18,7 +18,7 @@ enum Position {
     TEAMLEADER,  // 6
 };
 
-const char* positionToString[]{
+static const char* positionToString[]{
     "Cleaner",
     "Driver",
     "Programmer",
