@@ -5,6 +5,7 @@
 #include "Manager.h"
 #include "Engineer.h"
 #include <vector>
+#include <string>
 
 class Factory {
  public:
