@@ -52,12 +52,6 @@ TEST(ProgrammerTest, Test5) {
     EXPECT_GE(0.1 * 1000 + time * 10, result);
 }
 
-TEST(ProgrammerTest, Test5) {
-    Project* project = new Project(1, 1000, "pr");
-    Programmer* pr = new Programmer(1, "my name", "programmer", 10, project);
-    int result = pr->calcBudgetPart(0.4, 1000);
-    EXPECT_EQ(0.4 * 1000, result);
-}
 
 TEST(TesterTest, Test6) {
     Project* project = new Project(1, 1000, "pr");
@@ -156,10 +150,9 @@ TEST(ProgrammerTest, Test14) {
     EXPECT_DOUBLE_EQ(10 * time, result);
 }
 
-TEST(TesterTest, Test15) {
+TEST(ProgrammerTest, Test15) {
     Project* project = new Project(1, 1000, "pr");
-    Tester* ts = new Tester(1, "my name", "tester", 10, project);
-    double result = ts->calcBudgetPart(0.2, project->getBudget());
-    double exp = 0.2 * 1000;
-    EXPECT_DOUBLE_EQ(exp, result);
+    Programmer* pr = new Programmer(1, "my name", "programmer", 10, project);
+    int result = pr->calcBudgetPart(0.4, 1000);
+    EXPECT_EQ(0.4 * 1000, result);
 }
