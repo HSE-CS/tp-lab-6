@@ -4,6 +4,8 @@
 
 unsigned int Personal::calcBase() { return worktime * salary; }
 
+unsigned int Personal::calcBonus() { return 0; }
+
 void Personal::printInfo() {
   std::cout << id << " " << name << " " << position << " " << worktime << " "
             << payment << " " << salary << std::endl;

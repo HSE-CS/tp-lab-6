@@ -2,6 +2,17 @@
 
 #include "Manager.h"
 
+ProjectManager::ProjectManager() {
+  id = 0;
+  name = "";
+  worktime = 0;
+  payment = 0;
+  subordinates_num = 0;
+  part = 0.0;
+}
+
+unsigned int ProjectManager::calcProAdditions() { return 0; }
+
 unsigned int ProjectManager::calcHeads() { return subordinates_num * 10000; }
 
 unsigned int ProjectManager::calcBudgetPart(double part, unsigned int budget) {

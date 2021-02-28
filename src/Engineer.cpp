@@ -91,3 +91,21 @@ TeamLeader::TeamLeader(int _id, std::string _name, int _salary,
   worktime = 0;
   payment = 0;
 }
+
+Engineer::Engineer() {
+  id = 0;
+  name = "";
+  payment = 0;
+  worktime = 0;
+  project = nullptr;
+}
+
+Programmer::Programmer() {
+  id = 0;
+  name = "";
+  payment = 0;
+  worktime = 0;
+  project = nullptr;
+}
+
+unsigned int Engineer::calcProAdditions() { return 0; }
