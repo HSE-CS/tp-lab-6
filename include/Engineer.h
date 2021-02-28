@@ -7,17 +7,15 @@
 #include "Project.h"
 
 class Engineer : public Personal, ProjectBudget {
-
-protected:
+ protected:
     Project* project;
-public:
+ public:
     Engineer(int id, std::string name,
         std::string position, double salary, Project * project)
-        :Personal(id, name, position, salary) 
-    {
+        :Personal(id, name, position, salary) {
         this->project = project;
     };
     double calcBudgetPart(double part, double budget) override;
     void printInfo() override;
 };
-#endif // !INCLUDE_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_

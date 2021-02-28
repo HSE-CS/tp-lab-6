@@ -1,3 +1,4 @@
+// Copyright 2021
 #include <gtest/gtest.h>
 #include <string>
 #include <sstream>
@@ -19,7 +20,7 @@ TEST(DriverTest, Test1) {
 
 TEST(DriverTest, Test2) {
     Driver * dr = new Driver(1, "my name", "driver", 100);
-    int result = (int)dr->calcBase(40);
+    int result = dr->calcBase(40);
     EXPECT_EQ(40 * 100, result);
 }
 

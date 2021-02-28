@@ -1,18 +1,17 @@
 // Copyright 2021
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
+#include <string>
 #include "Employee.h"
 #include "WorkBaseTime.h"
 
 class Personal : public Employee, WorkBaseTime {
-
-private:
+ private:
     double salary;
-public:
+ public:
     Personal(int id, std::string name,
         std::string position, double salary)
-        : Employee(id, name, position) 
-    {
+        : Employee(id, name, position) {
         this->salary = salary;
     }
     double getSalary();
@@ -20,4 +19,4 @@ public:
     double calcBase(int wtime) override;
     void printInfo() override;
 };
-#endif  // INCLUDE_PERSONAL_H
+#endif  // INCLUDE_PERSONAL_H_

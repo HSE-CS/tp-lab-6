@@ -13,5 +13,6 @@ double Programmer::calcProAdditions() {
 }
 
 void Programmer::calc() {
-    payment = Engineer::calcBudgetPart(0.1, project->getBudget()) + Personal::calcBase(worktime) + calcProAdditions();
+    payment = Engineer::calcBudgetPart(0.1, project->getBudget()) + 
+        Personal::calcBase(worktime) + calcProAdditions();
 }

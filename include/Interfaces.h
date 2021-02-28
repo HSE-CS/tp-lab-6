@@ -1,1 +1,4 @@
 // Copyright 2021
+#ifndef INCLUDE_INTERFACE_H_
+#define INCLUDE_INTERFACE_H_
+#endif  // INCLUDE_INTERFACE_H_

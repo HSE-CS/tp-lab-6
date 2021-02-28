@@ -3,14 +3,14 @@
 #define INCLUDE_FACTORY_H_
 #include "Employee.h"
 #include <vector>
+#include <string>
 #include "Project.h"
 
 class Factory {
-
-private:
+ private:
     std::vector<Employee*> staff;
     std::vector<Project*> projects;
-public:
+ public:
     Factory() {
         projects.push_back(new Project(1, 1000000, "VTB"));
         projects.push_back(new Project(2, 2000000, "Yandex"));

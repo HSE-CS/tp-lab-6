@@ -9,7 +9,8 @@ int TeamLeader::calcHeads() {
 }
 
 void TeamLeader::calc() {
-    payment = calcHeads() + Engineer::calcBudgetPart(0.3, project->getBudget()) + Personal::calcBase(worktime);
+    payment = calcHeads() + Engineer::calcBudgetPart(0.3, project->getBudget()) 
+        + Personal::calcBase(worktime);
 }
 
 void TeamLeader::printInfo() {

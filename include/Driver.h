@@ -5,11 +5,10 @@
 #include <string>
 
 class Driver : public Personal {
-
-public:
+ public:
     Driver(int id, std::string name,
         std::string position, double salary)
-        : Personal(id, name, position, salary) {};
+        : Personal(id, name, position, salary) {}
     double calcBonus() override;
     void calc() override;
 };

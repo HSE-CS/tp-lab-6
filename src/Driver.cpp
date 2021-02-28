@@ -5,7 +5,6 @@
 #include <string>
 
 double Driver::calcBonus() {
-
     return std::rand() % 100;
 }
 

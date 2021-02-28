@@ -4,14 +4,13 @@
 #include <string>
 
 class Project {
-
-private:
+ private:
     int id;
     double budget;
     int members;
     int programmers;
     std::string name;
-public:
+ public:
     Project(int id, int budget, std::string name) {
         this->id = id;
         this->budget = budget;
@@ -27,4 +26,4 @@ public:
     int getId();
     std::string getName();
 };
-#endif  // !INCLUDE_PROJECT_H_
+#endif  // INCLUDE_PROJECT_H_

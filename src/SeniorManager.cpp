@@ -11,8 +11,7 @@ void SeniorManager::calc() {
         paym += projects[i]->getBudget() * 0.4;
         members += projects[i]->getMember();
     }
-    payment += ( paym + members * 5);
-
+    payment += (paym + members * 5);
 }
 
 void SeniorManager::printInfo() {
