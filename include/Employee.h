@@ -19,8 +19,9 @@ Driver,
 };
 
 
-struct Project {
-const char* _id;
+class Project {
+ protected:
+std::string _id;
 int _budget;
 };
 
