@@ -6,7 +6,6 @@
 #include "Personal.h"
 #include "Engineer.h"
 #include "Manager.h"
-#include "Factory.h"
 
 
 TEST(Factory, test1) {
@@ -42,7 +41,8 @@ TEST(Factory, test6) {
 TEST(Factory, test7) {
     Driver driver(10, "Alex", DRIVER, 40, 200);
     driver.calc();
-    EXPECT_EQ(8040, driver.getPayment());
+    int payment = driver.getPayment();
+    EXPECT_EQ(8040, payment);
 }
 
 TEST(Factory, test8) {
@@ -102,5 +102,5 @@ TEST(Factory, test16) {
     Tester tester(15, "Pavel", TESTER, 50, 800, new Project(1, 100000));
     tester.addMistakes(2);
     tester.calc();
-    EXPECT_EQ(45000, tester.getPayment());
+    EXPECT_EQ(47000, tester.getPayment());
 }
