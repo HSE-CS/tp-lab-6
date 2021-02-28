@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
-#ifndef _INCLUDE_INTERFACES_H
-#define _INCLUDE_INTERFACES_H
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 #include "../include/Employee.h"
 #include "../include/Personal.h"
@@ -27,5 +27,5 @@ class ProjectBudget {
     virtual int calcProAdditions() = 0;
 };
 
-#endif //  _INCLUDE_INTERFACES_H
+#endif  //  INCLUDE_INTERFACES_H_
 

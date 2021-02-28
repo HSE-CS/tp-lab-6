@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
-#ifndef _INCLUDE_ENGINEER_H
-#define _INCLUDE_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include <iostream>
 #include <string>
@@ -21,7 +21,7 @@ class Engineer : public Personal, public ProjectBudget {
              int salary,
              int worktime,
              Project* project,
-             float part): 
+             float part):
                 Personal(id, name, position, salary, worktime),
         project(project), part(part) {}
     int calcBudgetPart(float part, int budget);
@@ -39,7 +39,7 @@ class Tester : public Engineer {
            int salary,
            int worktime,
            Project* project,
-           float part) : 
+           float part) :
                 Engineer(id, name, position, salary, worktime, project, part) {}
     int calcProAdditions();
     int calc();
@@ -78,4 +78,4 @@ class TeamLeader : public Programmer, public Heading {
 };
 
 
-#endif //  _INCLUDE_ENGINEER_H
+#endif  //  INCLUDE_ENGINEER_H_

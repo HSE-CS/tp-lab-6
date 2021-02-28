@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
-#ifndef _INCLUDE_PERSONAL_H
-#define _INCLUDE_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 
 #include <iostream>
@@ -48,4 +48,4 @@ class Cleaner : public Personal {
                 Personal(id, name, position, worktime, payment) {}
 };
 
-#endif //  _INCLUDE_PERSONAL_H
+#endif  //  INCLUDE_PERSONAL_H_

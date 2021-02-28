@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
-#ifndef _INCLUDE_FACTORY_H
-#define _INCLUDE_FACTORY_H
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <cstring>
 #include <fstream>
@@ -28,4 +28,4 @@ class Factory {
 };
 
 
-#endif //  _INCLUDE_FACTORY_H
+#endif  //  INCLUDE_FACTORY_H_

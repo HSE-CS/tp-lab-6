@@ -1,6 +1,6 @@
 // Copyright 2021 Bogomazov
-#ifndef _INCLUDE_EMPLOYEE_H
-#define _INCLUDE_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <vector>
 #include <string>
@@ -29,4 +29,4 @@ class Employee {
     virtual void printInfo() = 0;
 };
 
-#endif  // INCLUDE_COMPANY_H_
+#endif   //  INCLUDE_COMPANY_H_

@@ -1,7 +1,7 @@
 // Copyright 2021 Bogomazov
 // Copyright 2021 Bogomazov
-#ifndef _INCLUDE_MANAGER_H
-#define _INCLUDE_MANAGER_H
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 #include <cstring>
 #include <fstream>
 #include <iostream>
@@ -50,4 +50,4 @@ class SeniorManager : public ProjectManager {
 };
 
 
-#endif //  _INCLUDE_MANAGER_H
+#endif  //  INCLUDE_MANAGER_H_
