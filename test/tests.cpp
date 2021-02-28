@@ -48,57 +48,57 @@ TEST(StaffTest, test6) {
 
 TEST(StaffTest, test7) {
   Cleaner cleaner(0, "Proverka", 200);
-  cleaner.getWorktime(20);
+  cleaner.setWorktime(20);
   EXPECT_EQ(4000, cleaner.getPayment());
 }
 
 TEST(StaffTest, test8) {
   Cleaner cleaner(0, "Proverka", 200);
-  cleaner.getWorktime(30);
+  cleaner.setWorktime(30);
   EXPECT_EQ(11000, cleaner.getPayment());
 }
 
 TEST(StaffTest, test9) {
-  Project project(0, 100000);
-  Engineer engineer(0, "Proverka", 500, &project, 0.5);
+  Project *project = new Project(0, 100000);
+  Engineer engineer(0, "Proverka", 500, project, 0.5);
   engineer.setWorktime(40);
   engineer.calc();
   EXPECT_EQ(70000, engineer.getPayment());
-};
+}
 
 TEST(StaffTest, test10) {
-  Project project(0, 100000);
-  Programmer programmer(0, "Proverka", 500, &project, 0.5);
+  Project *project = new Project(0, 100000);
+  Programmer programmer(0, "Proverka", 500, project, 0.5);
   programmer.setWorktime(40);
   programmer.calc();
   EXPECT_EQ(75000, programmer.getPayment());
 }
 
 TEST(StaffTest, test11) {
-  Project project(0, 100000);
-  Tester tester(0, "Proverka", 500, &project, 0.5);
+  Project *project = new Project(0, 100000);
+  Tester tester(0, "Proverka", 500, project, 0.5);
   tester.setWorktime(40);
   tester.calc();
   EXPECT_EQ(80000, tester.getPayment());
 }
 
 TEST(StaffTest, test12) {
-  Project project(0, 100000);
-  TeamLeader teamleader(0, "Proverka", 500, &project, 0.5);
+  Project *project = new Project(0, 100000);
+  TeamLeader teamleader(0, "Proverka", 500, project, 0.5);
   teamleader.setWorktime(40);
   teamleader.calc();
   EXPECT_EQ(85000, teamleader.getPayment());
 }
 
 TEST(StaffTest, test13) {
-  Project project(0, 100000);
-  ProjectManager pr_manager(0, "Proverka", 5, &project, 0.5);
+  Project *project = new Project(0, 100000);
+  ProjectManager pr_manager(0, "Proverka", 5, project, 0.5);
   pr_manager.calc();
   EXPECT_EQ(100000, pr_manager.getPayment());
 }
 
 TEST(StaffTest, test14) {
-  Project project(0, 100000);
+  Project *project = new Project(0, 100000);
   std::vector<Project *> projects;
   projects.push_back(project);
   SeniorManager sn_manager(0, "Proverka", 5, projects, 0.5);
@@ -107,8 +107,8 @@ TEST(StaffTest, test14) {
 }
 
 TEST(StaffTest, test15) {
-  Project project1(0, 100000);
-  Project project2(0, 100000);
+  Project *project1 = new Project(0, 100000);
+  Project *project2 = new Project(0, 100000);
   std::vector<Project *> projects;
   projects.push_back(project1);
   projects.push_back(project2);
