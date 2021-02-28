@@ -2,7 +2,8 @@
 
 #include "Manager.h"
 
-ProjectManager::ProjectManager(unsigned int id, const std::string& name) : Employee(id, name) {
+ProjectManager::ProjectManager(unsigned int id, const std::string& name)
+                : Employee(id, name) {
     this->id = id;
     this->name = std::move(name);
     this->worktime = 0;
@@ -24,7 +25,8 @@ unsigned ProjectManager::calcHeads() {
 
 unsigned ProjectManager::calcBudgetPart() {
     if (this->linkToProject) {
-        return ((this->linkToProject)->getProjectBudget() / this->linkToProject->getNumberOfMembers());
+        return ((this->linkToProject)->getProjectBudget()
+        / this->linkToProject->getNumberOfMembers());
     } else {
         return 0;
     }
@@ -39,18 +41,21 @@ void ProjectManager::calc() {
 void ProjectManager::printInfo() {
     std::cout << "Name " << this->name << std::endl;
     std::cout << "Employee's ID " << this->id << std::endl;
-    std::cout << "Employee's position " << convertPositionToString() << std::endl;
+    std::cout << "Employee's position " <<
+                convertPositionToString() << std::endl;
     std::cout << "Current work time " << this->worktime << std::endl;
     std::cout << "Current payment " << this->payment << std::endl;
     std::cout << "Info about related project" << std::endl;
     if (this->linkToProject) {
-        std::cout << "Project ID " << this->linkToProject->getProjectID() << std::endl;
+        std::cout << "Project ID " <<
+        this->linkToProject->getProjectID() << std::endl;
     } else {
         std::cout << "No related projects " << std::endl;
     }
 }
 
-SeniorManager::SeniorManager(unsigned id, std::string name) : ProjectManager(id, name){
+SeniorManager::SeniorManager(unsigned id, std::string name)
+                : ProjectManager(id, name){
     this->id = id;
     this->name = std::move(name);
     this->projects.clear();
@@ -85,15 +90,20 @@ void SeniorManager::calc() {
 void SeniorManager::printInfo() {
     std::cout << "Name " << this->name << std::endl;
     std::cout << "Employee's ID " << this->id << std::endl;
-    std::cout << "Employee's position " << convertPositionToString() << std::endl;
+    std::cout << "Employee's position " <<
+                 convertPositionToString() << std::endl;
     std::cout << "Current work time " << this->worktime << std::endl;
     std::cout << "Current payment " << this->payment << std::endl;
     std::cout << "Info about related project" << std::endl;
     if (this->projects.size()) {
         for (size_t i = 0; i < this->projects.size(); ++i) {
-            std::cout << i + 1 << " project ID " << this->projects[i]->getProjectID() << std::endl;
+            std::cout << i + 1 << " project ID " <<
+            this->projects[i]->getProjectID() << std::endl;
         }
     } else {
         std::cout << "No related projects" << std::endl;
     }
+}
+unsigned int SeniorManager::getProjQuantity() {
+    return (this->projects).size();
 }

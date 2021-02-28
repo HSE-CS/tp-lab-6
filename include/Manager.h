@@ -28,6 +28,7 @@ class SeniorManager : public ProjectManager {
  public:
     SeniorManager(unsigned id, std::string name);
     ~SeniorManager();
+    unsigned getProjQuantity();
     void setProject(Project*);
     unsigned calcHeads() override;
     void calc() override;

@@ -18,13 +18,15 @@ void Engineer::setProject(Project* link) {
 }
 unsigned Engineer::calcBudgetPart() {
     if (this->linkToProject) {
-        return ((this->linkToProject)->getProjectBudget() / this->linkToProject->getNumberOfMembers());
+        return ((this->linkToProject)->getProjectBudget()
+        / this->linkToProject->getNumberOfMembers());
     } else {
         return 0;
     }
 }
 void Engineer::calc() {
-    this->payment = calcBudgetPart() + calcBase(this->getSalaryPerHour(), this->worktime);
+    this->payment = calcBudgetPart() + calcBase(this->getSalaryPerHour(),
+                                                this->worktime);
 }
 Project* Engineer::getProjectLink() {
     return this->linkToProject;

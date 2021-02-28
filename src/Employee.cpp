@@ -36,7 +36,12 @@ std::string Employee::convertPositionToString() {
 unsigned int Employee::getPosition() {
     return (this->position);
 }
-
+unsigned int Employee::getPayment() {
+    return this->payment;
+}
+unsigned int Employee::getCurrentWorktime() {
+    return this->worktime;
+}
 void Employee::setPosition(int numOfPosition) {
     this->position = static_cast<Position>(numOfPosition);
 }

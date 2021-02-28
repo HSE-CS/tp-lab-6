@@ -114,7 +114,8 @@ int main () {
     }
     std::vector<Project*> projectVector;
     for (size_t i = 0; i < 10; ++i) {
-        projectVector.push_back(new Project(i, 100000+(std::rand()%3000 - 1500)));
+        projectVector.push_back(new Project(i,
+                           100000+(std::rand()%3000 - 1500)));
     }
     for (size_t i = 0; i < projectVector.size(); ++i){
         projectVector[i]->printInfo();

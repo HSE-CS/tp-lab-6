@@ -15,18 +15,21 @@ unsigned Tester::calcProAdditions() {
     return 2 * salaryPerHour * worktime;
 }
 void Tester::calc() {
-    this->payment = calcBudgetPart() + calcProAdditions() + calcBase(this->salaryPerHour, this->worktime);
+    this->payment = calcBudgetPart() + calcProAdditions()
+            + calcBase(this->salaryPerHour, this->worktime);
 }
 void Tester::printInfo() {
     std::cout << "Name " << this->name << std::endl;
     std::cout << "Employee's ID " << this->id << std::endl;
-    std::cout << "Employee's position " << convertPositionToString() << std::endl;
+    std::cout << "Employee's position " <<
+                convertPositionToString() << std::endl;
     std::cout << "Current work time " << this->worktime << std::endl;
     std::cout << "Salary per hour " << this->salaryPerHour << std::endl;
     std::cout << "Current payment " << this->payment << std::endl;
     std::cout << "Info about related project " << std::endl;
     if (this->linkToProject) {
-        std::cout << "Project ID " << this->linkToProject->getProjectID() << std::endl;
+        std::cout << "Project ID " <<
+                    this->linkToProject->getProjectID() << std::endl;
     } else {
         std::cout << "No related project" << std::endl;
     }

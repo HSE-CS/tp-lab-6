@@ -38,6 +38,8 @@ class Employee {
     unsigned getPosition();
     virtual void calc() = 0;
     virtual void printInfo() = 0;
+    unsigned getPayment();
+    unsigned getCurrentWorktime();
 };
 
 #endif  //  INCLUDE_EMPLOYEE_H_

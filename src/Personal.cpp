@@ -25,7 +25,8 @@ void Personal::calc() {
     this->payment = calcBase(this->salaryPerHour, this->worktime);
 }
 
-Driver::Driver(unsigned int id, const std::string& name) : Personal(id, name) {
+Driver::Driver(unsigned int id, const std::string& name)
+                : Personal(id, name) {
     this->id = id;
     this->name = std::move(name);
     this->salaryPerHour = 0;
@@ -36,9 +37,11 @@ Driver::Driver(unsigned int id, const std::string& name) : Personal(id, name) {
 void Driver::printInfo() {
     std::cout << "Name " << this->name << std::endl;
     std::cout << "Employee's ID " << this->id << std::endl;
-    std::cout << "Employee's position " << convertPositionToString() << std::endl;
+    std::cout << "Employee's position " <<
+                convertPositionToString() << std::endl;
     std::cout << "Current work time " << this->worktime << std::endl;
-    std::cout << "Current additional hours " << this->additionalHours << std::endl;
+    std::cout << "Current additional hours " <<
+                this->additionalHours << std::endl;
     std::cout << "Salary per hour " << this->salaryPerHour << std::endl;
     std::cout << "Current payment " << this->payment << std::endl;
 }
@@ -48,10 +51,12 @@ unsigned Driver::calcBonus() {
 }
 
 void Driver::calc() {
-    this->payment = calcBase(this->salaryPerHour, this->worktime) + calcBonus();
+    this->payment = calcBase(this->salaryPerHour, this->worktime)
+                    + calcBonus();
 }
 
-Cleaner::Cleaner(unsigned int id, const std::string& name) : Personal(id, name) {
+Cleaner::Cleaner(unsigned int id, const std::string& name)
+        : Personal(id, name) {
     this->id = id;
     this->name = std::move(name);
     this->salaryPerHour = 0;
@@ -65,7 +70,8 @@ unsigned int Cleaner::calcBonus() {
 void Cleaner::printInfo() {
     std::cout << "Name " << this->name << std::endl;
     std::cout << "Employee's ID " << this->id << std::endl;
-    std::cout << "Employee's position " << convertPositionToString() << std::endl;
+    std::cout << "Employee's position " <<
+    convertPositionToString() << std::endl;
     std::cout << "Current work time " << this->worktime << std::endl;
     std::cout << "Salary per hour " << this->salaryPerHour << std::endl;
     std::cout << "Current payment " << this->payment << std::endl;
