@@ -22,7 +22,8 @@ void Engineer::printInfo() const {
     project->budget << std::endl;
 }
 
-void Engineer::InitializeByFourParams(int id, std::string name, int salary, Project* project) {
+void Engineer::InitializeByFourParams(int id, std::string name,
+  int salary, Project* project) {
   this->id = id;
   this->name = name;
   this->salary = salary;
@@ -36,7 +37,8 @@ Programmer::Programmer() {
   position = Position::PROGRAMMER;
 }
 
-Programmer::Programmer(int id, std::string name, int salary, Project* project) {
+Programmer::Programmer(int id, std::string name,
+  int salary, Project* project) {
   InitializeByFourParams(id, name, salary, project);
   position = Position::PROGRAMMER;
 }
@@ -66,7 +68,8 @@ TeamLeader::TeamLeader() {
   position = Position::TEAM_LEADER;
 }
 
-TeamLeader::TeamLeader(int id, std::string name, int salary, Project* project) {
+TeamLeader::TeamLeader(int id, std::string name,
+  int salary, Project* project) {
   InitializeByFourParams(id, name, salary, project);
   position = Position::TEAM_LEADER;
 }

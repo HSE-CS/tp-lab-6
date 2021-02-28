@@ -13,13 +13,13 @@
 
 
 class StaffFactory {
-private:
+ private:
   std::string file_name;
   std::vector<std::string> data;
   void readData();
-public:
+ public:
   StaffFactory();
-  StaffFactory(std::string file_name);
+  explicit StaffFactory(std::string file_name);
   static Project* createProject(std::vector<std::string> project_tokens);
   static Project* createProject(std::string name, int budget, int workers_num);
   std::vector<Employee*> makeStaff();

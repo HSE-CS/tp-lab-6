@@ -12,14 +12,14 @@ struct Project {
 
 
 class WorkBaseTime {
-public:
+ public:
   virtual int calcBase(int salary, int wtime) const = 0;
   virtual int calcBonus() const = 0;
 };
 
 
 class ProjectBudget {
-public:
+ public:
   virtual int calcBudgetPart(float part, int budget) const = 0;
   virtual int calcProAdditions() const = 0;
 };

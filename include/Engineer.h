@@ -8,11 +8,12 @@
 
 
 class Engineer : public ProjectBudget, public Personal {
-protected:
+ protected:
   Project* project = nullptr;
-  void InitializeByFourParams(int id, std::string name, int salary, Project* project);
+  void InitializeByFourParams(int id, std::string name,
+    int salary, Project* project);
 
-public:
+ public:
   int calcBonus() const;
   int calcBudgetPart(float part, int budget) const;
   void calc();
@@ -21,7 +22,7 @@ public:
 
 
 class Programmer : public Engineer {
-public:
+ public:
   Programmer();
   Programmer(int id, std::string name, int salary, Project* project);
   int calcProAdditions() const;
@@ -29,7 +30,7 @@ public:
 
 
 class Tester : public Engineer {
-public:
+ public:
   Tester();
   Tester(int id, std::string name, int salary, Project* project);
   int calcProAdditions() const;
@@ -37,7 +38,7 @@ public:
 
 
 class TeamLeader : public Programmer, public Heading {
-public:
+ public:
   TeamLeader();
   TeamLeader(int id, std::string name, int salary, Project* project);
   int calcHeads() const;

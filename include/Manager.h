@@ -8,13 +8,13 @@
 
 class ProjectManager :
   public Employee, public ProjectBudget, public Heading {
-protected:
+ protected:
   int projects_num = 0;
   Project** projects = nullptr;
   void initializeParamsByZero();
   void deleteParams();
 
-public:
+ public:
   ProjectManager();
   ProjectManager(int id, std::string name, Project* project);
   ~ProjectManager();
@@ -27,7 +27,7 @@ public:
 
 
 class SeniorManager : public ProjectManager {
-public:
+ public:
   SeniorManager();
   SeniorManager(int id, std::string name, Project** projects,
     int projects_num);

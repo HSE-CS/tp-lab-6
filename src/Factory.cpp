@@ -38,7 +38,8 @@ Project* StaffFactory::createProject(std::vector<std::string> project_tokens) {
   return project;
 }
 
-Project* StaffFactory::createProject(std::string name, int budget, int workers_num) {
+Project* StaffFactory::createProject(std::string name,
+  int budget, int workers_num) {
   Project* project = new Project();
   project->id = name;
   project->budget = budget;
@@ -63,39 +64,36 @@ std::vector<Employee*> StaffFactory::makeStaff() {
     if (position == "DRIVER") {
       Driver* driver = new Driver(id, name, std::stoi(tokens[3]));
       staff.push_back(driver);
-    }
-    else if (position == "CLEANER") {
+    } else if (position == "CLEANER") {
       Cleaner* cleaner = new Cleaner(id, name, std::stoi(tokens[3]));
       staff.push_back(cleaner);
-    }
-    else if (position == "PROJECT_MANAGER") {
+    } else if (position == "PROJECT_MANAGER") {
       Project* project = createProject(getProjectInfo(tokens[4]));
       ProjectManager* project_manager = new ProjectManager(id, name, project);
       staff.push_back(project_manager);
-    }
-    else if (position == "SENIOR_MANAGER") {
+    } else if (position == "SENIOR_MANAGER") {
       unsigned size = tokens.size();
       int projects_num = size - 4;
       Project** projects = new Project*[size - 4];
       for (unsigned j = 4; j < size; j++) {
         projects[j - 4] = createProject(getProjectInfo(tokens[j]));
       }
-      SeniorManager* senior_manager = new SeniorManager(id, name, projects, projects_num);
+      SeniorManager* senior_manager =
+        new SeniorManager(id, name, projects, projects_num);
       staff.push_back(senior_manager);
-    }
-    else if (position == "TESTER") {
+    } else if (position == "TESTER") {
       Project* project = createProject(getProjectInfo(tokens[4]));
       Tester* tester = new Tester(id, name, std::stoi(tokens[3]), project);
       staff.push_back(tester);
-    }
-    else if (position == "PROGRAMMER") {
+    } else if (position == "PROGRAMMER") {
       Project* project = createProject(getProjectInfo(tokens[4]));
-      Programmer* programmer = new Programmer(id, name, std::stoi(tokens[3]), project);
+      Programmer* programmer =
+        new Programmer(id, name, std::stoi(tokens[3]), project);
       staff.push_back(programmer);
-    }
-    else if (position == "TEAM_LEADER") {
+    } else if (position == "TEAM_LEADER") {
       Project* project = createProject(getProjectInfo(tokens[4]));
-      TeamLeader* team_leader = new TeamLeader(id, name, std::stoi(tokens[3]), project);
+      TeamLeader* team_leader =
+        new TeamLeader(id, name, std::stoi(tokens[3]), project);
       staff.push_back(team_leader);
     }
   }
