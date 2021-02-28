@@ -13,8 +13,7 @@ class Engineer : public Personal, public IProjectBudget {
 
   Engineer(int id, std::string name, Position position, int salary,
            Project *myProject, float part)
-      : Personal(id, name, position, salary), myProject(myProject), part(part) {
-  }
+      : Personal(id, name, position, salary), myProject(myProject), part(part) {}
 
   int calcBudgetPart(float _part, int budget) override;
   void calc() override;
@@ -24,7 +23,7 @@ class Programmer : public Engineer {
  public:
   Programmer(int id, std::string name, Position position, int salary,
              Project *myProject, float part)
-      : Engineer(id, name, position, salary, myProject, part){}
+      : Engineer(id, name, position, salary, myProject, part) {}
 
   int calcProAdditions() override;
   int calcBonus() override;
@@ -34,7 +33,7 @@ class TeamLeader : public Programmer, public IHeading {
  public:
   TeamLeader(int id, std::string name, Position position, int salary,
              Project *myProject, float part)
-      : Programmer(id, name, position, salary, myProject, part){}
+      : Programmer(id, name, position, salary, myProject, part) {}
 
   int calcHeads() override;
   int calcBonus() override;
@@ -44,7 +43,7 @@ class Tester : public Programmer {
  public:
   Tester(int id, std::string name, Position position, int salary,
          Project *myProject, float part)
-      : Programmer(id, name, position, salary, myProject, part){}
+      : Programmer(id, name, position, salary, myProject, part) {}
 
   int calcProAdditions() override;
   int calcBonus() override;

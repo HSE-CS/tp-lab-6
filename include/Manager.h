@@ -19,7 +19,7 @@ class Project {
   int Budget;
   int team;
   Project(int id, std::string name, int budget)
-      : id(id), name(name), Budget(budget), team(0){}
+      : id(id), name(name), Budget(budget), team(0) {}
 };
 
 class ProjectManager : public Employee, public IHeading, public IProjectBudget {

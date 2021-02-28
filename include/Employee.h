@@ -30,7 +30,7 @@ class Employee {
   int worktime = 0;
 
   Employee(int id, const std::string &name, Position position, int salary)
-      : id(id), name(name), position(position), salary(salary){}
+      : id(id), name(name), position(position), salary(salary) {}
 
   [[nodiscard]] int getId() const;
   std::string getName();

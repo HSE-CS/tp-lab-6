@@ -1,7 +1,7 @@
 // Copyright 2021 Pavlova D.
 
-#include "../include/Factory.h"
 #include <vector>
+#include "../include/Factory.h"
 
 int main() {
 // создание штата сотрудников на основе файла
