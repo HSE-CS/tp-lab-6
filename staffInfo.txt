@@ -1,0 +1,8 @@
+1 Rick Dekart 0 40 1200 0
+2 Rachel Rose 1 35 600 0
+3 Roy Batty 2 40 1500 0
+4 Pris N. 0 38 1300 0
+5 Denis Villeneuve 3 0
+6 Scott Ridley 4 0 1
+7 Elden Tyrel 5 120 300
+8 Rayan Gosling 6 40 500
