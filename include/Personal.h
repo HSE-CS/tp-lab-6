@@ -19,13 +19,13 @@ class Personal : public Employee, public WorkBaseTime {
          _salary);
 };
 
-class Cleaner : public Personal, public WorkBaseTime {
+class Cleaner : public Personal {
  public:
      Cleaner(int _id, std::string _name, std::string _position, int
          _salary);
 };
 
-class Driver : public Personal, public WorkBaseTime {
+class Driver : public Personal {
  public:
     Driver(int _id, std::string _name, std::string _position, int
         _salary);
