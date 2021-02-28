@@ -1,0 +1,20 @@
+14974;Ilin Andrej Maksimovich;Driver;705.0
+15427;Rumyanceva Valeriya Bilalovna;Team Leader;6112.0
+20298;Dorofeev Mihail Kirillovich;Cleaner;530.0
+21445;Stepanova Sofya Yaroslavovna;Programmer;4970.0
+28140;Dmitrieva Vasilisa Leonidovna;Programmer;4970.0
+30251;Gurova Vladislava Romanovna;Team Leader;6112.0
+33992;Zhilin Nikita Aleksandrovich;Programmer;4970.0
+44494;Sokolov Maksim Matveevich;Programmer;4970.0
+46138;Krasnov Leonid Grigorevich;Tester;3657.0
+49427;Lebedev Makar Eliseevich;Tester;3657.0
+52916;Yakovlev Ruslan Vyacheslavovich;Programmer;4970.0
+54006;Fokina Veronika Grigorevna;Senior Manager;11300.0
+65467;Bogdanov Miron Davidovich;Project Manager;6750.0
+69568;Zolotov Kirill Viktorovich;Team Leader;6112.0
+80342;Chernysheva Margarita Igorevna;Driver;705.0
+96548;Kozlov Nikita Markovich;Project Manager;6750.0
+98237;Zaharova Mariya Vladimirovna;Tester;3657.0
+98430;Titov Denis Savvich;Project Manager;6750.0
+99273;Shirokov Dmitrij Vladimirovich;Programmer;4970.0
+99380;Kozlova Mariya Daniilovna;Cleaner;530.0
