@@ -8,13 +8,13 @@ void ProjectManager::setsalary(int a) {
 }
 
 ProjectManager::ProjectManager(int _id, std::string _name,
-    std::string _pos, int _payment) : 
+    std::string _pos, int _payment) :
     Employee(_id, _name, _pos, _payment) {
     salary = 0;
 }
 
 ProjectManager::ProjectManager(int _id, std::string _name,
-    std::string _pos, int _payment, Project currentProject): 
+    std::string _pos, int _payment, Project currentProject):
     Employee(_id, _name, _pos, _payment) {
     myProject = currentProject;
     salary = 0;
@@ -41,8 +41,8 @@ int ProjectManager::calcHeads() {
     return calcBudgetPart(0.05, myProject.getBudget());
 }
 
-SeniorManager::SeniorManager(int _id, std::string _name, 
-    std::string _pos, int _payment, std::vector<Project> _Projects): 
+SeniorManager::SeniorManager(int _id, std::string _name,
+    std::string _pos, int _payment, std::vector<Project> _Projects):
     ProjectManager(_id, _name, _pos, _payment) {
     Projects = _Projects;
 }

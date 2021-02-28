@@ -1,8 +1,7 @@
 // Copyright 2021 Kris
 
-
-#ifndef INTERFACES_INCLUDE_H_
-#define INTERFACES_INCLUDE_H_
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 #include "Employee.h"
 
 
@@ -21,4 +20,4 @@ class Heading {
     virtual int calcHeads() = 0;
 };
 
-#endif // !INTERFACES_INCLUDE_H_
+#endif  // !INCLUDE_INTERFACES_H_

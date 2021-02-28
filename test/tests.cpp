@@ -39,14 +39,14 @@ TEST(StaffDemo, test6) {
   Tester c(4, "MarkTsuk", "Tester", 400, p);
   c.setWorkTime(80);
   c.calc();
-  EXPECT_EQ(c.getsalary(),347000);
+  EXPECT_EQ(c.getsalary(), 347000);
 }
 TEST(StaffDemo, test7) {
   Project p(7, 2100000);
   Tester c(4, "MarkTsuk", "Tester", 400, p);
   c.setWorkTime(80);
   c.calc();
-  EXPECT_EQ(c.getworktime(),80);
+  EXPECT_EQ(c.getworktime(), 80);
 }
 TEST(StaffDemo, test8) {
   Cleaner c(13, "OlgaPrivolina", "Cleaner", 200);

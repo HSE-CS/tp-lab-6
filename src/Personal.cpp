@@ -1,20 +1,20 @@
 // Copyright 2021 Kris
 
 #include "Personal.h"
-Personal::Personal(int _id, std::string _name, 
-    std::string _pos, int _payment) : 
+Personal::Personal(int _id, std::string _name,
+    std::string _pos, int _payment) :
     Employee(_id, _name, _pos, _payment) {
     salary = 0;
 }
 
-Driver::Driver(int _id, std::string _name, 
-    std::string _pos, int _payment) : 
+Driver::Driver(int _id, std::string _name,
+    std::string _pos, int _payment) :
     Personal(_id, _name, _pos, _payment) {
     setsalary(0);
 }
 
-Cleaner::Cleaner(int _id, std::string _name, 
-    std::string _pos, int _payment) : 
+Cleaner::Cleaner(int _id, std::string _name,
+    std::string _pos, int _payment) :
     Personal(_id, _name, _pos, _payment) {
     setsalary(0);
 }

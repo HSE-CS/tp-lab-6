@@ -1,8 +1,7 @@
 // Copyright 2021 Kris
 
-
-#ifndef ENGINEER_INCLUDE_H_
-#define ENGINER_INCLUDE_H_
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINER_H_
 #include "Employee.h"
 #include "Personal.h"
 #include "Interfaces.h"
@@ -11,7 +10,7 @@ class Engineer: public Personal {
  private:
     Project project;
  public:
-    Engineer(int _id, std::string _name, std::string _pos, 
+    Engineer(int _id, std::string _name, std::string _pos,
         int _payment, Project currentProject);
     Project getProject();
     int calcBudgetPart(double part, int budget);
@@ -41,4 +40,4 @@ class TeamLeader: public Programmer {
      int calc();
 };
 
-#endif // !ENGINEER_INCLUDE_H_
+#endif  // !INCLUDE_ENGINEER_H_

@@ -1,20 +1,22 @@
 // Copyright 2021 Kris
 
-#ifndef MANAGER_INCLUDE_H_
-#define MANAGER_INCLUDE_H_
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 
 #include "Employee.h"
 #include "Personal.h"
 #include "Interfaces.h"
+#include <string>
+#include <vector>
 
 class ProjectManager : public Employee{
  private:
     Project myProject;
     int salary;
  public:
-    ProjectManager(int _id, std::string _name, 
+    ProjectManager(int _id, std::string _name,
         std::string _pos, int _payment, Project currentProject);
-    ProjectManager(int _id, std::string _name, 
+    ProjectManager(int _id, std::string _name,
         std::string _pos, int _payment);
     void setProgect(int id_, int budget_);
     int calcBudgetPart(double part, int budget);
@@ -41,4 +43,4 @@ class SeniorManager : public ProjectManager {
 
 
 
-#endif // !MANAGER_INCLUDE_H_
+#endif  // !INCLUDE_MANAGER_H_

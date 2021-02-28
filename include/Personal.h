@@ -1,10 +1,10 @@
 // Copyright 2021 Kris
 
-
-#ifndef PERSONAL_INCLUDE_H_
-#define PERSONAL_INCLUDE_H_
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 #include "Employee.h"
 #include "Interfaces.h"
+#include <string>
 
 class Personal: public Employee {
  private:
@@ -24,7 +24,7 @@ class Personal: public Employee {
 class Driver: public Personal {
  private:
     int nighttime = 0;
-    int nightpayment =0;
+    int nightpayment = 0;
  public:
     Driver(int _id, std::string _name, std::string _pos, int _payment);
     void setnight(int nightti, int nightpay) {
@@ -37,7 +37,7 @@ class Driver: public Personal {
 
 class Cleaner: public Personal {
  public:
-    Cleaner(int _id, std::string _name, 
+    Cleaner(int _id, std::string _name,
         std::string _pos, int _payment);
     int calc();
 };
@@ -56,4 +56,4 @@ class Project {
     int getBudget();
 };
 
-#endif // !PERSONAL_INCLUDE_H_
+#endif  // !INCLUDE_PERSONAL_H_

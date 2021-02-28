@@ -1,16 +1,13 @@
 // Copyright 2021 Kris
 
-
-
 #include "Factory.h"
 
-std::vector<Employee*> makeStaff(std::string staffList, 
+std::vector<Employee*> makeStaff(std::string staffList,
     std::string projectsList) {
     std::vector<Employee*> res;
     std::vector<Project> allProjects;
     std::string read, elem, arr[5];
-    unsigned int i;
-    //setlocale(LC_ALL, "rus");
+    unsigned int i = 0;
     std::ifstream staff(staffList), projects(projectsList);
     while (getline(projects, read)) {
         i = 0;
@@ -19,17 +16,15 @@ std::vector<Employee*> makeStaff(std::string staffList,
         allProjects.push_back(Project(stoi(arr[0]), stoi(arr[1])));
     }
     projects.close();
-    //std::cout << "Ok";
     while (getline(staff, read)) {
         i = 0;
         std::stringstream strStream(read);
         while (getline(strStream, elem, ' ')) {
             arr[i++] = elem;
         }
-        int id = std::stoi(arr[0]), payment = std::stoi(arr[3]), 
+        int id = std::stoi(arr[0]), payment = std::stoi(arr[3]),
             projectId = std::stoi(arr[4]);
         std::string name = arr[1], position = arr[2];
-        //std::cout << id;
         int projectBudget = 0;
         for (i = 0; i < allProjects.size(); ++i) {
             if (allProjects[i].getId() == projectId) {
@@ -37,7 +32,6 @@ std::vector<Employee*> makeStaff(std::string staffList,
                 break;
             }
         }
-        //std::cout << arr[1];
         Project currentProject(projectId, projectBudget);
         Employee* newEmployee;
         if (position == "Personal")
@@ -50,19 +44,19 @@ std::vector<Employee*> makeStaff(std::string staffList,
             newEmployee = new Engineer(id, name, position, payment, 
                 currentProject);
         else if (position == "Programmer")
-            newEmployee = new Programmer(id, name, position, payment, 
+            newEmployee = new Programmer(id, name, position, payment,
                 currentProject);
         else if (position == "Tester")
-            newEmployee = new Tester(id, name, position, payment, 
+            newEmployee = new Tester(id, name, position, payment,
                 currentProject);
         else if (position == "TeamLeader")
-            newEmployee = new TeamLeader(id, name, position, payment, 
+            newEmployee = new TeamLeader(id, name, position, payment,
                 currentProject);
         else if (position == "ProjectManager")
-            newEmployee = new ProjectManager(id, name, position, payment, 
+            newEmployee = new ProjectManager(id, name, position, payment,
                 currentProject);
         else if (position == "SeniorManager")
-            newEmployee = new SeniorManager(id, name, position,payment, 
+            newEmployee = new SeniorManager(id, name, position,payment,
                 allProjects);
         res.push_back(newEmployee);
     }

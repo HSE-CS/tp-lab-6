@@ -1,8 +1,7 @@
 // Copyright 2021 Kris
 
-
-#ifndef FACTORY_INCLUDE_H_
-#define FACTORY_INCLUDE_H_
+#ifndef INCLUDE_FACTORY_H_
+#define INCLUDE_FACTORY_H_
 
 #include <vector>
 #include "Employee.h"
@@ -16,6 +15,7 @@
 #include <fstream>
 #include <sstream>
 
-std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList);
+std::vector<Employee*> makeStaff(std::string staffList,
+    std::string projectsList);
 
-#endif // !FACTORY_INCLUDE_H_
+#endif  // !INCLUDE_FACTORY_H_
