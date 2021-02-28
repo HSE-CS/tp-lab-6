@@ -16,11 +16,11 @@
 class Project;
 
 class Engineer : public Personal, public ProjectBudget {
-protected:
+ protected:
     Project* project;
     float part;
 
-public:
+ public:
     Engineer(int id, const std::string name, std::string position, int salary,
         int worktime, Project* _project, float part)
         : Personal(id, name, position, salary, worktime),
@@ -33,7 +33,7 @@ public:
 };
 
 class Tester : public Engineer {
-public:
+ public:
     Tester(int id, const std::string name, std::string position, int salary,
         int worktime, Project* project, float part)
         : Engineer(id, name, position, salary, worktime, project, part) {}
@@ -42,7 +42,7 @@ public:
 };
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer(int id, const std::string name, std::string position, int salary,
         int worktime, Project* project, float part)
         : Engineer(id, name, position, salary, worktime, project, part) {}
@@ -51,7 +51,7 @@ public:
 };
 
 class TeamLeader : public Programmer, public Heading {
-public:
+ public:
     TeamLeader(int id, const std::string name, std::string position, int salary,
         int worktime, Project* project, float part)
         : Programmer(id, name, position, salary, worktime, project, part) {}

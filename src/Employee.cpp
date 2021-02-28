@@ -17,8 +17,7 @@ void Employee::set_position(std::string& position) {
         (position != "Tester") && (position != "TeamLeader") &&
         (position != "ProjectManager") && (position != "SeniorManager")) {
         std::cout << "Such a profession does not exist! Try again";
-    }
-    else {
+    } else {
         this->position = position;
     }
 }

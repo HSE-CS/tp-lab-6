@@ -10,10 +10,10 @@
 
 
 class Personal : public Employee {
-private:
+ private:
     int salary;
 
-public:
+ public:
     Personal(int id, std::string name, std::string position, int salary,
         int worktime)
         : Employee(id, name, position, 0, worktime), salary(salary) {}
@@ -23,7 +23,7 @@ public:
 };
 
 class Driver : public Personal {
-public:
+ public:
     Driver(int id, std::string name, std::string position, int payment,
         int worktime)
         : Personal(id, name, position, payment, worktime) {}
@@ -33,7 +33,7 @@ public:
 };
 
 class Cleaner : public Personal {
-public:
+ public:
     Cleaner(int id, const std::string name, const std::string position,
         int payment, int worktime)
         : Personal(id, name, position, payment, worktime) {}

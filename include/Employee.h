@@ -10,13 +10,13 @@
 #include "Interfaces.h"
 
 class Employee {
-private:
+ private:
     int id;
     std::string name;
     int worktime;
     std::string position;
 
-public:
+ public:
     Employee(int id, std::string name, std::string position, int payment,
         int worktime)
         : id(id),

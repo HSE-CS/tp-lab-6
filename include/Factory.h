@@ -9,7 +9,7 @@
 #include "Employee.h"
 
 class Project {
-public:
+ public:
     int id;
     std::string name;
     int budget;
