@@ -114,7 +114,7 @@ ProjectManager projectManager1(1,
                                "Леонов Давид Тимурович",
                                projects);
 projectManager1.calc();
-EXPECT_EQ(3, projects[0]->getNumOfWorkers());
+EXPECT_EQ(17600, projectManager1.getPayment());
 }
 
 TEST(staffTest, test13) {
