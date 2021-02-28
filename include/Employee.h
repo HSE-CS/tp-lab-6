@@ -26,7 +26,7 @@ struct Project {
 
 
 class Employee {
-public:
+ public:
  Employee(id_type id, const std::string& name);
  virtual ~Employee() = default;
 
@@ -37,12 +37,12 @@ public:
 
  friend class StaffFactory;
 
-protected:
- id_type _id;
- std::string _nameof;
- Position _position;
- unsigned int _timeofwork;
- unsigned int _payment;
+ protected:
+  id_type _id;
+  std::string _nameof;
+  Position _position;
+  unsigned int _timeofwork;
+  unsigned int _payment;
 
 };
 
