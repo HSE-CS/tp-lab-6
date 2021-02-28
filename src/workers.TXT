@@ -1,0 +1,160 @@
+PROJECTS:
+id:1001
+budget:1000000
+id:1002
+budget:2000000
+id:1003
+budget:9000000
+WORKERS:
+id:1
+name:Подрыв Устоев
+position:engineer
+salary:400
+project:1001
+id:2
+name:Поджог Сараев
+position:cleaner
+salary:100
+id:3
+name:Погром Евреев
+position:cleaner
+salary:100
+id:4
+name:Обвал Забоев
+position:driver
+salary:150
+id:5
+name:Разрев Батонов
+position:engineer
+salary:400
+project:1001
+id:6
+name:Мешок Лимонов
+position:programmer
+salary:1000
+project:1001
+id:7
+name:Мешок Лимонов
+position:programmer
+salary:1000
+project:1001
+id:8
+name:Курган Отбросов
+position:programmer
+salary:1000
+project:1001
+id:9
+name:Учет Расходов
+position:team leader
+salary:1500
+project:1001
+id:10
+name:Пропой погонов
+position:project manager
+salary:1000
+project:1001
+id:11
+name:Облом Пиндосов
+position:engineer
+salary:500
+project:1002
+id:12
+name:Тридня Запоев
+position:engineer
+salary:500
+project:1002
+id:13
+name:Тридня Запоев
+position:tester
+salary:800
+project:1002
+id:14
+name:Отряд Маньяков
+position:tester
+salary:800
+project:1002
+id:15
+name:Загон Баранов
+position:programmer
+salary:1200
+project:1002
+id:16
+name:Барак Монголов
+position:programmer
+salary:1200
+project:1002
+id:17
+name:Запой Гусаров
+position:programmer
+salary:1200
+project:1002
+id:18
+name:Порвал Баянов
+position:programmer
+salary:1200
+project:1002
+id:19
+name:Порвал Баянов
+position:team leader
+salary:1650
+project:1002
+id:20
+name:Сачок Моллюсков
+position:project manager
+salary:1250
+project:1002
+id:21
+name:Удар Морозов
+position:engineer
+salary:800
+project:1003
+id:22
+name:Полет Фазанов
+position:engineer
+salary:800
+project:1003
+id:23
+name:Рожок Патронов
+position:programmer
+salary:1500
+project:1003
+id:24
+name:Разгул Гормонов
+position:programmer
+salary:1500
+project:1003
+id:25
+name:Карман Пистонов
+position:programmer
+salary:1500
+project:1003
+id:26
+name:Друган Братанов
+position:programmer
+salary:1500
+project:1003
+id:27
+name:Налог Сдоходов
+position:tester
+salary:1000
+project:1003
+id:28
+name:Майор Допросов
+position:tester
+salary:1000
+project:1003
+id:29
+name:Рулон Обоев
+position:team leader
+salary:2200
+project:1003
+id:30
+name:Забег Кретинов
+position:project manager
+salary:2200
+project:1003
+id:31
+name:Иван Николаев
+position:senior manager
+salary:3000
+projects:1001,1002,1003
