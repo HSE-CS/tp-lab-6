@@ -12,7 +12,7 @@ int Personal::calc() {
   return salary;
 }
 
-int Personal::calcBonus() { return floor(getPayment() * getWorktime() * 0.3); }
+float Personal::calcBonus() { return floor(getPayment() * getWorktime() * 0.3); }
 
 int Personal::getSalary() { return salary; }
 
@@ -27,7 +27,7 @@ void Personal::printInfo() {
   std::cout << "Salary:\t" << getSalary() << std::endl;
 }
 
-int Driver::calcBonus() {
+float Driver::calcBonus() {
   if (getWorktime() > 30) {
     return (calcBase(getPayment(), getWorktime()) * 0.1);
   } else {
