@@ -3,6 +3,7 @@
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 
