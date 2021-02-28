@@ -1,0 +1,50 @@
+1:Dan Wallace:Senior manager:1:2:3:4:
+2:Cameron Gilbert:Project manager:1:
+3:Elizabeth Malone:Project manager:2:
+4:Daniel Freeman:Project manager:3:
+5:Rita Robinson:Project manager:4:
+6:Janet Gross:Team leader:70:1:
+7:Edna Barrett:Team leader:48:2:
+8:Rodney Ellis:Team leader:47:3:
+9:Long Peter:Team leader:35:4:
+10:Dorothy Taylor:Programmer:22:1:
+11:Kimberly Ramos:Programmer:22:1:
+12:Scott Brown:Programmer:23:1:
+13:Robert Sullivan:Programmer:21:1:
+14:Karen Smith:Programmer:19:1:
+15:Virginia Johnson:Programmer:20:1:
+16:Hector Mitchell:Programmer:20:1:
+17:Richard Johnson:Tester:14:1:
+18:Stacy Smith:Tester:12:1:
+19:Pamela Thornton:Tester:13:1:
+20:Gregory Porter:Programmer:24:2:
+21:James Curtis:Programmer:24:2:
+22:Patricia Hunt:Programmer:24:2:
+23:Clifford Nelson:Programmer:24:2:
+24:Dolores Wright:Programmer:24:2:
+25:Andrea Hunter:Tester:14:2:
+26:Donna Collins:Tester:14:2:
+27:Lillian Morales:Programmer:25:3:
+28:Vivian Burns:Programmer:22:3:
+29:Joshua Hayes:Programmer:21:3:
+30:Dale Jones:Programmer:20:3:
+31:Gregory Luna:Programmer:22:3:
+32:Rose Douglas:Tester:13:3:
+33:Melissa Nichols:Tester:12:3:
+34:Nicholas Thompson:Programmer:20:4:
+35:Louis Clayton:Programmer:23:4:
+36:Charles Cook:Programmer:19:4:
+37:Robert Fitzgerald:Programmer:21:4:
+38:Daniel Ruiz:Programmer:21:4:
+39:Philip Crawford:Programmer:20:4:
+40:Dana Cook:Tester:14:4:
+41:Glenda Richardson:Tester:12:4:
+42:Sean Jackson:Driver:9:
+43:Robert Sims:Driver:9:
+44:Laura Rodriguez:Driver:9:
+45:Charles Rogers:Driver:10:
+46:Alberto Fleming:Driver:10:
+47:Amanda Pittman:Cleaner:8:
+48:Lisa Williams:Cleaner:6:
+49:Veronica Fox:Cleaner:6:
+50:Dorothy Guerrero:Cleaner:6:
