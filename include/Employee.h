@@ -15,7 +15,7 @@ class Employee {
     int salary = 0;
  public:
     Employee(int curr_id, std::string some_name,
-             std::string pos, int sal);
+             std::string pos);
     int getId();
     void setPosition(std::string pos);
     std::string &getPosition();
