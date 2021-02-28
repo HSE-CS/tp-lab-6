@@ -16,11 +16,11 @@
 Имеет ставку за час.
 */
 
-class Personal : public Employee {
+class Personal : public Employee, publc WorkBaseTime {
 private:
   int salary = 0;
 public:
-  int calcBase() override;
+  int calcBase(int salary. int wtime) override;
 }
 
 /*
@@ -32,6 +32,7 @@ class Cleaner : public Personal {
 public:
   int calcBonus() override;
   void calc() override;
+  void printInfo() override;
 
 }
 

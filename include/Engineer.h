@@ -2,6 +2,9 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include "Manager.h"
+#include "Personal.h"
+
 //- **Engineer** - инженер.
 //Имеет ставку и оплату
 //за час + бонусы от выполняемого проекта.
@@ -15,8 +18,8 @@ class Engineer : public ProjectBudget, public Personal {
 private:
   std::vector<char> project;
 public:
-  calcBudgetPart();
-  void calc() overide;
+  int calcBudgetPart(float part, int budget) override;
+  void calc() override;
 }
 
 /*
@@ -30,6 +33,8 @@ class Programmer : public Engineer {
 //private:
 public:
   int calcProAdditions() override;
+  int calcBonus();
+
 }
 
 /*
@@ -39,7 +44,7 @@ public:
 */
 
 class TeamLeader : public Programmer {
-private:
+//private:
 public:
   int calcHeads() override;
   //calc();
@@ -56,8 +61,8 @@ class Tester : public Engineer {
 private:
 public:
   int calcProAdditions() override;
-  //int calcBonus() override;
-  //void calc() override;
+  int calcBonus() override;
+  void calc() override;
 }
 
 

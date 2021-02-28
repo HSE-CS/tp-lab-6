@@ -28,8 +28,12 @@ private:
     int n = 0;
   vector <char> project[n];
 public:
-  int calcHeads() override;
-  void calc() override;
+    int calcHeads() override;
+   int calcBudgetPart(float part, int budget) override;
+   int calcProAdditions() override;
+   void calc() override;
+   void printInfo() override;
+
 }
 
 
@@ -38,7 +42,7 @@ public:
 Получает из бюджетов всех проектов и за руководство всеми участниками.
 */
 
-class SeniorManager : public SeniorManager {
+class SeniorManager : public ProjectManager {
 private:
     vector<vector<char>> project;
 public:

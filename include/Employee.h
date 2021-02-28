@@ -69,9 +69,7 @@ public:
     int worktime = 0; // отработанное время.
     int payment = 0; // заработная плата.
 
-  void setWorkTime(int time) {
-    /* code */
-  };
+  void setWorkTime(int wtime);
 
   virtual void calc(/* arguments */);
 
