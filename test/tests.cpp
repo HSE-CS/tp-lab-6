@@ -11,7 +11,8 @@
 
 TEST(EmployeesTest, test1) {
   Project* project = new Project(1, 10000, 0);
-  Programmer employee(111, "TestName", Position::PROGRAMMER, 10000, project, 0.1);
+  Programmer employee(111, "TestName", Position::PROGRAMMER, 10000,
+   project, 0.1);
   employee.SetWorkTime(1);
   employee.Calc();
   EXPECT_EQ(11200, employee.GetPayment());
@@ -35,7 +36,8 @@ TEST(EmployeesTest, test3) {
 
 TEST(EmployeesTest, test4) {
   Project* project = new Project(1, 10000, 0);
-  TeamLeader employee(111, "TestName", Position::TEAMLEADER, 10000, project, 0.1);
+  TeamLeader employee(111, "TestName", Position::TEAMLEADER, 10000, project,
+   0.1);
   employee.SetWorkTime(1);
   employee.Calc();
   EXPECT_EQ(21000, employee.GetPayment());
@@ -43,7 +45,8 @@ TEST(EmployeesTest, test4) {
 
 TEST(EmployeesTest, test5) {
   Project* project = new Project(1, 10000, 0);
-  ProjectManager employee(111, "TestName", Position::PROJECTMANAGER, project, 0.1);
+  ProjectManager employee(111, "TestName", Position::PROJECTMANAGER, project,
+   0.1);
   employee.SetWorkTime(1);
   employee.Calc();
   EXPECT_EQ(6000, employee.GetPayment());
