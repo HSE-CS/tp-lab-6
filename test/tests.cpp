@@ -111,7 +111,7 @@ EXPECT_EQ(4258, payment);
 
 TEST(test_pm, test15) {
 Project* project1 = new Project(0, 1000, 4);
-Project_Manager* projectManager1 = new Project_Manager(0,
+Project_Manager* project_Manager1 = new Project_Manager(0,
                                                      "Sergo", 2000,
                                                      project_manager,
                                                      project1);
