@@ -4,6 +4,7 @@
 #define INCLUDE_ENGINEER_H_
 #include "Personal.h"
 #include "Manager.h"
+#include <string>
 
 class Engineer : public Personal, public ProjectBudget {
  public:

@@ -1,9 +1,11 @@
+// Copyright 2021 Nikolaev Ivan
+
 #include "Engineer.h"
 #include <iostream>
 
 void Engineer::calc() {
-    setPayment(calcBase(this->salary, getWorktime()) + calcBonus() + calcProAdditions() +
-        calcBudgetPart(0.01, project->budget));
+    setPayment(calcBase(this->salary, getWorktime()) + calcBonus() +
+        calcProAdditions() + calcBudgetPart(0.01, project->budget));
 }
 
 void Engineer::printInfo() {
@@ -15,7 +17,7 @@ void Engineer::printInfo() {
 }
 
 int Engineer::calcBudgetPart(float part, int budget) {
-    return floor(part * budget);
+    return float(part * budget);
 }
 
 int Engineer::calcBonus() {

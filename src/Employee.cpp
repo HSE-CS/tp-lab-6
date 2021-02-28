@@ -1,3 +1,5 @@
+// Copyright 2021 Nikolaev Ivan
+
 #include "Employee.h"
 
 void Employee::setWorktime(int worktime) {

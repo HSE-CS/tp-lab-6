@@ -1,3 +1,5 @@
+// Copyright 2021 Nikolaev Ivan
+
 #include "Manager.h"
 #include <iostream>
 

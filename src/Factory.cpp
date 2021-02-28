@@ -1,3 +1,5 @@
+// Copyright 2021 Nikolaev Ivan
+
 #include "Factory.h"
 #include "Employee.h"
 #include <iostream>
@@ -11,7 +13,6 @@ void Factory::addProject(Project* project) {
 }
 
 std::vector<Employee*> Factory::makeStaff() {
-
     std::vector<Employee*> employees;
 
     std::string line;

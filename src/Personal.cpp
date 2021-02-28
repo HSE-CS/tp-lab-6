@@ -1,8 +1,10 @@
+// Copyright 2021 Nikolaev Ivan
+
 #include "Personal.h"
 #include <iostream>
 
 void Personal::printInfo() {
-    std::cout << "id: " << getId() << "\tname: " << getName() << 
+    std::cout << "id: " << getId() << "\tname: " << getName() <<
         "\nPosition: " << positionToString() << "\tWorktime: " << worktime <<
         "\nPayment: " << payment << std::endl;
     std::cout << "=====================================" << std::endl;

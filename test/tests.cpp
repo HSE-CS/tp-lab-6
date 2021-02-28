@@ -64,13 +64,15 @@ TEST(Factory, test10) {
 }
 
 TEST(Factory, test11) {
-    Programmer programmer(15, "Pavel", PROGRAMMER, 40, 1000, new Project(1, 100000));
+    Programmer programmer(15, "Pavel", PROGRAMMER, 40, 1000,
+        new Project(1, 100000));
     programmer.calc()
     EXPECT_EQ(41040, programmer.getPayment());
 }
 
 TEST(Factory, test12) {
-    Programmer programmer(15, "Pavel", PROGRAMMER, 40, 1000, new Project(1, 100000));
+    Programmer programmer(15, "Pavel", PROGRAMMER, 40, 1000,
+        new Project(1, 100000));
     programmer.giveBonus();
     programmer.calc()
     EXPECT_EQ(71040, programmer.getPayment());

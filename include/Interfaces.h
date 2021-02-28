@@ -10,12 +10,12 @@ class WorkBaseTime {
 };
 
 class Heading {
-public:
+ public:
     virtual int calcHeads() = 0;
 };
 
 class ProjectBudget {
-public:
+ public:
     virtual int calcBudgetPart(float part, int budget) = 0;
     virtual int calcProAdditions() = 0;
 };

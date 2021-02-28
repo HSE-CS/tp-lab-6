@@ -5,6 +5,7 @@
 #include "Interfaces.h"
 #include "Employee.h"
 #include <vector>
+#include <string>
 
 class Project {
  public:

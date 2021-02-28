@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Nikolaev Ivan
+﻿  // Copyright 2021 Nikolaev Ivan
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
