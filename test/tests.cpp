@@ -22,7 +22,7 @@ TEST(Test_Employee, test_2) {
 TEST(Test_Employee, test_3) {
     Cleaner* person_test_3 = new Cleaner(78, "Vitalyi Petrovish",
       "Cleaner", 6, 436);
-    EXPECT_EQ("Cleaner", person_test_2->getPosition());
+    EXPECT_EQ("Cleaner", person_test_3->getPosition());
 }
 TEST(Test_Employee, test_4) {
     Cleaner* person_test_4 = new Cleaner(78, "Vitalyi Petrovish",
@@ -45,7 +45,7 @@ TEST(Test_Employee, test_7) {
       "Driver", 6, 432);
     person_test_7->setSalary(35);
     EXPECT_EQ(210, person_test_7->calcBase(person_test_7->getSalary(),
-	     person_test_7->getWorkTime());
+         person_test_7->getWorkTime()));
 }
 TEST(Test_Employee, test_8) {
     Driver* person_test_8 = new Driver(76, "Alexandr Robertovish",
