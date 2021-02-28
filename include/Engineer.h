@@ -12,10 +12,12 @@ class Project;
 class Engineer: public Personal, public ProjectBudget {
  protected:
     Project* linkToProject;
+    unsigned additionalHours;
  public:
     Engineer(unsigned id, const std::string& name);
     void setProject(Project* link);
     unsigned calcBudgetPart() override;
+    unsigned calcBonus() final;
     void calc() override;
 };
 

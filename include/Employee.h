@@ -10,17 +10,17 @@
 #include <typeinfo>
 #include <cstdlib>
 #include <ctime>
+#include <random>
 
 enum Position {
-    Unemployed = 0,
-    Cleaner,
-    Driver,
-    Engineer,
-    Manager,
-    Programmer,
-    SeniorManager,
-    TeamLeader,
-    Tester
+    unemployed = 0,
+    cleaner,
+    driver,
+    manager,
+    programmer,
+    seniorManager,
+    teamLeader,
+    tester
 };
 
 class Employee {
@@ -30,9 +30,9 @@ class Employee {
     Position position;
     unsigned worktime;
     unsigned payment;
+    std::string convertPositionToString();
  public:
-    Employee(unsigned, std::string);
-    ~Employee();
+    Employee(unsigned, const std::string&);
     void setWorkTime(unsigned);
     void setPosition(int);
     virtual void calc() = 0;

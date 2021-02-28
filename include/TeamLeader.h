@@ -10,6 +10,7 @@ class TeamLeader : public Programmer, public Heading {
     TeamLeader(unsigned id, const std::string& name);
     unsigned calcHeads() override;
     void calc() override;
+    void printInfo() override;
 };
 
 #endif  //  INCLUDE_TEAMLEADER_H_

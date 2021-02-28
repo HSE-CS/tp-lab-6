@@ -4,19 +4,33 @@
 
 #include <utility>
 
-Employee::Employee(unsigned id, std::string name) {
+Employee::Employee(unsigned id, const std::string& name) {
     this->id = id;
     this->name = std::move(name);
-    this->position = Unemployed;
+    setPosition(0);
     this->worktime = 0;
     this->payment = 0;
 }
-
-Employee::~Employee() {
-    this->name.clear();
-    this->position = Unemployed;
-    this->worktime = 0;
-    this->payment = 0;
+std::string Employee::convertPositionToString() {
+    switch (this->position) {
+        case 0:
+            return "Unemployed";
+        case 1:
+            return "Cleaner";
+        case 2:
+            return "Driver";
+        case 3:
+            return "Manager";
+        case 4:
+            return "Programmer";
+        case 5:
+            return "Senior Manager";
+        case 6:
+            return "Team Leader";
+        case 7:
+            return "Tester";
+    }
+    return "Unemployed";
 }
 
 void Employee::setPosition(int numOfPosition) {

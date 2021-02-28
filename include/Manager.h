@@ -9,26 +9,29 @@
 
 class Project;
 
-class Manager : public Employee, public ProjectBudget, public Heading {
+class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:
     Project* linkToProject;
  public:
-    Manager(unsigned id, const std::string& name);
+    ProjectManager(unsigned id, const std::string& name);
     unsigned calcHeads() override;
     void calc() override;
     unsigned calcBudgetPart() override;
     unsigned calcProAdditions() override;
     void setProject(Project* link);
+    void printInfo() override;
 };
 
-class SeniorManager : public Manager {
+class SeniorManager : public ProjectManager {
  protected:
     std::vector <Project*> projects;
  public:
     SeniorManager(unsigned id, std::string name);
     ~SeniorManager();
+    void setProject(Project*);
     unsigned calcHeads() override;
     void calc() override;
+    void printInfo() override;
 };
 
 #endif  //  INCLUDE_MANAGER_H_

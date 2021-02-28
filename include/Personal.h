@@ -21,14 +21,17 @@ class Driver : public Personal{
  private:
     int additionalHours;
  public:
-    Driver(unsigned id, std::string name);
+    Driver(unsigned id, const std::string& name);
     void calc() override;
     unsigned calcBonus() override;
+    void printInfo() override;
 };
 
 class Cleaner: public Personal {
  public:
-    Cleaner(unsigned id, std::string name);
+    Cleaner(unsigned id, const std::string& name);
+    void printInfo() override;
+    unsigned calcBonus() override;
 };
 
 

@@ -10,6 +10,7 @@ class Programmer : public Engineer {
     Programmer(unsigned, const std::string&);
     unsigned calcProAdditions() override;
     void calc() override;
+    void printInfo() override;
 };
 
 #endif  //  INCLUDE_PROGRAMMER_H_

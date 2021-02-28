@@ -10,6 +10,7 @@ class Tester : public Engineer {
     Tester(unsigned, const std::string&);
     unsigned calcProAdditions() override;
     void calc() override;
+    void printInfo() override;
 };
 
 #endif  //  INCLUDE_TESTER_H_
