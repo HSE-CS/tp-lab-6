@@ -17,7 +17,7 @@ void StaffFactory::makeStaff() {
     std::getline(f, pos, ',');
     std::getline(f, salary, ',');
 
-	if (pos == "projectManager") {
+    if (pos == "projectManager") {
       std::getline(f, project, ',');
       Project pr;
       pr.id = project;
@@ -37,7 +37,7 @@ void StaffFactory::makeStaff() {
       employees.push_back(tmp);
     }
 
-	if (pos == "engineer") {
+    if (pos == "engineer") {
       std::getline(f, project, ',');
       Project proj;
       proj.id = project;

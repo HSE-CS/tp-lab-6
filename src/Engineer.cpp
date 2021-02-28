@@ -18,7 +18,8 @@ int Engineer::calcBudgetPart(float Part, int Budget) {
 
 void Engineer::calc() {
   setPayment(calcBase(getSalary(), getWorkTime()) +
-             calcBudgetPart(0.1, getProject()->budget) + calcProAdditions(0,0));
+             calcBudgetPart(0.1, getProject()->budget) +
+             calcProAdditions(0, 0));
 }
 
 void Engineer::printInfo() {
@@ -45,12 +46,12 @@ void Tester::setErrors(int error) {
 }
 
 int Tester::getErrors() {
-	return this->errorsCount;
+  return this->errorsCount;
 }
 
 int Tester::calcProAdditions(int addCount = 0, int addPrice = 50) {
   int proAdd = getErrors() * addPrice;
-	return proAdd;
+  return proAdd;
 }
 
 void Tester::calc() {
@@ -69,16 +70,16 @@ void Tester::printInfo() {
 }
 
 void TeamLeader::addSub(int count) {
-	this->bossOf = this->bossOf + count;
+  this->bossOf = this->bossOf + count;
 }
 
 int TeamLeader::getSub() {
-	return this->bossOf;
+  return this->bossOf;
 }
 
 int TeamLeader::calcHeads(int salaryForSub = 5000) {
   int salaryForHeading = getSub() * salaryForSub;
-	return salaryForHeading;
+  return salaryForHeading;
 }
 
 int TeamLeader::calcProAdditions(int addCount = 0, int addPrice = 0) {

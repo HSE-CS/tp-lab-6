@@ -3,7 +3,7 @@
 #include "Personal.h"
 
 int Personal::getSalary() {
-	return this->salary;
+  return this->salary;
 }
 
 int Personal::calcBase(int salary, int worktime) {
@@ -14,7 +14,7 @@ int Personal::calcBase(int salary, int worktime) {
 int Personal::calcBonus(int bonusCount = 0, int bonusPrice = 0) {
   int bonusSalary = bonusCount * bonusPrice;
   return bonusSalary;
-};
+}
 
 void Personal::printInfo() {
   std::cout << "Name: " << getName() << " ID: " << getID()
@@ -23,15 +23,16 @@ void Personal::printInfo() {
 }
 
 void Cleaner::calc() {
-  setPayment(this->passivesalary + calcBase(getSalary(), getWorkTime()) + calcBonus(0, 0));
+  setPayment(this->passivesalary + calcBase(getSalary(), getWorkTime()) +
+             calcBonus(0, 0));
 }
 
 int Driver::getBonus() {
-	return this->bonuses;
+  return this->bonuses;
 }
 
 void Driver::addBonus(int count) {
-	this->bonuses += count;
+  this->bonuses += count;
 }
 
 int Driver::calcBonus(int bonusCount = 0, int bonusPrice = 1000) {

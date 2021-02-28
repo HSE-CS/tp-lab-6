@@ -3,11 +3,11 @@
 #include "Manager.h"
 
 int ProjectManager::getSub() {
-	return this->bossOf;
+  return this->bossOf;
 }
 
 Project* ProjectManager::getProject() {
-	return this->projects;
+  return this->projects;
 }
 
 void ProjectManager::addSub(int count) {

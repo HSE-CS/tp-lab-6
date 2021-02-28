@@ -17,7 +17,7 @@ class Employee {
   int worktime = 0;
   int payment = 0;
 
-  protected:
+ protected:
   post position;
 
  public:

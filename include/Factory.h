@@ -3,12 +3,13 @@
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
 
-#include "Engineer.h"
-#include "Manager.h"
-#include "Personal.h"
 #include <fstream>
 #include <sstream>
 #include <time.h>
+#include <vector>
+#include "Engineer.h"
+#include "Manager.h"
+#include "Personal.h"
 
 class StaffFactory {
  private:

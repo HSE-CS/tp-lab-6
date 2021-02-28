@@ -3,6 +3,8 @@
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 
+#include <vector>
+#include <string>
 #include "Engineer.h"
 #include "Interfaces.h"
 
@@ -10,7 +12,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
  private:
   Project* projects;
   int bossOf = 0;
-  int passivesalary = 75000; 
+  int passivesalary = 75000;
 
  public:
   ProjectManager(int id, std::string name, Project* project)

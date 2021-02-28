@@ -12,7 +12,7 @@ void Employee::setWorkTime(int worktime) {
 }
 
 void Employee::setPayment(int payment) {
-  this->payment = payment; 
+  this->payment = payment;
 }
 
 int Employee::getID() {
