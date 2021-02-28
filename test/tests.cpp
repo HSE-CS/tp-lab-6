@@ -36,7 +36,7 @@ TEST(Factory, test5) {
 
 TEST(Factory, test6) {
     Driver driver(10, "Alex", DRIVER, 50, 200);
-    EXPECT_EQ(50, driver.getWorktime);
+    EXPECT_EQ(50, driver.getWorktime());
 }
 
 TEST(Factory, test7) {
