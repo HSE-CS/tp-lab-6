@@ -18,6 +18,8 @@ class Engineer: public ProjectBudget, public Personal {
   void setPro(int pro);
   void setPercent(int percent);
   void printInfo();
+  void setProject(Project project);
+  unsigned int calcProAdditions();
 };
 
 class Tester: public Engineer {

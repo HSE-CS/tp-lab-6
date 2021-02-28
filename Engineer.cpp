@@ -14,8 +14,16 @@ void Engineer::setPro(int pro) {
   this->pro = pro;
 }
 
+unsigned int Engineer::calcProAdditions() {
+  return pro;
+}
+
 void Engineer::setPercent(int percent) {
   this->percent = percent;
+}
+
+void Engineer::setProject(Project project) {
+  this->project = project;
 }
 
 void Engineer::printInfo() {

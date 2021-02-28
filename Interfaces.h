@@ -22,8 +22,8 @@ class Heading {
 };
 
 struct Project {
-  unsigned id;
-  unsigned budget;
+  unsigned int id;
+  unsigned int budget;
 };
 
 #endif  // INCLUDE_INTERFACES_H_

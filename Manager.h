@@ -17,6 +17,7 @@ class ProjectManager: public Heading, public ProjectBudget, public Employee {
   void calc();
   void setPercent(int percent);
   void setNum(int numOfHeads);
+  void setProjects(std::vector <Project> projects);
   void printInfo();
   float calcBudgetPart(float part, int budget);
   unsigned int calcProAdditions();

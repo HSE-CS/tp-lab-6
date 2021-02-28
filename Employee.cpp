@@ -11,3 +11,15 @@ int Employee::getPayment() {
   return payment;
 }
 
+void Employee::setId(int id) {
+  this->id = id;
+}
+
+void Employee::setName(std::string name) {
+  this->name = name;
+}
+
+void Employee::setPosition(Position position) {
+  this->position = position;
+}
+

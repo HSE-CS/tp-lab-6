@@ -5,8 +5,10 @@
 #include <iostream>
 #include <string>
 
-enum Position {ENGINEER, CLEANER, DRIVR, PROGRAMMER, TESTER, TEAMLEADER,
+enum Position {ENGINEER, CLEANER, DRIVER, PROGRAMMER, TESTER, TEAMLEADER,
 PROJECTMANAGER, SENIORMANAGER};
+
+class StaffFactory;
 
 class Employee {
  protected:
@@ -21,7 +23,10 @@ class Employee {
   virtual void calc() = 0;
   virtual void printInfo() = 0;
   int getPayment();
-  // ~Employee();
+  void setId(int id);
+  void setName(std::string name);
+  void setPosition(Position position);
+  friend StaffFactory;
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_

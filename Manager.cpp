@@ -22,6 +22,10 @@ unsigned int ProjectManager::calcProAdditions() {
   return 0;
 }
 
+void ProjectManager::setProjects(std::vector <Project> projects) {
+  this->projects = projects;
+}
+
 void ProjectManager::printInfo() {
   std::cout << "\t" << "Id: " << id << '\n';
   std::cout << "\t" << "Name: " << name << '\n';
