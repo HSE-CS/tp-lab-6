@@ -20,6 +20,14 @@ Cleaner cleaner1(0,
 EXPECT_EQ(150, cleaner1.getSalary());
 }
 
+TEST(staffTest, test3) {
+Cleaner cleaner1(0,
+                 "Алексеев Ярослав Сергеевич",
+                 150);
+cleaner1.setWorkTime(22);
+EXPECT_EQ(22, cleaner1.getWorkTime());
+}
+
 TEST(staffTest, test4) {
 Cleaner cleaner1(0,
                  "Алексеев Ярослав Сергеевич",
@@ -91,6 +99,21 @@ Tester tester1(1,
 ProjectManager projectManager1(2,
                                "Леонов Давид Тимурович",
                                projects);
+EXPECT_EQ(3, projects[0]->getNumOfWorkers());
+}
+
+TEST(staffTest, test12) {
+std::vector<Project*> projects;
+projects.push_back(new Project(1,
+30000));
+Programmer programmer1(0,
+                       "Алексеев Ярослав Сергеевич",
+                       200,
+                       projects[0]);
+ProjectManager projectManager1(1,
+                               "Леонов Давид Тимурович",
+                               projects);
+projectManager1.calc();
 EXPECT_EQ(3, projects[0]->getNumOfWorkers());
 }
 

@@ -9,7 +9,8 @@ void Engineer::setProject(Project *project) {
 }
 void Engineer::calc() {
   double payment = calcBudgetPart(
-      (double)1 / (this->project->getNumOfWorkers()), this->project->getBudget())
+      1.0 / (this->project->getNumOfWorkers()),
+      this->project->getBudget())
       + (this->getSalary() * this->getWorkTime())
       + this->getAddPayment();
   this->setPayment(payment);
