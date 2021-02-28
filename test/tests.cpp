@@ -29,7 +29,7 @@ TEST(DriverTest, Test3) {
     int time = emp->getWorkTime();
     emp->calc();
     int result = emp->getPayment();
-    EXPECT_GE(time * 100, result);
+    EXPECT_LE(time * 100, result);
 }
 
 TEST(CleanerTest, Test4) {
@@ -49,7 +49,7 @@ TEST(ProgrammerTest, Test5) {
     int time = emp->getWorkTime();
     emp->calc();
     int result = emp->getPayment();
-    EXPECT_GE(0.1 * 1000 + time * 10, result);
+    EXPECT_LE(0.1 * 1000 + time * 10, result);
 }
 
 
@@ -61,7 +61,7 @@ TEST(TesterTest, Test6) {
     int time = emp->getWorkTime();
     emp->calc();
     int result = emp->getPayment();
-    EXPECT_GE((int)(0.2 * 1000 + time * 10), result);
+    EXPECT_LE((int)(0.2 * 1000 + time * 10), result);
 }
 
 TEST(TeamLeaderTest, Test7) {
