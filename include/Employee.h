@@ -19,7 +19,10 @@ Driver,
 };
 
 
-
+struct Project {
+int _id;
+int _budget;
+};
 
 
 class Employee {
