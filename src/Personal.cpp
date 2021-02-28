@@ -19,6 +19,12 @@ unsigned int Driver::calcBonus() {
 
 void Driver::calc() { payment = calcBase() + calcBonus(); }
 
+unsigned int Cleaner::calcBonus() {
+  if (worktime > 20) {
+    return 5000;
+  }
+}
+
 void Cleaner::calc() { payment = calcBase() + calcBonus(); }
 
 Driver::Driver(int _id, std::string _name, int _salary) {
@@ -37,10 +43,4 @@ Cleaner::Cleaner(int _id, std::string _name, int _salary) {
   worktime = 0;
   payment = 0;
   position = CLEANER;
-}
-
-unsigned int Cleaner::calcBonus() {
-  if (worktime > 20) {
-    return 5000;
-  }
 }

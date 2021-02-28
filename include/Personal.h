@@ -24,7 +24,7 @@ class Personal : public Employee, public WorkBaseTime {
 class Driver : public Personal {
  public:
   Driver(int _id, std::string _name, int _salary);
-  unsigned int calcBonus();
+  unsigned int calcBonus() override;
   void calc();
 };
 
@@ -32,7 +32,7 @@ class Cleaner : public Personal {
  public:
   Cleaner(int _id, std::string _name, int _salary);
   void calc();
-  unsigned int calcBonus();
+  unsigned int calcBonus() override;
 };
 
 #endif  // INCLUDE_PERSONAL_H_

@@ -2,7 +2,7 @@
 
 #include "Employee.h"
 
-void Employee::setWorktime(unsigned int _worktime) { worktime = _worktime; }
+void Employee::setWorktime(int _worktime) { worktime = _worktime; }
 
 int Employee::getId() const { return id; }
 

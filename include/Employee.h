@@ -24,7 +24,7 @@ class Employee {
   unsigned int payment;
 
  public:
-  void setWorktime(unsigned int);
+  void setWorktime(int);
   virtual void printInfo() = 0;
   virtual void calc() = 0;
   int getId() const;
