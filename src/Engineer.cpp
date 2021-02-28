@@ -102,5 +102,5 @@ int TeamLeader::calc() {
 }
 
 int TeamLeader::calcHeads() {
-  return getProject()->getCount() * payment;
+  return getProject()->getCount() * payment * 0.9;
 }

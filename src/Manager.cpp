@@ -50,7 +50,7 @@ SeniorManager::SeniorManager(int id, std::string name, std::string position,
 
 int SeniorManager::calc() {
   int res = 0;
-  for (auto project : projects) {
+  for (auto project : projects {
     res += calcHeads(project->getCount()) +
            calcBudgetPart(0.25, project->getBudget());
   }
