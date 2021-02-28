@@ -84,7 +84,7 @@ double Tester::calcProAdditions() {
   unsigned int* seed = 0;
   srand(time(n));
 
-  return rand() % 300 * 100.0 + 10000.0;
+  return rand_r(seed) % 300 * 100.0 + 10000.0;
 }
 
 void Tester::printInfo() {
