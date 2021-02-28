@@ -5,8 +5,8 @@
 
 
 Engineer::Engineer(int id, std::string name, std::string position,
- double payment, Project* newProject) : 
- Personal (id, name, position, payment) {
+ double payment, Project* newProject) :
+  Personal(id, name, position, payment) {
   project = newProject;
 }
 
@@ -23,12 +23,12 @@ double Engineer::calcBonus() {
 }
 
 Programmer::Programmer(int id, std::string name, std::string position,
- double payment, Project* newProject) : 
- Engineer (id, name, position, payment, newProject) {
+ double payment, Project* newProject) :
+  Engineer(id, name, position, payment, newProject) {
 }
 
 double Programmer::calcProAdditions() {
-  return (getProject()->getBudget() / getWorkTime()) * 10; 
+  return (getProject()->getBudget() / getWorkTime()) * 10;
 }
 
 double Programmer::calc() {
@@ -38,18 +38,18 @@ double Programmer::calc() {
 void Programmer::printInfo() {
   std::string info;
   info = std::to_string(getId()) + " " +
-   getName() + "\nPosition: " + getPosition() +
-   "\nPayment: " + std::to_string(getPayment()) +
-   "\nNext salary: " + std::to_string(calc()) +
-   "\nCurrent pro additions: " + std::to_string(calcProAdditions()) +
-   " (current work time: " + std::to_string(getWorkTime()) + ")" +
-   "\nCurrent project: " + std::to_string(getProject()->getId());
+    getName() + "\nPosition: " + getPosition() +
+    "\nPayment: " + std::to_string(getPayment()) +
+    "\nNext salary: " + std::to_string(calc()) +
+    "\nCurrent pro additions: " + std::to_string(calcProAdditions()) +
+    " (current work time: " + std::to_string(getWorkTime()) + ")" +
+    "\nCurrent project: " + std::to_string(getProject()->getId());
   std::cout << info << std::endl;
 }
 
 TeamLeader::TeamLeader(int id, std::string name, std::string position,
- double payment, Project* newProject) : 
- Programmer (id, name, position, payment, newProject) {
+ double payment, Project* newProject) :
+  Programmer(id, name, position, payment, newProject) {
 }
 
 double TeamLeader::calcHeads() {  // excludes teamlead and manager
@@ -63,20 +63,20 @@ double TeamLeader::calc() {
 void TeamLeader::printInfo() {
   std::string info;
   info = std::to_string(getId()) + " " +
-   getName() + "\nPosition: " + getPosition() +
-   "\nPayment: " + std::to_string(getPayment()) +
-   "\nNext salary: " + std::to_string(calc()) +
-   "\nCurrent pro additions: " + std::to_string(calcProAdditions()) +
-   " (current work time: " + std::to_string(getWorkTime()) + ")" +
-   "\nCurrent project: " + std::to_string(getProject()->getId()) +
-   "\nNumber of subordinates: " + 
-   std::to_string(getProject()->getStaffNum() - 2);
+    getName() + "\nPosition: " + getPosition() +
+    "\nPayment: " + std::to_string(getPayment()) +
+    "\nNext salary: " + std::to_string(calc()) +
+    "\nCurrent pro additions: " + std::to_string(calcProAdditions()) +
+    " (current work time: " + std::to_string(getWorkTime()) + ")" +
+    "\nCurrent project: " + std::to_string(getProject()->getId()) +
+    "\nNumber of subordinates: " +
+    std::to_string(getProject()->getStaffNum() - 2);
   std::cout << info << std::endl;
 }
 
 Tester::Tester(int id, std::string name, std::string position,
- double payment, Project* newProject) : 
- Engineer (id, name, position, payment, newProject) {
+ double payment, Project* newProject) :
+  Engineer(id, name, position, payment, newProject) {
 }
 
 double Tester::calcProAdditions() {
@@ -90,14 +90,14 @@ double Tester::calcProAdditions() {
 void Tester::printInfo() {
     std::string info;
   info = std::to_string(getId()) + " " +
-   getName() + "\nPosition: " + getPosition() +
-   "\nPayment: " + std::to_string(getPayment()) +
-   "\nNext salary: " + std::to_string(calc()) +
-   "\nCurrent pro additions: " + std::to_string(calcProAdditions()) +
-   " (current work time: " + std::to_string(getWorkTime()) + ")" +
-   "\nCurrent project: " + std::to_string(getProject()->getId()) +
-   "\nMistakes fixed: " + 
-   std::to_string((int)((calcProAdditions() - 10000.0) / 100.0));
+    getName() + "\nPosition: " + getPosition() +
+    "\nPayment: " + std::to_string(getPayment()) +
+    "\nNext salary: " + std::to_string(calc()) +
+    "\nCurrent pro additions: " + std::to_string(calcProAdditions()) +
+    " (current work time: " + std::to_string(getWorkTime()) + ")" +
+    "\nCurrent project: " + std::to_string(getProject()->getId()) +
+    "\nMistakes fixed: " +
+    std::to_string(static_cast<int>((calcProAdditions() - 10000.0) / 100.0));
   std::cout << info << std::endl;
 }
 
