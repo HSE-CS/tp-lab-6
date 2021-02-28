@@ -1,5 +1,6 @@
-// Copyright 2020 GHA Test Team
+//  Copyright 2021 GHA created by Klykov Anton
 
+#include <gtest/gtest.h>
 #include "Driver.h"
 #include "Cleaner.h"
 #include "Engineer.h"
@@ -8,8 +9,6 @@
 #include "TeamLeader.h"
 #include "Manager.h"
 #include "Factory.h"
-#include <gtest/gtest.h>
-#include <string>
 #include <vector>
 
 TEST(DriverTest, TestPayment) {
@@ -23,7 +22,8 @@ TEST(DriverTest, TestPayment) {
 }
 
 TEST(CleanerTest, TestPayment) {
-  Cleaner cleaner(1, "Тарантулова Татомара Татомаровна", "Cleaner", 1000);
+  Cleaner cleaner(1, "Тарантулова Татомара Татомаровна",
+                  "Cleaner", 1000);
   cleaner.setWorkTime();
   int amountWorkTime = cleaner.getWorkTime();
   int payment = 1000 * amountWorkTime;
@@ -32,51 +32,66 @@ TEST(CleanerTest, TestPayment) {
 }
 TEST(EngineerTest, TestPayment) {
   Project project(0, 50000);
-  Engineer engineer(2, "Маховой Атаман Атаманович", "Engineer", 2000, &project, 0.25);
+  Engineer engineer(2, "Маховой Атаман Атаманович",
+                    "Engineer", 2000,
+                     &project, 0.25);
   engineer.setWorkTime();
   int amountWorkTime = engineer.getWorkTime();
   engineer.calc();
-  int payment = amountWorkTime * 2000 + static_cast<int>(0.25 * project.p_budget);
+  int payment = amountWorkTime * 2000 +
+                static_cast<int>(0.25 * project.p_budget);
   EXPECT_EQ(payment, engineer.getPayment());
 }
 TEST(ProgrammerTest, TestPayment) {
   Project project(1, 40000);
-  Programmer programmer(3, "Чумачей Атаман Татаранович", "Programmer", 2500, &project, 0.25);
+  Programmer programmer(3, "Чумачей Атаман Татаранович",
+                        "Programmer", 2500, &project, 0.25);
   programmer.setWorkTime();
   int amountWorkTime = programmer.getWorkTime();
   programmer.calc();
   int AdditionalPayment = 7500;
-  int PossiblePayment = 2500 * amountWorkTime + 
-                        static_cast<int>(0.25 * project.p_budget) + AdditionalPayment;
-  EXPECT_LE(programmer.getPayment(), PossiblePayment); // Реальный заработок vs Возможный заработок
+  int PossiblePayment = 2500 * amountWorkTime +
+                        static_cast<int>(0.25 * project.p_budget) +
+                        AdditionalPayment;
+  // Реальный заработок vs Возможный заработок
+  EXPECT_LE(programmer.getPayment(), PossiblePayment); 
 }
 TEST(TesterTest, TestPyment) {
   Project project(2, 30000);
-  Tester tester(4, "Чуйка Атаман Чайконович", "Tester", 2100, &project, 0.15);
+  Tester tester(4, "Чуйка Атаман Чайконович",
+                "Tester", 2100, &project, 0.15);
   tester.setWorkTime();
   int amountWorkTime = tester.getWorkTime();
   tester.calc();
   int AdditionalPayment = 5500;
-  int PossiblePayment = 2100 * amountWorkTime + 
-                        static_cast<int>(0.15 * project.p_budget) + AdditionalPayment;
-  EXPECT_LE(tester.getPayment(), PossiblePayment); // Реальный заработок vs Возможный заработок
+  int PossiblePayment = 2100 * amountWorkTime +
+                        static_cast<int>(0.15 * project.p_budget) +
+                        AdditionalPayment;
+  // Реальный заработок vs Возможный заработок
+  EXPECT_LE(tester.getPayment(), PossiblePayment);
 }
 
 TEST(TeamLeaderTest, TestPayment) {
   Project project(3, 50000);
-  TeamLeader team_leader(5, "Чуйка Жук Жукович", "TeamLeader", 3000, &project, 0.35);
+  TeamLeader team_leader(5, "Чуйка Жук Жукович", "TeamLeader",
+                         3000, &project, 0.35);
   team_leader.setWorkTime();
   int amountWorkTime = team_leader.getWorkTime();
   team_leader.calc();
   int HeadingPayment = 8000;
-  int PossiblePayment = 3000 * amountWorkTime + static_cast<int>(0.35 * project.p_budget) + HeadingPayment;
+  int PossiblePayment = 3000 * amountWorkTime + 
+                        static_cast<int>(0.35 * project.p_budget) +
+                        HeadingPayment;
   EXPECT_EQ(team_leader.getPayment(), PossiblePayment);
 }
 TEST(ProjectManagerTest, PaymentTest) {
   Project project(4, 100000);
-  ProjectManager project_manager(6, "Жукавинск Петр Алексеевич", "ProjectManager", &project, 0.5);
+  ProjectManager project_manager(6, "Жукавинск Петр Алексеевич", 
+                                 "ProjectManager", &project, 0.5);
   project_manager.calc();
-  int payment = project_manager.calcBudgetPart(0.5, project.p_budget) + project_manager.calcHeads();
+  int payment = project_manager.calcBudgetPart(0.5,
+                project.p_budget) +
+                project_manager.calcHeads();
   EXPECT_EQ(payment, project_manager.getPayment());
 }
 
@@ -88,11 +103,13 @@ TEST(SenoirManagerTest, PaymentTest) {
     temp = nullptr;
   }
   SeniorManager senior_manager(5, "Жувочка Евгения Фавевна", 
-                               "SeniorManager", projects[1], 0.3, projects);
+                               "SeniorManager", projects[1],
+                                0.3, projects);
   senior_manager.calc();
   int temp_payment{0};
   for (int i = 0; i < 5; i++) {
-    temp_payment += senior_manager.calcBudgetPart(0.3, projects[i]->p_budget);
+    temp_payment += senior_manager.calcBudgetPart(0.3,
+                    projects[i]->p_budget);
   }
   int payment = temp_payment + senior_manager.calcHeads();
   EXPECT_EQ(payment, senior_manager.getPayment());
@@ -144,4 +161,3 @@ TEST(AllTest, test7) {
   std::string position = "ProjectManager";
   EXPECT_EQ(position, staff[31]->getPosition());
 }
-
