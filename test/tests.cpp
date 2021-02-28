@@ -43,7 +43,7 @@ TEST(StaffDemoTest, test4) {
     std::string position = "Driver";
     unsigned int salary = 25;
     Driver employee(id, name, position, salary);
-    employee.setWorktime(40);
+    employee.setWorkTime(40);
     EXPECT_EQ(40, employee.getWorktime());
 }
 
@@ -53,7 +53,7 @@ TEST(StaffDemoTest, test5) {
     POSITION position = CLEANER;
     unsigned int salary = 8;
     Cleaner employee(id, name, position, salary);
-    employee.setWorktime(50);
+    employee.setWorkTime(50);
     employee.calc();
     EXPECT_EQ(400, employee.getPayment());
 }
@@ -64,7 +64,7 @@ TEST(StaffDemoTest, test6) {
     std::string position = "Driver";
     unsigned int salary = 25;
     Driver employee(id, name, position, salary);
-    employee.setWorktime(10);
+    employee.setWorkTime(10);
     EXPECT_EQ(350, employee.getWorktime());
 }
 
