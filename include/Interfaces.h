@@ -4,19 +4,19 @@
 
 
 class WorkBaseTime {
-  public:
+ public:
     virtual int CalcBase(int, int) const = 0;
     virtual int CalcBonus() const = 0;
 };
 
 class ProjectBudjet {
-  public:
+ public:
     virtual int CalcBudgetPart() const = 0;
     virtual int CalcProAdditions() const = 0;
 };
 
 class Heading {
-  public:
+ public:
     virtual int CalcHeads() const = 0;
 };
 

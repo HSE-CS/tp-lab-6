@@ -10,11 +10,11 @@
 
 
 class ProjectManager : public Employee, public Heading, public ProjectBudjet {
-  protected:
+ protected:
     Project* project;
     double part;
-  public:
-    ProjectManager() {};
+ public:
+    ProjectManager() {}
     ProjectManager(int, std::string, Position, Project*, double);
     void Calc();
     int CalcHeads() const;
@@ -27,9 +27,9 @@ class ProjectManager : public Employee, public Heading, public ProjectBudjet {
 };
 
 class SeniorManager : public ProjectManager {
-  protected:
+ protected:
     std::vector<Project*> projects;
-  public:
+ public:
     SeniorManager(int, std::string, Position, std::vector<Project*>);
     void Calc();
     std::string GetPosition() const;

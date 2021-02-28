@@ -10,11 +10,11 @@
 int main() {
     StaffFactory reader("Employees.txt", "Projects.txt");
     auto emp_vec = reader.ReadEmployees();
-    for(auto employee : emp_vec) {
+    for (auto employee : emp_vec) {
         employee->SetWorkTime(8);
     }
     int i = 1;
-    for(auto employee : emp_vec) {
+    for (auto employee : emp_vec) {
         std::cout << "Worker #" << i++ << '\n';
         employee->Calc();
         employee->PrintInfo();

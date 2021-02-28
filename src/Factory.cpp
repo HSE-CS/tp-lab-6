@@ -24,13 +24,13 @@ std::vector<Employee*> StaffFactory::ReadEmployees() {
     double part = 0;
     std::string name, surname, position;
     while (emp_input >> id) {
-        emp_input >> surname >> name >> 
+        emp_input >> surname >> name >>
         position >> salary >> project_id >> part;
         if (position == "Programmer") {
             for (auto p : projects) {
                 if (p->id == project_id) {
-                    Programmer* employee = new Programmer(id, surname + " " + name,
-                     Position::PROGRAMMER, salary, p, part);
+                    Programmer* employee = new Programmer(id, surname + " " +
+                     name, Position::PROGRAMMER, salary, p, part);
                     emp.push_back(employee);
                 }
             }
@@ -56,8 +56,8 @@ std::vector<Employee*> StaffFactory::ReadEmployees() {
         if (position == "TeamLeader") {
             for (auto p : projects) {
                 if (p->id == project_id) {
-                    TeamLeader* employee = new TeamLeader(id, surname + " " + name,
-                     Position::TEAMLEADER, salary, p, part);
+                    TeamLeader* employee = new TeamLeader(id, surname + " " +
+                     name, Position::TEAMLEADER, salary, p, part);
                     emp.push_back(employee);
                 }
             }
@@ -65,8 +65,8 @@ std::vector<Employee*> StaffFactory::ReadEmployees() {
         if (position == "ProjectManager") {
             for (auto p : projects) {
                 if (p->id == project_id) {
-                    ProjectManager* employee = new ProjectManager(id, surname + " " + name,
-                     Position::PROJECTMANAGER, p, part);
+                    ProjectManager* employee = new ProjectManager(id,
+                     surname + " " + name, Position::PROJECTMANAGER, p, part);
                     emp.push_back(employee);
                 }
             }
@@ -78,8 +78,8 @@ std::vector<Employee*> StaffFactory::ReadEmployees() {
                     senior_projects.push_back(p);
                 }
             }
-            SeniorManager* employee = new SeniorManager(id, surname + " " + name,
-             Position::SENIORMANAGER, senior_projects);
+            SeniorManager* employee = new SeniorManager(id, surname + " " +
+             name, Position::SENIORMANAGER, senior_projects);
             emp.push_back(employee);
         }
         if (position == "Driver") {

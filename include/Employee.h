@@ -8,11 +8,11 @@
 #include <fstream>
 #include <iostream>
 
-enum Position {PROGRAMMER, TESTER, TEAMLEADER, SENIORMANAGER, ENGINEER, PROJECTMANAGER,
- DRIVER, CLEANER};
+enum Position {PROGRAMMER, TESTER, TEAMLEADER,
+ SENIORMANAGER, ENGINEER, PROJECTMANAGER, DRIVER, CLEANER};
 
 class Employee {
-  public:
+ public:
     void SetWorkTime(int);
     int GetId() const;
     int GetPayment() const;
@@ -21,12 +21,13 @@ class Employee {
     virtual void Calc() = 0;
     virtual void PrintInfo() const = 0;
     virtual std::string GetPosition() const = 0;
-  protected:
+ protected:
     int id;
     std::string name;
     Position position;
     int worktime;
     int payment;
- };
+};
+
 
 #endif  // INCLUDE_EMPLOYEE_H_

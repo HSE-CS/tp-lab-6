@@ -3,7 +3,7 @@
 #define INCLUDE_PROJECT_H_
 
 class Project {
-  public:
+ public:
     Project(int, int, int);
     int GetBudget() const;
     int id;

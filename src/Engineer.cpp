@@ -2,7 +2,8 @@
 #include "Engineer.h"
 #include <string>
 
-Engineer::Engineer(int _id, std::string _name, Position _position, int _salary, Project* _project, double _part) {
+Engineer::Engineer(int _id, std::string _name, Position _position,
+ int _salary, Project* _project, double _part) {
     id = _id;
     name = _name;
     position = _position;
@@ -13,8 +14,8 @@ Engineer::Engineer(int _id, std::string _name, Position _position, int _salary, 
     payment = 0;
 }
 
-Programmer::Programmer(int _id, std::string _name, Position _position, int _salary,
- Project* _project, double _part) {
+Programmer::Programmer(int _id, std::string _name, Position _position,
+ int _salary, Project* _project, double _part) {
     id = _id;
     name = _name;
     position = _position;
@@ -37,8 +38,8 @@ Tester::Tester(int _id, std::string _name, Position _position, int _salary,
     payment = 0;
 }
 
-TeamLeader::TeamLeader(int _id, std::string _name, Position _position, int _salary,
- Project* _project, double _part) {
+TeamLeader::TeamLeader(int _id, std::string _name, Position _position,
+ int _salary, Project* _project, double _part) {
     id = _id;
     name = _name;
     position = _position;

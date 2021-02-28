@@ -7,16 +7,16 @@
 #include <string>
 
 class Personal: public Employee, public WorkBaseTime {
-  public:
+ public:
     void PrintInfo() const;
     int CalcBase(int, int) const;
     int CalcBonus() const;
-  protected:
+ protected:
     int salary;
 };
 
 class Driver : public Personal {
-  public:
+ public:
     Driver(int, std::string, Position, int);
     std::string GetPosition() const;
     void Calc();
@@ -24,7 +24,7 @@ class Driver : public Personal {
 };
 
 class Cleaner : public Personal {
-  public:
+ public:
     Cleaner(int, std::string, Position, int);
     std::string GetPosition() const;
     void Calc();

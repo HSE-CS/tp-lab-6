@@ -9,11 +9,11 @@
 
 
 class Engineer : public ProjectBudjet, public Personal {
-  protected:
+ protected:
     double part;
     Project* project;
-  public:
-    Engineer() {};
+ public:
+    Engineer() {}
     Engineer(int, std::string, Position, int, Project*, double);
     int CalcBudgetPart() const;
     void Calc();
@@ -22,22 +22,22 @@ class Engineer : public ProjectBudjet, public Personal {
 };
 
 class Programmer: public Engineer {
-  public:
-    Programmer() {};
+ public:
+    Programmer() {}
     Programmer(int, std::string, Position, int, Project*, double);
     std::string GetPosition() const;
     void Calc();
 };
 
 class Tester: public Engineer {
-  public:
+ public:
     Tester(int, std::string, Position, int, Project*, double);
     std::string GetPosition() const;
     void Calc();
 };
 
 class TeamLeader : public Programmer, public Heading {
-  public:
+ public:
     TeamLeader(int, std::string, Position, int, Project*, double);
     std::string GetPosition() const;
     int CalcHeads() const;

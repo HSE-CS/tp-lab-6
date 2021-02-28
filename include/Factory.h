@@ -9,10 +9,10 @@
 
 
 class StaffFactory {
-  private:
+ private:
     std::string emp_filename;
     std::string proj_filename;
-  public:
+ public:
     StaffFactory(std::string, std::string);
     std::vector<Employee*> ReadEmployees();
 };
