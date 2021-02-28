@@ -49,12 +49,14 @@ TEST(StaffTest, test6) {
 TEST(StaffTest, test7) {
   Cleaner cleaner(0, "Proverka", 200);
   cleaner.setWorktime(20);
+  cleaner.calc();
   EXPECT_EQ(4000, cleaner.getPayment());
 }
 
 TEST(StaffTest, test8) {
   Cleaner cleaner(0, "Proverka", 200);
   cleaner.setWorktime(30);
+  cleaner.calc();
   EXPECT_EQ(11000, cleaner.getPayment());
 }
 
