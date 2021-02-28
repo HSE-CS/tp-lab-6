@@ -73,7 +73,7 @@ TEST(TestProgrammer, test11) {
   Programmer programmer3(1, "name", 1500, &project2);
   programmer3.setWorkTime(168);
   programmer3.calc();
-  EXPECT_EQ(programmer3.getPayment(), 267100);
+  EXPECT_EQ(programmer3.getPayment(), 252501);
 }
 
 TEST(TestTeamLeader, test12) {
@@ -97,5 +97,5 @@ TEST(TestTeamLeader, test14) {
 TEST(TestTeamLeader, test15) {
   Project project6;
   TeamLeader teamLeader3(1, "name", 150, &project6);
-  EXPECT_EQ(teamLeader3.getPayment(), 26740);
+  EXPECT_EQ(teamLeader3.getPayment(), 0);
 }
