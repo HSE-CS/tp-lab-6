@@ -17,7 +17,7 @@ int ProjectManager::calc_heads() {
     return 10000 * 5;
 }
 
-void ProjectManager::calc() {
+void ProjectManager::calculate() {
     _payment = calc_heads();
 }
 
@@ -38,7 +38,7 @@ SeniorManager::SeniorManager(id_type id, const std::string& name,
     _position = Position::SeniorManager;
 }
 
-void SeniorManager::calc() {
+void SeniorManager::calculate() {
     for (auto& p : _projects) {
         _payment += calc_heads();
     }

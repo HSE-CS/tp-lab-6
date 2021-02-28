@@ -24,7 +24,7 @@ int Cleaner::calc_bonus() {
     return 0;
 }
 
-void Cleaner::calc() {
+void Cleaner::calculate() {
     _payment = calc_base(_salary, _timeofwork) + calc_bonus();
 }
 
@@ -46,7 +46,7 @@ int Driver::calc_bonus() {
     return _salary / 100 * _timeofwork;
 }
 
-void Driver::calc() {
+void Driver::calculate() {
     _payment = calc_base(_salary, _timeofwork) + calc_bonus();
 }
 

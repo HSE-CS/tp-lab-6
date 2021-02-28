@@ -15,7 +15,7 @@ public:
 	ProjectManager(id_type id, const std::string& name, const Project& p);
 	~ProjectManager() override = default;
 
-	void calc() override;
+	void calculate() override;
 	void print_info() override;
 	int calc_heads() override;
 
@@ -28,7 +28,7 @@ class SeniorManager final : public ProjectManager {
 public:
 	SeniorManager(id_type id, const std::string& name, std::vector<Project> ps);
 
-	void calc() override;
+	void calculate() override;
 	void print_info() override;
 
 private:
