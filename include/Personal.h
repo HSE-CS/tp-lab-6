@@ -16,22 +16,23 @@ class Personal : public Employee, public WorkBaseTime {
   unsigned int salary;
 
  public:
-  unsigned int calcBase() override;
-  void printInfo() override;
+  unsigned int calcBase();
+  unsigned int calcBonus();
+  void printInfo();
 };
 
 class Driver : public Personal {
  public:
   Driver(int _id, std::string _name, int _salary);
-  unsigned int calcBonus() override;
-  void calc() override;
+  unsigned int calcBonus();
+  void calc();
 };
 
 class Cleaner : public Personal {
  public:
   Cleaner(int _id, std::string _name, int _salary);
-  void calc() override;
-  unsigned int calcBonus() override;
+  void calc();
+  unsigned int calcBonus();
 };
 
 #endif  // INCLUDE_PERSONAL_H_
