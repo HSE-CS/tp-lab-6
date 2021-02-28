@@ -17,7 +17,7 @@ void Engineer::printInfo() {
 }
 
 int Engineer::calcBudgetPart(float part, int budget) {
-    return float(part * budget);
+    return static_cast<float>(part * budget);
 }
 
 int Engineer::calcBonus() {

@@ -13,9 +13,9 @@ void ProjectManager::calc() {
         + calcProAdditions());
 }
 void ProjectManager::printInfo() {
-    std::cout << "id: " << getId() << "\name: " << getName() <<
-        "\nPosition: " << positionToString() << "\Project: " <<
-        projects[0]->id << "\nWorktime: " << worktime << "\Payment: " <<
+    std::cout << "id: " << getId() << " \tname: " << getName() <<
+        "\nPosition: " << positionToString() << " \tProject: " <<
+        projects[0]->id << "\nWorktime: " << worktime << " \tPayment: " <<
         payment << std::endl;
     std::cout << "=====================================" << std::endl;
 }
