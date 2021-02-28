@@ -5,7 +5,7 @@
 
 
 StaffFactory::StaffFactory() {
-};
+}
 
 std::vector<Employee*> StaffFactory::makeStaff(std::ifstream &employeesFile,
  std::ifstream &projectsFile) {
@@ -79,7 +79,6 @@ std::vector<Employee*> StaffFactory::makeStaff(std::ifstream &employeesFile,
       projects[leadIndex]->updateStaffNum();
       leadIndex = (leadIndex + 1) % projects.size();
     }
-
   }
   return employees;
 }
