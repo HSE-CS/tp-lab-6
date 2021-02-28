@@ -10,7 +10,7 @@
 
 
 class Engineer : public Personal, public ProjectBudget {
-public:
+ public:
     Engineer(id_type id, const std::string& name,
         unsigned int salary,
         const Project& p);
@@ -19,12 +19,12 @@ public:
     void calc() override;
     int calc_budget_part(float part, int budget) override;
 
-protected:
+ protected:
     Project _project;
 };
 
 class Tester final : public Engineer {
-public:
+ public:
     Tester(id_type id, const std::string& name,
         unsigned int salary,
         const Project& p);
@@ -35,7 +35,7 @@ public:
 };
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer(id_type id, const std::string& name,
         unsigned int salary,
         const Project& p);
@@ -46,7 +46,7 @@ public:
 };
 
 class TeamLeader final : public Programmer, public Heading {
-public:
+ public:
     TeamLeader(id_type id, const std::string& name,
         unsigned int salary,
         const Project& p);
