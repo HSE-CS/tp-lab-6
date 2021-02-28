@@ -13,7 +13,7 @@ int main() {
   std::ifstream employeesFile("Employees.txt");
   std::ifstream projectsFile("Projects.txt");
   StaffFactory newFactory;
-  std::vector<Employee*> employees = 
+  std::vector<Employee*> employees =
    newFactory.makeStaff(employeesFile, projectsFile);
 
   for (auto i : employees) {
