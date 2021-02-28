@@ -34,8 +34,8 @@ class Employee {
      int id;
      std::string name;
      Position position;
-     int worktime;
-     int payment;
+     int worktime = 0;
+     int payment = 0;
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_
