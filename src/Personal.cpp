@@ -2,6 +2,7 @@
 #include "Personal.h"
 #include <iostream>
 #include <string>
+#include <math.h>
 
 int Personal::calcBase(int hour_salary, int work_time) {
   return (hour_salary * work_time);
