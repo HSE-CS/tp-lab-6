@@ -36,7 +36,8 @@ Project* Engineer::getProject() {
 
 int Engineer::calc() {
   float part = project->getBudget() * 0.5 / project->getCount();
-  setSalary(calcBudgetPart(part, project->getBudget()) + calcBase(payment, worktime));
+  setSalary(calcBudgetPart(part, project->getBudget()) +
+            calcBase(payment, worktime));
   return getSalary();
 }
 

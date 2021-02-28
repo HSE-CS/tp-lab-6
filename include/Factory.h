@@ -2,12 +2,13 @@
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
 
-#include "Engineer.h"
-#include "Manager.h"
 #include <vector>
 #include <stdlib.h>
 #include <iostream>
 #include <fstream>
+#include <string>
+#include "Engineer.h"
+#include "Manager.h"
 
 class StaffFactory {
  public:

@@ -17,10 +17,10 @@ std::vector<Employee*> StaffFactory::makeStaff(std::string data) {
     getline(file, position, ';');
     getline(file, payment);
     if (position == "driver") {
-      employee.push_back(new Driver(stoi(payment), name, 
+      employee.push_back(new Driver(stoi(payment), name,
                          position, stoi(id), 15000));
     } else if (position == "cleaner") {
-      employee.push_back(new Cleaner(stoi(payment), name, 
+      employee.push_back(new Cleaner(stoi(payment), name,
                          position, stoi(id), 14000));
     } else if (position == "programmer") {
       employee.push_back(new Programmer(stoi(id), name, 25000,
@@ -32,10 +32,10 @@ std::vector<Employee*> StaffFactory::makeStaff(std::string data) {
       employee.push_back(new TeamLeader(stoi(id), name, 30000,
                          position, stoi(payment), project));
     } else if (position == "project manager") {
-      employee.push_back(new ProjectManager(stoi(id), name, 
+      employee.push_back(new ProjectManager(stoi(id), name,
                          position, stoi(payment), project));
     } else if (position == "senior manager") {
-      employee.push_back(new SeniorManager(stoi(id), name, 
+      employee.push_back(new SeniorManager(stoi(id), name,
                          position, stoi(payment), project));
     }
   return employee;

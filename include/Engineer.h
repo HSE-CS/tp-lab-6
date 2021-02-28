@@ -3,6 +3,7 @@
 #define INCLUDE_ENGINEER_H_
 
 #include <string>
+#include <stdlib.h>
 #include "Personal.h"
 #include "Interfaces.h"
 #include "Employee.h"
@@ -52,7 +53,7 @@ class Tester : public Engineer {
 
 class TeamLeader : public Programmer, public Heading {
  public:
-  TeamLeader(int id, std::string name, int salary, 
+  TeamLeader(int id, std::string name, int salary,
              std::string position, int payment, Project* project);
   int calc() override;
   int calcHeads() override;
