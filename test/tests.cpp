@@ -69,14 +69,14 @@ TEST(StaffDemo, test11) {
   EXPECT_EQ(777, p.getId());
 }
 TEST(StaffDemo, test12) {
-  Driver d(11, "StepanFomin", Position::Driver, 250, 20);
+  Driver d(11, "StepanFomin", "Driver", 250);
   d.calc();
   EXPECT_EQ(d.getname(), "StepanFomin");
 }
 TEST(StaffDemo, test13) {
-  Cleaner c(13, "OlgaPrivolina", Position::Cleaner, 200);
+  Cleaner c(13, "OlgaPrivolina", "Cleaner", 200);
   c.calc();
-  EXPECT_EQ(c.getposition(), Position::Cleaner);
+  EXPECT_EQ(c.getposition(), "Cleaner");
 }
 TEST(StaffDemo, test14) {
   std::vector<Employee *> staff = makeStaff("", "");
