@@ -25,7 +25,6 @@ class Programmer : public Engineer {
              int workTime, int salary, Positions position, Project *pr);
   int calc() override;
   int calcProAdditions(int bonus = 5) override;
-
 };
 class TeamLeader : public Programmer, public Heading {
  public:
@@ -34,7 +33,6 @@ class TeamLeader : public Programmer, public Heading {
   int calcHeads() override;
   int calc() override;
 };
-
 class Tester : public Engineer {
  public:
   Tester(int id, std::string name,
