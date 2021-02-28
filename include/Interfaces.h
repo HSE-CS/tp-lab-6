@@ -2,15 +2,15 @@
 #ifndef _INCLUDE_INTERFACES_H
 #define _INCLUDE_INTERFACES_H
 
-#include "Employee.h"
-#include "Personal.h"
-#include "Factory.h"
-#include "Engineer.h"
-#include "Manager.h"
-#include "Company.h"
+#include "../include/Employee.h"
+#include "../include/Personal.h"
+#include "../include/Factory.h"
+#include "../include/Engineer.h"
+#include "../include/Manager.h"
+
 
 enum Position { DRIVER = 1, CLEANER, SECURITY, ENGINEER, PROGRAMMER,
-    TESTER, TEAMLEADER, MANAGER, SENIORMANAGER };
+    TESTER, TEAMLEADER, MANAGER, SENIORMANAGER, PROJECTMANAGER };
 
 class WorkBaseTime {
  public:

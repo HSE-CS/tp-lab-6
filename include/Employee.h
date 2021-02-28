@@ -2,9 +2,10 @@
 #ifndef _INCLUDE_EMPLOYEE_H
 #define _INCLUDE_EMPLOYEE_H
 
-#include "Interfaces.h"
 #include <vector>
 #include <string>
+#include "../include/Interfaces.h"
+
 
 class Employee {
  protected:
@@ -17,8 +18,7 @@ class Employee {
     Employee(int id,
              std::string name,
              std::string position,
-             int worktime,
-             int payment);
+             int worktime, int payment);
     int getId();
     std::string getName();
     std::string getPosition();

@@ -5,8 +5,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Personal.h"
-#include "Interfaces.h"
+#include "../include/Personal.h"
+#include "../include/Interfaces.h"
 
 class Project;
 
@@ -71,7 +71,7 @@ class TeamLeader : public Programmer, public Heading {
                Project* project,
                float part) :
                     Programmer(id, name, position,
-                        salary, worktime, project, part) {}
+                    salary, worktime, project, part) {}
     int calcHeads();
     int calc();
     void printInfo();

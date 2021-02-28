@@ -2,15 +2,15 @@
 // Copyright 2021 Bogomazov
 #ifndef _INCLUDE_MANAGER_H
 #define _INCLUDE_MANAGER_H
-#include "Employee.h"
-#include "Factory.h"
-#include "Interfaces.h"
 #include <cstring>
 #include <fstream>
 #include <iostream>
 #include <string>
 #include <vector>
 #include <utility>
+#include "../include/Employee.h"
+#include "../include/Factory.h"
+#include "../include/Interfaces.h"
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  protected:
