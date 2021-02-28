@@ -33,37 +33,37 @@ void Factory::readStaff() {
   // read projects
   int newProjectId;
   unsigned newBudget, newMembersNum;
-  
+
   while (infileP >> newProjectId >> newBudget >> newMembersNum) {
     Project* newProject = new Project(newProjectId, newBudget);
     newProject->setMembersNum(newMembersNum);
     projects.push_back(newProject);
   }
-  
+
   // read employees
   int newId, newPositionNum;
   std::string newFirstName, newSecondName;
   while (infileE >> newId >> newFirstName >> newSecondName >> newPositionNum) {
     std::string fullName = newFirstName + " " + newSecondName;
 
-    if (newPositionNum >= 0 && newPositionNum <= 2){
+    if (newPositionNum >= 0 && newPositionNum <= 2) {
       // Programmer, Tester, TeamLeader
       unsigned newWorktime, newSalary, newProjectNum;
       infileE >> newWorktime >> newSalary >> newProjectNum;
 
-      if (newPositionNum == 0){
+      if (newPositionNum == 0) {
         // * Programmer *
         Programmer* newProgrammer =
         new Programmer(newId, fullName, newWorktime,
                        newSalary, projects[newProjectNum]);
-        newProgrammer->setAheadCounter(rand() % 5);
+        newProgrammer->setAheadCounter(rand_r() % 5);
         employees.push_back(newProgrammer);
       } else if (newPositionNum == 1) {
         // * Tester *
         Tester* newTester =
         new Tester(newId, fullName, newWorktime,
                    newSalary, projects[newProjectNum]);
-        newTester->setBugsCounter(rand() % 10);
+        newTester->setBugsCounter(rand_r() % 10);
         employees.push_back(newTester);
       } else {
         // * TeamLeader *
@@ -88,7 +88,7 @@ void Factory::readStaff() {
 
       std::vector<Project*> newProjects;
       int newProjectId;
-      while (ss >> newProjectId){
+      while (ss >> newProjectId) {
         newProjects.push_back(projects[newProjectId]);
       }
       SeniorManager* newSenior =
@@ -107,7 +107,7 @@ void Factory::readStaff() {
       infileE >> newWorktime >> newSalary;
       Driver* newDriver =
       new Driver(newId, fullName, newWorktime, newSalary);
-      newDriver->setNightHours(rand() % 5);
+      newDriver->setNightHours(rand_r() % 5);
       employees.push_back(newDriver);
     }
   }

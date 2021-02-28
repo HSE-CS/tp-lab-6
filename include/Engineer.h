@@ -53,7 +53,7 @@ class Tester : public Engineer {
 
 class TeamLeader : public Programmer, public Heading {
  public:
-  TeamLeader(int id, std::string name,unsigned worktime,
+  TeamLeader(int id, std::string name, unsigned worktime,
              unsigned salary, Project* project)
   :Programmer(id, name, worktime, salary, project) {
 //    this->project = project;

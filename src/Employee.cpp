@@ -32,7 +32,7 @@ void Project::printInfo() {
 // * EMPLOYEE *
 
 const std::string Employee::positionToString
- (Position position) const {
+(Position position) const {
   switch (position) {
     case Position::Programmer: return "Programmer";
     case Position::Driver: return "Driver";

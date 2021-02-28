@@ -33,7 +33,6 @@ unsigned Programmer::calcProAdditions() {
 
 void Programmer::setAheadCounter(unsigned newCounter) {
   this->aheadCounter = newCounter;
-  
 }
 
 // * TESTER *
@@ -48,13 +47,13 @@ void Tester::setBugsCounter(unsigned int newCounter) {
 
 // * TEAM LEADER *
 
-unsigned TeamLeader::calc(){
+unsigned TeamLeader::calc() {
   this->payment = calcBase(salary, worktime)
   + calcBudgetPart(projectPart, project->getBudget())
   + calcHeads();
   return this->payment;
 }
 
-unsigned TeamLeader::calcHeads(){
+unsigned TeamLeader::calcHeads() {
   return project->getMembersNum() * salary * 0.1;
 }

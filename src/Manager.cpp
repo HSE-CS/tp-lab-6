@@ -8,11 +8,11 @@
 
 unsigned ProjectManager::calcHeads() {
   unsigned finalResult = 0;
-   for (Project* p : this->projects) {
-     // 5% of budget per employee
-     finalResult += p->getBudget() *
-     p->getMembersNum() * 0.05;
-   }
+  for (Project* p : this->projects) {
+    // 5% of budget per employee
+    finalResult += p->getBudget() *
+    p->getMembersNum() * 0.05;
+  }
   this->payment = finalResult;
   return this->payment;
 }
@@ -70,7 +70,7 @@ void SeniorManager::printInfo() {
   std::cout << "<Position: " <<
   positionToString(this->position) << "> ";
   std::cout << "Projects (" << projects.size() << ") :" << std::endl;
-  for (Project* p : projects){
+  for (Project* p : projects) {
     p->printInfo();
   }
   std::cout << "<Payment: " << payment << ">";

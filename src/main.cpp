@@ -1,6 +1,6 @@
 //  Copyright © 2020 Сапожников Андрей Михайлович. All rights reserved.
-#import <string>
-#import "Factory.h"
+#include <string>
+#include "Factory.h"
 
 int main() {
   std::string fileNameE = "./staffInfo.txt";
