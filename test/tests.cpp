@@ -108,7 +108,7 @@ TEST(Test, test13) {
   teamman.setWorkTime(12);
   teamman.addSub(5);
   teamman.calc();
-  EXPECT_EQ(42400, teamman.getPayment());
+  EXPECT_EQ(67400, teamman.getPayment());
 }
 
 TEST(Test, test14) {
