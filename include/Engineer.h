@@ -11,11 +11,14 @@ class Project {
  private:
   int id;
   double budget;
+  int count = 0;
 
  public:
   Project(int, double);
   int getId();
   double getBudget();
+  int getCount();
+  void setCount();
 };
 
 class Engineer : public ProjectBudget, public Personal {
@@ -23,32 +26,34 @@ class Engineer : public ProjectBudget, public Personal {
   Project *project;
 
  public:
-  Engineer(int id, std::string name, int worktime,
-           std::string position, int payment, Project* project);
+  Engineer(int id, std::string name, int payment, int salary,
+           std::string position, Project* project);
   Project *getProject();
   int calc() override;
-  int calcBonus() override;
-  int calcBase(int salary, int wtime) override;
-  int calcBudgetPart(double part, int budget) override;
-  int calcProAdditions() override;
+  int calcBudgetPart(float part, int budget) override;
   void printInfo() override;
 };
 
 class Programmer : public Engineer {
  public:
-  Programmer(int id, std::string name, int worktime,
+  Programmer(int id, std::string name, int salary,
              std::string position, int payment, Project* project);
+  int calc() override;
   int calcProAdditions() override;
 };
 
 class Tester : public Engineer {
  public:
-  Tester(int id, std::string name, int worktime,
+  Tester(int id, std::string name, int salary,
          std::string position, int payment, Project* project);
+  int calc() override;
   int calcProAdditions() override;
+}
 
 class TeamLeader : public Programmer, public Heading {
  public:
+  TeamLeader(int id, std::string name, int salary, 
+             std::string position, int payment, Project* project);
   int calc() override;
   int calcHeads() override;
 };

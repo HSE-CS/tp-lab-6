@@ -16,7 +16,7 @@ class ProjectBudget {
 
 class Heading {
  public:
-  virtual int calcHeads() = 0;
+  virtual int calcHeads(int) = 0;
 };
 
 #endif  // INCLUDE_INTERFACES_H_

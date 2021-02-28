@@ -10,23 +10,23 @@
 
 class ProjectManager : public Employee, public Heading, public ProjectBudget {
  private:
-  Project *project = nullptr;
+  std::vector <Project*> projects;
 
  public:
-  ProjectManager(int id, std::string name, int worktime,
-                 std::string position, int payment, Project* project);
+  ProjectManager(int id, std::string name, std::string position,
+                 int payment, std::vector <Project*> projects);
   Project *getProject();
   int calc() override;
-  int calcHeads() override;
+  int calcHeads(int) override;
   void printInfo() override;
-  int calcBudgetPart(double part, int budget) override;
+  int calcBudgetPart(float part, int budget) override;
 };
 
 class SeniorManager : public ProjectManager {
  public:
-  SeniorManager(int id, std::string name, int worktime, std::string position,
+  SeniorManager(int id, std::string name, std::string position,
                 int payment, std::vector <Project*> project);
-  void calc() override;
+  int calc() override;
 };
 
 #endif  // INCLUDE_MANAGER_H_

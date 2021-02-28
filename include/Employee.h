@@ -17,7 +17,6 @@ class Employee {
   Employee(int payment, std::string name,
            std::string position, int id);
   void setWorktime(int);
-  void setPayment(int);
   int getId();
   std::string getName();
   int getPayment();

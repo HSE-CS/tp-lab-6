@@ -13,10 +13,11 @@ class Personal : public Employee, public WorkBaseTime {
  public:
   Personal(int payment, std::string name,
            std::string position, int id, int salary);
+  int getSalary();
+  void setSalary(int);
   int calc() override;
   void printInfo() override;
-  int calcBonus() override;
-  int calcBase(int salary, int wtime) override;
+  int calcBase(int salary, int wtime);
 };
 
 class Driver : public Personal {
@@ -31,7 +32,6 @@ class Cleaner : public Personal {
  public:
   Cleaner(int payment, std::string name,
           std::string position, int id, int salary);
-  int calc() override;
 };
 
 #endif  // INCLUDE_PERSONAL_H_

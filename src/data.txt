@@ -1,0 +1,16 @@
+32256;150000
+235;Owen Blake Richardson;tester;300
+233;Katelyn Audrey Smith;team leader;233
+653;Justin Dylan Hernandez;project manager;433
+792;Thomas Tyler Gray;senior manager;400
+946;Sean Matthew Gonzales;tester;599
+247;Morgan Molly Robinson;driver;400
+812;Ariana Samantha Bailey;programmer;344
+690;Luke Ethan Long;programmer;545
+450;Evan John Rodriguez;programmer;344
+169;Eric David Evans;cleaner;345
+483;Amber Taylor Rivera;cleaner;222
+756;Hailey Elizabeth Hughes;programmer;333
+240;Luis Landon Powell;programmer;333
+852;Elizabeth Elizabeth Mitchell;programmer;222
+888;Audrey Nicole Robinson;programmer;223
