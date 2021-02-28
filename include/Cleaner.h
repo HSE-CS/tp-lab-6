@@ -10,7 +10,8 @@
 class Cleaner : public Personal {
  public:
   int c_square{0};
-  Cleaner(int id, std::string name, std::string position, int salary);
+  Cleaner(int id, std::string name, std::string position,
+          int salary, int square);
   int calcBonus() override;
   void calc() override;
   void printinfo() override;

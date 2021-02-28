@@ -5,11 +5,10 @@
 #include <iostream>
 #include <iomanip>
 
-Driver::Driver(int id, std::string name, std::string position, int salary)
+Driver::Driver(int id, std::string name, std::string position,
+               int salary, int km)
               : Personal(id, name, position, salary) {
-  std::random_device rd;
-  std::mt19937 randomKilometers(rd());
-  int kilometers = static_cast<int>((randomKilometers() % 10) + 1); 
+  kilometers = km;
 }
 int Driver::calcBonus() {
   std::random_device rd;

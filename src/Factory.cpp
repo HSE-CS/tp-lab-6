@@ -2,6 +2,7 @@
 
 #include "Factory.h"
 #include <istream>
+#include <random>
 #include <fstream>
 
 using json = nlohmann::json;
@@ -38,16 +39,24 @@ void StaffFactory::readStaffFile() {
 Employee* StaffFactory::parseStaff(std::map<std::string,
                                    std::string> inf_staff) {
   if (inf_staff["position"] == "Cleaner") {
+    std::random_device rd;
+    std::mt19937 randomSquare(rd());
+    int square = static_cast<int>((randomSquare() % 6) + 1);
     int t_id = std::stoi(inf_staff["id"]);
     int t_salary = std::stoi(inf_staff["salary"]);
     temp_employee = new Cleaner(t_id, inf_staff["FIO"],
-                                inf_staff["position"], t_salary);
+                                inf_staff["position"],
+                                t_salary, square);
     return temp_employee;
   } else if (inf_staff["position"] == "Driver") {
+    std::random_device rd;
+    std::mt19937 randomKilometers(rd());
+    int km = static_cast<int>((randomKilometers() % 10) + 1);
     int t_id = std::stoi(inf_staff["id"]);
     int t_salary = std::stoi(inf_staff["salary"]);
     temp_employee = new Driver(t_id, inf_staff["FIO"],
-                               inf_staff["position"], t_salary);
+                               inf_staff["position"],
+                               t_salary, km);
     return temp_employee;
   } else if (inf_staff["position"] == "Engineer") {
     int t_id = std::stoi(inf_staff["id"]);
@@ -64,20 +73,26 @@ Employee* StaffFactory::parseStaff(std::map<std::string,
     int project_id = std::stoi(inf_staff["project_id"]);
     int t_salary = std::stoi(inf_staff["salary"]);
     float t_part = std::stof(inf_staff["part"]);
+    std::random_device rd;
+    std::mt19937 CompleteTaskInDeadline(rd());  // 0 - нет, 1 - да
+    bool Deadline = static_cast<bool>(CompleteTaskInDeadline() % 2);
     Project* t_project = MakeProjects[project_id];
     temp_employee = new Programmer(t_id, inf_staff["FIO"],
                                    inf_staff["position"], t_salary,
-                                   t_project, t_part);
+                                   t_project, t_part, Deadline);
     return temp_employee;
   } else if (inf_staff["position"] == "Tester") {
     int t_id = std::stoi(inf_staff["id"]);
     int project_id = std::stoi(inf_staff["project_id"]);
     int t_salary = std::stoi(inf_staff["salary"]);
     float t_part = std::stof(inf_staff["part"]);
+    std::random_device rd;
+    std::mt19937 CompleteTaskInDeadline(rd());  // 0 - нет, 1 - да
+    bool Deadline;static_cast<bool>(CompleteTaskInDeadline() % 2);
     Project* t_project = MakeProjects[project_id];
     temp_employee = new Tester(t_id, inf_staff["FIO"],
                                inf_staff["position"], t_salary,
-                               t_project, t_part);
+                               t_project, t_part, Deadline);
     return temp_employee;
   } else if (inf_staff["position"] == "TeamLeader") {
     int t_id = std::stoi(inf_staff["id"]);

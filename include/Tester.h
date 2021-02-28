@@ -9,9 +9,10 @@
 
 class Tester : public Engineer {
  public:
-  bool Deadline;
+  bool t_deadline;
   Tester(int id, std::string name, std::string position,
-         int salary, Project* project, float part);
+         int salary, Project* project, 
+         float part, bool Deadline);
   void calc() override;
   void printinfo() override;
   int calcProAdditions() override;

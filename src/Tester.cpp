@@ -1,16 +1,13 @@
 //  Copyright 2021 GHA created by Klykov Anton
 
 #include "Tester.h"
-#include <random>
 #include <iostream>
 #include <iomanip>
 
 Tester::Tester(int id, std::string name, std::string position,
-               int salary, Project *project, float part)
+               int salary, Project *project, float part, bool Deadline)
               : Engineer(id, name, position, salary, project, part) {
-  std::random_device rd;
-  std::mt19937 CompleteTaskInDeadline(rd());  // 0 - нет, 1 - да
-  Deadline = static_cast<bool>(CompleteTaskInDeadline() % 2);
+  t_deadline = Deadline;
 }
 int Tester::calcProAdditions() {
   if (Deadline) {

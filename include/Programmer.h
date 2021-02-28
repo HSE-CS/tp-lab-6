@@ -9,9 +9,9 @@
 
 class Programmer : public Engineer {
  public:
-  bool Deadline;
+  bool p_deadline;
   Programmer(int id, std::string name, std::string position,
-             int salary, Project* project, float part);
+             int salary, Project* project, float part, int Deadline);
   void calc() override;
   void printinfo() override;
   int calcProAdditions() override;

@@ -5,11 +5,10 @@
 #include <random>
 #include <iostream>
 
-Cleaner::Cleaner(int id, std::string name, std::string position, int salary)
+Cleaner::Cleaner(int id, std::string name, std::string position,
+                 int salary, int square)
                 : Personal(id, name, position, salary) {
-  std::random_device rd;
-  std::mt19937 randomSquare(rd());
-  c_square = static_cast<int>((randomSquare() % 6) + 1); 
+  c_square = square;
 }
 int Cleaner::calcBonus() {
   return 0;
