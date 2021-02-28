@@ -36,4 +36,4 @@ class Driver : public Personal {
   void setNumOfNightShifts(int num);
   int getNumOfNightShifts();
 };
-#endif  // TP_LAB_6_INCLUDE_PERSONAL_H_
+#endif  // INCLUDE_PERSONAL_H_

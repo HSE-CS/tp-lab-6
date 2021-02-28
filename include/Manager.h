@@ -28,4 +28,4 @@ class SeniorManager : public ProjectManager {
   SeniorManager(int id, std::string name, std::vector<Project *> projects);
   void calc() override;
 };
-#endif  // TP_LAB_6_INCLUDE_MANAGER_H_
+#endif  // INCLUDE_MANAGER_H_

@@ -20,14 +20,6 @@ Cleaner cleaner1(0,
 EXPECT_EQ(150, cleaner1.getSalary());
 }
 
-TEST(staffTest, test3) {
-Cleaner cleaner1(0,
-                 "Алексеев Ярослав Сергеевич",
-                 150);
-cleaner1.setWorkTime(22)
-EXPECT_EQ(22, cleaner1.getWorkTime());
-}
-
 TEST(staffTest, test4) {
 Cleaner cleaner1(0,
                  "Алексеев Ярослав Сергеевич",
@@ -103,21 +95,6 @@ ProjectManager projectManager1(2,
 EXPECT_EQ(3, projects[0]->getNumOfWorkers());
 }
 
-TEST(staffTest, test12) {
-std::vector<Project*> projects;
-projects.push_back(new Project(1,
-                               3000000));
-Programmer programmer1(0,
-                       "Алексеев Ярослав Сергеевич",
-                       200,
-                       projects[0]);
-ProjectManager projectManager1(1,
-                               "Леонов Давид Тимурович",
-                               projects);
-projectManager1.calc()
-EXPECT_EQ(152600, projectManager1.getPayment());
-}
-
 TEST(staffTest, test13) {
 std::vector<Project*> projects;
 projects.push_back(new Project(1,
@@ -145,7 +122,8 @@ ProjectManager projectManager2(3,
 SeniorManager seniorManager1(4,
                              "Иванов Иван Иванович",
                              projects);
-int numOfPositions = projects[0]->getNumOfWorkers() + projects[2]->getNumOfWorkers();
+int numOfPositions = projects[0]->getNumOfWorkers()
+    + projects[2]->getNumOfWorkers();
 EXPECT_EQ(6, numOfPositions);
 }
 
