@@ -7,7 +7,7 @@ class Project {
  public:
   std::string id;
   double budget;
-  Project(std::string id, double budget);
+  Project(std::string id, int budget);
 };
 
 class Factory {
