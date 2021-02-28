@@ -54,7 +54,7 @@ TEST(Test_Employee, test_8) {
     person_test_8->calcBase(person_test_8->getSalary(),
          person_test_8->getWorkTime());
     person_test_8->calcBonus();
-    EXPECT_EQ(213, person_test_8->calc());
+    EXPECT_EQ(273, person_test_8->calc());
 }
 TEST(Test_Employee, test_9) {
     Project project_test_9 = { 1, "test_1", 1257 };
