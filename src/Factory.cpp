@@ -46,8 +46,7 @@ std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
                 ss >> project;
                 res.push_back(new Tester(id, name, sal,
                     Project{ project, 200000 }));
-            }
-            else if (position == "Programmer") {
+            } else if (position == "Programmer") {
                 unsigned int sal;
                 std::string project;
                 ss >> sal;

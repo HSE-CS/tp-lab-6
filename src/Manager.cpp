@@ -1,15 +1,15 @@
 // Copyright 2021 TimurZaytsev
 //
 
+#include "Manager.h"
 #include <iostream>
-#include <Manager.h>
+
 
 
 // class ProjectManager
 ProjectManager::ProjectManager(id_type id, const std::string& name,
     const Project& p) : Employee(id, name),
-    _project(p)
-{
+    _project(p) {
     _position = Position::ProjectManager;
 }
 
@@ -33,8 +33,7 @@ void ProjectManager::print_info() {
 SeniorManager::SeniorManager(id_type id, const std::string& name,
     std::vector<Project> ps) :
     ProjectManager(id, name, ps[0]),
-    _projects(ps)
-{
+    _projects(ps) {
     _position = Position::SeniorManager;
 }
 

@@ -15,8 +15,7 @@ int Personal::calc_base(int salary, int wt) {
 }
 
 Cleaner::Cleaner(id_type id, const std::string& name, unsigned int salary) :
-    Personal(id, name, salary)
-{
+    Personal(id, name, salary) {
     _position = Position::Cleaner;
 }
 
@@ -37,8 +36,7 @@ void Cleaner::print_info() {
 }
 
 Driver::Driver(id_type id, const std::string& name, unsigned int salary) :
-    Personal(id, name, salary)
-{
+    Personal(id, name, salary) {
     _position = Position::Driver;
 }
 
