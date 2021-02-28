@@ -94,7 +94,7 @@ TEST(Staff, test8) {
   std::string name = "Save Cats";
   auto *project = new Project(1, name, 10000);
   auto *newbie =
-      new TeamLeader(1, myname Position(TEAM_LEADER), 10, project, 10);
+      new TeamLeader(1, myname, Position(TEAM_LEADER), 10, project, 10);
 
   newbie->setWorkTime(10);
 

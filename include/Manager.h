@@ -31,7 +31,7 @@ class ProjectManager : public Employee, public IHeading, public IProjectBudget {
   ProjectManager(int id, std::string name, Position position,
                  std::vector<Project *> myProject, float part, int _salary)
       : Employee(id, name, position, _salary),
-        allProjects(std::move(myProject)), part(part){}
+        allProjects(std::move(myProject)), part(part) {}
 
   int calcHeads() override;
   int calcBudgetPart(float _part, int _budget) override;

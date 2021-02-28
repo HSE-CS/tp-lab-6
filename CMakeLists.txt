@@ -11,3 +11,43 @@ set(include_dest "include/")
 
 add_subdirectory(src)
 add_subdirectory(test)
+
+################################
+# Testing
+################################
+
+# Make PROJECT_SOURCE_DIR, PROJECT_BINARY_DIR, and PROJECT_NAME available.
+set(CMAKE_CXX_STANDARD 17)
+set(PROJECT_NAME tp-lab-6)
+project(${PROJECT_NAME})
+
+
+# Define project test files
+file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
+
+# Define all cpp files which you want to test
+set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/main.cpp
+        ${PROJECT_SOURCE_DIR}/src/Employee.cpp
+        ${PROJECT_SOURCE_DIR}/src/Engineer.cpp
+        ${PROJECT_SOURCE_DIR}/src/Factory.cpp
+        ${PROJECT_SOURCE_DIR}/src/Manager.cpp
+        ${PROJECT_SOURCE_DIR}/src/Personal.cpp
+        )
+
+# ${PROJECT_SOURCE_DIR}/include/Deanary.h
+# ${PROJECT_SOURCE_DIR}/include/Student.h
+# ${PROJECT_SOURCE_DIR}/include/Group.h
+
+add_library(task_lib ${SRC_FILES})
+
+# This adds another subdirectory, which has 'project(gtest)'.
+add_subdirectory(gtest)
+
+# Unit Tests
+add_executable(runUnitTests ${TEST_SRC_FILES})
+
+# Standard linking to gtest stuff.
+target_link_libraries(runUnitTests gtest gtest_main)
+
+# Extra linking for the project.
+target_link_libraries(runUnitTests task_lib)

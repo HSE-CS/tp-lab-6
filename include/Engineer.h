@@ -7,20 +7,21 @@
 #include <string>
 
 class Engineer : public Personal, public IProjectBudget {
- public:
+public:
   Project *myProject;
   float part;
 
   Engineer(int id, std::string name, Position position, int salary,
            Project *myProject, float part)
-      : Personal(id, name, position, salary), myProject(myProject), part(part) {}
+      : Personal(id, name, position, salary), myProject(myProject), part(part) {
+  }
 
   int calcBudgetPart(float _part, int budget) override;
   void calc() override;
 };
 
 class Programmer : public Engineer {
- public:
+public:
   Programmer(int id, std::string name, Position position, int salary,
              Project *myProject, float part)
       : Engineer(id, name, position, salary, myProject, part) {}
@@ -30,7 +31,7 @@ class Programmer : public Engineer {
 };
 
 class TeamLeader : public Programmer, public IHeading {
- public:
+public:
   TeamLeader(int id, std::string name, Position position, int salary,
              Project *myProject, float part)
       : Programmer(id, name, position, salary, myProject, part) {}
@@ -40,7 +41,7 @@ class TeamLeader : public Programmer, public IHeading {
 };
 
 class Tester : public Programmer {
- public:
+public:
   Tester(int id, std::string name, Position position, int salary,
          Project *myProject, float part)
       : Programmer(id, name, position, salary, myProject, part) {}
@@ -50,4 +51,4 @@ class Tester : public Programmer {
   void calc() override;
 };
 
-#endif  // INCLUDE_ENGINEER_H_
+#endif // INCLUDE_ENGINEER_H_
