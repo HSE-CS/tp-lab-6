@@ -22,7 +22,7 @@ class Employee {
      int getId();
      std::string getPosition();
      int getWorktime();
-     int getPayment()
+     int getPayment();
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_
