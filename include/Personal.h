@@ -26,6 +26,7 @@ class Driver : public Personal{
     void calc() override;
     unsigned calcBonus() override;
     void printInfo() override;
+    int getAdditionalHours();
 };
 
 class Cleaner: public Personal {

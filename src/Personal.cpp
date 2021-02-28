@@ -55,6 +55,10 @@ void Driver::calc() {
                     + calcBonus();
 }
 
+int Driver::getAdditionalHours() {
+    return this->additionalHours;
+}
+
 Cleaner::Cleaner(unsigned int id, const std::string& name)
         : Personal(id, name) {
     this->id = id;
