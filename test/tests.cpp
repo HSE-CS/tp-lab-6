@@ -6,7 +6,7 @@
 
 
 TEST(StaffDemo, test1) {
-  std::vector<Employee*> staff = makeStaff("Staff.txt", "Projects.txt");
+  std::vector<Employee*> staff = makeStaff("src/Staff.txt", "src/Projects.txt");
   EXPECT_EQ(15, staff.size());
 }
 
