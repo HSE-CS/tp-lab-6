@@ -19,7 +19,7 @@ TEST(StaffDemo, test2) {
   Project pr("100", 23490);
   Tester* emp = new Tester("1515", "Naruto Uzumaki", Position(tester), 8,
                            &pr, 550);
-  EXPECT_EQ("10", emp->getId());
+  EXPECT_EQ("1515", emp->getId());
 }
 
 TEST(StaffDemo, test3) {
@@ -105,7 +105,7 @@ TEST(StaffDemo, test11) {
 TEST(StaffDemo, test12) {
   Cleaner* emp = new Cleaner("111", "Marina", Position(cleaner), 4, 550);
   emp->setWorkTime(3);
-  EXPECT_EQ(884257971, emp->calcBonus());
+  EXPECT_EQ(3, emp->getWorkTime());
 }
 
 TEST(StaffDemo, test13) {
