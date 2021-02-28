@@ -45,7 +45,7 @@ class Tester : public Engineer {
 class TeamLeader : public Programmer, public Heading {
  public:
   TeamLeader(int id, std::string name, int salary,
-             Project* project, int sub)
+             Project* project)
       : Programmer(id, name, salary, project) {
     setPosition(teamleader);
   }

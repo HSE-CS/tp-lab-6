@@ -73,7 +73,29 @@ TEST(TestProgrammer, test11) {
   Programmer programmer3(1, "name", 1500, &project2);
   programmer3.setWorkTime(168);
   programmer3.calc();
-  EXPECT_EQ(programmer3.getPayment(), 1500 * 168 + 15000 + 100);
+  EXPECT_EQ(programmer3.getPayment(), 267100);
 }
 
+TEST(TestTeamLeader, test12) {
+  Project project3;
+  TeamLeader teamLeader(1, "name", 150, &project3);
+  EXPECT_EQ(teamLeader.getPosition(), teamleader);
+}
 
+TEST(TestTeamLeader, test13) {
+  Project project4;
+  TeamLeader teamLeader1(1, "name", 150, &project4);
+  EXPECT_EQ(teamLeader1.getName(), "name");
+}
+
+TEST(TestTeamLeader, test14) {
+  Project project5;
+  TeamLeader teamLeader2(1, "name", 150, &project5);
+  EXPECT_EQ(teamLeader2.getSalary(), 150);
+}
+
+TEST(TestTeamLeader, test15) {
+  Project project6;
+  TeamLeader teamLeader3(1, "name", 150, &project6);
+  EXPECT_EQ(teamLeader3.getPayment(), 26740);
+}
