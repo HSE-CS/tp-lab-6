@@ -4,7 +4,7 @@
 #include <string>
 #include <math.h>
 
-int Engineer::calcBudgetPart(float contrib, int budget) {
+float Engineer::calcBudgetPart(float contrib, int budget) {
   return floor(contrib * budget);
 }
 
