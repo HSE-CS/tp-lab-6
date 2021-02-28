@@ -25,8 +25,7 @@ void Engineer::calc() {
 Tester::Tester(id_type id,
     const std::string& name,
     unsigned int salary,
-    const Project& p) : Engineer(id, name, salary, p)
-{
+    const Project& p) : Engineer(id, name, salary, p){
     _position = Position::Tester;
 }
 
@@ -50,8 +49,7 @@ void Tester::print_info() {
 Programmer::Programmer(id_type id,
     const std::string& name,
     unsigned int salary,
-    const Project& p) : Engineer(id, name, salary, p)
-{
+    const Project& p) : Engineer(id, name, salary, p){
     _position = Position::Programmer;
 }
 
@@ -76,8 +74,7 @@ void Programmer::print_info() {
 TeamLeader::TeamLeader(id_type id,
     const std::string& name,
     unsigned int salary,
-    const Project& p) : Programmer(id, name, salary, p)
-{
+    const Project& p) : Programmer(id, name, salary, p){
     _position = Position::TeamLeader;
 }
 

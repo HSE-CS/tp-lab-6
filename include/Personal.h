@@ -16,7 +16,7 @@ Personal(id_type id, const std::string& name, unsigned int salary);
 int calc_base(int salary, int wt) override;
 
  protected:
-unsigned int _salary; 
+unsigned int _salary;
 };
 
 class Cleaner final : public Personal {

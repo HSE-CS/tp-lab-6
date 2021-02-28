@@ -35,22 +35,17 @@ std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
                 unsigned int sal;
                 ss >> sal;
                 res.push_back(new Cleaner(id, name, sal));
-
-            }
-            else if (position == "Driver") {
+            } else if (position == "Driver") {
                 unsigned int sal;
                 ss >> sal;
                 res.push_back(new Driver(id, name, sal));
-
-            }
-            else if (position == "Tester") {
+            } else if (position == "Tester") {
                 unsigned int sal;
                 std::string project;
                 ss >> sal;
                 ss >> project;
                 res.push_back(new Tester(id, name, sal,
                     Project{ project, 200000 }));
-
             }
             else if (position == "Programmer") {
                 unsigned int sal;
@@ -59,25 +54,19 @@ std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
                 ss >> project;
                 res.push_back(new Programmer(id, name, sal,
                     Project{ project, 200000 }));
-
-            }
-            else if (position == "TeamLeader") {
+            } else if (position == "TeamLeader") {
                 unsigned int sal;
                 std::string project;
                 ss >> sal;
                 ss >> project;
                 res.push_back(new TeamLeader(id, name, sal,
                     Project{ project, 200000 }));
-
-            }
-            else if (position == "PM") {
+            } else if (position == "PM") {
                 std::string project;
                 ss >> project;
                 res.push_back(new ProjectManager(id, name,
                     Project{ project, 200000 }));
-
-            }
-            else if (position == "SM") {
+            } else if (position == "SM") {
                 std::vector<Project> projects;
                 std::string project;
                 while (!ss.eof()) {
@@ -87,9 +76,7 @@ std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
                 res.push_back(new SeniorManager(id, name, projects));
             }
         }
-
         in.close();
     }
-
     return res;
 }
