@@ -1,4 +1,3 @@
-
 //  Copyright 2021 Nikita Naumov
 /*
 #include "Personal.h"
@@ -137,3 +136,7 @@ int main() {
     return 0;
 }
 */
+int main() {
+
+    return 0;
+}
