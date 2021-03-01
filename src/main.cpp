@@ -10,6 +10,7 @@
 #include <vector>
 #include <map>
 #include <stdio.h>
+#include<time.h>
 #include <sstream>
 #include <stdlib.h>
 
@@ -45,12 +46,13 @@ int main() {
     createProjects();
     std::vector<Employee*> employees = createEmployees();
     float salary, max = 0;
+    unsigned seed = time(NULL);
     for (auto emp : employees) {
-        emp->setWorkTime(rand() % 10 + 30);
+        emp->setWorkTime(rand_r(&seed) % 10 + 30);
         salary = emp->getPayment();
-        if (salary > max) 
-            max = salary;
-        std::cout << emp->getId() << " " << emp->getName() << " gets " << salary << std::endl;
+        if (salary > max) max = salary;
+        std::cout << emp->getId() << " " << emp->getName() 
+            << " gets " << salary << std::endl;
     }
     std::cout << "Highest payment is " << max << std::endl;
     getchar();

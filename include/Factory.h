@@ -4,6 +4,7 @@
 #ifdef FACTORY_H
 #include <iostream>
 #include <vector>
+#include <string>
 #include "Employee.h"
 
 std::vector<std::string> split(const std::string& s, char delimiter);
@@ -12,4 +13,4 @@ class Factory {
     static Employee* createEmployee(std::vector<std::string> data);
 };
 
-#endif  //FACTORY_H
+#endif  // FACTORY_H

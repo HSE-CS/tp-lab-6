@@ -20,7 +20,8 @@ std::vector<std::string> split(const std::string& s, char delimiter) {
     return words;
 }
 
-enum Pos_id { posCleaner = 0, posDriver, posTester, posProgrammer, posTeamLeader, posManager, posProjectManager, posSeniorManager };
+enum Pos_id { posCleaner = 0, posDriver, posTester, posProgrammer, 
+    posTeamLeader, posManager, posProjectManager, posSeniorManager };
 std::map<std::string, int> projects;
 
 Employee* Factory::createEmployee(std::vector<std::string> data) {
@@ -55,7 +56,7 @@ Employee* Factory::createEmployee(std::vector<std::string> data) {
         contribution = stof(data[7]);
         p = new Tester(name, emp_id, base, position, data[6], contribution);
         break;
-    case posProgrammer:	
+    case posProgrammer:
         base = stof(data[5]);
         contribution = stof(data[7]);
         p = new Programmer(name, emp_id, base, position, data[6], contribution);
@@ -64,7 +65,8 @@ Employee* Factory::createEmployee(std::vector<std::string> data) {
 		base = stof(data[5]);
         contribution = stof(data[7]);
         subordinates = atoi(data[8].c_str());
-        p = new TeamLeader(name, emp_id, base, position, data[6], contribution, subordinates);
+        p = new TeamLeader(name, emp_id, base, position, data[6], 
+            contribution, subordinates);
         break;
     case posManager:
         contribution = stof(data[6]);
@@ -73,12 +75,14 @@ Employee* Factory::createEmployee(std::vector<std::string> data) {
     case posProjectManager:
         contribution = stof(data[6]);
         subordinates = atoi(data[7].c_str());
-        p = new ProjectManager(name, emp_id, position, data[5], contribution, subordinates);
+        p = new ProjectManager(name, emp_id, position, data[5],
+            contribution, subordinates);
         break;
     case posSeniorManager:
         contribution = stof(data[6]);
         subordinates = atoi(data[7].c_str());
-        p = new SeniorManager(name, emp_id, position, data[5], contribution, subordinates);
+        p = new SeniorManager(name, emp_id, position, data[5],
+            contribution, subordinates);
         break;
     }
     return p;

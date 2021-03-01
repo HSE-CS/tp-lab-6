@@ -14,4 +14,4 @@ class Heading {
  public:
     virtual float getPaymentbyHeading() = 0;
 };
-#endif // INTERFACES_H
+#endif  // INTERFACES_H

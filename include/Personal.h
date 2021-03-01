@@ -7,7 +7,8 @@
 #include "Interfaces.h"
 class Personal : public Employee, public WorkBaseTime {
  public:
-    Personal(std::string name, unsigned int id, float base, std::string position);
+    Personal(std::string name, unsigned int id, float base, 
+        std::string position);
     float getPaymentbyWorkTime() override;
  protected:
     float base1;
@@ -16,12 +17,14 @@ class Personal : public Employee, public WorkBaseTime {
 };
 class Cleaner : public Personal {
  public:
-    Cleaner(std::string name, unsigned int id, float base, std::string position);
+    Cleaner(std::string name, unsigned int id, float base,
+        std::string position);
     float getPayment() override;
 };
 class Driver : public Personal {
  public:
-    Driver(std::string name, unsigned int id, float base, std::string position, float koef);
+    Driver(std::string name, unsigned int id, float base,
+        std::string position, float koef);
     float getPayment() override;
  private:
     float koef;

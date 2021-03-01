@@ -18,7 +18,7 @@ unsigned int Employee::getWorkTime() const {
     return worktime;
 }
 
-std::string Employee::getName() const{
+std::string Employee::getName() const {
     return name;
 }
 

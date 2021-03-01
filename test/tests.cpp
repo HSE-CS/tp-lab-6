@@ -1,3 +1,4 @@
+// Copyright 2021 Kartseva Masha
 #include "Employee.h"
 #include "Engineer.h"
 #include "Factory.h"
@@ -38,7 +39,8 @@ TEST(lab6, task4) {
 TEST(lab6, task5) {
     extern std::map<std::string, int> projects;
     projects["Hello"] = 10000;
-    Programmer* emp = new Programmer("Alex", 2, 400, "Programmer", "Hello", 0.3);
+    Programmer* emp = new Programmer("Alex", 2, 400, "Programmer", 
+        "Hello", 0.3);
     emp->setWorkTime(10);
     float res = emp->getPayment();
     EXPECT_EQ(7000, res);
@@ -63,7 +65,8 @@ TEST(lab6, task7) {
 TEST(lab6, task8) {
     extern std::map<std::string, int> projects;
     projects["Z"] = 10000;
-    SeniorManager* emp = new SeniorManager("Alex", 3, "SeniorManager", "Z", 0.7, 10);
+    SeniorManager* emp = new SeniorManager("Alex", 3,
+        "SeniorManager", "Z", 0.7, 10);
     float res = emp->getPayment();
     EXPECT_EQ(12000, res);
 }
@@ -71,7 +74,8 @@ TEST(lab6, task8) {
 TEST(lab6, task9) {
     extern std::map<std::string, int> projects;
     projects["Leader"] = 10000;
-    TeamLeader* emp = new TeamLeader("Alex", 3, 1000, "TeamLeader", "Leader", 0.7, 3);
+    TeamLeader* emp = new TeamLeader("Alex", 3, 1000, 
+        "TeamLeader", "Leader", 0.7, 3);
     emp->setWorkTime(10);
     float res = emp->getPayment();
     EXPECT_EQ(21500, res);
