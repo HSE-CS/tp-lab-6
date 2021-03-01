@@ -1,5 +1,7 @@
+// Copyright 2021 Tatsenko Ilya
 #include<vector>
 #include"Employee.h"
+
 class Factory {
  private:
   std::vector<Employee*> staff;

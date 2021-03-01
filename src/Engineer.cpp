@@ -1,3 +1,4 @@
+// Copyright 2021 Tatsenko Ilya
 #include"Engineer.h"
 
 float Engineer::getPart() { 
@@ -6,13 +7,13 @@ float Engineer::getPart() {
 
 int Engineer::calcBudjetPart(float part, int budjet) { return static_cast<int>(budjet * part); }
 int Engineer::calcProAdditions() {
-  if (this->part > 0, 21) return static_cast<int>(1000 * this->getPart());
+  if (this->part > 0.21) return static_cast<int>(1000 * this->getPart());
   return 0;
 }
 void Engineer::calc() {
     this->setPayment(
       this->salary * this->getWorkTime() +
-      this->calcBudjetPart(this->getPart, this->project->getBudjet()) +
+      this->calcBudjetPart(this->getPart(), this->project->getBudjet()) +
       this->calcProAdditions());
 }
 
@@ -28,6 +29,6 @@ int TeamLeader::calcHeads() { return ((this->project->getNumber()) * 1000); }
 void TeamLeader::calc() {
     this->setPayment(
       this->salary * this->getWorkTime() +
-      this->calcBudjetPart(this->getPart, this->project->getBudjet()) +
+      this->calcBudjetPart(this->getPart(), this->project->getBudjet()) +
       this->calcHeads());
 }

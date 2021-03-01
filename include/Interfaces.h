@@ -1,3 +1,4 @@
+// Copyright 2021 Tatsenko Ilya
 #pragma once
 #include <string>
 class IWorkBaseTime {

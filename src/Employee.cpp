@@ -1,8 +1,9 @@
+// Copyright 2021 Tatsenko Ilya
 #include<iostream>
 #include"Employee.h"
 
 
-Employee::Employee(int id, std::string name, std::string position,
+/*Employee::Employee(int id, std::string name, std::string position,
                    int worktime) {
   this->id = id;
   this->name = name;
@@ -10,7 +11,7 @@ Employee::Employee(int id, std::string name, std::string position,
   this->payment = 0;
   this->worktime = worktime;
 }
-
+*/
 /// void Employee::setWorkTime(int x) { this->worktime = x; }
 
 void Employee::setId(int x) { this->id = x; }

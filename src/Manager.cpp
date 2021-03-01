@@ -1,41 +1,45 @@
+// Copyright 2021 Tatsenko Ilya
 #include"Manager.h"
 #include<iostream>
-int ProjectManager::calcHeads() { return this->projects[0]->getNumber() * 1000; }
+int ProjectManager::calcHeads() { return this->projects[this->n]->getNumber() * 1000; }
 void ProjectManager::calc() {
-  this->setPayment((this->projects[0]->getBudjet() / this->projects[0]->getNumber()) +
+  this->setPayment((this->projects[this->n]->getBudjet() / this->projects[this->n]->getNumber()) +
                    calcHeads());
 }
 
 void SeniorManager::calc() {
   int payment_ = 0;
   for (auto &project : projects) {
-    payment_ += project->getBudjet() / project->getNumber();
-    payment_ += project->getNumber * 1000;
+    payment_ += (project->getBudjet() / project->getNumber()) * 0.5;
+    payment_ += project->getNumber() * 1000;
   }
   this->setPayment(payment_);
 }
 
 void ProjectManager::printInfo() {
-  std::cout << "ID: " << this->getId() << " "
+  std::cout << "ID: " << this->getId() << " => "
             << "Name: " << this->getName() << "  "
-            << "Position" << this->getPosition() << " ";
-  std::cout << "Project:" << this->projects[0]->getName() << std::endl;
+            << "Position " << this->getPosition() << " >> ";
+  std::cout << "Project: " << this->projects[0]->getName() << std::endl;
   std::cout << "\t"
-            << "WorkTime: " << this->getWorkTime() << " "
+            //<< "WorkTime: " << this->getWorkTime() << " "
             << "Payment: " << this->getPayment();
+  std::cout << std::endl;
 }
 
 
 void SeniorManager::printInfo() {
   std::cout << "ID: " << this->getId() << " "
             << "Name: " << this->getName() << "  "
-            << "Position" << this->getPosition() << " ";
-  std::cout << "Projects:"
+            << "Position " << this->getPosition() << " >>> ";
+  std::cout << "Projects: "
             << " ";
   for (auto &proj : projects) {
     std::cout << proj->getName() << ", ";
   }
+  std::cout << std::endl;
   std::cout << "\t"
-            << "WorkTime: " << this->getWorkTime() << " "
+            //<< "WorkTime: " << this->getWorkTime() << " "
             << "Payment: " << this->getPayment();
+  std::cout << std::endl;
 }
