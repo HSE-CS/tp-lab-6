@@ -7,15 +7,18 @@ int Engineer::calcBugetPart(float part, int budget) {
     return part * budget;
 }
 
-void Engineer::calc(){
-    setPayment(calcBase(getSalary(), getWorkTime()) + calcBugetPart(0.1, project.budget));
+void Engineer::calc() {
+    setPayment(calcBase(getSalary(), getWorkTime())
+        + calcBugetPart(0.1, project.budget));
 }
 
 void Engineer::printInfo() {
     std::cout << "\nName: " << getName() << "\t" << getId() << std::endl;
-    std::cout << "\nSalary: " << getSalary() << "\tWork time: " << getWorkTime() << std::endl;
+    std::cout << "\nSalary: " << getSalary() << "\tWork time: " <<
+        getWorkTime() << std::endl;
     std::cout << "\nPayment: " << getPayment() << std::endl;;
-    std::cout << "\nProject: " << project.name << "\tBudget: " << project.budget << "\n\n";
+    std::cout << "\nProject: " << project.name << "\tBudget: " <<
+        project.budget << "\n\n";
 }
 
 int Engineer::calcProAdditins() {

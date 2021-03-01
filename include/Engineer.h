@@ -2,16 +2,18 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include <string>
 #include "Personal.h"
 #include "Interfaces.h"
 
 class Engineer: public Personal, public ProjectBudget {
  public:
-    explicit Engineer();
-    explicit Engineer(std::string id, std::string name, std::string position, int salary, Project new_project)
+    Engineer();
+    explicit Engineer(std::string id, std::string name,
+        std::string position, int salary, Project new_project)
         :Personal(id, name, position, salary) {
         project = new_project;
-    };
+    }
     int calcBugetPart(float, int) override;
     void calc() override;
     int calcProAdditins() override;
@@ -23,25 +25,28 @@ class Engineer: public Personal, public ProjectBudget {
 
 class Programmer: public Engineer {
  public:
-    explicit Programmer();
-    explicit Programmer(std::string id, std::string name, std::string position, int salary, Project project)
-        :Engineer(id, name, position, salary, project) {};
+    Programmer();
+    explicit Programmer(std::string id, std::string name,
+        std::string position, int salary, Project project)
+        :Engineer(id, name, position, salary, project) {}
     int calcProAdditins() override;
 };
 
 class Tester : public Engineer {
  public:
-    explicit Tester();
-    explicit Tester(std::string id, std::string name, std::string position, int salary, Project project)
-        :Engineer(id, name, position, salary, project) {};
+    Tester();
+    explicit Tester(std::string id, std::string name,
+        std::string position, int salary, Project project)
+        :Engineer(id, name, position, salary, project) {}
     int calcProAdditins() override;
 };
 
 class TeamLeader : public Programmer, public Heading {
  public:
-    explicit TeamLeader();
-    explicit TeamLeader(std::string id, std::string name, std::string position, int salary, Project project)
-        :Programmer(id, name, position, salary, project) {};
+    TeamLeader();
+    explicit TeamLeader(std::string id, std::string name,
+        std::string position, int salary, Project project)
+        :Programmer(id, name, position, salary, project) {}
     int calcProAdditins() override;
     int calcHeads();
 };

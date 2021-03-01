@@ -3,13 +3,15 @@
 
 Employee::Employee() {}
 
-Employee::Employee(std::string new_id, std::string new_name, std::string new_position) {
+Employee::Employee(std::string new_id,
+    std::string new_name, std::string new_position) {
     id = new_id;
     name = new_name;
     position = new_position;
 }
 
-Employee::Employee(std::string new_id, std::string new_name, std::string new_position,
+Employee::Employee(std::string new_id,
+    std::string new_name, std::string new_position,
     int new_payment, int new_worktime) {
     id = new_id;
     name = new_name;

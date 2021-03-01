@@ -13,7 +13,8 @@ int Personal::getSalary() {
 
 void Personal::printInfo() {
     std::cout << "\nName: " << getName() << "\t" << getId() << std::endl;
-    std::cout << "\nSalary: " << getSalary() << "\tWork time: " << getWorkTime() << std::endl;
+    std::cout << "\nSalary: " << getSalary() <<
+        "\tWork time: " << getWorkTime() << std::endl;
     std::cout << "\nPayment: " << getPayment() << "\n\n";
 }
 
@@ -24,7 +25,7 @@ int Personal::calcBonus() {
 Driver::Driver() {}
 
 int Driver::calcBonus() {
-    return calcBase(getSalary(), getWorkTime()) * 0.2 ;
+    return calcBase(getSalary(), getWorkTime()) * 0.2;
 }
 
 void Driver::calc() {

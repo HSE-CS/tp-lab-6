@@ -5,12 +5,14 @@
 #include <map>
 #include <fstream>
 #include <ctime>
+#include <vector>
+#include <string>
 #include "Manager.h"
 #include "Engineer.h"
 
 class StaffFactory {
  public:
-    explicit StaffFactory();
+    StaffFactory();
     explicit StaffFactory(std::string, std::string);
     std::vector<Employee*> makeStaff();
 

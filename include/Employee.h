@@ -13,7 +13,7 @@ struct Project {
 
 class Employee {
  public:
-    explicit Employee();
+    Employee();
     explicit Employee(std::string, std::string, std::string);
     explicit Employee(std::string, std::string, std::string, int, int);
     void setWorkTime(int);

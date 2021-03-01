@@ -3,7 +3,8 @@
 
 StaffFactory::StaffFactory() {}
 
-StaffFactory::StaffFactory(std::string new_staff_file, std::string new_projects_file) {
+StaffFactory::StaffFactory(std::string new_staff_file,
+    std::string new_projects_file) {
     name_file_staff = new_staff_file;
     name_file_projects = new_projects_file;
 }
@@ -23,7 +24,8 @@ std::vector<Employee*> StaffFactory::makeStaff() {
             projects[name_p] = { name_p, budget };
         }
         size_t index = 0;
-        std::vector<std::string> positions = { "Cleaner", "Driver", "Engineer", "Programmer", "Tester", "TeamLeader",
+        std::vector<std::string> positions = { "Cleaner", "Driver", "Engineer",
+            "Programmer", "Tester", "TeamLeader",
             "ProjectManager", "SeniorManager" };
         std::vector<Project> pr;
         std::string name_pr, name, second_name;
@@ -46,42 +48,49 @@ std::vector<Employee*> StaffFactory::makeStaff() {
             data_staff >> second_name;
             if (index > 5) {
                 srand(time(0));
-                salary = 1000 + rand() % 10000;
+                salary = 1000 + rand_r() % 10000;
             } else {
                 data_staff >> salary;
             }
 
-            std::string id = std::to_string(salary) + name[0] + second_name[0] + std::to_string(staff.size() + 1);
+            std::string id = std::to_string(salary) + name[0] + second_name[0]
+                + std::to_string(staff.size() + 1);
             size_t n = id.size();
             for (int i = 0; i < 10 - n; i++) {
                 id = '0' + id;
             }
             switch (index) {
             case 0:
-                person = new Cleaner(id, name + ' ' + second_name, positions[index], salary);
+                person = new Cleaner(id, name + ' ' + second_name,
+                    positions[index], salary);
                 break;
             case 1:
-                person = new Driver(id, name + ' ' + second_name, positions[index], salary);
+                person = new Driver(id, name + ' ' + second_name,
+                    positions[index], salary);
                 break;
             case 2:
                 getline(data_staff, name_p);
                 name_p.erase(0, 1);
-                person = new Engineer(id, name + ' ' + second_name, positions[index], salary, projects[name_p]);
+                person = new Engineer(id, name + ' ' + second_name,
+                    positions[index], salary, projects[name_p]);
                 break;
             case 3:
                 getline(data_staff, name_p);
                 name_p.erase(0, 1);
-                person = new Programmer(id, name + ' ' + second_name, positions[index], salary, projects[name_p]);
+                person = new Programmer(id, name + ' ' + second_name,
+                    positions[index], salary, projects[name_p]);
                 break;
             case 4:
                 getline(data_staff, name_p);
                 name_p.erase(0, 1);
-                person = new Tester(id, name + ' ' + second_name, positions[index], salary, projects[name_p]);
+                person = new Tester(id, name + ' ' + second_name,
+                    positions[index], salary, projects[name_p]);
                 break;
             case 5:
                 getline(data_staff, name_p);
                 name_p.erase(0, 1);
-                person = new TeamLeader(id, name + ' ' + second_name, positions[index], salary, projects[name_p]);
+                person = new TeamLeader(id, name + ' ' + second_name,
+                    positions[index], salary, projects[name_p]);
                 break;
             case 6:
                 pr.clear();
@@ -96,14 +105,16 @@ std::vector<Employee*> StaffFactory::makeStaff() {
                         name_pr.clear();
                     }
                 }
-                person = new ProjectManager(id, name + ' ' + second_name, positions[index], pr);
+                person = new ProjectManager(id, name + ' ' + second_name,
+                    positions[index], pr);
                 break;
             case 7:
                 pr.clear();
                 for (auto name_p : projects) {
                     pr.push_back(name_p.second);
                 }
-                person = new SeniorManager(id, name + ' ' + second_name, positions[index], pr);
+                person = new SeniorManager(id, name + ' ' + second_name,
+                    positions[index], pr);
                 break;
             default:
                 break;

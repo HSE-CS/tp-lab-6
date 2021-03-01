@@ -11,7 +11,7 @@ void ProjectManager::calc() {
     int bonus = 0;
     for (auto pr : projects) {
         bonus += pr.budget * getWorkTime() * 0.01;
-    };
+    }
     setPayment(calcHeads() + bonus);
 }
 
@@ -20,8 +20,9 @@ void ProjectManager::printInfo() {
     std::cout << "\nWork time: " << getWorkTime() << std::endl;
     std::cout << "\nPayment: " << getPayment() << std::endl;
     for (auto pr : projects) {
-        std::cout << "\nProject: " << pr.name << "\tBudget: " << pr.budget << std::endl;
-    };
+        std::cout << "\nProject: " << pr.name <<
+            "\tBudget: " << pr.budget << std::endl;
+    }
 }
 
 int ProjectManager::calcBugetPart(float part, int budget) {
@@ -42,7 +43,7 @@ void SeniorManager::calc() {
     int bonus = 0;
     for (auto pr : getProjects()) {
         bonus += pr.budget * getWorkTime() * 0.02;
-    };
+    }
     setPayment(calcHeads() + bonus);
 }
 
