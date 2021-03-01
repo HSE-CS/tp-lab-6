@@ -8,6 +8,5 @@ class Factory {
   std::vector<Employee*> staff;
 
  public:
-  std::vector<Employee*> makeStaff(std::string proj_filen,
-                                   std::string staf_filen);
+  std::vector<Employee*> makeStaff(std::string file1, std::string file2);
 };
