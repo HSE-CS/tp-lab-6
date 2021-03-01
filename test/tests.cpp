@@ -193,5 +193,5 @@ TEST(senior_manager, test3) {
 
   SeniorManager* worker = new SeniorManager(1, "Test Testov Testovich", tmp);
   worker->calc();
-  EXPECT_EQ(12500 + 25000 + (2500 * 30), worker->getPayment();
+  EXPECT_EQ(12500 + 25000 + (2500 * 30), worker->getPayment());
 }
