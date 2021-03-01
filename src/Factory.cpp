@@ -48,7 +48,8 @@ std::vector<Employee*> StaffFactory::makeStaff() {
             data_staff >> second_name;
             if (index > 5) {
                 srand(time(0));
-                salary = 1000 + rand() % 10000;
+				int seed = 54321;
+                salary = 1000 + rand_r(&seed) % 10000;
             } else {
                 data_staff >> salary;
             }
