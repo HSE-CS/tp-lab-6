@@ -14,10 +14,9 @@ class ProjectManager: public Employee, public ProjectBudget, public Heading {
   int calcBudgetPart(float part, int budget);
  public:
   ProjectManager(unsigned int id_, const std::string& name_,
-	  Position pos, Project* project_);
+    Position pos, Project* project_);
   void calc();
   void printInfo();
-
 };
 
 class SeniorManager: public ProjectManager{
@@ -26,6 +25,6 @@ class SeniorManager: public ProjectManager{
 
  public:
   SeniorManager(unsigned int id_, const std::string& name_,
-	  Position pos, std::vector <Project*> &projects_);
+    Position pos, const std::vector <Project*> &projects_);
   void calc();
 };

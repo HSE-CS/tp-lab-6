@@ -8,12 +8,13 @@ Personal::Personal(unsigned int id_, const std::string& name_, Position pos,
 void Personal::printInfo() {
     const char* positions[] = { "EMPLOYEE",      "PERSONAL",    "ENGINEER",
                                "CLEANER",       "DRIVER",      "PROGRAMMER",
-                               "TESTER",        "TEAM_LEADER", "PROJECT_MANAGER",
+                          "TESTER",        "TEAM_LEADER", "PROJECT_MANAGER",
                                "SENIOR_MANAGER" };
     std::cout << "Id: " << id << " Fio: " << name << std::endl
         << "Position: " << positions[position] << " Salary: " << salary
         << std::endl;
-    std::cout << "Worktime: " << worktime << " Payment: " << payment << std::endl;
+    std::cout << "Worktime: " << worktime;
+    std::cout << " Payment: " << payment << std::endl;
 }
 
 int Personal::calcBase(int salary, int wtime) { return salary * wtime; }

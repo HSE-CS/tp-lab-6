@@ -11,7 +11,7 @@ class Engineer: public Personal, public ProjectBudget {
   void calc();
  public:
   Engineer(unsigned int id_, const std::string& name_,
-	  Position pos, int salary_, Project* project_);
+    Position pos, int salary_, Project* project_);
   void printInfo();
 };
 
@@ -20,7 +20,7 @@ class Programmer: public Engineer{
   int calcProAdditions();
  public:
   Programmer(unsigned int id_, const std::string& name_,
-	  Position pos, int salary_, Project* project_);
+    Position pos, int salary_, Project* project_);
 };
 
 class Tester: public Engineer{
@@ -28,7 +28,7 @@ class Tester: public Engineer{
   int calcProAdditions();
  public:
   Tester(unsigned int id_, const std::string& name_,
-	  Position pos, int salary_, Project* project_);
+    Position pos, int salary_, Project* project_);
 };
 
 class TeamLeader: public Programmer, public Heading{
@@ -38,5 +38,5 @@ class TeamLeader: public Programmer, public Heading{
   int calcProAdditions();
  public:
   TeamLeader(unsigned int id_, const std::string& name_,
-	  Position pos, int salary_, Project* project_);
+    Position pos, int salary_, Project* project_);
 };

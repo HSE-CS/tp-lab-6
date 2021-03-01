@@ -12,7 +12,7 @@ int Engineer::calcBudgetPart(float part, int budget) {
 void Engineer::printInfo() {
     const char* positions[] = { "EMPLOYEE",      "PERSONAL",    "ENGINEER",
                                "CLEANER",       "DRIVER",      "PROGRAMMER",
-                               "TESTER",        "TEAM_LEADER", "PROJECT_MANAGER",
+                          "TESTER",        "TEAM_LEADER", "PROJECT_MANAGER",
                                "SENIOR_MANAGER" };
     std::cout << "Id: " << id << " Fio: " << name << std::endl
         << "Position: " << positions[position] << " Salary: " << salary

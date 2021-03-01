@@ -10,7 +10,8 @@ std::vector<Employee*> Factory::makeStaff(std::string projectsPath,
     while (line != "") {
         unsigned int id = std::stoi(line.substr(0, line.find(';')));
         std::string name =
-            line.substr(line.find(';') + 1, line.rfind(';') - line.find(';') - 1);
+            line.substr(line.find(';') + 1,
+                line.rfind(';') - line.find(';') - 1);
         int budget = std::stoi(line.substr(line.rfind(';') + 1));
         projects.push_back(new Project(id, name, budget));
         std::getline(fin, line);
@@ -30,12 +31,10 @@ std::vector<Employee*> Factory::makeStaff(std::string projectsPath,
         if (position == "DRIVER") {
             int salary = std::stoi(line.substr(npos + 1));
             employees.push_back(new Driver(id, name, DRIVER, salary));
-        }
-        else if (position == "CLEANER") {
+        } else if (position == "CLEANER") {
             int salary = std::stoi(line.substr(npos + 1));
             employees.push_back(new Cleaner(id, name, CLEANER, salary));
-        }
-        else if (position == "TESTER") {
+        } else if (position == "TESTER") {
             pos = npos + 1;
             npos = line.find(';', pos);
             int salary = std::stoi(line.substr(pos, npos - pos));
@@ -49,8 +48,7 @@ std::vector<Employee*> Factory::makeStaff(std::string projectsPath,
                 }
             }
             employees.push_back(new Tester(id, name, TESTER, salary, proj_pointer));
-        }
-        else if (position == "PROGRAMMER") {
+        } else if (position == "PROGRAMMER") {
             pos = npos + 1;
             npos = line.find(';', pos);
             int salary = std::stoi(line.substr(pos, npos - pos));
@@ -65,8 +63,7 @@ std::vector<Employee*> Factory::makeStaff(std::string projectsPath,
             }
             employees.push_back(
                 new Programmer(id, name, PROGRAMMER, salary, proj_pointer));
-        }
-        else if (position == "TEAM_LEADER") {
+        } else if (position == "TEAM_LEADER") {
             pos = npos + 1;
             npos = line.find(';', pos);
             int salary = std::stoi(line.substr(pos, npos - pos));
@@ -81,8 +78,7 @@ std::vector<Employee*> Factory::makeStaff(std::string projectsPath,
             }
             employees.push_back(
                 new TeamLeader(id, name, TEAM_LEADER, salary, proj_pointer));
-        }
-        else if (position == "PROJECT_MANAGER") {
+        } else if (position == "PROJECT_MANAGER") {
             std::string project_name = line.substr(npos + 1);
             Project* proj_pointer = nullptr;
             for (Project* p : projects) {
@@ -94,8 +90,7 @@ std::vector<Employee*> Factory::makeStaff(std::string projectsPath,
             }
             employees.push_back(
                 new ProjectManager(id, name, PROJECT_MANAGER, proj_pointer));
-        }
-        else if (position == "SENIOR_MANAGER") {
+        } else if (position == "SENIOR_MANAGER") {
             for (Project* p : projects) {
                 p->numOfWorkers++;
             }

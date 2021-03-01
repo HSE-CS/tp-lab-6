@@ -18,7 +18,7 @@ int ProjectManager::calcBudgetPart(float part, int budget) {
 void ProjectManager::printInfo() {
     const char* positions[] = { "EMPLOYEE",      "PERSONAL",    "ENGINEER",
                                "CLEANER",       "DRIVER",      "PROGRAMMER",
-                               "TESTER",        "TEAM_LEADER", "PROJECT_MANAGER",
+                          "TESTER",        "TEAM_LEADER", "PROJECT_MANAGER",
                                "SENIOR_MANAGER" };
     std::cout << "Id: " << id << " Fio: " << name << std::endl
         << "Position: " << positions[position] << std::endl
@@ -26,7 +26,8 @@ void ProjectManager::printInfo() {
     for (Project* p : projects) {
         std::cout << p->getName() << std::endl;
     }
-    std::cout << "Worktime: " << worktime << " Payment: " << payment << std::endl;
+    std::cout << "Worktime: " << worktime;
+    std::cout << " Payment: " << payment << std::endl;
 }
 
 void ProjectManager::calc() {
@@ -35,7 +36,7 @@ void ProjectManager::calc() {
 }
 
 SeniorManager::SeniorManager(unsigned int id_, const std::string& name_,
-    Position pos, std::vector<Project*>& projects_)
+    Position pos, const std::vector<Project*>& projects_)
     : ProjectManager(id_, name_, pos, projects_[0]) {
     projects = projects_;
 }
