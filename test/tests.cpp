@@ -44,7 +44,7 @@ TEST(testEmployee, test6) {
 
 TEST(testEmployee, test7) {
   Project* p = new Project(1, 6);
-  EXPECT_EQ(1, p->getBudget());
+  EXPECT_EQ(6, p->getBudget());
 }
 
 TEST(testEmployee, test8) {
