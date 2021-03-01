@@ -16,7 +16,7 @@ float Personal::getPaymentbyWorkTime() {
 
 Cleaner::Cleaner(std::string name, unsigned int id,
     float base, std::string position) : Personal(name, id,
-        base, position) {};
+        base, position) {}
 
 float Cleaner::getPayment() {
     payment = getPaymentbyWorkTime();
