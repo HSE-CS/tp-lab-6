@@ -1,0 +1,14 @@
+1 Ilya Programmer 8 90 0 0.18
+2 Dima Tester 7 30 0 0.09 3
+3 Daniil TeamLeader 9 100 0 0.21
+4 Oleg Driver 9 13
+5 Tanya Cleaner 9 11
+6 Sonya Programmer 9 90 1 0.30
+7 Alexey Tester 11 93 1 0.39 3
+8 Ilya Programmer 13 99 2 0.21
+9 Nikolay Programmer 3 99 2 0.09
+10 Egor Tester 7 93 2 0.30 3
+11 Evgeniy ProjectManager 0
+12 Ilya ProjectManager 1
+13 Alexey ProjectManager 2
+14 Michail SeniorManager
