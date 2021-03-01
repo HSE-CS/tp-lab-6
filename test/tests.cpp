@@ -2,6 +2,10 @@
 
 #include <gtest/gtest.h>
 #include <string>
+#include "Engineer.h"
+#include "Factory.h"
+#include "Manager.h"
+#include "Personal.h"
 
 TEST(TestStaff, Test1) {
   Project* pr = new Project{ 12214, 100000 };
