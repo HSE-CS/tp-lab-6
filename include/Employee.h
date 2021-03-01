@@ -25,7 +25,6 @@ std::string _id;
 int _budget;
 };
 
-
 class Employee {
  public:
 Employee(id_type id, const std::string& name);
