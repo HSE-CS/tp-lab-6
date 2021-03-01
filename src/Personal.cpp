@@ -1,8 +1,8 @@
 // Copyright 2021 Lab_6 TiNa
 #include "Personal.h"
+#include <math.h>
 #include <iostream>
 #include <string>
-#include <math.h>
 
 int Personal::calcBase(int hour_salary, int work_time) {
   return (hour_salary * work_time);
@@ -13,7 +13,8 @@ int Personal::calc() {
   return salary;
 }
 
-float Personal::calcBonus() { return floor(getPayment() * getWorktime() * 0.3); }
+float Personal::calcBonus() { return floor(getPayment() *
+                                           getWorktime() * 0.3); }
 
 int Personal::getSalary() { return salary; }
 
