@@ -47,7 +47,8 @@ std::vector<Employee*> Factory::makeStaff(std::string projectsPath,
                     break;
                 }
             }
-            employees.push_back(new Tester(id, name, TESTER, salary, proj_pointer));
+            employees.push_back(new Tester(id, name, TESTER,
+                  salary, proj_pointer));
         } else if (position == "PROGRAMMER") {
             pos = npos + 1;
             npos = line.find(';', pos);
