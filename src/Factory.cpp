@@ -36,5 +36,6 @@ std::vector<Personal*> Factory::makeStaff() {
     std::cout << "FILE ISN'T OPEN" << std::endl;
   }
 
+  filein.close();
   return staff;
 }
