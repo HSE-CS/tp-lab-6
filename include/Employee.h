@@ -3,7 +3,8 @@
 
 #include <string>
 
-enum Position { EMPLOYEE, PERSONAL, ENGINEER, CLEANER, DRIVER, PROGRAMMER, TESTER, TEAM_LEADER, PROJECT_MANAGER, SENIOR_MANAGER };
+enum Position { EMPLOYEE, PERSONAL, ENGINEER, CLEANER, DRIVER,
+	PROGRAMMER, TESTER, TEAM_LEADER, PROJECT_MANAGER, SENIOR_MANAGER };
 
 class Employee {
  protected:
@@ -14,7 +15,7 @@ class Employee {
   int payment;
 
  public:
-  Employee(unsigned int id_, std::string& name_, Position pos);
+  Employee(unsigned int id_, const std::string& name_, Position pos);
   void setWorkTime(int t);
   unsigned int getId();
   std::string getName();
@@ -23,7 +24,6 @@ class Employee {
   int getPayment();
   virtual void calc() = 0;
   virtual void printInfo() = 0;
-
 };
 
 class Project{
@@ -34,8 +34,7 @@ class Project{
 
  public:
   int numOfWorkers = 0;
-  Project(unsigned int id_, std::string& name_, int budget_);
+  Project(unsigned int id_, const std::string& name_, int budget_);
   std::string getName();
   int getBudget();
-
 };

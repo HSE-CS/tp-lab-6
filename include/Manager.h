@@ -2,6 +2,7 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -12,7 +13,8 @@ class ProjectManager: public Employee, public ProjectBudget, public Heading {
   int calcProAdditions();
   int calcBudgetPart(float part, int budget);
  public:
-  ProjectManager(unsigned int id_, std::string& name_, Position pos, Project* project_);
+  ProjectManager(unsigned int id_, const std::string& name_,
+	  Position pos, Project* project_);
   void calc();
   void printInfo();
 
@@ -23,7 +25,7 @@ class SeniorManager: public ProjectManager{
   int calcHeads();
 
  public:
-  SeniorManager(unsigned int id_, std::string& name_, Position pos, std::vector <Project*> &projects_);
+  SeniorManager(unsigned int id_, const std::string& name_,
+	  Position pos, std::vector <Project*> &projects_);
   void calc();
-
 };

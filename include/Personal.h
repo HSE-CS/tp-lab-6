@@ -2,6 +2,7 @@
 #pragma once
 
 #include <iostream>
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -11,7 +12,7 @@ class Personal: public Employee, public WorkBaseTime {
   int calcBase(int salary, int wtime);
 
  public:
-  Personal(unsigned int id_, std::string& name_, Position pos, int salary_);
+  Personal(unsigned int id_, const std::string& name_, Position pos, int salary_);
   void printInfo();
 };
 
@@ -21,7 +22,7 @@ class Driver: public Personal {
   int calcBonus();
 
  public:
-  Driver(unsigned int id_, std::string& name_, Position pos, int salary_);
+  Driver(unsigned int id_, const std::string& name_, Position pos, int salary_);
   void calc();
 };
 
@@ -30,6 +31,6 @@ class Cleaner: public Personal {
   int calcBonus();
 
  public:
-  Cleaner(unsigned int id_, std::string& name_, Position pos, int salary_);
+  Cleaner(unsigned int id_, const std::string& name_, Position pos, int salary_);
   void calc();
 };

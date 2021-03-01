@@ -12,5 +12,6 @@
 
 class Factory {
  public:
-	static std::vector <Employee*> makeStaff(std::string projectsPath, std::string staffPath);
+  static std::vector <Employee*> makeStaff(std::string projectsPath,
+	  std::string staffPath);
 };
