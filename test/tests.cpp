@@ -9,32 +9,32 @@
 #include <string>
 
 TEST(PostfixTest, test1) {
-  Employee* empl = new Employee(225, "Abramova Arina Ivanovna", "Driver", 6, 167);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
   EXPECT_EQ(225, empl->getId());
 }
 
 TEST(PostfixTest, test2) {
-  Employee* empl = new Employee(225, "Abramova Arina Ivanovna", "Driver", 6, 167);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
   EXPECT_EQ("Abramova Arina Ivanovna", empl->getName());
 }
 
 TEST(PostfixTest, test3) {
-  Employee* empl = new Employee(225, "Abramova Arina Ivanovna", "Driver", 6, 167);
-  EXPECT_EQ("Driver", empl->getPosition());
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
+  EXPECT_EQ("Cleaner", empl->getPosition());
 }
 
 TEST(PostfixTest, test4) {
-  Employee* empl = new Employee(225, "Abramova Arina Ivanovna", "Driver", 6, 167);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
   EXPECT_EQ(6, empl->getWorktime());
 }
 
 TEST(PostfixTest, test5) {
-  Employee* empl = new Employee(225, "Abramova Arina Ivanovna", "Driver", 6, 167);
-  EXPECT_EQ(167, empl->getPayment());
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
+  EXPECT_EQ(1002, empl->getPayment());
 }
 
 TEST(PostfixTest, test6) {
-  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Driver", 167, 6, 1002);
+  Driver* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Driver", 167, 6, 1002);
   EXPECT_EQ(1002, cl->getPayment());
 }
 
