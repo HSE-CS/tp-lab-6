@@ -1,5 +1,6 @@
 // Copyright 2021 Tatsenko Ilya
 #pragma once
+#include<string>
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -28,7 +29,8 @@ class Driver : public Personal {
 class Cleaner : public Personal {
  public:
   Cleaner(int id, std::string name, std::string position, int worktime,
-         int salary)
+          int salary)
       : Personal(id, name, position, worktime, salary) {}
   double calcBonus() override;
 };
+

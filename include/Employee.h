@@ -1,6 +1,6 @@
 // Copyright 2021 Tatsenko Ilya
 #pragma once
-#include<string>
+#include <string>
 
 class Employee {
  private:
@@ -20,7 +20,7 @@ class Employee {
   virtual void printInfo() = 0;
 
   void setId(int x);
-  //void setWorkTime(int x);
+  // void setWorkTime(int x);
   void setName(std::string x);
   void setPosition(std::string x);
   void setPayment(double x);
@@ -31,3 +31,4 @@ class Employee {
   std::string getPosition();
   double getPayment();
 };
+

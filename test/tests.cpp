@@ -1,10 +1,10 @@
 // Copyright 2021 Tatsenko Ilya
 #include <gtest/gtest.h>
 
-#include"Employee.h"
-#include"Engineer.h"
-#include"Manager.h"
-#include"Personal.h"
+#include "Employee.h"
+#include "Engineer.h"
+#include "Manager.h"
+#include "Personal.h"
 
 TEST(EmployTest, test1) {
   Personal emp(1, "Ilya", "Driver", 8, 30);
@@ -35,7 +35,7 @@ TEST(EmployTest, test5) {
 }
 
 TEST(EmployTest, test6) {
-  Project * project = new Project("HSE",300000,1);
+  Project* project = new Project("HSE", 300000, 1);
   float part = 0.3;
   Programmer prog(1, "Ilya", "Programmer", 9, 99, project, part);
   prog.calc();
@@ -69,7 +69,8 @@ TEST(EmployTest, test11) {
   Project* project = new Project("HSE", 300000, 1);
   std::vector<Project*> project_;
   project_.push_back(project);
-  ProjectManager manager(1, "Ilya", "ProjectManager", project_, 0);// nomer projecta = 0, not 1;
+  ProjectManager manager(1, "Ilya", "ProjectManager", project_,
+                         0);  // nomer projecta = 0, not 1;
   manager.calc();
   EXPECT_EQ(1000 + 300000, manager.getPayment());
 }

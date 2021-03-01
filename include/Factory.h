@@ -1,6 +1,6 @@
 // Copyright 2021 Tatsenko Ilya
-#include<vector>
-#include"Employee.h"
+#include <vector>
+#include "Employee.h"
 
 class Factory {
  private:
@@ -8,5 +8,5 @@ class Factory {
 
  public:
   std::vector<Employee*> makeStaff(std::string proj_filen,
-                                    std::string staf_filen);
+                                   std::string staf_filen);
 };

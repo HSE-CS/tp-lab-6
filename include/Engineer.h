@@ -9,11 +9,13 @@ class Engineer : public IProjectBudjet, public Personal {
   float part;
 
  public:
-  Engineer(int id, std::string name, std::string position, int worktime, int salary, Project *
-           project, float part)
-      : project(project),
-        part(part),
-        Personal(id, name, position, worktime, salary) {}
+  Engineer(int id, std::string name,
+        std::string position,
+        int worktime, int salary, Project*
+        project, float part)
+        : project(project),
+          part(part),
+          Personal(id, name, position, worktime, salary) {}
   int calcBudjetPart(float part, int budjet) override;
   int calcProAdditions() override;
   void calc() override;
@@ -26,17 +28,24 @@ class Tester : public Engineer {
  private:
   int k;
  public:
-  Tester(int id, std::string name, std::string position, int worktime, int salary, Project*
-         project, float part, int k)
-      : k(k), Engineer(id, name, position, worktime, salary, project, part) {}
+  Tester(int id, std::string name,
+      std::string position, int worktime,
+      int salary,
+      Project* project,
+      float part, int k)
+      : k(k),
+      Engineer(id, name, position, worktime, salary, project, part) {}
   int calcProAdditions() override;
 };
 
 
 class Programmer : public Engineer {
  public:
-  Programmer(int id, std::string name, std::string position, int worktime, int salary,
-             Project* project, float part)
+  Programmer(int id, std::string name,
+      std::string position,
+      int worktime, 
+      int salary,
+      Project* project, float part)
       : Engineer(id, name, position, worktime, salary, project, part) {}
   int calcProAdditions() override;
 };
@@ -44,9 +53,13 @@ class Programmer : public Engineer {
 
 class TeamLeader : public Programmer, public IHeading {
  public:
-  TeamLeader(int id, std::string name, std::string position, int worktime, int salary,
-             Project* project, float part)
+  TeamLeader(int id, std::string name,
+      std::string position,
+      int worktime,
+      int salary,
+      Project* project, float part)
       : Programmer(id, name, position, worktime, salary, project, part) {}
   int calcHeads() override;
   void calc() override;
  };
+

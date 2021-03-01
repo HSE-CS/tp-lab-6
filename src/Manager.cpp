@@ -1,9 +1,12 @@
 // Copyright 2021 Tatsenko Ilya
-#include"Manager.h"
-#include<iostream>
-int ProjectManager::calcHeads() { return this->projects[this->n]->getNumber() * 1000; }
+#include "Manager.h"
+#include <iostream>
+int ProjectManager::calcHeads() {
+  return this->projects[this->n]->getNumber() * 1000;
+}
 void ProjectManager::calc() {
-  this->setPayment((this->projects[this->n]->getBudjet() / this->projects[this->n]->getNumber()) +
+  this->setPayment((this->projects[this->n]->getBudjet() /
+                    this->projects[this->n]->getNumber()) +
                    calcHeads());
 }
 
@@ -27,7 +30,6 @@ void ProjectManager::printInfo() {
   std::cout << std::endl;
 }
 
-
 void SeniorManager::printInfo() {
   std::cout << "ID: " << this->getId() << " "
             << "Name: " << this->getName() << "  "
@@ -43,3 +45,4 @@ void SeniorManager::printInfo() {
             << "Payment: " << this->getPayment();
   std::cout << std::endl;
 }
+

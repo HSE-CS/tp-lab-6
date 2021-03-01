@@ -5,7 +5,8 @@
 double Personal::calcBase(int salary, int wtime) { return (salary * wtime); }
 double Personal::calcBonus() { return 0.0; }
 void Personal::calc() {
-  this->setPayment(this->calcBase(this->salary, this->getWorkTime()) + this->calcBonus());
+  this->setPayment(this->calcBase(this->salary, this->getWorkTime()) +
+                   this->calcBonus());
 }
 
 void Personal::printInfo() {
@@ -17,7 +18,6 @@ void Personal::printInfo() {
             << "Payment: " << this->getPayment();
   std::cout << std::endl;
 }
-
 
 double Driver::calcBonus() {
   if (this->getWorkTime() > 8) {
