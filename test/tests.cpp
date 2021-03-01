@@ -10,27 +10,27 @@
 
 TEST(PostfixTest, test1) {
   Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
-  EXPECT_EQ(225, empl->getId());
+  EXPECT_EQ(225, cl->getId());
 }
 
 TEST(PostfixTest, test2) {
   Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
-  EXPECT_EQ("Abramova Arina Ivanovna", empl->getName());
+  EXPECT_EQ("Abramova Arina Ivanovna", cl->getName());
 }
 
 TEST(PostfixTest, test3) {
   Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
-  EXPECT_EQ("Cleaner", empl->getPosition());
+  EXPECT_EQ("Cleaner", cl->getPosition());
 }
 
 TEST(PostfixTest, test4) {
   Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
-  EXPECT_EQ(6, empl->getWorktime());
+  EXPECT_EQ(6, cl->getWorktime());
 }
 
 TEST(PostfixTest, test5) {
   Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
-  EXPECT_EQ(1002, empl->getPayment());
+  EXPECT_EQ(1002, cl->getPayment());
 }
 
 TEST(PostfixTest, test6) {
