@@ -30,7 +30,7 @@ TEST(tests, test4) {
     EXPECT_EQ(10, d.getWorkTime());
 }
 
-TEST(tests, test4) {
+TEST(tests, test5) {
     std::string s = "Ivan";
     Driver d(1, s, DRIVER, 10);
     d.setWorkTime(1);
@@ -38,7 +38,7 @@ TEST(tests, test4) {
     EXPECT_EQ(510, d.getPayment());
 }
 
-TEST(tests, test5) {
+TEST(tests, test6) {
     std::string s = "Ivan";
     Driver d(1, s, CLEANER, 10);
     d.setWorkTime(1);
@@ -46,19 +46,19 @@ TEST(tests, test5) {
     EXPECT_EQ(10, d.getPayment());
 }
 
-TEST(tests, test6) {
+TEST(tests, test7) {
     std::string s = "project";
     Project p(1, s, 1000);
     EXPECT_EQ(1000, p.getBudget());
 }
 
-TEST(tests, test7) {
+TEST(tests, test8) {
     std::string s = "project";
     Project p(1, s, 1000);
     EXPECT_EQ("project", p.getName());
 }
 
-TEST(tests, test8) {
+TEST(tests, test9) {
     std::string s1 = "project";
     Project *p = new Project(1, s1, 10);
     p->numOfWorkers = 2;
@@ -68,7 +68,7 @@ TEST(tests, test8) {
     EXPECT_EQ(505, t.getPayment());
 }
 
-TEST(tests, test9) {
+TEST(tests, test10) {
     std::string s1 = "project";
     Project* p = new Project(1, s1, 10);
     p->numOfWorkers = 2;
@@ -78,7 +78,7 @@ TEST(tests, test9) {
     EXPECT_EQ(1005, t.getPayment());
 }
 
-TEST(tests, test10) {
+TEST(tests, test11) {
     std::string s1 = "project";
     Project* p = new Project(1, s1, 10);
     p->numOfWorkers = 2;
@@ -88,7 +88,7 @@ TEST(tests, test10) {
     EXPECT_EQ(405, t.getPayment());
 }
 
-TEST(tests, test11) {
+TEST(tests, test12) {
     std::string s1 = "project";
     Project* p = new Project(1, s1, 10);
     p->numOfWorkers = 2;
@@ -99,7 +99,7 @@ TEST(tests, test11) {
     EXPECT_EQ(505, t.getPayment());
 }
 
-TEST(tests, test12) {
+TEST(tests, test13) {
     std::string s1 = "project";
     Project* p = new Project(1, s1, 10);
     p->numOfWorkers = 2;
@@ -109,7 +109,7 @@ TEST(tests, test12) {
     EXPECT_EQ(605, t.getPayment());
 }
 
-TEST(tests, test13) {
+TEST(tests, test14) {
     std::string s1 = "project";
     Project* p = new Project(1, s1, 10);
     p->numOfWorkers = 2;
@@ -121,7 +121,7 @@ TEST(tests, test13) {
     EXPECT_EQ(405, t.getPayment());
 }
 
-TEST(tests, test14) {
+TEST(tests, test15) {
     std::string s1 = "project1";
     Project* p1 = new Project(11, s1, 10);
     p1->numOfWorkers = 2;
@@ -137,7 +137,7 @@ TEST(tests, test14) {
     EXPECT_EQ(815, t.getPayment());
 }
 
-TEST(tests, test15) {
+TEST(tests, test16) {
     std::string s1 = "project1";
     Project* p1 = new Project(11, s1, 10);
     p1->numOfWorkers = 1;

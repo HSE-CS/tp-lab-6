@@ -8,10 +8,10 @@ class Engineer: public Personal, public ProjectBudget {
   Project* project;
   int calcBudgetPart(float part, int budget);
   int calcBonus();
-  void calc();
  public:
   Engineer(unsigned int id_, const std::string& name_,
     Position pos, int salary_, Project* project_);
+  void calc();
   void printInfo();
 };
 
@@ -34,9 +34,9 @@ class Tester: public Engineer{
 class TeamLeader: public Programmer, public Heading{
  private:
   int calcHeads();
-  void calc();
   int calcProAdditions();
  public:
   TeamLeader(unsigned int id_, const std::string& name_,
     Position pos, int salary_, Project* project_);
+  void calc();
 };
