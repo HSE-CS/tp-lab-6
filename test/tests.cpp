@@ -31,7 +31,7 @@ TEST(EmployTest, test4) {
 TEST(EmployTest, test5) {
   Driver driver(1, "xxx", "Driver", 18, 13);
   driver.calc();
-  EXPECT_EQ(273, driver.getPayment());
+  EXPECT_EQ(237, driver.getPayment());
 }
 
 TEST(EmployTest, test6) {
@@ -39,7 +39,7 @@ TEST(EmployTest, test6) {
   float part = 0.3;
   Programmer prog(1, "Ilya", "Programmer", 9, 99, project, part);
   prog.calc();
-  EXPECT_EQ(300 + 9 * 99, prog.getPayment());
+  EXPECT_EQ(90891, prog.getPayment());
 }
 
 TEST(EmployTest, test7) {
@@ -47,7 +47,7 @@ TEST(EmployTest, test7) {
   float part = 0.19;
   Tester tester(1, "Ilya", "Programmer", 9, 99, project, part, 3);
   tester.calc();
-  EXPECT_EQ(300 + 9 * 99, tester.getPayment());
+  EXPECT_EQ(58191, tester.getPayment());
 }
 
 TEST(EmployTest, test8) {
