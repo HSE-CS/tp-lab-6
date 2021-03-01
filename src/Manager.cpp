@@ -38,7 +38,6 @@ void ProjectManager::printInfo() {
     }
   }
   std::cout << std::endl;
-
 }
 
 int SeniorManager::calc() {

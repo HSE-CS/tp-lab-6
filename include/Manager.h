@@ -7,13 +7,15 @@
 #include "Employee.h"
 #include "Interfaces.h"
 #include "Factory.h"
+#include <string>
 
 class ProjectManager : public Employee, Heading {
  public:
-  explicit ProjectManager(int id, std::string name, std::string position, int workTime, int payment, std::vector <Project*> projects)
-    :Employee(id, name, position, workTime, payment) {
-    this->projects = projects;
-  };
+   explicit ProjectManager(int id, std::string name, std::string position,
+     int workTime, int payment, std::vector <Project*> projects)
+     :Employee(id, name, position, workTime, payment) {
+     this->projects = projects;
+   }
   ~ProjectManager();
   std::vector <Project*> getProjects();
   int calc() override;
@@ -29,7 +31,7 @@ class SeniorManager : public ProjectManager {
  public:
   explicit SeniorManager(int id, std::string name, std::string position,
     int workTime, int payment, std::vector <Project*> projects)
-    : ProjectManager(id, name, position, workTime, payment, projects) {};
+    : ProjectManager(id, name, position, workTime, payment, projects) {}
   ~SeniorManager();
   int calc() override;
   void printInfo() override;

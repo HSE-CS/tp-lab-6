@@ -8,9 +8,9 @@
 
 class Personal : public Employee, WorkBaseTime {
  public:
-  explicit Personal(int id, std::string name, std::string position, 
-    int workTime, int payment) 
-    : Employee(id, name, position, workTime, payment) {};
+  explicit Personal(int id, std::string name, std::string position,
+    int workTime, int payment)
+    : Employee(id, name, position, workTime, payment) {}
   void setSalary(int salary);
   int getSalary();
   int calc() override;
@@ -25,7 +25,7 @@ class Driver : public Personal {
  public:
   explicit Driver(int id, std::string name, std::string position,
     int workTime, int payment)
-    : Personal(id, name, position, workTime, payment) {};
+    : Personal(id, name, position, workTime, payment) {}
   int calc();
   int calcBase(int salary, int worktime) override;
   void printInfo() override;
@@ -34,8 +34,8 @@ class Driver : public Personal {
 class Cleaner : public Personal {
  public:
   explicit Cleaner(int id, std::string name, std::string position,
-    int workTime, int payment) 
-    : Personal(id, name, position, workTime, payment) {};
+    int workTime, int payment)
+    : Personal(id, name, position, workTime, payment) {}
   int calc();
   int calcBase(int salary, int worktime) override;
   void printInfo() override;

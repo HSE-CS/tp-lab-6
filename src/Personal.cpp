@@ -10,8 +10,7 @@ int Personal::getSalary() {
   return salary;
 }
 
-int Personal::calc()
-{
+int Personal::calc() {
   salary = 0;
   return 0;
 }
