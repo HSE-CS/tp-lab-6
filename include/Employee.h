@@ -19,7 +19,8 @@ Driver,
 };
 
 
-struct Project {
+class Project {
+ public:
 std::string _id;
 int _budget;
 };
