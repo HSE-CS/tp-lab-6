@@ -14,8 +14,8 @@ class Engineer : public IProjectBudjet, public Personal {
       : project(project),
         part(part),
         Personal(id, name, position, worktime, salary) {}
-  int virtual calcBudjetPart(float part, int budjet) override;
-  int virtual calcProAdditions() override;
+  int calcBudjetPart(float part, int budjet) override;
+  int calcProAdditions() override;
   void calc() override;
 
   float getPart();
@@ -26,9 +26,10 @@ class Tester : public Engineer {
  private:
   int k;
  public:
-  Tester(int id, std::string name, std::string position, int worktime, int salary, Project* project, float part, int k)
+  Tester(int id, std::string name, std::string position, int worktime, int salary, Project*
+         project, float part, int k)
       : k(k), Engineer(id, name, position, worktime, salary, project, part) {}
-  virtual int calcProAdditions() override;
+  int calcProAdditions() override;
 };
 
 
@@ -37,7 +38,7 @@ class Programmer : public Engineer {
   Programmer(int id, std::string name, std::string position, int worktime, int salary,
              Project* project, float part)
       : Engineer(id, name, position, worktime, salary, project, part) {}
-  virtual int calcProAdditions() override;
+  int calcProAdditions() override;
 };
 
 
@@ -46,6 +47,6 @@ class TeamLeader : public Programmer, public IHeading {
   TeamLeader(int id, std::string name, std::string position, int worktime, int salary,
              Project* project, float part)
       : Programmer(id, name, position, worktime, salary, project, part) {}
-  virtual int calcHeads() override;
-  virtual void calc() override;
+  int calcHeads() override;
+  void calc() override;
  };
