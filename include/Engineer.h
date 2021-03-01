@@ -7,8 +7,6 @@
 #include <iostream>
 #include <string>
 
-//class Project;
-
 class Engineer : public Personal, public ProjectBudget {
  protected:
   Project* project;
