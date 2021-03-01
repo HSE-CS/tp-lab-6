@@ -34,7 +34,7 @@ TEST(PostfixTest, test5) {
 }
 
 TEST(PostfixTest, test6) {
-  Driver* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Driver", 167, 6, 1002);
+  Driver* cl = new Driver(225, "Abramova Arina Ivanovna", "Driver", 167, 6, 1002);
   EXPECT_EQ(1002, cl->getPayment());
 }
 
