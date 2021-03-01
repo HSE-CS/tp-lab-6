@@ -46,7 +46,7 @@ int TeamLeader::calcHeads() { return 100; }
 
 int TeamLeader::calc() {
   payment = calcBase(getPayment(), getWorktime()) +
-            calcBudgetPart(contrib, project->budget) + 
+            calcBudgetPart(contrib, project->budget) +
             calcProAdditions() + calcHeads();
   return payment;
 }
