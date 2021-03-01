@@ -25,7 +25,7 @@ int Engineer::calcBonus() { return 0; }
 
 void Engineer::calc() {
     payment = calcBase(salary, worktime) +
-        calcBudgetPart(1 / project->numOfWorkers, project->getBudget()) +
+        calcBudgetPart(1.0f / project->numOfWorkers, project->getBudget()) +
         calcProAdditions();
 }
 
@@ -50,6 +50,6 @@ int TeamLeader::calcProAdditions() { return 0; }
 int TeamLeader::calcHeads() { return project->numOfWorkers * 200; }
 void TeamLeader::calc() {
     payment = calcBase(salary, worktime) +
-        calcBudgetPart(1 / project->numOfWorkers, project->getBudget()) +
+        calcBudgetPart(1.0f / project->numOfWorkers, project->getBudget()) +
         calcHeads();
 }

@@ -40,7 +40,7 @@ TEST(tests, test5) {
 
 TEST(tests, test6) {
     std::string s = "Ivan";
-    Driver d(1, s, CLEANER, 10);
+    Cleaner d(1, s, CLEANER, 10);
     d.setWorkTime(1);
     d.calc();
     EXPECT_EQ(10, d.getPayment());

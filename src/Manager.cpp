@@ -31,7 +31,7 @@ void ProjectManager::printInfo() {
 }
 
 void ProjectManager::calc() {
-    payment = calcHeads() + calcBudgetPart(1 / projects[0]->numOfWorkers,
+    payment = calcHeads() + calcBudgetPart(1.0f / projects[0]->numOfWorkers,
         projects[0]->getBudget());
 }
 
@@ -52,6 +52,6 @@ int SeniorManager::calcHeads() {
 void SeniorManager::calc() {
     payment = calcHeads();
     for (Project* p : projects) {
-        payment += calcBudgetPart(1 / p->numOfWorkers, p->getBudget());
+        payment += calcBudgetPart(1.0f / p->numOfWorkers, p->getBudget());
     }
 }
