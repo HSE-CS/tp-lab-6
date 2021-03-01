@@ -1,7 +1,8 @@
 // Copyright 2020 Polina Lukicheva
 #include "Employee.h"
 
-Employee::Employee(int id, std::string name, std::string position, int workTime, int payment) {
+Employee::Employee(int id, std::string name, std::string position,
+  int workTime, int payment) {
   this->id = id;
   this->name = name;
   this->position = position;

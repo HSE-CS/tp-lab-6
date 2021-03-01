@@ -5,7 +5,6 @@
 #include <fstream>
 #include <vector>
 #include <iostream>
-#include "Factory.h"
 #include "Manager.h"
 #include "Employee.h"
 #include "Engineer.h"
@@ -30,29 +29,23 @@ std::vector<Employee*> readData(std::string fileName) {
       if (position == "cleaner") {
         employee.push_back(new Cleaner(stoi(id), name, position,
           stoi(worktime), stoi(salary)));
-      }
-      else if (position == "driver") {
+      } else if (position == "driver") {
         employee.push_back(new Driver(stoi(id), name, position,
           stoi(worktime), stoi(salary)));
-      }
-      else if (position == "tester") {
+      } else if (position == "tester") {
         employee.push_back(new Tester(stoi(id), name, position,
           stoi(worktime), stoi(salary), nullptr));
-      }
-      else if (position == "programmer") {
+      } else if (position == "programmer") {
         employee.push_back(new Programmer(stoi(id), name, position,
           stoi(worktime), stoi(salary), nullptr));
-      }
-      else if (position == "teamleader") {
+      } else if (position == "teamleader") {
         employee.push_back(new TeamLeader(stoi(id), name, position,
           stoi(worktime), stoi(salary), nullptr));
-      }
-      else if (position == "project manager") {
+      } else if (position == "project manager") {
         std::vector <Project*> pr;
         employee.push_back(new ProjectManager(stoi(id), name, position,
           stoi(worktime), stoi(salary), pr));
-      }
-      else if (position == "senior manager") {
+      } else if (position == "senior manager") {
         std::vector <Project*> pr;
         employee.push_back(new SeniorManager(stoi(id), name, position,
           stoi(worktime), stoi(salary), pr));

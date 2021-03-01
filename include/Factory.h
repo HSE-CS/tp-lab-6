@@ -3,6 +3,7 @@
 #define INCLUDE_FACTORY_H_
 
 #include <vector>
+#include "string"
 #include "Employee.h"
 
 struct Project {

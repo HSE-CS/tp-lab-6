@@ -27,7 +27,8 @@ class ProjectManager : public Employee, Heading {
 
 class SeniorManager : public ProjectManager {
  public:
-  explicit SeniorManager(int id, std::string name, std::string position, int workTime, int payment, std::vector <Project*> projects)
+  explicit SeniorManager(int id, std::string name, std::string position,
+    int workTime, int payment, std::vector <Project*> projects)
     : ProjectManager(id, name, position, workTime, payment, projects) {};
   ~SeniorManager();
   int calc() override;

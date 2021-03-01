@@ -11,7 +11,6 @@ int Engineer::calcProAdditions() {
 }
 
 Project* Engineer::getProject() {
-
   return project;
 }
 
@@ -31,8 +30,7 @@ void Engineer::printInfo() {
       std::cout <<
         ", project id " + std::to_string(getProject()->id) +
         ", project budget " + std::to_string(getProject()->budget) << std::endl;
-    }
-    else {
+    } else {
       std::cout << std::endl;
     }
   }
@@ -63,8 +61,7 @@ void Tester::printInfo() {
   if (getProject() != nullptr) {
     std::cout << ", project id " + std::to_string(getProject()->id) +
       ", project budget " + std::to_string(getProject()->budget) << std::endl;
-  }
-  else {
+  } else {
     std::cout << std::endl;
   }
 }
@@ -90,8 +87,7 @@ void Programmer::printInfo() {
   if (getProject() != nullptr) {
     std::cout << ", project id " + std::to_string(getProject()->id) +
       ", project budget " + std::to_string(getProject()->budget) << std::endl;
-  }
-  else {
+  } else {
     std::cout << std::endl;
   }
 }
@@ -117,8 +113,7 @@ void TeamLeader::printInfo() {
   if (getProject() != nullptr) {
     std::cout << ", project id " + std::to_string(getProject()->id) +
       ", project budget " + std::to_string(getProject()->budget) << std::endl;
-  }
-  else {
+  } else {
     std::cout << std::endl;
   }
 }

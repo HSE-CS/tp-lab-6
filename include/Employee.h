@@ -6,7 +6,8 @@
 
 class Employee {
  public:
-  explicit Employee(int id, std::string name, std::string position, int workTime, int payment);
+  explicit Employee(int id, std::string name, std::string position,
+    int workTime, int payment);
   void setWorkTime(int workTime);
   virtual int calc() = 0;
   virtual void printInfo() = 0;
