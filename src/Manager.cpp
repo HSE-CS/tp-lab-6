@@ -33,8 +33,7 @@ void ProjectManager::printInfo() {
     if (pr != nullptr) {
       std::cout << ", project id " + std::to_string(pr->id) +
         ", project budget " + std::to_string(pr->budget) << std::endl;
-    }
-    else {
+    } else {
       std::cout << std::endl;
     }
   }
