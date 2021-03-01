@@ -1,6 +1,7 @@
 #pragma once
 // Copyright 2021 Tatsenko Ilya
 #include <vector>
+#include<string>
 #include "Employee.h"
 
 class Factory {
