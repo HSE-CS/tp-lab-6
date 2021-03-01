@@ -1,5 +1,6 @@
 // Copyright 2021 Tatsenko Ilya
 #pragma once
+#include<string>
 #include"Interfaces.h"
 #include"Personal.h"
 
@@ -43,7 +44,7 @@ class Programmer : public Engineer {
  public:
   Programmer(int id, std::string name,
       std::string position,
-      int worktime, 
+      int worktime,
       int salary,
       Project* project, float part)
       : Engineer(id, name, position, worktime, salary, project, part) {}
