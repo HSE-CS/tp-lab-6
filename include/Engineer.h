@@ -28,7 +28,7 @@ class Tester : public Engineer {
 };
 class Programmer : public Engineer {
  public:
-    Programmer(std::string name, unsigned int id, 
+    Programmer(std::string name, unsigned int id,
         float base, std::string position,
         std::string project, float contribution);
     float getPayment() override;

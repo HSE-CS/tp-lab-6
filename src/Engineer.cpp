@@ -24,7 +24,7 @@ float Engineer::getPaymentbyProject() {
 Tester::Tester(std::string name, unsigned int id,
     float base, std::string position, std::string project,
     float contribution)
-    : Engineer(name, id, base, position, project, contribution);
+    : Engineer(name, id, base, position, project, contribution) {};
 
 float Tester::getPayment() {
     payment = getPaymentbyWorkTime() + getPaymentbyProject();
@@ -34,7 +34,7 @@ float Tester::getPayment() {
 Programmer::Programmer(std::string name, unsigned int id,
     float base, std::string position, std::string project,
     float contribution)
-    : Engineer(name, id, base, position, project, contribution);
+    : Engineer(name, id, base, position, project, contribution) {};
 
 float Programmer::getPayment() {
     payment = getPaymentbyWorkTime() + getPaymentbyProject();

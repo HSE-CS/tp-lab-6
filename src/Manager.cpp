@@ -39,5 +39,5 @@ float ProjectManager::getPayment() {
 SeniorManager::SeniorManager(std::string name, unsigned int id,
     std::string position, std::string project, float contribution,
     unsigned int subordinates)
-:ProjectManager(name, id, position, project, contribution, 
-    subordinates);
+:ProjectManager(name, id, position, project, contribution,
+    subordinates) {};

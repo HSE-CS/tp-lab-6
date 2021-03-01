@@ -62,7 +62,7 @@ Employee* Factory::createEmployee(std::vector<std::string> data) {
         p = new Programmer(name, emp_id, base, position, data[6], contribution);
         break;
     case posTeamLeader:
-    	base = stof(data[5]);
+        base = stof(data[5]);
         contribution = stof(data[7]);
         subordinates = atoi(data[8].c_str());
         p = new TeamLeader(name, emp_id, base, position, data[6],
