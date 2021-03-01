@@ -16,7 +16,6 @@
 extern std::map<std::string, int> projects;
 
 std::vector<Employee*> createEmployees() {
-    system("chcp 65001");
     std::ifstream fin("names.txt");
     std::string buf;
     std::vector<std::string> str;
@@ -30,7 +29,6 @@ std::vector<Employee*> createEmployees() {
 }
 
 void createProjects() {
-    system("chcp 65001");
     std::ifstream fin("projects.txt");
     std::string buf;
     std::vector<std::string> str;
