@@ -9,48 +9,57 @@
 #include <string>
 
 TEST(PostfixTest, test1) {
-  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna",
+                            "Cleaner", 167, 6, 1002);
   EXPECT_EQ(225, cl->getId());
 }
 
 TEST(PostfixTest, test2) {
-  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna",
+                            "Cleaner", 167, 6, 1002);
   EXPECT_EQ("Abramova Arina Ivanovna", cl->getName());
 }
 
 TEST(PostfixTest, test3) {
-  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna",
+                            "Cleaner", 167, 6, 1002);
   EXPECT_EQ("Cleaner", cl->getPosition());
 }
 
 TEST(PostfixTest, test4) {
-  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna",
+                            "Cleaner", 167, 6, 1002);
   EXPECT_EQ(6, cl->getWorktime());
 }
 
 TEST(PostfixTest, test5) {
-  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna", "Cleaner", 167, 6, 1002);
+  Cleaner* cl = new Cleaner(225, "Abramova Arina Ivanovna",
+                            "Cleaner", 167, 6, 1002);
   EXPECT_EQ(1002, cl->getPayment());
 }
 
 TEST(PostfixTest, test6) {
-  Driver* cl = new Driver(225, "Abramova Arina Ivanovna", "Driver", 167, 6, 1002);
+  Driver* cl = new Driver(225, "Abramova Arina Ivanovna",
+                          "Driver", 167, 6, 1002);
   EXPECT_EQ(1002, cl->getPayment());
 }
 
 TEST(PostfixTest, test7) {
-  Personal* pers = new Personal(225, "Abramova Arina Ivanovna", "Driver", 167, 6, 1002);
+  Personal* pers = new Personal(225, "Abramova Arina Ivanovna",
+                                "Driver", 167, 6, 1002);
   EXPECT_EQ(167, pers->getSalary());
 }
 
 TEST(PostfixTest, test8) {
-  Driver* pers = new Driver(225, "Abramova Arina Ivanovna", "Driver", 167, 6, 1002);
+  Driver* pers = new Driver(225, "Abramova Arina Ivanovna",
+                            "Driver", 167, 6, 1002);
   int sal = pers->calc();
   EXPECT_EQ(6012, sal);
 }
 
 TEST(PostfixTest, test9) {
-  Driver* pers = new Driver(225, "Abramova Arina Ivanovna", "Driver", 167, 32, 500);
+  Driver* pers = new Driver(225, "Abramova Arina Ivanovna",
+                            "Driver", 167, 32, 500);
   int sal = pers->calc();
   EXPECT_EQ(17600, sal);
 }
