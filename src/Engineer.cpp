@@ -1,8 +1,8 @@
 // Copyright 2021 Lab_6 TiNa
 #include "Engineer.h"
+#include <math.h>
 #include <iostream>
 #include <string>
-#include <math.h>
 
 float Engineer::calcBudgetPart(float contrib, int budget) {
   return floor(contrib * budget);
@@ -46,6 +46,7 @@ int TeamLeader::calcHeads() { return 100; }
 
 int TeamLeader::calc() {
   payment = calcBase(getPayment(), getWorktime()) +
-            calcBudgetPart(contrib, project->budget) + calcProAdditions() + calcHeads();
+            calcBudgetPart(contrib, project->budget) + 
+            calcProAdditions() + calcHeads();
   return payment;
 }
