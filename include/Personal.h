@@ -11,8 +11,8 @@ class Personal : public Employee, public WorkBaseTime {
   int salary;
 
  public:
-  Personal(int id, std::string name, std::string position, int salaryIn, int worktime,
-           int payment)
+  Personal(int id, std::string name, std::string position, int salaryIn,
+           int worktime, int payment)
       : Employee(id, name, position, worktime, payment), salary(salaryIn) {}
   int calcBase(int hour_salary, int work_time) override;
   int calc() override;
