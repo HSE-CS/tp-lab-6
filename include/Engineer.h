@@ -55,7 +55,7 @@ class TeamLeader : public Programmer, public Heading {
   TeamLeader(int id, std::string name, int salary,
              std::string position, int payment, Project* project);
   int calc();
-  int calcHeads();
+  int calcHeads(int);
 };
 
 #endif  // INCLUDE_ENGINEER_H_

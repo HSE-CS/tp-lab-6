@@ -25,6 +25,10 @@ int ProjectManager::calcHeads(int count) {
   return count * getPayment();
 }
 
+int ProjectManager::calcProAdditions() {
+  return 0;
+}
+
 int ProjectManager::calcBudgetPart(float part, int budget) {
   return part * budget;
 }

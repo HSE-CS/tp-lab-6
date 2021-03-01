@@ -1,5 +1,6 @@
 // Copyright 2021 Ryzhova Irina
 
+
 #include "Factory.h"
 
 std::vector<Employee*> StaffFactory::makeStaff(std::string data) {
@@ -10,7 +11,8 @@ std::vector<Employee*> StaffFactory::makeStaff(std::string data) {
   std::string id, budget;
   getline(file, id, ';');
   getline(file, budget);
-  Project project(stoi(id), stod(budget));
+  Project *project = new Project(stoi(id), stod(budget));
+  std::vector <Project*> projects = {project};
   while (getline(file, id, ';')) {
     std::string name, position, payment;
     getline(file, name, ';');
@@ -33,10 +35,11 @@ std::vector<Employee*> StaffFactory::makeStaff(std::string data) {
                          position, stoi(payment), project));
     } else if (position == "project manager") {
       employee.push_back(new ProjectManager(stoi(id), name,
-                         position, stoi(payment), project));
+                         position, stoi(payment), projects));
     } else if (position == "senior manager") {
       employee.push_back(new SeniorManager(stoi(id), name,
-                         position, stoi(payment), project));
+                         position, stoi(payment), projects));
     }
+  }
   return employee;
 }

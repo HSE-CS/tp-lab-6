@@ -19,6 +19,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
   std::vector <Project*> getProjects();
   int calc();
   int calcHeads(int);
+  int calcProAdditions();
   void printInfo();
   int calcBudgetPart(float part, int budget);
 };

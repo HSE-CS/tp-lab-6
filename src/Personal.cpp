@@ -21,6 +21,10 @@ int Personal::calc() {
   return getSalary();
 }
 
+int Personal::calcBonus() {
+  return 0;
+}
+
 int Personal::calcBase(int salary, int worktime) {
   return salary * worktime;
 }

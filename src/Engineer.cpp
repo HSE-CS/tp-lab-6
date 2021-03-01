@@ -97,10 +97,10 @@ TeamLeader::TeamLeader(int id, std::string name, int salary,
 int TeamLeader::calc() {
   float part = getProject()->getBudget() * 0.5 / getProject()->getCount();
   setSalary(calcBudgetPart(part, getProject()->getBudget()) +
-            calcBase(payment, worktime) + calcHeads());
+            calcBase(payment, worktime) + calcHeads(getProject()->getCount()));
   return getSalary();
 }
 
-int TeamLeader::calcHeads() {
-  return getProject()->getCount() * payment * 0.9;
+int TeamLeader::calcHeads(int count) {
+  return count * payment;
 }

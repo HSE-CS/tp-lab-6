@@ -16,6 +16,7 @@ class Personal : public Employee, public WorkBaseTime {
   int getSalary();
   void setSalary(int);
   int calc();
+  int calcBonus();
   void printInfo();
   int calcBase(int salary, int wtime);
 };
