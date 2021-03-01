@@ -62,5 +62,5 @@ class TeamLeader : public Programmer, public IHeading {
       : Programmer(id, name, position, worktime, salary, project, part) {}
   int calcHeads() override;
   void calc() override;
- };
+  };
 
