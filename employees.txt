@@ -1,0 +1,12 @@
+1;Ivan Petrov;DRIVER;500
+2;Artem Ivanov;CLEANER;200
+3;Petr Sidorov;TESTER;600;GameDev
+4;Ivan Sokolov;PROGRAMMER;800;GameDev
+5;Anton Kotov;TESTER;700;Science
+6;Semen Sokolov;PROGRAMMER;900;Science
+7;Egor Petuhov;PROGRAMMER;900;Science
+8;Loretta Hudson;TEAM_LEADER;1000;GameDev
+9;Marilyn Davis;TEAM_LEADER;1100;Science
+10;Tracy Price;PROJECT_MANAGER;GameDev
+11;Roberta King;PROJECT_MANAGER;Science
+12;Jean Brown;SENIOR_MANAGER

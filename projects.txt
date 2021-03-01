@@ -1,0 +1,4 @@
+1;GameDev;3000
+2;Science;4000
+
+
