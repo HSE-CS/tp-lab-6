@@ -9,42 +9,42 @@
 
 TEST(testEmployee, test1) {
   Project* p = new Project(1, 6);
-  Programmer* p = new Programmer(1, "Test", 20, "programmer", 5, p);
-  EXPECT_EQ(1, p->getId());
+  Programmer* pr = new Programmer(1, "Test", 20, "programmer", 5, p);
+  EXPECT_EQ(1, pr->getId());
 }
 
 TEST(testEmployee, test2) {
   Project* p = new Project(1, 6);
-  Programmer* p = new Programmer(1, "Test", 20, "programmer", 5, p);
-  EXPECT_EQ("Test", p->getName());
+  Programmer* pr = new Programmer(1, "Test", 20, "programmer", 5, p);
+  EXPECT_EQ("Test", pr->getName());
 }
 
 TEST(testEmployee, test3) {
   Project* p = new Project(1, 6);
-  Programmer* p = new Programmer(1, "Test", 20, "programmer", 5, p);
-  EXPECT_EQ(20, p->getSalary());
+  Programmer* pr = new Programmer(1, "Test", 20, "programmer", 5, p);
+  EXPECT_EQ(20, pr->getSalary());
 }
 
 TEST(testEmployee, test4) {
   Project* p = new Project(1, 6);
-  Programmer* p = new Programmer(1, "Test", 20, "programmer", 5, p);
-  EXPECT_EQ("programmer", p.getPosition());
+  Programmer* pr = new Programmer(1, "Test", 20, "programmer", 5, p);
+  EXPECT_EQ("programmer", pr->getPosition());
 }
 
 TEST(testEmployee, test5) {
   Project* p = new Project(1, 6);
-  Programmer* p = new Programmer(1, "Test", 20, "programmer", 5, p);
-  EXPECT_EQ(5, p->getPayment());
+  Programmer* pr = new Programmer(1, "Test", 20, "programmer", 5, p);
+  EXPECT_EQ(5, pr->getPayment());
 }
 
 TEST(testEmployee, test6) {
   Project* p = new Project(1, 6);
-  EXPECT_EQ(1, p->getId);
+  EXPECT_EQ(1, p->getId());
 }
 
 TEST(testEmployee, test7) {
   Project* p = new Project(1, 6);
-  EXPECT_EQ(1, p->getBudget);
+  EXPECT_EQ(1, p->getBudget());
 }
 
 TEST(testEmployee, test8) {
