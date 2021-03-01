@@ -2,6 +2,7 @@
 #include "Factory.h"
 #include <fstream>
 #include <iostream>
+#include<string>
 #include "Employee.h"
 #include "Engineer.h"
 #include "Manager.h"
@@ -14,7 +15,6 @@ std::vector<Employee *> Factory::makeStaff(std::string project_filen,
   std::vector<Project *> projects;
   int number = 0;
   int budjet = 0;
-  std::string str;
   std::string str;
 
   while (!file1.eof()) {
