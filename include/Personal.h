@@ -38,7 +38,7 @@ class Cleaner: public Personal {
     Cleaner();
     explicit Cleaner(std::string id, std::string name,
          std::string position, int salary)
-        :Personal(id, name, position, salary) {};
+        :Personal(id, name, position, salary) {}
     void calc() override;
 };
 #endif  // INCLUDE_PERSONAL_H_

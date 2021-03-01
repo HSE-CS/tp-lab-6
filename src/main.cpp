@@ -7,8 +7,9 @@ int main() {
     StaffFactory file;
     std::vector<Employee*> staff = file.makeStaff();
 
+    srand(time(0));
     for (Employee* emp : staff) {
-        emp->setWorkTime(20 + rand_r() % 40);
+        emp->setWorkTime(20 + rand() % 40);
     }
 
     for (Employee* emp : staff) {
