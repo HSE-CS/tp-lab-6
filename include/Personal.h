@@ -7,7 +7,7 @@
 #include "Interfaces.h"
 class Personal : public Employee, public WorkBaseTime {
  public:
-    Personal(std::string name, unsigned int id, float base, 
+    Personal(std::string name, unsigned int id, float base,
         std::string position);
     float getPaymentbyWorkTime() override;
  protected:

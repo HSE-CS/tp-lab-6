@@ -20,7 +20,7 @@ std::vector<std::string> split(const std::string& s, char delimiter) {
     return words;
 }
 
-enum Pos_id { posCleaner = 0, posDriver, posTester, posProgrammer, 
+enum Pos_id { posCleaner = 0, posDriver, posTester, posProgrammer,
     posTeamLeader, posManager, posProjectManager, posSeniorManager };
 std::map<std::string, int> projects;
 
@@ -62,10 +62,10 @@ Employee* Factory::createEmployee(std::vector<std::string> data) {
         p = new Programmer(name, emp_id, base, position, data[6], contribution);
         break;
     case posTeamLeader:
-		base = stof(data[5]);
+    	base = stof(data[5]);
         contribution = stof(data[7]);
         subordinates = atoi(data[8].c_str());
-        p = new TeamLeader(name, emp_id, base, position, data[6], 
+        p = new TeamLeader(name, emp_id, base, position, data[6],
             contribution, subordinates);
         break;
     case posManager:

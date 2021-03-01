@@ -9,7 +9,7 @@
 
 class Manager : public Employee, public ProjectBudget {
  public:
-    Manager(std::string name, unsigned int id, std::string position, 
+    Manager(std::string name, unsigned int id, std::string position,
         std::string project, float contribution);
     float getPaymentbyProject() override;
     float getPayment() override;
@@ -20,7 +20,7 @@ class Manager : public Employee, public ProjectBudget {
 };
 class ProjectManager : public Manager, public Heading {
  public:
-    ProjectManager(std::string name, unsigned int id, std::string position, 
+    ProjectManager(std::string name, unsigned int id, std::string position,
         std::string project, float contribution, unsigned int subordinates);
     float getPaymentbyHeading() override;
     float getPayment() override;
@@ -30,7 +30,7 @@ class ProjectManager : public Manager, public Heading {
 
 class SeniorManager : public ProjectManager {
  public:
-    SeniorManager(std::string name, unsigned int id, std::string position, 
+    SeniorManager(std::string name, unsigned int id, std::string position,
         std::string project, float contribution, unsigned int subordinates);
 };
 #endif  // MANAGER_H

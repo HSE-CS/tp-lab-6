@@ -9,7 +9,8 @@
 
 class Engineer : public Employee, public WorkBaseTime, public ProjectBudget {
  public:
-    Engineer(std::string name, unsigned int id, float base, std::string position, 
+    Engineer(std::string name, unsigned int id,
+        float base, std::string position,
         std::string project, float contribution);
     float getPaymentbyWorkTime() override;
     float getPaymentbyProject() override;
@@ -27,7 +28,8 @@ class Tester : public Engineer {
 };
 class Programmer : public Engineer {
  public:
-    Programmer(std::string name, unsigned int id, float base, std::string position, 
+    Programmer(std::string name, unsigned int id, 
+        float base, std::string position,
         std::string project, float contribution);
     float getPayment() override;
 };
@@ -37,8 +39,10 @@ class TeamLeader : public Programmer, public Heading {
  protected:
     unsigned int subordinates;
  public:
-    TeamLeader(std::string name, unsigned int id, float base, std::string position,
-        std::string project, float contribution, unsigned int subordinates);
+    TeamLeader(std::string name, unsigned int id, float base,
+        std::string position,
+        std::string project, float contribution,
+        unsigned int subordinates);
     float getPaymentbyHeading() override;
     float getPayment() override;
 };

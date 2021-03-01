@@ -3,7 +3,7 @@
 #include <map>
 extern std::map<std::string, int> projects;
 
-Manager::Manager(std::string name, unsigned int id, 
+Manager::Manager(std::string name, unsigned int id,
     std::string position, std::string project, float contribution)
 :Employee(name, id) {
     this->position = position;
@@ -20,8 +20,8 @@ float Manager::getPayment() {
     return payment;
 }
 
-ProjectManager::ProjectManager(std::string name, 
-    unsigned int id, std::string position, std::string project, 
+ProjectManager::ProjectManager(std::string name,
+    unsigned int id, std::string position, std::string project,
     float contribution, unsigned int subordinates)
     : Manager(name, id, position, project, contribution) {
     this->subordinates = subordinates;
@@ -36,8 +36,8 @@ float ProjectManager::getPayment() {
     return payment;
 }
 
-SeniorManager::SeniorManager(std::string name, unsigned int id, 
-    std::string position, std::string project, float contribution, 
+SeniorManager::SeniorManager(std::string name, unsigned int id,
+    std::string position, std::string project, float contribution,
     unsigned int subordinates)
 :ProjectManager(name, id, position, project, contribution, 
-    subordinates) {};
+    subordinates);

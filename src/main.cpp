@@ -5,14 +5,15 @@
 #include "Interfaces.h"
 #include "Manager.h"
 #include "Personal.h"
+#include <stdio.h>
+#include<time.h>
+#include <stdlib.h>
 #include <iostream>
 #include <fstream>
 #include <vector>
 #include <map>
-#include <stdio.h>
-#include<time.h>
 #include <sstream>
-#include <stdlib.h>
+
 
 extern std::map<std::string, int> projects;
 
@@ -51,7 +52,7 @@ int main() {
         emp->setWorkTime(rand_r(&seed) % 10 + 30);
         salary = emp->getPayment();
         if (salary > max) max = salary;
-        std::cout << emp->getId() << " " << emp->getName() 
+        std::cout << emp->getId() << " " << emp->getName()
             << " gets " << salary << std::endl;
     }
     std::cout << "Highest payment is " << max << std::endl;

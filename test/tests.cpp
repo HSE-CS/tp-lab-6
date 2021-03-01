@@ -39,7 +39,7 @@ TEST(lab6, task4) {
 TEST(lab6, task5) {
     extern std::map<std::string, int> projects;
     projects["Hello"] = 10000;
-    Programmer* emp = new Programmer("Alex", 2, 400, "Programmer", 
+    Programmer* emp = new Programmer("Alex", 2, 400, "Programmer",
         "Hello", 0.3);
     emp->setWorkTime(10);
     float res = emp->getPayment();
@@ -74,7 +74,7 @@ TEST(lab6, task8) {
 TEST(lab6, task9) {
     extern std::map<std::string, int> projects;
     projects["Leader"] = 10000;
-    TeamLeader* emp = new TeamLeader("Alex", 3, 1000, 
+    TeamLeader* emp = new TeamLeader("Alex", 3, 1000,
         "TeamLeader", "Leader", 0.7, 3);
     emp->setWorkTime(10);
     float res = emp->getPayment();
