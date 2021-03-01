@@ -8,7 +8,7 @@ int main() {
     std::vector<Employee*> staff = file.makeStaff();
 
     srand(time(0));
-	int seed = 54321;
+    unsigned int seed = 54321;
     for (Employee* emp : staff) {
         emp->setWorkTime(20 + rand_r(&seed) % 40);
     }
