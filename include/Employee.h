@@ -15,12 +15,11 @@ class Employee {
   std::string getPosition() const;
   int getWorkTime() const;
   int getPayment() const;
-
  private:
-   int id;
-   std::string name;
-   std::string position;
-   int workTime;
-   int payment;
+  int id;
+  std::string name;
+  std::string position;
+  int workTime;
+  int payment;
 };
 #endif  //  INCLUDE_EMPLOYEE_H_

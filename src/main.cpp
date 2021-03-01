@@ -11,5 +11,9 @@ int main() {
     e->calc();
     e->printInfo();
   }
+  Project* pr = new Project{ 12214, 100000 };
+  Programmer* emp = new Programmer (1,
+    "Lukyanov Michail Igorevich", "driver", 40, 500, pr);
+  std::cout << emp->calcProAdditions();
   return 0;
 }

@@ -1,8 +1,7 @@
 // Copyright 2020 Polina Lukicheva
 #include "Employee.h"
 
-Employee::Employee(int id, std::string name, std::string position, int workTime, int payment)
-{
+Employee::Employee(int id, std::string name, std::string position, int workTime, int payment) {
   this->id = id;
   this->name = name;
   this->position = position;
@@ -10,32 +9,26 @@ Employee::Employee(int id, std::string name, std::string position, int workTime,
   this->payment = payment;
 }
 
-void Employee::setWorkTime(int workTime)
-{
+void Employee::setWorkTime(int workTime) {
   this->workTime = workTime;
 }
 
-std::string Employee::getPosition() const
-{
+std::string Employee::getPosition() const {
   return position;
 }
 
-int Employee::getWorkTime() const
-{
+int Employee::getWorkTime() const {
   return workTime;
 }
 
-int Employee::getId() const
-{
+int Employee::getId() const {
   return id;
 }
 
-std::string Employee::getName() const
-{
+std::string Employee::getName() const {
   return name;
 }
 
-int Employee::getPayment() const
-{
+int Employee::getPayment() const {
   return payment;
 }

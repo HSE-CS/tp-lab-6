@@ -6,20 +6,17 @@ int Engineer::calcBudgetPart(float part, int budget) {
   return part * budget;
 }
 
-int Engineer::calcProAdditions()
-{
+int Engineer::calcProAdditions() {
   return Personal::calcBonus();
 }
 
-Project Engineer::getProject() {
-  if (project == nullptr)
-    return Project{ 0, 0 };
-  return *project;
+Project* Engineer::getProject() {
+
+  return project;
 }
 
 
-int Engineer::calc()
-{
+int Engineer::calc() {
   return Personal::calc();
 }
 
@@ -29,9 +26,15 @@ void Engineer::printInfo() {
       ", name=" + getName() +
       ", position=" + getPosition() +
       ", payment=" + std::to_string(getPayment()) +
-      ", salary" + std::to_string(getSalary()) + "}" +
-      ", project id " + std::to_string(getProject().id) +
-      ", project budget " + std::to_string(getProject().budget) << std::endl;
+      ", salary" + std::to_string(getSalary()) + "}";
+    if (getProject() != nullptr) {
+      std::cout <<
+        ", project id " + std::to_string(getProject()->id) +
+        ", project budget " + std::to_string(getProject()->budget) << std::endl;
+    }
+    else {
+      std::cout << std::endl;
+    }
   }
 }
 
@@ -56,13 +59,20 @@ void Tester::printInfo() {
     ", name=" + getName() +
     ", position=" + getPosition() +
     ", payment=" + std::to_string(getPayment()) +
-    ", salary" + std::to_string(getSalary()) + "}" +
-    ", project id " + std::to_string(getProject().id) +
-    ", project budget " + std::to_string(getProject().budget) << std::endl;
+    ", salary" + std::to_string(getSalary()) + "}";
+  if (getProject() != nullptr) {
+    std::cout << ", project id " + std::to_string(getProject()->id) +
+      ", project budget " + std::to_string(getProject()->budget) << std::endl;
+  }
+  else {
+    std::cout << std::endl;
+  }
 }
+
 int Programmer::calcBonus() {
   return Engineer::calcBonus();
 }
+
 int Programmer::calc() {
   return Engineer::calc() + calcBonus() + calcProAdditions();
 }
@@ -76,14 +86,20 @@ void Programmer::printInfo() {
     ", name=" + getName() +
     ", position=" + getPosition() +
     ", payment=" + std::to_string(getPayment()) +
-    ", salary" + std::to_string(getSalary()) + "}" +
-    ", project id " + std::to_string(getProject().id) +
-    ", project budget " + std::to_string(getProject().budget) << std::endl;
+    ", salary" + std::to_string(getSalary()) + "}";
+  if (getProject() != nullptr) {
+    std::cout << ", project id " + std::to_string(getProject()->id) +
+      ", project budget " + std::to_string(getProject()->budget) << std::endl;
+  }
+  else {
+    std::cout << std::endl;
+  }
 }
 
 int TeamLeader::calcHeads() {
-  return static_cast<int>(getProject().budget * 0.1);
+  return static_cast<int>(getProject()->budget * 0.1);
 }
+
 int TeamLeader::calc() {
   return Engineer::calc() + calcBonus() + calcProAdditions();
 }
@@ -97,7 +113,12 @@ void TeamLeader::printInfo() {
     ", name=" + getName() +
     ", position=" + getPosition() +
     ", payment=" + std::to_string(getPayment()) +
-    ", salary" + std::to_string(getSalary()) + "}" +
-    ", project id " + std::to_string(getProject().id) +
-    ", project budget " + std::to_string(getProject().budget) << std::endl;
+    ", salary" + std::to_string(getSalary()) + "}";
+  if (getProject() != nullptr) {
+    std::cout << ", project id " + std::to_string(getProject()->id) +
+      ", project budget " + std::to_string(getProject()->budget) << std::endl;
+  }
+  else {
+    std::cout << std::endl;
+  }
 }

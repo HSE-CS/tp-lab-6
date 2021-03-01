@@ -10,8 +10,7 @@
 #include "Employee.h"
 #include "Engineer.h"
 
-std::vector<Employee*> readData(std::string fileName)
-{
+std::vector<Employee*> readData(std::string fileName) {
   std::ifstream file(fileName);
   if (file.is_open()) {
     std::vector<Employee*> employee;
@@ -61,5 +60,4 @@ std::vector<Employee*> readData(std::string fileName)
     }
     return employee;
   }
-
 }
