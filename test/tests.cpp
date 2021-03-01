@@ -9,14 +9,14 @@
 
 TEST(TestStaff, Test1) {
   Project* pr = new Project{ 12214, 100000 };
-  Employee* emp = new Engineer("1",
+  Engeneer* emp = new Engineer(1,
     "Lukyanov Michail Igorevich", "tester", 40, 500, pr);
   EXPECT_EQ(pr, emp->getProject());
 }
 
 TEST(TestStaff, Test2) {
   Project* pr = new Project{ 12214, 100000 };
-  Employee* emp = new Engineer("1",
+  Employee* emp = new Engineer(1,
     "Lukyanov Michail Igorevich", "tester", 40, 500, pr);
   EXPECT_EQ("tester", emp->getPosition());
 }
