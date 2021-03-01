@@ -18,7 +18,7 @@ class Factory {
   std::string filename;
 
  public:
-  Factory(std::string filenameIn)
+  explicit Factory(std::string filenameIn)
       : filename(filenameIn) {}
   std::vector<Personal*> makeStaff();
 };
