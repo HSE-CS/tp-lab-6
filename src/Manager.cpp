@@ -1,4 +1,4 @@
-// Copyright 2021 Kartseva Masha
+// Copyright 2021 Kartseva Masha 
 #include "Manager.h"
 #include <map>
 extern std::map<std::string, int> projects;
