@@ -1,5 +1,7 @@
 // Copyright 2021 Ryzhova Irina
 
+#include <iostream>
+#include "Personal.h"
 #include "Engineer.h"
 #include "Manager.h"
 #include "Factory.h"
