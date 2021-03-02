@@ -82,7 +82,7 @@ TEST(TestStaff, Test11) {
   EXPECT_EQ(22500, emp->calc());
 }
 
-TEST(TestStaff, Test11) {
+TEST(TestStaff, Test12) {
   Cleaner* emp = new Cleaner(1,
     "Lukyanov Michail Igorevich", "cleaner", 40, 500);
   emp->setWorkTime(45);
