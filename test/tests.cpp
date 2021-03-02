@@ -22,10 +22,10 @@ TEST(staff_test, test3) {
 }
 
 TEST(staff_test, test4) {
-  Tester tester(2, 140, "Ivan", TESTER, new Project(30000, "One"), 0.3);
-  tester.setWorkTime(40);
-  tester.calc();
-  EXPECT_EQ(15100, tester.getPayment());
+  Driver driver(2, 140, "Ivan", DRIVER);
+  driver.setWorkTime(40);
+  driver.calc();
+  EXPECT_EQ(5900, driver.getPayment());
 }
 
 TEST(staff_test, test5) {
@@ -84,9 +84,8 @@ TEST(staff_test, test12) {
   proj.push_back(new Project(20000, "test2"));
   proj.push_back(new Project(30000, "test3"));
   SeniorManager senior(55, "Igor", proj, SENIOR_MANAGER, 0.6);
-  senior.setWorkTime(35);
   senior.calc();
-  EXPECT_EQ(7500, senior.getPayment());
+  EXPECT_EQ(7500, senior.calcHeads());
 }
 
 TEST(staff_test, test13) {
