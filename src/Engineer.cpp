@@ -43,7 +43,7 @@ void Tester::calc() {
   calcBudgetPart(partition, project->getBudget()) + calcProAdditions());
 }
 
-TeamLeader::TeamLeader(int id, int salaryPerHour, std::string name, 
+TeamLeader::TeamLeader(int id, int salaryPerHour, std::string name,
 Position position, Project* project, float part)
 : Programmer(id, salaryPerHour, std::move(name), position, project, part) {}
 

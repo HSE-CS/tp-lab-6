@@ -2,7 +2,7 @@
 #include "Manager.h"
 
 ProjectManager::ProjectManager(int id, std::string name,
-Position position, std::vector<Project*> projects, float part) 
+Position position, std::vector<Project*> projects, float part)
 : Employee(id, name, position) {
   this->projects = std::move(projects);
 }

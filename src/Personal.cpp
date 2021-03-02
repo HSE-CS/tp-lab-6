@@ -3,7 +3,7 @@
 #include <iostream>
 #include "Personal.h"
 
-Personal::Personal(int id, int salaryPerHour, std::string name, 
+Personal::Personal(int id, int salaryPerHour, std::string name,
 Position position)
 : Employee(id, std::move(name), position), salaryPerHour{ salaryPerHour } {}
 
