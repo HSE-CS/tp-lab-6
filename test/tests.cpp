@@ -17,16 +17,15 @@ TEST(staff_test, test2) {
 }
 
 TEST(staff_test, test3) {
-  Tester tester(2, 140, "Ivan", TESTER, new Project(30000, "One"),
-  0.3);
+  Tester tester(2, 140, "Ivan", TESTER, new Project(30000, "One"), 0.3);
   EXPECT_EQ(TESTER, tester.getPosition());
 }
 
 TEST(staff_test, test4) {
-  Tester tester(2, 140, "Ivan", TESTER, new Project(30000, "One"),
-  0.3);
+  Tester tester(2, 140, "Ivan", TESTER, new Project(30000, "One"), 0.3);
+  tester.setWorkTime(40);
   tester.calc();
-    EXPECT_EQ(9500, tester.getPayment());
+  EXPECT_EQ(15100, tester.getPayment());
 }
 
 TEST(staff_test, test5) {
@@ -38,7 +37,7 @@ TEST(staff_test, test5) {
 
 TEST(staff_test, test6) {
   TeamLeader leader(1, 180, "Alex", TEAM_LEADER, new Project(30000, "One"), 0.6);
-  EXPECT_EQ(7500, leader.calcHeads());
+  EXPECT_EQ(5000, leader.calcHeads());
 }
 
 TEST(staff_test, test7) {
@@ -85,6 +84,7 @@ TEST(staff_test, test12) {
   proj.push_back(new Project(20000, "test2"));
   proj.push_back(new Project(30000, "test3"));
   SeniorManager senior(55, "Igor", proj, SENIOR_MANAGER, 0.6);
+  senior.setWorkTime(35);
   senior.calc();
   EXPECT_EQ(7500, senior.getPayment());
 }
