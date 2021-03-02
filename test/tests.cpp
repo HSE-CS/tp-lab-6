@@ -9,7 +9,7 @@
 
 TEST(TestStaff, Test1) {
   Project* pr = new Project{ 12214, 100000 };
-  Engeneer* emp = new Engineer(1,
+  Engineer* emp = new Engineer(1,
     "Lukyanov Michail Igorevich", "tester", 40, 500, pr);
   EXPECT_EQ(pr, emp->getProject());
 }
@@ -78,15 +78,15 @@ TEST(TestStaff, Test10) {
 TEST(TestStaff, Test11) {
   Cleaner* emp = new Cleaner(1,
     "Lukyanov Michail Igorevich", "cleaner", 40, 500);
-  emp->setWorkTime(45)
+  emp->setWorkTime(45);
   EXPECT_EQ(22500, emp->calc());
 }
 
 TEST(TestStaff, Test11) {
   Cleaner* emp = new Cleaner(1,
     "Lukyanov Michail Igorevich", "cleaner", 40, 500);
-  emp->setWorkTime(45)
-    EXPECT_EQ("Lukyanov Michail Igorevich", emp->getName());
+  emp->setWorkTime(45);
+  EXPECT_EQ("Lukyanov Michail Igorevich", emp->getName());
 }
 
 
