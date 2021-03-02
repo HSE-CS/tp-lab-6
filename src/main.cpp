@@ -12,5 +12,5 @@ int main() {
     emp->calc();
   for (Employee* emp : staff)
     emp->printInfo();
-  return 0;
+   return 0;
 }

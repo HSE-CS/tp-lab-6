@@ -36,7 +36,8 @@ TEST(staff_test, test5) {
 }
 
 TEST(staff_test, test6) {
-  TeamLeader leader(1, 180, "Alex", TEAM_LEADER, new Project(30000, "One"), 0.6);
+  TeamLeader leader(1, 180, "Alex", TEAM_LEADER, new Project(30000, "One"),
+  0.6);
   EXPECT_EQ(5000, leader.calcHeads());
 }
 

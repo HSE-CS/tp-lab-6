@@ -13,6 +13,6 @@
 #include "Interfaces.h"
 
 class FactoryWork {
-public:
-	static std::vector<Employee*> makeStaff();
+ public:
+  static std::vector<Employee*> makeStaff();
 };

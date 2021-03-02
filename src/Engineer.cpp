@@ -43,16 +43,16 @@ void Tester::calc() {
   calcBudgetPart(partition, project->getBudget()) + calcProAdditions());
 }
 
-TeamLeader::TeamLeader(int id, int salaryPerHour, std::string name, Position position,
-Project* project, float part)
+TeamLeader::TeamLeader(int id, int salaryPerHour, std::string name, 
+Position position, Project* project, float part)
 : Programmer(id, salaryPerHour, std::move(name), position, project, part) {}
 
-int TeamLeader::calcHeads() { 
-  return 5000; 
+int TeamLeader::calcHeads() {
+  return 5000;
 }
 
 void TeamLeader::calc() {
-  this->payment += calcBase(salaryPerHour, this->getWorkTime()) +
+  this->setPayment(calcBase(salaryPerHour, this->getWorkTime()) +
   calcBudgetPart(partition, project->getBudget()) +
-  calcProAdditions() + calcHeads();
+  calcProAdditions() + calcHeads());
 }

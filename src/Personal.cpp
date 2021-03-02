@@ -1,9 +1,10 @@
 // Copyright 2021 Shirokov Alexander
 #include <utility>
-#include <iostream> 
+#include <iostream>
 #include "Personal.h"
 
-Personal::Personal(int id, int salaryPerHour, std::string name, Position position) 
+Personal::Personal(int id, int salaryPerHour, std::string name, 
+Position position)
 : Employee(id, std::move(name), position), salaryPerHour{ salaryPerHour } {}
 
 int Personal::calcBase(int salaryPerHour, int workTime) {
@@ -19,8 +20,8 @@ void Personal::calc() {
 }
 
 void Personal::printInfo() {
-  std::cout << this->id << " " << this->name << " " << this->payment << " " 
-  << this->salaryPerHour << " " 
+  std::cout << this->id << " " << this->name << " " << this->payment << " "
+  << this->salaryPerHour << " "
   << static_cast<std::underlying_type<Position>::type>(this->position);
 }
 
@@ -35,7 +36,7 @@ int Cleaner::calcBonus() {
   return 200;
 }
 
-Driver::Driver(int id, int salaryPerHour, std::string name, Position position) 
+Driver::Driver(int id, int salaryPerHour, std::string name, Position position)
   : Personal(id, salaryPerHour, std::move(name), position) {}
 
 void Driver::calc() {

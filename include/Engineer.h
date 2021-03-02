@@ -40,11 +40,11 @@ class Tester : public Engineer {
 };
 
 class TeamLeader : public Programmer, public Heading {
-public:
-    TeamLeader(int id, int salaryPerHour, std::string name, Position position,
-    Project* project, float part);
+ public:
+  TeamLeader(int id, int salaryPerHour, std::string name, Position position,
+  Project* project, float part);
 
-    int calcHeads() override;
-    void calc() override;
+  int calcHeads() override;
+  void calc() override;
 };
 

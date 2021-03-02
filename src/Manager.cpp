@@ -2,7 +2,8 @@
 #include "Manager.h"
 
 ProjectManager::ProjectManager(int id, std::string name,
-Position position, std::vector<Project*> projects, float part) : Employee(id, name, position) {
+Position position, std::vector<Project*> projects, float part) 
+: Employee(id, name, position) {
   this->projects = std::move(projects);
 }
 
@@ -18,8 +19,7 @@ int ProjectManager::calcHeads() {
   return 7500;
 }
 
-void ProjectManager::calc()
-{
+void ProjectManager::calc() {
   int max = 0;
   for (auto pr : projects) {
     if (pr->getBudget() > max) {
@@ -39,16 +39,16 @@ void ProjectManager::printInfo() {
 }
 
 SeniorManager::SeniorManager(int id, std::string name,
-    std::vector<Project*> projects, Position position, float part)
-    : ProjectManager(id, std::move(name), position, projects, part) {}
+  std::vector<Project*> projects, Position position, float part)
+  : ProjectManager(id, std::move(name), position, projects, part) {}
 
 void SeniorManager::calc() {
-    int max = 0;
-    for (auto pr : projects) {
-        if (pr->getBudget() > max) {
-            max += pr->getBudget();
-        }
+  int max = 0;
+  for (auto pr : projects) {
+    if (pr->getBudget() > max) {
+      max += pr->getBudget();
     }
-    this->payment += calcBudgetPart(partition, max / 10) +
-        calcProAdditions() + calcHeads();
+  }
+  this->setPayment(calcBudgetPart(partition, max / 10) +
+  calcProAdditions() + calcHeads());
 }
