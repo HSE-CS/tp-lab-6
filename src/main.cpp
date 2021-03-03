@@ -14,7 +14,6 @@
 #include <map>
 #include <sstream>
 
-
 extern std::map<std::string, int> projects;
 
 std::vector<Employee*> createEmployees() {
