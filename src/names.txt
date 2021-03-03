@@ -1,0 +1,21 @@
+1 Bakurskij Andrej Sergeevich Cleaner 300
+2 Balayan Roman Karenovich Cleaner 400
+3 Bekina Svetlana Sergeevna Driver 400 1.4 
+4 Burcev Roman Andreevich Driver 500 1.5
+5 Vargin Dmitrij Aleksandrovich  Programmer 2000 FirstProj 0.3
+6 Votinova Kseniya Konstantinovna Programmer 3000 SecondProj 0.2
+7 Gerasimov Aleksej Aleksandrovich Programmer 4000 ThirdProj 0.4
+8 Grachev Aleksandr Evgen'evich  TeamLeader 3000 Secondproj 0.25 7
+9 Dolgopolov Aleksej Gennad'evich  Tester 1000 ThirdProj 0.15
+10 Dumarevskaya Tat'yana Nikolaevna  Tester 1100 FirstProj 0.2
+11 Emshanov Pavel Andreevich  Manager FirstProj 0.2
+12 Igumnova Natal'ya Dmitrievna  Manager SecondProj 0.2 
+13 Klimov Aleksej Sergeevich  Manager ThirdProj 0.1
+14 Lupekhina Lyudmila Evgen'evna  ProjectManager FirstProj 0.2 3
+15 Lukicheva Polina Aleksandrovna  ProjectManager Secondproj 0.15 4
+16 Makarov Vadim Dmitrievich  ProjectManager ThirdProj 0.15 3
+17 Murzinov Mihail Denisovich  Tester 1000 SecondProj 0.10
+18 Nikolaeva Olesya Igorevna  Programmer 1200 ThirdProj 0.10
+19 Osmanov Islam Ramilevich Mihailovich Driver 500 1.3
+20 Boryaev Sergej Sergeevich Driver All 0.1 19
+ 
