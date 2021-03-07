@@ -44,7 +44,7 @@ TEST(TESTS, test3) {
   std::string name = "Alex";
   Project project("LALALA", 1000);
   Programmer pr(1, name, PROGRAMMER, 30, &project, 0.3);
-  EXPECT_EQ(float(0.3), pr.get_part());
+  EXPECT_EQ(static_cast<float>(0.3), pr.get_part());
 }
 
 TEST(TESTS, test4) {
