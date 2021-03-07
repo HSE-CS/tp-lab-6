@@ -11,7 +11,7 @@ class Project {
  private:
   std::string id;
  public:
-  Project(std::string id, double budget) : id(id), budget(budget) {};
+  Project(std::string id, double budget) : id(id), budget(budget) {}
   double budget;
 };
 
@@ -35,9 +35,9 @@ class ProjectManager : public Employee, public IProjectBudget, public IHeading {
 };
 
 class SeniorManager : public ProjectManager {
-private:
+ private:
   std::vector<Project*> projects;
-public:
+ public:
   SeniorManager(std::string id,
     std::string name,
     double salary,

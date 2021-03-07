@@ -4,32 +4,33 @@
 
 #include "Employee.h"
 #include "Interfaces.h"
+#include <string>
 
 class Personal : public Employee, public IWorkBaseTime {
  public:
-  Personal (std::string id,
+  Personal(std::string id,
     std::string name,
     double salary,
     Position position)
-    : Employee(id, name, salary, position) {} 
+    : Employee(id, name, salary, position) {}
   int calcBase(int salary, int wtime) override;
   void printInfo() override;
 };
 
 class Driver : public Personal {
  public:
-  Driver (std::string id,
+  Driver(std::string id,
     std::string name,
     double salary,
     Position position)
-    : Personal(id, name, salary, position) {} 
+    : Personal(id, name, salary, position) {}
   int calcBonus() override;
   void calc() override;
 };
 
 class Cleaner : public Personal {
  public:
-  Cleaner (std::string id,
+  Cleaner(std::string id,
     std::string name,
     double salary,
     Position position)

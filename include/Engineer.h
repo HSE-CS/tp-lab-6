@@ -5,6 +5,7 @@
 #include "Interfaces.h"
 #include "Personal.h"
 #include "Manager.h"
+#include <string>
 
 class Engineer : public Personal, public IProjectBudget {
  private:

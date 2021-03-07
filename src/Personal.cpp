@@ -3,7 +3,7 @@
 #include <iostream>
 
 int Personal::calcBase(int salary, int wtime) {
-  return salary * wtime; 
+  return salary * wtime;
 }
 
 int Driver::calcBonus() {

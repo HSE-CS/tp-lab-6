@@ -4,7 +4,6 @@
 #include "Factory.h"
 
 int main() {
-
   std::vector<Employee*> staff = StaffFactory::makeStaff("data.txt");
 
   for (auto emp : staff) {
