@@ -59,7 +59,8 @@ TEST(TESTS, test5) {
   Project project("LALALA", 1000);
   Programmer pr(1, name, PROGRAMMER, 30, &project, 0.3);
   pr.set_work_time(7);
-  EXPECT_EQ(3510, pr.get_payment());
+  pr.calc();
+  EXPECT_EQ(90510, pr.get_payment());
 }
 
 TEST(TESTS, test6) {
@@ -67,7 +68,8 @@ TEST(TESTS, test6) {
   Project project("LALALA", 1000);
   Tester pr(1, name, TESTER, 30, &project, 0.3, 3);
   pr.set_work_time(11);
-  EXPECT_EQ(810, pr.get_payment());
+  pr.calc();
+  EXPECT_EQ(930, pr.get_payment());
 }
 
 TEST(TESTS, test7) {
@@ -89,6 +91,7 @@ TEST(TESTS, test9) {
   Project project("LALALA", 1000);
   Driver dr(1, name, DRIVER, 30);
   dr.set_work_time(11);
+  dr.calc();
   EXPECT_EQ(465, dr.get_payment());
 }
 
