@@ -14,7 +14,7 @@ class Personal : public WorkBaseTime, public Employee {
   int salary;
 
  public:
-  Personal(int, std::string, std::string, int, int)
+  Personal(int, std::string, std::string, int, int);
   void set_salary(int);
   int calcBase(int salary, int wtime);
   int get_salary();
@@ -22,7 +22,7 @@ class Personal : public WorkBaseTime, public Employee {
 
 class Driver : public Personal {
  public:
-  Driver(int, std::string, std::string, int, int)
+  Driver(int, std::string, std::string, int, int);
   int calcBonus();
   int calc();
   void printInfo();
@@ -30,7 +30,7 @@ class Driver : public Personal {
 
 class Cleaner : public Personal {
  public:
-  Cleaner(int, std::string, std::string, int, int)
+  Cleaner(int, std::string, std::string, int, int);
   int calc();
   void printInfo();
 };

@@ -13,7 +13,7 @@ class Project {
   int id;
   std::string name;
   int budget;
-  Project(int, std::string, int)
+  Project(int, std::string, int);
 };
 
 #endif  // INCLUDE_FACTORY_H_

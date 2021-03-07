@@ -21,7 +21,7 @@ class Engineer : public Personal, public ProjectBudget {
   float part;
 
  public:
-  Engineer(int, const std::string, std::string, int, int, Project*, float)
+  Engineer(int, const std::string, std::string, int, int, Project*, float);
   void printInfo();
   float getPart();
   int calcBudgetPart(float part, int budget);
@@ -29,21 +29,21 @@ class Engineer : public Personal, public ProjectBudget {
 
 class Tester : public Engineer {
  public:
-  Tester(int, const std::string, std::string, int, int, Project*, float)
+  Tester(int, const std::string, std::string, int, int, Project*, float);
   int calcProAdditions();
   int calc();
 };
 
 class Programmer : public Engineer {
  public:
-  Programmer(int, const std::string, std::string, int, int, Project*, float)
+  Programmer(int, const std::string, std::string, int, int, Project*, float);
   int calcProAdditions();
   int calc();
 };
 
 class TeamLeader : public Programmer, public Heading {
  public:
-  TeamLeader(int, const std::string, std::string, int, int, Project*, float))
+  TeamLeader(int, const std::string, std::string, int, int, Project*, float);
   int calcHeads();
   int calc();
 };

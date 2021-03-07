@@ -18,7 +18,7 @@ class Employee {
 
  public:
   int payment;
-  Employee(int, std::string, std::string, int, int)
+  Employee(int, std::string, std::string, int, int);
   void set_id(int);
   void set_name(std::string&);
   void set_worktime(int);
