@@ -6,6 +6,7 @@
 #include "Engineer.h"
 #include "Manager.h"
 #include "Personal.h"
+#include<vector>
 
 Position converse(std::string pos) {
   if (pos == "Programmer")
