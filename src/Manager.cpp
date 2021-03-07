@@ -1,6 +1,7 @@
 // Copyright 2021 Tatsenko Ilya
 #include "Manager.h"
 #include <iostream>
+#include<vector>
 
 std::string converse_3(Position pos) {
   if (pos == PROGRAMMER)
