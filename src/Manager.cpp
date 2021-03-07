@@ -3,50 +3,64 @@
 
 #include "Manager.h"
 #include <iostream>
+#include <vector>
 
 
-
-// class ProjectManager
-ProjectManager::ProjectManager(id_type id, const std::string& name,
-    const Project& p) : Employee(id, name),
-    _project(p) {
-    _position = Position::ProjectManager;
+ProjectManager::ProjectManager(int id, std::string name, std::string pos,
+                               std::vector<Project*> projects, float part)
+    : Employee(id, std::move(name), std::move(pos)), partition{part} {
+  for (auto pr : projects) {
+    this->projects.push_back(pr);
+  }
 }
 
-int ProjectManager::calc_heads() {
-    return 10000 * 5;
+int ProjectManager::calcPartOfBudget(float part, int budget) {
+  return static_cast<int>(part * budget);
 }
+
+int ProjectManager::calcPAditions() {
+  if (partition >= 0.3) {
+    return 5000;
+  } else {
+    return 0;
+  }
+}
+
+int ProjectManager::calcHeads() { return 5000; }
 
 void ProjectManager::calc() {
-    _payment = calc_heads();
+  int max{0};
+  for (auto pr : projects) {
+    if (pr->getBudget() > max) {
+      max = pr->getBudget();
+    }
+  }
+  this->setPayment(this->getPayment() + calcPartOfBudget(partition, max / 2) +
+                   calcPAditions() + calcHeads());
 }
 
-void ProjectManager::print_info() {
-    std::cout << "Position: Project Manager\n"
-        "ID: " << _id << '\n' <<
-        "Name: " << _nameof << '\n' <<
-        "Worktime: " << _timeofwork << '\n' <<
-        "Payment: " << _payment << std::endl;
+void ProjectManager::printInfo() {
+  std::cout << "Name: " << this->getName() << '\n'
+            << "Position: " << this->getPos() << '\n'
+            << "Worktime: " << this->getWorkTime() << '\n'
+            << "Following projects: ";
+  for (auto pr : projects) {
+    std::cout << pr->getTitle() << " ";
+  }
+  std::cout << "\nPayment (with bonuses): " << this->getPayment() << '\n';
 }
 
-
-SeniorManager::SeniorManager(id_type id, const std::string& name,
-    std::vector<Project> ps) :
-    ProjectManager(id, name, ps[0]),
-    _projects(ps) {
-    _position = Position::SeniorManager;
-}
+SeniorManager::SeniorManager(int id, std::string name,
+                             std::vector<Project*> projects, float part)
+    : ProjectManager(id, std::move(name), "SeniorManager", projects, part) {}
 
 void SeniorManager::calc() {
-    for (auto& p : _projects) {
-        _payment += calc_heads();
+  int max{0};
+  for (auto pr : projects) {
+    if (pr->getBudget() > max) {
+      max += pr->getBudget();
     }
-}
-
-void SeniorManager::print_info() {
-    std::cout << "Position: Senior Manager\n"
-        "ID: " << _id << '\n' <<
-        "Name: " << _nameof << '\n' <<
-        "Worktime: " << _timeofwork << '\n' <<
-        "Payment: " << _payment << std::endl;
+  }
+  this->setPayment(this->getPayment() + calcPartOfBudget(partition, max / 10) +
+                   calcPAditions() + calcHeads());
 }

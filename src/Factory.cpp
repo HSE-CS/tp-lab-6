@@ -1,81 +1,85 @@
 // Copyright 2021 TimurZaytsev
 //
 
-#include <iostream>
-#include <string>
-#include <fstream>
-#include <sstream>
-#include "Personal.h"
-#include "Engineer.h"
-#include "Manager.h"
 #include "Factory.h"
 
+#include <iostream>
+#include <sstream>
 
-std::vector<Employee*> StaffFactory::make_staff(const std::string& file) {
-    std::vector<Employee*> res;
-    std::ifstream in(file);
+std::vector<Employee*> FactoryWork::makeStaff() {
+  std::vector<Employee*> staff;
+  std::ifstream in("workers.txt");
+  std::ifstream pr("projects.txt");
 
-    if (in.is_open()) {
-        while (!in.eof()) {
-            std::string buf;
-            std::getline(in, buf, '\n');
+  if (in.is_open() == false || pr.is_open() == false) {
+    std::cout << "No such file\n";
+    return staff;
+  }
 
-            std::stringstream ss(buf);
-            id_type id;
-            std::string position, name;
-            ss >> id;
-            ss >> position;
-            for (int i = 0; i < 3; ++i) {
-                std::string b;
-                ss >> b;
-                name += b += ' ';
-            }
+  std::vector<Project*> projects;
+  std::string budget, title;
+  while (pr >> budget >> title) {
+    Project* tmp = new Project(std::stoi(budget), title);
+    projects.push_back(tmp);
+  }
 
-            if (position == "Cleaner") {
-                unsigned int sal;
-                ss >> sal;
-                res.push_back(new Cleaner(id, name, sal));
-            } else if (position == "Driver") {
-                unsigned int sal;
-                ss >> sal;
-                res.push_back(new Driver(id, name, sal));
-            } else if (position == "Tester") {
-                unsigned int sal;
-                std::string project;
-                ss >> sal;
-                ss >> project;
-                res.push_back(new Tester(id, name, sal,
-                    Project{ project, 200000 }));
-            } else if (position == "Programmer") {
-                unsigned int sal;
-                std::string project;
-                ss >> sal;
-                ss >> project;
-                res.push_back(new Programmer(id, name, sal,
-                    Project{ project, 200000 }));
-            } else if (position == "TeamLeader") {
-                unsigned int sal;
-                std::string project;
-                ss >> sal;
-                ss >> project;
-                res.push_back(new TeamLeader(id, name, sal,
-                    Project{ project, 200000 }));
-            } else if (position == "PM") {
-                std::string project;
-                ss >> project;
-                res.push_back(new ProjectManager(id, name,
-                    Project{ project, 200000 }));
-            } else if (position == "SM") {
-                std::vector<Project> projects;
-                std::string project;
-                while (!ss.eof()) {
-                    ss >> project;
-                    projects.emplace_back(Project{ project, 200000 });
-                }
-                res.push_back(new SeniorManager(id, name, projects));
-            }
-        }
-        in.close();
+  std::string row;
+  while (std::getline(in, row)) {
+    std::string id, name, pos;
+    std::istringstream f(row);
+
+    std::getline(f, id, ',');
+    std::getline(f, name, ',');
+    std::getline(f, pos, ',');
+
+    if (pos == "Programmer") {
+      int project_num = std::rand() % projects.size();
+      Programmer* tmp = new Programmer(std::stoi(id), 200, name, pos,
+                                       projects[project_num], 0.3);
+      staff.push_back(tmp);
     }
-    return res;
+
+    if (pos == "Tester") {
+      int project_num = std::rand() % projects.size();
+      Tester* tmp =
+          new Tester(std::stoi(id), 150, name, projects[project_num], 0.3);
+
+      staff.push_back(tmp);
+    }
+
+    if (pos == "TeamLeader") {
+      int project_num = std::rand() % projects.size();
+      TeamLeader* tmp =
+          new TeamLeader(std::stoi(id), 200, name, projects[project_num], 0.25);
+
+      staff.push_back(tmp);
+    }
+
+    if (pos == "ProjectManager") {
+      ProjectManager* tmp =
+          new ProjectManager(std::stoi(id), name, pos, projects, 0.3);
+      staff.push_back(tmp);
+    }
+
+    if (pos == "SeniorManager") {
+      SeniorManager* tmp =
+          new SeniorManager(std::stoi(id), name, projects, 0.3);
+
+      staff.push_back(tmp);
+    }
+
+    if (pos == "Driver") {
+      Driver* tmp = new Driver(std::stoi(id), 90, name);
+      staff.push_back(tmp);
+    }
+
+    if (pos == "Cleaner") {
+      Cleaner* tmp = new Cleaner(std::stoi(id), 70, name);
+      staff.push_back(tmp);
+    }
+  }
+
+  in.close();
+  pr.close();
+  return staff;
 }

@@ -5,55 +5,49 @@
 #define INCLUDE_ENGINEER_H_
 
 #include <string>
+#include "Employee.h"
 #include "Interfaces.h"
+#include <utility>
 #include "Personal.h"
 
-
 class Engineer : public Personal, public ProjectBudget {
- public:
-    Engineer(id_type id, const std::string& name,
-        unsigned int salary,
-        const Project& p);
-    ~Engineer() override = default;
-
-    void calc() override;
-    int calc_budget_part(float part, int budget) override;
-
  protected:
-    Project _project;
-};
+  Project* project;
+  float partition;
 
-class Tester final : public Engineer {
  public:
-    Tester(id_type id, const std::string& name,
-        unsigned int salary,
-        const Project& p);
+  Engineer(int id, int HourSalary, std::string name, std::string pos,
+           Project* project, float part);
 
-    void print_info() override;
-    int calc_pro_additions() override;
-    int calc_bonus() override;
+  int calcPartOfBudget(float part, int budget) override;
+  void calc() override;
 };
 
 class Programmer : public Engineer {
  public:
-    Programmer(id_type id, const std::string& name,
-        unsigned int salary,
-        const Project& p);
+  Programmer(int id, int HourSalary, std::string name, std::string pos,
+             Project* project, float part);
 
-    void print_info() override;
-    int calc_pro_additions() override;
-    int calc_bonus() override;
+  int calcPAditions() override;
+  void calc() override;
 };
 
-class TeamLeader final : public Programmer, public Heading {
+class Tester : public Engineer {
  public:
-    TeamLeader(id_type id, const std::string& name,
-        unsigned int salary,
-        const Project& p);
+  Tester(int id, int HourSalary, std::string name, Project* project,
+         float part);
 
-    void calc() override;
-    int calc_heads() override;
-    void print_info() override;
+  int calcPAditions() override;
+  void calc() override;
+};
+
+class TeamLeader : public Programmer, public Heading {
+ public:
+  TeamLeader(int id, int HourSalary, std::string name, Project* project,
+             float part);
+
+  int calcHeads() override;
+  void calc() override;
 };
 
 #endif  // INCLUDE_ENGINEER_H_

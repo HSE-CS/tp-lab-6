@@ -4,14 +4,21 @@
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
 
-#include "Employee.h"
+#include <fstream>
 #include <string>
+#include <utility>
 #include <vector>
 
+#include "Employee.h"
+#include "Engineer.h"
+#include "Manager.h"
+#include "Personal.h"
+#include "Interfaces.h"
 
-class StaffFactory {
+
+class FactoryWork {
  public:
-static std::vector<Employee*> make_staff(const std::string& file);
+  static std::vector<Employee*> makeStaff();
 };
 
 #endif  // INCLUDE_FACTORY_H_

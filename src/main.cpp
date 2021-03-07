@@ -1,27 +1,52 @@
 // Copyright 2021 TimurZaytsev
 //
 
+#include <fstream>
+#include <string>
 #include <iostream>
 
 #include "Factory.h"
-#include "Employee.h"
-
 
 int main() {
-    auto staff = StaffFactory::make_staff("staff.txt");
+  std::vector<Employee*> staff = FactoryWork::makeStaff();
+  int worktime[30];
+  for (int i = 0; i < 30; i++) {
+    worktime[i] = std::rand() % 15 + 36;
+  }
 
-    for (auto e : staff) {
-        e->worktime((unsigned)rand() % 96 + 1);
-    }
+  std::cout << "Generated worktime for each employee:\n";
+  for (int el : worktime) {
+    std::cout << el << ' ';
+  }
 
-    for (auto e : staff) {
-        e->calc();
-    }
+  int k = 0;
+  for (auto emp : staff) {
+    emp->setTimeWork(worktime[k]);
+    k++;
+  }
+  std::cout << std::endl;
 
-    for (auto e : staff) {
-        e->print_info();
-        std::cout << std::endl;
-    }
+  std::cout << "Relevant worktime for each employee:\n";
+  for (auto emp : staff) {
+    std::cout << emp->getWorkTime() << ' ';
+  }
+  std::cout << std::endl;
 
-    return 0;
+  for (auto emp : staff) {
+    emp->calc();
+  }
+
+  std::cout << "Relevant payments for each employee:\n";
+  for (auto emp : staff) {
+    std::cout << emp->getPayment() << ' ';
+  }
+  std::cout << std::endl;
+
+  std::cout << "Brief information:\n";
+  for (auto emp : staff) {
+    emp->printInfo();
+    std::cout << "\n -------------- \n";
+  }
+
+  return 0;
 }

@@ -2,88 +2,112 @@
 //
 
 #include <gtest/gtest.h>
+
 #include <string>
 
-#include "Personal.h"
-#include "Engineer.h"
-#include "Manager.h"
+#include "Factory.h"
 
-TEST(StaffDemoTest, test1) {
-    Cleaner c(123123, "John Doe", 1000);
-
-    EXPECT_EQ(c.calc_bonus(), 0);
+TEST(lab, test1) {
+  Programmer proger(10, 100, "asd", "Programmer", new Project(10000, "test"),
+                    0.6);
+  EXPECT_EQ(10, proger.getId());
 }
 
-TEST(StaffDemoTest, test2) {
-    TeamLeader tl(21312321, "John Doe", 44000, { "13213", 200000 });
-    tl.worktime(24);
-
-    EXPECT_EQ(tl.calc_heads(), 220000);
+TEST(lab, test2) {
+  Programmer proger(10, 100, "asd", "Programmer", new Project(10000, "test"),
+                    0.6);
+  EXPECT_EQ("Programmer", proger.getPos());
 }
 
-TEST(StaffDemoTest, test3) {
-    Tester t(21312321, "John Doe", 44000, { "13213", 200000 });
-    t.worktime(24);
-
-    EXPECT_EQ(t.calc_budget_part(0.1, 100000), 10000);
+TEST(lab, test3) {
+  std::vector<Project*> v;
+  v.push_back(new Project(1000, "test1"));
+  v.push_back(new Project(2000, "test2"));
+  v.push_back(new Project(3000, "test3"));
+  EXPECT_EQ("test2", v[1]->getTitle());
 }
 
-TEST(StaffDemoTest, test4) {
-    Cleaner c(123123, "John Doe", 1000);
-
-    EXPECT_EQ(c.calc_base(24, 2000), 2000);
+TEST(lab, test4) {
+  Programmer proger(10, 100, "asd", "Programmer", new Project(10000, "test"),
+                    0.6);
+  proger.calc();
+  EXPECT_EQ(7200, proger.getPayment());
 }
 
-TEST(StaffDemoTest, test5) {
-    Driver d(123123, "John Doe", 1000);
-
-    EXPECT_EQ(d.calc_base(1000, 12), 600);
+TEST(lab, test5) {
+  TeamLeader proger(10, 100, "asd", new Project(10000, "test"), 0.1);
+  EXPECT_EQ(0, proger.calcPAditions());
 }
 
-TEST(StaffDemoTest, test6) {
-    SeniorManager sm(21312321, "John Doe",
-        { {"13213", 200000}, {"343213", 123213} });
-
-    EXPECT_EQ(sm.calc_heads(), 50000);
+TEST(lab, test6) {
+  Programmer proger(10, 100, "asd", "Programmer", new Project(10000, "test"),
+                    0.6);
+  proger.setTimeWork(50);
+  EXPECT_EQ(50, proger.getWorkTime());
 }
 
-TEST(StaffDemoTest, test7) {
-    Tester t(21312321, "John Doe", 44000, { "13213", 200000 });
-
-    EXPECT_EQ(t.calc_base(1000, 12), 600);
+TEST(lab, test7) {
+  TeamLeader proger(10, 100, "asd", new Project(10000, "test"), 0.6);
+  EXPECT_EQ(1200, proger.calcPAditions());
 }
 
-TEST(StaffDemoTest, test8) {
-    Tester t(21312321, "John Doe", 44000, { "13213", 200000 });
-    t.worktime(24);
-
-    EXPECT_EQ(t.calc_bonus(), 0);
+TEST(lab, test8) {
+  std::vector<Project*> v;
+  v.push_back(new Project(1000, "test1"));
+  v.push_back(new Project(2000, "test2"));
+  v.push_back(new Project(3000, "test3"));
+  ProjectManager proger(10, "asd", "ProjectManager", v, 0.4);
+  EXPECT_EQ(400, proger.calcPartOfBudget(0.4, v[0]->getBudget()));
 }
 
-TEST(StaffDemoTest, test9) {
-    Tester t(21312321, "John Doe", 44000, { "13213", 200000 });
-    t.worktime(24);
-
-    EXPECT_EQ(t.calc_pro_additions(), 10560);
+TEST(lab, test9) {
+  TeamLeader proger(10, 100, "asd", new Project(10000, "test"), 0.6);
+  EXPECT_EQ(5000, proger.calcHeads());
 }
 
-TEST(StaffDemoTest, test10) {
-    Programmer p(21312321, "John Doe", 44000, { "13213", 200000 });
-    p.worktime(24);
-
-    EXPECT_EQ(p.calc_pro_additions(), 18333);
+TEST(lab, test10) {
+  std::vector<Project*> v;
+  v.push_back(new Project(1000, "test1"));
+  v.push_back(new Project(2000, "test2"));
+  v.push_back(new Project(3000, "test3"));
+  ProjectManager proger(10, "asd", "ProjectManager", v, 0.4);
+  EXPECT_EQ(800, proger.calcPartOfBudget(0.4, v[1]->getBudget()));
 }
 
-TEST(StaffDemoTest, test11) {
-    ProjectManager pm(21312321, "John Doe", { "13213", 200000 });
-    pm.worktime(24);
-
-    EXPECT_EQ(pm.calc_heads(), 50000);
+TEST(lab, test11) {
+  Driver d(10, 100, "asd");
+  d.setTimeWork(50);
+  d.calc();
+  EXPECT_EQ(6500, d.getPayment());
 }
 
-TEST(StaffDemoTest, test12) {
-    Driver d(123123, "John Doe", 1000);
-    d.worktime(10);
+TEST(lab, test12) {
+  std::vector<Project*> v;
+  v.push_back(new Project(1000, "test1"));
+  v.push_back(new Project(2000, "test2"));
+  v.push_back(new Project(3000, "test3"));
+  ProjectManager proger(10, "asd", "ProjectManager", v, 0.4);
+  EXPECT_EQ(1200, proger.calcPartOfBudget(0.4, v[2]->getBudget()));
+}
 
-    EXPECT_EQ(d.calc_bonus(), 100);
+TEST(lab, test13) {
+  Programmer proger(10, 100, "asd", "Programmer", new Project(10000, "test"),
+                    0.6);
+  EXPECT_EQ("asd", proger.getName());
+}
+
+TEST(lab, test14) {
+  std::vector<Project*> v;
+  v.push_back(new Project(1000, "test1"));
+  v.push_back(new Project(2000, "test2"));
+  v.push_back(new Project(3000, "test3"));
+  SeniorManager proger(10, "asd", v, 0.5);
+  proger.calc();
+  EXPECT_EQ(10150, proger.getPayment());
+}
+
+TEST(lab, test15) {
+  Cleaner c(10, 70, "asd");
+  c.setTimeWork(50);
+  EXPECT_EQ(910, c.calcBonus());
 }

@@ -4,24 +4,37 @@
 #ifndef INCLUDE_INTERFACES_H_
 #define INCLUDE_INTERFACES_H_
 
+#include <string>
+#include <utility>
+
 class WorkBaseTime {
- protected:
-virtual int calc_base(int salary, int wt) = 0;
-virtual int calc_bonus() = 0;
-virtual ~WorkBaseTime() = default;
+ public:
+  virtual int calcBase(int HourSalary, int worktime) = 0;
+  virtual int calcBonus() = 0;
 };
 
 class ProjectBudget {
- protected:
-virtual int calc_budget_part(float part, int budget) = 0;
-virtual int calc_pro_additions() = 0;
-virtual ~ProjectBudget() = default;;
+ public:
+  virtual int calcPartOfBudget(float part, int budget) = 0;
+  virtual int calcPAditions() = 0;
 };
 
 class Heading {
- protected:
-virtual int calc_heads() = 0;
-virtual ~Heading() = default;
+ public:
+  virtual int calcHeads() = 0;
+};
+
+class Project {
+ private:
+  int m_Budget;
+  std::string m_Title;
+
+ public:
+  Project(int budget, std::string title)
+      : m_Budget{budget}, m_Title{std::move(title)} {}
+
+  int getBudget() { return m_Budget; }
+  const std::string& getTitle() { return m_Title; }
 };
 
 #endif  // INCLUDE_INTERFACES_H_

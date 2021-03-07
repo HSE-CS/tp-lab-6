@@ -3,13 +3,25 @@
 
 #include "Employee.h"
 
-Employee::Employee(id_type id, const std::string& name) :
-    _id(id),
-    _nameof(name),
-    _payment(0),
-    _timeofwork(0)
-{}
+Employee::Employee(int id, std::string name, std::string pos)
+    : id{id}, name{std::move(name)}, pos{std::move(pos)} {}
 
-void Employee::worktime(unsigned int wt) {
-    _timeofwork = wt;
-}
+void Employee::setId(int id) { this->id = id; }
+
+void Employee::setTimeWork(int worktime) { this->worktime = worktime; }
+
+void Employee::setPayment(int payment) { this->payment = payment; }
+
+void Employee::setName(std::string name) { this->name = std::move(name); }
+
+void Employee::setPos(std::string pos) { this->pos = std::move(pos); }
+
+int Employee::getId() { return this->id; }
+
+int Employee::getWorkTime() { return this->worktime; }
+
+int Employee::getPayment() { return this->payment; }
+
+const std::string& Employee::getName() { return this->name; }
+
+const std::string& Employee::getPos() { return this->pos; }

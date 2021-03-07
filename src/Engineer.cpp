@@ -1,93 +1,73 @@
 // Copyright 2021 TimurZaytsev
 //
 
-#include <Engineer.h>
-#include <iostream>
+#include "Engineer.h"
 
-Engineer::Engineer(id_type id, const std::string& name,
-    unsigned int salary,
-    const Project& p) :
+Engineer::Engineer(int id, int HourSalary, std::string name, std::string pos,
+                   Project* project, float part)
+    : Personal(id, HourSalary, std::move(name), std::move(pos)),
+      project{project},
+      partition{part} {}
 
-    Personal(id, name, salary),
-    _project(p)
-{}
-
-int Engineer::calc_budget_part(float part, int budget) {
-    return budget * part;
+int Engineer::calcPartOfBudget(float part, int budget) {
+  return static_cast<int>(part * budget);
 }
 
 void Engineer::calc() {
-    _payment = calc_base(_salary, _timeofwork)
-        + calc_budget_part(0.1, _project._budget);
+  this->setPayment(this->getPayment() +
+                   calcBase(HourSalary, this->getWorkTime()) +
+                   calcPartOfBudget(partition, project->getBudget()));
 }
 
+Programmer::Programmer(int id, int HourSalary, std::string name,
+                       std::string pos, Project* project, float part)
+    : Engineer(id, HourSalary, std::move(name), std::move(pos), project,
+               part) {}
 
-Tester::Tester(id_type id,
-    const std::string& name,
-    unsigned int salary,
-    const Project& p) : Engineer(id, name, salary, p) {
-    _position = Position::Tester;
-}
-
-int Tester::calc_pro_additions() {
-    return _timeofwork * (_salary / 100);
-}
-
-int Tester::calc_bonus() {
+int Programmer::calcPAditions() {
+  if (partition >= 0.2) {
+    return static_cast<int>(calcPartOfBudget(partition, project->getBudget()) /
+                            5);
+  } else {
     return 0;
+  }
 }
 
-void Tester::print_info() {
-    std::cout << "Position: Tester\n"
-        "ID: " << _id << '\n' <<
-        "Name: " << _nameof << '\n' <<
-        "Worktime: " << _timeofwork << '\n' <<
-        "Payment: " << _payment << std::endl;
+void Programmer::calc() {
+  this->setPayment(
+      this->getPayment() + calcBase(HourSalary, this->getWorkTime()) +
+      calcPartOfBudget(partition, project->getBudget()) + calcPAditions());
 }
 
+Tester::Tester(int id, int HourSalary, std::string name, Project* project,
+               float part)
+    : Engineer(id, HourSalary, std::move(name), "Tester", project, part) {}
 
-Programmer::Programmer(id_type id,
-    const std::string& name,
-    unsigned int salary,
-    const Project& p) : Engineer(id, name, salary, p) {
-    _position = Position::Programmer;
-}
-
-int Programmer::calc_pro_additions() {
-    return _salary * 10 / _timeofwork;
-}
-
-int Programmer::calc_bonus() {
+int Tester::calcPAditions() {
+  if (partition >= 0.4) {
+    return static_cast<int>(calcPartOfBudget(partition, project->getBudget()) /
+                            5);
+  } else {
     return 0;
+  }
 }
 
-void Programmer::print_info() {
-    std::cout << "Position: Programmer\n"
-        "ID: " << _id << '\n' <<
-        "Name: " << _nameof << '\n' <<
-        "Worktime: " << _timeofwork << '\n' <<
-        "Payment: " << _payment << std::endl;
+void Tester::calc() {
+  this->setPayment(
+      this->getPayment() + calcBase(HourSalary, this->getWorkTime()) +
+      calcPartOfBudget(partition, project->getBudget()) + calcPAditions());
 }
 
+TeamLeader::TeamLeader(int id, int HourSalary, std::string name,
+                       Project* project, float part)
+    : Programmer(id, HourSalary, std::move(name), "TeamLeader", project,
+                 part) {}
 
-// class TeamLeader
-TeamLeader::TeamLeader(id_type id,
-    const std::string& name,
-    unsigned int salary,
-    const Project& p) : Programmer(id, name, salary, p) {
-    _position = Position::TeamLeader;
-}
-
-int TeamLeader::calc_heads() {
-    return _salary * 5;
-}
+int TeamLeader::calcHeads() { return 5000; }
 
 void TeamLeader::calc() {
-    _payment = calc_heads()
-        + calc_budget_part(0.3, _project._budget)
-        + calc_base(_salary, _timeofwork);
-}
-
-void TeamLeader::print_info() {
-    Programmer::print_info();
+  this->setPayment(this->getPayment() +
+                   calcBase(HourSalary, this->getWorkTime()) +
+                   calcPartOfBudget(partition, project->getBudget()) +
+                   calcPAditions() + calcHeads());
 }

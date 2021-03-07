@@ -4,34 +4,34 @@
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 
-#include <vector>
 #include <string>
+#include <vector>
 #include "Interfaces.h"
 #include "Employee.h"
 
 
-class ProjectManager : public Employee, public Heading {
- public:
-ProjectManager(id_type id, const std::string& name, const Project& p);
-~ProjectManager() override = default;
-void calc() override;
-void print_info() override;
-int calc_heads() override;
+class ProjectManager : public Employee, public ProjectBudget, public Heading {
+ protected:
+  std::vector<Project*> projects;
+  float partition;
 
- private:
-Project _project;
+ public:
+  ProjectManager(int id, std::string name, std::string pos,
+                 std::vector<Project*> projects, float part);
+
+  int calcPartOfBudget(float part, int budget) override;
+  int calcPAditions() override;
+  int calcHeads() override;
+  void calc() override;
+  void printInfo();
 };
 
-
-class SeniorManager final : public ProjectManager {
+class SeniorManager : public ProjectManager {
  public:
-SeniorManager(id_type id, const std::string& name, std::vector<Project> ps);
+  SeniorManager(int id, std::string name, std::vector<Project*> projects,
+                float part);
 
-void calc() override;
-void print_info() override;
-
- private:
-std::vector<Project> _projects;
+  void calc() override;
 };
 
 #endif  // INCLUDE_MANAGER_H_

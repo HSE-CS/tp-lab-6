@@ -4,37 +4,34 @@
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
-#include "Employee.h"
 #include <string>
 #include "Interfaces.h"
-
+#include "Employee.h"
 
 class Personal : public Employee, public WorkBaseTime {
- public:
-Personal(id_type id, const std::string& name, unsigned int salary);
-~Personal() override = default;
-int calc_base(int salary, int wt) override;
-
  protected:
-unsigned int _salary;
+  int HourSalary{0};
+
+ public:
+  Personal(int id, int HourSalary, std::string name, std::string pos);
+  int calcBase(int HourSalary, int worktime) override;
+  int calcBonus() override;
+  void calc() override;
+  void printInfo() override;
 };
 
-class Cleaner final : public Personal {
+class Driver : public Personal {
  public:
-Cleaner(id_type id, const std::string& name, unsigned int salary);
-
-void calc() override;
-void print_info() override;
-int calc_bonus() override;
+  Driver(int id, int HourSalary, std::string name);
+  int calcBonus() override;
+  void calc() override;
 };
 
-class Driver final : public Personal {
+class Cleaner : public Personal {
  public:
-Driver(id_type id, const std::string& name, unsigned int salary);
-
-void calc() override;
-void print_info() override;
-int calc_bonus() override;
+  Cleaner(int id, int HourSalary, std::string name);
+  int calcBonus() override;
+  void calc() override;
 };
 
 #endif  // INCLUDE_PERSONAL_H_
