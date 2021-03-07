@@ -1,3 +1,4 @@
+// Copyright 2021 BL
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 #include <string>

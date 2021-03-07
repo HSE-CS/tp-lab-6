@@ -1,3 +1,4 @@
+// Copyright 2021 BL
 #include "Manager.h"
 #include <iostream>
 int ProjectManager::getSubordinates() {

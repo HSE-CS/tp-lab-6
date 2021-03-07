@@ -1,3 +1,4 @@
+// Copyright 2021 BL
 #include "Employee.h"
 void Employee::setPayment(int payment_) {
     payment = payment_;

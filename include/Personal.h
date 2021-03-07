@@ -1,3 +1,4 @@
+// Copyright 2021 BL
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 #include <string>
