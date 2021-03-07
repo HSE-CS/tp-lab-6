@@ -1,3 +1,4 @@
+#pragma once
 // Copyright 2021 Tatsenko Alexey
 #include<vector>
 #include<string>
