@@ -11,7 +11,7 @@ int main() {
       fabrica.make_staff("C:\\Users\\Alexey\\Desktop\\papka\\projects.txt",
                          "C:\\Users\\Alexey\\Desktop\\papka\\staff.txt");
   for (auto& emp : employment) {
-    emp->set_work_time(rand() % 11 + 1);
+    emp->set_work_time(std::rand() % 11 + 1);
   }
 
   for (auto& emp : employment) {
