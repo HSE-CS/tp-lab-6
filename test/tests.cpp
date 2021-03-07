@@ -3,9 +3,10 @@
 #include <gtest/gtest.h>
 #include <string>
 
-#include "Engineer.h"
 #include "Employee.h"
-#include "Project.h"
+#include "Engineer.h"
+#include "Factory.h"
+#include "Interfaces.h"
 #include "Manager.h"
 #include "Personal.h"
 
