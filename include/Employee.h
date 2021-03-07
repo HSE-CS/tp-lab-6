@@ -8,9 +8,7 @@ enum Position {
   DRIVER,
   TESTER,
   CLEANER,
-  PERSONAL,
   TEAMLEADER,
-  ENGINEER,
   PROJECTMANAGER,
   PROGRAMMER,
   SENIORMANAGER
@@ -20,20 +18,24 @@ class Employee {
  private:
   std::string id;
   std::string name;
-  int worktime;
-  double payment;
   Position position;
+ protected:
+  int worktime;
+  double payment = 0;
+  double salary;
  public:
-  Employee(std::string id, std::string name, int worktime, Position position);
-  ~Employee();
-  void setWorkTime();
+  Employee(std::string id, std::string name, double salary, Position position) {
+    this->id = id;
+    this->name = name;
+    this->salary = salary;
+    this->position = position;
+  }
+  void setWorkTime(int wtime);
   virtual void calc() = 0;
   virtual void printInfo() = 0;
+  Position getPosition();
   std::string getId();
   std::string getName();
-  int getWorkTime();
-  double getPayment();
-  Position getPosition();
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_
