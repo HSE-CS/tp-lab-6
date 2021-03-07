@@ -44,7 +44,7 @@ TEST(TESTS, test3) {
   std::string name = "Alex";
   Project project("LALALA", 1000);
   Programmer pr(1, name, PROGRAMMER, 30, &project, 0.3);
-  EXPECT_EQ(0.3, pr.get_part());
+  EXPECT_EQ(float(0.3), pr.get_part());
 }
 
 TEST(TESTS, test4) {
@@ -59,7 +59,7 @@ TEST(TESTS, test5) {
   Project project("LALALA", 1000);
   Programmer pr(1, name, PROGRAMMER, 30, &project, 0.3);
   pr.set_work_time(7);
-  EXPECT_EQ(3000 + 210 + 300, pr.get_payment());
+  EXPECT_EQ(3510, pr.get_payment());
 }
 
 TEST(TESTS, test6) {
@@ -67,7 +67,7 @@ TEST(TESTS, test6) {
   Project project("LALALA", 1000);
   Tester pr(1, name, TESTER, 30, &project, 0.3, 3);
   pr.set_work_time(11);
-  EXPECT_EQ(300 + 210 + 300, pr.get_payment());
+  EXPECT_EQ(810, pr.get_payment());
 }
 
 TEST(TESTS, test7) {
@@ -89,7 +89,7 @@ TEST(TESTS, test9) {
   Project project("LALALA", 1000);
   Driver dr(1, name, DRIVER, 30);
   dr.set_work_time(11);
-  EXPECT_EQ(135 + 330, dr.get_payment());
+  EXPECT_EQ(465, dr.get_payment());
 }
 
 TEST(TESTS, test10) {
