@@ -2,6 +2,7 @@
 #pragma once
 #include "Interfaces.h"
 #include "Personal.h"
+#include<string>
 
 class Engineer : public ProjectBudjet, public Personal {
  protected:
