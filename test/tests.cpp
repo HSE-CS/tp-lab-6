@@ -32,29 +32,22 @@ TEST(Test, Test_5) {
   Driver* pers = new Driver(42, "Ilya", "Driver", 666, 3);
   EXPECT_EQ(3, pers->get_worktime());
 }
-//
 TEST(Test, Test_6) {
-  Driver* pers = new Driver(42, "Ilya", "Driver", 666, 3);
-  EXPECT_EQ(1998, pers->calcBase());
+  Driver* pers = new Driver(42, "Ilya", "Driver", 666, 10);
+  EXPECT_EQ(1332, pers->calcBonus());
 }
-
 TEST(Test, Test_7) {
-  Cleaner* pers = new Cleaner(51, "Ilya", "Cleaner", 120, 10);
-  EXPECT_EQ(1200, pers->calc());
+  Driver* pers = new Driver(42, "Ilya", "Driver", 666, 10);
+  EXPECT_EQ(7992, pers->calc());
 }
-//
 TEST(Test, Test_8) {
   Project num = {56, "rabota", 668145};
   EXPECT_EQ("rabota", num.name);
 }
-
-
 TEST(Test, Test_9) {
   Project num = {56, "rabota", 668145};
   EXPECT_EQ(56, num.id);
 }
-
-
 TEST(Test, Test_10) {
   Project num = {56, "rabota", 668145};
   EXPECT_EQ(668145, num.budget);
