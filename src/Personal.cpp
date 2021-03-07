@@ -23,9 +23,9 @@ std::string converse_1(Position pos) {
 }
 
 
-Personal::Personal(int id, std::string fi, Position position, int salary_per_hour)
-    : Employee(id, fi, position) {
-  this->salary_per_hour = salary_per_hour;
+Personal::Personal(int id, std::string fi, Position pos, int salary)
+    : Employee(id, fi, pos) {
+  this->salary_per_hour = salary;
 }
 
 Driver::Driver(int id, std::string fi, Position position, int salary_per_hour)
@@ -51,7 +51,8 @@ void Personal::calc() {
 void Personal::print_info() {
   std::cout << this->get_id() << "  "
             << "name: " << this->get_name() << std::endl
-            << "\t" << "position " << converse_1(this->get_position()) << std::endl;
+            << "\t" << "position " << converse_1(this->get_position())
+            << std::endl;
   std::cout << "\t"
             << "workTime: " << this->get_work_time() << std::endl
             << "\t" << "payment: " << this->get_payment();
