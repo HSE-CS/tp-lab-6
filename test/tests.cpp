@@ -5,6 +5,7 @@
 #include"Engineer.h"
 #include"Manager.h"
 #include"Personal.h"
+#include<vector>
 
 TEST(TESTS, test1) {
   std::string name = "Alex";
