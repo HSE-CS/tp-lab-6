@@ -13,7 +13,7 @@ int main() {
       std::string pathToEmployees = "../tp-lab-6/src/Employees.json";
       std::vector<Employee*> Company(makeStaff(pathToEmployees, Projects));
       for (auto emp : Company) {
-        emp->setWorkTime(rand() % 100 + 100);
+        emp->setWorkTime(std::rand() % 100 + 100);
       }
       for (auto emp : Company) {
        emp->calc();
