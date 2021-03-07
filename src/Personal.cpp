@@ -24,7 +24,7 @@ Driver::Driver(int a, std::string s, std::string d, int b, int c)
 : Personal(a, s, d, b, c) {
 }
 int Driver::calcBonus() {
-  return (get_worktime() * get_salary()*0,2);
+  return (get_worktime() * get_salary() * 0.2);
 }
 int Driver::calc() {
   return (calcBase(get_worktime(), get_salary()) + calcBonus());
