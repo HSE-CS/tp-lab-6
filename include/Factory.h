@@ -1,6 +1,7 @@
 // Copyright 2021 Tatsenko Alexey
-#include <vector>
-#include "Employee.h"
+#include<vector>
+#include<string>
+#include"Employee.h"
 
 class Factory {
  private:
