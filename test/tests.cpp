@@ -1,8 +1,8 @@
 // Copyright 2020 GHA Test Team
 
-#include <Employee.h>
-#include <Factory.h>
-#include <gtest/gtest.h>
+#include "Employee.h"
+#include "Factory.h"
+#include "gtest/gtest.h"
 
 #include <random>
 #include <string>
