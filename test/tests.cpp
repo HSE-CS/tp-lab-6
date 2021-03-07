@@ -116,7 +116,7 @@ TEST(TESTS, test13) {
   Project project("LALALA", 1000);
   projects.push_back(&project);
   std::string name = "Alex";
-  ProjectManager pt(1, name, PROJECT_MANAGER, projects, "LALALA" );
+  ProjectManager pt(1, name, PROJECT_MANAGER, projects, "LALALA");
   EXPECT_EQ("ProjectManager", converse_(pt.get_position()));
 }
 
