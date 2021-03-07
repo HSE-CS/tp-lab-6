@@ -1,24 +1,22 @@
 // Copyright DB 2021
 #ifndef INCLUDE_FACTORY_H_
 #define INCLUDE_FACTORY_H_
-#include<fstream>
-#include<sstream>
-#include<string>
-#include<vector>
-#include"Employee.h"
-#include"Engineer.h"
-#include"Manager.h"
+
+#include <string>
+#include <utility>
+#include <vector>
+#include "Employee.h"
+
 class Project {
  public:
-  int Id;
-  int budget;
+  int is;
   std::string name;
-  Project(int Id, std::string name, int budget)
-      : Id(Id), name(std::move(name)), budget(budget) {}
+  int budget;
+  Project(int is, std::string name, int budget)
+      : is(is), name(std::move(name)), budget(budget) {}
 };
 
-
-class Factory {
+class StaffFactory {
  public:
   static std::vector<Employee*> makeStaff();
 };

@@ -1,11 +1,11 @@
 // Copyright DB 2021
-#include <fstream>
-#include "json.hpp""
+
 #include "Engineer.h"
 #include "Manager.h"
-#include "Employee.h"
+#include "json.hpp"
+#include <fstream>
 
-std::vector<Employee*> Factory::makeStaff() {
+std::vector<Employee*> StaffFactory::makeStaff() {
   std::vector<Project*> projects;
   std::string p = R"(projects.json)";
   std::ifstream ip(p);
@@ -35,12 +35,12 @@ std::vector<Employee*> Factory::makeStaff() {
       auto project = v["project"].get<std::vector<int>>();
       auto part = v["part"].get<float>() / 100;
       if (position == "project_manager") {
-        pos = Position(Project_Manager);
+        pos = Position(PROJECT_MANAGER);
         std::vector<Project*> prj;
         prj.push_back(projects[project[0]]);
-        staff.push_back(new ProjectManager{id++, name, pos, 1, prj, part });
+        staff.push_back(new ProjectManager{id++, name, pos, 1, prj, part});
       } else {
-        pos = Position(Senior_Manager);
+        pos = Position(SENIOR_MANAGER);
         staff.push_back(new SeniorManager{id++, name, pos,
                                           static_cast<int>(projects.size()),
                                           projects, part});
@@ -48,10 +48,10 @@ std::vector<Employee*> Factory::makeStaff() {
     } else if (position == "cleaner" || position == "driver") {
       auto salary = v["salary"].get<int>();
       if (position == "cleaner") {
-        pos = Position(cleaner);
+        pos = Position(CLEANER);
         staff.push_back(new Cleaner{id++, name, pos, salary});
       } else {
-        pos = Position(driver);
+        pos = Position(DRIVER);
         staff.push_back(new Driver{id++, name, pos, salary});
       }
     } else if (position == "programmer" || position == "tester" ||
@@ -60,20 +60,19 @@ std::vector<Employee*> Factory::makeStaff() {
       auto project = v["project"].get<int>();
       auto part = v["part"].get<int>();
       if (position == "programmer") {
-        pos = Position(programmer);
+        pos = Position(PROGRAMMER);
         staff.push_back(new Programmer{id++, name, pos, salary,
-                                       static_cast<float>(part),
-                                       projects[project]});
+                                       projects[project],
+                                       static_cast<float>(part)});
       } else if (position == "tester") {
-        pos = Position(tester);
-        staff.push_back(new Tester{id++, name, pos, salary,
-                                   static_cast<float>(part),
-                                   projects[project]});
+        pos = Position(TESTER);
+        staff.push_back(new Tester{id++, name, pos, salary, projects[project],
+                                   static_cast<float>(part)});
       } else {
-        pos = Position(Team_Leader);
+        pos = Position(TEAM_LEADER);
         staff.push_back(new TeamLeader{id++, name, pos, salary,
-                                       static_cast<float>(part),
-                                       projects[project]});
+                                       projects[project],
+                                       static_cast<float>(part)});
       }
     }
   }

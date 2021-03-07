@@ -2,13 +2,12 @@
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 
-#include <string>
 #include <vector>
-#include <sstream>
-#include <iostream>
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 #include "Factory.h"
+
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
  private:

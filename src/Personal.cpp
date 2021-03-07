@@ -1,4 +1,5 @@
 // Copyright DB 2021
+
 #include "Personal.h"
 #include <sstream>
 #include <iostream>

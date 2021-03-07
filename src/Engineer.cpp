@@ -1,6 +1,6 @@
 // Copyright DB 2021
-#include "Engineer.h"
 
+#include "Engineer.h"
 #include <utility>
 #include <sstream>
 #include <iostream>
@@ -9,6 +9,23 @@
 int Engineer::calcBudgetPart(float part, int budget) {
   return project->budget / static_cast<int>(part);
 }
+
+Engineer::Engineer(int id, const std::string &name, Position position,
+                   int salary, Project *_project, float part)
+    : Personal(id, name, position, salary), project(_project), part(part) {}
+
+Tester::Tester(int id, const std::string &name, Position position, int salary,
+               Project *project, float part)
+    : Engineer(id, name, position, salary, project, part) {}
+
+
+Programmer::Programmer(int id, const std::string &name, Position position,
+                       int salary, Project *project, float part)
+    : Engineer(id, name, position, salary, project, part) {}
+
+TeamLeader::TeamLeader(int id, const std::string &name, Position position,
+                       int salary, Project *project, float part)
+    : Programmer(id, name, position, salary, project, part) {}
 
 void Engineer::printInfo() {
   std::stringbuf str;

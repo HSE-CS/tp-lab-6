@@ -1,17 +1,17 @@
 ﻿// Copyright DB 2021
 #ifndef INCLUDE_EMPLOYEE_H_
 #define INCLUDE_EMPLOYEE_H_
-#include <iomanip>
-#include <iostream>
+
 #include <string>
+
 enum Position {
-  Senior_Manager,
-  Project_Manager,
-  Team_Leader,
-  programmer,
-  tester,
-  driver,
-  cleaner
+  SENIOR_MANAGER,
+  PROJECT_MANAGER,
+  TEAM_LEADER,
+  PROGRAMMER,
+  TESTER,
+  DRIVER,
+  CLEANER
 };
 
 class Employee {
@@ -23,13 +23,13 @@ class Employee {
   int payment;
 
  public:
-  Employee(int id, std::string name, Position position)
-      : id(id), name(std::move(name)), position(position), payment(0) {}
+  Employee(int id, std::string name, Position position);
   void setWorkTime(int workTime);
   virtual void calc() = 0;
-  virtual void printInfo();
-  int getPayment() const;
+  virtual void printInfo() = 0;
   std::string getPosition() const;
+
+  int getPayment() const;
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_
