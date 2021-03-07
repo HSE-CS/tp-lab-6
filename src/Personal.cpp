@@ -7,7 +7,7 @@
 #include <ctime>
 #include <cstdlib>
 
-Personal::Personal(int a, std::string s, std::string d, int b, int c) 
+Personal::Personal(int a, std::string s, std::string d, int b, int c)
 : Employee(a, s, d, 0, c) {
   salary = b;
 }
@@ -20,7 +20,7 @@ int Personal::calcBase(int salary, int wtime) {
 int Personal::get_salary() {
   return salary;
 }
-Driver::Driver(int a, std::string s, std::string d, int b, int c) 
+Driver::Driver(int a, std::string s, std::string d, int b, int c)
 : Personal(a, s, d, b, c) {
 }
 int Driver::calcBonus() {
@@ -36,7 +36,7 @@ void Driver::printInfo() {
             << "\nWorktime = " << this->get_worktime()
             << "\nFinal payment = " << this->calc() << std::endl;
 }
-Cleaner::Cleaner(int a, std::string s, std::string d, int b, int c) 
+Cleaner::Cleaner(int a, std::string s, std::string d, int b, int c)
 : Personal(a, s, d, b, c) {
 }
 int Cleaner::calc() {
