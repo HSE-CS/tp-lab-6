@@ -14,7 +14,8 @@ class ProjectManager : public Heading, public Employee, public ProjectBudget {
   std::vector<Project*> project;
 
  public:
-  ProjectManager(int, const std::string, std::string,int, int, int, const std::vector<Project *> &)
+  ProjectManager(int, const std::string, std::string, int, int, int,
+  const std::vector<Project *> &)
   int calcHeads();
   int calc();
   int calcProAdditions();
@@ -26,7 +27,8 @@ class SeniorManager : public ProjectManager {
   std::vector<Project> project;
 
  public:
-  SeniorManager(int, std::string, std::string, int, int, int, const std::vector<Project *> &)
+  SeniorManager(int, std::string, std::string, int, int, int,
+  const std::vector<Project *> &)
   int calc();
   void printInfo();
 };

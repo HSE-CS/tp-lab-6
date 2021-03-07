@@ -17,7 +17,7 @@ class Employee {
   std::string position;
 
  public:
- int payment;
+  int payment;
   Employee(int, std::string, std::string, int, int)
   void set_id(int);
   void set_name(std::string&);

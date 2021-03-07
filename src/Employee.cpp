@@ -1,12 +1,13 @@
+// Copyright 2020 Ilya Urtyukov
 #include "Interfaces.h"
 #include "Employee.h"
 
-Employee::Employee(int a, std::string s, std::string d, int b,int c) {
-  id = a ;
+Employee::Employee(int a, std::string s, std::string d, int b, int c) {
+  id = a;
   name = s;
   position = d;
   payment = b;
-  worktime = c
+  worktime = c;
 }
 void Employee::set_id(int a) {
     id = a;

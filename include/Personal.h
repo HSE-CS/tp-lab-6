@@ -1,5 +1,5 @@
 // Copyright 2021 Urtyukov Ilya
-ifndef INCLUDE_PERSONAL_H_
+#ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
 #include <string>

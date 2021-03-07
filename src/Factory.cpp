@@ -1,3 +1,4 @@
+// Copyright 2020 Ilya Urtyukov
 #include "Interfaces.h"
 
 #include "Employee.h"
@@ -9,6 +10,6 @@
 Project::Project(int a, std::string s, int x) {
   id = a;
   name = s;
-  budget = x
+  budget = x;
 }
 

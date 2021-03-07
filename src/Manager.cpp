@@ -1,3 +1,4 @@
+// Copyright 2020 Ilya Urtyukov
 #include "Manager.h"
 
 #include <cmath>
@@ -6,7 +7,9 @@
 
 #include "Engineer.h"
 
-ProjectManager::ProjectManager(int a, const std::string s, std::string d, int N, int b, int c, const std::vector<Project *> &p) : Employee (int a, std::string s, std::string d, int b, int c) {
+ProjectManager::ProjectManager(int a, const std::string s, std::string d,
+int N, int b, int c, const std::vector<Project *> &p) : Employee(int a,
+std::string s, std::string d, int b, int c) {
   for (size_t i = 0; i < N; i++) {
     project.push_back(p[i]);
   }
@@ -22,7 +25,9 @@ void ProjectManager::printInfo() {
             << this->get_position() << "\nWorktime = " << this->get_worktime()
             << "\nFinal payment = " << this->calc() << std::endl;
 }
-SeniorManager::SeniorManager(int a, std::string s, std::string d, int N, int b, int c, const std::vector<Project *> &p) : ProjectManager(a, s, d, N, b, c, p) {
+SeniorManager::SeniorManager(int a, std::string s, std::string d,
+int N, int b, int c, const std::vector<Project *> &p) 
+: ProjectManager(a, s, d, N, b, c, p) {
 }
 int SeniorManager::calc() {
   return ProjectManager::calc();
