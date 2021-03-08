@@ -20,7 +20,7 @@ class Employee {
   std::string name;
   Position position;
  protected:
-  int worktime;
+  int worktime = 0;
   double payment = 0;
   double salary;
  public:
