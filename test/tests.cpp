@@ -82,12 +82,14 @@ TEST(Test, test9) {
   Cleaner* temp = new Cleaner("23", "tamara",
     200.0, Position(CLEANER));
   temp->setWorkTime(20);
+  temp->calc();
   EXPECT_EQ(4000, temp->getPayment());
 }
 
 TEST(Test, test10) {
   Driver* temp = new Driver("23", "tamara", 200.0, Position(CLEANER));
   temp->setWorkTime(20);
+  temp->calc();
   EXPECT_EQ(4300, temp->getPayment());
 }
 
