@@ -24,3 +24,7 @@ void Employee::printInfo() {
     << "\nWorktime: " << worktime << "\nPayment: " << payment
     << std::endl;
 }
+
+double Employee::getPayment() {
+  return payment;
+}

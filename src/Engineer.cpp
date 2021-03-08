@@ -15,12 +15,14 @@ void Engineer::calc() {
 int Programmer::calcProAdditions() { return 1000; }
 
 
-int TeamLeader::calcHeads() { return 100; }
+int TeamLeader::calcHeads() { return 500; }
 
 int Tester::calcProAdditions() { return 500; }
 
 void TeamLeader::calc() {
-  payment = calcBase(salary, worktime) + calcProAdditions() + calcBonus();
+  payment = calcBase(salary, worktime) +
+    calcBudgetPart(0.5, project->budget) + calcProAdditions()
+    + calcBonus() + calcHeads();
 }
 
 int Engineer::calcBonus() {

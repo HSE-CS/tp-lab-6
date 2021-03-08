@@ -36,6 +36,7 @@ class Employee {
   Position getPosition();
   std::string getId();
   std::string getName();
+  double getPayment();
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_

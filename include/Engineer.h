@@ -8,7 +8,7 @@
 #include <string>
 
 class Engineer : public Personal, public IProjectBudget {
- private:
+ protected:
   Project* project;
  public:
   Engineer(std::string id,
