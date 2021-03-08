@@ -16,13 +16,11 @@ std::string return_string(Position position) {
     return "Driver";
   } else if (position == CLEANER) {
     return "Cleaner";
-  } else if (position == ENGINEER) {
-    return "Engineer";
-  } else if (position == SENIOR_MANAGER) {
+  } else if (position == SENIORMANAGER) {
     return "Senior Manager";
-  } else if (position == PROJECT_MANAGER) {
+  } else if (position == PROJECTMANAGER) {
     return "Project Manager";
-  } else if (position == TEAM_LEADER) {
+  } else if (position == TEAMLEADER) {
     return "Teamleader";
   }
 }
