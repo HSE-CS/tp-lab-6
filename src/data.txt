@@ -1,0 +1,12 @@
+1;Fa Mulan;2000;Programmer;G4;10000
+2;Fa Zhou;2050;Programmer;G6;20000
+3;General Li;3000;Programmer;H8;20000
+4;Fa Li;2000;Senior Manager;H8;20000
+5;Mushu;2000;Senior Manager;G4;10000
+6;Grandmother Fa;1000;Tester;G4;10000
+7;Cricket;1000;Tester;H8;20000
+8;First Ancestor Fa;1000;Cleaner;0;0
+9;Hua Xiu;2000;Project Manager;G6;20000
+10;Li Shang;900;Teamleader;H8;20000
+11;Khan;1000;Driver;0;0
+
