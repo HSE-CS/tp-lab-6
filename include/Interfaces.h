@@ -1,4 +1,4 @@
-// Copyright 2021 Dumarevskaya
+// Copyright [2021] <Dumarevskaya>
 #ifndef INCLUDE_INTERFACES_H_
 #define INCLUDE_INTERFACES_H_
 
