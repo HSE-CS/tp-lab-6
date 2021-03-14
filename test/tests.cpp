@@ -8,23 +8,27 @@
 TEST(Test, test1) {
     Staff newteam;
     projects.push_back(new Project("Microsoft", 1000));
-    newteam.addMember(new SeniorManager("110", "Nikolay Krotov", newteam.findProject("Microsoft")));
+    newteam.addMember(new SeniorManager("110", "Nikolay Krotov",
+                      newteam.findProject("Microsoft")));
     EXPECT_EQ(newteam.staffNumber(), 1);
 }
 
 TEST(Test, test2) {
     Staff newteam;
     projects.push_back(new Project("Microsoft", 1000));
-    newteam.addMember(new SeniorManager("110", "Nikolay Krotov", newteam.findProject("Microsoft")));
+    newteam.addMember(new SeniorManager("110", "Nikolay Krotov",
+                      newteam.findProject("Microsoft")));
     EXPECT_EQ(newteam.projectsNumber(), 1);
 }
 
 TEST(Test, test3) {
     Staff newteam;
     projects.push_back(new Project("Microsoft", 1000));
-    newteam.addMember(new SeniorManager("110", "Nikolay Krotov", newteam.findProject("Microsoft")));
+    newteam.addMember(new SeniorManager("110", "Nikolay Krotov",
+                     newteam.findProject("Microsoft")));
     newteam.addMember(new Cleaner("101", "Ekaterina Stupina", 30));
-    newteam.addMember(new Tester("109", "Nikolay Popov", 60, newteam.findProject("Microsoft")));
+    newteam.addMember(new Tester("109", "Nikolay Popov", 60,
+                     newteam.findProject("Microsoft")));
     EXPECT_EQ(newteam.staffNumber(), 3);
 }
 
@@ -122,14 +126,16 @@ TEST(Test, test13) {
 }
 
 TEST(Test, test14) {
-    Tester example("101", "Ekaterina Stupina", 20, new Project("New", 30));
+    Tester example("101", "Ekaterina Stupina", 20,
+                   new Project("New", 30));
     example.addWorkTime(10);
     example.calc();
     EXPECT_EQ(example.returnPayment(), 203);
 }
 
 TEST(Test, test15) {
-    Tester example("101", "Ekaterina Stupina", 20, new Project("New", 30));
+    Tester example("101", "Ekaterina Stupina", 20,
+                   new Project("New", 30));
     example.addWorkTime(10);
     example.errors(50);
     example.calc();

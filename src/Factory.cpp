@@ -29,16 +29,14 @@ void Staff::makeStaff(std::ifstream file) {
             } else {
                 staff.push_back(new SeniorManager(id, name, newproject));
             }
-        }
-        else if (position == "driver" || position == "cleaner") {
+        } else if (position == "driver" || position == "cleaner") {
             salary = str;
             if (position == "driver") {
                 staff.push_back(new Driver(id, name, atoi(salary.c_str())));
             } else {
                 staff.push_back(new Cleaner(id, name, atoi(salary.c_str())));
             }
-        }
-        else {
+        } else {
             salary = str.substr(0, str.find(" "));
             str.erase(0, str.find(" ") + 1);
             project = str;
@@ -52,16 +50,16 @@ void Staff::makeStaff(std::ifstream file) {
             newproject->addPerson();
             if (position == "engineer") {
                 staff.push_back(new Engineer(id, name, "engineer",
-                                             atoi(salary.c_str()), newproject));
+                                atoi(salary.c_str()), newproject));
             } else if (position == "programmer") {
                 staff.push_back(new Programmer(id, name, "programmer",
-                                               atoi(salary.c_str()), newproject));
+                                atoi(salary.c_str()), newproject));
             } else if (position == "tester") {
                 staff.push_back(new Tester(id, name,
-                                           atoi(salary.c_str()), newproject));
+                                atoi(salary.c_str()), newproject));
             } else {
                 staff.push_back(new TeamLeader(id, name,
-                                               atoi(salary.c_str()), newproject));
+                                atoi(salary.c_str()), newproject));
             }
         }
     }

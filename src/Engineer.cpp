@@ -49,7 +49,8 @@ void Tester::errors(int number) {
 }
 
 void TeamLeader::calc() {
-    payment = calcBudgetPart() + calcBase(salary, worktime) + ((calcHeads() - 1) * 100);
+    payment = calcBudgetPart() + calcBase(salary, worktime)
+    + ((calcHeads() - 1) * 100);
 }
 
 
