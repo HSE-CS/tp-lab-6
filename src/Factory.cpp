@@ -25,7 +25,8 @@ void Staff::makeStaff(std::ifstream file) {
                 newproject = this->findProject(str);
             }
             if (position == "manager") {
-                staff.push_back(new ProjectManager(id, name, "manager", newproject));
+                staff.push_back(new ProjectManager(id, name,
+                                        "manager", newproject));
             } else {
                 staff.push_back(new SeniorManager(id, name, newproject));
             }

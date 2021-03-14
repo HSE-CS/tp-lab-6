@@ -7,28 +7,28 @@
 
 TEST(Test, test1) {
     Staff newteam;
-    projects.push_back(new Project("Microsoft", 1000));
+    Project * name = new Project("Microsoft", 1000);
     newteam.addMember(new SeniorManager("110", "Nikolay Krotov",
-                      newteam.findProject("Microsoft")));
+                      name));
     EXPECT_EQ(newteam.staffNumber(), 1);
 }
 
 TEST(Test, test2) {
     Staff newteam;
-    projects.push_back(new Project("Microsoft", 1000));
+    Project * name = new Project("Microsoft", 1000);
     newteam.addMember(new SeniorManager("110", "Nikolay Krotov",
-                      newteam.findProject("Microsoft")));
+                      name));
     EXPECT_EQ(newteam.projectsNumber(), 1);
 }
 
 TEST(Test, test3) {
     Staff newteam;
-    projects.push_back(new Project("Microsoft", 1000));
+    Project * name = new Project("Microsoft", 1000);
     newteam.addMember(new SeniorManager("110", "Nikolay Krotov",
-                     newteam.findProject("Microsoft")));
+                     name));
     newteam.addMember(new Cleaner("101", "Ekaterina Stupina", 30));
     newteam.addMember(new Tester("109", "Nikolay Popov", 60,
-                     newteam.findProject("Microsoft")));
+                     name));
     EXPECT_EQ(newteam.staffNumber(), 3);
 }
 
@@ -93,7 +93,8 @@ TEST(Test, test11) {
     newteam.makeStaff(std::move(file));
     newteam.addTimeToAll(40);
     newteam.calcAll();
-    SeniorManager * newone = new SeniorManager("113", "NikolayKrotov", newteam.findProject("Microsoft"));
+    SeniorManager * newone = new SeniorManager("113",
+     "NikolayKrotov", newteam.findProject("Microsoft"));
     newone->addProject(newteam.findProject("Oxford"));
     Employee * example = newone;
     example->addWorkTime(20);
@@ -117,7 +118,8 @@ TEST(Test, test13) {
     newteam.makeStaff(std::move(file));
     newteam.addTimeToAll(40);
     newteam.calcAll();
-    SeniorManager * newone = new SeniorManager("113", "NikolayKrotov", newteam.findProject("Microsoft"));
+    SeniorManager * newone = new SeniorManager("113",
+     "NikolayKrotov", newteam.findProject("Microsoft"));
     Employee * example = newone;
     example->addWorkTime(20);
     example->calc();
