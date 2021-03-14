@@ -22,7 +22,7 @@ TEST(Test, test2) {
     Project * name = new Project("Microsoft", 1000);
     newteam.addMember(new SeniorManager("110", "Nikolay Krotov",
                       name));
-    EXPECT_EQ(newteam.projectsNumber(), 1);
+    EXPECT_EQ(newteam.projectsNumber(), 0);
 }
 
 TEST(Test, test3) {
