@@ -3,6 +3,10 @@
 #include <gtest/gtest.h>
 #include <string>
 
+#include "Employee.h"
+#include "Engineer.h"
+#include "Manager.h"
+#include "Personal.h"
 #include "Factory.h"
 
 TEST(Test, test1) {
