@@ -3,45 +3,35 @@
 #ifndef INCLUDE_EMPLOYEE_H_
 #define INCLUDE_EMPLOYEE_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-#include <string.h>
-#include <algorithm>
 #include <iostream>
 #include <string>
 #include <cstring>
 #include <vector>
-#include <random>
 #include <fstream> 
 #include "Interfaces.h"
 
-class Employee {
- private:
-    int ID;
-    std::string name;
 
+class Employee {
  protected:
+    std::string ID;
+    std::string name;
     std::string position;
     int worktime = 0;
     int payment = 0;
 
  public:
-    Employee(int ID, std::string name) {
+    Employee(std::string ID, std::string name, std::string position) {
         this->ID = ID;
         this->name = name;
+        this->position = position;
     }
-    void addWorkTime(int time) {
-        worktime += time;
-    }
-    void setToZero() {
-        worktime = 0;
-    }
-    void printInfo() {
-        std::cout << "ID: " << ID << "\nName: " << name <<
-        "\nPosition: " << position << "\nWork time: " <<
-        worktime << "\nPayment: " << payment << std::endl;
-    }
+    std::string returnID();
+    std::string returnPosition();
+    int returnPayment();
+    virtual void calc() = 0;
+    virtual void printInfo();
+    void addWorkTime(int time);
+    void setToZero();
 };
 
 #endif   // INCLUDE_EMPLOYEE_H_

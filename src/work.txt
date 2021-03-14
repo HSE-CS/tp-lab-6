@@ -1,0 +1,12 @@
+101 IvanIvanov leader 120 Microsoft
+102 AlexeyPetrov driver 30
+103 IvanPetrov tester 80 Oxford
+104 AlinaIvanova engineer 70 Microsoft
+105 AntonKostrov driver 35
+106 OksanaTropova cleaner 20
+107 IvanStopov manager Oxford
+108 AlexanderKlopov programmer 70 Oxford
+109 MarinaPopova senior Oxford
+110 OlgaKrylova tester 60 Microsoft
+111 PetrTopkov manager Microsoft
+112 IvanDrozdov programmer 100 Microsoft

@@ -3,9 +3,10 @@
 #ifndef INCLUDE_INTERFACES_H_
 #define INCLUDE_INTERFACES_H_
 
+
 class ProjectBudget {
  public:
-    virtual int calcBudgetPart(float part, int budget) = 0;
+    virtual int calcBudgetPart() = 0;
     virtual int calcProAdditions() = 0;
 };
 

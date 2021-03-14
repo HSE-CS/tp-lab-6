@@ -3,49 +3,64 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
-#include "Employee.h"
 #include "Personal.h"
 #include "Manager.h"
 
+
 class Project;
 
-class Engineer: public ProjectBudget, public Personal {
- private:
+class Engineer: public Personal {
+ protected:
     Project* currentproject;
 
  public:
-    Engineer(int ID, std::string name, int salary, Project* project) : Personal(ID, name, salary) {
+    Engineer(std::string ID, std::string name, std::string position, int salary, Project* project)
+    : Personal(ID, name, position, salary) {
         currentproject = project;
+        this->position = position;
     }
-    void calc() {
-        payment = salary * worktime + calcBudgetPart(worktime/(currentproject->returnTime()), currentproject->returnBudget());
-    }
-    virtual int calcBudgetPart(float part, int budget);
+    void calc();
+    void printInfo();
+    Project* returnProject();
+    virtual int calcBudgetPart();
+    virtual int calcProAdditions();
 };
 
 class Programmer: public Engineer {
+ protected:
+    int hourspercode = 0;
+
  public:
-    Programmer(int ID, std::string name, int salary, Project* project) : Engineer(ID, name, salary, project) {
-        position = "programmer";
+    Programmer(std::string ID, std::string name, std::string position, int salary, Project* project)
+    : Engineer(ID, name, position, salary, project) {
+        this->position = position;
     }
-    virtual int calcProAdditions();
+    void spendHours(int number);
+    int calcProAdditions();
 };
 
 class Tester: public Engineer {
+ protected:
+    int errorsfound = 0;
+
  public:
-    Tester(int ID, std::string name, int salary, Project* project) : Engineer(ID, name, salary, project) {
+    Tester(std::string ID, std::string name, int salary, Project* project)
+    : Engineer(ID, name, "tester", salary, project) {
         position = "tester";
     }
-    virtual int calcProAdditions();
+    void errors(int number);
+    int calcProAdditions();
 };
 
 class TeamLeader: public Programmer, public Heading {
  public:
-    TeamLeader(int ID, std::string name, int salary, Project* project) : Programmer(ID, name, salary, project) {
+    TeamLeader(std::string ID, std::string name, int salary, Project* project)
+    : Programmer(ID, name, "leader", salary, project) {
         position = "leader";
     }
-    void calc() {}
-    virtual int calcHeads();
+    void calc();
+    void printInfo();
+    int calcHeads();
 };
 
 #endif   // INCLUDE_ENGINEER_H_

@@ -4,52 +4,57 @@
 #define INCLUDE_MANAGER_H_
 
 #include "Employee.h"
+#include "Interfaces.h"
 
 class Project {
  protected:
-    int ID;
+    std::string title;
     int budget = 0;
     int time = 0;
+    int numofPeople = 0;
 
  public:
-    Project(int ID, int budget) {
-        this->ID = ID;
+    Project(std::string name, int budget) {
+        this->title = name;
         this->budget = budget;
     }
-    int returnBudget() {
-        return budget;
-    }
-    int returnTime() {
-        return time;
-    }
+    void addPerson();
+    std::string returnName();
+    int returnPeoplesNumber();
+    int returnBudget();
+    int returnTime();
 };
 
-class ProjectManager: public Employee, public Heading, public ProjectBudget {
+class ProjectManager: public Employee, public Heading, public Project {
  private:
     Project* projectname;
 
  public:
-    ProjectManager(int ID, std::string name, Project* project) : Employee(ID, name) {
-        position = "manager";
+    ProjectManager(std::string ID, std::string name, std::string position, Project* project)
+    : Employee(ID, name, position), Project(*project) {
+        this->position = position;
         projectname = project;
     }
-    void calc() {}
+    void calc();
+    void printInfo();
+    int calcBudgetPart();
     virtual int calcHeads();
 };
 
 class SeniorManager: public ProjectManager {
  private:
-    std::vector <Project*> projectname;
+    std::vector <Project*> projectnames;
 
  public:
-    SeniorManager(int ID, std::string name, Project* project) : ProjectManager(ID, name, project) {
-        projectname.push_back(project);
+    SeniorManager(std::string ID, std::string name, Project* project)
+    : ProjectManager(ID, name, "senior", project) {
+        projectnames.push_back(project);
         position = "senior";
     }
-    void addProject(Project* newproj) {
-        projectname.push_back(newproj);
-    }
-    void calc() {}
+    int calcBudgetPart();
+    void addProject(Project* newproj);
+    void printInfo();
+    void calc();
 };
 
 #endif   // INCLUDE_MANAGER_H_
