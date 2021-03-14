@@ -3,6 +3,7 @@
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
 
+#include <string>
 #include "Personal.h"
 #include "Manager.h"
 
@@ -14,7 +15,8 @@ class Engineer: public Personal {
     Project* currentproject;
 
  public:
-    Engineer(std::string ID, std::string name, std::string position, int salary, Project* project)
+    Engineer(std::string ID, std::string name,
+             std::string position, int salary, Project* project)
     : Personal(ID, name, position, salary) {
         currentproject = project;
         this->position = position;
@@ -31,7 +33,8 @@ class Programmer: public Engineer {
     int hourspercode = 0;
 
  public:
-    Programmer(std::string ID, std::string name, std::string position, int salary, Project* project)
+    Programmer(std::string ID, std::string name,
+               std::string position, int salary, Project* project)
     : Engineer(ID, name, position, salary, project) {
         this->position = position;
     }

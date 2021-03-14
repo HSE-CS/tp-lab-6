@@ -21,24 +21,20 @@ void Staff::makeStaff(std::ifstream file) {
             if (this->findProject(str) == 0) {
                 newproject = new Project(project, 100);
                 projects.push_back(newproject);
-            }
-            else
+            } else {
                 newproject = this->findProject(str);
+            }
             if (position == "manager") {
                 staff.push_back(new ProjectManager(id, name, "manager", newproject));
-            }
-            else {
+            } else {
                 staff.push_back(new SeniorManager(id, name, newproject));
             }
         }
         else if (position == "driver" || position == "cleaner") {
             salary = str;
             if (position == "driver") {
-                //Driver * lead = new Driver(id, name, atoi(salary.c_str()));
-                //lead->printInfo();
                 staff.push_back(new Driver(id, name, atoi(salary.c_str())));
-            }
-            else {
+            } else {
                 staff.push_back(new Cleaner(id, name, atoi(salary.c_str())));
             }
         }
@@ -50,23 +46,22 @@ void Staff::makeStaff(std::ifstream file) {
             if (this->findProject(str) == 0) {
                 newproject = new Project(project, 100);
                 projects.push_back(newproject);
-            }
-            else
+            } else {
                 newproject = this->findProject(str);
+            }
             newproject->addPerson();
             if (position == "engineer") {
-                staff.push_back(new Engineer(id, name, "engineer", atoi(salary.c_str()), newproject));
-            }
-            else if (position == "programmer") {
-                staff.push_back(new Programmer(id, name, "programmer", atoi(salary.c_str()), newproject));
-            }
-            else if (position == "tester") {
-                staff.push_back(new Tester(id, name, atoi(salary.c_str()), newproject));
-            }
-            else {
-                //TeamLeader * lead = new TeamLeader(id, name, atoi(salary.c_str()), newproject);
-                //lead->printInfo();
-                staff.push_back(new TeamLeader(id, name, atoi(salary.c_str()), newproject));
+                staff.push_back(new Engineer(id, name, "engineer",
+                                             atoi(salary.c_str()), newproject));
+            } else if (position == "programmer") {
+                staff.push_back(new Programmer(id, name, "programmer",
+                                               atoi(salary.c_str()), newproject));
+            } else if (position == "tester") {
+                staff.push_back(new Tester(id, name,
+                                           atoi(salary.c_str()), newproject));
+            } else {
+                staff.push_back(new TeamLeader(id, name,
+                                               atoi(salary.c_str()), newproject));
             }
         }
     }

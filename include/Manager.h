@@ -3,6 +3,8 @@
 #ifndef INCLUDE_MANAGER_H_
 #define INCLUDE_MANAGER_H_
 
+#include <string>
+#include <vector>
 #include "Employee.h"
 #include "Interfaces.h"
 
@@ -30,7 +32,8 @@ class ProjectManager: public Employee, public Heading, public Project {
     Project* projectname;
 
  public:
-    ProjectManager(std::string ID, std::string name, std::string position, Project* project)
+    ProjectManager(std::string ID, std::string
+                   name, std::string position, Project* project)
     : Employee(ID, name, position), Project(*project) {
         this->position = position;
         projectname = project;
