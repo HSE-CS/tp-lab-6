@@ -8,6 +8,7 @@
 
 #ifndef INCLUDE_ENGINEER_H_
 #define INCLUDE_ENGINEER_H_
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -20,7 +21,9 @@ class Engineer : public Personal, public ProjectBudget {
  private:
     Project *project;
     float part;
+    
  public:
+    
     Engineer(int id, const std::string name, std::string position, int salary,
         int worktime, Project* project, float part)
         : Personal(id, name, position, salary, worktime),
@@ -33,6 +36,7 @@ class Engineer : public Personal, public ProjectBudget {
 
 class Tester : public Engineer {
  public:
+    
     Tester(int id, std::string name, std::string position, int salary,
         int worktime, Project* project, float part)
         : Engineer(id, name, position, salary, worktime, project, part) {}
@@ -43,6 +47,7 @@ class Tester : public Engineer {
 
 class Programmer : public Engineer {
  public:
+    
     Programmer(int id, std::string name, std::string position, int salary,
         int worktime, Project* project, float part)
         : Engineer(id, name, position, salary, worktime, project, part) {}
@@ -53,6 +58,7 @@ class Programmer : public Engineer {
 
 class TeamLeader : public Programmer, public Heading {
  public:
+    
     TeamLeader(int id, const std::string name, std::string position, int salary,
         int worktime, Project* project, float part)
         : Programmer(id, name, position, salary, worktime, project, part) {}
@@ -60,4 +66,5 @@ class TeamLeader : public Programmer, public Heading {
     int calc();
     void printInfo();
 };
+
 #endif  // INCLUDE_ENGINEER_H_
