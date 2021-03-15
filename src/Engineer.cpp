@@ -18,12 +18,15 @@
  int Engineer::calcBudgetPart(float part, int budget) {
      return part * budget;
  }
+
  double Engineer::getPart() {
      return part;
  }
+
  int Engineer::calc() {
      return Personal::calc();
  }
+
  void Engineer::printInfo() {
      std::cout << "ID : " << getId() << std::endl;
      std::cout << "Name : " << getName() << std::endl;
@@ -39,6 +42,7 @@
  int Tester::calc() {
      return Engineer::calc() + calcProAdditions();
  }
+
  void Tester::printInfo() {
      std::cout << "ID : " << getId() << std::endl;
      std::cout << "Name : " << getName() << std::endl;

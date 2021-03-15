@@ -12,17 +12,22 @@
 
 
 int Personal::calcBase(int salary, int wtime) {
+    
     return salary * wtime;
 }
 int Personal::calcBonus() {
+    
     return 0;
 }
 int Personal::getSalary() {
+    
     return salary;
 }
 int Personal::calc() {
+    
     return calcBase(salary, worktime) + calcBonus();
 }
+
 void Personal::setSalary(int salary) {
     this->salary = salary;
 }
@@ -35,5 +40,6 @@ void Personal::printInfo() {
 }
 
 int Driver::calcBonus() {
+    
     return (this->getWorkTime() * this->getSalary() * 0.3);
 }

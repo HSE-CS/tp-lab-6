@@ -10,15 +10,20 @@
 
 int ProjectManager::calcHeads() {
     int s = 0;
+    
     for (auto i : project) {
         s += 145;
     }
+    
     return s;
 }
+
 int ProjectManager::calc() {
     int s = 0;
+    
     for (auto i : project)
         s += i->budget;
+    
     return getPayment() * getWorkTime() + calcBudgetPart(part, s) +
         calcProAdditions() + calcHeads();
 }
@@ -37,6 +42,7 @@ void ProjectManager::printInfo() {
     std::cout << "Position : " << getPosition() << std::endl;
     std::cout << "Work time : " << getWorkTime() << std::endl;
     std::cout << "Projects: \n";
+    
     for (auto i : project) {
         std::cout << i->name << "\n";
     }

@@ -19,6 +19,7 @@
 
 Position getPosinitiontoread(const std::string str) {
     if (str == "Driver") {
+        
         return Position::DRIVER;
     } else if (str == "Cleaner") {
         return Position::CLEANER;
@@ -37,6 +38,7 @@ Position getPosinitiontoread(const std::string str) {
 
 std::vector<Employee*> Factory::makeStaff(const std::string dir) {
     std::ifstream file(dir);
+    
     if (file) {
         std::string str;
         while (getline(file, str)) {
@@ -72,6 +74,7 @@ std::vector<Employee*> Factory::makeStaff(const std::string dir) {
             if (porision_ == Position::TEAMLEADER) {
                 stream >> person_salary;
                 stream >> person_worktime;
+                
                 int project_id, project_budget;
                 std::string project_name;
                 while (stream >> project_id) {
@@ -125,34 +128,42 @@ std::vector<Employee*> Factory::makeStaff(const std::string dir) {
                     projects.push_back(ptr);
                 }
             }
+            
             Employee* emp;
+            
             switch (porision_) {
             case Position::CLEANER:
                 emp = new Cleaner(person_id, person_name,
                     file_position, person_worktime, person_salary);
                 break;
+                    
             case Position::DRIVER:
                 emp = new Driver(person_id, person_name,
                     file_position, person_worktime, person_salary);
                 break;
+                    
             case Position::PROJECTMANAGER:
                 emp = new ProjectManager(person_id, person_name,
                     file_position, numProjects,
                     person_worktime, person_salary, projects);
                 break;
+                    
             case Position::SENIORMANAGER:
                 emp = new SeniorManager(person_id, person_name,
                     file_position, numProjects,
                     person_worktime, person_salary, projects);
                 break;
+                    
             case Position::PROGRAMMER:
                 emp = new Programmer(person_id, person_name, file_position,
                     person_salary, person_worktime, projects[0], person_part);
                 break;
+                    
             case Position::TESTER:
                 emp = new Tester(person_id, person_name, file_position,
                     person_salary, person_worktime, projects[0], person_part);
                 break;
+                    
             case Position::TEAMLEADER:
                 emp = new TeamLeader(person_id, person_name, file_position,
                     person_salary, person_worktime, projects[0], person_part);
@@ -160,5 +171,7 @@ std::vector<Employee*> Factory::makeStaff(const std::string dir) {
             this->staff.push_back(emp);
         }
     }
+    
+    
     return staff;
 }

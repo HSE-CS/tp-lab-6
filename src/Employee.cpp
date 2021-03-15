@@ -7,18 +7,22 @@
 //
 
 #include "Employee.h"
+
 #include <fstream>
 #include <string>
 #include <cmath>
 
 Employee::Employee(int id, std::string name, std::string position,
     int worktime, int payment) {
+    
     this->id = id;
     this->name = name;
     this->position = position;
     this->worktime = worktime;
     this->payment = payment;
 }
+
+
 int Employee::getId() {
     return id;
 }
