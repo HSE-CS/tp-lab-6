@@ -24,7 +24,7 @@
      EXPECT_EQ(78, person_test_1->getId());
  }
  TEST(Test_Employee, test_2) {
-     Driver* person_test_2 = new Driver(76, "Alexandr Robertovish",
+     Driver* person_test_2 = new Driver(76, "Alexandr Rotertovish",
         "Driver", 6, 432);
      
      EXPECT_EQ("Alexandr Robertovish", person_test_2->getName());
