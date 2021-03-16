@@ -8,12 +8,13 @@
 
  #include <gtest/gtest.h>
  #include <string>
+#include "Manager.h"
+#include "Personal.h"
  #include "Interfaces.h"
  #include "Employee.h"
  #include "Engineer.h"
  #include "Factory.h"
- #include "Manager.h"
- #include "Personal.h"
+ 
 
 
  TEST(Test_Employee, test_1) {
