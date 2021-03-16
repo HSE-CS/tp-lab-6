@@ -27,7 +27,7 @@
      Driver* person_test_2 = new Driver(76, "Alexandr Rotertovish",
         "Driver", 6, 432);
      
-     EXPECT_EQ("Alexandr Robertovish", person_test_2->getName());
+     EXPECT_EQ("Alexandr Rotertovish", person_test_2->getName());
  }
  TEST(Test_Employee, test_3) {
      Cleaner* person_test_3 = new Cleaner(78, "Vitalyi Petrovish",
