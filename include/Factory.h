@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include <vector>
+#include <string>
 #include "Project.h"
 #include "Engineer.h"
 #include "Manager.h"
@@ -12,7 +13,7 @@
 
 class Factory {
  public:
-	static std::vector<Employee*> makeStaff(std::string fileName);
+    static std::vector<Employee*> makeStaff(std::string fileName);
 };
 
-#endif  INCLUDE_FACTORY_H_
+#endif  // INCLUDE_FACTORY_H_

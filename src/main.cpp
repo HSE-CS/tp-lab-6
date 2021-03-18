@@ -1,23 +1,21 @@
 ﻿// Copyright 2021 Stifeev Nikita
 
+#include <time.h>
 #include <iostream>
 #include <vector>
-#include <time.h>
 #include "Project.h"
 #include "Engineer.h"
 #include "Manager.h"
 #include "Personal.h"
 #include "Factory.h"
 
-using namespace std;
-
 int main() {
     setlocale(LC_ALL, "Russian");
-    vector<Employee*> staff;
+    std::vector<Employee*> staff;
     staff = Factory::makeStaff("projects staff.txt");
     srand(time(NULL));
     for (Employee* emp : staff) {
-        emp->setWorkTime(40 + rand() % 101);
+        emp->setWorkTime(40 + std::rand() % 101);
     }
     for (Employee* emp : staff) {
         emp->calc();

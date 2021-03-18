@@ -3,57 +3,57 @@
 #include "Engineer.h"
 
 Engineer::Engineer(int id, std::string name, int salary, Project* project) :
-	Personal(id, name, salary) {
-	this->project = project;
+    Personal(id, name, salary) {
+    this->project = project;
 }
 
 int Engineer::calcBudgetPart(float part, int budget) {
-	return (int)(part * (float)(budget));
+    return static_cast<int>(part * (float)(budget));
 }
 
 void Engineer::calc() {
-	this->payment = calcBase(this->worktime, this->salary) + 
-		calcBudgetPart(0.03, project->getBudget()) + calcProAdditions();
+    this->payment = calcBase(this->worktime, this->salary) +
+        calcBudgetPart(0.03, project->getBudget()) + calcProAdditions();
 }
 
 void Engineer::printInfo() {
-	std::cout << "#" << this->id << ". " << posToString(this->position) 
-		<< " " << this->name << " [engineer staff]" << std::endl;
-	std::cout << "З/п: " << this->salary << "; отработано (ч): " 
-		<< this->worktime << ". Заработано: " << this->payment 
-		<< std::endl << std::endl;
+    std::cout << "#" << this->id << ". " << posToString(this->position)
+        << " " << this->name << " [engineer staff]" << std::endl;
+    std::cout << "salary: " << this->salary << "; hours work: "
+        << this->worktime << ". earned: " << this->payment
+        << std::endl << std::endl;
 }
 
-Programmer::Programmer(int id, std::string name, int salary, 
-	Project* project) :
-	Engineer(id, name, salary, project) {
-	this->position = PROGRAMMER;
+Programmer::Programmer(int id, std::string name, int salary,
+    Project* project) :
+    Engineer(id, name, salary, project) {
+    this->position = PROGRAMMER;
 }
 
 int Programmer::calcProAdditions() {
-	return 4000;
+    return 4000;
 }
 
 Tester::Tester(int id, std::string name, int salary, Project* project) :
-	Engineer(id, name, salary, project) {
-	this->position = TESTER;
+    Engineer(id, name, salary, project) {
+    this->position = TESTER;
 }
 
 int Tester::calcProAdditions() {
-	return 2300;
+    return 2300;
 }
 
-TeamLeader::TeamLeader(int id, std::string name, int salary, 
-	Project* project) :
-	Programmer(id, name, salary, project) {
-	this->position = TEAMLEADER;
+TeamLeader::TeamLeader(int id, std::string name, int salary,
+    Project* project) :
+    Programmer(id, name, salary, project) {
+    this->position = TEAMLEADER;
 }
 
 void TeamLeader::calc() {
-	this->payment = calcBase(this->worktime, this->salary) + 
-		calcBudgetPart(0.05, project->getBudget()) + calcHeads();
+    this->payment = calcBase(this->worktime, this->salary) +
+        calcBudgetPart(0.05, project->getBudget()) + calcHeads();
 }
 
 int TeamLeader::calcHeads() {
-	return 12000;
+    return 12000;
 }

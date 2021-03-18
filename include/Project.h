@@ -4,19 +4,20 @@
 #define INCLUDE_PROJECT_H_
 
 #include <iostream>
+#include <string>
 
 class Project {
  private:
-	std::string id;
-	int budget;
+    std::string id;
+    int budget;
  public:
-	Project(std::string id, int budget);
-	std::string getId() {
-		return this->id;
-	}
-	int getBudget() {
-		return this->budget;
-	}
+    Project(std::string id, int budget);
+    std::string getId() {
+        return this->id;
+    }
+    int getBudget() {
+        return this->budget;
+    }
 };
 
-#endif  INCLUDE_PROJECT_H_
+#endif  // INCLUDE_PROJECT_H_

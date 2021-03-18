@@ -9,7 +9,7 @@ ProjectManager::ProjectManager(int id, std::string name) :
 }
 
 int ProjectManager::calcBudgetPart(float part, int budget) {
-    return (int)(part * (float)(budget));
+    return static_cast<int>(part * (float)(budget));
 }
 
 int ProjectManager::calcHeads() {
@@ -17,15 +17,15 @@ int ProjectManager::calcHeads() {
 }
 
 void ProjectManager::calc() {
-    this->payment = calcHeads() + 
+    this->payment = calcHeads() +
         calcBudgetPart(0.1, projects->at(0)->getBudget());
 }
 
 void ProjectManager::printInfo() {
-    std::cout << "#" << this->id << ". " << posToString(this->position) 
+    std::cout << "#" << this->id << ". " << posToString(this->position)
         << " " << this->name << " [manager staff]" << std::endl;
-    std::cout << "Рукводит проектами (шт): " << this->projects->size() 
-        << ". Заработано: " << this->payment << std::endl << std::endl;
+    std::cout << "number of projects: " << this->projects->size()
+        << ". earned: " << this->payment << std::endl << std::endl;
 }
 
 SeniorManager::SeniorManager(int id, std::string name) :
