@@ -34,7 +34,8 @@ std::vector<Employee*> Factory::makeStaff(std::string fileName) {
             while (getline(iss_proj, token, ';')) {
                 for (Project* p : projects) {
                     if (p->getId().compare(token) == 0) {
-                        reinterpret_cast<SeniorManager*>(sm)->getProjects()->push_back(p);
+                        reinterpret_cast<SeniorManager*>(sm)->
+                            getProjects()->push_back(p);
                         break;
                     }
                 }
@@ -54,7 +55,8 @@ std::vector<Employee*> Factory::makeStaff(std::string fileName) {
             getline(in, token);
             for (Project* p : projects) {
                 if (p->getId().compare(token) == 0) {
-                    reinterpret_cast<ProjectManager*>(pm)->getProjects()->push_back(p);
+                    reinterpret_cast<ProjectManager*>(pm)->
+                        getProjects()->push_back(p);
                     break;
                 }
             }

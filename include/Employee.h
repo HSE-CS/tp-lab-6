@@ -8,17 +8,17 @@
 enum Position { DRIVER, CLEANER, PROGRAMMER,
     TESTER, TEAMLEADER, PROJECT_MANAGER, SENIOR_MANAGER };
 
-inline std::string posToString(Position p) { 
+inline std::string posToString(Position p) {
     switch (p) {
     case PROGRAMMER:      return "Programmer";
-    case TESTER:	      return "Tester";
-    case TEAMLEADER:	  return "TeamLeader";
+    case TESTER:          return "Tester";
+    case TEAMLEADER:      return "TeamLeader";
     case PROJECT_MANAGER: return "Project manager";
     case SENIOR_MANAGER:  return "Senior manager";
-    case DRIVER:		  return "Driver";
-    case CLEANER:		  return "Cleaner";
+    case DRIVER:          return "Driver";
+    case CLEANER:         return "Cleaner";
     default:              return "[Unknown position]";
-	}
+    }
 }
 
 class Employee {

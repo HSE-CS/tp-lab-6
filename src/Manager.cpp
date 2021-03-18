@@ -9,7 +9,7 @@ ProjectManager::ProjectManager(int id, std::string name) :
 }
 
 int ProjectManager::calcBudgetPart(float part, int budget) {
-    return static_cast<int>(part * (float)(budget));
+    return static_cast<float>(part * (float)(budget));
 }
 
 int ProjectManager::calcHeads() {

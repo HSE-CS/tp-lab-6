@@ -28,7 +28,7 @@ void Driver::calc() {
 void Driver::printInfo() {
     std::cout << "#" << this->id << ". " << posToString(this->position)
         << " " << this->name << " [personal staff]" << std::endl;
-    std::cout << "Ç/ï: " << this->salary << "; hours work: "
+    std::cout << "salary: " << this->salary << "; hours work: "
         << this->worktime << ". earned: " << this->payment
         << std::endl << std::endl;
 }
@@ -45,7 +45,7 @@ void Cleaner::calc() {
 void Cleaner::printInfo() {
     std::cout << "#" << this->id << ". " << posToString(this->position)
         << " " << this->name << " [personal staff]" << std::endl;
-    std::cout << "Ç/ï: " << this->salary << "; hours work: "
+    std::cout << "salary: " << this->salary << "; hours work: "
         << this->worktime << ". earned: "
         << this->payment << std::endl << std::endl;
 }

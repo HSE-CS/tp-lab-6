@@ -8,7 +8,7 @@ Engineer::Engineer(int id, std::string name, int salary, Project* project) :
 }
 
 int Engineer::calcBudgetPart(float part, int budget) {
-    return static_cast<int>(part * (float)(budget));
+    return static_cast<float>(part * (float)(budget));
 }
 
 void Engineer::calc() {

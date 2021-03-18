@@ -10,7 +10,6 @@
 #include "Factory.h"
 
 int main() {
-    setlocale(LC_ALL, "Russian");
     std::vector<Employee*> staff;
     staff = Factory::makeStaff("projects staff.txt");
     srand(time(NULL));
