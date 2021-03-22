@@ -13,9 +13,9 @@ const Project &Engineer::getProject() const {
     return project;
 }
 
-const void Engineer::setProject(Project &project) {
+void Engineer::setProject(const Project &project) {
     this->project = project;
-    project.addArticipants();
+    this->project.addArticipants();
 }
 
 int Engineer::calcBudgetPart(float part, int budget) {

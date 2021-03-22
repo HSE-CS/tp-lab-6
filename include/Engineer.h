@@ -26,7 +26,7 @@ class Engineer : public Personal, public IProjectBudget {
 
     const Project &getProject() const;
 
-    const void setProject(Project &project);
+    void setProject(const Project &project);
 
     float getPartOfTheProject() const;
 
