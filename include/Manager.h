@@ -6,8 +6,9 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Employee.h"
 #include "interfaces.h"
+#include "Employee.h"
+
 
 class Project {
  private:
@@ -44,7 +45,7 @@ class ProjectManager : public Employee, public IProjectBudget, public IHeading {
 
     const Project &getProject() const;
 
-    const void setProject(Project &project);
+    void setProject(const Project &project);
 
     float getPartOfTheProject() const;
 
@@ -68,7 +69,7 @@ class SeniorManager : public ProjectManager {
  public:
     SeniorManager(unsigned int id, std::string name, Position position);
 
-    const void addProject(Project &project);
+    void addProject(const Project &project);
 
     void calc() override;
 

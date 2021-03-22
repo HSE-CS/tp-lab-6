@@ -43,9 +43,9 @@ const Project &ProjectManager::getProject() const {
     return project;
 }
 
-const void ProjectManager::setProject(Project &project) {
+void ProjectManager::setProject(const Project &project) {
     this->project = project;
-    project.addArticipants();
+    this->project.addArticipants();
 }
 
 int ProjectManager::calcBudgetPart(float part, int budget) {
@@ -88,7 +88,7 @@ SeniorManager::SeniorManager(unsigned int id,
 : ProjectManager(id, std::move(name), position) {
 }
 
-const void SeniorManager::addProject(Project &project) {
+void SeniorManager::addProject(const Project &project) {
     projects.emplace_back(project);
 }
 

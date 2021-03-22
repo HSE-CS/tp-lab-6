@@ -3,10 +3,10 @@
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
-
+#include <string>
 #include "Employee.h"
 #include "interfaces.h"
-#include <string>
+
 
 class Personal : public Employee, public IWorkBaseTime {
  protected:
@@ -16,7 +16,7 @@ class Personal : public Employee, public IWorkBaseTime {
 
     int calcBonus() override = 0;
 
-   public:
+ public:
     Personal(unsigned int id, std::string name, Position position,
              unsigned int salaryPerHour);
 
