@@ -5,7 +5,7 @@
 
 #include <string>
 #include "Employee.h"
-#include "interfaces.h"
+#include <include/interfaces.h>
 
 
 class Personal : public Employee, public IWorkBaseTime {
