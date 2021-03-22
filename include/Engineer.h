@@ -7,17 +7,17 @@
 #include "Manager.h"
 
 class Engineer : public Personal, public IProjectBudget {
-  private:
+   private:
     float partOfTheProject = 0;
 
-  protected:
+   protected:
     Project project = Project(-1, "None");
 
     int calcBudgetPart(float part, int budget) override;
 
     int calcProAdditions() override;
 
-  public:
+   public:
     Engineer(unsigned int id, std::string name, Position position,
              unsigned int salaryPerHour);
 
@@ -25,7 +25,7 @@ class Engineer : public Personal, public IProjectBudget {
 
     const Project &getProject() const;
 
-    void setProject(Project &project);
+    const void setProject(Project &project);
 
     float getPartOfTheProject() const;
 
@@ -37,44 +37,42 @@ class Engineer : public Personal, public IProjectBudget {
 };
 
 class Tester : public Engineer {
-  private:
+   private:
     unsigned int bonus = 0;
-  protected:
+   protected:
     int calcProAdditions() override;
 
-  public:
+   public:
     Tester(unsigned int id, std::string name, Position position,
            unsigned int salaryPerHour);
 
     void calc() override;
 
     void setBonus(unsigned int bonus);
-
 };
 
 class Programmer : public Engineer {
-  private:
+   private:
     unsigned int bonus = 0;
-  protected:
+   protected:
     int calcProAdditions() override;
 
-  public:
+   public:
     Programmer(unsigned int id, std::string name, Position position,
                unsigned int salaryPerHour);
 
     void calc() override;
 
     void setBonus(unsigned int bonus);
-
 };
 
 class TeamLeader : public Programmer, public IHeading {
-  private:
+   private:
     unsigned int countHeadings = 0;
 
     int calcHeads() override;
 
-  public:
+   public:
     TeamLeader(unsigned int id, std::string name, Position position,
                unsigned int salaryPerHour);
 
@@ -85,7 +83,6 @@ class TeamLeader : public Programmer, public IHeading {
     void printInfo() override;
 
     void calc() override;
-
 };
 
 #endif  // INCLUDE_ENGINEER_H_

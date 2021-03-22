@@ -4,7 +4,7 @@
 #define INCLUDE_EMPLOYEE_H_
 
 #include <iostream>
-
+#include <string>
 enum Position {
     ENGINEER,
     PROGRAMMER,
@@ -17,7 +17,7 @@ enum Position {
 };
 
 class Employee {
-  protected:
+   protected:
     Employee(unsigned int id, std::string name, Position position);
     Position position;
     unsigned int id;
@@ -25,7 +25,7 @@ class Employee {
     double payment;
     unsigned int workTime = 0;
 
-  public:
+   public:
     const std::string &getName() const;
 
     void setWorkTime(unsigned int);

@@ -9,20 +9,20 @@
 #include "interfaces.h"
 
 class Project {
-  private:
+   private:
     unsigned int id;
     std::string name;
-    long budget = 0;
+    int budget = 0;
     unsigned int numberOfArticipants = 0;
-  public:
 
+   public:
     Project(int, std::string);
 
     unsigned int getId() const;
 
-    long getBudget() const;
+    int getBudget() const;
 
-    void setBudget(long budget);
+    void setBudget(int budget);
 
     unsigned int getNumberOfArticipants() const;
 
@@ -31,15 +31,14 @@ class Project {
     void setName(const std::string &name);
 
     void addArticipants();
-
 };
 
 class ProjectManager : public Employee, public IProjectBudget, public IHeading {
-  private:
+   private:
     Project project = Project(-1, "None");
     float partOfTheProject = 0;
 
-  public:
+   public:
     ProjectManager(unsigned int id, std::string name, Position position);
 
     const Project &getProject() const;
@@ -62,10 +61,10 @@ class ProjectManager : public Employee, public IProjectBudget, public IHeading {
 };
 
 class SeniorManager : public ProjectManager {
-  private:
+   private:
     std::vector<Project> projects;
 
-  public:
+   public:
     SeniorManager(unsigned int id, std::string name, Position position);
 
     void addProject(Project &project);

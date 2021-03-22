@@ -1,6 +1,4 @@
-//
-// Created by stoja on 12.03.2021.
-//
+// Copyright 2021 Stolbov Yaroslav
 
 #include <Factory.h>
 #include <fstream>
@@ -62,34 +60,41 @@ std::vector<Employee *> Factory::createWorkers() {
                 }
             }
             if (arguments[2] == "driver") {
-                Driver driver = Driver(std::stoi(arguments[0]), arguments[1],
-                                       DRIVER, std::stoi(arguments[3]));
+                Driver driver =
+                        Driver(std::stoi(arguments[0]), arguments[1],
+                               DRIVER, std::stoi(arguments[3]));
                 employees.emplace_back(&driver);
             } else if (arguments[2] == "cleaner") {
-                Cleaner cleaner = Cleaner(std::stoi(arguments[0]), arguments[1],
-                                          CLEANER, std::stoi(arguments[3]));
+                Cleaner cleaner =
+                        Cleaner(std::stoi(arguments[0]), arguments[1],
+                                CLEANER, std::stoi(arguments[3]));
                 employees.emplace_back(&cleaner);
             } else if (arguments[2] == "tester") {
-                Tester tester = Tester(std::stoi(arguments[0]), arguments[1],
-                                       TESTER, std::stoi(arguments[3]));
+                Tester tester =
+                        Tester(std::stoi(arguments[0]), arguments[1],
+                               TESTER, std::stoi(arguments[3]));
                 employees.emplace_back(&tester);
             } else if (arguments[2] == "programmer") {
-                Programmer programmer = Programmer(std::stoi(arguments[0]), arguments[1],
-                                                   PROGRAMMER,
-                                                   std::stoi(arguments[3]));
+                Programmer programmer =
+                        Programmer(std::stoi(arguments[0]), arguments[1],
+                                   PROGRAMMER,
+                                   std::stoi(arguments[3]));
                 employees.emplace_back(&programmer);
             } else if (arguments[2] == "lead") {
-                TeamLeader teamLeader = TeamLeader(std::stoi(arguments[0]), arguments[1],
-                                                   TEAM_LEADER,
-                                                   std::stoi(arguments[3]));
+                TeamLeader teamLeader =
+                        TeamLeader(std::stoi(arguments[0]), arguments[1],
+                                   TEAM_LEADER,
+                                   std::stoi(arguments[3]));
                 employees.emplace_back(&teamLeader);
             } else if (arguments[2] == "manager") {
-                ProjectManager projectManager = ProjectManager(std::stoi(arguments[0]), arguments[1],
-                                                               PROJECT_MANAGER);
+                ProjectManager projectManager =
+                        ProjectManager(std::stoi(arguments[0]), arguments[1],
+                                       PROJECT_MANAGER);
                 employees.emplace_back(&projectManager);
             } else if (arguments[2] == "smanager") {
-                SeniorManager seniorManager = SeniorManager(std::stoi(arguments[0]), arguments[1],
-                                                            SENIOR_MANAGER);
+                SeniorManager seniorManager =
+                        SeniorManager(std::stoi(arguments[0]), arguments[1],
+                                      SENIOR_MANAGER);
                 employees.emplace_back(&seniorManager);
             }
             arguments.clear();

@@ -1,24 +1,19 @@
-//
-// Created by stoja on 12.03.2021.
-//
-
+// Copyright 2021 Stolbov Yaroslav
 #include <Manager.h>
 #include <Engineer.h>
 
 #include <utility>
 
 
-Engineer::Engineer(unsigned int id, std::string name, Position position, unsigned int salaryPerHour)
-: Personal(id, std::move(name), position, salaryPerHour) {
-
-}
-
+Engineer::Engineer(unsigned int id, std::string name,
+                   Position position, unsigned int salaryPerHour)
+: Personal(id, std::move(name), position, salaryPerHour) {}
 
 const Project &Engineer::getProject() const {
     return project;
 }
 
-void Engineer::setProject(Project &project) {
+const void Engineer::setProject(Project &project) {
     this->project = project;
     project.addArticipants();
 }
@@ -28,7 +23,6 @@ int Engineer::calcBudgetPart(float part, int budget) {
 }
 
 void Engineer::calc() {
-
     this->payment = calcBase(salaryPerHour, workTime);
     this->payment += calcBudgetPart(partOfTheProject, project.getBudget());
 }
@@ -50,15 +44,19 @@ int Engineer::calcBonus() {
 }
 
 void Engineer::printInfo() {
-    std::cout << "ID: " << id << "\nName: " << name << "\nWork time: " << workTime << "\nSalary per hour: "
+    std::cout << "ID: " << id << "\nName: "
+    << name << "\nWork time: " << workTime << "\nSalary per hour: "
               << salaryPerHour <<
-              "\nPart of the project: " << partOfTheProject << "\nPayment: " << payment;
+              "\nPart of the project: " << partOfTheProject
+              << "\nPayment: " << payment;
 }
 
 
-Tester::Tester(unsigned int id, std::string name, Position position,
-               unsigned int salaryPerHour) : Engineer(id, std::move(name), position, salaryPerHour) {
-}
+Tester::Tester(unsigned int id, std::string name,
+               Position position,
+               unsigned int salaryPerHour)
+               : Engineer(id, std::move(name),
+                          position, salaryPerHour) {}
 
 int Tester::calcProAdditions() {
     return bonus;
@@ -73,9 +71,11 @@ void Tester::setBonus(unsigned int bonus) {
     Tester::bonus = bonus;
 }
 
-Programmer::Programmer(unsigned int id, std::string name, Position position,
-                       unsigned int salaryPerHour) : Engineer(id, std::move(name), position, salaryPerHour) {
-}
+Programmer::Programmer(unsigned int id,
+                       std::string name, Position position,
+                       unsigned int salaryPerHour)
+                       : Engineer(id, std::move(name),
+                                  position, salaryPerHour) {}
 
 int Programmer::calcProAdditions() {
     return bonus;
@@ -90,7 +90,9 @@ void Programmer::setBonus(unsigned int bonus) {
     Programmer::bonus = bonus;
 }
 
-TeamLeader::TeamLeader(unsigned int id, std::string name, Position position, unsigned int salaryPerHour)
+TeamLeader::TeamLeader(unsigned int id,
+                       std::string name,
+                       Position position, unsigned int salaryPerHour)
 : Programmer(id, std::move(name), position, salaryPerHour) {}
 
 unsigned int TeamLeader::getCountHeadings() const {
@@ -113,5 +115,6 @@ void TeamLeader::calc() {
 
 void TeamLeader::printInfo() {
     Engineer::printInfo();
-    std::cout<<"\nNumber of subordinates: "<<countHeadings<<"\nAllowance: "<<calcHeads();
+    std::cout << "\nNumber of subordinates: "
+    <<countHeadings<<"\nAllowance: "<<calcHeads();
 }

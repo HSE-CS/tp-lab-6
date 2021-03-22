@@ -9,29 +9,29 @@
 
 
 class Personal : public Employee, public IWorkBaseTime {
-  protected:
+   protected:
     unsigned int salaryPerHour;
 
     int calcBase(int salary, int wtime) override;
 
-    virtual int calcBonus() override = 0;
+    int calcBonus() override = 0;
 
-  public:
-    Personal(unsigned int id, std::string name, Position position, unsigned int salaryPerHour);
+   public:
+    Personal(unsigned int id, std::string name, Position position,
+             unsigned int salaryPerHour);
 
-    virtual void calc() override = 0;
+    void calc() override = 0;
 
     void printInfo() override;
-
 };
 
 class Driver : public Personal {
-  private:
+   private:
     int nightHours = 0;
 
     int calcBonus() override;
 
-  public:
+   public:
     Driver(unsigned int id, std::string name, Position position,
            unsigned int salaryPerHour);
 
@@ -43,11 +43,12 @@ class Driver : public Personal {
 };
 
 class Cleaner : public Personal {
-  private:
+   private:
     int calcBonus() override;
 
-  public:
-    Cleaner(unsigned int id, std::string name, Position position, unsigned int salaryPerHour);
+   public:
+    Cleaner(unsigned int id, std::string name,
+            Position position, unsigned int salaryPerHour);
 
     void calc() override;
 };

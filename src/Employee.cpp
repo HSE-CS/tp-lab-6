@@ -1,6 +1,4 @@
-//
-// Created by stoja on 12.03.2021.
-//
+// Copyright 2021 Stolbov Yaroslav
 #include "Employee.h"
 
 Employee::Employee(unsigned int id, std::string name, Position position) {
@@ -39,7 +37,6 @@ void Employee::printPosition() {
         case 7:
             std::cout << "\nPosition: cleaner\n";
             break;
-
     }
 }
 

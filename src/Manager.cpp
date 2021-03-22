@@ -1,6 +1,4 @@
-//
-// Created by stoja on 12.03.2021.
-//
+// Copyright 2021 Stolbov Yaroslav
 
 #include <Manager.h>
 
@@ -8,11 +6,11 @@ unsigned int Project::getId() const {
     return id;
 }
 
-long Project::getBudget() const {
+int Project::getBudget() const {
     return budget;
 }
 
-void Project::setBudget(long budget) {
+void Project::setBudget(int budget) {
     this->budget = budget;
 }
 
@@ -37,7 +35,8 @@ void Project::setName(const std::string &name) {
     Project::name = name;
 }
 
-ProjectManager::ProjectManager(unsigned int id, std::string name, Position position)
+ProjectManager::ProjectManager(unsigned int id,
+                               std::string name, Position position)
 : Employee(id, std::move(name), position) {}
 
 const Project &ProjectManager::getProject() const {
@@ -62,7 +61,8 @@ int ProjectManager::calcHeads() {
 }
 
 void ProjectManager::calc() {
-    payment = calcBudgetPart(partOfTheProject, project.getBudget()) + calcHeads();
+    payment = calcBudgetPart(partOfTheProject,
+                             project.getBudget()) + calcHeads();
 }
 
 float ProjectManager::getPartOfTheProject() const {
@@ -75,9 +75,12 @@ void ProjectManager::setPartOfTheProject(float partOfTheProject) {
 
 void ProjectManager::printInfo() {
     printPosition();
-    std::cout << "ID: " << id << "\nName: " << name << "\nNumber of articipants: " <<
-              project.getNumberOfArticipants() << "\nManagement premium: " << calcHeads() <<
-              "\nPart of the project: " << partOfTheProject << "\nPayment: " << payment;
+    std::cout << "ID: " << id << "\nName: "
+    << name << "\nNumber of articipants: " <<
+              project.getNumberOfArticipants()
+              << "\nManagement premium: " << calcHeads() <<
+              "\nPart of the project: "
+              << partOfTheProject << "\nPayment: " << payment;
 }
 
 SeniorManager::SeniorManager(unsigned int id, std::string name, Position position)
@@ -101,7 +104,8 @@ void SeniorManager::calc() {
 void SeniorManager::printInfo() {
     printPosition();
     std::cout << "ID: " << id << "\nName: " << name <<
-              "\nPart of the project: " << getPartOfTheProject() << "\nPayment: " << payment;
+              "\nPart of the project: "
+              << getPartOfTheProject() << "\nPayment: " << payment;
     std::cout << "\nProjects: ";
     unsigned int generalCount = 0;
     for (auto &project : projects) {
