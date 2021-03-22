@@ -9,7 +9,7 @@
 #include "Manager.h"
 
 TEST(staff_test, test1) {
-Programmer programmer = Programmer(1, "Aax", PROGRAMMER, 500);
+Programmer programmer = Programmer(1, "Aoiax", PROGRAMMER, 500);
 EXPECT_EQ(1, programmer.getId());
 }
 
