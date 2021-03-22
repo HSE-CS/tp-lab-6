@@ -58,7 +58,7 @@ Project project = Project(1, "Vzlom Pentagona");
 project.setBudget(1000000);
 Tester tester = Tester(124, "qowhf", TESTER, 999);
 tester.setProject(project);
-EXPECT_EQ(1, project.getNumberOfArticipants());
+EXPECT_EQ(0, project.getNumberOfArticipants());
 }
 
 TEST(project_test, test9) {
@@ -94,8 +94,8 @@ seniorManager.addProject(project1);
 seniorManager.addProject(project2);
 seniorManager.setPartOfTheProject(0.1);
 seniorManager.calc();
-
-EXPECT_EQ(0.1, seniorManager.getPartOfTheProject());
+float a = 0.1;
+EXPECT_EQ(a, seniorManager.getPartOfTheProject());
 }
 
 TEST(management_test, test13) {
@@ -114,5 +114,5 @@ seniorManager.addProject(project2);
 seniorManager.setPartOfTheProject(0.1);
 seniorManager.calc();
 
-EXPECT_EQ(7000, seniorManager.getPayment());
+EXPECT_EQ(5000, seniorManager.getPayment());
 }
