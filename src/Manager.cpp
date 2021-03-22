@@ -43,7 +43,7 @@ const Project &ProjectManager::getProject() const {
     return project;
 }
 
-void ProjectManager::setProject(Project &project) {
+const void ProjectManager::setProject(Project &project) {
     this->project = project;
     project.addArticipants();
 }
@@ -83,12 +83,12 @@ void ProjectManager::printInfo() {
               << partOfTheProject << "\nPayment: " << payment;
 }
 
-SeniorManager::SeniorManager(unsigned int id, std::string name, Position position)
+SeniorManager::SeniorManager(unsigned int id,
+                             std::string name, Position position)
 : ProjectManager(id, std::move(name), position) {
-
 }
 
-void SeniorManager::addProject(Project &project) {
+const void SeniorManager::addProject(Project &project) {
     projects.emplace_back(project);
 }
 

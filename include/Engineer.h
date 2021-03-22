@@ -5,19 +5,20 @@
 
 #include "Personal.h"
 #include "Manager.h"
+#include <string>
 
 class Engineer : public Personal, public IProjectBudget {
-   private:
+ private:
     float partOfTheProject = 0;
 
-   protected:
+ protected:
     Project project = Project(-1, "None");
 
     int calcBudgetPart(float part, int budget) override;
 
     int calcProAdditions() override;
 
-   public:
+ public:
     Engineer(unsigned int id, std::string name, Position position,
              unsigned int salaryPerHour);
 
@@ -37,12 +38,12 @@ class Engineer : public Personal, public IProjectBudget {
 };
 
 class Tester : public Engineer {
-   private:
+ private:
     unsigned int bonus = 0;
-   protected:
+ protected:
     int calcProAdditions() override;
 
-   public:
+ public:
     Tester(unsigned int id, std::string name, Position position,
            unsigned int salaryPerHour);
 
@@ -52,12 +53,12 @@ class Tester : public Engineer {
 };
 
 class Programmer : public Engineer {
-   private:
+ private:
     unsigned int bonus = 0;
-   protected:
+ protected:
     int calcProAdditions() override;
 
-   public:
+ public:
     Programmer(unsigned int id, std::string name, Position position,
                unsigned int salaryPerHour);
 
@@ -67,12 +68,12 @@ class Programmer : public Engineer {
 };
 
 class TeamLeader : public Programmer, public IHeading {
-   private:
+ private:
     unsigned int countHeadings = 0;
 
     int calcHeads() override;
 
-   public:
+ public:
     TeamLeader(unsigned int id, std::string name, Position position,
                unsigned int salaryPerHour);
 

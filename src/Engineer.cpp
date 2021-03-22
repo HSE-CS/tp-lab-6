@@ -116,5 +116,5 @@ void TeamLeader::calc() {
 void TeamLeader::printInfo() {
     Engineer::printInfo();
     std::cout << "\nNumber of subordinates: "
-    <<countHeadings<<"\nAllowance: "<<calcHeads();
+    << countHeadings << "\nAllowance: " << calcHeads();
 }

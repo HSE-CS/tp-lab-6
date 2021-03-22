@@ -6,10 +6,10 @@
 
 #include "Employee.h"
 #include "interfaces.h"
-
+#include <string>
 
 class Personal : public Employee, public IWorkBaseTime {
-   protected:
+ protected:
     unsigned int salaryPerHour;
 
     int calcBase(int salary, int wtime) override;
@@ -26,12 +26,12 @@ class Personal : public Employee, public IWorkBaseTime {
 };
 
 class Driver : public Personal {
-   private:
+ private:
     int nightHours = 0;
 
     int calcBonus() override;
 
-   public:
+ public:
     Driver(unsigned int id, std::string name, Position position,
            unsigned int salaryPerHour);
 
@@ -43,10 +43,10 @@ class Driver : public Personal {
 };
 
 class Cleaner : public Personal {
-   private:
+ private:
     int calcBonus() override;
 
-   public:
+ public:
     Cleaner(unsigned int id, std::string name,
             Position position, unsigned int salaryPerHour);
 

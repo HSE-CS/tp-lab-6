@@ -5,7 +5,7 @@
 #include "Manager.h"
 #include <vector>
 class Factory{
-   public:
+ public:
     std::vector<Employee*> createWorkers();
     std::vector<Project> createProjects();
 };
