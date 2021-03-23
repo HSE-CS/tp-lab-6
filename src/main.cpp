@@ -6,22 +6,22 @@
 #include "Personal.h"
 
 int main() {
-    Driver* person_1 = new Driver(345, "Antonina Pavlovna",
+    Driver* person_1 = new Driver(345, "Vadim Tumakov",
         "Driver", 120, 96);
-    Cleaner* person_2 = new Cleaner(23, "Polina Ivanovna",
+    Cleaner* person_2 = new Cleaner(23, "Oleg Lukonin",
         "Cleaner", 150, 80);
     Project project_test = { 1, "test", 23435454 };
-    Tester* person_3 = new Tester(234, "Svetlana Sergeevna",
+    Tester* person_3 = new Tester(234, "Golovanov Denis",
         "Tester", 230, 150, &project_test, 0.5);
-    Programmer* person_4 = new Programmer(24, "Sergei Antonovish",
+    Programmer* person_4 = new Programmer(24, "Lezov Pavel",
         "Programer", 230, 170, &project_test, 0.7);
-    TeamLeader* person_5 = new TeamLeader(27, "Pavel Petrovish",
+    TeamLeader* person_5 = new TeamLeader(27, "Ivanov Alex",
         "TeamLeader", 265, 200, &project_test, 1);
     std::vector<Project*> projects_test;
     projects_test.push_back(&project_test);
-    ProjectManager* person_6 = new ProjectManager(54, "Robert Igorivish",
+    ProjectManager* person_6 = new ProjectManager(54, "Vashurina Ksenia",
         "Project Manager", 1, 300, 180, projects_test);
-    SeniorManager* person_7 = new SeniorManager(53, "Anna Germonovna",
+    SeniorManager* person_7 = new SeniorManager(53, "Tumakova Natalia",
         "Senior Manager", 1, 290, 189, projects_test);
     person_1->printInfo();
     person_2->printInfo();
