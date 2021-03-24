@@ -73,7 +73,7 @@ int Engineer::calcBudgetPart(double part, int budget) {
 }
 
 void Engineer::calc() {
-    int payment = calcBase(salary, worktime) + calcBudgetPart(0.1, project->budget);
+    payment = calcBase(salary, worktime) + calcBudgetPart(0.1, project->budget);
 }
 
 void Engineer::print_Info() {
@@ -94,6 +94,10 @@ void Programmer::print_Info() {
 
 void Programmer::add_Bonus() {
     bonus = 1;
+}
+
+int Programmer::get_bonus() {
+    return bonus;
 }
 
 int Tester::calcProAdditions() {

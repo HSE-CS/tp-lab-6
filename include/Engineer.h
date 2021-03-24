@@ -44,6 +44,7 @@ public:
     void calc();
     void print_Info();
     void add_Bonus();
+    int get_bonus();
     virtual int calcBonus() override;
 private:
     bool bonus;
