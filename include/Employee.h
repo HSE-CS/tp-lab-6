@@ -29,8 +29,8 @@ public:
     void virtual calc() = 0;
     void virtual print_Info() = 0;
     void set_Payment(int p);
-    unsigned int get_Id();
-    std::string& get_Name();
+    int get_Id();
+    const std::string& get_Name();
     Position get_Position();
     unsigned int get_Worktime();
     unsigned int get_Payment();

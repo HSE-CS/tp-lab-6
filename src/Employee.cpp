@@ -6,9 +6,9 @@ void Employee::set_Worktime(int wt) { worktime = wt; }
 
 void Employee::set_Payment(int p) { payment = p; }
 
-unsigned int Employee::get_Id() { return id; }
+int Employee::get_Id() { return id; }
 
-std::string& Employee::get_Name() { return name; }
+const std::string& Employee::get_Name() { return name; }
 
 Position Employee::get_Position() { return position; }
 
