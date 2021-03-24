@@ -32,8 +32,8 @@ class Employee {
  public:
     Employee(int id, std::string name);
     void setWorkTime(int time) {
-	    this->worktime = time;
-	}
+            this->worktime = time;
+        }
     int getId() {
         return id;
     }
