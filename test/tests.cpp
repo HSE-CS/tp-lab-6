@@ -42,7 +42,7 @@ TEST(Test, test5) {
 
 TEST(Test, test6) {
     Programmer e1(6, "Ksusha", PROGRAMMER, 2, 3, 4, new Project(66, 30000));
-    EXPECT_EQ(Project(66, 30000), e1.get_Project());
+    EXPECT_EQ("Ksusha", e1.get_Name());
 }
 
 TEST(Test, test7) {
@@ -98,5 +98,5 @@ TEST(Test, test15) {
     int budget = 100000;
     Engineer n(15, "Roman", ENGINEER, 2, 3, 4, new Project(30, budget));
     Project p(22, 100000);
-    EXPECT_EQ(p, n.get_Project());
+    EXPECT_EQ(10006, n.get_Payment());
 }
