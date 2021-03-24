@@ -32,7 +32,7 @@ TEST(lab_6, test4) {
 
 TEST(lab_6, test5) {
     Driver driver4 = Driver(4, "Volkov", 250);
-    driver1.setWorkTime(40);
+    driver4.setWorkTime(40);
     EXPECT_EQ(40, driver4.getWorkTime());
 }
 
