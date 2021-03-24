@@ -34,6 +34,7 @@ public:
     Position get_Position();
     unsigned int get_Worktime();
     unsigned int get_Payment();
+protected:
     int id;
     std::string name;
     Position position;
