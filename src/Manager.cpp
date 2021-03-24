@@ -27,8 +27,19 @@ int ProjectManager::calcHeads() {
     return 1000;  
 }
 
+int ProjectManager::calcProAdditions() {
+    return 1000;
+}
+
+int ProjectManager::calcBudgetPart(double part, int budget) {
+    return budget*part;
+}
+
 void ProjectManager::calc() {
-    payment = calcHeads() + calcBudgetPart(part, projects[0]->budget);
+    payment = calcHeads();
+    for (const auto& project : projects) {
+        payment += calcBudgetPart(part, project->budget);
+    }
 }
 
 void ProjectManager::print_Info() {

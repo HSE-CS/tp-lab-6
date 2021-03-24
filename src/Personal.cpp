@@ -50,16 +50,21 @@ int Driver::calcBonus() {
 }
 
 void Driver::calc() {
-    int payment = calcBase(salary, worktime) + calcBonus();
+    payment = calcBase(salary, worktime) + calcBonus();
 }
 
 void Driver::print_Info() {
     std::cout << get_Name() + " " + std::to_string(get_Id());
 }
 
+int Cleaner::calcBonus() {
+    if (this->worktime > 6 * 20)
+        return 10 * (this->worktime - 6 * 20);
+    return 0;
+}
 
 void Cleaner::calc() {
-    int payment = calcBase(salary, worktime) + calcBonus();
+    payment = calcBase(salary, worktime) + calcBonus();
 }
 
 

@@ -76,6 +76,16 @@ void Engineer::calc() {
     payment = calcBase(salary, worktime) + calcBudgetPart(0.1, project->budget);
 }
 
+int Engineer::calcBonus() {
+    if (this->worktime > 6 * 20)
+        return 10 * (this->worktime - 6 * 20);
+    return 0;
+}
+
+int Engineer::calcProAdditions() {
+    return 1000;
+}
+
 void Engineer::print_Info() {
     std::cout << get_Name() + " " + std::to_string(get_Id());
 }
@@ -86,6 +96,12 @@ int Programmer::calcProAdditions() {
 
 void Programmer::calc() {
     payment = calcBase(salary, worktime) + calcBudgetPart(0.1, project->budget);
+}
+
+int Programmer::calcBonus() {
+    if (this->worktime > 6 * 20)
+        return 10 * (this->worktime - 6 * 20);
+    return 0;
 }
 
 void Programmer::print_Info() {
@@ -105,7 +121,7 @@ int Tester::calcProAdditions() {
 }
 
 void Tester::calc() {
-    int payment = calcBase(salary, worktime) + calcBudgetPart(0.1, project->budget);
+    payment = calcBase(salary, worktime) + calcProAdditions();
 }
 
 void Tester::print_Info() {
@@ -114,6 +130,12 @@ void Tester::print_Info() {
 
 int TeamLeader::calcHeads() {
     return 1000;
+}
+
+int Tester::calcBonus() {
+    if (this->worktime > 6 * 20)
+        return 10 * (this->worktime - 6 * 20);
+    return 0;
 }
 
 void TeamLeader::calc() {

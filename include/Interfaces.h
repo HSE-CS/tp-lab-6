@@ -9,6 +9,7 @@ public:
 }
     int id;
     int budget;
+    int get_budget() { return budget; };
 };
 
 class ProjectBudget {
