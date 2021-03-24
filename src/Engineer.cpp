@@ -138,6 +138,10 @@ int Tester::calcBonus() {
     return 0;
 }
 
+int Tester::calcBudgetPart(double part, int budget) {
+    return part * budget;
+}
+
 void TeamLeader::calc() {
     int payment = calcBase(salary, worktime) + calcBudgetPart(0.1, project->budget) + calcHeads();
 }
