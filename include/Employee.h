@@ -20,10 +20,10 @@ enum Position {
 class Employee {
 
 public:
-    explicit Employee(int id, std::string name, Position position) {
-        id = id;
-        name = name;
-        position = position;
+    explicit Employee(int id_, std::string name_, Position position_) {
+        id = id_;
+        name = name_;
+        position = position_;
     }
     void set_Worktime(int wt);
     void virtual calc() = 0;

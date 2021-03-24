@@ -59,7 +59,7 @@ TeamLeader::TeamLeader(int id,
     int payment,
     Project* project)
     : Programmer(id = 0,
-        name =  "",
+        name,
         position,
         worktime = 0,
         payment = 0,
