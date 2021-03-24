@@ -86,17 +86,19 @@ TEST(Test, test13) {
 }
 
 TEST(Test, test14) {
-    double part = 0.1;
-    int budget = 30000;
-    Engineer m(14, "Timofey", ENGINEER, 2, 3, 4, new Project(28, budget));
-    m.calc();
-    EXPECT_EQ(3006, m.get_Payment());
+
+    double part = 0.2;
+    int budget = 100000;
+    Tester n(15, "Roman", TESTER, 2, 3, 4, new Project(30, budget));
+    Project p(22, 100000);
+    EXPECT_EQ(20000, n.calcBudgetPart(part, budget));
+    
 }
 
 TEST(Test, test15) {
     double part = 0.1;
-    int budget = 100000;
-    Engineer n(15, "Roman", ENGINEER, 2, 3, 4, new Project(30, budget));
-    Project p(22, 100000);
-    EXPECT_EQ(10006, n.get_Payment());
+    int budget = 30000;
+    Engineer m(14, "Timofey", ENGINEER, 2, 3, 4, new Project(28, budget));
+    m.calc();
+    EXPECT_EQ(3000, m.get_Payment());
 }
