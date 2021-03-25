@@ -90,7 +90,7 @@ TEST(Test, test14) {
     int budget = 100000;
     Tester n(15, "Roman", TESTER, 2, 3, 4, new Project(30, budget));
     Project p(22, 100000);
-    EXPECT_EQ(20000, n.calcBudgetPart(part, budget));   
+    EXPECT_EQ(20000, n.calcBudgetPart(part, budget));
 }
 
 TEST(Test, test15) {

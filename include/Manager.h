@@ -5,7 +5,7 @@
 #include <vector>
 #include <memory>
 #include <iostream>
-#include <string> 
+#include <string>
 
 #include "Interfaces.h"
 #include "Employee.h"

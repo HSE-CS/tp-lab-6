@@ -17,7 +17,6 @@ std::vector<Employee*> Factory::createemployees
     project_file.close();
 
     std::ifstream file(employeesfile);
-    
     while (file >> id) {
         file >> name >> pos >> worktime >> payment >> salary;
         if (pos == "Driver") {

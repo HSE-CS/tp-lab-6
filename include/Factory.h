@@ -28,8 +28,8 @@ class Factory {
     std::vector<Employee*> employees;
 
  public:
-    std::vector<Employee*> 
-        createemployees(std::string prfile, 
+    std::vector<Employee*>
+        createemployees(std::string prfile,
             std::string employeesfile);
 };
 
