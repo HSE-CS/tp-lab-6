@@ -16,7 +16,7 @@ target_link_libraries(${PROJECT_NAME}
 add_executable(${PROJECT_NAME}.info main.cpp)
 target_include_directories(${PROJECT_NAME}.info
   PUBLIC ${CMAKE_CURRENT_BINARY_DIR}
-         ${${PROJECT_NAME}_SOURCE_DIR}/include)
+         ${${PROJECT_NAME}_SOURCE_DIR}/inevcclude)
 target_link_libraries(${PROJECT_NAME}.info
   ${PROJECT_NAME})
 
