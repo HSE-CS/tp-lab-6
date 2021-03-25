@@ -1,7 +1,7 @@
 // Copyright 2021 Shatilov Victor
 
-#ifndef INCLUDE_PERSONAL_H
-#define INCLUDE_PERSONAL_H
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 
 #include <string>
@@ -9,11 +9,11 @@
 #include "Interfaces.h"
 
 class Personal: public Employee, public WorkBaseTime {
-protected:
+ protected:
     int salary;
     int calcBase() override;
     int calcBonus(int bonus = 0) override;
-public:
+ public:
     Personal( int id, std::string name,
               int workTime, int salary, Positions position);
     void printInfo() override;
@@ -22,23 +22,23 @@ public:
 
 
 class Driver: public Personal {
-private:
+ private:
     int calcBonus(int bonus = 2) override;
-public:
+ public:
     Driver( int id, const std::string& name,
             int workTime, int salary, Positions position);
     int calc() override;
 };
 
 class Cleaner: public Personal {
-private:
+ private:
     int calcBonus(int bonus = 1);
 
-public:
+ public:
     Cleaner( int id, const std::string& name,
              int workTime, int salary, Positions position);
     int calc() override;
 };
 
 
-#endif // INCLUDE_PERSONAL_H
+#endif  // INCLUDE_PERSONAL_H_

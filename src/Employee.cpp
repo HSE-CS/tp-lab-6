@@ -5,8 +5,8 @@
 #include <utility>
 #include <iostream>
 
-Employee::Employee( int id, std::string name,
-                    int workTime, Positions position)
+Employee::Employee(int id, std::string name,
+                   int workTime, Positions position)
         : id(id), name(std::move(name)),
         workTime(workTime), position(position),
         payment(0) {}
@@ -25,12 +25,12 @@ void Employee::setWorkTime(int wt) {
     workTime = wt;
 }
 
-Project::Project( int id, std::string name,
-                  int budget,  int countWorkers)
+Project::Project(int id, std::string name,
+                 int budget,  int countWorkers)
         : id(id), name(std::move(name)),
         budget(budget), countWorkers(countWorkers) {}
 
 std::string Project::getName() { return name; }
- int Project::getBudget() const { return budget; }
- int Project::getCountWorkers() const { return countWorkers; }
+int Project::getBudget() const { return budget; }
+int Project::getCountWorkers() const { return countWorkers; }
 

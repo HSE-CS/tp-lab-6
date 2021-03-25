@@ -5,8 +5,8 @@
 #include <utility>
 #include <iostream>
 
-Personal::Personal( int id, std::string name,
-                    int workTime, int salary, Positions position)
+Personal::Personal(int id, std::string name,
+                   int workTime, int salary, Positions position)
         : Employee(id, std::move(name), workTime, position), salary(salary) {}
 
 int Personal::calcBase() {
@@ -27,8 +27,8 @@ void Personal::printInfo() {
     std::cout << "Work time: " << workTime <<std::endl;
 }
 
-Driver::Driver( int id, const std::string& name,
-                int workTime, int salary, Positions position) :
+Driver::Driver(int id, const std::string& name,
+               int workTime, int salary, Positions position) :
         Personal(id, name, workTime, salary, position) {
 }
 
@@ -41,8 +41,8 @@ int Driver::calcBonus(int bonus) {
 }
 
 
-Cleaner::Cleaner( int id, const std::string& name,
-                  int workTime, int salary, Positions position) :
+Cleaner::Cleaner(int id, const std::string& name,
+                 int workTime, int salary, Positions position) :
         Personal(id, name, workTime, salary, position) {
 }
 

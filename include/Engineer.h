@@ -1,30 +1,30 @@
 // Copyright 2021 Shatilov Victor
 
-#ifndef INCLUDE_ENGINEER_H
-#define INCLUDE_ENGINEER_H
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 
 #include "Personal.h"
 
 class Engineer : public Personal, public ProjectBudget {
-protected:
+ protected:
     Project *project = nullptr;
     int bonus = 0;
     int calcBudgetPart() override;
     int calcProAdditions() override;
-public:
-    Engineer( int id, std::string name,
-              int workTime, int salary, Positions position, Project *p);
+ public:
+    Engineer(int id, std::string name,
+             int workTime, int salary, Positions position, Project *p);
     int calc() override;
     void printInfo() override;
 };
 
 class Tester : public Engineer {
-private:
+ private:
     int bonus = 4;
-public:
-    Tester( int id, std::string name,
-            int workTime, int salary, Positions position, Project *p);
+ public:
+    Tester(int id, std::string name,
+           int workTime, int salary, Positions position, Project *p);
 };
 
 class Programmer : public Engineer {
@@ -44,4 +44,4 @@ public:
     int calc() override;
 };
 
-#endif // INCLUDE_ENGINEER_H
+#endif  // INCLUDE_ENGINEER_H_

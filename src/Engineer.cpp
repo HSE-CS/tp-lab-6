@@ -5,12 +5,13 @@
 #include <utility>
 #include <iostream>
 
-Engineer::Engineer( int id, std::string name,
-                    int workTime, int salary, Positions position, Project *p)
+Engineer::Engineer(int id, std::string name,
+                   int workTime, int salary, Positions position, Project *p)
 : Personal(id, std::move(name), workTime, salary, position), project(p) {}
 
 int Engineer::calcBudgetPart() {
-    return static_cast<int>((1.0f / project->getCountWorkers()) * project->getBudget());
+    return static_cast<int>((1.0f / project->getCountWorkers())
+    * project->getBudget());
 }
 
 void Engineer::printInfo() {
@@ -18,8 +19,9 @@ void Engineer::printInfo() {
     std::cout << "Position: " << positions[position] << std::endl;
     std::cout << "Salary: " << salary << std::endl;
     if (project)
-        std::cout << "Working on : " << project->getName() << "with id " << project->id << " already: " << workTime
-                  << " Payment: " << payment << std::endl;
+        std::cout << "Working on : " << project->getName() << "with id "
+        << project->id << " already: " << workTime
+        << " Payment: " << payment << std::endl;
 }
 
 int Engineer::calcProAdditions() { return  bonus * salary; };

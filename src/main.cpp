@@ -2,11 +2,9 @@
 
 #include "Factory.h"
 int main() {
-    std::vector < Employee * > staff = Factory::makeStaff();
-    for (auto emp : staff) {
+    std::vector <Employee*> staff = Factory::makeStaff();
+    for ( auto emp : staff )
         emp->calc();
-    }
-    for (auto emp : staff) {
+    for ( auto emp : staff )
         emp->printInfo();
-    }
 }

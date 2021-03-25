@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include "Personal.h"
-#include "Engineer.h" <
+#include "Engineer.h"
 #include "Manager.h"
 
 TEST(test_cleaner, test1) {
@@ -46,7 +46,8 @@ EXPECT_EQ(1000, res);
 }
 TEST(test_programmer2, test7) {
 auto* em = new Programmer(0,
-                                   "Elena Alekseevna", 3000, 2, PROGRAMMER, nullptr);
+                          "Elena Alekseevna", 3000,
+                          2, PROGRAMMER, nullptr);
 int res = em->calc();
 EXPECT_EQ(6010, res);
 }

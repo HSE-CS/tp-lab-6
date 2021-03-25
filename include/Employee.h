@@ -1,7 +1,7 @@
 // Copyright 2021 Shatilov Victor
 
-#ifndef INCLUDE_EMPLOYEE_H
-#define INCLUDE_EMPLOYEE_H
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 #include <vector>
@@ -19,16 +19,16 @@ enum Positions {
     SENIOR_MANAGER };
 
 class Employee {
-protected:
+ protected:
     std::string name;
     Positions position;
     int workTime;
     int payment;
     int id;
 
-public:
-    Employee( int id, std::string name,
-              int workTime, Positions position);
+ public:
+    Employee(int id, std::string name,
+             int workTime, Positions position);
 
     void setWorkTime(int wt);
     virtual int calc() = 0;
@@ -47,11 +47,11 @@ public:
 };
 
 class Project {
-private:
+ private:
     std::string name;
      int budget;
      int countWorkers;
-public:
+ public:
     Project( int id, std::string name,  int budget,  int countWorkers);
     std::string getName();
      int getBudget() const;
@@ -60,4 +60,4 @@ public:
      int id;
 };
 
-#endif // INCLUDE_EMPLOYEE_H
+#endif  // INCLUDE_EMPLOYEE_H_
