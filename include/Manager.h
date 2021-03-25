@@ -15,7 +15,7 @@ class ProjectManager : public Employee, public Heading, public ProjectBudget {
     int calcProAdditions();
     int calcBudgetPart() override;
  public:
-    ProjectManager(int id, std::string name,
+    ProjectManager(int id, const std::string& name,
                    int wt, Positions position, std::vector <Project *> p);
     void printInfo() override;
     int calc() override;

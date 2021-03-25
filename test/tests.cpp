@@ -42,7 +42,7 @@ auto* em = new Programmer(0,
                        "Elena Alekseevna", 5, 500, PROGRAMMER,
                        new Project(1, "Telegram", 5000, 1));
 int res = em->calc();
-EXPECT_EQ(1000, res);
+EXPECT_EQ(7500, res);
 }
 TEST(test_programmer2, test7) {
 auto* em = new Programmer(0,

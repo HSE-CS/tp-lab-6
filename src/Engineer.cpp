@@ -16,7 +16,7 @@ int Engineer::calcBudgetPart() {
 
 void Engineer::printInfo() {
     std::cout << id << ". Name: " << name << std::endl;
-    std::cout << "Position: " << positions[position] << std::endl;
+    std::cout << "Position: " << this->getPositionAsStr() << std::endl;
     std::cout << "Salary: " << salary << std::endl;
     if (project)
         std::cout << "Working on : " << project->getName() << "with id "
@@ -29,18 +29,18 @@ int Engineer::calc() {
     return payment = calcBudgetPart() + calcBase() + calcProAdditions();
 }
 
-Programmer::Programmer( int id, std::string name,
+Programmer::Programmer( int id, const std::string& name,
                         int wt, int salary, Positions position, Project *project)
-        : Engineer(id, std::move(name), wt, salary, position, project) {}
+        : Engineer(id, name, wt, salary, position, project) {}
 
 
-Tester::Tester( int id, std::string name,
+Tester::Tester( int id, const std::string& name,
                 int wt, int salary, Positions position, Project* project)
-        : Engineer(id, std::move(name), wt, salary, position, project) {}
+        : Engineer(id, name, wt, salary, position, project) {}
 
-TeamLeader::TeamLeader( int id, std::string name,
+TeamLeader::TeamLeader( int id, const std::string& name,
                         int wt, int salary, Positions position, Project *project)
-        : Programmer(id, std::move(name), wt, salary, position, project) {}
+        : Programmer(id, name, wt, salary, position, project) {}
 
         int TeamLeader::calcHeads() { return project->getCountWorkers() * 200; }
 

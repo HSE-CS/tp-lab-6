@@ -88,9 +88,7 @@ std::vector<Employee *> Factory::makeStaff() {
             work_time = std::stoi(line.substr(0, line.find(';')));
             line = line.substr(line.find(';')+1);
             pos = line.substr(0, line.find(';'));
-            for (std::size_t i = 0; i <= 10; ++i)
-                if (em->positions[i] == pos)
-                    position = static_cast<Positions>(i);
+            position = em->getPositionAsEnum(pos);
             line = line.substr(line.find(';')+1);
             salary = std::stoi(line.substr(0, line.find(';')));
             line = line.substr(line.find(';')+1);

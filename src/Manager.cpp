@@ -1,13 +1,12 @@
 // Copyright 2021 Shatilov Victor
 
 #include <iostream>
-#include <utility>
 #include "Manager.h"
 
-ProjectManager::ProjectManager(int id, std::string name,
+ProjectManager::ProjectManager(int id, const std::string& name,
                                int workTime, Positions position,
                                std::vector <Project *> p)
-        : Employee(id, std::move(name), workTime, position) {
+        : Employee(id, name, workTime, position) {
     this->payment = payment;
     projects = std::move(p);
 }
@@ -40,7 +39,7 @@ int ProjectManager::calc() {
 }
 
 void ProjectManager::printInfo() {
-    std::cout << name << " on " << positions[position] << std::endl;
+    std::cout << name << " on " << this->getPositionAsStr() << std::endl;
 
     for (auto p : projects)
         if (p)

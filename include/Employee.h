@@ -18,6 +18,7 @@ enum Positions {
     PROJECT_MANAGER,
     SENIOR_MANAGER };
 
+
 class Employee {
  protected:
     std::string name;
@@ -27,33 +28,24 @@ class Employee {
     int id;
 
  public:
-    Employee(int id, std::string name,
+    Employee(int id, std::string  name,
              int workTime, Positions position);
 
     void setWorkTime(int wt);
     virtual int calc() = 0;
     virtual void printInfo() = 0;
-
-    std::vector<std::string> positions = { "EMPLOYEE",
-                                "PERSONAL",
-                                "ENGINEER",
-                                "CLEANER",
-                                "DRIVER",
-                                "PROGRAMMER",
-                                "TESTER",
-                                "TEAM_LEADER",
-                                "PROJECT_MANAGER",
-                                "SENIOR_MANAGER" };
+    std::string getPositionAsStr();
+    Positions getPositionAsEnum(std::string p);
 };
 
 class Project {
  private:
-    std::string name;
+     std::string name;
      int budget;
      int countWorkers;
  public:
-    Project( int id, std::string name,  int budget,  int countWorkers);
-    std::string getName();
+     Project(int id, const std::string& name,  int budget,  int countWorkers);
+     std::string getName();
      int getBudget() const;
      int getCountWorkers() const;
 

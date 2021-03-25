@@ -2,7 +2,6 @@
 
 #include "Personal.h"
 
-#include <utility>
 #include <iostream>
 
 Personal::Personal(int id, std::string name,
@@ -22,7 +21,7 @@ int Personal::calc() {
 }
 
 void Personal::printInfo() {
-    std::cout << name << " on " << positions[position] << std::endl;
+    std::cout << name << " on " << this->getPositionAsStr() << std::endl;
     std::cout << "With payment: " << payment << std::endl;
     std::cout << "Work time: " << workTime <<std::endl;
 }

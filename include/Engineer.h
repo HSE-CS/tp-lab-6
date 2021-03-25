@@ -23,7 +23,7 @@ class Tester : public Engineer {
  private:
     int bonus = 4;
  public:
-    Tester(int id, std::string name,
+    Tester(int id, const std::string& name,
            int workTime, int salary, Positions position, Project *p);
 };
 
@@ -31,7 +31,7 @@ class Programmer : public Engineer {
 private:
     int bonus = 5;
 public:
-    Programmer( int id, std::string name,
+    Programmer( int id, const std::string& name,
                 int workTime, int salary, Positions position, Project *p);
 };
 
@@ -39,7 +39,7 @@ class TeamLeader : public Programmer, public Heading {
 private:
      int calcHeads() override;
 public:
-    TeamLeader( int id, std::string name,
+    TeamLeader( int id, const std::string& name,
                 int workTime, int salary, Positions position, Project *p);
     int calc() override;
 };
