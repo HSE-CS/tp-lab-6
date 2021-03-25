@@ -109,7 +109,7 @@ EXPECT_EQ(4343, res);
 }
 
 TEST(test_pm, test15) {
-    std::vector<Project *> ps = {new Project(1, "Telegram", 10000, 3)}
+std::vector<Project *> ps = {new Project(1, "Telegram", 10000, 3)};
 auto* em = new ProjectManager(0,
                           "Elena Alekseevna", 8, PROJECT_MANAGER,
                           ps);
