@@ -11,7 +11,7 @@ ProjectManager::ProjectManager(int id, const std::string& name,
     projects = std::move(p);
 }
 
- int ProjectManager::calcHeads() {
+int ProjectManager::calcHeads() {
     int count_all_workers = 0;
     for (auto p : projects)
         if (p)
@@ -30,8 +30,9 @@ int ProjectManager::calcBudgetPart() {
             res += static_cast<int>(
                     (1.0f / p->getCountWorkers()) * p->getBudget());
         return res;
-    } else
+    } else {
         return 0;
+    }
 }
 
 int ProjectManager::calc() {

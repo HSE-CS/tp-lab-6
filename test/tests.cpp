@@ -49,7 +49,7 @@ auto* em = new Programmer(0,
                           "Elena Alekseevna", 3000,
                           2, PROGRAMMER, new Project(1, "Telegram", 5000, 1));
 int res = em->calc();
-EXPECT_EQ(6010, res);
+EXPECT_EQ(11000, res);
 }
 
 TEST(test_programmer3, test8) {
@@ -57,7 +57,7 @@ auto* em = new Programmer(0,
                           "Elena Alekseevna", 5, 500, PROGRAMMER,
                           new Project(1, "Telegram", 1000, 3));
 int res = em->calc();
-EXPECT_EQ(4343, res);
+EXPECT_EQ(2833, res);
 }
 
 TEST(test_programmer4, test9) {
@@ -65,7 +65,7 @@ auto* em = new Programmer(0,
                           "Elena Alekseevna", 5, 2000, PROGRAMMER,
                           new Project(1, "Telegram", 10000, 3));
 int res = em->calc();
-EXPECT_EQ(9545, res);
+EXPECT_EQ(13333, res);
 }
 
 TEST(test_programmer5, test10) {
@@ -73,7 +73,7 @@ auto* em = new Programmer(0,
                           "Elena Alekseevna", 5, 2000, PROGRAMMER,
                           new Project(1, "Telegram", 10000, 4));
 int res = em->calc();
-EXPECT_EQ(4343, res);
+EXPECT_EQ(12500, res);
 }
 
 TEST(test_programmer6, test11) {
@@ -81,7 +81,7 @@ auto* em = new Programmer(0,
                           "Elena Alekseevna", 8, 5000, PROGRAMMER,
                           new Project(1, "Telegram", 20000, 3));
 int res = em->calc();
-EXPECT_EQ(4343, res);
+EXPECT_EQ(46666, res);
 }
 
 TEST(test_tester, test12) {
@@ -89,13 +89,13 @@ auto* em = new Tester(0,
                           "Elena Alekseevna", 5, 500, TESTER,
                           new Project(1, "Telegram", 1000, 3));
 int res = em->calc();
-EXPECT_EQ(4343, res);
+EXPECT_EQ(2833, res);
 }
 
 TEST(test_tester2, test13) {
 auto* em = new Programmer(0,
                           "Elena Alekseevna", 5, 500, TESTER,
-                          nullptr);
+                          new Project(1, "Telegram", 5000, 1));
 int res = em->calc();
 EXPECT_EQ(4343, res);
 }

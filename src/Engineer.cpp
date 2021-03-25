@@ -24,22 +24,23 @@ void Engineer::printInfo() {
         << " Payment: " << payment << std::endl;
 }
 
-int Engineer::calcProAdditions() { return  bonus * salary; };
+int Engineer::calcProAdditions() { return  bonus * salary; }
 int Engineer::calc() {
     return payment = calcBudgetPart() + calcBase() + calcProAdditions();
 }
 
-Programmer::Programmer( int id, const std::string& name,
-                        int wt, int salary, Positions position, Project *project)
+Programmer::Programmer(int id, const std::string& name,
+                       int wt, int salary, Positions position, Project *project)
         : Engineer(id, name, wt, salary, position, project) {}
 
 
-Tester::Tester( int id, const std::string& name,
-                int wt, int salary, Positions position, Project* project)
+Tester::Tester(int id, const std::string& name,
+               int wt, int salary, Positions position, Project* project)
         : Engineer(id, name, wt, salary, position, project) {}
 
-TeamLeader::TeamLeader( int id, const std::string& name,
-                        int wt, int salary, Positions position, Project *project)
+TeamLeader::TeamLeader(int id, const std::string& name,
+                       int wt, int salary,
+                       Positions position, Project *project)
         : Programmer(id, name, wt, salary, position, project) {}
 
         int TeamLeader::calcHeads() { return project->getCountWorkers() * 200; }

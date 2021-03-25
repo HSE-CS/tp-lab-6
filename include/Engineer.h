@@ -5,6 +5,7 @@
 
 
 #include "Personal.h"
+#include <string>
 
 class Engineer : public Personal, public ProjectBudget {
  protected:
@@ -28,19 +29,19 @@ class Tester : public Engineer {
 };
 
 class Programmer : public Engineer {
-private:
+ private:
     int bonus = 5;
-public:
-    Programmer( int id, const std::string& name,
-                int workTime, int salary, Positions position, Project *p);
+ public:
+    Programmer(int id, const std::string& name,
+               int workTime, int salary, Positions position, Project *p);
 };
 
 class TeamLeader : public Programmer, public Heading {
-private:
+ private:
      int calcHeads() override;
-public:
-    TeamLeader( int id, const std::string& name,
-                int workTime, int salary, Positions position, Project *p);
+ public:
+    TeamLeader(int id, const std::string& name,
+               int workTime, int salary, Positions position, Project *p);
     int calc() override;
 };
 

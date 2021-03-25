@@ -4,6 +4,7 @@
 #define INCLUDE_MANAGER_H_
 
 #include <vector>
+#include <string>
 #include "Employee.h"
 #include "Interfaces.h"
 
