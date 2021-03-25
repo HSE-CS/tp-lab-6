@@ -47,7 +47,7 @@ EXPECT_EQ(7500, res);
 TEST(test_programmer2, test7) {
 auto* em = new Programmer(0,
                           "Elena Alekseevna", 3000,
-                          2, PROGRAMMER, nullptr);
+                          2, PROGRAMMER, new Project(1, "Telegram", 5000, 1));
 int res = em->calc();
 EXPECT_EQ(6010, res);
 }
