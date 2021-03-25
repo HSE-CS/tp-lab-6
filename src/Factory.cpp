@@ -3,9 +3,9 @@
 #include <fstream>
 #include <iostream>
 
-#include <Factory.h>
-#include <Manager.h>
-#include <Engineer.h>
+#include "Factory.h"
+#include "Manager.h"
+#include "Engineer.h"
 
 
 Employee *makeWorker(int id, const std::string &name,  int workTime,
@@ -40,7 +40,7 @@ Employee *makeWorker(int id, const std::string &name,  int workTime,
 
 Project* getByName(const std::vector<Project *>& projects,
                    const std::string& project_name) {
-    for ( auto p: projects ) {
+    for ( auto p : projects ) {
         if (p->getName() == project_name)
             return p;
     }
@@ -76,7 +76,8 @@ std::vector<Employee *> Factory::makeStaff() {
             line = line.substr(line.find(';')+1);
             budget = std::stoi(line);
             projects.push_back(
-                    new Project(project_id, project_name, budget, count_workers));
+                    new Project(project_id,
+                                project_name, budget, count_workers));
         }
     }
     auto *em = new Engineer(1, "test", 1, 400, ENGINEER, nullptr);
@@ -98,7 +99,11 @@ std::vector<Employee *> Factory::makeStaff() {
             Project* project = getByName(projects, line);
             std::vector<Project*> ps = {project};
             workers.push_back(
-                    makeWorker(worker_id, worker_name, work_time, salary, position, ps));
+                    makeWorker(worker_id,
+                               worker_name,
+                               work_time,
+                               salary,
+                               position, ps));
         }
     }
     return workers;

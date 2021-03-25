@@ -26,7 +26,7 @@ int ProjectManager::calcProAdditions() {
 int ProjectManager::calcBudgetPart() {
     int res = 0;
     if (!projects.empty()) {
-        for ( auto p: projects )
+        for ( auto p : projects )
             res += static_cast<int>(
                     (1.0f / p->getCountWorkers()) * p->getBudget());
         return res;

@@ -97,7 +97,7 @@ auto* em = new Programmer(0,
                           "Elena Alekseevna", 5, 500, TESTER,
                           new Project(1, "Telegram", 5000, 1));
 int res = em->calc();
-EXPECT_EQ(4343, res);
+EXPECT_EQ(7500, res);
 }
 
 TEST(test_team_leader, test14) {
@@ -105,7 +105,7 @@ auto* em = new TeamLeader(0,
                           "Elena Alekseevna", 5, 2000, TEAM_LEADER,
                           new Project(1, "Telegram", 10000, 3));
 int res = em->calc();
-EXPECT_EQ(4343, res);
+EXPECT_EQ(13933, res);
 }
 
 TEST(test_pm, test15) {
@@ -114,5 +114,5 @@ auto* em = new ProjectManager(0,
                           "Elena Alekseevna", 8, PROJECT_MANAGER,
                           ps);
 int res = em->calc();
-EXPECT_EQ(4343, res);
+EXPECT_EQ(3336, res);
 }
