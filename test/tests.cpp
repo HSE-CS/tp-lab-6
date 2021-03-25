@@ -30,7 +30,7 @@ TEST(Test, test3) {
 TEST(Test, test4) {
     int salary = 20;
     int worktime = 20;
-    Driver d(4, "Vasya", DRIVER, worktime, 3, salary);   
+    Driver d(4, "Vasya", DRIVER, worktime, 3, salary);
     EXPECT_EQ(400, d.calcBase(salary, worktime));
 }
 
@@ -86,13 +86,11 @@ TEST(Test, test13) {
 }
 
 TEST(Test, test14) {
-
     double part = 0.2;
     int budget = 100000;
     Tester n(15, "Roman", TESTER, 2, 3, 4, new Project(30, budget));
     Project p(22, 100000);
-    EXPECT_EQ(20000, n.calcBudgetPart(part, budget));
-    
+    EXPECT_EQ(20000, n.calcBudgetPart(part, budget));   
 }
 
 TEST(Test, test15) {

@@ -31,7 +31,6 @@ Programmer::Programmer(int id,
         payment,
         salary,
         project) {
-
 }
 
 Tester::Tester(int id,
@@ -48,7 +47,6 @@ Tester::Tester(int id,
         payment,
         salary,
         project) {
-
 }
 
 TeamLeader::TeamLeader(int id,
@@ -65,7 +63,6 @@ TeamLeader::TeamLeader(int id,
         payment = 0,
         salary = 0,
         project = nullptr) {
-
 }
 
 int Engineer::calcBudgetPart(double part, int budget) {
@@ -91,7 +88,7 @@ void Engineer::print_Info() {
 }
 
 int Programmer::calcProAdditions() {
-    return 1000;  
+    return 1000;
 }
 
 void Programmer::calc() {
@@ -143,7 +140,9 @@ int Tester::calcBudgetPart(double part, int budget) {
 }
 
 void TeamLeader::calc() {
-    int payment = calcBase(salary, worktime) + calcBudgetPart(0.1, project->budget) + calcHeads();
+    int payment = calcBase(salary, worktime) +
+         calcBudgetPart(0.1, project->budget) +
+         calcHeads();
 }
 
 void TeamLeader::print_Info() {

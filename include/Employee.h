@@ -18,8 +18,7 @@ enum Position {
 };
 
 class Employee {
-
-public:
+ public:
     explicit Employee(int id_, std::string name_, Position position_) {
         id = id_;
         name = name_;
@@ -34,13 +33,12 @@ public:
     Position get_Position();
     unsigned int get_Worktime();
     unsigned int get_Payment();
-protected:
+ protected:
     int id;
     std::string name;
     Position position;
     int worktime;
     int payment;
-
 };
 
 #endif  // INCLUDE_EMPLOYEE_H_

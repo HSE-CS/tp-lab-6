@@ -3,14 +3,15 @@
 #define INCLUDE_PERSONAL_H_
 
 #include <iostream>
+#include <string>
 
 #include "Interfaces.h"
 #include "Employee.h"
 
 class Personal : public Employee, public WorkBaseTime {
-public:
-   virtual int calcBase(int salary, int worktime) override;
-protected:
+ public:
+    int calcBase(int salary, int worktime) override;
+ protected:
     Personal(int id,
         std::string name,
         Position position,
@@ -22,20 +23,20 @@ protected:
 };
 
 class Driver : public Personal {
-public:
+ public:
     Driver(int id,
         std::string name,
         Position position,
         int worktime,
         int payment,
         int salary);
-    virtual int calcBonus() override;
+    int calcBonus() override;
     void calc();
     void print_Info();
 };
 
 class Cleaner : public Personal {
-public:
+ public:
     Cleaner(int id,
         std::string name,
         Position position,
@@ -44,7 +45,7 @@ public:
         int salary);
     void calc();
     void print_Info();
-    virtual int calcBonus() override;
+    int calcBonus() override;
 };
 
 #endif  // INCLUDE_PERSONAL_H_

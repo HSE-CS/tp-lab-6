@@ -13,7 +13,6 @@ Personal::Personal(int id,
     int salary)
     : Employee(id, name, position)
     , salary(salary) {
-
 }
 
 Driver::Driver(int id,

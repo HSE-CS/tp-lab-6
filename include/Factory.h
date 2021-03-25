@@ -24,11 +24,13 @@ class ProjectManager;
 class SeniorManager;
 
 class Factory {
-private:
+ private:
     std::vector<Employee*> employees;
 
-public:
-    std::vector<Employee*> createemployees(std::string prfile, std::string employeesfile);
+ public:
+    std::vector<Employee*> 
+        createemployees(std::string prfile, 
+            std::string employeesfile);
 };
 
 #endif  // INCLUDE_FACTORY_H_

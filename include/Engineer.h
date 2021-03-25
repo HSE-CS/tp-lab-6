@@ -12,7 +12,7 @@ class Heading;
 class WorkBaseTime;
 
 class Engineer : public Personal, public ProjectBudget {
-public:
+ public:
     Engineer(int id,
         std::string name,
         Position position,
@@ -22,17 +22,17 @@ public:
         Project* project);
 
         int calcBudgetPart(double part, int budget);
-        virtual int calcBonus() override;
+        int calcBonus() override;
         void calc();
         Project* get_Project();
         void print_Info();
-        virtual int calcProAdditions() override;
+        int calcProAdditions() override;
         Project* project;
 };
 
 
 class Programmer : public Engineer {
-public:
+ public:
     Programmer(int id,
         std::string name,
         Position position,
@@ -40,18 +40,18 @@ public:
         int salary,
         int payment,
         Project* project);
-    virtual int calcProAdditions() override;
+    int calcProAdditions() override;
     void calc();
     void print_Info();
     void add_Bonus();
     int get_bonus();
-    virtual int calcBonus() override;
-private:
+    int calcBonus() override;
+ private:
     bool bonus;
 };
 
 class Tester : public Engineer {
-public:
+ public:
     Tester(int id,
         std::string name,
         Position position,
@@ -59,15 +59,15 @@ public:
         int salary,
         int payment,
         Project* project);
-    virtual int calcProAdditions() override;
+    int calcProAdditions() override;
     void calc();
     void print_Info();
-    virtual int calcBonus() override;
-    virtual int calcBudgetPart(double part, int budget) override;
+    int calcBonus() override;
+    int calcBudgetPart(double part, int budget) override;
 };
 
 class TeamLeader : public Programmer, public Heading {
-public:
+ public:
     TeamLeader(int id,
         std::string name,
         Position position,
@@ -75,7 +75,7 @@ public:
         int salary,
         int payment,
         Project* project);
-    virtual int calcHeads() override;
+    int calcHeads() override;
     void calc();
     void print_Info();
 };

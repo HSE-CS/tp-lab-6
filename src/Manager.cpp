@@ -9,7 +9,6 @@ ProjectManager::ProjectManager(int id,
     Project project)
     : Employee(id, name, position)
     , projects(projects) {
-
 }
 
 
@@ -24,7 +23,7 @@ SeniorManager::SeniorManager(int id,
 
 
 int ProjectManager::calcHeads() {
-    return 1000;  
+    return 1000;
 }
 
 int ProjectManager::calcProAdditions() {
