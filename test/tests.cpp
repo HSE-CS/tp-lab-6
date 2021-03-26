@@ -25,7 +25,7 @@ TEST(testDriver, test4) {
 Driver driver1(0, "Abcd", 200);
 driver1.setWorkTime(160);
 driver1.calc();
-ECPECT_EQ(32000, driver1.getPayment());
+EXPECT_EQ(32000, driver1.getPayment());
 }
 
 TEST(testDriver, test5) {
