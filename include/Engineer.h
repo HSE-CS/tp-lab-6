@@ -32,7 +32,7 @@ class Programmer : public Engineer {
         float base, std::string position,
         std::string project, float contribution);
     float getPayment() override;
-}
+};
 
 class TeamLeader : public Programmer, public Heading {
  protected:
