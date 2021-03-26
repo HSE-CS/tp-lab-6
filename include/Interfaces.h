@@ -1,7 +1,7 @@
 // Copyright 2021 Ziganshin Nikita
 
-#ifndef TP_LAB_6_INTERFACES_H_
-#define TP_LAB_6_INTERFACES_H_
+#ifndef INCLUDE_INTERFACES_H_
+#define INCLUDE_INTERFACES_H_
 
 class WorkBaseTime {
  public:
@@ -18,4 +18,4 @@ class Heading {
     virtual unsigned int calcHeads() = 0;
 };
 
-#endif  // TP_LAB_6_INTERFACES_H_
+#endif  // INCLUDE_INTERFACES_H_

@@ -1,7 +1,7 @@
 // Copyright 2021 Ziganshin Nikita
 
-#ifndef TP_LAB_6_EMPLOYEE_H_
-#define TP_LAB_6_EMPLOYEE_H_
+#ifndef INCLUDE_EMPLOYEE_H_
+#define INCLUDE_EMPLOYEE_H_
 
 #include <string>
 
@@ -42,4 +42,4 @@ class Employee {
     virtual void printInfo() = 0;
 };
 
-#endif  // TP_LAB_6_EMPLOYEE_H_
+#endif  // INCLUDE_EMPLOYEE_H_

@@ -1,7 +1,7 @@
 // Copyright 2021 Ziganshin Nikita
 
-#ifndef TP_LAB_6_MANAGER_H_
-#define TP_LAB_6_MANAGER_H_
+#ifndef INCLUDE_MANAGER_H_
+#define INCLUDE_MANAGER_H_
 
 #include <vector>
 #include "Employee.h"
@@ -67,4 +67,4 @@ class SeniorManager : public ProjectManager {
     unsigned int calcBudgetPart(float part) override;
 };
 
-#endif  // TP_LAB_6_MANAGER_H_
+#endif  // INCLUDE_MANAGER_H_

@@ -1,7 +1,7 @@
 // Copyright 2021 Ziganshin Nikita
 
-#ifndef TP_LAB_6_PERSONAL_H_
-#define TP_LAB_6_PERSONAL_H_
+#ifndef INCLUDE_PERSONAL_H_
+#define INCLUDE_PERSONAL_H_
 
 #include "Employee.h"
 #include "Interfaces.h"
@@ -54,4 +54,4 @@ class Cleaner : public Personal {
     void printInfo() override;
 };
 
-#endif  //TP_LAB_6_PERSONAL_H_
+#endif  // INCLUDE_PERSONAL_H_

@@ -1,7 +1,7 @@
 // Copyright 2021 Ziganshin Nikita
 
-#ifndef TP_LAB_6_ENGINEER_H_
-#define TP_LAB_6_ENGINEER_H_
+#ifndef INCLUDE_ENGINEER_H_
+#define INCLUDE_ENGINEER_H_
 
 #include "Interfaces.h"
 #include "Personal.h"
@@ -56,4 +56,4 @@ class TeamLeader : public Programmer, public Heading
     void printInfo() override;
 };
 
-#endif  // TP_LAB_6_ENGINEER_H_
+#endif  // INCLUDE_ENGINEER_H_
