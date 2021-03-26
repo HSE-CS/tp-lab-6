@@ -1,18 +1,12 @@
-/*Cleaner #3
-Driver #2
-Tester #5
-Programmer #10
-TeamLeader #2
-ProjectManager #9
-SeniorManager #4
-*/
-
+// Copyright 2021 by mila
 #ifndef INCLUDE_EMPLOYEE_H_
 #define INCLUDE_EMPLOYEE_H_
 
 #include <vector>
-#include "Interfaces.h"
+#include <string>
 #include <iostream>
+#include "Interfaces.h"
+
 
 //### Класс Employee
 
@@ -58,22 +52,38 @@ enum pos {
 };
 
 class Employee {
-private:
+ private:
   int id = 0; // идентификационный номер.
-  std::vector<char> name; // ФИО.
-  pos position; // должность.
+  std::string name; // ФИО.
+  pos post; // должность.
 
 
-public:
+ public:
     int salary = 0;
-    int worktime = 0; // отработанное время.
-    int payment = 0; // заработная плата.
+    int worktime = 0;  // отработанное время.
+    int payment = 0;  // заработная плата.
 
-  void setWorkTime(int wtime);
+    Employee(int id, const std::string &name, pos post, int salary) {
+        this->id = id;
+        this->name = name;
+        this->post = post;
+        this->salary = salary;
+    }
 
-  virtual void calc();
 
-  virtual void printInfo();
+    void setWorkTime(int wtime);
+
+    virtual void calc();
+    virtual void printInfo();
 }
 
 #endif  // INCLUDE_EMPLOYEE_H_
+
+/*Cleaner #3
+Driver #2
+Tester #5
+Programmer #10
+TeamLeader #2
+ProjectManager #9
+SeniorManager #4
+*/

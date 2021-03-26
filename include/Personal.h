@@ -1,10 +1,12 @@
-
+// Copyright 2021 by mila
 #ifndef INCLUDE_PERSONAL_H_
 #define INCLUDE_PERSONAL_H_
 
-//- **Pesonal** - работник по найму
-//с оплатой за фактически отработанное время.
-//Имеет ставку за час.
+#include <string>
+
+// - **Pesonal** - работник по найму
+// с оплатой за фактически отработанное время.
+// Имеет ставку за час.
 
 #include "Employee.h"
 #include "Interfaces.h"
@@ -17,10 +19,14 @@
 */
 
 class Personal : public Employee, publc WorkBaseTime {
-private:
-  int salary = 0;
-public:
-  int calcBase(int salary. int wtime) override;
+ private:
+    int salary = 0;
+ public:
+    Personal(int id, std::string name, pos post, int salary)
+          : Employee(id, name, post, salary) {}
+    int calcBase(int salary. int wtime) override;
+    void calc() override;
+    void printInfo() override;
 }
 
 /*
@@ -29,11 +35,10 @@ public:
 */
 
 class Cleaner : public Personal {
-public:
-  int calcBonus() override;
-  void calc() override;
-  void printInfo() override;
-
+ public:
+    Cleaner(int id, std::string name, pos post, int salary)
+            : Personal(id, name, post, salary) {}
+    int calcBonus() override;
 }
 
 
@@ -45,9 +50,10 @@ public:
 */
 
 class Driver : public Personal {
-public:
+ public:
+    Driver(int id, std::string name, pos post, int salary)
+        : Personal(id, name, post, salary) {}
   int calcBonus() override;
-  void calc() override;
 }
 
 
