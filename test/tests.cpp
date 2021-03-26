@@ -3,6 +3,8 @@
 #include "../include/Employee.h"
 #include "../include/Factory.h"
 #include "gtest/gtest.h"
+#include "../employees.json"
+#include "../projects.json"
 
 #include "random"
 #include "string"
