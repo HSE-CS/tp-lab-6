@@ -51,10 +51,10 @@ int main() {
         emp->setWorkTime(rand_r(&seed) % 10 + 30);
         salary = emp->getPayment();
         if (salary > max) max = salary;
-        std::cout « emp->getId() « " " « emp->getName()
-            « " gets " « salary « std::endl;
+        std::cout << emp->getId() << " " << emp->getName()
+            << " gets " << salary << std::endl;
     }
-    std::cout « "Highest payment is " « max « std::endl;
+    std::cout << "Highest payment is " << max << std::endl;
     getchar();
     return 0;
 }
