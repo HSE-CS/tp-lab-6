@@ -7,15 +7,15 @@ int Personal::calcBase(int salary. int wtime) {
 }
 
 
-int Cleaner::calcBonus(){
+int Cleaner::calcBonus() {
     return 10;
 }
 
-void Cleaner::calc(){
-     return calcBase(salary,worktime) + calcBonus();
+void Cleaner::calc() {
+     return calcBase(salary, worktime) + calcBonus();
 }
 
-void Cleaner::printInfo(){
+void Cleaner::printInfo() {
       std::cout << "id : " << this.id << std::endl;
       std::cout << "name : " << this.name << std::endl;
       std::cout << "position : " << this.post << std::endl;
@@ -24,7 +24,7 @@ void Cleaner::printInfo(){
       std::cout << "payment : " << payment << std::endl;
 }
 
-int Driver::calcBonus(){
+int Driver::calcBonus() {
      return 15;
 }
 void Personal::calc() {

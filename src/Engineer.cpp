@@ -2,39 +2,38 @@
 #include "Engineer.h"
 
 
-  int Engineer::calcBudgetPart (float part, int budget) {
-      return (int)myProject->budget / part;
-  }
+int Engineer::calcBudgetPart(float part, int budget) {
+      return myProject->budget / static_cast<int>(part);
+}
 
-  void Engineer::calc () {
+void Engineer::calc() {
       payment = calcBase(salary, worktime) + calcProAdditions() + calcBonus();
-  }
+}
 
-
-  int Programmer::calcProAdditions () {
-      return (int)(salary * 0.5);
-  }
-  int Programmer::calcBonus (){
+int Programmer::calcProAdditions () {
+      return static_cast<int>(salary * 0.5);
+}
+int Programmer::calcBonus () {
       return 20;
-  }
+}
 
-  int TeamLeader::calcHeads () {
+int TeamLeader::calcHeads () {
     return 4;
-  }
+}
 
   // calc();
-  int TeamLeader::calcBonus (){
+int TeamLeader::calcBonus () {
       return 25;
-  }
+}
 
-  int Tester::calcProAdditions (){
-      return (int)(salary * 0.75);
-  }
+int Tester::calcProAdditions () {
+      return static_cast<int>(salary * 0.75);
+}
 
-  int Tester::calcBonus (){
+int Tester::calcBonus () {
       return 21;
-  }
+}
 
-  void Tester::calc (){
+void Tester::calc () {
       payment = calcBase(salary, worktime) + calcProAdditions() + calcBonus();
-  }
+}

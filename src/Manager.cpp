@@ -9,7 +9,7 @@ int ProjectManager::calcHeads() {
      return num;
 }
 
-int ProjectManager::calcBudgetPart(float part, int budget){
+int ProjectManager::calcBudgetPart(float part, int budget) {
      return static_cast<int>(budget) / part;
 }
 
@@ -17,11 +17,11 @@ int ProjectManager::calcProAdditions() {
      return 35;
 }
 
-void ProjectManager::calc(){
+void ProjectManager::calc() {
      return 40
 }
 
-void ProjectManager::printInfo(){
+void ProjectManager::printInfo() {
      std::cout << "id : " << this.id << std::endl;
      std::cout << "name : " << this.name << std::endl;
      std::cout << "position : " << this.position << std::endl;
@@ -30,5 +30,3 @@ void ProjectManager::printInfo(){
      std::cout << "payment : " << payment << std::endl;
 }
 
- // void SeniorManager::calc(){
- // };

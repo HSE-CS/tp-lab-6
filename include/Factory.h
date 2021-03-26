@@ -18,4 +18,4 @@ class StaffFactory {
 }
 
 
-#endif // INCLUDE_FACTORY_H_
+#endif  // INCLUDE_FACTORY_H_
