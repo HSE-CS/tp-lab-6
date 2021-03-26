@@ -1,14 +1,16 @@
-#ifndef TP_LAB_6_PERSONAL_H
-#define TP_LAB_6_PERSONAL_H
+// Copyright 2021 Ziganshin Nikita
+
+#ifndef TP_LAB_6_PERSONAL_H_
+#define TP_LAB_6_PERSONAL_H_
 
 #include "Employee.h"
 #include "Interfaces.h"
 #include <iostream>
 
 class Personal : public Employee, public WorkBaseTime {
-protected:
+ protected:
     unsigned int salary; // (per hour)
-public:
+ public:
     Personal(unsigned int id, std::string name, unsigned int salary);
 
     unsigned int calcBase() override;
@@ -25,9 +27,9 @@ public:
 };
 
 class Driver : public Personal {
-private:
+ private:
     unsigned int additionalWorkTime = 0;
-public:
+ public:
     Driver(unsigned int id, std::string name, unsigned int salary);
 
     unsigned int calcBonus() override;
@@ -42,7 +44,7 @@ public:
 };
 
 class Cleaner : public Personal {
-public:
+ public:
     Cleaner(unsigned int id, std::string name, unsigned int salary);
 
     unsigned int calcBonus() override;
@@ -52,4 +54,4 @@ public:
     void printInfo() override;
 };
 
-#endif //TP_LAB_6_PERSONAL_H
+#endif  //TP_LAB_6_PERSONAL_H_

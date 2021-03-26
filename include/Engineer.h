@@ -1,15 +1,17 @@
-#ifndef TP_LAB_6_ENGINEER_H
-#define TP_LAB_6_ENGINEER_H
+// Copyright 2021 Ziganshin Nikita
+
+#ifndef TP_LAB_6_ENGINEER_H_
+#define TP_LAB_6_ENGINEER_H_
 
 #include "Interfaces.h"
 #include "Personal.h"
 #include "Manager.h"
+#include <string>
 
-class Engineer : public ProjectBudget, public Personal
-{
-protected:
+class Engineer : public ProjectBudget, public Personal {
+ protected:
     Project project;
-public:
+ public:
     Engineer(unsigned int id, std::string name, unsigned int salary);
     unsigned int calcBudgetPart(float part) override = 0;
     void calc() override;
@@ -18,10 +20,10 @@ public:
     void printInfo() override = 0;
 };
 
-class Programmer : public Engineer
-{
-public:
-    Programmer(unsigned int id, std::string name, unsigned int salary, Project project);
+class Programmer : public Engineer {
+ public:
+    Programmer(unsigned int id, std::string name,
+               unsigned int salary, Project project);
     Programmer(unsigned int id, std::string name, unsigned int salary);
     unsigned int calcBudgetPart(float part) override;
     unsigned int calcProAdditions() override;
@@ -29,10 +31,10 @@ public:
     void printInfo() override;
 };
 
-class Tester : public Engineer
-{
-public:
-    Tester(unsigned int id, std::string name, unsigned int salary, Project project);
+class Tester : public Engineer {
+ public:
+    Tester(unsigned int id, std::string name,
+           unsigned int salary, Project project);
     unsigned int calcBudgetPart(float part) override;
     unsigned int calcProAdditions() override;
     unsigned int calcBonus() override;
@@ -42,8 +44,9 @@ public:
 
 class TeamLeader : public Programmer, public Heading
 {
-public:
-    TeamLeader(unsigned int id, std::string name, unsigned int salary, Project project);
+ public:
+    TeamLeader(unsigned int id, std::string name,
+               unsigned int salary, Project project);
     TeamLeader(unsigned int id, std::string name, unsigned int salary);
     unsigned int calcHeads() override;
     unsigned int calcBudgetPart(float part) override;
@@ -53,4 +56,4 @@ public:
     void printInfo() override;
 };
 
-#endif //TP_LAB_6_ENGINEER_H
+#endif  // TP_LAB_6_ENGINEER_H_

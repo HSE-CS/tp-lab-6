@@ -1,3 +1,5 @@
+// Copyright 2021 Ziganshin Nikita
+
 #include "Factory.h"
 
 std::vector<Employee*> StaffFactory::makeStaff(const std::string& path) {

@@ -1,3 +1,5 @@
+// Copyright 2021 Ziganshin Nikita
+
 #include "Engineer.h"
 
 void Engineer::calc() {

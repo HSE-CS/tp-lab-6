@@ -1,3 +1,5 @@
+// Copyright 2021 Ziganshin Nikita
+
 #include "Personal.h"
 
 unsigned int Personal::calcBase() {

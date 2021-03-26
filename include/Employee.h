@@ -1,20 +1,24 @@
-#ifndef TP_LAB_6_EMPLOYEE_H
-#define TP_LAB_6_EMPLOYEE_H
+// Copyright 2021 Ziganshin Nikita
+
+#ifndef TP_LAB_6_EMPLOYEE_H_
+#define TP_LAB_6_EMPLOYEE_H_
 
 #include <string>
 
 enum Position {
-    driver, cleaner, projectManager, seniorManager, programmer, tester, teamLeader
+    driver, cleaner, projectManager,
+    seniorManager, programmer, tester, teamLeader
 };
 
 class Employee {
-protected:
+ protected:
     unsigned int payment = 0;
     unsigned int id;
     std::string name;
     Position position;
     unsigned int workTime = 0;
-public:
+
+ public:
     void setWorkTime(unsigned int workTime);
 
     unsigned int getPayment() const;
@@ -38,4 +42,4 @@ public:
     virtual void printInfo() = 0;
 };
 
-#endif //TP_LAB_6_EMPLOYEE_H
+#endif  // TP_LAB_6_EMPLOYEE_H_

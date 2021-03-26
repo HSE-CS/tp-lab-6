@@ -1,3 +1,5 @@
+// Copyright 2021 Ziganshin Nikita
+
 #include "Employee.h"
 
 void Employee::setWorkTime(unsigned int workTime) {

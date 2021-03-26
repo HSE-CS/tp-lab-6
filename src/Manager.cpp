@@ -1,3 +1,5 @@
+// Copyright 2021 Ziganshin Nikita
+
 #include "Manager.h"
 
 unsigned int Project::getId() const {

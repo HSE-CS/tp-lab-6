@@ -1,5 +1,7 @@
-#ifndef TP_LAB_6_MANAGER_H
-#define TP_LAB_6_MANAGER_H
+// Copyright 2021 Ziganshin Nikita
+
+#ifndef TP_LAB_6_MANAGER_H_
+#define TP_LAB_6_MANAGER_H_
 
 #include <vector>
 #include "Employee.h"
@@ -7,11 +9,11 @@
 #include <iostream>
 
 class Project {
-protected:
+ protected:
     unsigned int id;
     unsigned int budget;
     unsigned int people = 0;
-public:
+ public:
     Project(unsigned int id, unsigned int budget);
 
     [[nodiscard]] unsigned int getId() const;
@@ -28,9 +30,9 @@ public:
 };
 
 class ProjectManager : public Employee, public ProjectBudget, public Heading {
-protected:
+ protected:
     Project project;
-public:
+ public:
     ProjectManager(unsigned int id, std::string name, Project project);
 
     unsigned int calcHeads() override;
@@ -49,9 +51,9 @@ public:
 };
 
 class SeniorManager : public ProjectManager {
-private:
+ private:
     std::vector<Project> projects;
-public:
+ public:
     SeniorManager(unsigned int id, const std::string &name, std::vector<Project> projects);
 
     SeniorManager(unsigned int id, const std::string &name, Project project);
@@ -65,4 +67,4 @@ public:
     unsigned int calcBudgetPart(float part) override;
 };
 
-#endif //TP_LAB_6_MANAGER_H
+#endif  // TP_LAB_6_MANAGER_H_
