@@ -3,23 +3,23 @@
 #include <vector>
 #include "Factory.h"
 
-int main () {
+int main() {
     //
 // создание штата сотрудников на основе файла
     vector<Employee*> staff = StaffFactory::makeStaff();
 
 // присвоение отработанного времени
-    for(Employee emp : staff) {
+    for (Employee emp : staff) {
         emp -> setWorkTime(8);
     }
 
 // расчет зарплаты
-    for(Employee emp : staff) {
+    for (Employee emp : staff) {
         emp -> calc();
     }
 
 // вывод данных о зарплате
-    for(Employee emp : staff) {
+    for (Employee emp : staff) {
         emp -> printInfo();
     }
 }
