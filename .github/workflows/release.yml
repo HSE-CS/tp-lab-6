@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
     - name: Install gtest manually
       run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/libgtest_main.a
@@ -14,4 +14,4 @@ jobs:
     - name: make
       run: cd build && make
     - name: Run Test
-      run: /home/runner/work/tp-lab-6/tp-lab-6/build/test/tp-lab-6.test
+      run: sudo cp /home/runner/work/tp-lab-6/tp-lab-6/data/* /home/runner/work/tp-lab-6/tp-lab-6/build/test/ && cd /home/runner/work/tp-lab-6/tp-lab-6/build/test/ && /home/runner/work/tp-lab-6/tp-lab-6/build/test/tp-lab-6.test
