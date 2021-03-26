@@ -31,7 +31,7 @@ class Driver : public Personal {
  public:
   Driver(int id, const std::string &name, Position positon,
          int salary) :
-      Personal(id, name, position, salary){}
+      Personal(id, name, position, salary) {}
   int calcBonus() override;
 };
 
