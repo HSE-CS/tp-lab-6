@@ -6,10 +6,11 @@
 #include "Employee.h"
 #include "Interfaces.h"
 #include <iostream>
+#include <string>
 
 class Personal : public Employee, public WorkBaseTime {
  protected:
-    unsigned int salary; // (per hour)
+    unsigned int salary;  // (per hour)
  public:
     Personal(unsigned int id, std::string name, unsigned int salary);
 

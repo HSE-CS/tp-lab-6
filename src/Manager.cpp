@@ -40,13 +40,17 @@ void ProjectManager::calc() {
 }
 
 void ProjectManager::printInfo() {
-    std::cout << "ID: " << id << std::endl << "Name: " << name << std::endl << "Position: Project Manager" << std::endl
-              << "Payment: " << payment << std::endl << "Project ID: " << project.getId() << std::endl
-              << "Project budget: " << project.getBudget() << std::endl << "Amount of people on project: "
+    std::cout << "ID: " << id << std::endl << "Name: "
+    << name << std::endl << "Position: Project Manager" << std::endl
+              << "Payment: " << payment << std::endl
+              << "Project ID: " << project.getId() << std::endl
+              << "Project budget: " << project.getBudget()
+              << std::endl << "Amount of people on project: "
               << project.getPeople();
 }
 
-ProjectManager::ProjectManager(unsigned int id, std::string name, Project project) : project(project) {
+ProjectManager::ProjectManager(unsigned int id,
+                               std::string name, Project project) : project(project) {
     this->id = id;
     this->name = std::move(name);
     this->project = project;
@@ -81,11 +85,13 @@ unsigned int SeniorManager::calcHeads() {
 }
 
 void SeniorManager::calc() {
-    payment = calcHeads() + calcProAdditions() + calcBudgetPart(0.15);
+    payment = calcHeads()
+            + calcProAdditions() + calcBudgetPart(0.15);
 }
 
 void SeniorManager::printInfo() {
-    std::cout << "ID: " << id << std::endl << "Name: " << name << std::endl << "Position: Senior Manager" << std::endl
+    std::cout << "ID: " << id << std::endl
+    << "Name: " << name << std::endl << "Position: Senior Manager" << std::endl
               << "Payment: " << payment << std::endl << "Projects IDs: ";
     for (auto &project : projects) {
         std::cout << project.getId() << ' ';
@@ -108,7 +114,8 @@ unsigned int SeniorManager::calcBudgetPart(float part) {
     return result;
 }
 
-SeniorManager::SeniorManager(unsigned int id, const std::string &name, std::vector<Project> projects) : ProjectManager(
+SeniorManager::SeniorManager(unsigned int id, const std::string &name,
+                             std::vector<Project> projects) : ProjectManager(
         id,
         name,
         project) {
@@ -121,7 +128,8 @@ SeniorManager::SeniorManager(unsigned int id, const std::string &name, std::vect
     }
 }
 
-SeniorManager::SeniorManager(unsigned int id, const std::string &name, Project project) : ProjectManager(id,
+SeniorManager::SeniorManager(unsigned int id,
+                             const std::string &name, Project project) : ProjectManager(id,
                                                                                                          name,
                                                                                                          project) {
     this->id = id;

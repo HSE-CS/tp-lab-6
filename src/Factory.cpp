@@ -8,7 +8,7 @@ std::vector<Employee*> StaffFactory::makeStaff(const std::string& path) {
     int id = 0, salary = 0;
     std::string name, position;
     while (in >> id >> name >> position >> salary) {
-        if(position == "Driver") {
+        if (position == "Driver") {
             Driver driver1(id, name, salary);
             staff.emplace_back(&driver1);
         } else if (position == "Cleaner") {
@@ -17,17 +17,17 @@ std::vector<Employee*> StaffFactory::makeStaff(const std::string& path) {
         } else if (position == "Programmer") {
             Programmer programmer1(id, name, salary);
             staff.emplace_back(&programmer1);
-        } else if(position == "Tester") {
+        } else if (position == "Tester") {
             Tester tester1(id, name, salary);
             staff.emplace_back(&tester1);
-        } else if(position == "TeamLeader") {
+        } else if (position == "TeamLeader") {
             TeamLeader teamLeader1(id, name, salary);
             staff.emplace_back(&teamLeader1);
-        } else if(position == "ProjectManager") {
+        } else if (position == "ProjectManager") {
             Project project(0, 0);
             ProjectManager projectManager1(id, name, project);
             staff.emplace_back(&projectManager1);
-        } else if(position == "SeniorManager") {
+        } else if (position == "SeniorManager") {
             Project project(0, 0);
             SeniorManager seniorManager1(id, name, project);
             staff.emplace_back(&seniorManager1);

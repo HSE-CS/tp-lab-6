@@ -42,8 +42,7 @@ class Tester : public Engineer {
     Tester(unsigned int id, std::string name, unsigned int salary);
 };
 
-class TeamLeader : public Programmer, public Heading
-{
+class TeamLeader : public Programmer, public Heading {
  public:
     TeamLeader(unsigned int id, std::string name,
                unsigned int salary, Project project);

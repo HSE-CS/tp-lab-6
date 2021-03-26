@@ -14,7 +14,8 @@ void Personal::setSalary(unsigned int salary) {
     this->salary = salary;
 }
 
-Personal::Personal(unsigned int id, std::string name, unsigned int salary) {
+Personal::Personal(unsigned int id,
+                   std::string name, unsigned int salary) {
     this->id = id;
     this->name = std::move(name);
     position = driver;
@@ -30,8 +31,10 @@ void Driver::calc() {
 }
 
 void Driver::printInfo() {
-    std::cout << "ID: " << id << std::endl << "Name: " << name << std::endl << "Position: Driver" << std::endl
-              << "Work time: " << workTime << std::endl << "Payment: " << payment << std::endl << "Salary: " << salary
+    std::cout << "ID: " << id << std::endl << "Name: "
+    << name << std::endl << "Position: Driver" << std::endl
+              << "Work time: " << workTime << std::endl
+              << "Payment: " << payment << std::endl << "Salary: " << salary
               << std::endl << "Additional work time: " << additionalWorkTime << std::endl;
 }
 
@@ -43,7 +46,8 @@ void Driver::setAdditionalWorkTime(unsigned int additionalWorkTime) {
     Driver::additionalWorkTime = additionalWorkTime;
 }
 
-Driver::Driver(unsigned int id, std::string name, unsigned int salary) : Personal(id, name, salary) {
+Driver::Driver(unsigned int id, std::string name,
+               unsigned int salary) : Personal(id, name, salary) {
     this->position = driver;
 }
 
@@ -52,8 +56,10 @@ void Cleaner::calc() {
 }
 
 void Cleaner::printInfo() {
-    std::cout << "ID: " << id << std::endl << "Name: " << name << std::endl << "Position: Cleaner" << std::endl
-              << "Work time: " << workTime << std::endl << "Payment: " << payment << std::endl << "Salary: " << salary
+    std::cout << "ID: " << id << std::endl << "Name: "
+    << name << std::endl << "Position: Cleaner" << std::endl
+              << "Work time: " << workTime << std::endl
+              << "Payment: " << payment << std::endl << "Salary: " << salary
               << std::endl;
 }
 
@@ -61,6 +67,7 @@ unsigned int Cleaner::calcBonus() {
     return 0;
 }
 
-Cleaner::Cleaner(unsigned int id, std::string name, unsigned int salary) : Personal(id, name, salary) {
+Cleaner::Cleaner(unsigned int id, std::string name,
+                 unsigned int salary) : Personal(id, name, salary) {
     this->position = cleaner;
 }

@@ -7,6 +7,7 @@
 #include "Employee.h"
 #include "Interfaces.h"
 #include <iostream>
+#include <string>
 
 class Project {
  protected:
@@ -54,7 +55,8 @@ class SeniorManager : public ProjectManager {
  private:
     std::vector<Project> projects;
  public:
-    SeniorManager(unsigned int id, const std::string &name, std::vector<Project> projects);
+    SeniorManager(unsigned int id, const std::string &name,
+                  std::vector<Project> projects);
 
     SeniorManager(unsigned int id, const std::string &name, Project project);
 
