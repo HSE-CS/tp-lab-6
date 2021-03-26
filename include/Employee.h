@@ -1,28 +1,22 @@
-// Copyright 2021 Краюшкина Екатерина
-
+// Copyright 2021 Krayushkina
 #pragma once
 
-#include "Project.h"
+#define EMPLOYEE_H
+#ifdef EMPLOYEE_H
+#include <string>
 
-class Employee
-{
+class Employee {
+public:
+	Employee(std::string name, int id);
+	virtual float getPayment() = 0;
+	unsigned int getId() const;
+	unsigned int getWorkTime() const;
+	std::string getName() const;
+	void setWorkTime(unsigned int);
 protected:
 	int id;
-	string name;
+	std::string name;
 	int worktime;
-	vector<Project*> proj;
-	int payment;
-
-public:
-	Employee(int id_, string name_, int worktime_);
-	int get_id();
-	string get_name();
-	void set_worktime(int worktime_);
-	int get_payment();
-	virtual void set_project(Project* proj_);
-	virtual void del_last_project(Project* proj_);
-	virtual int calculate_working_time_payment() = 0;
-	virtual vector<Project*> get_project();
-	virtual void calculate() = 0;
-	void set_id(int id_);
+	float payment = 0;
 };
+#endif // EMPLOYEE

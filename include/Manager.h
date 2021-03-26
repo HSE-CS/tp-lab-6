@@ -1,15 +1,36 @@
-// Copyright 2021 Краюшкина Екатерина
+// Copyright 2021 Krayushkina
 
 #pragma once
-
+#define MANAGER_H
+#ifdef MANAGER_H
+#include <string>
 #include "Employee.h"
-#include "Project.h"
+#include "Interfaces.h"
 
-class Manager : public Employee, public Project
-{
+class Manager : public Employee, public ProjectBudget {
 public:
-	Manager(int id_, string name_, int worktime_);
-	int project_payment_calculate();
-	virtual int calculate_working_time_payment() override;
-	void calculate();
+	Manager(std::string name, unsigned int id, std::string position,
+		std::string project, float contribution);
+	float getPaymentbyProject() override;
+	float getPayment() override;
+protected:
+	float contribution;
+	std::string position;
+	std::string project;
 };
+class ProjectManager : public Manager, public Heading {
+public:
+	ProjectManager(std::string name, unsigned int id, std::string position,
+		std::string project, float contribution, unsigned int subordinates);
+	float getPaymentbyHeading() override;
+	float getPayment() override;
+private:
+	unsigned int subordinates;
+};
+
+class SeniorManager : public ProjectManager {
+public:
+	SeniorManager(std::string name, unsigned int id, std::string position,
+		std::string project, float contribution, unsigned int subordinates);
+};
+#endif // MANAGER_H

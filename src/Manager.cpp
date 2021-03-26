@@ -1,30 +1,44 @@
-// Copyright 2021 Краюшкина Екатерина
+// Copyright 2021 Krayushkina
 
 #include "Manager.h"
+#include <map>
+extern std::map<std::string, int> projects;
 
-Manager::Manager(int id_, string name_, int worktime_) : Employee(id_, name_, worktime_)
-{
-
+Manager::Manager(std::string name, unsigned int id,
+	std::string position, std::string project, float contribution)
+:Employee(name, id) {
+	this->position = position;
+	this->project = project;
+	this->contribution = contribution;
 }
 
-int Manager::project_payment_calculate()
-{
-	if (!this->proj.empty())
-	{
-		return (proj[0]->Sal_Per_Manager/100) * proj[0]->get_budget_();
-	}
-	else
-	{
-		return 0;
-	}
+float Manager::getPaymentbyProject() {
+	return projects[project] * contribution;
 }
 
-int Manager::calculate_working_time_payment()
-{
-	return 0;
+float Manager::getPayment() {
+	payment = getPaymentbyProject();
+	return payment;
 }
 
-void Manager::calculate()
-{
-	payment = project_payment_calculate();
+ProjectManager::ProjectManager(std::string name,
+	unsigned int id, std::string position, std::string project,
+	float contribution, unsigned int subordinates)
+	: Manager(name, id, position, project, contribution) {
+	this->subordinates = subordinates;
 }
+
+float ProjectManager::getPaymentbyHeading() {
+	return subordinates * 500;
+}
+
+float ProjectManager::getPayment() {
+	payment = getPaymentbyProject() + getPaymentbyHeading();
+	return payment;
+}
+
+SeniorManager::SeniorManager(std::string name, unsigned int id,
+	std::string position, std::string project, float contribution,
+	unsigned int subordinates)
+:ProjectManager(name, id, position, project, contribution,
+	subordinates) {}

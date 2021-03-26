@@ -1,56 +1,27 @@
-// Copyright 2021 Краюшкина Екатерина
+// Copyright 2021 Krayushkina
 
 #include "Employee.h"
+#include <map>
+extern std::map<std::string, int> projects;
 
-Employee::Employee(int id_, string name_, int worktime_)
-{
-	id = id_;
-	name = name_;
-	worktime = worktime_;
-	payment = 0;
-	proj = {};
+Employee::Employee(std::string name, int id) {
+	this->name = name;
+	this->id = id;
+	worktime = 0;
 }
 
-int Employee::get_id()
-{
+unsigned int Employee::getId() const {
 	return id;
 }
 
-void Employee::set_id(int id_)
-{
-	id = id_;
+unsigned int Employee::getWorkTime() const {
+	return worktime;
 }
 
-
-string Employee::get_name()
-{
+std::string Employee::getName() const {
 	return name;
 }
 
-void Employee::set_worktime(int worktime_)
-{
-	if (worktime_ >= 0)
-	{
-		worktime = worktime_;
-	}
-}
-
-int Employee::get_payment()
-{
-	return payment;
-}
-
-void Employee::set_project(Project* proj_)
-{
-	proj.push_back(proj_);
-}
-
-void Employee::del_last_project(Project* proj_)
-{
-	proj.pop_back();
-}
-
-vector<Project*> Employee::get_project()
-{
-	return proj;
+void Employee::setWorkTime(unsigned int time) {
+	this->worktime = time;
 }
