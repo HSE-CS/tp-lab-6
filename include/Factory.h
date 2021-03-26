@@ -10,7 +10,7 @@
 
 std::vector<std::string> split(const std::string& s, char delimiter);
 class Factory {
-public:
+ public:
 	static Employee* createEmployee(std::vector<std::string> data);
 };
 

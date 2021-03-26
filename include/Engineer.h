@@ -8,26 +8,26 @@
 #include "Interfaces.h"
 
 class Engineer : public Employee, public WorkBaseTime, public ProjectBudget {
-public:
+ public:
 	Engineer(std::string name, unsigned int id,
 		float base, std::string position,
 		std::string project, float contribution);
 	float getPaymentbyWorkTime() override;
 	float getPaymentbyProject() override;
-protected:
+ protected:
 	float base;
 	float contribution;
 	std::string position;
 	std::string project;
 };
 class Tester : public Engineer {
-public:
+ public:
 	Tester(std::string name, unsigned int id, float base, std::string position,
 		std::string project, float contribution);
 	float getPayment() override;
 };
 class Programmer : public Engineer {
-public:
+ public:
 	Programmer(std::string name, unsigned int id,
 		float base, std::string position,
 		std::string project, float contribution);
@@ -35,9 +35,9 @@ public:
 }
 
 class TeamLeader : public Programmer, public Heading {
-protected:
+ protected:
 	unsigned int subordinates;
-public:
+ public:
 	TeamLeader(std::string name, unsigned int id, float base,
 		std::string position,
 		std::string project, float contribution,

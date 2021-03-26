@@ -6,14 +6,14 @@
 #include <string>
 
 class Employee {
-public:
+ public:
 	Employee(std::string name, int id);
 	virtual float getPayment() = 0;
 	unsigned int getId() const;
 	unsigned int getWorkTime() const;
 	std::string getName() const;
 	void setWorkTime(unsigned int);
-protected:
+ protected:
 	int id;
 	std::string name;
 	int worktime;

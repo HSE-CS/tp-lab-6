@@ -7,27 +7,27 @@
 #include "Employee.h"
 #include "Interfaces.h"
 class Personal : public Employee, public WorkBaseTime {
-public:
+ public:
 	Personal(std::string name, unsigned int id, float base,
 		std::string position);
 	float getPaymentbyWorkTime() override;
-protected:
+ protected:
 	float base1;
 	std::string base;
 	std::string position;
 };
 class Cleaner : public Personal {
-public:
+ public:
 	Cleaner(std::string name, unsigned int id, float base,
 		std::string position);
 	float getPayment() override;
 };
 class Driver : public Personal {
-public:
+ public:
 	Driver(std::string name, unsigned int id, float base,
 		std::string position, float koef);
 	float getPayment() override;
-private:
+ private:
 	float koef;
 };
 #endif // PERSONAL_H
