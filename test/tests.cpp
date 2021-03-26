@@ -80,4 +80,3 @@ TEST(lab6, task9) {
     float res = emp->getPayment();
     EXPECT_EQ(21500, res);
 }
-

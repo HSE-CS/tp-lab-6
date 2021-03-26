@@ -57,4 +57,3 @@ float TeamLeader::getPayment() {
     payment = Programmer::getPayment() + getPaymentbyHeading();
     return payment;
 }
-

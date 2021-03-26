@@ -19,4 +19,4 @@ class Employee {
     int worktime;
     float payment = 0;
 };
-#endif // EMPLOYEE
+#endif  // EMPLOYEE

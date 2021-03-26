@@ -87,4 +87,3 @@ Employee* Factory::createEmployee(std::vector<std::string> data) {
     }
     return p;
 }
-

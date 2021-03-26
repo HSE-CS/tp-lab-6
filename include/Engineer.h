@@ -45,4 +45,4 @@ class TeamLeader : public Programmer, public Heading {
     float getPaymentbyHeading() override;
     float getPayment() override;
 };
-#endif // ENGINEER_H
+#endif  // ENGINEER_H

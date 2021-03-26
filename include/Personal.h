@@ -30,4 +30,4 @@ class Driver : public Personal {
  private:
     float koef;
 };
-#endif // PERSONAL_H
+#endif  // PERSONAL_H

@@ -39,7 +39,7 @@ void createProjects() {
         str = split(buf, ' ');
         tmp = atoi(str[1].c_str());
         projects[str[0]] = tmp;
-	}
+    }
 }
 
 int main() {
@@ -58,4 +58,3 @@ int main() {
     getchar();
     return 0;
 }
-

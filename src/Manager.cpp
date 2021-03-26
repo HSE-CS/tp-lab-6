@@ -42,4 +42,3 @@ SeniorManager::SeniorManager(std::string name, unsigned int id,
     unsigned int subordinates)
 :ProjectManager(name, id, position, project, contribution,
     subordinates) {}
-

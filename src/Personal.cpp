@@ -34,4 +34,3 @@ float Driver::getPayment() {
     payment = getPaymentbyWorkTime() * koef;
     return payment;
 }
-

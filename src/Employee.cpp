@@ -25,4 +25,3 @@ std::string Employee::getName() const {
 void Employee::setWorkTime(unsigned int time) {
     this->worktime = time;
 }
-

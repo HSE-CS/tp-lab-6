@@ -33,4 +33,4 @@ class SeniorManager : public ProjectManager {
     SeniorManager(std::string name, unsigned int id, std::string position,
         std::string project, float contribution, unsigned int subordinates);
 };
-#endif // MANAGER_H
+#endif  // MANAGER_H

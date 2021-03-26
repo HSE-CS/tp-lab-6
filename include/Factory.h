@@ -14,4 +14,4 @@ class Factory {
     static Employee* createEmployee(std::vector<std::string> data);
 };
 
-#endif // FACTORY_H
+#endif  // FACTORY_H
