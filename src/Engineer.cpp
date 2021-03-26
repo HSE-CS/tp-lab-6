@@ -30,8 +30,7 @@ unsigned int Programmer::calcBonus() {
 
 Programmer::Programmer(unsigned int id, std::string name,
                        unsigned int salary, Project project)
-                       : Engineer(id, name,
-                                                                                                           salary) {
+                       : Engineer(id, name, salary) {
     this->position = programmer;
     this->project = project;
 }
@@ -87,7 +86,7 @@ void Tester::printInfo() {
 
 TeamLeader::TeamLeader(unsigned int id, std::string name,
                        unsigned int salary, Project project)
-                       : Programmer(id, name,salary, project) {
+                       : Programmer(id, name, salary, project) {
     this->position = teamLeader;
 }
 
@@ -106,13 +105,13 @@ unsigned int TeamLeader::calcBudgetPart(float part) {
 }
 
 unsigned int TeamLeader::calcProAdditions() {
-    if(workTime > 160) {
+    if (workTime > 160) {
         return 15000;
     }
 }
 
 unsigned int TeamLeader::calcBonus() {
-    if(workTime > 200) {
+    if (workTime > 200) {
         return 15000;
     }
 }
