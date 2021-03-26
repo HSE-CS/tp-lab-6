@@ -16,4 +16,4 @@ void Employee::printInfo() {
     std::cout << "salary : " << salary << std::endl;
     std::cout << "worktime : " << worktime << std::endl;
     std::cout << "payment : " << payment << std::endl;
-};
+}

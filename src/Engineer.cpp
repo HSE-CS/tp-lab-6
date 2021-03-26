@@ -10,7 +10,7 @@ void Engineer::calc() {
       payment = calcBase(salary, worktime) + calcProAdditions() + calcBonus();
 }
 
-int Programmer::calcProAdditions () {
+int Programmer::calcProAdditions() {
       return static_cast<int>(salary * 0.5);
 }
 int Programmer::calcBonus() {
