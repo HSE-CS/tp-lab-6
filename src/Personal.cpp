@@ -4,12 +4,12 @@
 #include <sstream>
 #include <iostream>
 
-int Personal::calcBase(int salary, int worktime) { 
+int Personal::calcBase(int salary, int worktime) {
     return salary * worktime;
 }
 
 int Personal::calcBonus() {
-    return 0; 
+    return 0;
 }
 
 void Personal::printInfo() {
@@ -22,10 +22,9 @@ void Personal::printInfo() {
 }
 
 void Personal::calc() {
-    payment = calcBase(salary, workTime) + calcBonus(); 
+    payment = calcBase(salary, workTime) + calcBonus();
 }
 
-int Driver::calcBonus() { 
-    return calcBase(salary, workTime) / 10; 
+int Driver::calcBonus() {
+    return calcBase(salary, workTime) / 10;
 }
-

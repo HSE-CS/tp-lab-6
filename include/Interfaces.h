@@ -1,9 +1,10 @@
 // Copyright DB 2021
 #ifndef INCLUDE_INTERFACES_H_
 #define INCLUDE_INTERFACES_H_
+
 class WorkBaseTime {
  public:
-  virtual int calcBase(int salary, 
+  virtual int calcBase(int salary,
                                 int worktime) = 0;
   virtual int calcBonus() = 0;
 };

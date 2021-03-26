@@ -37,8 +37,8 @@ void Engineer::printInfo() {
   std::cout << str.str() << std::endl;
 }
 
-int Tester::calcProAdditions() { 
-    return calcBase(salary, workTime) / 10; 
+int Tester::calcProAdditions() {
+    return calcBase(salary, workTime) / 10;
 }
 
 void Tester::calc() {
@@ -46,8 +46,8 @@ void Tester::calc() {
             calcProAdditions();
 }
 
-int Programmer::calcProAdditions() { 
-    return calcBase(salary, workTime) / 10; 
+int Programmer::calcProAdditions() {
+    return calcBase(salary, workTime) / 10;
 }
 
 void Programmer::calc() {
@@ -55,8 +55,8 @@ void Programmer::calc() {
             calcProAdditions();
 }
 
-int TeamLeader::calcHeads() { 
-    return 150; 
+int TeamLeader::calcHeads() {
+    return 150;
 }
 
 void TeamLeader::calc() {

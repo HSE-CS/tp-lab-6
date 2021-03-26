@@ -4,8 +4,8 @@
 #include "Factory.h"
 #include "gtest/gtest.h"
 
-#include <random>
-#include <string>
+#include "random"
+#include "string"
 
 TEST(Staff, test0) {
   std::vector<Employee*> staff = StaffFactory::makeStaff();

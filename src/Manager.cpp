@@ -24,7 +24,7 @@ ProjectManager::ProjectManager(int id, const std::string &name,
                                float part)
     : Employee(id, name, position), part(part) {
   for (int i = 0; i < numprojects; i++) projects.push_back(_projects[i]);
-};
+}
 
 int ProjectManager::calcBudgetPart(float part, int budget) {
   return budget * part;
@@ -53,5 +53,3 @@ void ProjectManager::printInfo() {
   stream << "]\nWork time: " << workTime << "\nPayment: " << payment << "\n";
   std::cout << str.str() << std::endl;
 }
-
-  

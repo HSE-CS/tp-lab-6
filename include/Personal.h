@@ -23,15 +23,15 @@ class Personal : public Employee, public WorkBaseTime {
 class Cleaner : public Personal {
  public:
   Cleaner(int id, const std::string &name, Position positon,
-          int salary) : 
-      Personal(id, name, position, salary){};
+          int salary) :
+      Personal(id, name, position, salary){}
 };
 
 class Driver : public Personal {
  public:
   Driver(int id, const std::string &name, Position positon,
-         int salary) : 
-      Personal(id, name, position, salary){};
+         int salary) :
+      Personal(id, name, position, salary){}
   int calcBonus() override;
 };
 
