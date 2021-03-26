@@ -5,14 +5,14 @@
 #ifdef INTERFACES_H
 class WorkBaseTime {
  public:
-	virtual float getPaymentbyWorkTime() = 0;
+    virtual float getPaymentbyWorkTime() = 0;
 };
 class ProjectBudget {
  public:
-	virtual float getPaymentbyProject() = 0;
+    virtual float getPaymentbyProject() = 0;
 };
 class Heading {
  public:
-	virtual float getPaymentbyHeading() = 0;
+    virtual float getPaymentbyHeading() = 0;
 };
 #endif // INTERFACES_H

@@ -7,16 +7,16 @@
 
 class Employee {
  public:
-	Employee(std::string name, int id);
-	virtual float getPayment() = 0;
-	unsigned int getId() const;
-	unsigned int getWorkTime() const;
-	std::string getName() const;
-	void setWorkTime(unsigned int);
+    Employee(std::string name, int id);
+    virtual float getPayment() = 0;
+    unsigned int getId() const;
+    unsigned int getWorkTime() const;
+    std::string getName() const;
+    void setWorkTime(unsigned int);
  protected:
-	int id;
-	std::string name;
-	int worktime;
-	float payment = 0;
+    int id;
+    std::string name;
+    int worktime;
+    float payment = 0;
 };
 #endif // EMPLOYEE
