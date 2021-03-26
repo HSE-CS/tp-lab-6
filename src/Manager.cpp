@@ -50,7 +50,8 @@ void ProjectManager::printInfo() {
 }
 
 ProjectManager::ProjectManager(unsigned int id,
-                               std::string name, Project project) : project(project) {
+                               std::string name, Project project)
+                               : project(project) {
     this->id = id;
     this->name = std::move(name);
     this->project = project;
@@ -123,15 +124,14 @@ SeniorManager::SeniorManager(unsigned int id, const std::string &name,
     this->name = name;
     this->projects = std::move(projects);
     this->position = seniorManager;
-    for(auto & project : this->projects) {
+    for (auto & project : this->projects) {
         project.setPeople(project.getPeople() + 1);
     }
 }
 
 SeniorManager::SeniorManager(unsigned int id,
-                             const std::string &name, Project project) : ProjectManager(id,
-                                                                                                         name,
-                                                                                                         project) {
+                             const std::string &name, Project project)
+                             : ProjectManager(id, name, project) {
     this->id = id;
     this->name = name;
     projects.emplace_back(project);

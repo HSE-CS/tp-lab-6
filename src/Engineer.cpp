@@ -8,7 +8,8 @@ void Engineer::calc() {
 }
 
 Engineer::Engineer(unsigned int id, std::string name,
-                   unsigned int salary) : Personal(id, name, salary), project(project) {
+                   unsigned int salary)
+                   : Personal(id, name, salary), project(project) {
 }
 
 unsigned int Programmer::calcBudgetPart(float part) {
@@ -28,7 +29,8 @@ unsigned int Programmer::calcBonus() {
 }
 
 Programmer::Programmer(unsigned int id, std::string name,
-                       unsigned int salary, Project project) : Engineer(id, name,
+                       unsigned int salary, Project project)
+                       : Engineer(id, name,
                                                                                                            salary) {
     this->position = programmer;
     this->project = project;
@@ -48,7 +50,8 @@ void Programmer::printInfo() {
 }
 
 Tester::Tester(unsigned int id, std::string name,
-               unsigned int salary, Project project) : Engineer(id, name, salary) {
+               unsigned int salary, Project project)
+               : Engineer(id, name, salary) {
     this->position = tester;
     this->project = project;
 }
@@ -63,13 +66,13 @@ unsigned int Tester::calcBudgetPart(float part) {
 }
 
 unsigned int Tester::calcProAdditions() {
-    if(workTime > 160) {
+    if (workTime > 160) {
         return 10000;
     }
 }
 
 unsigned int Tester::calcBonus() {
-    if(workTime > 200) {
+    if (workTime > 200) {
         return 10000;
     }
 }
@@ -83,12 +86,14 @@ void Tester::printInfo() {
 }
 
 TeamLeader::TeamLeader(unsigned int id, std::string name,
-                       unsigned int salary, Project project) : Programmer(id, name,salary,project) {
+                       unsigned int salary, Project project)
+                       : Programmer(id, name,salary, project) {
     this->position = teamLeader;
 }
 
 TeamLeader::TeamLeader(unsigned int id, std::string name,
-                       unsigned int salary) : Programmer(id, name, salary) {
+                       unsigned int salary)
+                       : Programmer(id, name, salary) {
     this->position = teamLeader;
 }
 

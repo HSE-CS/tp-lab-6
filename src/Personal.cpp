@@ -35,7 +35,8 @@ void Driver::printInfo() {
     << name << std::endl << "Position: Driver" << std::endl
               << "Work time: " << workTime << std::endl
               << "Payment: " << payment << std::endl << "Salary: " << salary
-              << std::endl << "Additional work time: " << additionalWorkTime << std::endl;
+              << std::endl << "Additional work time: "
+              << additionalWorkTime << std::endl;
 }
 
 unsigned int Driver::getAdditionalWorkTime() const {

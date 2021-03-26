@@ -1,6 +1,5 @@
 // Copyright 2021 Ziganshin Nikita
 
-int main()
-{
+int main() {
     return 0;
 }
