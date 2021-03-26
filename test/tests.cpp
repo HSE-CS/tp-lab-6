@@ -19,7 +19,7 @@ TEST(lab6, task1) {
 TEST(lab6, task2) {
     Driver* emp = new Driver("Alex", 78, 300, "Driver", 1.5);
     std::string res = emp->getName();
-    EXPECT_EQ("Alex", res)
+    EXPECT_EQ("Alex", res);
 }
 
 TEST(lab6, task3) {
