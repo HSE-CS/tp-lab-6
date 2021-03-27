@@ -1,7 +1,8 @@
 // Copyright 2021 by Liza
 #include "Factory.h"
 
-std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList){
+std::vector<Employee*> 
+makeStaff(std::string staffList, std::string projectsList) {
 return std::vector<Employee*>();}
 std::vector<Employee*> makeStaff(std::string staffList,
 std::string projectsList) {
@@ -21,7 +22,8 @@ i = 0;
 std::stringstream strStream(read);
 while (getline(strStream, elem, ' ')) {
 arr[i++] = elem;}
-int id = std::stoi(arr[0]), payment = std::stoi(arr[3]), projectId = std::stoi(arr[4]);
+int id = std::stoi(arr[0]), payment = std::stoi(arr[3]),
+projectId = std::stoi(arr[4]);
 std::string name = arr[1], position = arr[2];
 int projectBudget = 0;
 for (i = 0; i < allProjects.size(); ++i) {

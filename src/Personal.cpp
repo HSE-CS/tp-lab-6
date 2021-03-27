@@ -1,12 +1,15 @@
 // Copyright 2021 by Liza
 #include "Personal.h"
-Personal::Personal(int _id, std::string _name, std::string _pos, int _payment) : Employee(_id, _name, _pos, _payment) {
+Personal::Personal(int _id, std::string _name, std::string _position,
+int _payment) : Employee(_id, _name, _position, _payment) {
 salary = 0;}
 
-Driver::Driver(int _id, std::string _name, std::string _pos, int _payment) : Personal(_id, _name, _pos, _payment) {
+Driver::Driver(int _id, std::string _name, std::string _position,
+int _payment) : Personal(_id, _name, _position, _payment) {
 setsalary(0);}
 
-Cleaner::Cleaner(int _id, std::string _name, std::string _pos, int _payment) : Personal(_id, _name, _pos, _payment) {
+Cleaner::Cleaner(int _id, std::string _name, std::string _position,
+int _payment) : Personal(_id, _name, _position, _payment) {
 setsalary(0);}
 
 Personal::Personal() {
@@ -36,7 +39,9 @@ int Personal::calc() {
 return getworktime() * getpayment();}
 
 void Personal::printInfo() { 
-std::cout << std::setw(16) << getid() << std::setw(16) << getname() << std::setw(16) << getposition() << std::setw(16) << getworktime() << std::setw(16) << getpayment() << std::setw(16) << getsalary() << std::endl;}
+std::cout << std::setw(16) << getid() << std::setw(16) << getname()
+<< std::setw(16) << getposition() << std::setw(16) << getworktime()
+<< std::setw(16) << getpayment() << std::setw(16) << getsalary() << std::endl;}
 
 int Driver::calc() {
 setsalary(calcBase() + calcBonus());

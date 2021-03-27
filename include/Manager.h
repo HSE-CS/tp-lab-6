@@ -13,8 +13,10 @@ class ProjectManager : public Employee, public ProjectBudget, public Heading {
 Project hisProject;
 int salary;
  public:
-ProjectManager(int _id, std::string _name, std::string _position, int _payment, Project currentProject);
-ProjectManager(int _id, std::string _name, std::string _position, int _payment);
+ProjectManager(int _id, std::string _name, std::string _position,
+int _payment, Project currentProject);
+ProjectManager(int _id, std::string _name, std::string _position,
+int _payment);
 int calcBudgetPart(float part, int budget);
 int calcProAdditions();
 void setProgect(int _id, int _budget);

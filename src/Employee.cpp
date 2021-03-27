@@ -20,7 +20,8 @@ name = "";
 position = "";
 payment = 0;}
 
-Employee::Employee(int _id, std::string _name, std::string _position, int _payment) {
+Employee::Employee(int _id, std::string _name,
+std::string _position, int _payment) {
 id = _id;
 name = _name;
 position = _position;
@@ -30,4 +31,6 @@ int Employee::calc() {
 return getworktime() * getpayment();}
 
 void Employee::printInfo() {
-std::cout << std::setw(16) << getid() << std::setw(16) << getname() << std::setw(16) << getposition() << std::setw(16) << getworktime() << std::setw(16) << getpayment() << std::endl;}
+std::cout << std::setw(16) << getid() << std::setw(16) << getname()
+<< std::setw(16) << getposition() << std::setw(16) << getworktime()
+<< std::setw(16) << getpayment() << std::endl;}

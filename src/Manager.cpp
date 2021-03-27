@@ -5,10 +5,14 @@
 void ProjectManager::setsalary(int a) {
 salary = a;}
 
-ProjectManager::ProjectManager(int _id, std::string _name, std::string _pos, int _payment) : Employee(_id, _name, _pos, _payment) {
+ProjectManager::ProjectManager(int _id, std::string _name,
+std::string _position, int _payment) :
+Employee(_id, _name, _position, _payment) {
 salary = 0;}
 
-ProjectManager::ProjectManager(int _id, std::string _name, std::string _pos, int _payment, Project currentProject) : Employee(_id, _name, _pos, _payment) {
+ProjectManager::ProjectManager(int _id, std::string _name, std::string _position,
+int _payment, Project currentProject) :
+Employee(_id, _name, _position, _payment) {
 hisProject = currentProject;
 salary = 0;}
 
@@ -29,13 +33,15 @@ return calcProAdditions() + calcHeads();}
 int ProjectManager::calcHeads() {
 return calcBudgetPart(0.05, hisProject.getBudget());}
 
-SeniorManager::SeniorManager(int _id, std::string _name, std::string _pos, int _payment, std::vector<Project> _Projects) : ProjectManager(_id, _name, _pos, _payment) {
+SeniorManager::SeniorManager(int _id, std::string _name, std::string _position,
+int _payment, std::vector<Project> _Projects) :
+ProjectManager(_id, _name, _position, _payment) {
 Projects = _Projects;}
 
 void SeniorManager::addProject(Project pr) {
 Projects.push_back(pr);}
 
-int SeniorManager::calcBudgetPart(float part, int budget){
+int SeniorManager::calcBudgetPart(float part, int budget) {
 return 0;}
 
 int SeniorManager::calcHeads() {
@@ -57,7 +63,11 @@ int ProjectManager::getsalary() {
 return salary;}
 
 void ProjectManager::printInfo() {
-std::cout << std::setw(8) << getid() << std::setw(16) << getname() << std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5) << getpayment() << std::setw(8) << getsalary() << std::endl;}
+std::cout << std::setw(8) << getid() << std::setw(16) << getname() <<
+std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5) 
+<< getpayment() << std::setw(8) << getsalary() << std::endl;}
 
 void SeniorManager::printInfo() {
-std::cout << std::setw(8) << getid() << std::setw(16) << getname() << std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5) << getpayment() << std::setw(8) << getsalary() << std::endl;}
+std::cout << std::setw(8) << getid() << std::setw(16) << getname() <<
+std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5)
+<< getpayment() << std::setw(8) << getsalary() << std::endl;}

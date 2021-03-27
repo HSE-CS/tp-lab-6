@@ -1,14 +1,21 @@
 // Copyright 2021 by Liza
 #include "Engineer.h"
 
-Engineer::Engineer(int _id, std::string _name, std::string _position, int _payment, Project currentProject) : Personal(_id, _name, _pos, _payment) {
+Engineer::Engineer(int _id, std::string _name, std::string _position,
+int _payment, Project currentProject) : Personal(_id, _name, _position, _payment) {
 project = currentProject;}
 
-Programmer::Programmer(int _id, std::string _name, std::string _position, int _payment, Project currentProject) : Engineer(_id, _name, _pos, _payment, currentProject) {}
+Programmer::Programmer(int _id, std::string _name, std::string _position,
+int _payment, Project currentProject) :
+Engineer(_id, _name, _position, _payment, currentProject) {}
 
-TeamLeader::TeamLeader(int _id, std::string _name, std::string _position, int _payment, Project currentProject) : Programmer(_id, _name, _pos, _payment, currentProject) {}
+TeamLeader::TeamLeader(int _id, std::string _name, std::string _position,
+int _payment, Project currentProject) :
+Programmer(_id, _name, _position, _payment, currentProject) {}
 
-Tester::Tester(int _id, std::string _name, std::string _position, int _payment, Project currentProject) : Engineer(_id, _name, _position, _payment, currentProject) {}
+Tester::Tester(int _id, std::string _name, std::string _position,
+int _payment, Project currentProject) :
+Engineer(_id, _name, _position, _payment, currentProject) {}
 
 int Engineer::calcBudgetPart(double part, int budget) {
 return static_cast<int>(part * budget);}

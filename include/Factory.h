@@ -14,5 +14,6 @@
 #include "Engineer.h"
 #include "Interfaces.h"
 
-std::vector<Employee*> makeStaff(std::string staffList, std::string projectsList);
+std::vector<Employee*> makeStaff(std::string staffList, 
+	std::string projectsList);
 #endif  // INCLUDE_FACTORY_H_
