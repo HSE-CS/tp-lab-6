@@ -38,7 +38,7 @@ return nightTime * nightPayment;}
 int Personal::calc() {
 return getworktime() * getpayment();}
 
-void Personal::printInfo() { 
+void Personal::printInfo() {
 std::cout << std::setw(16) << getid() << std::setw(16) << getname()
 << std::setw(16) << getposition() << std::setw(16) << getworktime()
 << std::setw(16) << getpayment() << std::setw(16) << getsalary() << std::endl;}

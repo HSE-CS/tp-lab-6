@@ -5,7 +5,8 @@
 
 
 TEST(Worktest, test1) {
-std::vector<Employee*> staff = makeStaff("src/StaffList.txt", "src/ProjectsList.txt");
+std::vector<Employee*> staff =
+makeStaff("src/StaffList.txt", "src/ProjectsList.txt");
 EXPECT_EQ(15, staff.size());}
 TEST(Worktest, test2) {
 Driver d(12, "Stepan", "Driver", 250);

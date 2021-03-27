@@ -1,7 +1,7 @@
 // Copyright 2021 by Liza
 #include "Factory.h"
 
-std::vector<Employee*> 
+std::vector<Employee*>
 makeStaff(std::string staffList, std::string projectsList) {
 return std::vector<Employee*>();}
 std::vector<Employee*> makeStaff(std::string staffList,

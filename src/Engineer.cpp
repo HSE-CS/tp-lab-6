@@ -2,7 +2,8 @@
 #include "Engineer.h"
 
 Engineer::Engineer(int _id, std::string _name, std::string _position,
-int _payment, Project currentProject) : Personal(_id, _name, _position, _payment) {
+int _payment, Project currentProject) :
+Personal(_id, _name, _position, _payment) {
 project = currentProject;}
 
 Programmer::Programmer(int _id, std::string _name, std::string _position,
@@ -23,7 +24,7 @@ return static_cast<int>(part * budget);}
 Project Engineer::getProject() {
 return project;}
 
-int Engineer::calc() { 
+int Engineer::calc() {
 setsalary(calcBase() + calcProAdditions());
 return getsalary();}
 

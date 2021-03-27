@@ -10,8 +10,8 @@ std::string _position, int _payment) :
 Employee(_id, _name, _position, _payment) {
 salary = 0;}
 
-ProjectManager::ProjectManager(int _id, std::string _name, std::string _position,
-int _payment, Project currentProject) :
+ProjectManager::ProjectManager(int _id, std::string _name,
+std::string _position, int _payment, Project currentProject) :
 Employee(_id, _name, _position, _payment) {
 hisProject = currentProject;
 salary = 0;}
@@ -64,7 +64,7 @@ return salary;}
 
 void ProjectManager::printInfo() {
 std::cout << std::setw(8) << getid() << std::setw(16) << getname() <<
-std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5) 
+std::setw(16) << getposition() << std::setw(4) << getworktime() << std::setw(5)
 << getpayment() << std::setw(8) << getsalary() << std::endl;}
 
 void SeniorManager::printInfo() {
